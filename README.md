@@ -24,4 +24,4 @@ Categories of computational reproducibility and possibilities for improvement
            |  └── Yes..........................|   C9  | - | - | - | - | - | ✔ |
            └── Yes.............................|   C10 | - | - | - | - | - | - |
 
-    -
+  
