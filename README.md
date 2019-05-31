@@ -68,7 +68,7 @@ Category 1: No data and no code.
 Category 10: ...  
 
 
-Steps:
+Steps:  
 1 - Read the paper and identify main causal claims (10%)  
 
 2 - Conduct reproduction: (up to 60%)  
