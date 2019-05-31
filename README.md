@@ -39,9 +39,9 @@ Raw data:
 Analysis code:
 Cleaning code:
 
-Type of reproduction:
-    - Main results
-    - Complete
+Type of reproduction:  
+    - Main results.    
+    - Complete.   
 
 Possible improvements:
  - Add missing analysis data files (+AD)
@@ -63,17 +63,17 @@ Analytical choices:
 Sensible choices:
 
 
-Category 1: No data and no code.
-...
-Category 10: ...
+Category 1: No data and no code.  
+...  
+Category 10: ...  
 
 
 Steps:
-1 - Read the paper and identify main causal claims (10%)
+1 - Read the paper and identify main causal claims (10%)  
 
-2 - Conduct reproduction: (up to 60%)
+2 - Conduct reproduction: (up to 60%)  
     - Review and classify the replication materials: data (raw and analytic) and code
-    (cleaning and analysis). Assess current category of computational reproducibility.
+    (cleaning and analysis). Assess current category of computational reproducibility  
     - Contribute to increase the CR of the paper
          - Obtaining data/code
          - Creating code
