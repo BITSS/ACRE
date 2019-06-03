@@ -1,5 +1,6 @@
-# repro_categories
-Categories of computational reproducibility and possibilities for improvement
+# repro_categories  
+
+## Categories of computational reproducibility and possibilities for improvement  
 
 
 
@@ -25,23 +26,42 @@ Categories of computational reproducibility and possibilities for improvement
            └── Yes.............................|   C10 | - | - | - | - | - | - |
 
 
+**Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
+
+**Computationally Reproducible from Raw data (CRR):** an output is CRR if it can be reproduced with minimal effort from the raw data sets.
+
+**Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
+
+**Processed data:** A data set is considered to be analytical (base on majority of content)  
+
+
+A second common suggestion is to follow a standardized folder structure within the main project folder.
+
+Most recommendations focus on having a few high-level folders separating raw data, processed data, code, and documentation. Raw data is any data that was received by the researcher and has not been processed in any way. Processed data include both intermediary files and final files to be used in the analysis. Code contains any program used to process the data (cleaning and analysis). Documentation should include the final report and all additional inputs required for the project such as questionnaires, bibliography, and raw output (tables and plots).
 
 
 
+Types of code:
+Data cleaning code: a script should be clasified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
+Analysis code: a script should be clasified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
 
-Computationally Reproducible from Analytic data (CRA):
-Computationally Reproducible from Raw data (CRR):
+Types of data:
+Raw data: data are considered “raw” if they have not been processed since they were received from the original source.
+Processed data: a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
+Intermediate data: a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
+Analytic data: data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix). 
 
-Analytical data: (base on majority of content)
-Raw data:
 
-Analysis code:  
-Cleaning code:
+
+**Minimal effort:**
+
+**Analysis code:**  
+**Cleaning code:**  
 
 Type of reproduction:  
-  - Main results
-  - Complete  
+  - **Main results:**
+  - **Complete:**  
 
 Possible improvements:
  - Add missing analysis data files (+AD)
