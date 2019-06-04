@@ -29,49 +29,60 @@ Type of reproduction, by outputs reproduced:
   - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
 
 Possible improvements:
- - Add missing analysis data files (+AD): Analysis data sets could be added, if found missing from the reproduction materials. Researchers performing the reproduction are encourage to follow these steps:  
-  1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform a analysis (eg `analysis_data_03.csv`).   
+ - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
+  1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
   2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
-  3 - [Contact the authors](contact_authors.md) and request the specific data set.     
- - Add (+RD)
- - Add (+AC)
- - Add (+CC)
- - Debug analysis code (DAC)
- - Debug cleaning code (DCC)
+  3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
+  4 - [Contact the authors](contact_authors.md) and request the specific data set.     
+ - **Add missing raw data files (+RD):** most reproductions packages do not include all the original raw datasets. To obtain any missing raw data, follow the same steps (1-4) recommended for the adding analysis data sets. If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by including a detailed set of instructions, including contact information and possible costs, for future researchers to follow.  
+ - **Add missing analysis code (+AC):**
+ - **Add  missing data cleaning code (+CC):**
+ - **Debug analysis code (DAC):**
+ - **Debug cleaning code (DCC):**
 
-Additional improvements across categories.
- - Improve documentation
-      - Add comments
-      - Literate programming
- - Open source implementation
- - File organization
- - Set up a computing capsule
 
-Category 1: No data and no code.  
-...  
-Category 10: ...  
+**Level 1 (L1):**  No data and no code.  
+**Level 2 (L2):**  
+**Level 3 (L3):**   ...  
+**Level 4 (L4):**    
+**Level 5 (L5):**    
+**Level 6 (L6):**  
+**Level 7 (L7):**  
+**Level 8 (L8):**  
+**Level 9 (L9):**  
+**Level 10 (L10):**  
+
+The following figure summarizes the different levels of computational reproducibility (for any given output)
 
                                                        | Possible improvements |
-                                               # Categ |+AD|+RD|+AC|+RC|DAC|DCC|
+                                               # Level |+AD|+RD|+AC|+RC|DAC|DCC|
                                                --------|---|---|---|---|---|---|
     What data are available?                   |       |   |   |   |   |   |   |
-    ├── None ..................................|   C1  | ✔ | ✔ | x | x | x | x |
+    ├── None ..................................|   L1  | ✔ | ✔ | x | x | x | x |
     ├── Analytic data only. Code?              |       |   |   |   |   |   |   |
-    |   ├── No code or cleaning code only......|   C2  | - | ✔ | ✔ | x | x | x |
+    |   ├── No code or cleaning code only......|   L2  | - | ✔ | ✔ | x | x | x |
     |   └── Analysis code only. Is it CRA?     |       |   |   |   |   |   |   |
-    |      ├── No..............................|   C3  | - | ✔ | - | x | ✔ | x |
-    |      └── Yes.............................|   C4  | - | ✔ | - | x | - | x |
+    |      ├── No..............................|   L3  | - | ✔ | - | x | ✔ | x |
+    |      └── Yes.............................|   L4  | - | ✔ | - | x | - | x |
     └── Raw & Analytic data. Code?             |       |   |   |   |   |   |   |
-       ├── None ...............................|   C5  | - | - | ✔ | ✔ | x | x |
+       ├── None ...............................|   L5  | - | - | ✔ | ✔ | x | x |
        ├── Analysis code only. CRA?            |       |   |   |   |   |   |   |
-       |  ├── No...............................|   C6  | - | - | - | ✔ | ✔ | x |
-       |  └── Yes..............................|   C7  | - | - | - | ✔ | - | x |
+       |  ├── No...............................|   L6  | - | - | - | ✔ | ✔ | x |
+       |  └── Yes..............................|   L7  | - | - | - | ✔ | - | x |
        └── A. and cleaning code. Is it CRR?    |       |   |   |   |   |   |   |
            ├── No. CRA?                        |       |   |   |   |   |   |   |
-           |  ├── No...........................|   C8  | - | - | - | - | ✔ | ✔ |
-           |  └── Yes..........................|   C9  | - | - | - | - | - | ✔ |
-           └── Yes.............................|   C10 | - | - | - | - | - | - |
+           |  ├── No...........................|   L8  | - | - | - | - | ✔ | ✔ |
+           |  └── Yes..........................|   L9  | - | - | - | - | - | ✔ |
+           └── Yes.............................|   L10 | - | - | - | - | - | - |
 
+
+ Additional improvements across categories.
+  - Improve documentation
+       - Add comments
+       - Literate programming
+  - Open source implementation
+  - File organization
+  - Set up a computing capsule
 
 
 Analytical choices:  
