@@ -1,8 +1,52 @@
-# repro_categories  
+classified# repro_categories  
 
 ## Categories of computational reproducibility and possibilities for improvement  
 
 
+Types of reproducibility, by sources used:  
+**Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
+
+**Computationally Reproducible from Raw data (CRR):** an output is CRR if it can be reproduced with minimal effort from the raw data sets.
+
+Types of data:  
+**Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
+
+**Processed data:** a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
+ - *Intermediate data:* a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
+ - *Analytic data:* data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
+
+
+Types of code:  
+**Cleaning code:** a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
+**Analysis code:** a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+
+**Minimal effort:** the definition of minimal effort we will use here is that of spending
+five minutes or less in getting the code running. This five minutes do not include the computing time.
+
+
+Type of reproduction, by outputs reproduced:  
+  - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it in at the begging of the reproduction.
+  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
+
+Possible improvements:
+ - Add missing analysis data files (+AD):
+ - Add (+RD)
+ - Add (+AC)
+ - Add (+CC)
+ - Debug analysis code (DAC)
+ - Debug cleaning code (DCC)
+
+Additional improvements across categories.
+ - Improve documentation
+      - Add comments
+      - Literate programming
+ - Open source implementation
+ - File organization
+ - Set up a computing capsule
+
+Category 1: No data and no code.  
+...  
+Category 10: ...  
 
                                                        | Possible improvements |
                                                # Categ |+AD|+RD|+AC|+RC|DAC|DCC|
@@ -26,67 +70,9 @@
            └── Yes.............................|   C10 | - | - | - | - | - | - |
 
 
-**Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
-
-**Computationally Reproducible from Raw data (CRR):** an output is CRR if it can be reproduced with minimal effort from the raw data sets.
-
-**Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
-
-**Processed data:** A data set is considered to be analytical (base on majority of content)  
-
-
-A second common suggestion is to follow a standardized folder structure within the main project folder.
-
-Most recommendations focus on having a few high-level folders separating raw data, processed data, code, and documentation. Raw data is any data that was received by the researcher and has not been processed in any way. Processed data include both intermediary files and final files to be used in the analysis. Code contains any program used to process the data (cleaning and analysis). Documentation should include the final report and all additional inputs required for the project such as questionnaires, bibliography, and raw output (tables and plots).
-
-
-
-Types of code:
-Data cleaning code: a script should be clasified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
-Analysis code: a script should be clasified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
-
-
-Types of data:
-Raw data: data are considered “raw” if they have not been processed since they were received from the original source.
-Processed data: a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
-Intermediate data: a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
-Analytic data: data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix). 
-
-
-
-**Minimal effort:**
-
-**Analysis code:**  
-**Cleaning code:**  
-
-Type of reproduction:  
-  - **Main results:**
-  - **Complete:**  
-
-Possible improvements:
- - Add missing analysis data files (+AD)
- - Add (+RD)
- - Add (+AC)
- - Add (+CC)
- - Debug analysis code (DAC)
- - Debug cleaning code (DCC)
-
-Additional improvements across categories.
- - Improve documentation
-      - Add comments
-      - Literate programming
- - Open source implementation
- - File organization
- - Set up a computing capsule
 
 Analytical choices:  
 Sensible choices:
-
-
-Category 1: No data and no code.  
-...  
-Category 10: ...  
-
 
 Steps:  
 1 - Read the paper and identify main causal claims (10%)  
@@ -121,4 +107,15 @@ Final products:
     extensions.
 
 Others:
- - think how to distinguish "true" analytical choices and "errors"
+ - think how to distinguish "true" analytical choices and "errors"  
+ - Ideas to test comprehension of the code?  
+    - Ask authors about possible quizzes to test comprehension of paper?
+
+
+# Additional sources
+- Lars   
+- TIER   
+- IDB   
+- DD  
+- Git  
+- OSF  
