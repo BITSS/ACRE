@@ -29,7 +29,10 @@ Type of reproduction, by outputs reproduced:
   - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
 
 Possible improvements:
- - Add missing analysis data files (+AD):
+ - Add missing analysis data files (+AD): Analysis data sets could be added, if found missing from the reproduction materials. Researchers performing the reproduction are encourage to follow these steps:  
+  1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform a analysis (eg `analysis_data_03.csv`).   
+  2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
+  3 - Contact the authors and request the specific data set.     
  - Add (+RD)
  - Add (+AC)
  - Add (+CC)
