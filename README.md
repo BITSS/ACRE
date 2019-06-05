@@ -57,7 +57,7 @@ five minutes or less in getting the code running. This five minutes do not inclu
 ## Levels of Computational Reproducibility
 With the definitions and dimensions for improvement provided above, we can now outline different levels of computational reproducibility. Each level is defined on the basis of data and code availability, possible improvements, and weather or not to achieves some type of reproducibility.
 
-The assement is made at the output level. This form a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs (like tables and figures).
+The assessment is made at the output level. This form a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs (like tables and figures).
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be possible improvements that have been done already (`-`), that can be done to move up one level of reproducibility (`✔`) or that are out of reach given the current level of reproducibility (`x`).
 
@@ -121,6 +121,46 @@ Others:
 
 Analytical choices:  
 Sensible choices:
+
+
+In this section, you are asked to track all the analytical choices that you identify in the code. You will do this in two steps: first adding comment lines into the code files where you find an analytic choice, and second, compiling those analytic choices into a standardized data set.   
+
+
+
+In your copy of the replication code, add the comment “# ANALYTICAL CHOICE OF TYPE…” above each analytical choice detected in the code. Possible types of analytical choice include (but are not limited to):
+
+- Variable definition  
+- Data sub-setting  
+- Data reshaping (merge, append, gather (long), spread (wide)  
+- Choice of weights  
+- Methods choice:  
+   - Regression function (link function)  
+   - Key parameters (tuning, tolerance parameters, etc.)  
+   - Controls  
+   - Adjustment of standard errors  
+   - Treatment of missing values  
+   - Other    
+
+Optional: if you can think of an alternative plausible specification to any analytical choice detected, add “# POSSIBLE ALTERNATIVE …” right below the first comment. You can use this form to help
+
+Once finished, transcribe all the information on analytical choices into a data set with the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing): 
+
+| file_name  | line_number | choice_type         | choice_value                   | specify_other (optional)        | choice_universe (optional)           |
+|------------|-------------|---------------------|--------------------------------|---------------------------------|--------------------------------------|
+| code_01.do | 73          | data subsetting     | males                          | females                         | males, females                       |
+| code_01.do | 122         | variable definition | income = wages + capital gains | wages + capital gains + bonuses | wages, capital gains, bonuses, gifts |
+| code_05.R  | 143         | methods - controls  | age, income, education         | age, income                     | 12 possible control variables        |
+| ...        | ...         | ...                 | ...                            | ...                             | ...                                  |
+
+ 
+
+ 
+
+ 
+
+
+
+
 
 
 ## Additional resources
