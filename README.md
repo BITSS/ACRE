@@ -65,8 +65,8 @@ The following figure summarizes the different levels of computational reproducib
 
       Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
-                                                       | Possible improvements |
-                                               # Level |+AD|+RD|+AC|+RC|DAC|DCC|
+                                               |       | Possible improvements |
+                                               | Level |+AD|+RD|+AC|+RC|DAC|DCC|
                                                --------|---|---|---|---|---|---|
     What data are available?                   |       |   |   |   |   |   |   |
     ├── None ..................................|   L1  | ✔ | ✔ | x | x | x | x |
@@ -86,23 +86,24 @@ The following figure summarizes the different levels of computational reproducib
            |  └── Yes..........................|   L9  | - | - | - | - | - | ✔ |
            └── Yes.............................|   L10 | - | - | - | - | - | - |
 
- **Level 1 (L1):**  No data and no code.  
- **Level 2 (L2):**  
- **Level 3 (L3):**   ...  
+ **Level 1 (L1):** There are no data or code available of any type. Possible improvements include: adding raw data (+AD) and adding analysis data (+RD).  
+ **Level 2 (L2):** There are analytic data available, but no raw data or any type of code. Possible improvements include: adding raw data (+RD) and adding analysis code (+AC).  
+ **Level 3 (L3):**    
  **Level 4 (L4):**    
  **Level 5 (L5):**    
  **Level 6 (L6):**  
  **Level 7 (L7):**  
  **Level 8 (L8):**  
  **Level 9 (L9):**  
- **Level 10 (L10):**  
+ **Level 10 (L10):**    
 
- ## Additional improvements across categories.
-  - Set up the replication package using version control software (Git)
-  - Improve documentation
-       - Add comments
-       - Literate programming
-  - Open source implementation
+ ## Additional improvements across categories  
+In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).
+  - Set up the replication package using version control software (Git).
+  - Improve documentation:
+       - Add extensive comments to the code.
+       - Adapt the paper into a literate programming environment (eg: Jupyter notebook or RMarkdown)
+  - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia)
   - File organization
   - Set up a computing capsule
 
@@ -148,6 +149,7 @@ Others:
     - Identify analytical choices
     - Identify common analytical choices, conditional choices, and sensible options.
     - Suggest questions.
+    - Think of a "readability" score.
 
 
 ## Additional resources
