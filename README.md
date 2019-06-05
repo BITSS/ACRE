@@ -35,17 +35,17 @@ five minutes or less in getting the code running. This five minutes do not inclu
 
 ## Possible improvements:
  - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
-  - 1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
-  - 2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
-  - 3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
-  - 4 - [Contact the authors](contact_authors.md) and request the specific data set.     
+    - 1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
+    - 2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
+    - 3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
+    - 4 - [Contact the authors](contact_authors.md) and request the specific data set.     
  - **Add missing raw data files (+RD):** most reproductions packages do not include all the original raw datasets. To obtain any missing raw data, follow the same steps (1-4) recommended for the adding analysis data sets. If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by including a detailed set of instructions, including contact information and possible costs, for future researchers to follow.  
  - **Add missing analysis code (+AC):** analysis code can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case researchers conducting the reproduction to follow the these steps:  
-  - 1 - Identify specific line/paragraph in the paper that describes the missing analytic step in the code (eg "we impute missing values to...," or "we estimate this regressions using a bandwidth of ...").  
-  - 2 - Identify the code file and approximate line in code where the analysis could be carried out.  
-  - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
-  - 4 - [Contact the authors](contact_authors.md) and request the specific code files, following the ACRE sample language to request the specific analysis.  
-  - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
+    - 1 - Identify specific line/paragraph in the paper that describes the missing analytic step in the code (eg "we impute missing values to...," or "we estimate this regressions using a bandwidth of ...").  
+    - 2 - Identify the code file and approximate line in code where the analysis could be carried out.  
+    - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
+    - 4 - [Contact the authors](contact_authors.md) and request the specific code files, following the ACRE sample language to request the specific analysis.  
+    - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
  - **Add  missing data cleaning code (+CC):**  data cleaning/processing code can be added when there are certain steps missing in the creation/recoding of variables, merging, subsetting of the data sets, and other cleaning related processes. Researchers conducting the reproduction should follow the same steps (1-5) as when adding missing code.
  - **Debug analysis code (DAC) or debug cleaning code (DCC):** whenever any code is available in the reproduction package, the researcher performing the reproduction will be able to debug those scripts. Here four types of debugging are suggested to label the different modifications perform in the reproduction:
     - *Code cleaning:* whenever set of instructions is simplified (e.g. by wrapping repetitive steps in a function or a loop) or when redundant code is removed (eg. old code that was commented out) but the original output remains intact.
