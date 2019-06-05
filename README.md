@@ -1,16 +1,19 @@
-## Categories of computational reproducibility and possibilities for improvement  
+# Definitions to Assess Computational Reproducibility and Possibilities for Improvement  
 
+## Definitions
 
-Type of reproduction, by outputs reproduced:  
+### Types of reproduction
+
+#### By outputs reproduced:  
   - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it in at the begging of the reproduction.
   - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
 
-Types of reproducibility, by sources used:  
+#### By sources used:  
  - **Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
 
  - **Computationally Reproducible from Raw data (CRR):** an output is CRR if it can be reproduced with minimal effort from the raw data sets.
 
-Types of data:  
+### Types of data:  
  - **Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
 
  - **Processed data:** a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
@@ -18,11 +21,11 @@ Types of data:
   - *Analytic data:* data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
 
 
-Types of code:  
+### Types of code:  
  - **Cleaning code:** a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
  - **Analysis code:** a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
-Other definitions:  
+### Other definitions:  
  - **Minimal effort:** the definition of minimal effort we will use here is that of spending
 five minutes or less in getting the code running. This five minutes do not include the computing time.
 
@@ -30,29 +33,37 @@ five minutes or less in getting the code running. This five minutes do not inclu
 
 
 
-Possible improvements:
+## Possible improvements:
  - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
-  1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
-  2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
-  3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
-  4 - [Contact the authors](contact_authors.md) and request the specific data set.     
+  - 1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
+  - 2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
+  - 3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
+  - 4 - [Contact the authors](contact_authors.md) and request the specific data set.     
  - **Add missing raw data files (+RD):** most reproductions packages do not include all the original raw datasets. To obtain any missing raw data, follow the same steps (1-4) recommended for the adding analysis data sets. If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by including a detailed set of instructions, including contact information and possible costs, for future researchers to follow.  
  - **Add missing analysis code (+AC):** analysis code can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case researchers conducting the reproduction to follow the these steps:  
- 1 - Identify specific line/paragraph in the paper that describes the missing analytic step in the code (eg "we impute missing values to...," or "we estimate this regressions using a bandwidth of ...").  
- 2 - Identify the code file and approximate line in code where the analysis could be carried out.  
- 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
- 4 - [Contact the authors](contact_authors.md) and request the specific code files, following the ACRE sample language to request the specific analysis.  
- 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
+  - 1 - Identify specific line/paragraph in the paper that describes the missing analytic step in the code (eg "we impute missing values to...," or "we estimate this regressions using a bandwidth of ...").  
+  - 2 - Identify the code file and approximate line in code where the analysis could be carried out.  
+  - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
+  - 4 - [Contact the authors](contact_authors.md) and request the specific code files, following the ACRE sample language to request the specific analysis.  
+  - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
  - **Add  missing data cleaning code (+CC):**  data cleaning/processing code can be added when there are certain steps missing in the creation/recoding of variables, merging, subsetting of the data sets, and other cleaning related processes. Researchers conducting the reproduction should follow the same steps (1-5) as when adding missing code.
  - **Debug analysis code (DAC) or debug cleaning code (DCC):** whenever any code is available in the reproduction package, the researcher performing the reproduction will be able to debug those scripts. Here four types of debugging are suggested to label the different modifications perform in the reproduction:
-    - *Code cleaning:*
-    - *Performance improvement:*.
-    - *Environment set up:* paths, versions, packages.
-    - *Correcting errors:* If a coding error is detected, please follow the [ACRE procedure to report coding errors](ADD LINK).  
+    - *Code cleaning:* whenever set of instructions is simplified (e.g. by wrapping repetitive steps in a function or a loop) or when redundant code is removed (eg. old code that was commented out) but the original output remains intact.
+    - *Performance improvement:* whenever a set of instructions is replace by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).
+    - *Environment set up:* whenever the code has to be modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.
+    - *Correcting errors:* whenever a coding error is detected, please follow the [ACRE procedure to fix and report coding errors](ADD LINK).  
+
+
+## Levels of Computational Reproducibility
+With the definitions and dimensions for improvement provided above, we can now outline different levels of computational reproducibility. Each level is defined on the basis of data and code availability, possible improvements, and weather or not to achieves some type of reproducibility.
+
+The assement is made at the output level. This form a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs (like tables and figures).
+
+The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be possible improvements that have been done already (`-`), that can be done to move up one level of reproducibility (`✔`) or that are out of reach given the current level of reproducibility (`x`).
 
 
 
-The following figure summarizes the different levels of computational reproducibility (for any given output)
+      Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
                                                        | Possible improvements |
                                                # Level |+AD|+RD|+AC|+RC|DAC|DCC|
@@ -86,7 +97,8 @@ The following figure summarizes the different levels of computational reproducib
  **Level 9 (L9):**  
  **Level 10 (L10):**  
 
- Additional improvements across categories.
+ ## Additional improvements across categories.
+  - Set up the replication package using version control software (Git)
   - Improve documentation
        - Add comments
        - Literate programming
@@ -138,7 +150,7 @@ Others:
     - Suggest questions.
 
 
-# Additional resources
+## Additional resources
 - Lars   
 - TIER   
 - IDB   
