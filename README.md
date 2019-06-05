@@ -63,7 +63,7 @@ The following figure summarizes the different levels of computational reproducib
 
 
 
-      Figure 1: Levels of Computational Reproducibility and Possible Improvements   
+    Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
                                                |       | Possible improvements |
                                                | Level |+AD|+RD|+AC|+RC|DAC|DCC|
@@ -97,51 +97,19 @@ The following figure summarizes the different levels of computational reproducib
  **Level 9 (L9):**  
  **Level 10 (L10):**    
 
- ## Additional improvements across categories  
+## Additional Improvements Across Categories   
+
 In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).
   - Set up the replication package using version control software (Git).
   - Improve documentation:
        - Add extensive comments to the code.
-       - Adapt the paper into a literate programming environment (eg: Jupyter notebook or RMarkdown)
-  - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia)
-  - File organization
-  - Set up a computing capsule
+       - Adapt the paper into a literate programming environment (eg: Jupyter notebook, RMarkdown, Stata Dynamic Doc).
+  - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia).
+  - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications.  
+  - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
 
-
-Analytical choices:  
-Sensible choices:
-
-Steps:  
-1 - Read the paper and identify main causal claims (10%)  
-
-2 - Conduct reproduction: (up to 60%)  
-  - Review and classify the replication materials: data (raw and analytic) and code
-  (cleaning and analysis). Assess current category of computational reproducibility  
-  - Contribute to increase the CR of the paper
-       - Obtaining data/code
-       - Creating code
-       - Debugging code
-       - Overall quality improvement (folders, LP, OS)
-  - ID possible analytical choices
-
-
-3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
-  - ID sensible analytical choices
-  - Sample from sensible and re-run: report how much do result change as
-    fraction of standard deviations.
-
-Final products:
- -  Two-page summary of paper
- -  One-page introduction describing why you chose this paper
- -  2 Completed surveys:  
-      i  - General information about the paper and specific
-      information about output to reproduce.  
-      ii - Assessment of how (computationally) reproducible is the paper;
-       description of improvements to its reproducibility; record of all the
-       analytical choices identified in the exercise.
- -  Narrated description of improvements to original CR of the paper, assessment
-    of robustness of results. Lessons from the exercise and possible future
-    extensions.
+## Identifying Analytical Choices
+As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to tag all the analytical choices identified during the code review process. 
 
 Others:
  - Ideas to test comprehension of the code?  
@@ -151,11 +119,22 @@ Others:
     - Suggest questions.
     - Think of a "readability" score.
 
+Analytical choices:  
+Sensible choices:
+
 
 ## Additional resources
-- Lars   
-- TIER   
-- IDB   
-- DD  
-- Git  
-- OSF  
+- [Lars]()   
+- [Project TIER](https://www.projecttier.org/tier-protocol/)   
+- [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
+- Dynamic documents in [R](), [Python]() and [Stata]()  
+- Git resources:   
+  - [Jenny Bryan's book](https://happygitwithr.com) and [video](https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/)  
+  - [Github learning lab](https://lab.github.com/)
+  - [Udacity's intro](https://www.udacity.com/course/how-to-use-git-and-github--ud775)  
+  - [Git for poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)  
+  - [Combining GitHub and Dropbox](https://github.com/kbjarkefur/GitHubDropBox)    
+  - [Atlassian intro to Git](https://www.atlassian.com/git/tutorials)
+  - [Software Carpentry turorial from the command line](https://swcarpentry.github.io/git-novice/)
+- [Open Science Framework (OSF)](https://osf.io)
+- [R for Stata users](https://github.com/hblackburn/R4Econ/blob/master/Resources.md)  
