@@ -109,7 +109,7 @@ In addition to the different levels of computational reproducibility described i
   - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
 
 ## Identifying Analytical Choices
-As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to tag all the analytical choices identified during the code review process. 
+As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to tag all the analytical choices identified during the code review process.
 
 Others:
  - Ideas to test comprehension of the code?  
@@ -124,10 +124,10 @@ Sensible choices:
 
 
 ## Additional resources
-- [Lars]()   
+- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).     
 - [Project TIER](https://www.projecttier.org/tier-protocol/)   
 - [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
-- Dynamic documents in [R](), [Python]() and [Stata]()  
+- Dynamic documents in [R](https://rmarkdown.rstudio.com/gallery.html), [Python](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#economics-and-finance) and [Stata](https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata%20Markdown.pdf)  
 - Git resources:   
   - [Jenny Bryan's book](https://happygitwithr.com) and [video](https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/)  
   - [Github learning lab](https://lab.github.com/)
