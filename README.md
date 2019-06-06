@@ -57,7 +57,7 @@ five minutes or less in getting the code running. This five minutes do not inclu
 ## Levels of Computational Reproducibility
 With the definitions and dimensions for improvement provided above, we can now outline different levels of computational reproducibility. Each level is defined on the basis of data and code availability, possible improvements, and weather or not to achieves some type of reproducibility.
 
-The assessment is made at the output level. This form a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs (like tables and figures).
+The assessment is made at the output level. Hence a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs (like tables and figures).
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be possible improvements that have been done already (`-`), that can be done to move up one level of reproducibility (`✔`) or that are out of reach given the current level of reproducibility (`x`).
 
@@ -127,7 +127,7 @@ In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE O
 - Analytical choices in data cleaning code:
   - Variable definition  
   - Data sub-setting  
-  - Data reshaping (merge, append, gather (long), spread (wide)  
+  - Data reshaping (merge, append, long/gather, wide/spread)  
   - Others (specify as "processing - other")
 - Analytical choices in analysis code:   
    - Regression function (link function)  
@@ -139,28 +139,23 @@ In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE O
    - Imputations
    - Other (specify as "methods - other")    
 
-Once finished, transcribe all the information on analytical choices into a data set with the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing). For the `Source` field type "original" whenever the analytical choice is identified for the first time, and `file_name-line number` every time that the same analytical choice is applied subsequently. The result should look like the following: 
+Once finished, transcribe all the information on analytical choices into a data set. For the `source` field type "original" whenever the analytical choice is identified for the first time, and `file_name-line number` every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the `source` field should be `original` and `code_01.do-L103` respectively).
+
+The resulting data base should have the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
 
 | file_name  | line_number | choice_type         | choice_value                   | Source              |
 |------------|-------------|---------------------|--------------------------------|---------------------|
 | code_01.do | 73          | data subsetting     | males                          | original            |
-| code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do - L103" |
+| code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
 | code_05.R  | 143         | controls            | age, income, education         | original            |
 | ...        | ...         | ...                 | ...                            | ...                 | 
-
-Others:
- - Ideas to test comprehension of the code?  
-    - Ask authors about possible quizzes to test comprehension of paper?
-    - Identify common analytical choices, conditional choices, and sensible options.
-    - Ask researchers doing the reproduction to suggest questions (for future reproducers).
-    - Think of a "readability" score.
-    - New doc guiding the re-analysis?
 
 
 ## Additional resources
 - [Project TIER](https://www.projecttier.org/tier-protocol/)   
 - [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
-- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).     
+- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).   
+- World Bank [DIME's Wiki for transparent and reproducible research](https://dimewiki.worldbank.org/wiki/Main_Page).
 - Dynamic documents in [R](https://rmarkdown.rstudio.com/gallery.html), [Python](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#economics-and-finance) and [Stata](https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata%20Markdown.pdf)  
 - Git resources:   
   - [Jenny Bryan's book](https://happygitwithr.com) and [video](https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/)  

@@ -1,30 +1,46 @@
 
-Steps:  
+# Structure of the Reproduction Activity
 1 - Read the paper and identify main causal claims (10%)  
 
 2 - Conduct reproduction: (up to 60%)  
-  - Review and classify the replication materials: data (raw and analytic) and code
-  (cleaning and analysis). Assess current category of computational reproducibility  
+  - Assessment computational reproducibility of [all | main] output the paper.
+  Review and classify the replication materials: data (raw and analytic) and code
+  (cleaning and analysis). Assess current category of computational reproducibility.
+      - List all raw data sets described in the paper
+      - Draw diagrams from output to raw data sources
+            Table 1
+              └───[code] formatting_table1.R
+                  ├───output1_part1.txt  
+                  |   └───[code] output_table1.do           
+                  |       └── [data] analysis_data01.csv
+                  |          ├── [code] data_cleaning01.R
+                  |          └── [data] survey_01raw.csv
+                  └───output1_part2.txt  
+                      └───[code] output_table2.do           
+                          └── [data] analysis_data02.csv
+                             ├── [code] data_cleaning02.R
+                             └── [data] admin_01raw.csv
+      - Assess the current level of computational reproducibility of each output (`output name; level #; name/description of missing files`)
+
+
   - Contribute to increase the CR of the paper
        - Obtaining data/code
        - Creating code
        - Debugging code
        - Overall quality improvement (folders, LP, OS)
-  - ID possible analytical choices
-
+  - Identify all possible analytical choices
 
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
-  - ID sensible analytical choices
-  - Sample from sensible and re-run: report how much do result change as
-    fraction of standard deviations.
+  - Identify sensible analytical choices
+  - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.
 
-Final products:
+# Final products
  -  One-page introduction describing why you chose this paper
  -  Two-page summary of paper
  -  2 Completed surveys:  
-      i  - General information about the paper and specific
+       - i  - General information about the paper and specific
       information about output to reproduce.  
-      ii - Assessment of how (computationally) reproducible is the paper;
+       - ii - Assessment of how (computationally) reproducible is the paper;
        description of improvements to its reproducibility; record of all the
        analytical choices identified in the exercise.
  -  ACRE report card with all the improvements that were created by the researcher reproducing the paper. The list of improvements will be made public and original authors will receive a copy of the report card. The option of anonymity will be provided to the researchers reproducing the paper.     
