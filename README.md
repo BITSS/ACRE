@@ -88,16 +88,16 @@ The following figure summarizes the different levels of computational reproducib
 
  **Level 1 (L1):** There are no data or code available of any type. Possible improvements include: adding raw data (+AD) and adding analysis data (+RD).  
  **Level 2 (L2):** There are analytic data available, but no raw data or any type of code. Possible improvements include: adding raw data (+RD) and adding analysis code (+AC).  
- **Level 3 (L3):** Both analytic data sets and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
+ **Level 3 (L3):** Both analytic data sets and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).  
  **Level 4 (L4):** Both analytic data sets and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.   
  **Level 5 (L5):** All data, analytic and raw, are available. However some or all the codes for cleaning and analysis are missing. Steps for improvement include adding analysis code (+AC) and/or cleaning code (+CC).      
- **Level 6 (L6):**  All data and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
+ **Level 6 (L6):**  All data and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include adding the missing cleaning code (+CD) or debugging the analysis code (DAC).   
  **Level 7 (L7):**  All data and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by adding adding the missing cleaning code (+CD).     
  **Level 8 (L8):**  All materials (raw and analysis data, and cleaning and analysis code) are available. However the code does not run or produces different results that those of the paper (not CRR and not CRA). Possible improvements include debugging the cleaning code (DCC) or debugging the analysis code (DAC).  
  **Level 9 (L9):**  All materials (raw and analysis data, and cleaning and analysis code) are available, and the analysis code produces the same output as in the paper (yes CRA). However the cleaning code does not run or produces different results that those of the paper (not CRR). Possible improvements include debugging the cleaning code (DCC).  
  **Level 10 (L10):** All materials are available and produce the same results as in the paper with minimal effort, starting from the analytic data sets (yes CRA) and from the raw data (yes CRR).    
 
-The next section describe improvements that can be applied across levels and are meant to improve the readability of the reproducibility package.
+The next section describes improvements that can be applied across levels and are meant to improve the readability of the reproducibility package.
 
 ## Additional Improvements Across Categories   
 
