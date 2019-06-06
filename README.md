@@ -105,11 +105,37 @@ In addition to the different levels of computational reproducibility described i
        - Add extensive comments to the code.
        - Adapt the paper into a literate programming environment (eg: Jupyter notebook, RMarkdown, Stata Dynamic Doc).
   - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia).
-  - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications.  
+  - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications. [ADD LINK TO A NICE MASTER SCRIPT. LARS?]()  
   - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
 
 ## Identifying Analytical Choices
-As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to tag all the analytical choices identified during the code review process.
+As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.   
+
+In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE OF TYPE…. RECORDED FOR THE FIRST TIME [HERE or IN "FILE_NAME-LINE_NUMBER"]”` above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):  
+
+- Analytical choices in data cleaning code:
+  - Variable definition  
+  - Data sub-setting  
+  - Data reshaping (merge, append, gather (long), spread (wide)  
+  - Others (specify as "processing - other")
+- Analytical choices in analysis code:   
+   - Regression function (link function)  
+   - Key parameters (tuning, tolerance parameters, etc.)  
+   - Controls  
+   - Adjustment of standard errors  
+   - Choice of weights  
+   - Treatment of missing values  
+   - Imputations
+   - Other (specify as "methods - other")    
+
+Once finished, transcribe all the information on analytical choices into a data set with the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing). For the `Source` field type "original" whenever the analytical choice is identified for the first time, and `file_name-line number` every time that the same analytical choice is applied subsequently. The result should look like the following: 
+
+| file_name  | line_number | choice_type         | choice_value                   | Source              |
+|------------|-------------|---------------------|--------------------------------|---------------------|
+| code_01.do | 73          | data subsetting     | males                          | original            |
+| code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do - L103" |
+| code_05.R  | 143         | controls            | age, income, education         | original            |
+| ...        | ...         | ...                 | ...                            | ...                 | 
 
 Others:
  - Ideas to test comprehension of the code?  
@@ -123,50 +149,10 @@ Analytical choices:
 Sensible choices:
 
 
-In this section, you are asked to track all the analytical choices that you identify in the code. You will do this in two steps: first adding comment lines into the code files where you find an analytic choice, and second, compiling those analytic choices into a standardized data set.   
-
-
-
-In your copy of the replication code, add the comment “# ANALYTICAL CHOICE OF TYPE…” above each analytical choice detected in the code. Possible types of analytical choice include (but are not limited to):
-
-- Variable definition  
-- Data sub-setting  
-- Data reshaping (merge, append, gather (long), spread (wide)  
-- Choice of weights  
-- Methods choice:  
-   - Regression function (link function)  
-   - Key parameters (tuning, tolerance parameters, etc.)  
-   - Controls  
-   - Adjustment of standard errors  
-   - Treatment of missing values  
-   - Other    
-
-Optional: if you can think of an alternative plausible specification to any analytical choice detected, add “# POSSIBLE ALTERNATIVE …” right below the first comment. You can use this form to help
-
-Once finished, transcribe all the information on analytical choices into a data set with the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing): 
-
-| file_name  | line_number | choice_type         | choice_value                   | specify_other (optional)        | choice_universe (optional)           |
-|------------|-------------|---------------------|--------------------------------|---------------------------------|--------------------------------------|
-| code_01.do | 73          | data subsetting     | males                          | females                         | males, females                       |
-| code_01.do | 122         | variable definition | income = wages + capital gains | wages + capital gains + bonuses | wages, capital gains, bonuses, gifts |
-| code_05.R  | 143         | methods - controls  | age, income, education         | age, income                     | 12 possible control variables        |
-| ...        | ...         | ...                 | ...                            | ...                             | ...                                  |
-
- 
-
- 
-
- 
-
-
-
-
-
-
 ## Additional resources
-- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).     
 - [Project TIER](https://www.projecttier.org/tier-protocol/)   
 - [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
+- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).     
 - Dynamic documents in [R](https://rmarkdown.rstudio.com/gallery.html), [Python](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#economics-and-finance) and [Stata](https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata%20Markdown.pdf)  
 - Git resources:   
   - [Jenny Bryan's book](https://happygitwithr.com) and [video](https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/)  
@@ -175,6 +161,6 @@ Once finished, transcribe all the information on analytical choices into a data 
   - [Git for poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)  
   - [Combining GitHub and Dropbox](https://github.com/kbjarkefur/GitHubDropBox)    
   - [Atlassian intro to Git](https://www.atlassian.com/git/tutorials)
-  - [Software Carpentry turorial from the command line](https://swcarpentry.github.io/git-novice/)
+  - [Software Carpentry tutorial from the command line](https://swcarpentry.github.io/git-novice/)
 - [Open Science Framework (OSF)](https://osf.io)
 - [R for Stata users](https://github.com/hblackburn/R4Econ/blob/master/Resources.md)  
