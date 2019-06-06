@@ -66,7 +66,7 @@ The following figure summarizes the different levels of computational reproducib
     Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
                                                |       | Possible improvements |
-                                               | Level |+AD|+RD|+AC|+RC|DAC|DCC|
+                                               | Level |+AD|+RD|+AC|+CC|DAC|DCC|
                                                --------|---|---|---|---|---|---|
     What data are available?                   |       |   |   |   |   |   |   |
     ├── None ..................................|   L1  | ✔ | ✔ | x | x | x | x |
@@ -88,14 +88,16 @@ The following figure summarizes the different levels of computational reproducib
 
  **Level 1 (L1):** There are no data or code available of any type. Possible improvements include: adding raw data (+AD) and adding analysis data (+RD).  
  **Level 2 (L2):** There are analytic data available, but no raw data or any type of code. Possible improvements include: adding raw data (+RD) and adding analysis code (+AC).  
- **Level 3 (L3):**    
- **Level 4 (L4):**    
- **Level 5 (L5):**    
- **Level 6 (L6):**  
- **Level 7 (L7):**  
- **Level 8 (L8):**  
- **Level 9 (L9):**  
- **Level 10 (L10):**    
+ **Level 3 (L3):** Both analytic data sets and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
+ **Level 4 (L4):** Both analytic data sets and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.   
+ **Level 5 (L5):** All data, analytic and raw, are available. However some or all the codes for cleaning and analysis are missing. Steps for improvement include adding analysis code (+AC) and/or cleaning code (+CC).      
+ **Level 6 (L6):**  All data and analysis code are available. However the code does not run or produces different results that those of the paper (not CRA). Possible improvements include adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
+ **Level 7 (L7):**  All data and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by adding adding the missing cleaning code (+CD).     
+ **Level 8 (L8):**  All materials (raw and analysis data, and cleaning and analysis code) are available. However the code does not run or produces different results that those of the paper (not CRR and not CRA). Possible improvements include debugging the cleaning code (DCC) or debugging the analysis code (DAC).  
+ **Level 9 (L9):**  All materials (raw and analysis data, and cleaning and analysis code) are available, and the analysis code produces the same output as in the paper (yes CRA). However the cleaning code does not run or produces different results that those of the paper (not CRR). Possible improvements include debugging the cleaning code (DCC).
+ **Level 10 (L10):** All materials are available and produce the same results as in the paper with minimal effort, starting from the analytic data sets (yes CRA) and from the raw data (yes CRR).    
+
+The next section describe improvements that can be applied across levels and are meant to improve the readability of the reproducibility package.
 
 ## Additional Improvements Across Categories   
 
@@ -111,7 +113,7 @@ In addition to the different levels of computational reproducibility described i
 ## Identifying Analytical Choices
 As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.   
 
-In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE OF TYPE…. RECORDED FOR THE FIRST TIME [HERE or IN "FILE_NAME-LINE_NUMBER"]”` above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):  
+In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE OF TYPE ____. RECORDED FOR THE FIRST TIME [HERE or IN "FILE_NAME-LINE_NUMBER"]”` above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):  
 
 - Analytical choices in data cleaning code:
   - Variable definition  
@@ -140,13 +142,10 @@ Once finished, transcribe all the information on analytical choices into a data 
 Others:
  - Ideas to test comprehension of the code?  
     - Ask authors about possible quizzes to test comprehension of paper?
-    - Identify analytical choices
     - Identify common analytical choices, conditional choices, and sensible options.
-    - Suggest questions.
+    - Ask researchers doing the reproduction to suggest questions (for future reproducers).
     - Think of a "readability" score.
-
-Analytical choices:  
-Sensible choices:
+    - New doc guiding the re-analysis?
 
 
 ## Additional resources
