@@ -20,8 +20,8 @@
                           └── [data] analysis_data02.csv
                              └── [code] data_cleaning02.R
                                 └── [data] admin_01raw.csv
-      - Assess the current level of computational reproducibility of each output   
-            | output_name | [level](README.md#levels-of-computational-reproducibility) | name_description_of_missing_files |
+      - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output   
+            | output_name | level | name_description_of_missing_files |
             |-------------|-------|-----------------------------------|
             | table 1     | 4     |        ADD EXAMPLES               |
             | figure 1    | 7     |                                   |
