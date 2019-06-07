@@ -13,16 +13,16 @@
               └───[code] formatting_table1.R
                   ├───output1_part1.txt  
                   |   └───[code] output_table1.do           
-                  |       └── [data] analysis_data01.csv
-                  |          └── [code] data_cleaning01.R
-                  |             └── [data] survey_01raw.csv
+                  |       └───[data] analysis_data01.csv
+                  |          └───[code] data_cleaning01.R
+                  |             └───[data] survey_01raw.csv
                   └───output1_part2.txt  
                       └───[code] output_table2.do           
-                          └── [data] analysis_data02.csv
-                             └── [code] data_cleaning02.R
-                                └── [data] admin_01raw.csv
+                          └───[data] analysis_data02.csv
+                             └───[code] data_cleaning02.R
+                                └───[data] admin_01raw.csv
       - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output     
-      
+
             | output_name | level | name_description_of_missing_files |
             |-------------|-------|-----------------------------------|
             | table 1     | 4     |        ADD EXAMPLES               |
