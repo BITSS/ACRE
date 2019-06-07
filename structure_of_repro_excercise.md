@@ -7,7 +7,8 @@
   Review and classify the replication materials: data (raw and analytic) and code
   (cleaning and analysis). Assess current category of computational reproducibility.
       - List all raw data sets as described in the paper (for example "CPS March 2018 from CEPR") and, if available, match with the filename in the reproducibility package (`cepr_march_2018.dta`).   
-      - Draw diagrams from output to raw data sources
+      - Draw diagrams from output to raw data sources  
+
             table 1
               └───[code] formatting_table1.R
                   ├───output1_part1.txt  
@@ -20,7 +21,8 @@
                           └── [data] analysis_data02.csv
                              └── [code] data_cleaning02.R
                                 └── [data] admin_01raw.csv
-      - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output   
+      - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output     
+      
             | output_name | level | name_description_of_missing_files |
             |-------------|-------|-----------------------------------|
             | table 1     | 4     |        ADD EXAMPLES               |
@@ -28,7 +30,7 @@
             | inline 1    | 5     |                                   |
             | ...         | ...   | ...                               |
 
-  - 2.2 - Improve the current computational reproducibility of the paper
+  - 2.2 - Improve the current computational reproducibility of the paper AQUI VOY
        - Obtaining data/code
        - Creating code
        - Debugging code
