@@ -30,15 +30,14 @@
             | inline 1    | 5     |                                   |
             | ...         | ...   | ...                               |
 
-  - 2.2 - Improve the current computational reproducibility of the paper AQUI VOY
-       - Obtaining data/code
-       - Creating code
-       - Debugging code
-       - Overall quality improvement (folders, LP, OS)
-  - 2.3 - Identify all possible analytical choices
+  - 2.2 - Improve the current computational reproducibility of the paper. Choose among the feasible and desired types of improvements described in this [section](README.md#types-of-improvement)
+       - Level specific quality improvements: add data/code, debug code.
+       - Overall quality improvement: folders, literate programming, open source statistical software, version controls software, computing capsule.
+  - 2.3 - Identify all possible analytical choices.
 
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
   - Identify sensible analytical choices
+  - Jackknife the preferred estimate
   - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.
 
 # Final products

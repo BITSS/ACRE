@@ -108,7 +108,7 @@ The following figure summarizes the different levels of computational reproducib
 
 The next section describes improvements that can be applied across levels and are meant to improve the readability of the reproducibility package.
 
-## Additional Improvements Across Categories   
+## Additional Paper-Level Improvements Across Categories   
 
 In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).
   - Set up the replication package using version control software (Git).
