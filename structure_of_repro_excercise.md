@@ -3,32 +3,37 @@
 1 - Read the paper and identify main causal claims (10%)  
 
 2 - Conduct reproduction: (up to 60%)  
-  - Assessment computational reproducibility of [all | main] output the paper.
+  - 2.1 - Assessing computational reproducibility of [all | main] output of the paper.
   Review and classify the replication materials: data (raw and analytic) and code
   (cleaning and analysis). Assess current category of computational reproducibility.
-      - List all raw data sets described in the paper
+      - List all raw data sets as described in the paper (for example "CPS March 2018 from CEPR") and, if available, match with the filename in the reproducibility package (`cepr_march_2018.dta`).   
       - Draw diagrams from output to raw data sources
-            Table 1
+            table 1
               └───[code] formatting_table1.R
                   ├───output1_part1.txt  
                   |   └───[code] output_table1.do           
                   |       └── [data] analysis_data01.csv
-                  |          ├── [code] data_cleaning01.R
-                  |          └── [data] survey_01raw.csv
+                  |          └── [code] data_cleaning01.R
+                  |             └── [data] survey_01raw.csv
                   └───output1_part2.txt  
                       └───[code] output_table2.do           
                           └── [data] analysis_data02.csv
-                             ├── [code] data_cleaning02.R
-                             └── [data] admin_01raw.csv
-      - Assess the current level of computational reproducibility of each output (`output name; level #; name/description of missing files`)
+                             └── [code] data_cleaning02.R
+                                └── [data] admin_01raw.csv
+      - Assess the current level of computational reproducibility of each output   
+            | output_name | [level](README.md#levels-of-computational-reproducibility) | name_description_of_missing_files |
+            |-------------|-------|-----------------------------------|
+            | table 1     | 4     |        ADD EXAMPLES               |
+            | figure 1    | 7     |                                   |
+            | inline 1    | 5     |                                   |
+            | ...         | ...   | ...                               |
 
-
-  - Contribute to increase the CR of the paper
+  - 2.2 - Improve the current computational reproducibility of the paper
        - Obtaining data/code
        - Creating code
        - Debugging code
        - Overall quality improvement (folders, LP, OS)
-  - Identify all possible analytical choices
+  - 2.3 - Identify all possible analytical choices
 
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
   - Identify sensible analytical choices
