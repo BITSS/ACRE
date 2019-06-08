@@ -3,6 +3,7 @@
 1 - Read the paper and identify main causal claims (10%)  
 
 2 - Conduct reproduction: (up to 60%)  
+  - 2.0 - Declare if assessment will be about all or main outputs.
   - 2.1 - Assessing computational reproducibility of [all | main] output of the paper.
   Review and classify the replication materials: data (raw and analytic) and code
   (cleaning and analysis). Assess current category of computational reproducibility.
@@ -30,7 +31,7 @@
             | inline 1    | 5     |                                   |
             | ...         | ...   | ...                               |
 
-  - 2.2 - Improve the current computational reproducibility of the paper. Choose among the feasible and desired types of improvements described in this [section](README.md#types-of-improvement)
+  - 2.2 - Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)
        - Level-specific quality improvements: add data/code, debug code.
 
              | output_name | imprv | name_description_of_added_files   |
