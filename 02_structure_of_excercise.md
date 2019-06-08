@@ -57,13 +57,14 @@
              | computing capsule        |   yes      |   ADD EXAMPLES       |    
 
 
-  - 2.3 - Identify all possible analytical choices.  
-          | file_name  | line_number | choice_type         | choice_value                   | Source              |
-          |------------|-------------|---------------------|--------------------------------|---------------------|
-          | code_01.do | 73          | data subsetting     | males                          | original            |
-          | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
-          | code_05.R  | 143         | controls            | age, income, education         | original            |
-          | ...        | ...         | ...                 | ...                            | ...                 | 
+  - 2.3 - Identify all possible analytical choices.   
+
+        | file_name  | line_number | choice_type         | choice_value                   | Source              |
+        |------------|-------------|---------------------|--------------------------------|---------------------|
+        | code_01.do | 73          | data subsetting     | males                          | original            |
+        | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
+        | code_05.R  | 143         | controls            | age, income, education         | original            |
+        | ...        | ...         | ...                 | ...                            | ...                 | 
 
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
   - Identify sensible analytical choices.
