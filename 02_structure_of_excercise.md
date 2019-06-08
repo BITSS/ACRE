@@ -31,13 +31,42 @@
             | ...         | ...   | ...                               |
 
   - 2.2 - Improve the current computational reproducibility of the paper. Choose among the feasible and desired types of improvements described in this [section](README.md#types-of-improvement)
-       - Level specific quality improvements: add data/code, debug code.
-       - Overall quality improvement: folders, literate programming, open source statistical software, version controls software, computing capsule.
+       - Level-specific quality improvements: add data/code, debug code.
+
+             | output_name | imprv | name_description_of_added_files   |
+             |-------------|-------|-----------------------------------|
+             | table 1     | +AD   |        ADD EXAMPLES               |
+             | table 1     | +RD   |        ADD EXAMPLES               |
+             | table 1     | DCC   |        ADD EXAMPLES               |
+             | figure 1    | +CC   |                                   |
+             | figure 1    | DAC   |                                   |
+             | inline 1    | DAC   |                                   |
+             | ...         | ...   | ...                               |  
+
+       - Overall quality improvement: folders, literate programming, open source statistical software, version controls software, computing capsule.      
+
+
+
+             | improvement              | took_place |  description         |
+             |--------------------------|------------|----------------------|
+             | version control          |   yes      |   ADD EXAMPLES       |
+             | dynamic document         |   no       |   -                  |
+             | translate to open source |   no       |   -                  |
+             | file organization        |   yes      |   ADD EXAMPLES       |
+             | computing capsule        |   yes      |   ADD EXAMPLES       |    
+
+
   - 2.3 - Identify all possible analytical choices.
+        | file_name  | line_number | choice_type         | choice_value                   | Source              |
+        |------------|-------------|---------------------|--------------------------------|---------------------|
+        | code_01.do | 73          | data subsetting     | males                          | original            |
+        | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
+        | code_05.R  | 143         | controls            | age, income, education         | original            |
+        | ...        | ...         | ...                 | ...                            | ...                 | 
 
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
-  - Identify sensible analytical choices
-  - Jackknife the preferred estimate
+  - Identify sensible analytical choices.
+  - Jackknife the preferred estimate.
   - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.
 
 # Final products

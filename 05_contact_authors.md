@@ -6,8 +6,8 @@
 
 ### Template language   
 
-#### Requesting raw data
-#### Requisition analytic data
-#### Requesting code  
+#### Requesting raw data  
+#### Requisition analytic data  
+#### Requesting code   
 #### Following up on a non-response requesting additional contact information
 #### Reporting improvements done to current reproducibility package

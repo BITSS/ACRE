@@ -15,7 +15,7 @@
 ### Overall quality improvement
 
  | improvement              | took_place |  description         |
- |--------------------------|------------|----------------------|
+ |--------------------------|------------|------\----------------|
  | version control          |   yes      |   ADD EXAMPLES       |
  | dynamic document         |   no       |   -                  |
  | translate to open source |   no       |   -                  |
