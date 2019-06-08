@@ -12,10 +12,11 @@
 
 ## Improvements
 
-### Overall quality improvement
+### Overall quality improvement 
+
 
  | improvement              | took_place |  description         |
- |--------------------------|------------|------\----------------|
+ |--------------------------|------------|------_---------------|
  | version control          |   yes      |   ADD EXAMPLES       |
  | dynamic document         |   no       |   -                  |
  | translate to open source |   no       |   -                  |
