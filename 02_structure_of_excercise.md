@@ -1,9 +1,9 @@
 
 # Structure of the Reproduction Activity
-1 - Read the paper and identify main causal claims (10%)  
+1 - Read the paper and identify main scientific claims (10%)  
 
 2 - Conduct reproduction: (up to 60%)  
-  - 2.0 - Declare if assessment will be about all or main outputs.
+  - 2.0 - Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
   - 2.1 - Assessing computational reproducibility of [all | main] output of the paper.
   Review and classify the replication materials: data (raw and analytic) and code
   (cleaning and analysis). Assess current category of computational reproducibility.
@@ -22,6 +22,7 @@
                           └───[data] analysis_data02.csv
                              └───[code] data_cleaning02.R
                                 └───[data] admin_01raw.csv
+        For more examples of diagrams connecting final output to inital raw data, [see here](CREATE FILE).
       - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output     
 
             | output_name | level | name_description_of_missing_files |
