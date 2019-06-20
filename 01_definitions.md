@@ -21,10 +21,28 @@
       - *Intermediate data:* a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
       - *Analytic data:* data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
 
+##### How to classify a data set?
+To classify a data set as **raw** you can use some of the following strategies:   
+ - Check if the data is stored in a folder denominated as "raw"  
+ - Check if the filename has the word "raw" in some part of it  
+ - Verify that the data set is not the output of any code script in the reproduction materials  
+ - Verify that the same file can be independently obtained from the data source cited in the paper  
+
+To classify a data set as **analytic** you can use some of the following strategies:  
+ - Check if the data is stored in a folder denominated as "analytic" or "analysis"  
+ - Check if the filename has the word "analytic" or "analysis" in some part of it  
+ - Verify that the data set is the last input required to produce some of the output (formatted or unformatted) of the paper  
+
 
 #### Types of code:  
  - **Cleaning code:** a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
  - **Analysis code:** a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+
+#### Types of output:   
+  - **Tables:**
+  - **Figures:**  
+  - **In-line:**    
+
 
 #### Other definitions:  
  - **Minimal effort:** the definition of minimal effort we will use here is that of spending
