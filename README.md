@@ -17,3 +17,5 @@ It is target to students reproducing papers as parts of their graduate coursewor
  - [04_requirements_comprehension.md](04_requirements_comprehension.md) outlines mechanisms to test that the reproducer understood the paper and the materials for reproduction.   
 
 - [05_contact_authors.md](05_contact_authors.md) provides sample language for students use when contacting original authors for specifics issues.  
+
+- [06_sample_diagrams.md](06_sample_diagrams.md) provides examples of diagrams that connect output to input for different levels of reproducibility.

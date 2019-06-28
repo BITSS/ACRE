@@ -147,7 +147,7 @@ output:
            | inline 1    | DAC   |                                   |  8  |
            | ...         | ...   | ...                               | ... |  
 
-  - 3.2 - Overall quality improvement: folders, literate programming, open source statistical software, version controls software, computing capsule.      
+  - 3.2 - Overall quality improvement: file organization, literate programming, open source statistical software, version controls software, computing capsule.      
 
 
 
