@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 
 # Structure of the Reproduction Activity
 
@@ -69,7 +74,7 @@
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
           | ...               | ...              | ...                 | ...                 | ...                  | ...          |
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-  - 2.2 - Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](CREATE FILE).    
+  - 2.2 - Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](06_sample_diagrams.md).    
 
           table 1
             └───[code] formatting_table1.R

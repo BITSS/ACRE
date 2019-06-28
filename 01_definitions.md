@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 # Guidelines for Computational Reproducibility in Economics
 ## Definitions to Assess Computational Reproducibility and Possibilities for Improvement  
 
@@ -5,10 +10,11 @@
 
 #### Stages of the exercises
 
-    scope --> assemnt --> imprv --> verif --> exttn
-      ▲         |
-      |         |
-      |_________|
+       (1)       (2)         (3)        (4)        (5)
+      scope --> assess --> improve --> robust --> extend
+       ▲         |
+       |         |
+       |_________|
 
 ##### Scope
 ###### Suggestions on how to prioritize  
