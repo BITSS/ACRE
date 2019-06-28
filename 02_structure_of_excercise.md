@@ -1,13 +1,22 @@
 
 # Structure of the Reproduction Activity
 
-       (1)       (2)         (3)        (4)        (5)
-      scope --> assess --> improve --> robust --> extend
-        ▲         |
-        |         |
-        |_________|
-     Suggested level of effort:
-        10%       30%       40%         20%         0%
+                 (1)       (2)         (3)        (4)        (5)
+                scope --> assess --> improve --> robust --> extend
+                  ▲         |
+                  |         |
+                  |_________|
+
+     Suggested level
+     of effort:
+     - Undergraduate
+       thesis:    10%       30%       40%         20%         0%
+     - Graduate
+       course:    10%       25%       20%         40%         5%
+     - Graduate
+       research:   5%       10%        5%         10%         70%
+
+
 
 1 - Read the paper and identify main scientific claims. Define scope of the reproduction exercise (10%). Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
 
@@ -123,15 +132,15 @@
 3 - Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)  
   - 3.1 - Level-specific quality improvements: add data/code, debug code.
 
-           | output_name | imprv | name_description_of_added_files   |
-           |-------------|-------|-----------------------------------|
-           | table 1     | +AD   |        ADD EXAMPLES               |
-           | table 1     | +RD   |        ADD EXAMPLES               |
-           | table 1     | DCC   |        ADD EXAMPLES               |
-           | figure 1    | +CC   |                                   |
-           | figure 1    | DAC   |                                   |
-           | inline 1    | DAC   |                                   |
-           | ...         | ...   | ...                               |  
+           | output_name | imprv | name_description_of_added_files   | lvl |
+           |-------------|-------|-----------------------------------|-----|
+           | table 1     | +AD   |        ADD EXAMPLES               |  5  |
+           | table 1     | +RD   |        ADD EXAMPLES               |  5  |
+           | table 1     | DCC   |        ADD EXAMPLES               |  5  |
+           | figure 1    | +CC   |                                   |  6  |
+           | figure 1    | DAC   |                                   |  6  |
+           | inline 1    | DAC   |                                   |  8  |
+           | ...         | ...   | ...                               | ... |  
 
   - 3.2 - Overall quality improvement: folders, literate programming, open source statistical software, version controls software, computing capsule.      
 
@@ -157,8 +166,8 @@
 
 - 4.2 Test the robustness of results to alternative (sensible) specifications
   - Identify sensible alternatives to analytical choices.
-  - Jackknife the preferred estimate.
   - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.  
+  - Jackknife the preferred estimate.
   - Use ML to select among covariates...  
 
 5 - [Optional] Propose extensions that can be carried out with these data/methods.
