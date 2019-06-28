@@ -7,8 +7,25 @@
   - 2.1 - Assessing computational reproducibility of [all | main] output of the paper.
   Review and classify the replication materials: data (raw and analytic) and code
   (cleaning and analysis). Assess current category of computational reproducibility.
-      - List all raw data sets as described in the paper (for example "CPS March 2018 from CEPR") and, if available, match with the filename in the reproducibility package (`cepr_march_2018.dta`).   
-      - Draw diagrams from output to raw data sources  
+      - List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the folloing structure  
+
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+            | data_source          | page | data_files                                    | complete | known_missing       |
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+            | "Current Population  | 3    | cepr_march_2018.dta                           | yes      |                     |
+            | Survey 2018"         |      |                                               |          |                     |
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+            | "DHS 2010 - 2013"    | 4    | nicaraguaDHS_2010.csv;                        | no       | boliviaDHS_2011.csv |
+            |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |          |                     |
+            |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |          |                     |
+            |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |          |                     |
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+            | "2017 SAT scores"    | 4    | Not available                                 | no       |                     |
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+            | ...                  | ...  | ...                                           | ...      | ...                 |
+            |----------------------|------|-----------------------------------------------|----------|---------------------|
+
+      - Draw diagrams from output to raw data sources.For more examples of diagrams connecting final output to initial raw data, [see here](CREATE FILE).    
 
             table 1
               └───[code] formatting_table1.R
@@ -21,16 +38,41 @@
                       └───[code] output_table2.do           
                           └───[data] analysis_data02.csv
                              └───[code] data_cleaning02.R
-                                └───[data] admin_01raw.csv
-        For more examples of diagrams connecting final output to inital raw data, [see here](CREATE FILE).
-      - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output     
+                                └───[data] admin_01raw.csv  
 
-            | output_name | level | name_description_of_missing_files |
-            |-------------|-------|-----------------------------------|
-            | table 1     | 4     |        ADD EXAMPLES               |
-            | figure 1    | 7     |                                   |
-            | inline 1    | 5     |                                   |
-            | ...         | ...   | ...                               |
+        This diagram can be represented in data format by specifying how each component depends to its inputs. For example:
+            |-------|-------------------|---------------------|------------|
+            | order | component         | depends_on          | other_info |
+            |-------|-------------------|---------------------|------------|
+            | 1     | table1            | formatting_table1.R | ...        |
+            |-------|-------------------|---------------------|------------|
+            | 2     | table1            | output1_part2.txt   | ...        |
+            |-------|-------------------|---------------------|------------|
+            | 3     | output1_part1.txt | output_table1.do    | ...        |
+            |-------|-------------------|---------------------|------------|
+            | 4     | output_table1.do  | analysis_data01.csv | ...        |
+            |-------|-------------------|---------------------|------------|
+            | ...   | ...               | ...                 | ...        |
+            |-------|-------------------|---------------------|------------|
+
+      - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output     
+            +-------------+-------+-----------------------+------------+
+            | output_name | level | desc_of_missing_files | other_info |
+            +-------------+-------+-----------------------+------------+
+            | table 1     | 4     |                       | ...        |
+            +-------------+-------+-----------------------+------------+
+            | 2           | 7     |                       | ...        |
+            +-------------+-------+-----------------------+------------+
+            | 3           | 5     |                       | ...        |
+            +-------------+-------+-----------------------+------------+
+            | ...         | ...   | ...                   | ...        |
+            +-------------+-------+-----------------------+------------+
+
+      - Check for the existence of paper-level best practices for reproducibility
+
+
+
+
 
   - 2.2 - Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)
        - Level-specific quality improvements: add data/code, debug code.
@@ -70,7 +112,8 @@
 3 - Test the robustness of results to alternative (sensible) specifications (at least 30%)
   - Identify sensible analytical choices.
   - Jackknife the preferred estimate.
-  - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.
+  - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.  
+   - Use ML to select among covariates...
 
 # Final products
  -  One-page introduction describing why you chose this paper

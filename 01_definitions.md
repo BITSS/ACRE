@@ -3,11 +3,42 @@
 
 ### Definitions
 
+#### Stages of the exercises
+
+    scope --> assemnt --> imprv --> verif --> exttn
+      ▲         |
+      |         |
+      |_________|
+
+##### Scope
+###### Suggestions on how to prioritize  
+- First main estimates from paper.
+
+- Then main 2 main tables and/or two main figures.
+
+- Once done with improvements stage of these outcomes, then go back to rest of the paper.
+
+Another approach:
+ - get everything to run up to analytic data, then go to improvements. Once completed go back for raw data (or in parallel?)  
+
+
+##### Assessment
+
+##### Improvement  
+
+##### Verification/robustness  
+
+##### Extension  
+
+
+
+
+
 #### Types of reproduction
 
 ##### By outputs reproduced:  
-  - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it in at the begging of the reproduction.
-  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
+  - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it at the begging of the reproduction.
+  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendicess.   
 
 ##### By sources used:  
  - **Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
