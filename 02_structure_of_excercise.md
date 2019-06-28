@@ -6,11 +6,14 @@
         ▲         |
         |         |
         |_________|
+     Suggested level of effort:
+        10%       30%       40%         20%         0%
 
 1 - Read the paper and identify main scientific claims. Define scope of the reproduction exercise (10%). Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
 
 2 - Assess the current level of computational reproducibility of the different outputs in the paper.
-  - 2.1 - List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the following structure:  
+  - 2.1 - List all the input materials found or referred in the reproduction package:  
+    - 2.1.1 - List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the following structure:  
 
           Raw data information:
           |----------------------|------|-----------------------------------------------|----------|---------------------|
@@ -29,18 +32,35 @@
           | ...                  | ...  | ...                                           | ...      | ...                 |
           |----------------------|------|-----------------------------------------------|----------|---------------------|
 
+    - 2.1.2 - List and describe all the analytic data sets. The resulting report will have the following structure:  
 
           Analysis data information:
-          +----------------+-----------------------+--------------------------------+
+          |----------------|-----------------------|--------------------------------|
           | analysis_data  | location              | description                    |
-          +----------------+-----------------------+--------------------------------+
+          |----------------|-----------------------|--------------------------------|
           | final_data.csv | /analysis/fig1/       | data for figure1               |
-          +----------------+-----------------------+--------------------------------+
+          |----------------|-----------------------|--------------------------------|
           | all_waves.csv  | /final_data/v1_april/ | data for region-level analysis |
-          +----------------+-----------------------+--------------------------------+
+          |----------------|-----------------------|--------------------------------|
           | ...            | ...                   | ...                            |
-          +----------------+-----------------------+--------------------------------+
-  - 2.2 - Draw diagrams from output to raw data sources.For more examples of diagrams connecting final output to initial raw data, [see here](CREATE FILE).    
+          |----------------|-----------------------|--------------------------------|
+
+    - 2.1.3 - List and describe all the code scripts. The result will have the following structure.  
+
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | file_name         | location         | inputs              | outputs             | description          | primary_type |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
+          |                   |                  |                     |                     | of table 1           |              |
+          |                   |                  |                     |                     | (unformatted)        |              |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliars     | cleaning     |
+          |                   |                  |                     |                     | and missing vals     |              |
+          |                   |                  |                     |                     | from raw admin data  |              |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | ...               | ...              | ...                 | ...                 | ...                  | ...          |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+  - 2.2 - Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](CREATE FILE).    
 
           table 1
             └───[code] formatting_table1.R
