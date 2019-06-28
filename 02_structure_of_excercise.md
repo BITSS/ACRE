@@ -40,7 +40,8 @@
                              └───[code] data_cleaning02.R
                                 └───[data] admin_01raw.csv  
 
-        This diagram can be represented in data format by specifying how each component depends to its inputs. For example:
+        This diagram can be represented in data format by specifying how each component depends to its inputs. For example:  
+        
             |-------|-------------------|---------------------|------------|
             | order | component         | depends_on          | other_info |
             |-------|-------------------|---------------------|------------|
