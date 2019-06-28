@@ -68,7 +68,7 @@ output:
           |                   |                  |                     |                     | of table 1           |              |
           |                   |                  |                     |                     | (unformatted)        |              |
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-          | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliars     | cleaning     |
+          | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliers     | cleaning     |
           |                   |                  |                     |                     | and missing vals     |              |
           |                   |                  |                     |                     | from raw admin data  |              |
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
