@@ -90,6 +90,8 @@ five minutes or less in getting the code running. This five minutes do not inclu
 
 
 ### Possible improvements:
+ADD TEXT ON RECOMENDATION TO IMPROVE ONE OUTPUT, AND ASSESS AFTERWARDS IF IMPROVEMENT CAN BE EASILY APPLICABLE TO OTHER OUTPUTS.
+
  - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
     - 1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
     - 2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
