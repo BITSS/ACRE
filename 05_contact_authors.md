@@ -5,6 +5,7 @@
 ## Email them     
 
 ### Template language   
+[draft here](https://docs.google.com/document/d/1xJ7pZTQ1VQXVCrs6IUlp7HlBB4oxYha0oOniCG2SWLM/edit?ts=5d251563)
 
 #### Requesting raw data  
 #### Requisition analytic data  
