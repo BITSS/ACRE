@@ -9,4 +9,5 @@
 Remember to link template language to documention
 #### Requesting raw/analytic data and code  
 #### Following up on a non-response requesting additional contact information
+  - point out the level of reproducibility of project and how to improve
 #### Reporting improvements done to current reproducibility package
