@@ -123,8 +123,8 @@ The following figure summarizes the different levels of computational reproducib
 
     Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
-                                               |       | Possible improvements |
-                                               ---------------------------------------
+                                               |       |               Possible improvements              |
+                                               -----------------------------------------------------------
                                                | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
                                                |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
                                                --------|---------|--------|---------|---------|-----|-----|
