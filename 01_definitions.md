@@ -124,25 +124,27 @@ The following figure summarizes the different levels of computational reproducib
     Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
                                                |       | Possible improvements |
-                                               | Level |+AD|+RD|+AC|+CC|DAC|DCC|
-                                               --------|---|---|---|---|---|---|
-    What data are available?                   |       |   |   |   |   |   |   |
-    ├── None ..................................|   L1  | ✔ | ✔ | x | x | x | x |
-    ├── Analytic data only. Code?              |       |   |   |   |   |   |   |
-    |   ├── No code or cleaning code only......|   L2  | - | ✔ | ✔ | x | x | x |
-    |   └── Analysis code only. Is it CRA?     |       |   |   |   |   |   |   |
-    |      ├── No..............................|   L3  | - | ✔ | - | x | ✔ | x |
-    |      └── Yes.............................|   L4  | - | ✔ | - | x | - | x |
-    └── Raw & Analytic data. Code?             |       |   |   |   |   |   |   |
-       ├── None ...............................|   L5  | - | - | ✔ | ✔ | x | x |
-       ├── Analysis code only. CRA?            |       |   |   |   |   |   |   |
-       |  ├── No...............................|   L6  | - | - | - | ✔ | ✔ | x |
-       |  └── Yes..............................|   L7  | - | - | - | ✔ | - | x |
-       └── A. and cleaning code. Is it CRR?    |       |   |   |   |   |   |   |
-           ├── No. CRA?                        |       |   |   |   |   |   |   |
-           |  ├── No...........................|   L8  | - | - | - | - | ✔ | ✔ |
-           |  └── Yes..........................|   L9  | - | - | - | - | - | ✔ |
-           └── Yes.............................|   L10 | - | - | - | - | - | - |
+                                               ---------------------------------------
+                                               | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
+                                               |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
+                                               --------|---------|--------|---------|---------|-----|-----|
+    What data are available?                   |       |         |        |         |         |     |     |
+    ├── None ..................................|   L1  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
+    ├── Analytic data only. Code?              |       |         |        |         |         |     |     |
+    |   ├── No code or cleaning code only......|   L2  |    -    |    ✔   |    ✔    |    x    |  x  |  x  |
+    |   └── Analysis code only. Is it CRA?     |       |         |        |         |         |     |     |
+    |      ├── No..............................|   L3  |    -    |    ✔   |    -    |    x    |  ✔  |  x  |
+    |      └── Yes.............................|   L4  |    -    |    ✔   |    -    |    x    |  -  |  x  |
+    └── Raw & Analytic data. Code?             |       |         |        |         |         |     |     |
+       ├── None ...............................|   L5  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
+       ├── Analysis code only. CRA?            |       |         |        |         |         |     |     |
+       |  ├── No...............................|   L6  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
+       |  └── Yes..............................|   L7  |    -    |    -   |    -    |    ✔    |  -  |  x  |
+       └── A. and cleaning code. Is it CRR?    |       |         |        |         |         |     |     |
+           ├── No. CRA?                        |       |         |        |         |         |     |     |
+           |  ├── No...........................|   L8  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
+           |  └── Yes..........................|   L9  |    -    |    -   |    -    |    -    |  -  |  ✔  |
+           └── Yes.............................|   L10 |    -    |    -   |    -    |    -    |  -  |  -  |
 
  **Level 1 (L1):** There are no data or code available of any type. Possible improvements include: adding raw data (+AD) and adding analysis data (+RD).  
 
