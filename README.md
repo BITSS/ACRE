@@ -1,4 +1,4 @@
-# Accelerating Computational Reproducibility in Economics (ACRE)
+# Advancing Computational Reproducibility in Economics (ACRE)
 
 ## Guidelines  
 
