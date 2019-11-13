@@ -180,9 +180,9 @@ Check the robustness of results to variations in the underlying set of analytica
   - Jackknife the preferred estimate.
   - Use ML to select among covariates...  
 
-##5 - [Optional] Propose Extensions  
+## 5 - [Optional] Propose Extensions    
 
-5 - [Optional] Propose extensions that can be carried out with these data/methods.
+Propose extensions that can be carried out with these data/methods.
 
 
 
