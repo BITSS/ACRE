@@ -10,11 +10,21 @@ output:
 
 #### Stages of the exercises
 
-       (1)       (2)         (3)        (4)        (5)
-      scope --> assess --> improve --> robust --> extend
-       ▲         |
-       |         |
-       |_________|
+                  (1)       (2)         (3)        (4)        (5)
+                  scope --> assess --> improve --> robust --> extend
+                   ▲         |
+                   |         |
+                   |_________|
+
+      Suggested level
+      of effort:
+      - Undergraduate
+        thesis:    10%       30%       40%         20%         0%
+      - Graduate
+        course:    10%       25%       20%         40%         5%
+      - Graduate
+        research:   5%       10%        5%         10%         70%
+
 
 ##### Scope
 ###### Suggestions on how to prioritize  

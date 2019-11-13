@@ -170,7 +170,7 @@ Check the robustness of results to variations in the underlying set of analytica
       | file_name  | line_number | choice_type         | choice_value                   | Source              |
       |------------|-------------|---------------------|--------------------------------|---------------------|
       | code_01.do | 73          | data subsetting     | males                          | original            |
-      | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
+      | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103"   |
       | code_05.R  | 143         | controls            | age, income, education         | original            |
       | ...        | ...         | ...                 | ...                            | ...                 | 
 
