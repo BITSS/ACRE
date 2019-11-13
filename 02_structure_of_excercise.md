@@ -22,10 +22,11 @@ output:
        research:   5%       10%        5%         10%         70%
 
 
+## 1 - Scope
+Read the paper and identify main scientific claims. Define scope of the reproduction exercise (10%). Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
 
-1 - Read the paper and identify main scientific claims. Define scope of the reproduction exercise (10%). Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
-
-2 - Assess the current level of computational reproducibility of the different outputs in the paper.
+## 2 - Assess
+Assess the current level of computational reproducibility of the different outputs in the paper.
   - 2.1 - List all the input materials found or referred in the reproduction package:  
     - 2.1.1 - List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the following structure:  
 
@@ -132,9 +133,9 @@ output:
       | computing capsule        |   no       |
       |--------------------------|------------|
 
+## 3 -  Improve
 
-
-3 - Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)  
+Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)  
   - 3.1 - Level-specific quality improvements: add data/code, debug code.
 
            | output_name | imprv | name_description_of_added_files   | lvl |
@@ -159,7 +160,11 @@ output:
            | file organization        |   yes      |   ADD EXAMPLES       |
            | computing capsule        |   yes      |   ADD EXAMPLES       |    
 
-4 - Check the robustness of results to variations in the underlying set of analytical choices  
+
+## 4 - Check Robustness  
+
+Check the robustness of results to variations in the underlying set of analytical choices  
+
 - 4.1 - Identify all possible analytical choices.   
 
       | file_name  | line_number | choice_type         | choice_value                   | Source              |
@@ -175,11 +180,13 @@ output:
   - Jackknife the preferred estimate.
   - Use ML to select among covariates...  
 
+##5 - [Optional] Propose Extensions  
+
 5 - [Optional] Propose extensions that can be carried out with these data/methods.
 
 
 
-# Final products
+## Final products
  -  One-page introduction describing why you chose this paper
  -  Two-page summary of paper
  -  2 Completed surveys:  
