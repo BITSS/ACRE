@@ -2,10 +2,24 @@
 
 Read the paper and identify main scientific claims. Define scope of the reproduction exercise. Declare if assessment will be about all or main outputs.
 
-Complete Survey I.  ADD LINK  
+
+## Reproduction margins  
+
+Intensity of the reproduction: analytic or raw.  
+
+### By outputs reproduced:  
+  - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it at the begging of the reproduction.
+  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
 
 
-###### Suggestions on how to prioritize  
+Extent of the reproduction: all or some specific set of outcomes.
+
+
+Complete [survey one](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN).  
+
+
+
+## Suggestions on how to prioritize  
 - First main estimates from paper.
 
 - Then main 2 main tables and/or two main figures.
@@ -16,6 +30,3 @@ Another approach:
  - get everything to run up to analytic data, then go to improvements. Once completed go back for raw data (or in parallel?)  
  
  
-##### By outputs reproduced:  
-  - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it at the begging of the reproduction.
-  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
