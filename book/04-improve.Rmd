@@ -1,0 +1,69 @@
+# Improvements
+
+
+
+### Possible improvements
+ADD TEXT ON RECOMENDATION TO IMPROVE ONE OUTPUT, AND ASSESS AFTERWARDS IF IMPROVEMENT CAN BE EASILY APPLICABLE TO OTHER OUTPUTS.
+
+ - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
+    - 1 - Identify specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg `analysis_data_03.csv`).   
+    - 2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.   
+    - 3 - [Verify the ACRE database](ADD LINK) for previous attemps to contact the authors on this topic.  
+    - 4 - [Contact the authors](contact_authors.md) and request the specific data set.     
+ - **Add missing raw data files (+RD):** most reproductions packages do not include all the original raw datasets. To obtain any missing raw data, follow the same steps (1-4) recommended for the adding analysis data sets. If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by including a detailed set of instructions, including contact information and possible costs, for future researchers to follow.  
+ - **Add missing analysis code (+AC):** analysis code can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case researchers conducting the reproduction to follow the these steps:  
+    - 1 - Identify specific line/paragraph in the paper that describes the missing analytic step in the code (eg "we impute missing values to...," or "we estimate this regressions using a bandwidth of ...").  
+    - 2 - Identify the code file and approximate line in code where the analysis could be carried out.  
+    - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
+    - 4 - [Contact the authors](contact_authors.md) and request the specific code files, following the ACRE sample language to request the specific analysis.  
+    - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
+ - **Add  missing data cleaning code (+CC):**  data cleaning/processing code can be added when there are certain steps missing in the creation/recoding of variables, merging, subsetting of the data sets, and other cleaning related processes. Researchers conducting the reproduction should follow the same steps (1-5) as when adding missing code.
+ - **Debug analysis code (DAC) or debug cleaning code (DCC):** whenever any code is available in the reproduction package, the researcher performing the reproduction will be able to debug those scripts. Here four types of debugging are suggested to label the different modifications perform in the reproduction:
+    - *Code cleaning:* whenever set of instructions is simplified (e.g. by wrapping repetitive steps in a function or a loop) or when redundant code is removed (eg. old code that was commented out) but the original output remains intact.
+    - *Performance improvement:* whenever a set of instructions is replace by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).
+    - *Environment set up:* whenever the code has to be modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.
+    - *Correcting errors:* whenever a coding error is detected, please follow the [ACRE procedure to fix and report coding errors](ADD LINK).  
+
+
+### Additional Paper-Level Improvements Across Categories   
+
+In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).  
+
+  - Set up the replication package using version control software (Git).
+  - Improve documentation:
+       - Add extensive comments to the code.
+       - Adapt the paper into a literate programming environment (eg: Jupyter notebook, RMarkdown, Stata Dynamic Doc).
+  - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia).
+  - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications. [ADD LINK TO A NICE MASTER SCRIPT. LARS?]()  
+  - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
+
+
+
+
+
+Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)   
+
+  - 3.1 - Level-specific quality improvements: add data/code, debug code.
+
+           | output_name | imprv | name_description_of_added_files   | lvl |
+           |-------------|-------|-----------------------------------|-----|
+           | table 1     | +AD   |        ADD EXAMPLES               |  5  |
+           | table 1     | +RD   |        ADD EXAMPLES               |  5  |
+           | table 1     | DCC   |        ADD EXAMPLES               |  5  |
+           | figure 1    | +CC   |                                   |  6  |
+           | figure 1    | DAC   |                                   |  6  |
+           | inline 1    | DAC   |                                   |  8  |
+           | ...         | ...   | ...                               | ... |  
+
+  - 3.2 - Overall quality improvement: file organization, literate programming, open source statistical software, version controls software, computing capsule.      
+
+
+
+           | improvement              | took_place |  description         |
+           |--------------------------|------------|----------------------|
+           | version control          |   yes      |   ADD EXAMPLES       |
+           | dynamic document         |   no       |   -                  |
+           | translate to open source |   no       |   -                  |
+           | file organization        |   yes      |   ADD EXAMPLES       |
+           | computing capsule        |   yes      |   ADD EXAMPLES       |    
+

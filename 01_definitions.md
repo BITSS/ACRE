@@ -54,7 +54,7 @@ Another approach:
 
 ##### By outputs reproduced:  
   - **Main results:** a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it at the begging of the reproduction.
-  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendicess.   
+  - **Complete:**  a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.   
 
 ##### By sources used:  
  - **Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
@@ -99,7 +99,7 @@ five minutes or less in getting the code running. This five minutes do not inclu
 
 
 
-### Possible improvements:
+### Possible improvements
 ADD TEXT ON RECOMENDATION TO IMPROVE ONE OUTPUT, AND ASSESS AFTERWARDS IF IMPROVEMENT CAN BE EASILY APPLICABLE TO OTHER OUTPUTS.
 
  - **Add missing analysis data files (+AD):** if found missing from the reproduction materials, analysis data sets could be added. Researchers performing the reproduction are encourage to follow these steps:  
