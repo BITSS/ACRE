@@ -1,4 +1,12 @@
-# Checking for Robustness
+# Checking for Robustness {#robust}
+
+
+- Identify all possible analytical choices: original and repeated ones.   
+- Identify type of choice.  
+- Identify choice value. 
+- Suggest choice alternative and justify (one line)  
+
+
 
 
 Check the robustness of results to variations in the underlying set of analytical choices  

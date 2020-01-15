@@ -1,5 +1,33 @@
 # Assessment
 
+
+
+ **Raw data**      
+ 
+- Identify data sources  
+- Connect data sources with data files  
+- Inspect completeness of data files  
+
+ **Analysis data**  
+ 
+- List all the files  
+- Identify the location  
+- Provide brief description  
+
+
+**Code**  
+
+- list all the files  
+- location  
+- identify input files  
+- identify output files  
+- classify script into mainly analysis or mainly cleaning  
+
+**Draw diagrams**
+
+**Score output**
+
+
 Assess the current level of computational reproducibility of the different outputs in the paper.  
   
   - 2.1 - List all the input materials found or referred in the reproduction package:      

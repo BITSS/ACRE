@@ -1,9 +1,8 @@
 # Scoping
 
-Read the paper and identify main scientific claims. Define scope of the reproduction exercise (10%). Declare if assessment will be about [all or main outputs](01_definitions.md#types-of-reproduction).
+Read the paper and identify main scientific claims. Define scope of the reproduction exercise. Declare if assessment will be about all or main outputs.
 
 Complete Survey I.  ADD LINK  
-
 
 
 ###### Suggestions on how to prioritize  
