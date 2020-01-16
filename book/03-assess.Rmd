@@ -1,29 +1,60 @@
 # Assessment
 
-First, students will be asked to provide a detailed description of all the reproduction materials. Second, they are requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, students can score the level of reproducibility of a specific output, and the paper-level dimensions of reproducibility. 
+The goal of this stage is to provide a standarized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproductors pick up where others left. 
+
+First, students will be asked to provide a detailed description of all the reproduction materials. Second, they are requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, students can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility. 
 
 
 ## Describe inputs  
+List all the input materials found or referred in the reproduction package
 
- **Raw data**      
- 
+### Data sources and raw data   
+
 - Identify data sources  
 - Connect data sources with data files  
 - Inspect completeness of data files  
 
- **Analysis data**  
- 
+List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the following structure:    
+
+          Raw data information:
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+          | data_source          | page | data_files                                    | complete | known_missing       |
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+          | "Current Population  | 3    | cepr_march_2018.dta                           | yes      |                     |
+          | Survey 2018"         |      |                                               |          |                     |
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+          | "DHS 2010 - 2013"    | 4    | nicaraguaDHS_2010.csv;                        | no       | boliviaDHS_2011.csv |
+          |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |          |                     |
+          |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |          |                     |
+          |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |          |                     |
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+          | "2017 SAT scores"    | 4    | Not available                                 | no       |                     |
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+          | ...                  | ...  | ...                                           | ...      | ...                 |
+          |----------------------|------|-----------------------------------------------|----------|---------------------|
+
+### Describe analytic data sets  
+
 - List all the files  
 - Identify the location  
 - Provide brief description  
 
-
-#### Types of code:  
- - **Cleaning code:** a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
- - **Analysis code:** a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+ List and describe all the analytic data sets. The resulting report will have the following structure:  
 
 
-**Code**  
+          Analysis data information:
+          |----------------|-----------------------|--------------------------------|
+          | analysis_data  | location              | description                    |
+          |----------------|-----------------------|--------------------------------|
+          | final_data.csv | /analysis/fig1/       | data for figure1               |
+          |----------------|-----------------------|--------------------------------|
+          | all_waves.csv  | /final_data/v1_april/ | data for region-level analysis |
+          |----------------|-----------------------|--------------------------------|
+          | ...            | ...                   | ...                            |
+          |----------------|-----------------------|--------------------------------|
+
+### Descript code scripts  
+List and describe all the code scripts. The result will have the following structure.    
 
 - list all the files  
 - location  
@@ -32,19 +63,71 @@ First, students will be asked to provide a detailed description of all the repro
 - classify script into mainly analysis or mainly cleaning  
 
 
-## Connect inputs with outputs  
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | file_name         | location         | inputs              | outputs             | description          | primary_type |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
+          |                   |                  |                     |                     | of table 1           |              |
+          |                   |                  |                     |                     | (unformatted)        |              |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliers     | cleaning     |
+          |                   |                  |                     |                     | and missing vals     |              |
+          |                   |                  |                     |                     | from raw admin data  |              |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | ...               | ...              | ...                 | ...                 | ...                  | ...          |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+ 
+
+
+#### Types of code:  
+ - **Cleaning code:** a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).     
+ - **Analysis code:** a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+
+
+## Connect each output to all its inputs 
+
+Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](06_sample_diagrams.md).    
+
+          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] data_cleaning01.R
+                |             └───[data] survey_01raw.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] data_cleaning02.R
+                              └───[data] admin_01raw.csv  
+
+This diagram can be represented in data format by specifying how each component depends to its inputs. For example:  
+
+          Data representation of diagram behind Table 1.
+          |-------|-------------------|---------------------|------------|
+          | order | component         | depends_on          | other_info |
+          |-------|-------------------|---------------------|------------|
+          | 1     | table1            | formatting_table1.R | ...        |
+          |-------|-------------------|---------------------|------------|
+          | 2     | table1            | output1_part2.txt   | ...        |
+          |-------|-------------------|---------------------|------------|
+          | 3     | output1_part1.txt | output_table1.do    | ...        |
+          |-------|-------------------|---------------------|------------|
+          | 4     | output_table1.do  | analysis_data01.csv | ...        |
+          |-------|-------------------|---------------------|------------|
+          | ...   | ...               | ...                 | ...        |
+          |-------|-------------------|---------------------|------------|
+
 
 
 ## Assign a reproducibility score  
 
-
-#### By sources used:  
+### Definitions  
 
  - **Computationally Reproducible from Analytic data (CRA):** an output is CRA if it can be reproduced with minimal effort starting from the analytic data sets.
 
  - **Computationally Reproducible from Raw data (CRR):** an output is CRR if it can be reproduced with minimal effort from the raw data sets.
 
-#### Other definitions:  
  - **Minimal effort:** the definition of minimal effort we will use here is that of spending
 five minutes or less in getting the code running. This five minutes do not include the computing time.
 
@@ -110,94 +193,7 @@ The following figure summarizes the different levels of computational reproducib
 
 The next section describes improvements that can be applied across levels and are meant to improve the readability of the reproducibility package.
 
-
-
-
-
-
-  
-  - 2.1 - List all the input materials found or referred in the reproduction package:      
-    - 2.1.1 - List all raw data sources as described in the paper (for example "CPS March 2018 from CEPR") and, if raw data is available, match it with the filename in the reproducibility package (`cepr_march_2018.dta`). The result will have the following structure:    
-
-          Raw data information:
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-          | data_source          | page | data_files                                    | complete | known_missing       |
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-          | "Current Population  | 3    | cepr_march_2018.dta                           | yes      |                     |
-          | Survey 2018"         |      |                                               |          |                     |
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-          | "DHS 2010 - 2013"    | 4    | nicaraguaDHS_2010.csv;                        | no       | boliviaDHS_2011.csv |
-          |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |          |                     |
-          |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |          |                     |
-          |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |          |                     |
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-          | "2017 SAT scores"    | 4    | Not available                                 | no       |                     |
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-          | ...                  | ...  | ...                                           | ...      | ...                 |
-          |----------------------|------|-----------------------------------------------|----------|---------------------|
-
-
-    - 2.1.2 - List and describe all the analytic data sets. The resulting report will have the following structure:  
-
-          Analysis data information:
-          |----------------|-----------------------|--------------------------------|
-          | analysis_data  | location              | description                    |
-          |----------------|-----------------------|--------------------------------|
-          | final_data.csv | /analysis/fig1/       | data for figure1               |
-          |----------------|-----------------------|--------------------------------|
-          | all_waves.csv  | /final_data/v1_april/ | data for region-level analysis |
-          |----------------|-----------------------|--------------------------------|
-          | ...            | ...                   | ...                            |
-          |----------------|-----------------------|--------------------------------|
-
-    - 2.1.3 - List and describe all the code scripts. The result will have the following structure.  
-
-          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-          | file_name         | location         | inputs              | outputs             | description          | primary_type |
-          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-          | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
-          |                   |                  |                     |                     | of table 1           |              |
-          |                   |                  |                     |                     | (unformatted)        |              |
-          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-          | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliers     | cleaning     |
-          |                   |                  |                     |                     | and missing vals     |              |
-          |                   |                  |                     |                     | from raw admin data  |              |
-          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-          | ...               | ...              | ...                 | ...                 | ...                  | ...          |
-          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-  - 2.2 - Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](06_sample_diagrams.md).    
-
-          table 1
-            └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
-                |       └───[data] analysis_data01.csv
-                |          └───[code] data_cleaning01.R
-                |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
-                        └───[data] analysis_data02.csv
-                           └───[code] data_cleaning02.R
-                              └───[data] admin_01raw.csv  
-
-      This diagram can be represented in data format by specifying how each component depends to its inputs. For example:  
-
-          Data representation of diagram behind Table 1.
-          |-------|-------------------|---------------------|------------|
-          | order | component         | depends_on          | other_info |
-          |-------|-------------------|---------------------|------------|
-          | 1     | table1            | formatting_table1.R | ...        |
-          |-------|-------------------|---------------------|------------|
-          | 2     | table1            | output1_part2.txt   | ...        |
-          |-------|-------------------|---------------------|------------|
-          | 3     | output1_part1.txt | output_table1.do    | ...        |
-          |-------|-------------------|---------------------|------------|
-          | 4     | output_table1.do  | analysis_data01.csv | ...        |
-          |-------|-------------------|---------------------|------------|
-          | ...   | ...               | ...                 | ...        |
-          |-------|-------------------|---------------------|------------|
-
-  - 2.3 - Assess the current [level](README.md#levels-of-computational-reproducibility) of computational reproducibility of each output    
+Assess the current level of computational reproducibility of each output    
 
           |-------------|-------|-----------------------|------------|
           | output_name | level | desc_of_missing_files | other_info |
@@ -211,7 +207,7 @@ The next section describes improvements that can be applied across levels and ar
           | ...         | ...   | ...                   | ...        |
           |-------------|-------|-----------------------|------------|
 
-- 2.4 - Check for the existence of paper-level best practices for reproducibility    
+Check for the existence of paper-level best practices for reproducibility    
 
       |--------------------------|------------|
       | best_practice            | exist      |
