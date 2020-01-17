@@ -13,6 +13,8 @@ improvements to reproducibiliy created by students will be posted to the public,
 assessment. 
 
 
+EMPHASIE THAT ASSESSMENT IS OUTPUT SPECIFIC 
+
 ## Stages of the exercise
 
 The reproduction exercise is separated into five different stages: scoping, assessment, improvement, robustness and (possible) extensions. 
