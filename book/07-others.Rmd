@@ -21,6 +21,12 @@ Remember to link template language to documentation for later, to check with tea
 ##### Reporting improvements done to current reproducibility package
 
 
+## Code of conduct
+
+## Ask for feedback on guidelines 
+
+## Contributors  
+
 ## Additional Diagrams 
 
 ### Complete

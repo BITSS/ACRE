@@ -213,15 +213,13 @@ several practices that facilitate the overall computational reproducibility of t
 practices are described in detail in the improvement chapter. In this section of assessment it is only 
 requiere for students to verify that the original reproduction package made use of any of the following:  
 
-
 - version control         
 - dynamic document        
 - translate to open source  
 - file organization       
 - computing capsule       
 
-Congragtulations! you have now completed the assessment stage. You have just provide a concrete building block of knowledge to better understand 
-the state or reproducibility in Economics. 
+Congragtulations! you have now completed the assessment stage. You just provided a concrete building block of knowledge to better understand the state or reproducibility in Economics. 
 
 Please continue to the [next section](#improvements) where you can now help to improve it!
 
