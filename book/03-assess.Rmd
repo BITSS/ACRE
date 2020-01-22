@@ -5,6 +5,9 @@ The goal of this stage is to provide a standardized assessment of computational 
 First, students will be asked to provide a detailed description of all the reproduction materials. Second, they are requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, students can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility. 
 
 
+A recommendation to students performing reproduction it to first focus on one specific output (e.g. "Table 1"). After completing the assessment to this first output, students will have a much easier time translating those improvements to other outputs.   
+
+
 ## Describe inputs  
 This section explains how to list all the input materials found or referred in the reproduction package. First students should identify all data sources and connect them with raw data files (when available). Second they are ask to locate and provide a description a brief description of the analytic files. In the last step students locate, inspect and describe all the computer code use in the paper. 
  
