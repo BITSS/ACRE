@@ -11,4 +11,3 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "Materials to support the reproduction of published research in economics."
 ---
-

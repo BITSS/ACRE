@@ -5,6 +5,8 @@ output:
 ---
 # Introduction {#intro}
 
+**[ADD ONE PAGER BETWEEN COVER AND INTRO]**
+
 This guidelines are designed to standarized reproduction excercises perfomed in graduate courses or undergraduate thesis. 
 The goal is to provide a unifed terminology and standards to assess and improve the computational reproducibility of published research. 
 During this excercise, students are ask to report the result of their reproduction in a structure fashion. The work of student will be 
