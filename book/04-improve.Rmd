@@ -44,20 +44,17 @@ In additions to the efforts to obtain raw data, reproductors can also contribute
 [Data cleaning (processing)](#describe-inputs) code can be added when there are certain steps missing in the creation/recoding of variables, merging, subsetting of the data sets, and other cleaning related processes. Researchers conducting the reproduction should follow the same steps (1-5) as when adding missing analysis code.
 
 ### Debug analysis code (DAC) 
-whenever any code is available in the reproduction package, the researcher performing the reproduction will be able to debug those scripts. Here four types of debugging are suggested to label the different modifications perform in the reproduction:  
+Whenever any code is available in the reproduction package, the researcher performing the reproduction will be able to debug those scripts. Here four types of debugging are suggested to label the different modifications performed in the reproduction:  
 
   - *Code cleaning:* whenever set of instructions is simplified (e.g. by wrapping repetitive steps in a function or a loop) or when redundant code is removed (eg. old code that was commented out) but the original output remains intact.  
-  - *Performance improvement:* whenever a set of instructions is replace by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).  
+  - *Performance improvement:* whenever a set of instructions is replace by other that performs the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).  
   - *Environment set up:* whenever the code has to be modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.  
-  - *Correcting errors:* whenever a coding error is detected, please follow the [ACRE procedure to fix and report coding errors](ADD LINK).    
-  
+  - *Correcting errors:* a coding error will occur when a section in the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the [ACRE procedure to report coding errors](ADD LINK).  
 
 
 ### Debug cleaning code (DCC)
 
 Same as for analysis code, only separate for reporting purposes.  
-
-
 
 ##  Types of paper-level improvements
 
