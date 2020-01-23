@@ -91,5 +91,3 @@ In addition to the different levels of computational reproducibility described i
 Repoductors will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
 
-ONCE DONE HERE, GO BACK TO QUALTRICS SURVEYS. THEN REVIEW LARS MATERIAL AGAIN.
-
