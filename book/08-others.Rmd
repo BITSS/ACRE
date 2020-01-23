@@ -1,5 +1,7 @@
 # Others
 
+[UNDER CONSTRUCTION]
+
 ## Code of conduct
 
 ## Ask for feedback on guidelines 
@@ -43,6 +45,18 @@
 
 
 ## Additional resources
+
+Create a section with short summaries of great resources for comp. repro and invite reader to contribute. 
+
+### Some summaries
+
+### Summary on reproducbile workflow (Chapter 11) from @christensen2019transparent:  
+- TODO   
+
+
+
+### Links
+
 - [Project TIER](https://www.projecttier.org/tier-protocol/)   
 - [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
 - [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).   

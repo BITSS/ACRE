@@ -60,13 +60,12 @@ Same as for analysis code, only separate for reporting purposes.
 
 In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).  
 
-  - Set up the replication package using version control software (Git).
-  - Improve documentation:
-       - Add extensive comments to the code.
-       - Adapt the paper into a literate programming environment (eg: Jupyter notebook, RMarkdown, Stata Dynamic Doc).
-  - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia).
-  - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications. [ADD LINK TO A NICE MASTER SCRIPT. LARS?]()  
-  - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
+  - 1 - Set up the replication package using version control software (Git).
+  - 2 - Improve documentation: add extensive comments to the code.
+  - 3 - Integrate documentation with code: adapt the paper into a literate programming environment (eg: Jupyter notebook, RMarkdown, Stata Dynamic Doc).
+  - 4 - Re-write the code from a proprietary statistical software (eg Stata, Matlab) into a open source statistical software (eg R, Python, Julia).
+  - 5 - File organization and master script: re-organize the reproduction materials into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order and with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).  
+  - 6 - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
 
 
 
@@ -100,3 +99,4 @@ Improve the current computational reproducibility of [all | main | specific] out
            | file organization        |   yes      |   ADD EXAMPLES       |
            | computing capsule        |   yes      |   ADD EXAMPLES       |    
 
+ONCE DONE HERE, GO BACK TO QUALTRICS SURVEYS

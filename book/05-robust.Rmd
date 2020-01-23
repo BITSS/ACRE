@@ -1,6 +1,8 @@
 # Checking for Robustness {#robust}
 
 
+[UNDER CONSTRUCION]
+
 - Identify all possible analytical choices: original and repeated ones.   
 - Identify type of choice.  
 - Identify choice value. 
@@ -8,23 +10,6 @@
 
 
 
-
-Check the robustness of results to variations in the underlying set of analytical choices  
-
-- 5.1 - Identify all possible analytical choices.   
-
-      | file_name  | line_number | choice_type         | choice_value                   | Source              |
-      |------------|-------------|---------------------|--------------------------------|---------------------|
-      | code_01.do | 73          | data subsetting     | males                          | original            |
-      | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103"   |
-      | code_05.R  | 143         | controls            | age, income, education         | original            |
-      | ...        | ...         | ...                 | ...                            | ...                 | 
-
-- 5.2 Test the robustness of results to alternative (sensible) specifications
-  - Identify sensible alternatives to analytical choices.
-  - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.  
-  - Jackknife the preferred estimate.
-  - Use ML to select among covariates...  
 
 ## Identifying Analytical Choices
 As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.  
@@ -61,10 +46,15 @@ The resulting data base should have the [following structure](https://docs.googl
 ## Choose and justify alternative values for analytical choices  
 
 
+
 ## Test the robustness of results  
 
+Test the robustness of results to alternative (sensible) specifications
 
-
+  - Identify sensible alternatives to analytical choices.
+  - Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.  
+  - Jackknife the preferred estimate.
+  - Use ML to select among covariates...  
 
  
 
