@@ -56,6 +56,25 @@ Whenever any code is available in the reproduction package, the researcher perfo
 
 Same as for analysis code, only separate for reporting purposes.  
 
+
+### Reporting results  
+Reproductors are ask to track of all the different types of improvements implemented and record in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A3) of the assessment tool with the following structure: 
+
+           Level-specific quality improvements: add data/code, debug code.
+
+           | output_name | imprv | description_of_added_files        | lvl |
+           |-------------|-------|-----------------------------------|-----|
+           | table 1     | +AD   |        ADD EXAMPLES               |  5  |
+           | table 1     | +RD   |        ADD EXAMPLES               |  5  |
+           | table 1     | DCC   |        ADD EXAMPLES               |  5  |
+           | figure 1    | +CC   |                                   |  6  |
+           | figure 1    | DAC   |                                   |  6  |
+           | inline 1    | DAC   |                                   |  8  |
+           | ...         | ...   | ...                               | ... |  
+
+
+
+
 ##  Types of paper-level improvements
 
 In addition to the different levels of computational reproducibility described in the previous sections, this section highlights six additional improvements that researchers conducting the reproduction can do to improve the overall reproducibility of a paper. This additional improvements can be apply across levels (including level 10).  
@@ -68,35 +87,9 @@ In addition to the different levels of computational reproducibility described i
   - 6 - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
 
 
-
-## Reporting improvements  
-
-[here](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1257688782&range=A3)
-
-Improve the current computational reproducibility of [all | main | specific] output of the paper. Choose among the feasible and desired types of improvements described in this [section](01_definitions.md#possible-improvements)   
-
-  - 3.1 - Level-specific quality improvements: add data/code, debug code.
-
-           | output_name | imprv | description_of_added_files        | lvl |
-           |-------------|-------|-----------------------------------|-----|
-           | table 1     | +AD   |        ADD EXAMPLES               |  5  |
-           | table 1     | +RD   |        ADD EXAMPLES               |  5  |
-           | table 1     | DCC   |        ADD EXAMPLES               |  5  |
-           | figure 1    | +CC   |                                   |  6  |
-           | figure 1    | DAC   |                                   |  6  |
-           | inline 1    | DAC   |                                   |  8  |
-           | ...         | ...   | ...                               | ... |  
-
-  - 3.2 - Overall quality improvement: file organization, literate programming, open source statistical software, version controls software, computing capsule.      
+### Reporting improvements  
+Repoductors will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
 
+ONCE DONE HERE, GO BACK TO QUALTRICS SURVEYS. THEN REVIEW LARS MATERIAL AGAIN.
 
-           | improvement              | took_place |  description         |
-           |--------------------------|------------|----------------------|
-           | version control          |   yes      |   ADD EXAMPLES       |
-           | dynamic document         |   no       |   -                  |
-           | translate to open source |   no       |   -                  |
-           | file organization        |   yes      |   ADD EXAMPLES       |
-           | computing capsule        |   yes      |   ADD EXAMPLES       |    
-
-ONCE DONE HERE, GO BACK TO QUALTRICS SURVEYS

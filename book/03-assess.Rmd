@@ -209,7 +209,7 @@ Choose the appropiate level of computational reproducibility and record it using
           |-------------|-------|------------------------|------------|
           | ...         | ...   | ...                    | ...        |
           |-------------|-------|------------------------|------------|
-Record all this information in a [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment survey](ADD LINK).   
+Record all this information in a [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
 ### Reproducibility dimensions at the paper level  
 In addition to an output-specific assessment of computational reproducibility, there are
