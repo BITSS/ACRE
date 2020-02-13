@@ -1,14 +1,17 @@
 # Assessment
 
-The goal of this stage is to provide a standardized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproductors pick up where others left. 
+The goal of this stage is to provide a standardized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproducers to pick up where others left.  
 
-First, students will be asked to provide a detailed description of all the reproduction materials. Second, they are requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, students can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility. 
+First, you will be asked to provide a detailed description of all the reproduction materials. Second, you requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, you can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.  
+
+**Use Survey 2 to record your work as part of this step.**
+
+*Tip: *We recommend that you first focus on one specific output (e.g. “Table 1”). After completing the assessment to this first output, you will have a much easier time translating those improvements to other outputs.
+
+ADD: how a reproduction package [should look like](https://social-science-data-editors.github.io/guidance/Verification_guidance.html.)
 
 
-A recommendation to students performing reproduction it to first focus on one specific output (e.g. "Table 1"). After completing the assessment to this first output, students will have a much easier time translating those improvements to other outputs.   
-
-
-## Describe inputs  
+## Describe inputs  AQUI VOY
 This section explains how to list all the input materials found or referred in the reproduction package. First students should identify all data sources and connect them with raw data files (when available). Second they are ask to locate and provide a description a brief description of the analytic files. In the last step students locate, inspect and describe all the computer code use in the paper. 
  
 The following concepts will be used in this section:     
