@@ -1,5 +1,5 @@
-book_filename: "bookdown-demo"
-language:
-  ui:
-    chapter_name: "Chapter "
-delete_merged_file: true
+chapter_name: "Chapter "
+repo: https://github.com/BITSS/ACRE
+output_dir: docs
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
