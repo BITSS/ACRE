@@ -11,7 +11,7 @@
 
 
 
-## Identifying Analytical Choices
+## Identifying Analytical Choices {#id-analy}
 As part of the requirements to [demonstrate comprehension of the paper and the code](requirements_comprehension.md) researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.  
 
 In your copy of the replication code, add the comment `“# ANALYTICAL CHOICE OF TYPE ____. RECORDED FOR THE FIRST TIME [HERE or IN "FILE_NAME-LINE_NUMBER"]”` above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):  
@@ -43,7 +43,16 @@ The resulting data base should have the [following structure](https://docs.googl
 | ...        | ...         | ...                 | ...                            | ...                 |
 
 
-## Choose and justify alternative values for analytical choices  
+## Identifying Choice Type {#id-analy}
+
+
+## Identifying Analytical Choices {#id-analy}
+
+
+## Identifying Analytical Value {#id-val}
+
+
+## Choose and justify alternative values for analytical choices {#test-rob} 
 
 
 
