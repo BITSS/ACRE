@@ -8,17 +8,17 @@
 
 
 
-| [Scoping](#scoping)   	                      | [Assessment](#assessment) 	                    | [Improvement](#improvements)        |------------                             | Robustness                              	| Extension 	|     
-|-------------------------------------------------|-----------------------------------------------	|---------------------------------    |------------                                |------------                             	|-----------	|    
-|                        	                      |                          	                    | [Outcome-level](#improvements) 	  | [Paper-level](#paper-level)                |                                        	|            	|     
-| &#9744; Select paper  	                      |   [&#9744; Describe inputs](#describe-inputs) 	|  Output-level imp:                  |  [&#9744; + Version control](#paper-level) | Rob1                                    	| Exten1       	|
-| [&#9744; Check ACRE](#check-acre)   	          |   [&#9744; Reproduction diagrams](#diagram)  	|  [&#9744; + Raw data](#rd) 	      | [&#9744; + Documentation](#paper-level)    | Rob2                                   	| Exten2      	|
-| [&#9744; Search for rep. mat.](#verify-rep-mat) |   [&#9744; Reproduction score](#score)  	    |  [&#9744; + Analysis data](#ad)     | [&#9744; + Dynamic document](#paper-level) | Rob3                                    	| Exten3      	|
-| [&#9744;  Read and summ.](#read-summ)           |                                                	|  [&#9744; + Analysis code](#ac)     | [&#9744; + File structure](#paper-level)   | Rob4                                    	| Exten4       	|
-|   Declare scope:                                |                                                	|  [&#9744; + Cleaning code](#cc)     | [&#9744; + Computing capsule](#paper-level)|                                         	|           	|
-|     [&#9744; Output(s)](#outputs)               |                                                 |  [&#9744; Debug analysis code](#dac)|                                            |                                         	|           	|
-|     [&#9744; Depth](#intensive)                 |                                                	|  [&#9744; Debug cleaning code](#dcc)|                                            |                                         	|           	|
-|     Record results is Survey 1                  |      Record results is Survey 2              	|    Record results is Survey 3       |                                            |                                         	|           	|
+| [Scoping](#scoping)   	                      | [Assessment](#assessment) 	                    | [Improvement](#improvements)        |                                            | [Robustness](#robust)                           	| Extensions 	      |     
+|-------------------------------------------------|-----------------------------------------------	|---------------------------------    |------------                                |------------                                     	|-----------	      |    
+|                        	                      |                          	                    | [Outcome-level](#improvements) 	  | [Paper-level](#paper-level)                |                                                 	|            	      |     
+| &#9744; Select paper  	                      |   [&#9744; Describe inputs](#describe-inputs) 	|  Output-level imp:                  | [&#9744; + Version control](#paper-level)  | [&#9744; Analytical choices](#id-analy)           	| &#9744; New method  |
+| [&#9744; Check ACRE](#check-acre)   	          |   [&#9744; Reproduction diagrams](#diagram)  	|  [&#9744; + Raw data](#rd) 	      | [&#9744; + Documentation](#paper-level)    | [&#9744; Type of choice](#id-type)              	| &#9744; New data    |
+| [&#9744; Search for rep. mat.](#verify-rep-mat) |   [&#9744; Reproduction score](#score)  	    |  [&#9744; + Analysis data](#ad)     | [&#9744; + Dynamic document](#paper-level) | [&#9744; Choice value](#id-val)                  	| &#9744; New question|
+| [&#9744;  Read and summ.](#read-summ)           |                                                	|  [&#9744; + Analysis code](#ac)     | [&#9744; + File structure](#paper-level)   | [&#9744; Justify and test alternatives](#test-rob) |            	      |
+|   Declare scope:                                |                                                	|  [&#9744; + Cleaning code](#cc)     | [&#9744; + Computing capsule](#paper-level)|                                                    |           	      |
+|     [&#9744; Output(s)](#outputs)               |                                                 |  [&#9744; Debug analysis code](#dac)|                                            |                                                    |           	      |
+|     [&#9744; Depth](#intensive)                 |                                                	|  [&#9744; Debug cleaning code](#dcc)|                                            |                                                    |           	      |
+|     Record results is Survey 1                  |      Record results is Survey 2              	|    Record results is Survey 3       |                                            |                                                    |           	      |
 
 
 
