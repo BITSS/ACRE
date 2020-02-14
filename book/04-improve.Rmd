@@ -10,7 +10,7 @@ As in the Assessment section, we recommend that you first focus on one specific 
 
 It is common that reproductions packages do not include all the original [raw datasets](#describe-inputs). To obtain any missing raw data, or information about them, follow these steps:
 
-   - 1 - Identify a specific missing file. During the [assessment stage](#assessment), you identified all data sources from the paper and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file,  record it in the  `data_file` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, recorded as to “Some (or all) of the files used in the paper corresponding to the data source X”.    
+   - 1 - Identify a specific missing file. During the [assessment stage](#assessment), you identified all data sources from the paper and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file,  record it in the  `data_file` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, recorded as to “Some (or all) of the files used in the paper corresponding to the data source X”.      
    - 2 - Verify whether this file(s) can be easily obtained from the web.   
       - 2.1 - If yes: obtain the missing files and add them to the reproducibility package. Make sure to obtain permission to repost this data. See [tips for communication](#tips-for-communication) for a template email.   
       - 2.2 - If no: proceed to step 3.   
@@ -35,7 +35,8 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
 [Analysis code](#describe-inputs) can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case, follow these steps:  
 
   - 1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg “we impute missing values to…,” or “we estimate this regression using a bandwidth of ...”).  
-  - 2 - Identify the code file and the approximate line in the script where the analysis can be carried out.  
+  - 2 - Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the [reproduction diagram](#diagram).   
+  
   - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this issue.   
   - 4 - [Contact the authors](#tips-for-communication) nd request the specific code files.    
   - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
@@ -45,7 +46,7 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
 [Data cleaning (processing)](#describe-inputs) code can be added when there are certain steps missing in the creation/re-coding of variables, merging, subsetting of the data sets, and other steps related to data cleaning and  processingResearchers conducting the reproduction should follow the same steps (1-5) as when adding missing analysis code.  
 
 ### Debug analysis code (DAC)   
-
+  
 Whenever any code is available in the reproduction package, reproducers should be able to debug those scripts. There are four types of debugging that you can add as part of the Improvements step:  
 
   - *Code cleaning:* instructions are simplified (e.g. by wrapping repetitive steps in a function or a loop) or redundant code is removed (eg. old code that was commented out), while keeping the original output intact.  

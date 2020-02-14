@@ -93,7 +93,7 @@ Record all this information in a [assessment tool](https://docs.google.com/sprea
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
  
 
-## Connect each output to all its inputs 
+## Connect each output to all its inputs {#diagram}
 
 Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
 
@@ -214,7 +214,8 @@ The following figure summarizes the different levels of computational reproducib
            |  └── Yes..........................|   L9  |    -    |    -   |    -    |    -    |  -  |  ✔  |
            └── Yes.............................|   L10 |    -    |    -   |    -    |    -    |  -  |  -  |
 
-Choose the appropiate level of computational reproducibility and record it using the following format.   
+Choose the appropiate level of computational reproducibility and record it using the following format.
+
 
           |-------------|-------|------------------------|------------|
           | output_name | level | additional_explanation | other_info |
@@ -227,21 +228,19 @@ Choose the appropiate level of computational reproducibility and record it using
           |-------------|-------|------------------------|------------|
           | ...         | ...   | ...                    | ...        |
           |-------------|-------|------------------------|------------|
-Record all this information in a [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
+Record all this information in the  [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the[assessment and improvement survey](ADD LINK).   
 
-### Reproducibility dimensions at the paper level  
-In addition to an output-specific assessment of computational reproducibility, there are
-several practices that facilitate the overall computational reproducibility of the paper. This 
-practices are described in detail in the improvement chapter. In this section of assessment it is only 
-requiere for students to verify that the original reproduction package made use of any of the following:  
+### Reproducibility dimensions at the paper level   
+
+In addition to an output-specific assessment of computational reproducibility, there are several practices that facilitate the overall computational reproducibility of the paper. These practices are described in detail in the Improvement chapter. In this section of assessment it is only required that you verify that the original reproduction package made use of any of the following:  
 
 - version control         
 - dynamic document        
-- translate to open source  
+- translate to open source software  
 - file organization       
-- computing capsule       
+- computing capsule (e.g. CodeOcean, Binder, etc.)     
 
-Congragtulations! you have now completed the assessment stage. You just provided a concrete building block of knowledge to better understand the state or reproducibility in Economics. 
+Congratulations! You have now completed the Assessment stage. You just provided a concrete building block of knowledge to better understand the state of reproducibility in Economics. 
 
-Please continue to the [next section](#improvements) where you can now help to improve it!
+Please continue to the [next section](#improvements) where you can help to improve it!
 

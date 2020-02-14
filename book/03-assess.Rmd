@@ -93,7 +93,7 @@ Record all this information in a [assessment tool](https://docs.google.com/sprea
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
  
 
-## Connect each output to all its inputs 
+## Connect each output to all its inputs {#diagram}
 
 Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
 
