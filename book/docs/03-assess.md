@@ -132,7 +132,7 @@ Record all this information in the  [assessment tool](https://docs.google.com/sp
 In case of any difficulty translating the diagram into a spreadsheet, students can draw it with pen and paper, take a picture and upload the picture in the assessment survey.
 
 
-## Assign a reproducibility score  
+## Assign a reproducibility score {#score} 
 
 Once all the possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, it is possible to assess the output-specific level of reproducibility. 
 

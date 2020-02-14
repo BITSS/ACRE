@@ -80,10 +80,34 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{welcome}{%
-\chapter{Welcome}\label{welcome}}
-
 \textbf{{[}ADD ONE PAGER BETWEEN COVER AND INTRO{]}}
+
+\hypertarget{section}{%
+\chapter*{}\label{section}}
+\addcontentsline{toc}{chapter}{}
+
+\begin{verbatim}
+                (1)       (2)         (3)        (4)        (5)
+              scope --> assess --> improve --> robust --> extend
+               ▲         |  |                   ▲
+               |         |  |                   |
+               |_________|  |___________________|
+\end{verbatim}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\protect\hyperlink{scoping}{Scoping} & \protect\hyperlink{assessment}{Assessment} & \protect\hyperlink{improvements}{Improvement} & Robustness & Extension\tabularnewline
+\midrule
+\endhead
+☐ Select paper & \protect\hyperlink{describe-inputs}{☐ Describe inputs} & Output-level imp: & &\tabularnewline
+\protect\hyperlink{check-acre}{☐ Check ACRE} & \protect\hyperlink{diagram}{☐ Reproduction diagrams} & \protect\hyperlink{rd}{☐ + Raw data} & &\tabularnewline
+\protect\hyperlink{verify-rep-mat}{☐ Search for rep. mat.} & \protect\hyperlink{score}{☐ Reproduction score} & & &\tabularnewline
+\protect\hyperlink{read-summ}{☐ Read and summ.} & & & &\tabularnewline
+Declare scope: & & & &\tabularnewline
+\protect\hyperlink{outputs}{☐ Output(s)} & & & &\tabularnewline
+\protect\hyperlink{intensive}{☐ Depth} & & & &\tabularnewline
+\bottomrule
+\end{longtable}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -115,27 +139,20 @@ This reproduction exercise is divided into four to five stages:
   \textbf{Extension} (if applicable), where the reproducer may ``extend'' the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
 
 \begin{verbatim}
-          (1)       (2)         (3)        (4)        (5)
+            (1)       (2)         (3)        (4)        (5)
           scope --> assess --> improve --> robust --> extend
            ▲         |  |                   ▲
-           |         |  |                   | 
+           |         |  |                   |
            |_________|  |___________________|
+
+    Suggested level of effort:
+- Graduate
+  research:   5%       10%        5%         10%         70%
+- Graduate
+  course:    10%       25%       20%         40%         5%
+- Undergrad.
+  thesis:    10%       30%       40%         20%         0%
 \end{verbatim}
-
-  Suggested level of effort:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Graduate
-    research: 5\% 10\% 5\% 10\% 70\%
-  \item
-    Graduate
-    course: 10\% 25\% 20\% 40\% 5\%
-  \item
-    Undergrad.
-    thesis: 10\% 30\% 40\% 20\% 0\%
-  \end{itemize}
 \end{enumerate}
 
 (JOEL: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push buttom replications (one of the authors is Sayak Khatua)
@@ -157,18 +174,18 @@ In this first stage, you are assigned or choose a paper to reproduce. This secti
 
 Before you invest any time in reading/summarizing the paper:
 
-\hypertarget{check-records-on-the-acre-platform}{%
-\subsection{Check records on the ACRE platform}\label{check-records-on-the-acre-platform}}
+\hypertarget{check-acre}{%
+\subsection{Check records on the ACRE platform}\label{check-acre}}
 
 Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is ``open to reproductions'', and create a new entry\footnote{If the paper appears as ``closed to reproductions'' it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. }.
 
-\hypertarget{verify-that-reproduction-materials-exist}{%
-\subsection{Verify that reproduction materials exist}\label{verify-that-reproduction-materials-exist}}
+\hypertarget{verify-that-reproduction-materials-exist-verify-rep-mat}{%
+\subsection{Verify that reproduction materials exist \{verify-rep-mat\}}\label{verify-that-reproduction-materials-exist-verify-rep-mat}}
 
 Verify that the paper has reproduction materials (consult the AEA unofficial \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
-\hypertarget{read-and-summarize-the-paper}{%
-\subsection{Read and summarize the paper}\label{read-and-summarize-the-paper}}
+\hypertarget{read-sum}{%
+\subsection{Read and summarize the paper}\label{read-sum}}
 
 Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
 
@@ -180,8 +197,8 @@ Declare if assessment will be about all or main output, and if it aims to start 
 \hypertarget{reproduction-margins}{%
 \subsubsection{Reproduction margins}\label{reproduction-margins}}
 
-\hypertarget{extensive-margin-outputs-to-reproduced}{%
-\paragraph{Extensive margin: outputs to reproduced}\label{extensive-margin-outputs-to-reproduced}}
+\hypertarget{outputs}{%
+\paragraph{Extensive margin: outputs to reproduced}\label{outputs}}
 
 \begin{itemize}
 \item
@@ -434,8 +451,8 @@ This diagram can be represented in data format by specifying how each component 
 Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{assessment tool}.
 In case of any difficulty translating the diagram into a spreadsheet, students can draw it with pen and paper, take a picture and upload the picture in the assessment survey.
 
-\hypertarget{assign-a-reproducibility-score}{%
-\section{Assign a reproducibility score}\label{assign-a-reproducibility-score}}
+\hypertarget{score}{%
+\section{Assign a reproducibility score}\label{score}}
 
 Once all the possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, it is possible to assess the output-specific level of reproducibility.
 
@@ -581,8 +598,8 @@ As in the Assessment section, we recommend that you first focus on one specific 
 \hypertarget{types-of-output-level-improvements}{%
 \section{Types of output-level improvements}\label{types-of-output-level-improvements}}
 
-\hypertarget{add-missing-raw-data-files-or-meta-data-rd}{%
-\subsection{Add missing raw data files or meta-data (+RD)}\label{add-missing-raw-data-files-or-meta-data-rd}}
+\hypertarget{rd}{%
+\subsection{Add missing raw data files or meta-data (+RD)}\label{rd}}
 
 It is common that reproductions packages do not include all the original \protect\hyperlink{describe-inputs}{raw datasets}. To obtain any missing raw data, or information about them, follow these steps:
 
@@ -634,13 +651,13 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
 
 \begin{itemize}
 \item
-  1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg ``we impute missing values to\ldots{},'' or ``we estimate this regression using a bandwidth of \ldots{}'').\\
+  1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg ``we impute missing values to\ldots{},'' or ``we estimate this regression using a bandwidth of \ldots{}'').
 \item
   2 - Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the \protect\hyperlink{diagram}{reproduction diagram}.
 \item
-  3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this issue.\\
+  3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this issue.
 \item
-  4 - \protect\hyperlink{tips-for-communication}{Contact the authors} nd request the specific code files.\\
+  4 - \protect\hyperlink{tips-for-communication}{Contact the authors} nd request the specific code files.
 \item
   5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.
 \end{itemize}
@@ -969,22 +986,29 @@ Follow up with request of steps necessary for any researcher in the future to ac
 \hypertarget{responding-to-inquiries}{%
 \section{Responding to inquiries}\label{responding-to-inquiries}}
 
-\hypertarget{others}{%
-\chapter{Others}\label{others}}
+\hypertarget{code-of-conduct}{%
+\chapter{Code of Conduct}\label{code-of-conduct}}
 
 {[}UNDER CONSTRUCTION{]}
 
-\hypertarget{code-of-conduct}{%
-\section{Code of conduct}\label{code-of-conduct}}
+\hypertarget{contributions}{%
+\chapter{Contributions}\label{contributions}}
+
+TO DO
 
 \hypertarget{ask-for-feedback-on-guidelines}{%
 \section{Ask for feedback on guidelines}\label{ask-for-feedback-on-guidelines}}
 
-\hypertarget{contributors}{%
-\section{Contributors}\label{contributors}}
+\hypertarget{list-of-contributors}{%
+\section{List of Contributors}\label{list-of-contributors}}
 
-\hypertarget{additional-diagrams}{%
-\section{Additional Diagrams}\label{additional-diagrams}}
+\hypertarget{reproduction-diagrams}{%
+\chapter{Reproduction Diagrams}\label{reproduction-diagrams}}
+
+\hypertarget{different-scenarios}{%
+\section{Different Scenarios}\label{different-scenarios}}
+
+JOEL: PLease fill-in.
 
 \hypertarget{complete}{%
 \subsection{Complete}\label{complete}}
@@ -1041,6 +1065,66 @@ Create a section with short summaries of great resources for comp. repro and inv
 
 \hypertarget{links}{%
 \subsection{Links}\label{links}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.projecttier.org/tier-protocol/}{Project TIER}\\
+\item
+  \href{http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383}{IDB's cheatsheet for transparency, reproducibility and ethics}\\
+\item
+  \href{https://github.com/labordynamicsinstitute/replicability-training/wiki}{Lars Vilhuber LDI's Wiki for Reproducibility}. Particularly \href{https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication}{this section}.\\
+\item
+  World Bank \href{https://dimewiki.worldbank.org/wiki/Main_Page}{DIME's Wiki for transparent and reproducible research}.
+\item
+  Dynamic documents in \href{https://rmarkdown.rstudio.com/gallery.html}{R}, \href{https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks\#economics-and-finance}{Python} and \href{https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata\%20Markdown.pdf}{Stata}\\
+\item
+  Git resources:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \href{https://happygitwithr.com}{Jenny Bryan's book} and \href{https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/}{video}\\
+  \item
+    \href{https://lab.github.com/}{Github learning lab}
+  \item
+    \href{https://www.udacity.com/course/how-to-use-git-and-github--ud775}{Udacity's intro}\\
+  \item
+    \href{https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV}{Git for poets}\\
+  \item
+    \href{https://github.com/kbjarkefur/GitHubDropBox}{Combining GitHub and Dropbox}\\
+  \item
+    \href{https://www.atlassian.com/git/tutorials}{Atlassian intro to Git}
+  \item
+    \href{https://swcarpentry.github.io/git-novice/}{Software Carpentry tutorial from the command line}
+  \end{itemize}
+\item
+  \href{https://osf.io}{Open Science Framework (OSF)}
+\item
+  \href{https://github.com/hblackburn/R4Econ/blob/master/Resources.md}{R for Stata users}
+\end{itemize}
+
+\hypertarget{additional-resources-1}{%
+\chapter{Additional resources}\label{additional-resources-1}}
+
+Create a section with short summaries of great resources for comp. repro and invite reader to contribute.
+
+\hypertarget{some-summaries-1}{%
+\section{Some summaries}\label{some-summaries-1}}
+
+\hypertarget{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1}{%
+\subsection{\texorpdfstring{Summary on reproducbile workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducbile workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1}}
+
+\begin{itemize}
+\tightlist
+\item
+  TODO
+\end{itemize}
+
+\hypertarget{links-1}{%
+\section{Links}\label{links-1}}
+
+TODO: Add and classify
 
 \begin{itemize}
 \tightlist
