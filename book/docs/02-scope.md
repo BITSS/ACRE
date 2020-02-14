@@ -41,7 +41,7 @@ Declare if assessment will be about all or main output, and if it aims to start 
   - **In-line:**  ADD    
 
 
-##### Intensive margin: depth of reproduction in terms of original data  
+##### Intensive margin: depth of reproduction in terms of original data {#intensive}
 
  - **Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
 
@@ -65,6 +65,8 @@ To classify a data set as **analytic** you can use some of the following strateg
 
 
 ## Sample strategies for scoping  
+
+JOEL, PLEASE ADD. 
 
 ### Strategy 1: 
 

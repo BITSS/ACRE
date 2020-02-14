@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-02-12}
+\date{2020-02-14}
 
 \begin{document}
 \maketitle
@@ -83,105 +83,89 @@
 \hypertarget{welcome}{%
 \chapter{Welcome}\label{welcome}}
 
+\textbf{{[}ADD ONE PAGER BETWEEN COVER AND INTRO{]}}
+
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-\textbf{{[}ADD ONE PAGER BETWEEN COVER AND INTRO{]}}
+Since in 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements or the guidance to develop proper reproduction materials.
 
-This guidelines are designed to standarized reproduction excercises perfomed in graduate courses or undergraduate thesis.
-The goal is to provide a unifed terminology and standards to assess and improve the computational reproducibility of published research.
-During this excercise, students are ask to report the result of their reproduction in a structure fashion. The work of student will be
-crowdsourced for two purposes. First, the assessments will be aggregated to compute reproducibility rates in economics. Second, the
-improvements to reproducibiliy created by students will be posted to the public, facilitating incremental improvements and critical
-assessment.
+As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low (ADD Gertler, Chang Li) to just low (ADD Kingi et al. ). The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
 
-EMPHASIE THAT ASSESSMENT IS OUTPUT SPECIFIC
+Replication, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) (\citet{King95}) is an essential part of the scientific process that allows science to be ``self-correcting.'' Computational reproducibility, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of reproduction. At the center of this process is the reproducer (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the original author (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+
+This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
 
 \hypertarget{stages-of-the-exercise}{%
 \section{Stages of the exercise}\label{stages-of-the-exercise}}
 
-The reproduction exercise is separated into five different stages: scoping, assessment, improvement, robustness and (possible) extensions.
-First students should define the scope of the exercise by declaring a paper and specific output to reproduce. Second, the reproduction materials
-are reviewed and describe in detail. Third, the student can improve the current reproduction materials. Fourth, robustness checks can be carried out
-and recorded in a systematic fashion. Finally, students in a research stage, could extend the current paper to new methodologies or data.
+This reproduction exercise is divided into four to five stages:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Scoping}, where the reproducer defines the scope of the exercise by declaring a paper and specific output(s) on which they will focus;\\
+\item
+  \textbf{Assessment}, where the reproducer reviews and describes in detail the available reproduction materials (or the ``reproduction package'') and assess current levels of computational reproducibility;\\
+\item
+  \textbf{Improvement}, where the reproducer modifies the content and/or the organization of the reproduction materials to improve its reproducibility;\\
+\item
+  \textbf{Robustness checks}, where the reproducer assesses the quality of selected analytical choices from the paper; and\\
+\item
+  \textbf{Extension} (if applicable), where the reproducer may ``extend'' the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
 
 \begin{verbatim}
-              (1)       (2)         (3)        (4)        (5)
-              scope --> assess --> improve --> robust --> extend
-               ▲         |  |                   ▲
-               |         |  |                   | 
-               |_________|  |___________________|
-
-  Suggested level of effort:
-  - Graduate
-    research:   5%       10%        5%         10%         70%
-  - Graduate
-    course:    10%       25%       20%         40%         5%
-  - Undergrad.
-    thesis:    10%       30%       40%         20%         0%
+          (1)       (2)         (3)        (4)        (5)
+          scope --> assess --> improve --> robust --> extend
+           ▲         |  |                   ▲
+           |         |  |                   | 
+           |_________|  |___________________|
 \end{verbatim}
 
-Figure 1 depicts the connection between the five stages of a reproduction exercise.
-The three main populations that are likely to work with this framework are: graduate students (and researchers) doing research,
-graduate students in a class, and undergraduate students in a thesis project. These three groups will
-differ in the amount of time and focus that will place on each stage. Figure 1
-suggest some possible time allocation for each category.
-
-The process described in Figure 1 need not be cronologically linear. Students can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Also later in the excercise, students could begin to test different specification for robustness while assessing the current reproduciblity.
-
-\hypertarget{recording-the-results-of-the-exercise}{%
-\section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
-
-Students will be ask to record the results of their reproduction as they make progress through different stages. After the \protect\hyperlink{scoping}{scoping stage}, they will be ask to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} that records paper of choice and specific outputs to reproduce. As part of this step students are ask to write a brief (max two page) summary of the paper of choice. In the \protect\hyperlink{assessment}{assessment stage}, reproducers should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the output-to-reproduce with all its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In the next stage, student can record any specific \protect\hyperlink{improvements}{improvements} report any potential increase in the reported level of reproducibility in a second short survery. Finally, in the \protect\hyperlink{robust}{robustness stage} student will record any analytical choice and possible variations of it.
-
-\hypertarget{outputs-of-this-excercise}{%
-\section{Outputs of this excercise}\label{outputs-of-this-excercise}}
-
-\begin{itemize}
-\item
-  One-page introduction describing why you chose this paper
-\item
-  Two-page summary of paper
-\item
-  2 Completed surveys:
+  Suggested level of effort:
 
   \begin{itemize}
   \tightlist
   \item
-    i - General information about the paper and specific
-    information about output to reproduce.\\
+    Graduate
+    research: 5\% 10\% 5\% 10\% 70\%
   \item
-    ii - Assessment of how (computationally) reproducible is the paper; description of improvements to its reproducibility; record of all the analytical choices identified in the exercise.
+    Graduate
+    course: 10\% 25\% 20\% 40\% 5\%
+  \item
+    Undergrad.
+    thesis: 10\% 30\% 40\% 20\% 0\%
   \end{itemize}
-\item
-  ACRE report card with all the improvements that were created by the researcher reproducing the paper. The list of improvements will be made public and original authors will receive a copy of the report card. The option of anonymity will be provided to the researchers reproducing the paper.
-\item
-  New Readme file (autogenerated).
-\item
-  Data with all analytical choices identified.
-\item
-  ?? Narrated description of improvements to original CR of the paper, assessment of robustness of results. Lessons from the exercise and possible future extensions.
-\end{itemize}
+\end{enumerate}
+
+(JOEL: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push buttom replications (one of the authors is Sayak Khatua)
+
+Figure 1 depicts the suggested levels of effort for each stage of the exercise depending on the context in which you are performing this exercise. This process need not be chronologically linear, e.g.~you can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the current level of reproducibility.
+
+\hypertarget{recording-the-results-of-the-exercise}{%
+\section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
+
+You will be asked to record the results of your reproduction as you make progress through different stages. After the \protect\hyperlink{scoping}{scoping stage}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} that records paper of choice and specific outputs to reproduce. As part of this step you will also be asked to write a brief (max two page) summary of the paper of choice. In the \protect\hyperlink{assessment}{assessment stage}, you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. At the \href{(\#improvements)}{improvement stage}, you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the \protect\hyperlink{robust}{robustness stage} you will record any analytical choice and possible variations of it.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this first stage, students are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise.
+In this first stage, you are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise. \textbf{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{Survey 1} to record your work as part of this stage.}
 
 \hypertarget{steps}{%
 \section{Steps}\label{steps}}
 
 Before you invest any time in reading/summarizing the paper:
 
-\hypertarget{check-acre-records}{%
-\subsection{Check ACRE records}\label{check-acre-records}}
+\hypertarget{check-records-on-the-acre-platform}{%
+\subsection{Check records on the ACRE platform}\label{check-records-on-the-acre-platform}}
 
 Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is ``open to reproductions'', and create a new entry\footnote{If the paper appears as ``closed to reproductions'' it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. }.
 
 \hypertarget{verify-that-reproduction-materials-exist}{%
 \subsection{Verify that reproduction materials exist}\label{verify-that-reproduction-materials-exist}}
 
-Verify that the paper has reproduction materials. If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language \href{add\%20link}{suggested here}, make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Verify that the paper has reproduction materials (consult the AEA unofficial \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 \hypertarget{read-and-summarize-the-paper}{%
 \subsection{Read and summarize the paper}\label{read-and-summarize-the-paper}}
@@ -191,22 +175,27 @@ Read the paper and write a two-page summary: focus on what is the main question 
 \hypertarget{declare-scope-of-the-exercise}{%
 \subsection{Declare scope of the exercise}\label{declare-scope-of-the-exercise}}
 
-Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data.
+Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data. See definitions of these concepts below.
 
 \hypertarget{reproduction-margins}{%
 \subsubsection{Reproduction margins}\label{reproduction-margins}}
-
-Intensity of the reproduction: analytic or raw.
 
 \hypertarget{extensive-margin-outputs-to-reproduced}{%
 \paragraph{Extensive margin: outputs to reproduced}\label{extensive-margin-outputs-to-reproduced}}
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{Main results:} a successful reproduction of main results would have obtained the same estimates as in the original paper, for the estimates that the authors highlight the most in either the abstract, introduction or conclusion of the paper. If no estimate is highlighted, then the researcher conducting the reproduction should choose the main result and declare it at the begging of the reproduction.
+  Raw data: A data set is considered to be raw if it corresponds to the unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
 \item
-  \textbf{Complete:} a successful reproduction is complete when it is possible to obtain the same estimates as the original study for all the outputs presented in the paper. This includes: tables, figures, and inline estimates both in the main body of the paper and all the appendices.
+  Processed data: a raw data set that has gone through any transformation should be defined as processed data. There are two kinds of processed data:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Intermediate data}: a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers\\
+  \item
+    \emph{Analytic data}: data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{types-of-output}{%
@@ -217,13 +206,13 @@ Intensity of the reproduction: analytic or raw.
 \item
   \textbf{Tables:} Describe how to cite record location.
 \item
-  \textbf{Figures:}\\
+  \textbf{Figures:} ADD\\
 \item
-  \textbf{In-line:}
+  \textbf{In-line:} ADD
 \end{itemize}
 
-\hypertarget{intensive-margin-depth-of-reproduction-in-terms-of-original-data}{%
-\paragraph{Intensive margin: depth of reproduction in terms of original data}\label{intensive-margin-depth-of-reproduction-in-terms-of-original-data}}
+\hypertarget{intensive}{%
+\paragraph{Intensive margin: depth of reproduction in terms of original data}\label{intensive}}
 
 \begin{itemize}
 \item
@@ -248,7 +237,7 @@ To classify a data set as \textbf{raw} you can use some of the following strateg
 \begin{itemize}
 \tightlist
 \item
-  Check if the data is stored in a folder denominated as ``raw''\\
+  Check if the data is stored in a folder labeled as ``raw''\\
 \item
   Check if the file name has the word ``raw'' in some part of it\\
 \item
@@ -269,13 +258,10 @@ To classify a data set as \textbf{analytic} you can use some of the following st
   Verify that the data set is the last input required to produce some of the output (formatted or unformatted) of the paper
 \end{itemize}
 
-\hypertarget{recording-the-results-of-scoping}{%
-\section{Recording the results of scoping}\label{recording-the-results-of-scoping}}
-
-Complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{survey one}.
-
 \hypertarget{sample-strategies-for-scoping}{%
 \section{Sample strategies for scoping}\label{sample-strategies-for-scoping}}
+
+JOEL, PLEASE ADD.
 
 \hypertarget{strategy-1}{%
 \subsection{Strategy 1:}\label{strategy-1}}
@@ -301,36 +287,31 @@ Complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{surve
 \hypertarget{assessment}{%
 \chapter{Assessment}\label{assessment}}
 
-The goal of this stage is to provide a standardized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproductors pick up where others left.
+The goal of this stage is to provide a standardized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproducers to pick up where others left.
 
-First, students will be asked to provide a detailed description of all the reproduction materials. Second, they are requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, students can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.
+First, you will be asked to provide a detailed description of all the reproduction materials. Second, you requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, you can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.
 
-A recommendation to students performing reproduction it to first focus on one specific output (e.g. ``Table 1''). After completing the assessment to this first output, students will have a much easier time translating those improvements to other outputs.
+\textbf{Use Survey 2 to record your work as part of this step.}
+
+\emph{Tip: }We recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the assessment to this first output, you will have a much easier time translating those improvements to other outputs.
+
+ADD: how a reproduction package \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html.}{should look like}
 
 \hypertarget{describe-inputs}{%
 \section{Describe inputs}\label{describe-inputs}}
 
-This section explains how to list all the input materials found or referred in the reproduction package. First students should identify all data sources and connect them with raw data files (when available). Second they are ask to locate and provide a description a brief description of the analytic files. In the last step students locate, inspect and describe all the computer code use in the paper.
+This section explains how to list all the input materials found or referred to in the reproduction package. First, identify all data sources and connect them with raw data files (when available). Second, locate and provide a description a brief description of the analytic files. In the last step, locate, inspect and describe all the computer code used in the paper.
 
-The following concepts will be used in this section:
+In addition to the concepts of \protect\hyperlink{intensive}{raw and processed data}, defined already, this section use the following concepts:
 
 \begin{itemize}
-\tightlist
 \item
-  \textbf{Cleaning code:} a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).\\
+  \textbf{Cleaning code:} a script should be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).
 \item
-  \textbf{Analysis code:} a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.\\
-\item
-  \textbf{Raw data:} A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information. LINK THIS DEF TO THE CONCEPT OF DATA SOURCE BELOW.
-\item
-  \textbf{Processed data:} a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
+  \textbf{Analysis code:} a script should be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
   \begin{itemize}
   \tightlist
-  \item
-    \textbf{Intermediate data:} a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
-  \item
-    \textbf{Analytic data:} data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
   \item
     ADD DEFINITION FOR REPRODUCTION PACKAGE.
   \end{itemize}
