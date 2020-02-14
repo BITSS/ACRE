@@ -21,7 +21,7 @@ It is common that reproductions packages do not include all the original [raw da
 In additions to the efforts to obtain raw data, you can also contribute by obtainning missing analysis data.   
 
  
-### Add missing analysis data files (+AD)
+### Add missing analysis data files (+AD) {#ad}
 
 [Analysis data](#describe-inputs) can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analysis data are not fully reproducible, or (ii) some or all raw data is missing and some of all the analysis data is not included in the original reproduction package. To obtain any missing analysis data, follow these steps:
 
@@ -30,7 +30,7 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
   - 3 - [Verify the ACRE database](ADD LINK) for previous attempts to contact the authors on this topic.    
   - 4 - [Contact the authors](#tips-for-communication) and request the specific data set.       
 
-### Add missing analysis code (+AC) 
+### Add missing analysis code (+AC) {#ac}
 
 [Analysis code](#describe-inputs) can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case, follow these steps:  
 
@@ -44,11 +44,11 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
   
   - 5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.   
     
-### Add  missing data cleaning code (+CC)   
+### Add  missing data cleaning code (+CC) {#cc}  
 
 [Data cleaning (processing)](#describe-inputs) code can be added when there are certain steps missing in the creation/re-coding of variables, merging, subsetting of the data sets, and other steps related to data cleaning and  processingResearchers conducting the reproduction should follow the same steps (1-5) as when adding missing analysis code.  
 
-### Debug analysis code (DAC)   
+### Debug analysis code (DAC)  {#dac} 
   
 Whenever any code is available in the reproduction package, reproducers should be able to debug those scripts. There are four types of debugging that you can add as part of the Improvements step:  
 
@@ -82,7 +82,7 @@ Track all the different types of improvements implemented and record in [this st
 
 
 
-##  Types of paper-level improvements
+##  Types of paper-level improvements {#paper-level}
 
 In addition to the different levels of computational reproducibility described in the previous sections, there are at least  six additional that you can implement to improve the overall reproducibility of a paper. Such additional improvements can be applied across levels (including level 10).    
 

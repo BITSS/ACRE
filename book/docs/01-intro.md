@@ -7,18 +7,23 @@
                    |_________|  |___________________|
 
 
-| [Scoping](#scoping)   	                      | [Assessment](#assessment) 	                    | [Improvement](#improvements) 	| Robustness 	| Extension 	|
-|-----------	                                  |-----------------------------------------------	|---------------------------------------------	|------------	|-----------	|
-| &#9744; Select paper  	                      |   [&#9744; Describe inputs](#describe-inputs) 	|  Output-level imp:                        	|            	|           	|
-| [&#9744; Check ACRE](#check-acre)   	          |   [&#9744; Reproduction diagrams](#diagram)  	|  [&#9744; + Raw data](#rd) 	|            	|           	|
-| [&#9744; Search for rep. mat.](#verify-rep-mat) |   [&#9744; Reproduction score](#score)  	    |  [&#9744; + Analysis data](#ad)   	|            	|           	|
-| [&#9744;  Read and summ.](#read-summ)           |                                                	|                              	|            	|           	|
-|   Declare scope:                                |                                                	|                              	|            	|           	|
-|     [&#9744; Output(s)](#outputs)               |                                                 |                              	|            	|           	|
-|     [&#9744; Depth](#intensive)                 |                                                	|                            	|            	|           	|
+
+| [Scoping](#scoping)   	                      | [Assessment](#assessment) 	                    | [Improvement](#improvements)        |------------                             | Robustness                              	| Extension 	|     
+|-------------------------------------------------|-----------------------------------------------	|---------------------------------    |------------                                |------------                             	|-----------	|    
+|                        	                      |                          	                    | [Outcome-level](#improvements) 	  | [Paper-level](#paper-level)                |                                        	|            	|     
+| &#9744; Select paper  	                      |   [&#9744; Describe inputs](#describe-inputs) 	|  Output-level imp:                  |  [&#9744; + Version control](#paper-level) | Rob1                                    	| Exten1       	|
+| [&#9744; Check ACRE](#check-acre)   	          |   [&#9744; Reproduction diagrams](#diagram)  	|  [&#9744; + Raw data](#rd) 	      | [&#9744; + Documentation](#paper-level)    | Rob2                                   	| Exten2      	|
+| [&#9744; Search for rep. mat.](#verify-rep-mat) |   [&#9744; Reproduction score](#score)  	    |  [&#9744; + Analysis data](#ad)     | [&#9744; + Dynamic document](#paper-level) | Rob3                                    	| Exten3      	|
+| [&#9744;  Read and summ.](#read-summ)           |                                                	|  [&#9744; + Analysis code](#ac)     | [&#9744; + File structure](#paper-level)   | Rob4                                    	| Exten4       	|
+|   Declare scope:                                |                                                	|  [&#9744; + Cleaning code](#cc)     | [&#9744; + Computing capsule](#paper-level)|                                         	|           	|
+|     [&#9744; Output(s)](#outputs)               |                                                 |  [&#9744; Debug analysis code](#dac)|                                            |                                         	|           	|
+|     [&#9744; Depth](#intensive)                 |                                                	|  [&#9744; Debug cleaning code](#dcc)|                                            |                                         	|           	|
+|     Record results is Survey 1                  |      Record results is Survey 2              	|    Record results is Survey 3       |                                            |                                         	|           	|
+
 
 
 # Introduction {#intro}
+
 Since in 2019, the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) began requiring all the materials for reproduction of any new publication. In addition to the requirements, several [specific recommendations](https://aeadataeditor.github.io/aea-de-guidance/) were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements or the guidance to develop proper reproduction materials.
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low (ADD Gertler, Chang Li) to just low (ADD Kingi et al. ). The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
@@ -39,7 +44,7 @@ This reproduction exercise is divided into four to five stages:
 5.	**Extension** (if applicable), where the reproducer  may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
 
 
-
+    
                     (1)       (2)         (3)        (4)        (5)
                   scope --> assess --> improve --> robust --> extend
                    ▲         |  |                   ▲
@@ -54,11 +59,10 @@ This reproduction exercise is divided into four to five stages:
         - Undergrad.
           thesis:    10%       30%       40%         20%         0%
 
-(JOEL: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push buttom replications (one of the authors is Sayak Khatua)
+(**JOEL**: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push buttom replications (one of the authors is Sayak Khatua)
 
 Figure 1 depicts the suggested levels of effort for each stage of the exercise depending on the context in which you are performing this exercise. This process need not be chronologically linear, e.g. you can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the current level of reproducibility.
 
 ## Recording the results of the exercise
-
 
 You will be asked to record the results of your reproduction as you make progress through different stages. After the [scoping stage](#scoping), you will be asked to complete [a survey](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN) that records paper of choice and specific outputs to reproduce. As part of this step you will also be asked to write a brief (max two page) summary of the paper of choice. In the [assessment stage](#assessment), you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a [standarized spreadsheet](ADD LINK). At the [improvement  stage]((#improvements)), you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the [robustness stage](#robust) you will record any analytical choice and possible variations of it.
