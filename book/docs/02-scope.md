@@ -10,13 +10,17 @@ Before you invest any time in reading/summarizing the paper:
 
 Check the [ACRE database](ADD LINK) for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is “open to reproductions”, and create a new entry^[If the paper appears as "closed to reproductions" it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. ].   
 
-### Verify that reproduction materials exist  {verify-rep-mat}
+### Verify that reproduction materials exist  {#verify-rep-mat}
 
 Verify that the paper has reproduction materials (consult the AEA unofficial [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 ### Read and summarize the paper {#read-sum}
 
 Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
+
+ADD MORE GUIDANCE ON HOW TO WRITE THE SUMMARY   
+
+- 
 
 ### Declare scope of the exercise
 

@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-02-14}
+\date{2020-02-21}
 
 \begin{document}
 \maketitle
@@ -94,177 +94,77 @@
                |_________|  |___________________|
 \end{verbatim}
 
-\begin{longtable}[]{@{}lllll@{}}
-\toprule
-\begin{minipage}[b]{0.28\columnwidth}\raggedright
-\protect\hyperlink{scoping}{Scoping}\strut
-\end{minipage} & \begin{minipage}[b]{0.27\columnwidth}\raggedright
-\protect\hyperlink{assessment}{Assessment}\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
-\protect\hyperlink{improvements}{Improvement}\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
-Robustness\strut
-\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedright
-Extension\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-☐ Select paper\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\protect\hyperlink{describe-inputs}{☐ Describe inputs}\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-Output-level imp:\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\protect\hyperlink{check-acre}{☐ Check ACRE}\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\protect\hyperlink{diagram}{☐ Reproduction diagrams}\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{rd}{☐ + Raw data}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\protect\hyperlink{verify-rep-mat}{☐ Search for rep. mat.}\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\protect\hyperlink{score}{☐ Reproduction score}\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{ad}{☐ + Analysis data}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\protect\hyperlink{read-summ}{☐ Read and summ.}\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{ac}{☐ + Analysis code}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-Declare scope:\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{cc}{☐ + Cleaning code}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\protect\hyperlink{outputs}{☐ Output(s)}\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{dac}{☐ Debug analysis code}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\protect\hyperlink{intensive}{☐ Depth}\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{dcc}{☐ Debug cleaning code}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-Output-level imp:\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{paper-level}{☐ + Version control}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{paper-level}{☐ + Documentation}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{paper-level}{☐ + Dynamic document}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{paper-level}{☐ + File structure}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-\protect\hyperlink{paper-level}{☐ + Computing capsule}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.28\columnwidth}\raggedright
-Record results is Survey 1\strut
-\end{minipage} & \begin{minipage}[t]{0.27\columnwidth}\raggedright
-Record results is Survey 2\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
-Record results is Survey 3\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
-\strut
-\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+\protect\hyperlink{scoping}{Scoping}
+
+\protect\hyperlink{assessment}{Assessment}
+
+\protect\hyperlink{improvements}{Improvement}
+
+\protect\hyperlink{robust}{Robustness}
+
+Extensions
+
+\protect\hyperlink{improvements}{Outcome-level}
+
+\protect\hyperlink{paper-level}{Paper-level}
+
+☐ Select paper
+
+\protect\hyperlink{describe-inputs}{☐ Describe inputs}
+
+Output-level imp:
+
+\protect\hyperlink{paper-level}{☐ + Version control}
+
+\protect\hyperlink{id-analy}{☐ Analytical choices}
+
+☐ New method
+
+\protect\hyperlink{check-acre}{☐ Check ACRE}
+
+\protect\hyperlink{diagram}{☐ Reproduction diagrams}
+
+\protect\hyperlink{rd}{☐ + Raw data}
+
+\protect\hyperlink{paper-level}{☐ + Documentation}
+
+\protect\hyperlink{id-type}{☐ Type of choice}
+
+☐ New data
+
+☐ \protect\hyperlink{verify-rep-mat}{Search for rep. mat.}
+
+\protect\hyperlink{score}{☐ Reproduction score}
+
+\protect\hyperlink{ad}{☐ + Analysis data}
+
+\protect\hyperlink{paper-level}{☐ + Dynamic document}
+
+\protect\hyperlink{id-val}{☐ Choice value}
+
+☐ New data
+
+\protect\hyperlink{read-summ}{☐ Read and summ.}
+
+\protect\hyperlink{ac}{☐ + Analysis code}
+
+\protect\hyperlink{paper-level}{☐ + File structure}
+
+\protect\hyperlink{test-rob}{☐ Justify and test alternatives}
+
+\protect\hyperlink{outputs}{☐ Output(s)}
+
+\protect\hyperlink{dac}{☐ Debug analysis code}
+
+\protect\hyperlink{intensive}{☐ Depth}
+
+\protect\hyperlink{dcc}{☐ Debug cleaning code}
+
+Record results is Survey 1
+
+Record results is Survey 2
+
+Record results is Survey
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -276,6 +176,21 @@ As a result, several studies point towards rates of computational reproducibilit
 Replication, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) (\citet{King95}) is an essential part of the scientific process that allows science to be ``self-correcting.'' Computational reproducibility, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of reproduction. At the center of this process is the reproducer (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the original author (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
+
+\hypertarget{beyond-binary-judgements}{%
+\section{Beyond binary judgements}\label{beyond-binary-judgements}}
+
+A PAPER CAN HAVE SEVERAL SCIENTIFIC CLAIMS
+
+FOR EACH SCIENTIFIC CLAIM, TYPYCALLY, THERE WILL BE SEVERAL SPECIFICATIONS.
+
+IN THE MOST BASIC REPRODUCTION EXCERCISE, REPRODUCERS WILL BE ASK TO ASSESS ONE SPECIFICATION OF ONE CLAIM.
+
+FOR THAT EXCERCISE, REPRODUCIBILITY WILL BE ASSESSED ON A 10 LEVEL CATEGORIES.
+
+ARGUE THAT LEVEL 10 IS VERY STRINGENT BUT DESIRABLE. IT IS ALSO VERY CLOSE TO THE NEW REQUIREMENTS ESTABLISHED BY THE AEA IN 2019.
+
+EMPHASIZE THAT BEFORE 2019 IT IS VERY HARD TO DEMAND ANY TYPE OF REPRODUCIBILITY, SO OUR GOAL IS TO ASSESS AND IMPROVE, NOT JUDGE.
 
 \hypertarget{stages-of-the-exercise}{%
 \section{Stages of the exercise}\label{stages-of-the-exercise}}
@@ -319,7 +234,7 @@ Figure 1 depicts the suggested levels of effort for each stage of the exercise d
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
 
-You will be asked to record the results of your reproduction as you make progress through different stages. After the \protect\hyperlink{scoping}{scoping stage}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} that records paper of choice and specific outputs to reproduce. As part of this step you will also be asked to write a brief (max two page) summary of the paper of choice. In the \protect\hyperlink{assessment}{assessment stage}, you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. At the \href{(\#improvements)}{improvement stage}, you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the \protect\hyperlink{robust}{robustness stage} you will record any analytical choice and possible variations of it.
+You will be asked to record the results of your reproduction as you make progress through different stages. After the \protect\hyperlink{scoping}{scoping stage}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} that records paper of choice and specific outputs to reproduce. In the \protect\hyperlink{assessment}{assessment stage}, you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. At the \href{(\#improvements)}{improvement stage}, you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the \protect\hyperlink{robust}{robustness stage} you will record any analytical choice and possible variations of it.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
@@ -336,8 +251,8 @@ Before you invest any time in reading/summarizing the paper:
 
 Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is ``open to reproductions'', and create a new entry\footnote{If the paper appears as ``closed to reproductions'' it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. }.
 
-\hypertarget{verify-that-reproduction-materials-exist-verify-rep-mat}{%
-\subsection{Verify that reproduction materials exist \{verify-rep-mat\}}\label{verify-that-reproduction-materials-exist-verify-rep-mat}}
+\hypertarget{verify-rep-mat}{%
+\subsection{Verify that reproduction materials exist}\label{verify-rep-mat}}
 
 Verify that the paper has reproduction materials (consult the AEA unofficial \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
@@ -345,6 +260,12 @@ Verify that the paper has reproduction materials (consult the AEA unofficial \hr
 \subsection{Read and summarize the paper}\label{read-sum}}
 
 Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
+
+ADD MORE GUIDANCE ON HOW TO WRITE THE SUMMARY
+
+\begin{itemize}
+\item
+\end{itemize}
 
 \hypertarget{declare-scope-of-the-exercise}{%
 \subsection{Declare scope of the exercise}\label{declare-scope-of-the-exercise}}
@@ -908,8 +829,8 @@ Repoductors will be asked to provide this information in the \href{ADD\%20LINK}{
   Suggest choice alternative and justify (one line)
 \end{itemize}
 
-\hypertarget{identifying-analytical-choices}{%
-\section{Identifying Analytical Choices}\label{identifying-analytical-choices}}
+\hypertarget{id-analy}{%
+\section{Identifying Analytical Choices}\label{id-analy}}
 
 As part of the requirements to \href{requirements_comprehension.md}{demonstrate comprehension of the paper and the code} researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.
 
@@ -1021,8 +942,17 @@ original\strut
 \bottomrule
 \end{longtable}
 
-\hypertarget{choose-and-justify-alternative-values-for-analytical-choices}{%
-\section{Choose and justify alternative values for analytical choices}\label{choose-and-justify-alternative-values-for-analytical-choices}}
+\hypertarget{id-analy}{%
+\section{Identifying Choice Type}\label{id-analy}}
+
+\hypertarget{id-analy}{%
+\section{Identifying Analytical Choices}\label{id-analy}}
+
+\hypertarget{id-val}{%
+\section{Identifying Analytical Value}\label{id-val}}
+
+\hypertarget{test-rob}{%
+\section{Choose and justify alternative values for analytical choices}\label{test-rob}}
 
 \hypertarget{test-the-robustness-of-results}{%
 \section{Test the robustness of results}\label{test-the-robustness-of-results}}
