@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Guidelines for Computational Reproducibility in Economics</title>
+  <meta name="description" content="Materials to support the reproduction of published research in economics." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Guidelines for Computational Reproducibility in Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Materials to support the reproduction of published research in economics." />
+  <meta name="github-repo" content="BITSS/ACRE" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Guidelines for Computational Reproducibility in Economics" />
+  
+  <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
+  
+
+<meta name="author" content="ACRE Team" />
+
+
+<meta name="date" content="2020-02-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="concluding-the-reproduction.html"/>
+<link rel="next" href="code-of-conduct.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Guidelines for Computational Reproducibility in Economics</a></li>
+
+<li class="divider"></li>
+<li><a href="section.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i><b>1.1</b> Beyond binary judgments</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#stages-of-the-exercise"><i class="fa fa-check"></i><b>1.2</b> Stages of the exercise</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#recording-the-results-of-the-exercise"><i class="fa fa-check"></i><b>1.3</b> Recording the results of the exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a><ul>
+<li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#steps"><i class="fa fa-check"></i><b>2.1</b> Steps</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>2.1.1</b> Check records on the ACRE platform</a></li>
+<li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction materials exist</a></li>
+<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.3</b> Read and summarize the paper</a></li>
+<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise"><i class="fa fa-check"></i><b>2.1.4</b> Declare scope of the exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#sample-strategies-for-scoping"><i class="fa fa-check"></i><b>2.2</b> Sample strategies for scoping</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="scoping.html"><a href="scoping.html#strategy-1"><i class="fa fa-check"></i><b>2.2.1</b> Strategy 1:</a></li>
+<li class="chapter" data-level="2.2.2" data-path="scoping.html"><a href="scoping.html#strategy-2"><i class="fa fa-check"></i><b>2.2.2</b> Strategy 2:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>3</b> Assessment</a><ul>
+<li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe inputs</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#data-sources-and-raw-data"><i class="fa fa-check"></i><b>3.1.1</b> Data sources and raw data</a></li>
+<li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#describe-analytic-data-sets"><i class="fa fa-check"></i><b>3.1.2</b> Describe analytic data sets</a></li>
+<li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#describe-code-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe code scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect each output to all its inputs</a></li>
+<li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
+<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper level</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>4</b> Improvements</a><ul>
+<li class="chapter" data-level="4.1" data-path="improvements.html"><a href="improvements.html#types-of-output-level-improvements"><i class="fa fa-check"></i><b>4.1</b> Types of output-level improvements</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="improvements.html"><a href="improvements.html#rd"><i class="fa fa-check"></i><b>4.1.1</b> Add missing raw data files or meta-data (+RD)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="improvements.html"><a href="improvements.html#ad"><i class="fa fa-check"></i><b>4.1.2</b> Add missing analysis data files (+AD)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="improvements.html"><a href="improvements.html#ac"><i class="fa fa-check"></i><b>4.1.3</b> Add missing analysis code (+AC)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Add missing data cleaning code (+CC)</a></li>
+<li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debug analysis code (DAC)</a></li>
+<li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debug-cleaning-code-dcc"><i class="fa fa-check"></i><b>4.1.6</b> Debug cleaning code (DCC)</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Types of paper-level improvements</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="improvements.html"><a href="improvements.html#reporting-improvements"><i class="fa fa-check"></i><b>4.2.1</b> Reporting improvements</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a><ul>
+<li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.1</b> Identifying Analytical Choices</a></li>
+<li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.2</b> Identifying Choice Type</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.3</b> Identifying Analytical Choices</a></li>
+<li class="chapter" data-level="5.4" data-path="robust.html"><a href="robust.html#id-val"><i class="fa fa-check"></i><b>5.4</b> Identifying Analytical Value</a></li>
+<li class="chapter" data-level="5.5" data-path="robust.html"><a href="robust.html#test-rob"><i class="fa fa-check"></i><b>5.5</b> Choose and justify alternative values for analytical choices</a></li>
+<li class="chapter" data-level="5.6" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.6</b> Test the robustness of results</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the reproduction</a><ul>
+<li class="chapter" data-level="6.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#final-products"><i class="fa fa-check"></i><b>6.1</b> Final products</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><i class="fa fa-check"></i><b>7</b> Guidance for a Constructive Exchange Between Reproducers and Original Authors</a><ul>
+<li class="chapter" data-level="7.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>7.1</b> For Reproducers Contacting the Authors of the Original Study</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#before-you-contact-the-original-author"><i class="fa fa-check"></i><b>7.1.1</b> Before you contact the original author</a></li>
+<li class="chapter" data-level="7.1.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#a.-contacting-the-original-authors-to-request-items-that-are-missing"><i class="fa fa-check"></i><b>7.1.2</b> A. Contacting the original author(s) to request items that are missing</a></li>
+<li class="chapter" data-level="7.1.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#b.-asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>7.1.3</b> B. Asking for additional guidance when some materials have been shared</a></li>
+<li class="chapter" data-level="7.1.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#c.-response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>7.1.4</b> C. Response when the original author has refused to share due to undisclosed reasons</a></li>
+<li class="chapter" data-level="7.1.5" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#d.-response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>7.1.5</b> D. Response when the original author has refused to share due to legal or ethical restrictions of the data</a></li>
+<li class="chapter" data-level="7.1.6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#e.-contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>7.1.6</b> E. Contacting the original author to share the results of your reproduction exercise</a></li>
+<li class="chapter" data-level="7.1.7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#f.-responding-to-hostile-responses-from-original-authors"><i class="fa fa-check"></i><b>7.1.7</b> F. Responding to hostile responses from original authors</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>7.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>7.2.1</b> Responding to a repeated request</a></li>
+<li class="chapter" data-level="7.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>7.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="7.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>7.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="code-of-conduct.html"><a href="code-of-conduct.html"><i class="fa fa-check"></i><b>8</b> Code of Conduct</a></li>
+<li class="chapter" data-level="9" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>9</b> Contributions</a><ul>
+<li class="chapter" data-level="9.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>9.1</b> Ask for feedback on guidelines</a></li>
+<li class="chapter" data-level="9.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>9.2</b> List of Contributors</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>10</b> Reproduction Diagrams</a><ul>
+<li class="chapter" data-level="10.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#different-scenarios"><i class="fa fa-check"></i><b>10.1</b> Different Scenarios</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#complete"><i class="fa fa-check"></i><b>10.1.1</b> Complete</a></li>
+<li class="chapter" data-level="10.1.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#raw-data-and-analytic-data-but-cleaning-code-is-missing."><i class="fa fa-check"></i><b>10.1.2</b> Raw data and analytic data, but cleaning code is missing.</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#additional-resources"><i class="fa fa-check"></i><b>10.2</b> Additional resources</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#some-summaries"><i class="fa fa-check"></i><b>10.2.1</b> Some summaries</a></li>
+<li class="chapter" data-level="10.2.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>10.2.2</b> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
+<li class="chapter" data-level="10.2.3" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#links"><i class="fa fa-check"></i><b>10.2.3</b> Links</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="additional-resources-1.html"><a href="additional-resources-1.html"><i class="fa fa-check"></i><b>11</b> Additional resources</a><ul>
+<li class="chapter" data-level="11.1" data-path="additional-resources-1.html"><a href="additional-resources-1.html#some-summaries-1"><i class="fa fa-check"></i><b>11.1</b> Some summaries</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="additional-resources-1.html"><a href="additional-resources-1.html#summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1"><i class="fa fa-check"></i><b>11.1.1</b> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="additional-resources-1.html"><a href="additional-resources-1.html#links-1"><i class="fa fa-check"></i><b>11.2</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guidelines for Computational Reproducibility in Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Guidance for a Constructive Exchange Between Reproducers and Original Authors</h1>
+<p>The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and the original authors. Exchanges that contain charged or/and adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (<a href="https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf">2019</a>) articulate two important steps that reproducers can take to ensure that their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): treat others and their work, as you would like others to treat you and your work!</p>
+<p><strong>1. Carefully and transparently plan your study. </strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Clearly state that you are conducting a reproduction of the original work.<br />
+</li>
+<li>Explain why you have chosen this study. Try to proactively address potential concerns for selection bias.<br />
+</li>
+<li>Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.</li>
+</ol>
+<p><strong>2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Avoid binary judgments such as “failed to reproduce,” and clearly state which results reproduced, and which did not (e.g. “we successfully reproduced X, but failed to reproduce Y”), unless you uncover a case of apparent scientific misconduct (e.g. see <a href="https://osf.io/qy2se/">Broockman, Kalla and Aronow, 2015</a>).<br />
+</li>
+<li>Talk about <em>the study, not the author</em>, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.<br />
+</li>
+<li>Discuss what the literature learns from your reproduction, and refrain from claiming to give the final answer to the question.<br />
+</li>
+<li>For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.<br />
+</li>
+<li>Remember, <em>the goal is not to criticize previous work or hunt for errors, but to move the literature forward!</em></li>
+</ol>
+<p>To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.</p>
+<p><strong>For reproducers:</strong></p>
+<p>A. Contacting the original author(s) to request items that are missing;<br />
+B. Asking for additional guidance when some materials have been shared;<br />
+C. Response when the original author has refused to share an item due to undisclosed reasons;<br />
+D. Response when the original author has refused to share data due to legal or ethical constraints;<br />
+E. Contacting the original author to share the results of your reproduction exercise;<br />
+F. Responding to adversarial responses from original authors.</p>
+<p><strong>For authors:</strong></p>
+<p>G. Responding to a request [TODO]<br />
+H. Acknowledging that some information is missing [TODO]<br />
+I. Acknowledging that some material is still embargoed for future research [TODO]<br />
+J. Responding to incomplete/aggressive requests from reproducers [TODO]</p>
+<p>We hope that you will find these useful. At the same time, note that they are <em>only recommendations</em>, and you are welcome to modify them based on the context and the needs of your project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.</p>
+<div id="for-reproducers-contacting-the-authors-of-the-original-study" class="section level2">
+<h2><span class="header-section-number">7.1</span> For Reproducers Contacting the Authors of the Original Study</h2>
+<div id="before-you-contact-the-original-author" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Before you contact the original author</h3>
+<p>Considering the following:</p>
+<ol style="list-style-type: decimal">
+<li>Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">Data and Code Guidance</a> to determine whether you have everything before you start. A few things to consider:
+<ul>
+<li>A Readme file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have a Readme file.<br />
+</li>
+<li>Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.</li>
+</ul></li>
+<li><p>If reproduction materials are not readily available in the location where the article is published (e.g. the journal website), check the author’(s) website, Dataverse profile, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.</p></li>
+<li>If steps 1 and 2 don’t work, then contact the corresponding author (copying the co-authors, if any), and try to consolidate your requests into as few emails as possible. In your email, make sure to include the following details:
+<ul>
+<li>Basic information about the paper being reproduced (include version, date, and a DOI link (or just a URL));<br />
+</li>
+<li>Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;<br />
+</li>
+<li>Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;<br />
+</li>
+<li>Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.<br />
+</li>
+<li>Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?<br />
+</li>
+<li>A deadline to respond (we suggest at two weeks or longer).</li>
+</ul></li>
+<li><p>Follow up if you don’t get a response within two weeks, and include any details/clarifications that were left out in your first email.</p></li>
+</ol>
+</div>
+<div id="a.-contacting-the-original-authors-to-request-items-that-are-missing" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> A. Contacting the original author(s) to request items that are missing</h3>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Reproduction materials for <code>[“Title of the paper”]</code></p>
+</blockquote>
+<blockquote>
+<p>Dear Dr. <code>[Lastname of Corresponding Author]</code>,</p>
+<p>I am contacting you about reproduction materials for your paper titled <code>[Title]</code> which was published in <code>[Journal]</code> in <code>[year]</code> (vol <code>[volume]</code>, no. <code>[no.]</code>), <code>[link]</code>.
+I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institution]</code>, and I’m working to reproduce this paper as part of a class exercise. <code>[Add context for why you want to reproduce this particular paper using neutral language (e.g. this is a seminal paper in my field), avoiding any statements that would put the respondent on the defensive]</code>.</p>
+<p>To be able to reproduce the paper in full, I hope that you can share the following items: [<code>list items missing from reproduction package, preferably bulleted if more than one (raw/analytic data, code, protocols for conducting the experiment, etc.)</code>]. I have already searched <code>[locations where you searched for items, with links provided]</code>, however I was not able to locate those items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.</p>
+<p>Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) platform [ADD LINK], an online catalog of reproduction projects in economics. ACRE is hosted by the <a href="https://www.bitss.org/">Berkeley Initiative for Transparency in the Social Sciences (BITSS)</a>. Let me know if you would like me to share the outcome of my exercise with you [and whether you are interested in providing a response.</p>
+<p>Since I am required to complete this project by <code>[date]</code>, I would appreciate your response no later than <code>[deadline]</code>.</p>
+<p>Let me know if you have any questions. Please also feel free to contact my supervisor/instructor <code>[Name (email)]</code> for further details on this exercise. Thank you in advance for your help!</p>
+<p>Best regards,<br />
+<code>[Reproducer]</code></p>
+</blockquote>
+</div>
+<div id="b.-asking-for-additional-guidance-when-some-materials-have-been-shared" class="section level3">
+<h3><span class="header-section-number">7.1.3</span> B. Asking for additional guidance when some materials have been shared</h3>
+<p><em>Note:</em> Even in cases where the corresponding author has shared the reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications and/or share missing materials. Just like in the first scenario above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.</p>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Clarification for reproduction materials for <code>[“Title of the paper”]</code></p>
+</blockquote>
+<blockquote>
+<p>Dear Dr. <code>[Lastname of Corresponding Author]</code>,</p>
+<p>Thank you for sharing the materials. They have been immensely helpful for my work.</p>
+<p>Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. <code>[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data and/or code are missing. Refer to examples B.1 and B.2 below for more details]</code>.</p>
+<p>Thank you in advance for your help.</p>
+<p>Best regards,<br />
+<code>[Reproducer]</code></p>
+</blockquote>
+<div id="b.1-an-example-of-well-described-issues" class="section level4">
+<h4><span class="header-section-number">7.1.3.1</span> B.1 An example of well described issues:</h4>
+<blockquote>
+<p>Specifically, I am attempting to reproduce OUTPUT X (eg table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:</p>
+</blockquote>
+<pre><code>     OUTPUT X
+        └───[code] formatting_table1.R
+            ├───output1_part1.txt  
+            |   └───[code] output_table1.do           
+            |       └───[data] analysis_data01.csv
+            |          └───[code] data_cleaning01.R*
+            |             └───[data] UNKNOWN
+            └───output1_part2.txt  
+                └───[code] output_table2.do           
+                    └───[data] analysis_data02.csv
+                       └───[code] data_cleaning02.R
+                          └───[data] admin_01raw.csv* </code></pre>
+<blockquote>
+<p>I have marked with an asterix (“ * ”) the items that I could not find in the reproduction materials: <strong>data_cleaning01.R</strong> and <strong>admin_01raw.csv</strong>. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that and may have to contact you again in case I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.</p>
+<p>I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproducibility package for your paper on the ACRE platform. <strong>Doing this will ensure that you will not be asked twice for the same missing file.</strong></p>
+</blockquote>
+</div>
+<div id="b.2-an-example-of-poorly-described-issues" class="section level4">
+<h4><span class="header-section-number">7.1.3.2</span> B.2 An example of poorly described issues:</h4>
+<blockquote>
+<p>Your paper does not reproduce. I have tried for several hours now, and can’t get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are a basic principle of open science, so I am confident that you will do the right thing.</p>
+</blockquote>
+</div>
+</div>
+<div id="c.-response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons" class="section level3">
+<h3><span class="header-section-number">7.1.4</span> C. Response when the original author has refused to share due to undisclosed reasons</h3>
+<p><em>Note:</em> You can also use this template in cases where the corresponding author has not submitted a response after two or more follow-up emails.</p>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Re: Reproduction materials for `[“Title of the paper”]</p>
+</blockquote>
+<blockquote>
+<p>Dear Dr. <code>[Lastname of Corresponding Author]</code>,</p>
+<p>Thank you for your response. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale[ADD LINK].</p>
+<p>Let me know if you have any questions.</p>
+<p>Best regards,<br />
+&lt;<Reproducer>&gt;</p>
+</blockquote>
+</div>
+<div id="d.-response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data" class="section level3">
+<h3><span class="header-section-number">7.1.5</span> D. Response when the original author has refused to share due to legal or ethical restrictions of the data</h3>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Re: Reproduction materials for `[“Title of the paper”]</p>
+</blockquote>
+<blockquote>
+<p>Dear Dr. <code>[Lastname of Corresponding Author]</code>,</p>
+<p>Thank you for your response, and for clarifying the terms of use of the reproduction materials.</p>
+<p>Though I understand that you are unable to share the raw data, there may be alternative steps you can take that would help me improve the reproducibility of your paper. These include:</p>
+<ol style="list-style-type: decimal">
+<li>Sharing the analytic version of the data (the version of the dataset that was used in the final version of your paper);<br />
+</li>
+<li>Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the cost and the duration of the process (find an example/checklist here[ADD EXAMPLE]); and<br />
+</li>
+<li>Providing access to all data and materials for which the constraints do not apply.</li>
+</ol>
+<p>Based on my assessment, your paper would currently rank at <code>[level X]</code> on the ACRE reproducibility scale[ADD LINK], however <em>this score can be easily improved</em>. Being able to provide analytic data would elevate the reproducibility of your paper to <code>[level Y]</code>. Providing public instructions on how other parties can access the data would further elevate its reproducibility to <code>[level Z]</code>.</p>
+<p>I would be happy to help if you are interested in taking any of the steps I outlined above. Let me know if that would be helpful.</p>
+<p>Thank you for your help!</p>
+<p>Best regards,<br />
+<code>[Reproducer]</code></p>
+</blockquote>
+</div>
+<div id="e.-contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise" class="section level3">
+<h3><span class="header-section-number">7.1.6</span> E. Contacting the original author to share the results of your reproduction exercise</h3>
+<p>[WORK IN PROGRESS]</p>
+</div>
+<div id="f.-responding-to-hostile-responses-from-original-authors" class="section level3">
+<h3><span class="header-section-number">7.1.7</span> F. Responding to hostile responses from original authors</h3>
+<p><em>Note:</em> Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment.</p>
+<div id="dismissive-comments" class="section level4">
+<h4><span class="header-section-number">7.1.7.1</span> Dismissive comments</h4>
+<p>In cases of dismissive comments, the best course of action may be to simply thank the author for their response and continue with the exercise.</p>
+<p><strong>Template email:</strong></p>
+<blockquote>
+<p><strong>Subject:</strong> Re: Reproduction materials for `[“Title of the paper”]</p>
+</blockquote>
+<blockquote>
+<p>Dear Dr. <code>[Lastname of Corresponding Author]</code>,</p>
+<p>Thank you for your response. I will work to reproduce using the available materials, and will record my results accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale[ADD LINK].</p>
+<p>Let me know if you have any questions.</p>
+<p>Best regards,<br />
+<code>[Reproducer]</code></p>
+</blockquote>
+</div>
+<div id="harassment-andor-discrimination" class="section level4">
+<h4><span class="header-section-number">7.1.7.2</span> Harassment and/or discrimination</h4>
+<p>The AEA and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the <a href="https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination">AEA Policy on Harassment and Discrimination</a> has listed as unacceptable, and could emerge in a hostile exchange regarding a reproduction:</p>
+<ul>
+<li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)</li>
+<li>Prejudicial actions or comments that undermine the principles of equal opportunity, fair treatment, or free academic exchange</li>
+<li>Deliberate intimidation, stalking, or following</li>
+<li>Real or implied threat of physical harm.</li>
+</ul>
+<p>Here are a some steps you can take if you believe you have bullying, discrimination or harassment:</p>
+<ul>
+<li><strong>File a complaint with the <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson">AEA Ombudsperson</a>.</strong> Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person you are making the complaint about need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson/faq">here</a>.</li>
+<li><strong>File a report with your institution’s office for the prevention of harassment &amp; discrimination.</strong> US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of categories including race, color, national origin, gender, age, sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include “Office for the Prevention of Harassment and Discrimination” (in institutions that are part of the University of California) system, “Office of Equity and Title IX”, etc.</li>
+<li><strong>Contact your institution’s Ombudsperson/Ombuds Office.</strong> If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall may outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.</li>
+<li><strong>Access mental health services at your institution.</strong> Many universities offer short-term Counseling &amp; Psychological Services (CAPS) for academic, career, and personal issues.</li>
+<li><strong>Ask for support from your academic supervisor.</strong> If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.</li>
+</ul>
+<p><a href="https://docs.google.com/document/d/1xJ7pZTQ1VQXVCrs6IUlp7HlBB4oxYha0oOniCG2SWLM/edit?ts=5d251563">draft here</a></p>
+</div>
+</div>
+</div>
+<div id="for-original-authors-responding-to-requests-from-reproducers" class="section level2">
+<h2><span class="header-section-number">7.2</span> For Original Authors Responding to Requests from Reproducers</h2>
+<div id="responding-to-a-repeated-request" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Responding to a repeated request</h3>
+<p>[TO DO]
+### Acknowledging that some information is missing</p>
+<p>[TO DO]</p>
+</div>
+<div id="acknowledging-that-some-material-is-still-embargoed-for-future-research" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Acknowledging that some material is still embargoed for future research</h3>
+<p>[TO DO]</p>
+</div>
+<div id="responding-to-incompleteaggressive-requests-from-reproducer" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Responding to incomplete/aggressive requests from reproducer</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="concluding-the-reproduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="code-of-conduct.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/BITSS/ACRE/edit/tree/master/book/07-tips-for-a-productive.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

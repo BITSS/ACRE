@@ -16,11 +16,9 @@ Verify that the paper has reproduction materials (consult the AEA unofficial [Da
 
 ### Read and summarize the paper {#read-sum}
 
+Depending on the duration of the exercise, it is recommended to create a short summary of the paper to reproduce, written in the reproducers own words. This serves two purposes: reminder of the key elements to focus for the reproduction, and demonstrating understanding.
+
 Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
-
-ADD MORE GUIDANCE ON HOW TO WRITE THE SUMMARY   
-
-- 
 
 ### Declare scope of the exercise
 
