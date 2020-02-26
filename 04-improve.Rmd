@@ -8,7 +8,7 @@ As in the Assessment section, we recommend that you first focus on one specific 
 
 ### Add missing raw data files or meta-data (+RD) {#rd}
 
-It is common that reproductions packages do not include all the original [raw datasets](#describe-inputs). To obtain any missing raw data, or information about them, follow these steps:
+It is common that reproducjkhgvjhgtions packages do not include all the original [raw datasets](#describe-inputs). To obtain any missing raw data, or information about them, follow these steps:
 
    - 1 - Identify a specific missing file. During the [assessment stage](#assessment), you identified all data sources from the paper and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file,  record it in the  `data_file` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, recorded as to “Some (or all) of the files used in the paper corresponding to the data source X”.      
    - 2 - Verify whether this file(s) can be easily obtained from the web.   
