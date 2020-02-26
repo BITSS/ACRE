@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Guidelines for Computational Reproducibility in Economics</title>
+  <meta name="description" content="Materials to support the reproduction of published research in economics." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Guidelines for Computational Reproducibility in Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Materials to support the reproduction of published research in economics." />
+  <meta name="github-repo" content="BITSS/ACRE" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Guidelines for Computational Reproducibility in Economics" />
+  
+  <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
+  
+
+<meta name="author" content="ACRE Team" />
+
+
+<meta name="date" content="2020-02-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="intro.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Guidelines for Computational Reproducibility in Economics</a></li>
+
+<li class="divider"></li>
+<li><a href="section.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i><b>1.1</b> Beyond binary judgments</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#stages-of-the-exercise"><i class="fa fa-check"></i><b>1.2</b> Stages of the exercise</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#recording-the-results-of-the-exercise"><i class="fa fa-check"></i><b>1.3</b> Recording the results of the exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a><ul>
+<li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#steps"><i class="fa fa-check"></i><b>2.1</b> Steps</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>2.1.1</b> Check records on the ACRE platform</a></li>
+<li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction materials exist</a></li>
+<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.3</b> Read and summarize the paper</a></li>
+<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise"><i class="fa fa-check"></i><b>2.1.4</b> Declare scope of the exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#sample-strategies-for-scoping"><i class="fa fa-check"></i><b>2.2</b> Sample strategies for scoping</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="scoping.html"><a href="scoping.html#strategy-1"><i class="fa fa-check"></i><b>2.2.1</b> Strategy 1:</a></li>
+<li class="chapter" data-level="2.2.2" data-path="scoping.html"><a href="scoping.html#strategy-2"><i class="fa fa-check"></i><b>2.2.2</b> Strategy 2:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>3</b> Assessment</a><ul>
+<li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe inputs</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#data-sources-and-raw-data"><i class="fa fa-check"></i><b>3.1.1</b> Data sources and raw data</a></li>
+<li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#describe-analytic-data-sets"><i class="fa fa-check"></i><b>3.1.2</b> Describe analytic data sets</a></li>
+<li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#describe-code-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe code scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect each output to all its inputs</a></li>
+<li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
+<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper level</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>4</b> Improvements</a><ul>
+<li class="chapter" data-level="4.1" data-path="improvements.html"><a href="improvements.html#types-of-output-level-improvements"><i class="fa fa-check"></i><b>4.1</b> Types of output-level improvements</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="improvements.html"><a href="improvements.html#rd"><i class="fa fa-check"></i><b>4.1.1</b> Add missing raw data files or meta-data (+RD)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="improvements.html"><a href="improvements.html#ad"><i class="fa fa-check"></i><b>4.1.2</b> Add missing analysis data files (+AD)</a></li>
+<li class="chapter" data-level="4.1.3" data-path="improvements.html"><a href="improvements.html#ac"><i class="fa fa-check"></i><b>4.1.3</b> Add missing analysis code (+AC)</a></li>
+<li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Add missing data cleaning code (+CC)</a></li>
+<li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debug analysis code (DAC)</a></li>
+<li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debug-cleaning-code-dcc"><i class="fa fa-check"></i><b>4.1.6</b> Debug cleaning code (DCC)</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Types of paper-level improvements</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="improvements.html"><a href="improvements.html#reporting-improvements"><i class="fa fa-check"></i><b>4.2.1</b> Reporting improvements</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a><ul>
+<li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.1</b> Identifying Analytical Choices</a></li>
+<li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.2</b> Identifying Choice Type</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>5.3</b> Identifying Analytical Choices</a></li>
+<li class="chapter" data-level="5.4" data-path="robust.html"><a href="robust.html#id-val"><i class="fa fa-check"></i><b>5.4</b> Identifying Analytical Value</a></li>
+<li class="chapter" data-level="5.5" data-path="robust.html"><a href="robust.html#test-rob"><i class="fa fa-check"></i><b>5.5</b> Choose and justify alternative values for analytical choices</a></li>
+<li class="chapter" data-level="5.6" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.6</b> Test the robustness of results</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the reproduction</a><ul>
+<li class="chapter" data-level="6.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#final-products"><i class="fa fa-check"></i><b>6.1</b> Final products</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><i class="fa fa-check"></i><b>7</b> Guidance for a Constructive Exchange Between Reproducers and Original Authors</a><ul>
+<li class="chapter" data-level="7.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>7.1</b> For Reproducers Contacting the Authors of the Original Study</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#before-you-contact-the-original-author"><i class="fa fa-check"></i><b>7.1.1</b> Before you contact the original author</a></li>
+<li class="chapter" data-level="7.1.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#a.-contacting-the-original-authors-to-request-items-that-are-missing"><i class="fa fa-check"></i><b>7.1.2</b> A. Contacting the original author(s) to request items that are missing</a></li>
+<li class="chapter" data-level="7.1.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#b.-asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>7.1.3</b> B. Asking for additional guidance when some materials have been shared</a></li>
+<li class="chapter" data-level="7.1.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#c.-response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>7.1.4</b> C. Response when the original author has refused to share due to undisclosed reasons</a></li>
+<li class="chapter" data-level="7.1.5" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#d.-response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>7.1.5</b> D. Response when the original author has refused to share due to legal or ethical restrictions of the data</a></li>
+<li class="chapter" data-level="7.1.6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#e.-contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>7.1.6</b> E. Contacting the original author to share the results of your reproduction exercise</a></li>
+<li class="chapter" data-level="7.1.7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#f.-responding-to-hostile-responses-from-original-authors"><i class="fa fa-check"></i><b>7.1.7</b> F. Responding to hostile responses from original authors</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>7.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>7.2.1</b> Responding to a repeated request</a></li>
+<li class="chapter" data-level="7.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>7.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="7.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>7.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="code-of-conduct.html"><a href="code-of-conduct.html"><i class="fa fa-check"></i><b>8</b> Code of Conduct</a></li>
+<li class="chapter" data-level="9" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>9</b> Contributions</a><ul>
+<li class="chapter" data-level="9.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>9.1</b> Ask for feedback on guidelines</a></li>
+<li class="chapter" data-level="9.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>9.2</b> List of Contributors</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>10</b> Reproduction Diagrams</a><ul>
+<li class="chapter" data-level="10.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#different-scenarios"><i class="fa fa-check"></i><b>10.1</b> Different Scenarios</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#complete"><i class="fa fa-check"></i><b>10.1.1</b> Complete</a></li>
+<li class="chapter" data-level="10.1.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#raw-data-and-analytic-data-but-cleaning-code-is-missing."><i class="fa fa-check"></i><b>10.1.2</b> Raw data and analytic data, but cleaning code is missing.</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#additional-resources"><i class="fa fa-check"></i><b>10.2</b> Additional resources</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#some-summaries"><i class="fa fa-check"></i><b>10.2.1</b> Some summaries</a></li>
+<li class="chapter" data-level="10.2.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>10.2.2</b> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
+<li class="chapter" data-level="10.2.3" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#links"><i class="fa fa-check"></i><b>10.2.3</b> Links</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="additional-resources-1.html"><a href="additional-resources-1.html"><i class="fa fa-check"></i><b>11</b> Additional resources</a><ul>
+<li class="chapter" data-level="11.1" data-path="additional-resources-1.html"><a href="additional-resources-1.html#some-summaries-1"><i class="fa fa-check"></i><b>11.1</b> Some summaries</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="additional-resources-1.html"><a href="additional-resources-1.html#summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1"><i class="fa fa-check"></i><b>11.1.1</b> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="additional-resources-1.html"><a href="additional-resources-1.html#links-1"><i class="fa fa-check"></i><b>11.2</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guidelines for Computational Reproducibility in Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Guidelines for Computational Reproducibility in Economics</h1>
+<p class="author"><em>ACRE Team</em></p>
+<p class="date"><em>2020-02-26</em></p>
+</div>
+<div id="section" class="section level1 unnumbered">
+<h1></h1>
+<pre><code>                (1)       (2)         (3)        (4)        (5)
+              scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
+               ▲         |  |                   ▲
+               |         |  |                   |
+               |_________|  |___________________|</code></pre>
+<table>
+<thead>
+<tr>
+<th>
+<a href="scoping.html#scoping">Scoping</a>
+</th>
+<th>
+<a href="assessment.html#assessment">Assessment</a>
+</th>
+<th colspan="2">
+<a href="improvements.html#improvements">Improvement</a>
+</th>
+<th>
+<a href="robust.html#robust">Robustness</a>
+</th>
+<th>
+Extensions
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+</td>
+<td>
+</td>
+<td>
+<a href="improvements.html#improvements">Outcome-level</a>
+</td>
+<td>
+<a href="improvements.html#paper-level">Paper-level</a>
+</td>
+</tr>
+<tr>
+<td>
+☐ Select paper
+</td>
+<td>
+<a href="assessment.html#describe-inputs">☐ Describe inputs</a>
+</td>
+<td>
+Output-level imp:
+</td>
+<td>
+<a href="improvements.html#paper-level">☐ + Version control</a>
+</td>
+<td>
+<a href="robust.html#id-analy">☐ Analytical choices</a>
+</td>
+<td>
+☐ New method
+</td>
+</tr>
+<tr>
+<td>
+<a href="scoping.html#check-acre">☐ Check ACRE</a>
+</td>
+<td>
+<a href="assessment.html#diagram">☐ Reproduction diagrams</a>
+</td>
+<td>
+<a href="improvements.html#rd">☐ + Raw data</a>
+</td>
+<td>
+<a href="improvements.html#paper-level">☐ + Documentation</a>
+</td>
+<td>
+<a href="#id-type">☐ Type of choice</a>
+</td>
+<td>
+☐ New data
+</td>
+</tr>
+<tr>
+<td>
+☐ <a href="scoping.html#verify-rep-mat">Search for rep. mat.</a>
+</td>
+<td>
+<a href="assessment.html#score">☐ Reproduction score</a>
+</td>
+<td>
+<a href="improvements.html#ad">☐ + Analysis data</a>
+</td>
+<td>
+<a href="improvements.html#paper-level">☐ + Dynamic document</a>
+</td>
+<td>
+<a href="robust.html#id-val">☐ Choice value</a>
+</td>
+<td>
+☐ New data
+</td>
+</tr>
+<tr>
+<td>
+<a href="#read-summ">☐ Read and summ.</a>
+</td>
+<td>
+</td>
+<td>
+<a href="improvements.html#ac">☐ + Analysis code</a>
+</td>
+<td>
+<a href="improvements.html#paper-level">☐ + File structure</a>
+</td>
+<td>
+<a href="robust.html#test-rob">☐ Justify and test alternatives</a>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="scoping.html#outputs">☐ Output(s)</a>
+</td>
+<td>
+</td>
+<td>
+<a href="improvements.html#dac">☐ Debug analysis code</a>
+</td>
+<td>
+</td>
+<td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+<a href="scoping.html#intensive">☐ Depth</a>
+</td>
+<td>
+</td>
+<td>
+<a href="#dcc">☐ Debug cleaning code</a>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Record results is Survey 1
+</td>
+<td>
+Record results is Survey 2
+</td>
+<td colspan="2">
+Record results is Survey
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/BITSS/ACRE/edit/tree/master/book/01-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
