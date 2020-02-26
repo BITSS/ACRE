@@ -3,4 +3,4 @@ repo: https://github.com/BITSS/ACRE
 output_dir: docs
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
-edit: https://github.com/BITSS/ACRE/blob/master/book/%s
+edit: https://github.com/BITSS/ACRE/edit/master/%s
