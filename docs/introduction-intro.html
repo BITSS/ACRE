@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Guidelines for Computational Reproducibility in Economics</title>
+  <title>Chapter 1 Introduction {: #intro} | Guidelines for Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Guidelines for Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 1 Introduction {: #intro} | Guidelines for Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Guidelines for Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 1 Introduction {: #intro} | Guidelines for Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-intro.html"/>
+<link rel="prev" href="section.html"/>
+<link rel="next" href="scoping.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -246,187 +246,93 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Guidelines for Computational Reproducibility in Economics</h1>
-<p class="author"><em>ACRE Team</em></p>
-<p class="date"><em>2020-02-26</em></p>
+<div id="introduction-intro" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction {: #intro}</h1>
+<p>Last year (2019), the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> began requiring all the materials for reproduction of any new publication. In addition to the requirements, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate the authors’ compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.</p>
+<p>As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>)</span> to just low <span class="citation">(Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.</p>
+<p>Replication, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” Computational reproducibility, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of reproduction. At the center of this process is the reproducer (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the original author (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
+<p>This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.</p>
+<div id="beyond-binary-judgments" class="section level2">
+<h2><span class="header-section-number">1.1</span> Beyond binary judgments</h2>
+<p>Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper “reproducible” or non-reproducible&quot;. These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducer to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as reproducible or not.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># JOEL: can you figure out why this to run int the html version of the book?</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(DiagrammeR)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">DiagrammeR</span>(<span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="st">   graph TB</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="st">   Paper--&gt;Claim1</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="st">   Paper--&gt;Claim2</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="st">   Paper--&gt;Claim3</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="st">   Claim1--&gt;Spec11</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="st">   Claim1--&gt;Spec12</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="st">   Claim1--&gt;Spec13</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="st">   Claim2--&gt;Spec21</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="st">   Claim2--&gt;Spec22</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="st">   Claim2--&gt;Spec23</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="st">   Claim3--&gt;Spec31</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="st">   Claim3--&gt;Spec32</span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="st">   Claim3--&gt;Spec33</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="st">   &quot;</span>)</a></code></pre></div>
+<p>I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.</p>
 </div>
-<div id="section" class="section level1 unnumbered">
-<h1></h1>
-<pre><code>                (1)       (2)         (3)        (4)        (5)
-              scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
-               ▲         |  |                   ▲
-               |         |  |                   |
-               |_________|  |___________________|</code></pre>
-<table>
-<thead>
-<tr>
-<th>
-<a href="scoping.html#scoping">Scoping</a>
-</th>
-<th>
-<a href="assessment.html#assessment">Assessment</a>
-</th>
-<th colspan="2">
-<a href="improvements.html#improvements">Improvement</a>
-</th>
-<th>
-<a href="robust.html#robust">Robustness</a>
-</th>
-<th>
-Extensions
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#improvements">Outcome-level</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">Paper-level</a>
-</td>
-</tr>
-<tr>
-<td>
-☐ Select paper
-</td>
-<td>
-<a href="assessment.html#describe-inputs">☐ Describe inputs</a>
-</td>
-<td>
-Output-level imp:
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Version control</a>
-</td>
-<td>
-<a href="robust.html#id-analy">☐ Analytical choices</a>
-</td>
-<td>
-☐ New method
-</td>
-</tr>
-<tr>
-<td>
-<a href="scoping.html#check-acre">☐ Check ACRE</a>
-</td>
-<td>
-<a href="assessment.html#diagram">☐ Reproduction diagrams</a>
-</td>
-<td>
-<a href="improvements.html#rd">☐ + Raw data</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Documentation</a>
-</td>
-<td>
-<a href="#id-type">☐ Type of choice</a>
-</td>
-<td>
-☐ New data
-</td>
-</tr>
-<tr>
-<td>
-☐ <a href="scoping.html#verify-rep-mat">Search for rep. mat.</a>
-</td>
-<td>
-<a href="assessment.html#score">☐ Reproduction score</a>
-</td>
-<td>
-<a href="improvements.html#ad">☐ + Analysis data</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Dynamic document</a>
-</td>
-<td>
-<a href="robust.html#id-val">☐ Choice value</a>
-</td>
-<td>
-☐ New data
-</td>
-</tr>
-<tr>
-<td>
-<a href="#read-summ">☐ Read and summ.</a>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#ac">☐ + Analysis code</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + File structure</a>
-</td>
-<td>
-<a href="robust.html#test-rob">☐ Justify and test alternatives</a>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-<a href="scoping.html#outputs">☐ Output(s)</a>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#dac">☐ Debug analysis code</a>
-</td>
-<td>
-</td>
-<td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-<a href="scoping.html#intensive">☐ Depth</a>
-</td>
-<td>
-</td>
-<td>
-<a href="#dcc">☐ Debug cleaning code</a>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-Record results is Survey 1
-</td>
-<td>
-Record results is Survey 2
-</td>
-<td colspan="2">
-Record results is Survey
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
-</table>
+<div id="stages-of-the-exercise" class="section level2">
+<h2><span class="header-section-number">1.2</span> Stages of the exercise</h2>
+<p>This reproduction exercise is divided into four stages, with a fifth optional stage :</p>
+<ol style="list-style-type: decimal">
+<li><strong>Scoping</strong>, where the reproducer defines the scope of the exercise by declaring a paper and specific output(s) on which they will focus;<br />
+</li>
+<li><strong>Assessment</strong>, where the reproducer reviews and describes in detail the available reproduction materials (or the “reproduction package”) and assess current levels of computational reproducibility;<br />
+</li>
+<li><strong>Improvement</strong>, where the reproducer modifies the content and/or the organization of the reproduction materials to improve its reproducibility;<br />
+</li>
+<li><strong>Robustness checks</strong>, where the reproducer assesses the quality of selected analytical choices from the paper; and<br />
+</li>
+<li><p><strong>Extension</strong> (if applicable), where the reproducer may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.</p>
+<pre><code>            (1)       (2)         (3)        (4)        (5)
+          scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
+           ▲         |  |                   ▲
+           |         |  |                   |
+           |_________|  |___________________|
+
+    Suggested level of effort:
+- Graduate
+  research:   5%       10%        5%         10%         70%
+- Graduate
+  course:    10%       25%       20%         40%         5%
+- Undergrad.
+  thesis:    10%       30%       40%         20%         0%</code></pre></li>
+</ol>
+<p>(<strong>JOEL</strong>: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push button replications (one of the authors is Sayak Khatua)</p>
+<p>Figure 1 depicts the suggested levels of effort for each stage of the exercise depending on the context in which you are performing this exercise. This process need not be chronologically linear, e.g. you can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the current level of reproducibility.</p>
+</div>
+<div id="recording-the-results-of-the-exercise" class="section level2">
+<h2><span class="header-section-number">1.3</span> Recording the results of the exercise</h2>
+<p>You will be asked to record the results of your reproduction as you make progress through different stages. After the <a href="scoping.html#scoping">scoping stage</a>, you will be asked to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN">a survey</a> that records paper of choice and specific outputs to reproduce. In the <a href="assessment.html#assessment">assessment stage</a>, you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a <a href="ADD%20LINK">standarized spreadsheet</a>. At the <a href="(#improvements)">improvement stage</a>, you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the <a href="robust.html#robust">robustness stage</a> you will record any analytical choice and possible variations of it.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-chang2015economics">
+<p>Chang, Andrew, and Phillip Li. 2015. “Is Economics Research Replicable? Sixty Published Papers from Thirteen Journals Say’usually Not’.” <em>Available at SSRN 2669564</em>.</p>
+</div>
+<div id="ref-galiani2018make">
+<p>Galiani, S, P Gertler, and M Romero. 2018. “How to Make Replication the Norm.” <em>Nature</em> 554 (7693): 417–19.</p>
+</div>
+<div id="ref-King95">
+<p>King, Gary. 1995. “Replication, Replication.” <em>PS: Political Science and Politics</em> 28: 444–52.</p>
+</div>
+<div id="ref-kingi2018reproducibility">
+<p>Kingi, Hautahi, Lars Vilhuber, Sylverie Herbert, and Flavio Stanchi. 2018. “The Reproducibility of Economics Research: A Case Study.” In. Presented at the BITSS Annual Meeting 2018; available at the Open Science ….</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="introduction-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="section.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="scoping.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
