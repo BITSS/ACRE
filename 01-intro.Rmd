@@ -19,7 +19,7 @@ output:
 
  
 
-Last year (2019), the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) began requiring all the materials for reproduction of any new publication. In addition to the requirements, several [specific recommendations](https://aeadataeditor.github.io/aea-de-guidance/) were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.
+In 2019, the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) began requiring all the materials for reproduction of any new publication. In addition to the requirements, several [specific recommendations](https://aeadataeditor.github.io/aea-de-guidance/) were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low [@galiani2018make; @chang2015economics] to just low [@kingi2018reproducibility]. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
 
