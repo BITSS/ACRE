@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  24 FEB 2020 10:41
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  26 FEB 2020 09:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -824,24 +824,27 @@ Chapter 1.
 
 ]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 232.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 228.
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--270
-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 270--272
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--274
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--276
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--266
 
  []
 
@@ -852,22 +855,27 @@ Chapter 2.
 [11
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 351--353
+Underfull \hbox (badness 10000) in paragraph at lines 341--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+Underfull \hbox (badness 10000) in paragraph at lines 355--357
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 396--398
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--400
+Underfull \hbox (badness 10000) in paragraph at lines 388--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
@@ -877,12 +885,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--402
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
 
  []
 
@@ -891,229 +894,229 @@ Chapter 3.
 [15
 
 ]
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | data_source          | page | data_files             
                        | known_missing       |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | "Current Population  | A1    | cepr_march_2018.dta   
                        |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | Survey 2018"         |      |                        
                        |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | "DHS 2010 - 2013"    | 4    | nicaraguaDHS_2010.csv; 
                        | boliviaDHS_2011.csv |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |                      |      | boliviaDHS_2010.csv; ni
 caraguaDHS_2011.csv;   |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |                      |      | nicaraguaDHS_2012.csv; 
 boliviaDHS_2012.csv;   |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |                      |      | nicaraguaDHS_2013.csv; 
 boliviaDHS_2013.csv    |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | "2017 SAT scores"    | 4    | Not available          
                        |                     |[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 | ...                  | ...  | ...                    
                        | ...                 |[] 
  []
 
 [16]
-Overfull \hbox (216.75pt too wide) in paragraph at lines 502--502
+Overfull \hbox (216.75pt too wide) in paragraph at lines 492--492
 []      \TU/lmtt/m/n/10 |----------------------|------|------------------------
 -----------------------|---------------------|[] 
  []
 
 
-Overfull \hbox (143.68802pt too wide) in paragraph at lines 507--507
+Overfull \hbox (143.68802pt too wide) in paragraph at lines 497--497
 \TU/lmr/m/n/8 trast to absolute location that has the form \TU/lmtt/m/n/8 usern
 ame/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt| 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 |----------------|-----------------------|-------------
 -------------------|[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 | analysis_data  | location              | description 
                    |[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 |----------------|-----------------------|-------------
 -------------------|[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 | final_data.csv | /analysis/fig1/       | data for fig
 ure1               |[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 |----------------|-----------------------|-------------
 -------------------|[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 | all_waves.csv  | /final_data/v1_april/ | data for reg
 ion-level analysis |[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 |----------------|-----------------------|-------------
 -------------------|[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 | ...            | ...                   | ...         
                    |[] 
  []
 
 
-Overfull \hbox (80.25pt too wide) in paragraph at lines 524--524
+Overfull \hbox (80.25pt too wide) in paragraph at lines 514--514
 []      \TU/lmtt/m/n/10 |----------------|-----------------------|-------------
 -------------------|[] 
  []
 
 [17]
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |-------------------|------------------|---------------
 ------|---------------------|----------------------|--------------|[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 | file_name         | location         | inputs        
       | outputs             | description          | primary_type |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |-------------------|------------------|---------------
 ------|---------------------|----------------------|--------------|[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 | output_table1.do  | /code/analysis/  | analysis_data0
 1.csv | output1_part1.txt   | produces first part  | analysis     |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |                   |                  |               
       |                     | of table 1           |              |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |                   |                  |               
       |                     | (unformatted)        |              |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |-------------------|------------------|---------------
 ------|---------------------|----------------------|--------------|[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 | data_cleaning02.R | /code/cleaninig/ | admin_01raw.cs
 v     | analysis_data02.csv | removes outliers     | cleaning     |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |                   |                  |               
       |                     | and missing vals     |              |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |                   |                  |               
       |                     | from raw admin data  |              |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |-------------------|------------------|---------------
 ------|---------------------|----------------------|--------------|[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 | ...               | ...              | ...           
       | ...                 | ...                  | ...          |[] 
  []
 
 
-Overfull \hbox (327.0pt too wide) in paragraph at lines 549--549
+Overfull \hbox (327.0pt too wide) in paragraph at lines 539--539
 []      \TU/lmtt/m/n/10 |-------------------|------------------|---------------
 ------|---------------------|----------------------|--------------|[] 
  []
@@ -1163,81 +1166,96 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | ouput  | order | component         | depends_on      
     | inpt_type  |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | table1 | 1     | table1            | formatting_table
 1.R | code       |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 [18]
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | table1 | 2     |formatting_table1.R| output1_part2.tx
 t   | output     |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | table1 | 3     |formatting_table1.R| output1_part1.tx
 t   | output     |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | table1 | 4     | output_table1.do  | analysis_data01.
 csv | data       |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 | ...    | ...   | ...               | ...             
     | ...        |[] 
  []
 
 
-Overfull \hbox (69.75pt too wide) in paragraph at lines 588--588
+Overfull \hbox (69.75pt too wide) in paragraph at lines 578--578
 []      \TU/lmtt/m/n/10 |--------|-------|-------------------|-----------------
 ----|------------|[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 611--613
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
+
  []
 
 
@@ -1245,61 +1263,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 619--621
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 621--623
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 627--629
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 629--631
-
- []
-
 [20]
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (48.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (48.75pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 Figure 1: Levels of Computational Reproducibility and Possibl
 e Improvements[] 
  []
 
 
-Overfull \hbox (195.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (195.75pt too wide) in paragraph at lines 677--677
 []                                           \TU/lmtt/m/n/10 |       |         
       Possible improvements              |[] 
  []
 
 
-Overfull \hbox (190.5pt too wide) in paragraph at lines 687--687
+Overfull \hbox (190.5pt too wide) in paragraph at lines 677--677
 []                                           \TU/lmtt/m/n/10 ------------------
 -----------------------------------------[] 
  []
 
 
-Overfull \hbox (195.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (195.75pt too wide) in paragraph at lines 677--677
 []                                           \TU/lmtt/m/n/10 | Level |+Analysis
 |  +Raw  |+Analysis|+Cleaning|Debug|Debug|[] 
  []
 
 
-Overfull \hbox (195.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (195.75pt too wide) in paragraph at lines 677--677
 []                                           \TU/lmtt/m/n/10 |       |   Data  
 |  Data  | Code(AC)| Code(CC)|  AC |  CC |[] 
  []
 
 
-Overfull \hbox (195.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (195.75pt too wide) in paragraph at lines 677--677
 []                                           \TU/lmtt/m/n/10 --------|---------
 |--------|---------|---------|-----|-----|[] 
  []
 
 
-Overfull \hbox (195.75pt too wide) in paragraph at lines 687--687
+Overfull \hbox (195.75pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 What data are available?                   |       |         
 |        |         |         |     |     |[] 
  []
@@ -1312,7 +1315,7 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (178.6pt too wide) in paragraph at lines 687--687
+Overfull \hbox (178.6pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 ├── None ..................................|   L1  |    ✔    
 |    ✔   |    ✔    |    ✔    |  x  |  x  |[] 
  []
@@ -1321,7 +1324,7 @@ Missing character: There is no ├ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 ├── Analytic data only. Code?              |       |         
 |        |         |         |     |     |[] 
  []
@@ -1333,7 +1336,7 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (181.05pt too wide) in paragraph at lines 687--687
+Overfull \hbox (181.05pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 |   ├── No code or cleaning code only......|   L2  |    -    
 |    ✔   |    ✔    |    ✔    |  x  |  x  |[] 
  []
@@ -1342,7 +1345,7 @@ Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 |   └── Analysis code only. Is it CRA?     |       |         
 |        |         |         |     |     |[] 
  []
@@ -1354,7 +1357,7 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (181.05pt too wide) in paragraph at lines 687--687
+Overfull \hbox (181.05pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 |      ├── No..............................|   L3  |    -    
 |    ✔   |    -    |    ✔    |  ✔  |  x  |[] 
  []
@@ -1365,7 +1368,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (183.5pt too wide) in paragraph at lines 687--687
+Overfull \hbox (183.5pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 |      └── Yes.............................|   L4  |    -    
 |    ✔   |    -    |    ✔    |  -  |  x  |[] 
  []
@@ -1374,7 +1377,7 @@ Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []\TU/lmtt/m/n/10 └── Raw & Analytic data. Code?             |       |         
 |        |         |         |     |     |[] 
  []
@@ -1385,7 +1388,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (183.5pt too wide) in paragraph at lines 687--687
+Overfull \hbox (183.5pt too wide) in paragraph at lines 677--677
 []   \TU/lmtt/m/n/10 ├── None ...............................|   L5  |    -    
 |    -   |    ✔    |    ✔    |  x  |  x  |[] 
  []
@@ -1395,7 +1398,7 @@ Missing character: There is no ├ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []   \TU/lmtt/m/n/10 ├── Analysis code only. CRA?            |       |         
 |        |         |         |     |     |[] 
  []
@@ -1406,7 +1409,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (183.5pt too wide) in paragraph at lines 687--687
+Overfull \hbox (183.5pt too wide) in paragraph at lines 677--677
 []   \TU/lmtt/m/n/10 |  ├── No...............................|   L6  |    -    
 |    -   |    -    |    ✔    |  ✔  |  x  |[] 
  []
@@ -1416,7 +1419,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (185.95pt too wide) in paragraph at lines 687--687
+Overfull \hbox (185.95pt too wide) in paragraph at lines 677--677
 []   \TU/lmtt/m/n/10 |  └── Yes..............................|   L7  |    -    
 |    -   |    -    |    ✔    |  -  |  x  |[] 
  []
@@ -1425,7 +1428,7 @@ Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []   \TU/lmtt/m/n/10 └── A. and cleaning code. Is it CRR?    |       |         
 |        |         |         |     |     |[] 
  []
@@ -1434,7 +1437,7 @@ Missing character: There is no ├ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []       \TU/lmtt/m/n/10 ├── No. CRA?                        |       |         
 |        |         |         |     |     |[] 
  []
@@ -1445,7 +1448,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (183.5pt too wide) in paragraph at lines 687--687
+Overfull \hbox (183.5pt too wide) in paragraph at lines 677--677
 []       \TU/lmtt/m/n/10 |  ├── No...........................|   L8  |    -    
 |    -   |    -    |    -    |  ✔  |  ✔  |[] 
  []
@@ -1455,7 +1458,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (185.95pt too wide) in paragraph at lines 687--687
+Overfull \hbox (185.95pt too wide) in paragraph at lines 677--677
 []       \TU/lmtt/m/n/10 |  └── Yes..........................|   L9  |    -    
 |    -   |    -    |    -    |  -  |  ✔  |[] 
  []
@@ -1464,94 +1467,94 @@ Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Overfull \hbox (188.4pt too wide) in paragraph at lines 687--687
+Overfull \hbox (188.4pt too wide) in paragraph at lines 677--677
 []       \TU/lmtt/m/n/10 └── Yes.............................|   L10 |    -    
 |    -   |    -    |    -    |  -  |  -  |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 | output_name | level | additional_explanation | other_
 info |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 | table 1     | 4     |                        | ...   
      |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 | table 2     | 7     |                        | ...   
      |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 | figure 1    | 5     |                        | ...   
      |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 | ...         | ...   | ...                    | ...   
      |[] 
  []
 
 
-Overfull \hbox (6.75pt too wide) in paragraph at lines 703--703
+Overfull \hbox (6.75pt too wide) in paragraph at lines 693--693
 []      \TU/lmtt/m/n/10 |-------------|-------|------------------------|-------
 -----|[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--717
+Underfull \hbox (badness 10000) in paragraph at lines 705--707
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--719
+Underfull \hbox (badness 10000) in paragraph at lines 707--709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--721
+Underfull \hbox (badness 10000) in paragraph at lines 709--711
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 721--723
+Underfull \hbox (badness 10000) in paragraph at lines 711--713
 
  []
 
@@ -1560,122 +1563,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 721--723
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 748--750
+Underfull \hbox (badness 10000) in paragraph at lines 738--740
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 755--757
+Underfull \hbox (badness 10000) in paragraph at lines 745--747
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--762
+Underfull \hbox (badness 10000) in paragraph at lines 750--752
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--764
+Underfull \hbox (badness 10000) in paragraph at lines 752--754
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--779
+Underfull \hbox (badness 10000) in paragraph at lines 767--769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 779--781
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 781--783
+Underfull \hbox (badness 10000) in paragraph at lines 771--773
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 817--819
+Underfull \hbox (badness 10000) in paragraph at lines 807--809
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 819--821
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--823
+Underfull \hbox (badness 10000) in paragraph at lines 811--813
 
  []
 
 
-Overfull \hbox (22.5pt too wide) in paragraph at lines 848--848
+Overfull \hbox (22.5pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 Level-specific quality improvements: add data/code, de
 bug code.[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | output_name | imprv | description_of_added_files    
     | lvl |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 |-------------|-------|-------------------------------
 ----|-----|[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | table 1     | +AD   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | table 1     | +RD   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | table 1     | DCC   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | figure 1    | +CC   |                               
     |  6  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | figure 1    | DAC   |                               
     |  6  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | inline 1    | DAC   |                               
     |  8  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 848--848
+Overfull \hbox (33.0pt too wide) in paragraph at lines 838--838
 []       \TU/lmtt/m/n/10 | ...         | ...   | ...                           
     | ... |[] 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 866--868
+Underfull \hbox (badness 10000) in paragraph at lines 856--858
 
  []
 
@@ -1684,93 +1687,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 866--868
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 884--886
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 886--888
+Underfull \hbox (badness 10000) in paragraph at lines 876--878
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 898--899
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
 \TU/lmtt/m/n/10 CHOICE OF TYPE ____. RECORDED FOR THE FIRST TIME [HERE or IN
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 898--899
+Underfull \hbox (badness 4556) in paragraph at lines 888--889
 \TU/lmtt/m/n/10 "FILE_NAME-LINE_NUMBER"]” \TU/lmr/m/n/10 above each analytical 
 choice detected in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--910
+Underfull \hbox (badness 10000) in paragraph at lines 898--900
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--912
+Underfull \hbox (badness 10000) in paragraph at lines 900--902
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 912--914
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
 
  []
 
 [31]
+Underfull \hbox (badness 10000) in paragraph at lines 912--914
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 914--916
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 916--918
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 918--920
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--922
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 922--924
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 924--926
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 926--928
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 928--930
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 930--932
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 932--934
-
- []
-
-
-Overfull \hbox (9.1079pt too wide) in paragraph at lines 947--948
+Overfull \hbox (9.1079pt too wide) in paragraph at lines 937--938
 []\TU/lmr/m/n/10 file_name|  
  []
 
 
-Overfull \hbox (18.1998pt too wide) in paragraph at lines 949--950
+Overfull \hbox (18.1998pt too wide) in paragraph at lines 939--940
 []\TU/lmr/m/n/10 line_number|  
  []
 
 
-Overfull \hbox (16.05789pt too wide) in paragraph at lines 960--961
+Overfull \hbox (16.05789pt too wide) in paragraph at lines 950--951
 []\TU/lmr/m/n/10 code_01.do|  
  []
 
 
-Overfull \hbox (16.05789pt too wide) in paragraph at lines 971--972
+Overfull \hbox (16.05789pt too wide) in paragraph at lines 961--962
 []\TU/lmr/m/n/10 code_01.do|  
  []
 
 
-Overfull \hbox (12.8579pt too wide) in paragraph at lines 982--983
+Overfull \hbox (12.8579pt too wide) in paragraph at lines 972--973
 []\TU/lmr/m/n/10 code_05.R|  
  []
 
@@ -1778,7 +1781,7 @@ Overfull \hbox (12.8579pt too wide) in paragraph at lines 982--983
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1020
 
  []
 
@@ -1787,41 +1790,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 1028--1030
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1059
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1049
 
  []
 
 [35] [36]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1086
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1076
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1086--1088
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
 
  []
 
 [37
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1097--1099
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1089
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1099--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1091
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1101--1103
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1093
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1095
 
  []
 
@@ -1832,37 +1835,37 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1144--1146
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1136
 
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 1156--1158
+Underfull \hbox (badness 1590) in paragraph at lines 1146--1148
 []\TU/lmr/m/n/10 Basic information about the paper being reproduced (include
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1158
+Underfull \hbox (badness 10000) in paragraph at lines 1146--1148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1162
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
+Underfull \hbox (badness 10000) in paragraph at lines 1152--1154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1154--1156
 
  []
 
@@ -1873,49 +1876,49 @@ UDY \TU/lmr/m/n/10 39
  []
 
 [39]
-Underfull \hbox (badness 2285) in paragraph at lines 1184--1186
+Underfull \hbox (badness 2285) in paragraph at lines 1174--1176
 []\TU/lmr/m/n/10 I am contacting you about reproduction materials for your
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 1184--1186
+Underfull \hbox (badness 2080) in paragraph at lines 1174--1176
 \TU/lmr/m/n/10 paper titled \TU/lmtt/m/n/10 [Title] \TU/lmr/m/n/10 which was pu
 blished in \TU/lmtt/m/n/10 [Journal] \TU/lmr/m/n/10 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
 \TU/lmtt/m/n/10 context for why you want to reproduce this particular
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
 \TU/lmtt/m/n/10 paper using neutral language (e.g. this is a seminal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1184--1186
+Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
 \TU/lmtt/m/n/10 paper in my field), avoiding any statements that would
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1187--1188
+Underfull \hbox (badness 5036) in paragraph at lines 1177--1178
 \TU/lmr/m/n/10 can share the following items: [\TU/lmtt/m/n/10 list items missi
 ng from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
 \TU/lmtt/m/n/10 reproduction package, preferably bulleted if more than
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1178
 \TU/lmtt/m/n/10 one (raw/analytic data, code, protocols for conducting
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1187--1188
+Underfull \hbox (badness 1902) in paragraph at lines 1177--1178
 \TU/lmtt/m/n/10 where you searched for items, with links provided]\TU/lmr/m/n/1
 0 , how-
  []
@@ -1927,12 +1930,12 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
 \TU/lmtt/m/n/10 tried to resolve them. Describe whatever files or parts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
 \TU/lmtt/m/n/10 of the data and/or code are missing. Refer to examples
  []
 
@@ -1994,12 +1997,12 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1300--1302
+Underfull \hbox (badness 10000) in paragraph at lines 1290--1292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1302--1304
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1294
 
  []
 
@@ -2129,42 +2132,42 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1486--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1488--1490
+Underfull \hbox (badness 10000) in paragraph at lines 1478--1480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1490--1492
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1494--1496
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1486
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1501--1503
+Underfull \hbox (badness 10000) in paragraph at lines 1491--1493
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1505--1507
+Underfull \hbox (badness 10000) in paragraph at lines 1495--1497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1507--1509
+Underfull \hbox (badness 10000) in paragraph at lines 1497--1499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1509--1511
+Underfull \hbox (badness 10000) in paragraph at lines 1499--1501
 
  []
 
@@ -2173,67 +2176,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 1509--1511
 ]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1552--1554
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1554--1556
+Underfull \hbox (badness 10000) in paragraph at lines 1544--1546
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1556--1558
+Underfull \hbox (badness 10000) in paragraph at lines 1546--1548
 
  []
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 1560--1562
+Underfull \hbox (badness 10000) in paragraph at lines 1550--1552
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1567--1569
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1559
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1571--1573
+Underfull \hbox (badness 10000) in paragraph at lines 1561--1563
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1573--1575
+Underfull \hbox (badness 10000) in paragraph at lines 1563--1565
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1575--1577
+Underfull \hbox (badness 10000) in paragraph at lines 1565--1567
 
  []
 
 (./_main.bbl [56])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1589.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1579.
 [57
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1589.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1579.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1589.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1589.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1579.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1579.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: D55A3106B74678CDDA3DD328C77E7E7C;6897.
+(rerunfilecheck)             Checksum: AE67B4AB6A6E94B6300AC778E0284CAB;6892.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1589.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1579.
  ) 
 Here is how much of TeX's memory you used:
- 16752 strings out of 481780
- 300518 string characters out of 5935856
+ 16761 strings out of 481780
+ 300760 string characters out of 5935856
  734157 words of memory out of 5000000
- 33512 multiletter control sequences out of 15000+600000
+ 33521 multiletter control sequences out of 15000+600000
  538845 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  52i,8n,115p,1033b,462s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -28,11 +28,9 @@ Replication, or the process by which a study’s hypotheses and findings are re-
 This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.   
 
 
-## Beyond binary judgements
+## Beyond binary judgments
 
-A PAPER CAN HAVE SEVERAL SCIENTIFIC CLAIMS
-
-FOR EACH SCIENTIFIC CLAIM, TYPYCALLY, THERE WILL BE SEVERAL SPECIFICATIONS. 
+Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper "reproducible" or non-reproducible". These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducer to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as reproducible or not. 
 
 
 
@@ -57,14 +55,7 @@ DiagrammeR("
    ")
 ```
 
-
-IN THE MOST BASIC REPRODUCTION EXCERCISE, REPRODUCERS WILL BE ASK TO ASSESS ONE SPECIFICATION OF ONE CLAIM. 
-
-FOR THAT EXCERCISE, REPRODUCIBILITY WILL BE ASSESSED ON A 10 LEVEL CATEGORIES. 
-
-ARGUE THAT LEVEL 10 IS VERY STRINGENT BUT DESIRABLE. IT IS ALSO VERY CLOSE TO THE NEW REQUIREMENTS ESTABLISHED BY THE AEA IN 2019. 
-
-EMPHASIZE THAT BEFORE 2019 IT IS VERY HARD TO DEMAND ANY TYPE OF REPRODUCIBILITY, SO OUR GOAL IS TO ASSESS AND IMPROVE, NOT JUDGE. 
+I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community. 
 
 
 ## Stages of the exercise
@@ -75,7 +66,7 @@ This reproduction exercise is divided into four stages, with a fifth optional st
 2.	**Assessment**, where the reproducer reviews and describes in detail the available reproduction materials (or the “reproduction package”) and assess current levels of computational reproducibility;  
 3.	**Improvement**, where the reproducer modifies the content and/or the organization of the reproduction materials to improve its reproducibility;  
 4.	**Robustness checks**, where the reproducer assesses the quality of selected analytical choices from the paper; and  
-5.	**Extension** (if applicable), where the reproducer  may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
+5.	**Extension** (if applicable), where the reproducer may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
 
 
                     (1)       (2)         (3)        (4)        (5)
@@ -92,7 +83,7 @@ This reproduction exercise is divided into four stages, with a fifth optional st
         - Undergrad.
           thesis:    10%       30%       40%         20%         0%
 
-(**JOEL**: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push buttom replications (one of the authors is Sayak Khatua)
+(**JOEL**: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push button replications (one of the authors is Sayak Khatua)
 
 Figure 1 depicts the suggested levels of effort for each stage of the exercise depending on the context in which you are performing this exercise. This process need not be chronologically linear, e.g. you can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the current level of reproducibility.
 
