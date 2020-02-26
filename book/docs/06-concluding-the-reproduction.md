@@ -11,7 +11,7 @@ output:
 Walk the students on checking that they have completed all the steps and where can they see their output.  
 
 
-### Final products
+## Final products
  -  One-page introduction describing why you chose this paper
  -  Two-page summary of paper
  -  2 Completed surveys:  

@@ -5,6 +5,13 @@ output:
 ---
 # Additional resources
 
+
+
+
+
+ - **Coding errors:**  a coding error will occur when a section in the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the [ACRE procedure to report coding errors](ADD LINK).  
+
+
 Create a section with short summaries of great resources for comp. repro and invite reader to contribute. 
 
 ## Some summaries
