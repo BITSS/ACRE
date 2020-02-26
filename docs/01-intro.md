@@ -15,7 +15,7 @@ output:
 
 <table><thead><tr><th>[Scoping](#scoping) </th><th>[Assessment](#assessment)</th><th colspan=2>[Improvement](#improvements)</th><th>[Robustness](#robust)</th><th>Extensions</th></tr></thead><tbody><tr><td></td><td></td><td>[Outcome-level](#improvements)</td><td>[Paper-level](#paper-level)</td></tr><tr><td>&#9744; Select paper</td><td>[&#9744; Describe inputs](#describe-inputs)</td><td>Output-level imp:</td><td>[&#9744; + Version control](#paper-level)</td><td>[&#9744; Analytical choices](#id-analy)</td><td>&#9744; New method</td></tr><tr><td>[&#9744; Check ACRE](#check-acre)</td><td>[&#9744; Reproduction diagrams](#diagram)</td><td>[&#9744; + Raw data](#rd)</td><td>[&#9744; + Documentation](#paper-level)</td><td>[&#9744; Type of choice](#id-type)</td><td>&#9744; New data</td></tr><tr><td>&#9744; [Search for rep. mat.](#verify-rep-mat)</td><td>[&#9744; Reproduction score](#score)</td><td>[&#9744; + Analysis data](#ad)</td><td>[&#9744; + Dynamic document](#paper-level)</td><td>[&#9744; Choice value](#id-val)</td><td>&#9744; New data</td></tr><tr><td>[&#9744;  Read and summ.](#read-summ)</td><td></td><td>[&#9744; + Analysis code](#ac)</td><td>[&#9744; + File structure](#paper-level)</td><td>[&#9744; Justify and test alternatives](#test-rob)</td><td></td></tr><tr><td>[&#9744; Output(s)](#outputs)</td><td></td><td>[&#9744; Debug analysis code](#dac)</td><td></td><td><td></td><td></td></tr><tr><td>[&#9744; Depth](#intensive)</td><td></td><td>[&#9744; Debug cleaning code](#dcc)</td><td></td><td></td><td></td></tr><tr><td>Record results is Survey 1</td><td>Record results is Survey 2</td><td colspan=2>Record results is Survey</td><td></td><td></td></tr></tbody></table>
 
-# Introduction {: #intro} 
+# Introduction {#intro} 
 
  
 
@@ -34,26 +34,6 @@ Assessments of reproducibility can easily gravitate towards binary assessments t
 
 
 
-```r
-# JOEL: can you figure out why this to run int the html version of the book?
-library(DiagrammeR)
-
-DiagrammeR("
-   graph TB
-   Paper-->Claim1
-   Paper-->Claim2
-   Paper-->Claim3
-   Claim1-->Spec11
-   Claim1-->Spec12
-   Claim1-->Spec13
-   Claim2-->Spec21
-   Claim2-->Spec22
-   Claim2-->Spec23
-   Claim3-->Spec31
-   Claim3-->Spec32
-   Claim3-->Spec33
-   ")
-```
 
 I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community. 
 

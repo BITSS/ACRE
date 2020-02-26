@@ -541,8 +541,8 @@ Record results is Survey
 </tbody>
 </table>
 </div>
-<div id="introduction-intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction {: #intro}</h1>
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
 <p>Last year (2019), the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> began requiring all the materials for reproduction of any new publication. In addition to the requirements, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate the authors’ compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.</p>
 <p>As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>)</span> to just low <span class="citation">(Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.</p>
 <p>Replication, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” Computational reproducibility, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of reproduction. At the center of this process is the reproducer (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the original author (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
@@ -550,24 +550,6 @@ Record results is Survey
 <div id="beyond-binary-judgments" class="section level2">
 <h2><span class="header-section-number">1.1</span> Beyond binary judgments</h2>
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper “reproducible” or non-reproducible&quot;. These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducer to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as reproducible or not.</p>
-<pre class="r"><code># JOEL: can you figure out why this to run int the html version of the book?
-library(DiagrammeR)
-
-DiagrammeR(&quot;
-   graph TB
-   Paper--&gt;Claim1
-   Paper--&gt;Claim2
-   Paper--&gt;Claim3
-   Claim1--&gt;Spec11
-   Claim1--&gt;Spec12
-   Claim1--&gt;Spec13
-   Claim2--&gt;Spec21
-   Claim2--&gt;Spec22
-   Claim2--&gt;Spec23
-   Claim3--&gt;Spec31
-   Claim3--&gt;Spec32
-   Claim3--&gt;Spec33
-   &quot;)</code></pre>
 <p>I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.</p>
 </div>
 <div id="stages-of-the-exercise" class="section level2">
