@@ -80,8 +80,6 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\textbf{{[}ADD ONE PAGER BETWEEN COVER AND INTRO{]}}
-
 \hypertarget{section}{%
 \chapter*{}\label{section}}
 \addcontentsline{toc}{chapter}{}
@@ -162,7 +160,7 @@ Output-level imp:
 
 Record results is Survey 1
 
-Record results is Survey 2
+\href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Record results is Survey 2}
 
 Record results is Survey
 
@@ -362,7 +360,7 @@ The goal of this stage is to provide a standardized assessment of computational 
 
 First, you will be asked to provide a detailed description of all the reproduction materials. Second, you requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, you can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.
 
-\textbf{Use Survey 2 to record your work as part of this step.}
+\textbf{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Survey 2} to record your work as part of this step.}
 
 \emph{Tip: }We recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the assessment to this first output, you will have a much easier time translating those improvements to other outputs.
 
@@ -629,7 +627,11 @@ Choose the appropiate level of computational reproducibility and record it using
       |-------------|-------|------------------------|------------|
 \end{verbatim}
 
+<<<<<<< HEAD
 Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
+=======
+Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{assessment tool}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
+>>>>>>> khoeberling-patch-1
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
@@ -639,13 +641,17 @@ In addition to an output-specific assessment of computational reproducibility, t
 \begin{itemize}
 \tightlist
 \item
-  version control\\
+  master script that runs all the steps
+\item
+  readme file
+\item
+  standard file organization\\
+\item
+  version control
+\item
+  analysis uses open source software\\
 \item
   dynamic document\\
-\item
-  translate to open source software\\
-\item
-  file organization\\
 \item
   computing capsule (e.g.~CodeOcean, Binder, etc.)
 \end{itemize}
@@ -667,7 +673,7 @@ As in the Assessment section, we recommend that you first focus on one specific 
 \hypertarget{rd}{%
 \subsection{Add missing raw data files or meta-data (+RD)}\label{rd}}
 
-It is common that reproductions packages do not include all the original \protect\hyperlink{describe-inputs}{raw datasets}. To obtain any missing raw data, or information about them, follow these steps:
+It is common that reproducjkhgvjhgtions packages do not include all the original \protect\hyperlink{describe-inputs}{raw datasets}. To obtain any missing raw data, or information about them, follow these steps:
 
 \begin{itemize}
 \tightlist
