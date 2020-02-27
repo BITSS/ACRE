@@ -26,6 +26,7 @@ In addition to the concepts of [raw and processed data](#intensive), defined alr
 ### Data sources and raw data   
 
 In the paper to reproduce, find references to all the data sources used in the analysis. A data source is usually described in a narrative form, for example the body of the paper can have text like “…for earnings in 2018 we use the Current Population Survey…”-- in this example, the data source is “Current Population Survey 2018”. It is mentioned for the first time on page 1 of the appendix, so its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper. 
+Data sources also vary in unit of analysis, with some sources matching the same unit of analysis of the paper (like the previous examples), and other less clear like "our information on regional minimum wages comes from the Bureau of Labor Statistics" (to be recorded as "regional minimum wages from the Bureau of Labor Statistics").
 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. In addition to looking at all the existing data files, it is recommended to review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. By inspecting this scripts you might be able to understand how each different data sources is used, and possibly identify any missing files from the reproduction package.
 
@@ -228,7 +229,7 @@ Choose the appropiate level of computational reproducibility and record it using
           |-------------|-------|------------------------|------------|
           | ...         | ...   | ...                    | ...        |
           |-------------|-------|------------------------|------------|
-Record all this information in the  [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the[assessment and improvement survey](ADD LINK).   
+Record all this information in the  [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
 ### Reproducibility dimensions at the paper level   
 
