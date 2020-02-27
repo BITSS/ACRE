@@ -20,7 +20,7 @@ In addition to the concepts of [raw and processed data](#intensive), defined alr
   
   -	**Analysis code:** a script can be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
-      - ADD DEFINITION FOR REPRODUCTION PACKAGE. 
+  - ADD DEFINITION FOR REPRODUCTION PACKAGE. 
 
 
 ### Describe data sources and raw data   

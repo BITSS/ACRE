@@ -1,6 +1,6 @@
 # Scoping
 
-In this first stage, you are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise. **Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN) to record your work as part of this stage.**
+In this first stage, you are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise. **Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work as part of this stage.**
 
 ## Steps
 
@@ -62,7 +62,7 @@ To classify a data set as **analytic** you can use some of the following strateg
 
 ## Sample strategies for scoping  
 
-JOEL, PLEASE ADD. 
+ADD. 
 
 ### Strategy 1: 
 
