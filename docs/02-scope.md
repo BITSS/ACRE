@@ -28,14 +28,8 @@ Declare if assessment will be about all or main output, and if it aims to start 
 
 ##### Extensive margin: outputs to reproduced {#outputs}  
 
--	Raw data: A data set is considered to be raw if it corresponds to the unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.  
-
--	Processed data: a raw data set that has gone through any transformation should be defined as processed data. There are two kinds of processed data:  
-
-     -	*Intermediate data*: a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers  
-     -	*Analytic data*: data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).  
-   
-
+[COMPLETE]
+Number of output
 
 ###### Types of output:   
   - **Tables:** Describe how to cite record location. 

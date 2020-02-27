@@ -11,7 +11,7 @@
 
 <meta name="author" content="ACRE Team" />
 
-<meta name="date" content="2020-02-26" />
+<meta name="date" content="2020-02-27" />
 
 <title>Guidelines for Computational Reproducibility in Economics</title>
 
@@ -365,7 +365,7 @@ summary {
 
 <h1 class="title toc-ignore">Guidelines for Computational Reproducibility in Economics</h1>
 <h4 class="author">ACRE Team</h4>
-<h4 class="date">2020-02-26</h4>
+<h4 class="date">2020-02-27</h4>
 
 </div>
 
@@ -614,15 +614,8 @@ Record results is Survey
 <h4><span class="header-section-number">2.1.4.1</span> Reproduction margins</h4>
 <div id="outputs" class="section level5">
 <h5><span class="header-section-number">2.1.4.1.1</span> Extensive margin: outputs to reproduced</h5>
-<ul>
-<li><p>Raw data: A data set is considered to be raw if it corresponds to the unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.</p></li>
-<li><p>Processed data: a raw data set that has gone through any transformation should be defined as processed data. There are two kinds of processed data:</p>
-<ul>
-<li><em>Intermediate data</em>: a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers<br />
-</li>
-<li><em>Analytic data</em>: data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).</li>
-</ul></li>
-</ul>
+<p><a href="#complete">COMPLETE</a>
+Number of output</p>
 <div id="types-of-output" class="section level6">
 <h6><span class="header-section-number">2.1.4.1.1.1</span> Types of output:</h6>
 <ul>
@@ -706,31 +699,32 @@ Record results is Survey
 <li>ADD DEFINITION FOR REPRODUCTION PACKAGE.</li>
 </ul></li>
 </ul>
-<div id="data-sources-and-raw-data" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Data sources and raw data</h3>
+<div id="describe-data-sources-and-raw-data" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Describe data sources and raw data</h3>
 <p>In the paper to reproduce, find references to all the data sources used in the analysis. A data source is usually described in a narrative form, for example the body of the paper can have text like “…for earnings in 2018 we use the Current Population Survey…”– in this example, the data source is “Current Population Survey 2018”. It is mentioned for the first time on page 1 of the appendix, so its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.</p>
-<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. In addition to looking at all the existing data files, it is recommended to review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. By inspecting this scripts you might be able to understand how each different data sources is used, and possibly identify any missing files from the reproduction package.</p>
-<p>Record all the information of this section into a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">assessment tool</a> with the following structure:</p>
+<p>Data sources also vary in unit of analysis, with some sources matching the same unit of analysis of the paper (like the previous examples), and other less clear like “our information on regional minimum wages comes from the Bureau of Labor Statistics” (to be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
+<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record its folder location relative to the main reproduction folder. In addition to looking at all the existing data files, it is recommended to review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. By inspecting these scripts you might be able to understand how each different data sources is used, and possibly identify any missing files from the reproduction package.</p>
+<p>Record all the information of this section into a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> with the following structure:</p>
 <pre><code>      Raw data information:
-      |----------------------|------|-----------------------------------------------|---------------------|
-      | data_source          | page | data_files                                    | known_missing       |
-      |----------------------|------|-----------------------------------------------|---------------------|
-      | &quot;Current Population  | A1    | cepr_march_2018.dta                          |                     |
-      | Survey 2018&quot;         |      |                                               |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|
-      | &quot;DHS 2010 - 2013&quot;    | 4    | nicaraguaDHS_2010.csv;                        | boliviaDHS_2011.csv |
-      |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |                     |
-      |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |                     |
-      |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|
-      | &quot;2017 SAT scores&quot;    | 4    | Not available                                 |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|
-      | ...                  | ...  | ...                                           | ...                 |
-      |----------------------|------|-----------------------------------------------|---------------------|</code></pre>
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
+      | data_source          | page | data_files                                    | known_missing       | directory           |
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
+      | &quot;Current Population  | A1    | cepr_march_2018.dta                          |                     | \data\              |
+      | Survey 2018&quot;         |      |                                               |                     |                     |
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
+      | &quot;DHS 2010 - 2013&quot;    | 4    | nicaraguaDHS_2010.csv;                        | boliviaDHS_2011.csv | \rawdata\DHS\       |
+      |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |                     |                     |
+      |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |                     |                     |
+      |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |                     |                     |
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
+      | &quot;2017 SAT scores&quot;    | 4    | Not available                                 |                     | \data\to_clean\     |
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
+      | ...                  | ...  | ...                                           | ...                 | ...                 |
+      |----------------------|------|-----------------------------------------------|---------------------|---------------------|</code></pre>
 </div>
 <div id="describe-analytic-data-sets" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Describe analytic data sets</h3>
-<p>List all the analytic files that you find in the reproduction materials and identify its location relative to the master reproduction folder<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Record all this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">assessment tool</a>.</p>
+<p>List all the analytic files that you find in the reproduction materials and identify its location relative to the main reproduction folder<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Record all this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>On an initial review, it will probably be hard to provide a one-line description of each analytic data set. But as you progress through the exercise, return to the spreadsheet and add a one-line description of the main content in each file (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>).</p>
 <p>The resulting report will have the following structure:</p>
 <pre><code>      Analysis data information:
@@ -746,9 +740,13 @@ Record results is Survey
 </div>
 <div id="describe-code-scripts" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Describe code scripts</h3>
-<p>List all the code files that you find in the reproduction materials and identify its location relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Example of inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g.: <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). Examples of outputs are other data sets, or plain text files that are typically at the end of a script (e.g.: <code>save</code>, <code>write</code>, <code>export</code>). Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">assessment tool</a>.</p>
-<p>As you gain understanding of each code script, youy will likely find more inputs and outputs – we encourage you update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">assessment tool</a>. Once finished with the reproduction exercise, classify each code file as analysis or cleaning type. This subjective assessment should be made base on the students’ interpretation of the main role of each script.</p>
-<p>Record all this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">assessment tool</a></p>
+<p>List all the code files that you find in the reproduction materials and identify its location relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Examples of inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g.: <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). Examples of outputs are other data sets, or plain text files that are typically at the end of a script (e.g.: <code>save</code>, <code>write</code>, <code>export</code>). Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>.</p>
+<p>As you gain an understanding of each code script, you will likely find more inputs and outputs – we encourage you to update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>. Once finished with the reproduction exercise, classify each code file as analysis or cleaning type. This subjective assessment should be made base on the students’ interpretation of the main role of each script.</p>
+<p>Record all this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a></p>
+<p>List any input file (data and code) required to execute this file successfully. Separate each item with “;”</p>
+<p>List all the outputs generated with this file. This includes: data sets, figures and tables, and objects used later on. Separate each item with “;”</p>
+<p>Provide a one line description of what this script does</p>
+<p>Classify the code as “primarily cleaning code”or “primarily analysis code”</p>
 <pre><code>      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -766,7 +764,8 @@ Record results is Survey
 </div>
 <div id="diagram" class="section level2">
 <h2><span class="header-section-number">3.2</span> Connect each output to all its inputs</h2>
-<p>Draw diagrams from output to raw data sources. For more examples of diagrams connecting final output to initial raw data, <a href="#additional-diagrams">see here</a>.</p>
+<p>Draw diagrams from output to raw data sources. To do this begin by finding the code script that generates the target output (formatted or not). Then find all the inputs required to execute that script (including data and other code files). Repeat until reaching the raw data or the last available file.</p>
+<p>When a connection cannot be drawn do to missing component use the “-||-” symbol. For more examples of diagrams connecting final output to initial raw data, <a href="#additional-diagrams">see here</a>.</p>
 <pre><code>      table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
@@ -794,7 +793,7 @@ Record results is Survey
       |--------|-------|-------------------|---------------------|------------|
       | ...    | ...   | ...               | ...                 | ...        |
       |--------|-------|-------------------|---------------------|------------|</code></pre>
-<p>Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&amp;range=A1">assessment tool</a>.
+<p>Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&amp;range=A1">standardized spreadsheet</a>.
 In case of any difficulty translating the diagram into a spreadsheet, students can draw it with pen and paper, take a picture and upload the picture in the assessment survey.</p>
 </div>
 <div id="score" class="section level2">
@@ -873,7 +872,7 @@ What data are available?                   |       |         |        |         
       |-------------|-------|------------------------|------------|
       | ...         | ...   | ...                    | ...        |
       |-------------|-------|------------------------|------------|</code></pre>
-<p>Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&amp;range=A1">assessment tool</a>. You will be asked to provide this information in the<a href="ADD%20LINK">assessment and improvement survey</a>.</p>
+<p>Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&amp;range=A1">standarized spreadsheet</a>. You will be asked to provide this information in the <a href="ADD%20LINK">assessment and improvement survey</a>.</p>
 </div>
 <div id="reproducibility-dimensions-at-the-paper-level" class="section level3">
 <h3><span class="header-section-number">3.3.2</span> Reproducibility dimensions at the paper level</h3>
@@ -1547,7 +1546,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <hr />
 <ol>
 <li id="fn1"><p>If the paper appears as “closed to reproductions” it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. <a href="#fnref1" class="footnote-back">↩</a></p></li>
-<li id="fn2"><p>relative location takes the form <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to absolute location that has the form <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>relative location takes the form <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that has the form <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 
