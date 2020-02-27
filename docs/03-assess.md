@@ -4,7 +4,7 @@ The goal of this stage is to provide a standardized assessment of computational 
 
 First, you will be asked to provide a detailed description of all the reproduction materials. Second, you requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, you can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.  
 
-**Use Survey 2 to record your work as part of this step.**
+**Use [Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7) to record your work as part of this step.**
 
 *Tip: *We recommend that you first focus on one specific output (e.g. “Table 1”). After completing the assessment to this first output, you will have a much easier time translating those improvements to other outputs.
 
@@ -164,7 +164,6 @@ ADD ONE QUESTION AT THE END OF SURVEY TWO TO ASK REPRODUCER IF THEY AGREE WITH T
 The assessment is made at the output level. Hence a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs. The assessment is on a 10-level scale, where 0 represents that, under the current circumstances, reproducers cannot access any reproduction materials  and 10 represents access to all the materials and the target outcome can be reproduced starting from raw data.
 
 
-
  **Level 1 (L1):** There are no data or code available of any type. Possible improvements include adding: raw data (+AD),  analysis data (+RD), cleannig code and analysis code (+CC, +AC). 
 
  **Level 1.5 (L1.5):** There are only code scripts available, but no data of any type are available. Possible improvements include adding: raw data (+AD),  analysis data (+RD). 
@@ -228,16 +227,18 @@ Choose the appropiate level of computational reproducibility and record it using
           |-------------|-------|------------------------|------------|
           | ...         | ...   | ...                    | ...        |
           |-------------|-------|------------------------|------------|
-Record all this information in the  [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the[assessment and improvement survey](ADD LINK).   
+Record all this information in the  [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
 ### Reproducibility dimensions at the paper level   
 
 In addition to an output-specific assessment of computational reproducibility, there are several practices that facilitate the overall computational reproducibility of the paper. These practices are described in detail in the Improvement chapter. In this section of assessment it is only required that you verify that the original reproduction package made use of any of the following:  
 
-- version control         
+- master script that runs all the steps
+- readme file
+- standard file organization       
+- version control 
+- analysis uses open source software  
 - dynamic document        
-- translate to open source software  
-- file organization       
 - computing capsule (e.g. CodeOcean, Binder, etc.)     
 
 Congratulations! You have now completed the Assessment stage. You just provided a concrete building block of knowledge to better understand the state of reproducibility in Economics. 
