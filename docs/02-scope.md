@@ -14,6 +14,74 @@ Check the [ACRE database](ADD LINK) for previous assessments of the same paper. 
 
 Verify that the paper has reproduction materials (consult the AEA unofficial [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
+<!--  
+### Advise on scoping for different course length
+
+2-week courses should not try to improve reproducibility from raw data
+-->
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow" colspan="2">2 week</th>
+    <th class="tg-c3ow" colspan="2">1 month</th>
+    <th class="tg-c3ow" colspan="2">1 semester</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+  </tr>
+  <tr>
+    <td class="tg-dvpl">scoping</td>
+    <td class="tg-c3ow" colspan="2">10% (1 day)</td>
+    <td class="tg-c3ow" colspan="2">5% (1 day)</td>
+    <td class="tg-c3ow" colspan="2">3% (3 days)</td>
+  </tr>
+  <tr>
+    <td class="tg-dvpl">Assessment</td>
+    <td class="tg-c3ow" colspan="2">25%</td>
+    <td class="tg-c3ow" colspan="2">15%</td>
+    <td class="tg-c3ow" colspan="2">7%</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Improvement</td>
+    <td class="tg-c3ow">20%</td>
+    <td class="tg-c3ow">0%</td>
+    <td class="tg-c3ow" colspan="2">40%</td>
+    <td class="tg-c3ow">20%</td>
+    <td class="tg-c3ow">30%</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Robustness</td>
+    <td class="tg-c3ow" colspan="2">40%</td>
+    <td class="tg-c3ow" colspan="2">30%</td>
+    <td class="tg-c3ow" colspan="2">30%</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Extension</td>
+    <td class="tg-baqh">5%</td>
+    <td class="tg-baqh">0%</td>
+    <td class="tg-baqh" colspan="2">10%</td>
+    <td class="tg-baqh" colspan="2">10%</td>
+  </tr>
+</table>
+
+
 ### Read and summarize the paper {#read-sum}
 
 Depending on the duration of the exercise, it is recommended to create a short summary of the paper to reproduce, written in the reproducers own words. This serves two purposes: reminder of the key elements to focus for the reproduction, and demonstrating understanding.
@@ -23,6 +91,9 @@ Read the paper and write a two-page summary: focus on what is the main question 
 ### Declare scope of the exercise
 
 Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data. See definitions of these concepts below. 
+
+ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.  
+
 
 #### Reproduction margins  
 

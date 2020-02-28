@@ -241,11 +241,9 @@ Choose the appropiate level of computational reproducibility and record it using
           |-------------|-------|------------------------|------------|
           | ...         | ...   | ...                    | ...        |
           |-------------|-------|------------------------|------------|
-<<<<<<< HEAD
+
 Record all this information in the  [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
-=======
-Record all this information in the  [assessment tool](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
->>>>>>> khoeberling-patch-1
+
 
 ### Reproducibility dimensions at the paper level   
 

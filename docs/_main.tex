@@ -244,6 +244,70 @@ Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same
 
 Verify that the paper has reproduction materials (consult the AEA unofficial \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
+2 week
+
+1 month
+
+1 semester
+
+analysis data
+
+raw data
+
+analysis data
+
+raw data
+
+analysis data
+
+raw data
+
+scoping
+
+10\% (1 day)
+
+5\% (1 day)
+
+3\% (3 days)
+
+Assessment
+
+25\%
+
+15\%
+
+7\%
+
+Improvement
+
+20\%
+
+0\%
+
+40\%
+
+20\%
+
+30\%
+
+Robustness
+
+40\%
+
+30\%
+
+30\%
+
+Extension
+
+5\%
+
+0\%
+
+10\%
+
+10\%
+
 \hypertarget{read-sum}{%
 \subsection{Read and summarize the paper}\label{read-sum}}
 
@@ -255,6 +319,8 @@ Read the paper and write a two-page summary: focus on what is the main question 
 \subsection{Declare scope of the exercise}\label{declare-scope-of-the-exercise}}
 
 Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data. See definitions of these concepts below.
+
+ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.
 
 \hypertarget{reproduction-margins}{%
 \subsubsection{Reproduction margins}\label{reproduction-margins}}
@@ -272,10 +338,14 @@ Number of output
 \tightlist
 \item
   \textbf{Tables:} Describe how to cite record location.
-\item
-  \textbf{Figures:} ADD\\
-\item
-  \textbf{In-line:} ADD
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Figures:} ADD\\
+  \item
+    \textbf{In-line:} ADD
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{intensive}{%
@@ -374,10 +444,13 @@ In addition to the concepts of \protect\hyperlink{intensive}{raw and processed d
 \begin{itemize}
 \item
   \textbf{Cleaning code:} a script can be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).
-\item
-  \textbf{Analysis code:} a script can be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
-\item
-  ADD DEFINITION FOR REPRODUCTION PACKAGE.
+
+  \begin{itemize}
+  \item
+    \textbf{Analysis code:} a script can be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+  \item
+    ADD DEFINITION FOR REPRODUCTION PACKAGE.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{describe-data-sources-and-raw-data}{%
@@ -392,7 +465,7 @@ Next, look at the reproduction package and map the \emph{data sources} mentioned
 Record all the information of this section into a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} with the following structure:
 
 \begin{verbatim}
-      Raw data information:
+  Raw data information:
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
       | data_source          | page | data_files                                    | known_missing       | directory           |
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -420,7 +493,7 @@ On an initial review, it will probably be hard to provide a one-line description
 The resulting report will have the following structure:
 
 \begin{verbatim}
-      Analysis data information:
+  Analysis data information:
       |----------------|-----------------------|--------------------------------|
       | analysis_data  | location              | description                    |
       |----------------|-----------------------|--------------------------------|
@@ -450,7 +523,7 @@ Provide a one line description of what this script does
 Classify the code as ``primarily cleaning code''or ``primarily analysis code''
 
 \begin{verbatim}
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+  |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
@@ -473,7 +546,7 @@ Draw diagrams from output to raw data sources. To do this begin by finding the c
 When a connection cannot be drawn do to missing component use the ``-\textbar{}\textbar{}-'' symbol. For more examples of diagrams connecting final output to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.
 
 \begin{verbatim}
-      table 1
+  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -490,7 +563,7 @@ When a connection cannot be drawn do to missing component use the ``-\textbar{}\
 This diagram can be represented in data format by specifying how each component depends to its inputs. For example:
 
 \begin{verbatim}
-      Data representation of diagram behind Table 1.
+  Data representation of diagram behind Table 1.
       |--------|-------|-------------------|---------------------|------------|
       | ouput  | order | component         | depends_on          | inpt_type  |
       |--------|-------|-------------------|---------------------|------------|
@@ -578,10 +651,10 @@ The assessment is made at the output level. Hence a paper can be highly reproduc
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be possible improvements that have been done already (-), that can be done to move up one level of reproducibility (\texttt{✔}) or that are out of reach given the current level of reproducibility (\texttt{x}).
 
-\begin{verbatim}
-Figure 1: Levels of Computational Reproducibility and Possible Improvements   
+Figure 1: Levels of Computational Reproducibility and Possible Improvements
 
-                                           |       |               Possible improvements              |
+\begin{verbatim}
+                                       |       |               Possible improvements              |
                                            -----------------------------------------------------------
                                            | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
                                            |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
@@ -608,7 +681,7 @@ What data are available?                   |       |         |        |         
 Choose the appropiate level of computational reproducibility and record it using the following format.
 
 \begin{verbatim}
-      |-------------|-------|------------------------|------------|
+  |-------------|-------|------------------------|------------|
       | output_name | level | additional_explanation | other_info |
       |-------------|-------|------------------------|------------|
       | table 1     | 4     |                        | ...        |
@@ -621,11 +694,7 @@ Choose the appropiate level of computational reproducibility and record it using
       |-------------|-------|------------------------|------------|
 \end{verbatim}
 
-\textless{}\textless{}\textless{}\textless{}\textless{}\textless{}\textless{} HEAD
-Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.\\
-=======
-Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{assessment tool}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.\\
-\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{}\textgreater{} khoeberling-patch-1
+Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
@@ -672,23 +741,27 @@ It is common that reproducjkhgvjhgtions packages do not include all the original
 \begin{itemize}
 \tightlist
 \item
-  1 - Identify a specific missing file. During the \protect\hyperlink{assessment}{assessment stage}, you identified all data sources from the paper and appendices (column \texttt{data\_source} in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{this standarized spreadsheet}). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the \texttt{data\_file} field of the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{same spreadsheet} as above. If not, recorded as to ``Some (or all) of the files used in the paper corresponding to the data source X''.\\
-\item
-  2 - Verify whether this file(s) can be easily obtained from the web.
+  1 - Identify a specific missing file. During the \protect\hyperlink{assessment}{assessment stage}, you identified all data sources from the paper and appendices (column \texttt{data\_source} in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{this standarized spreadsheet}). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the \texttt{data\_file} field of the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{same spreadsheet} as above. If not, recorded as to ``Some (or all) of the files used in the paper corresponding to the data source X''.
 
   \begin{itemize}
   \tightlist
   \item
-    2.1 - If yes: obtain the missing files and add them to the reproducibility package. Make sure to obtain permission to repost this data. See \protect\hyperlink{tips-for-communication}{tips for communication} for a template email.\\
+    2 - Verify whether this file(s) can be easily obtained from the web.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      2.1 - If yes: obtain the missing files and add them to the reproducibility package. Make sure to obtain permission to repost this data. See \protect\hyperlink{tips-for-communication}{tips for communication} for a template email.\\
+    \item
+      2.2 - If no: proceed to step 3.\\
+    \end{itemize}
   \item
-    2.2 - If no: proceed to step 3.\\
+    3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors regarding this paper.\\
+  \item
+    4 - Contact the original authors and kindly request the original materials. Be mindful of the authors' time, and remember that the paper you are trying to reproduce was possibly published at a time where standards for computational reproducibility were different. See \protect\hyperlink{tips-for-communication}{tips for communication} for sample language on how to approach the authors.\\
+  \item
+    5 - If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by providing detailed instructions, including contact information and possible costs, for future researchers to follow.
   \end{itemize}
-\item
-  3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors regarding this paper.\\
-\item
-  4 - Contact the original authors and kindly request the original materials. Be mindful of the authors' time, and remember that the paper you are trying to reproduce was possibly published at a time where standards for computational reproducibility were different. See \protect\hyperlink{tips-for-communication}{tips for communication} for sample language on how to approach the authors.\\
-\item
-  5 - If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by providing detailed instructions, including contact information and possible costs, for future researchers to follow.
 \end{itemize}
 
 In additions to the efforts to obtain raw data, you can also contribute by obtainning missing analysis data.
@@ -701,13 +774,17 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
 \begin{itemize}
 \tightlist
 \item
-  1 - Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg \texttt{analysis\_data\_03.csv}).\\
-\item
-  2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.\\
-\item
-  3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this topic.\\
-\item
-  4 - \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific data set.
+  1 - Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg \texttt{analysis\_data\_03.csv}).
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.\\
+  \item
+    3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this topic.\\
+  \item
+    4 - \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific data set.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{ac}{%
@@ -718,14 +795,17 @@ In additions to the efforts to obtain raw data, you can also contribute by obtai
 \begin{itemize}
 \item
   1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg ``we impute missing values to\ldots{},'' or ``we estimate this regression using a bandwidth of \ldots{}'').
-\item
-  2 - Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the \protect\hyperlink{diagram}{reproduction diagram}.
-\item
-  3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this issue.
-\item
-  4 - \protect\hyperlink{tips-for-communication}{Contact the authors} nd request the specific code files.
-\item
-  5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.
+
+  \begin{itemize}
+  \item
+    2 - Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the \protect\hyperlink{diagram}{reproduction diagram}.
+  \item
+    3 - \href{ADD\%20LINK}{Verify the ACRE database} for previous attempts to contact the authors on this issue.
+  \item
+    4 - \protect\hyperlink{tips-for-communication}{Contact the authors} nd request the specific code files.
+  \item
+    5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{cc}{%
@@ -741,13 +821,17 @@ Whenever any code is available in the reproduction package, reproducers should b
 \begin{itemize}
 \tightlist
 \item
-  \emph{Code cleaning:} instructions are simplified (e.g.~by wrapping repetitive steps in a function or a loop) or redundant code is removed (eg. old code that was commented out), while keeping the original output intact.\\
-\item
-  \emph{Performance improvement:} instructions are replaced by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).\\
-\item
-  \emph{Environment set up:} the code is modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.\\
-\item
-  \emph{Correcting errors:} a coding error will occur when a section in the code of the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
+  \emph{Code cleaning:} instructions are simplified (e.g.~by wrapping repetitive steps in a function or a loop) or redundant code is removed (eg. old code that was commented out), while keeping the original output intact.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Performance improvement:} instructions are replaced by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).\\
+  \item
+    \emph{Environment set up:} the code is modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.\\
+  \item
+    \emph{Correcting errors:} a coding error will occur when a section in the code of the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{debug-cleaning-code-dcc}{%
@@ -761,7 +845,7 @@ Same as for analysis code, only separate for reporting purposes.
 Track all the different types of improvements implemented and record in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A3}{this standarized spreadsheet} of the assessment tool with the following structure:
 
 \begin{verbatim}
-       Level-specific quality improvements: add data/code, debug code.
+   Level-specific quality improvements: add data/code, debug code.
 
        | output_name | imprv | description_of_added_files        | lvl |
        |-------------|-------|-----------------------------------|-----|
@@ -783,16 +867,20 @@ In addition to the different levels of computational reproducibility described i
 \tightlist
 \item
   1 - Set up the replication package using version control software (Git).
-\item
-  2 - Improve documentation: add extensive comments to the code.
-\item
-  3 - Integrate documentation with code: adapt the paper into a literate programming environment (eg: using Jupyter notebooks, RMarkdown, Stata Dynamic Doc).
-\item
-  4 - Re-write the code from proprietary statistical software (eg Stata, Matlab) into an open-source statistical software (eg R, Python, Julia).
-\item
-  5 - Re re-organize the reproduction materials into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order and with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.\\
-\item
-  6 - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2 - Improve documentation: add extensive comments to the code.
+  \item
+    3 - Integrate documentation with code: adapt the paper into a literate programming environment (eg: using Jupyter notebooks, RMarkdown, Stata Dynamic Doc).
+  \item
+    4 - Re-write the code from proprietary statistical software (eg Stata, Matlab) into an open-source statistical software (eg R, Python, Julia).
+  \item
+    5 - Re re-organize the reproduction materials into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order and with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.\\
+  \item
+    6 - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{reporting-improvements}{%
@@ -951,12 +1039,16 @@ Test the robustness of results to alternative (sensible) specifications
 \tightlist
 \item
   Identify sensible alternatives to analytical choices.
-\item
-  Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.\\
-\item
-  Jackknife the preferred estimate.
-\item
-  Use ML to select among covariates\ldots{}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.\\
+  \item
+    Jackknife the preferred estimate.
+  \item
+    Use ML to select among covariates\ldots{}
+  \end{itemize}
 \end{itemize}
 
 \hypertarget{concluding-the-reproduction}{%
@@ -1008,28 +1100,34 @@ The purpose of this chapter is to facilitate constructive and respectful communi
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Clearly state that you are conducting a reproduction of the original work.\\
-\item
-  Explain why you have chosen this study. Try to proactively address potential concerns for selection bias.\\
-\item
-  Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
-\end{enumerate}
+  Clearly state that you are conducting a reproduction of the original work.
 
-\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.}
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{1}
+  \tightlist
+  \item
+    Explain why you have chosen this study. Try to proactively address potential concerns for selection bias.\\
+  \item
+    Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
+  \end{enumerate}
 
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  Avoid binary judgments such as ``failed to reproduce,'' and clearly state which results reproduced, and which did not (e.g. ``we successfully reproduced X, but failed to reproduce Y''), unless you uncover a case of apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}).\\
-\item
-  Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
-\item
-  Discuss what the literature learns from your reproduction, and refrain from claiming to give the final answer to the question.\\
-\item
-  For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
-\item
-  Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
+  \textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.}
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii}.}
+  \tightlist
+  \item
+    Avoid binary judgments such as ``failed to reproduce,'' and clearly state which results reproduced, and which did not (e.g. ``we successfully reproduced X, but failed to reproduce Y''), unless you uncover a case of apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}).\\
+  \item
+    Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
+  \item
+    Discuss what the literature learns from your reproduction, and refrain from claiming to give the final answer to the question.\\
+  \item
+    For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
+  \item
+    Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
+  \end{enumerate}
 \end{enumerate}
 
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
@@ -1062,6 +1160,7 @@ Considering the following:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start. A few things to consider:
 
@@ -1072,28 +1171,33 @@ Considering the following:
   \item
     Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
   \end{itemize}
-\item
-  If reproduction materials are not readily available in the location where the article is published (e.g.~the journal website), check the author'(s) website, Dataverse profile, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.
-\item
-  If steps 1 and 2 don't work, then contact the corresponding author (copying the co-authors, if any), and try to consolidate your requests into as few emails as possible. In your email, make sure to include the following details:
 
-  \begin{itemize}
-  \tightlist
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{1}
   \item
-    Basic information about the paper being reproduced (include version, date, and a DOI link (or just a URL));\\
+    If reproduction materials are not readily available in the location where the article is published (e.g.~the journal website), check the author'(s) website, Dataverse profile, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.
   \item
-    Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;\\
+    If steps 1 and 2 don't work, then contact the corresponding author (copying the co-authors, if any), and try to consolidate your requests into as few emails as possible. In your email, make sure to include the following details:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Basic information about the paper being reproduced (include version, date, and a DOI link (or just a URL));\\
+    \item
+      Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;\\
+    \item
+      Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;\\
+    \item
+      Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.\\
+    \item
+      Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?\\
+    \item
+      A deadline to respond (we suggest at two weeks or longer).
+    \end{itemize}
   \item
-    Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;\\
-  \item
-    Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.\\
-  \item
-    Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?\\
-  \item
-    A deadline to respond (we suggest at two weeks or longer).
-  \end{itemize}
-\item
-  Follow up if you don't get a response within two weeks, and include any details/clarifications that were left out in your first email.
+    Follow up if you don't get a response within two weeks, and include any details/clarifications that were left out in your first email.
+  \end{enumerate}
 \end{enumerate}
 
 \hypertarget{a.-contacting-the-original-authors-to-request-items-that-are-missing}{%
@@ -1155,7 +1259,7 @@ Specifically, I am attempting to reproduce OUTPUT X (eg table 1, figure 3). I fo
 \end{quote}
 
 \begin{verbatim}
-     OUTPUT X
+ OUTPUT X
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -1282,12 +1386,16 @@ The AEA and other economic societies have strict policies against harassment and
 \tightlist
 \item
   Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)
-\item
-  Prejudicial actions or comments that undermine the principles of equal opportunity, fair treatment, or free academic exchange
-\item
-  Deliberate intimidation, stalking, or following
-\item
-  Real or implied threat of physical harm.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Prejudicial actions or comments that undermine the principles of equal opportunity, fair treatment, or free academic exchange
+  \item
+    Deliberate intimidation, stalking, or following
+  \item
+    Real or implied threat of physical harm.
+  \end{itemize}
 \end{itemize}
 
 Here are a some steps you can take if you believe you have bullying, discrimination or harassment:
@@ -1296,14 +1404,18 @@ Here are a some steps you can take if you believe you have bullying, discriminat
 \tightlist
 \item
   \textbf{File a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.} Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person you are making the complaint about need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
-\item
-  \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of categories including race, color, national origin, gender, age, sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California) system, ``Office of Equity and Title IX'', etc.
-\item
-  \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall may outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
-\item
-  \textbf{Access mental health services at your institution.} Many universities offer short-term Counseling \& Psychological Services (CAPS) for academic, career, and personal issues.
-\item
-  \textbf{Ask for support from your academic supervisor.} If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of categories including race, color, national origin, gender, age, sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California) system, ``Office of Equity and Title IX'', etc.
+  \item
+    \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall may outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
+  \item
+    \textbf{Access mental health services at your institution.} Many universities offer short-term Counseling \& Psychological Services (CAPS) for academic, career, and personal issues.
+  \item
+    \textbf{Ask for support from your academic supervisor.} If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
+  \end{itemize}
 \end{itemize}
 
 \href{https://docs.google.com/document/d/1xJ7pZTQ1VQXVCrs6IUlp7HlBB4oxYha0oOniCG2SWLM/edit?ts=5d251563}{draft here}
@@ -1355,7 +1467,7 @@ JOEL: PLease fill-in.
 \subsection{Complete}\label{complete}}
 
 \begin{verbatim}
-      table 1
+  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -1373,7 +1485,7 @@ JOEL: PLease fill-in.
 \subsection{Raw data and analytic data, but cleaning code is missing.}\label{raw-data-and-analytic-data-but-cleaning-code-is-missing.}}
 
 \begin{verbatim}
-      table 1
+  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           

@@ -193,8 +193,8 @@
 <h3><span class="header-section-number">4.1.1</span> Add missing raw data files or meta-data (+RD)</h3>
 <p>It is common that reproducjkhgvjhgtions packages do not include all the original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data, or information about them, follow these steps:</p>
 <ul>
-<li>1 - Identify a specific missing file. During the <a href="assessment.html#assessment">assessment stage</a>, you identified all data sources from the paper and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded as to “Some (or all) of the files used in the paper corresponding to the data source X”.<br />
-</li>
+<li>1 - Identify a specific missing file. During the <a href="assessment.html#assessment">assessment stage</a>, you identified all data sources from the paper and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as delivered to the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded as to “Some (or all) of the files used in the paper corresponding to the data source X”.
+<ul>
 <li>2 - Verify whether this file(s) can be easily obtained from the web.
 <ul>
 <li>2.1 - If yes: obtain the missing files and add them to the reproducibility package. Make sure to obtain permission to repost this data. See <a href="#tips-for-communication">tips for communication</a> for a template email.<br />
@@ -207,6 +207,7 @@
 <li>4 - Contact the original authors and kindly request the original materials. Be mindful of the authors’ time, and remember that the paper you are trying to reproduce was possibly published at a time where standards for computational reproducibility were different. See <a href="#tips-for-communication">tips for communication</a> for sample language on how to approach the authors.<br />
 </li>
 <li>5 - If the data sets are not available due to confidentiality or proprietary issues, the researcher conducting the reproduction can still improve the reproduction package by providing detailed instructions, including contact information and possible costs, for future researchers to follow.</li>
+</ul></li>
 </ul>
 <p>In additions to the efforts to obtain raw data, you can also contribute by obtainning missing analysis data.</p>
 </div>
@@ -214,24 +215,27 @@
 <h3><span class="header-section-number">4.1.2</span> Add missing analysis data files (+AD)</h3>
 <p><a href="assessment.html#describe-inputs">Analysis data</a> can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analysis data are not fully reproducible, or (ii) some or all raw data is missing and some of all the analysis data is not included in the original reproduction package. To obtain any missing analysis data, follow these steps:</p>
 <ul>
-<li>1 - Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg <code>analysis_data_03.csv</code>).<br />
-</li>
+<li>1 - Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls such data in order to perform an analysis (eg <code>analysis_data_03.csv</code>).
+<ul>
 <li>2 - Verify that such data cannot be obtained by running the data cleaning code over the raw data.<br />
 </li>
 <li>3 - <a href="ADD%20LINK">Verify the ACRE database</a> for previous attempts to contact the authors on this topic.<br />
 </li>
 <li>4 - <a href="#tips-for-communication">Contact the authors</a> and request the specific data set.</li>
+</ul></li>
 </ul>
 </div>
 <div id="ac" class="section level3">
 <h3><span class="header-section-number">4.1.3</span> Add missing analysis code (+AC)</h3>
 <p><a href="assessment.html#describe-inputs">Analysis code</a> can be added when there are analytic data files, but some or all the methodological steps are missing from the code. In this case, follow these steps:</p>
 <ul>
-<li><p>1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg “we impute missing values to…,” or “we estimate this regression using a bandwidth of …”).</p></li>
+<li><p>1 - Identify the specific line/paragraph in the paper that describes the analytic step that is missing from the code (eg “we impute missing values to…,” or “we estimate this regression using a bandwidth of …”).</p>
+<ul>
 <li><p>2 - Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the <a href="assessment.html#diagram">reproduction diagram</a>.</p></li>
 <li><p>3 - <a href="ADD%20LINK">Verify the ACRE database</a> for previous attempts to contact the authors on this issue.</p></li>
 <li><p>4 - <a href="#tips-for-communication">Contact the authors</a> nd request the specific code files.</p></li>
 <li><p>5 - If no response from the authors, researchers reproducing the paper are encourage to attempt to recreate the analysis based on their interpretation of the paper, and filling in any missing piece by making explicit assumptions.</p></li>
+</ul></li>
 </ul>
 </div>
 <div id="cc" class="section level3">
@@ -242,13 +246,14 @@
 <h3><span class="header-section-number">4.1.5</span> Debug analysis code (DAC)</h3>
 <p>Whenever any code is available in the reproduction package, reproducers should be able to debug those scripts. There are four types of debugging that you can add as part of the Improvements step:</p>
 <ul>
-<li><em>Code cleaning:</em> instructions are simplified (e.g. by wrapping repetitive steps in a function or a loop) or redundant code is removed (eg. old code that was commented out), while keeping the original output intact.<br />
-</li>
+<li><em>Code cleaning:</em> instructions are simplified (e.g. by wrapping repetitive steps in a function or a loop) or redundant code is removed (eg. old code that was commented out), while keeping the original output intact.
+<ul>
 <li><em>Performance improvement:</em> instructions are replaced by other that perform the same tasks but take less time (eg. choosing one numerical optimization algorithm over another, but obtaining the same results).<br />
 </li>
 <li><em>Environment set up:</em> the code is modified to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.<br />
 </li>
 <li><em>Correcting errors:</em> a coding error will occur when a section in the code of the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females only. Please follow the <a href="ADD%20LINK">ACRE procedure to report coding errors</a>.</li>
+</ul></li>
 </ul>
 </div>
 <div id="debug-cleaning-code-dcc" class="section level3">
@@ -258,7 +263,7 @@
 <div id="reporting-results" class="section level3">
 <h3><span class="header-section-number">4.1.7</span> Reporting results</h3>
 <p>Track all the different types of improvements implemented and record in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A3">this standarized spreadsheet</a> of the assessment tool with the following structure:</p>
-<pre><code>       Level-specific quality improvements: add data/code, debug code.
+<pre><code>   Level-specific quality improvements: add data/code, debug code.
 
        | output_name | imprv | description_of_added_files        | lvl |
        |-------------|-------|-----------------------------------|-----|
@@ -275,13 +280,15 @@
 <h2><span class="header-section-number">4.2</span> Types of paper-level improvements</h2>
 <p>In addition to the different levels of computational reproducibility described in the previous sections, there are at least six additional that you can implement to improve the overall reproducibility of a paper. Such additional improvements can be applied across levels (including level 10).</p>
 <ul>
-<li>1 - Set up the replication package using version control software (Git).</li>
+<li>1 - Set up the replication package using version control software (Git).
+<ul>
 <li>2 - Improve documentation: add extensive comments to the code.</li>
 <li>3 - Integrate documentation with code: adapt the paper into a literate programming environment (eg: using Jupyter notebooks, RMarkdown, Stata Dynamic Doc).</li>
 <li>4 - Re-write the code from proprietary statistical software (eg Stata, Matlab) into an open-source statistical software (eg R, Python, Julia).</li>
 <li>5 - Re re-organize the reproduction materials into a set of folders and sub-folders that follow <a href="https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation">standardized best practices</a>, and add a master script that executes all the code in order and with no further modifications. <a href="https://github.com/AEADataEditor/replication-template">See AEA’s reproduction template</a>.<br />
 </li>
 <li>6 - Set up a computing capsule that executes all the reproduction in the browser without the need to install any software. See for examples <a href="https://mybinder.org/">Binder</a> and <a href="https://codeocean.com/">Code Ocean</a>.</li>
+</ul></li>
 </ul>
 <div id="reporting-improvements" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Reporting improvements</h3>
