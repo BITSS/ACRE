@@ -2,7 +2,9 @@
 
 After completing the assessment of the current reproducibility packages, it is possible to propose ways to increase the reproducibility of the paper. Creating improvements provides an opportunity to gain a more in-depth knowledge of the paper, including its methods, findings, and its overall contribution. In addition to this individual benefits, each contribution will be assessed by the ACRE community and can potentially be used by students and researchers around the world as an improved version of the reproducibility package for the paper.
 
-As in the Assessment section, we recommend that you first focus on one specific output (e.g. “Table 1”). After completing the improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
+As in the Assessment section, we recommend that you first focus on one specific output (e.g. “Table 1”). After completing the improvements to this first output, you will have a much easier time translating those improvements to other outputs.
+
+**Use Survey 2 to record your work as part of this step.**
 
 ## Types of output-level improvements
 
