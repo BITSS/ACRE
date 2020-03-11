@@ -23,39 +23,28 @@ To help put these recommendations into practice, we provide template language fo
    
 **For reproducers:**  
 
-   A. Contacting the original author(s) to request items that are missing;  
-   B. Asking for additional guidance when some materials have been shared;  
-   C. Response to an original author who has refused to share an item due to undisclosed reasons;  
-   D. Response to an original author who has refused to share data due to legal or ethical constraints;  
-   E. Contacting the original author(s) to share the results of your reproduction;  
-   F. Responding to adversarial responses from original authors.  
-  
-**For authors:**  
-
-   G. Responding to a request [TODO]  
-   H. Acknowledging that some information is missing [TODO]  
-   I. Acknowledging that some material is still embargoed for future research  [TODO]  
-   J. Responding to incomplete/aggressive requests from reproducers  [TODO]  
-
-
+   1. Contacting the original author(s) to request items that are missing;  
+   2. Asking for additional guidance when some materials have been shared;  
+   3. Response to an original author who has refused to share an item due to undisclosed reasons;  
+   4. Response to an original author who has refused to share data due to legal or ethical constraints;  
+   5. Contacting the original author(s) to share the results of your reproduction;  
+   6. Responding to adversarial responses from original authors.  
+ 
 While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.  
 
 
 ## For Reproducers Contacting the Authors of the Original Study
 
-### Before you contact the original author 
-
-Considering the following:  
-
+Consider the following *before* you contact the original author:  
 
    1. Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start. A few things to consider:  
-      - A Readme file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have a Readme file.  
+      - A *Readme* file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have such documentation.  
       - Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
 
-   2. If reproduction materials are not readily available in the location where the article is published (e.g., the journal website), check the authors’ websites, Dataverse profiles, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.
+   2. If reproduction materials are not readily available in the location where the article is published (e.g., the journal website), check the authors’ websites, Dataverse profiles, the [ICPSR Publications Related Archive](https://www.icpsr.umich.edu/icpsrweb/), and other relevant archives and/or data repositories.
    
    3. If steps 1 and 2 don’t work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:  
-      - Basic information about the paper being reproduced (include version, date, and a DOI link (or just a URL));   
+      - Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));   
       - Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;  
       - Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;  
       - Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.  
@@ -65,7 +54,7 @@ Considering the following:
    4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.   
  
  
-### A. Contacting the original author(s) to request items that are missing  
+### Contacting the original author(s) to request items that are missing  
 
 **Template email:**  
 
@@ -78,7 +67,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >
 > To be able to reproduce the paper in full, I hope that you can share the following items: [`list items missing from reproduction package, preferably bulleted if more than one (raw/analytic data, code, protocols for conducting the experiment, etc.)`]. I have already searched `[locations where you searched for items, with links provided]`, however I was not able to locate the items there. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 >
->Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) platform [ADD LINK], an online catalog of reproduction projects in economics. ACRE is hosted by the [Berkeley Initiative for Transparency in the Social Sciences (BITSS)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you and whether you are interested in providing a response.
+>Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) [platform](https://www.bitss.org/ecosystem/acre/), an online catalog of reproduction projects in economics. ACRE is hosted by the [Berkeley Initiative for Transparency in the Social Sciences (BITSS)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you and whether you are interested in providing a response.
 >
 >Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
 >
@@ -87,7 +76,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >Best regards,  
 >`[Reproducer]`
 
-### B. Asking for additional guidance when some materials have been shared  
+### Asking for additional guidance when some materials have been shared  
 
 *Note:* Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.  
 
@@ -99,7 +88,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >
 >Thank you for sharing the materials. They have been immensely helpful for my work.
 >
->Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. `[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data or code are missing. Refer to examples B.1 and B.2 below for more details]`.  
+>Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. `[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data or code are missing. Refer to examples 1 and 2 below for more details]`.  
 >  
 >Thank you in advance for your help.
 >  
@@ -107,7 +96,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >`[Reproducer]`  
 
 
-#### B.1 An example of well described issues:
+**1: An example of well described issues:**
 
 >Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:     
 
@@ -129,11 +118,11 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 
 
-#### B.2 An example of poorly described issues:  
+**2. An example of poorly described issues:** 
 
 >Your paper does not reproduce. I have tried for several hours now, and can’t get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are a basic principle of open science, so I am confident that you will do the right thing.
 
-### C. Response when the original author has refused to share due to undisclosed reasons   
+### Response when the original author has refused to share due to *undisclosed reasons*   
 
 *Note:* You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
@@ -141,33 +130,33 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 >**Subject:** Re: Reproduction materials for `[“Title of the paper”]  
 
->Dear Dr. `[Lastname of Corresponding Author]`,
+>Dear Dr. `[Last Name of Corresponding Author]`,
 >
->Thank you for considering my request. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale [ADD LINK]. 
+>Thank you for considering my request. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output). 
 >
 >Let me know if you have any questions.
 >
 >Best regards,  
-><<Reproducer>>
+>`[Reproducer]`  
 
 
-### D. Response when the original author has refused to share due to legal or ethical restrictions of the data
+### Response when the original author has refused to share due to legal or ethical restrictions of the data
 
 **Template email:**  
 
 >**Subject:** Re: Reproduction materials for `[“Title of the paper”]    
 
->Dear Dr. `[Lastname of Corresponding Author]`,
+>Dear Dr. `[Last Name of Corresponding Author]`,
 >
->Thank you for your response, and for clarifying the terms of use of the reproduction materials.
+>Thank you for your response and for clarifying the terms of use of the reproduction materials.
 >
 >Though I understand that you are unable to share the raw data, there may be alternative steps you can take that would help me improve the reproducibility of your paper. These include:  
 >
 >   1. Sharing the analytic version of the data (the version of the dataset that was used in the final version of your paper);  
->   2. Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the costs and the duration of the process (find an example/checklist here[ADD EXAMPLE]); and  
+>   2. Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the costs and the duration of the process. Find examples of data availability statements for proprietary or restricted-access data [here](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html); and  
 >   3. Providing access to all data and materials for which the constraints do not apply.  
 >  
-> Based on my assessment, your paper would currently rank at `[level X]` on the ACRE reproducibility scale [ADD LINK], however *this score can be easily improved*. Being able to provide analytic data would elevate the reproducibility of your paper to `[level Y]`. Providing public instructions on how other parties can access the data would further elevate its reproducibility to `[level Z]`.
+> Based on my assessment, your paper would currently rank at `[level X]` on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output), however *this score can be easily improved*. Being able to provide analytic data would elevate the reproducibility of your paper to `[level Y]`. Providing public instructions on how other parties can access the data would further elevate its reproducibility to `[level Z]`.
 >
 >I would be happy to help if you are interested in taking any of the steps I outlined above. Let me know if that would be helpful.
 >
@@ -177,12 +166,34 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >`[Reproducer]`
 
 
-### E. Contacting the original author to share the results of your reproduction exercise
+### Contacting the original author to share the results of your reproduction exercise
 
-[WORK IN PROGRESS]
+*Note*: Reporting the results of reproductions is probably the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
+
+Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: *reproduce the work of others as you would like for others to reproduce yours*, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
+
+**Template email:**
+>*Subject:* Reproducibility Assessment of <Paper>
+
+> Dear Dr. `[Last Name of Corresponding Author]`,
+>
+>Thank you for your support throughout my project as I worked to verify and advance the reproducibility of `[Paper]`. I’m writing now to share the results of my project with you and invite your feedback.
+>
+>The results of each step of my exercise, include i) Assessment, ii) Improvements, iii) Robustness Checks, (and iv) Extensions, if applicable).
+>`[Include the following items in the body of your email:
+> - Briefly describe which parts of the paper you tried to reproduce (e.g. a specific estimate, a table, etc.). 
+> - Within the scope of your reproduction, describe exactly which items you managed to reproduce.
+> - Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and *always talk about the work -- not the author!*
+> - Use sensitive language when presenting discrepancies, e.g. “Unfortunately, I found X, which differs from the Y result in the original paper...”. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism! 
+> - Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g. file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn’t make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.]`
+>
+>I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the ACRE platform.
+>
+>Best regards,
+>`[Reproducer]`
 
 
-### F. Responding to hostile responses from original authors
+### Responding to hostile responses from original authors
 
 *Note:* Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment.
 
@@ -195,9 +206,9 @@ In cases of dismissive comments, the best course of action may be to simply than
 
 >**Subject:** Re: Reproduction materials for `[“Title of the paper”]    
 
->Dear Dr. `[Lastname of Corresponding Author]`,
+>Dear Dr. `[Last Name of Corresponding Author]`,
 >
->Thank you for your response. I will work to reproduce using the available materials, and will record my results accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale[ADD LINK].  
+>Thank you for your response. I will work to reproduce using the available materials, and will record my results accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output).  
 >  
 > Let me know if you have any questions.
 >
@@ -215,34 +226,11 @@ The AEA and other economic societies have strict policies against harassment and
   - Deliberate intimidation, stalking, or following
   - Real or implied threat of physical harm.
   
-Here are a some steps you can take if you believe you have bullying, discrimination or harassment: 
+Here are a some steps you can take if you believe you have experienced bullying, discrimination or harassment: 
 
-  - **File a complaint with the [AEA Ombudsperson](https://www.aeaweb.org/about-aea/aea-ombudsperson).** Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person about whome you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process [here](https://www.aeaweb.org/about-aea/aea-ombudsperson/faq).
-  - **File a report with your institution’s office for the prevention of harassment & discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include “Office for the Prevention of Harassment and Discrimination” (in institutions that are part of the University of California) system, “Office of Equity and Title IX”, etc.
+  - **File a complaint with the [AEA Ombudsperson](https://www.aeaweb.org/about-aea/aea-ombudsperson).** Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process [here](https://www.aeaweb.org/about-aea/aea-ombudsperson/faq).
+  - **File a report with your institution’s office for the prevention of harassment & discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include “Office for the Prevention of Harassment and Discrimination” (in institutions that are part of the University of California system), “Office of Equity and Title IX”, etc.
   - **Contact your institution’s Ombudsperson/Ombuds Office.** If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case. 
   - **Access mental health services at your institution.** Many universities offer short-term Counseling & Psychological Services (CAPS) for academic, career, and personal issues.
   - **Ask for support from your academic supervisor.** If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
-
-
-[draft here](https://docs.google.com/document/d/1xJ7pZTQ1VQXVCrs6IUlp7HlBB4oxYha0oOniCG2SWLM/edit?ts=5d251563)
-
-
-
-
-## For Original Authors Responding to Requests from Reproducers  
-
-### Responding to a repeated request
-
-[TO DO] 
-### Acknowledging that some information is missing
-
-[TO DO]  
-
-### Acknowledging that some material is still embargoed for future research
-
-[TO DO]
-
-###  Responding to incomplete/aggressive requests from reproducer
-
-
-
+  
