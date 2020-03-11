@@ -4,6 +4,8 @@ After completing an assessment of the paper's reproducibility packages, you can 
 
 As in the Assessment section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
 
+**Use Survey 2 to record your work as part of this step.**
+
 ## Types of output-level improvements
 
 ### Adding missing raw data files or meta-data (+RD) {#rd}
