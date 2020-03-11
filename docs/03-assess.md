@@ -3,6 +3,7 @@
 The goal of this stage is to conduct a standardized assessment of your chosen paper’s computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
 First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
+  
 
 **Use [Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7) to record your work as part of this step.**
 
@@ -11,7 +12,7 @@ First, you will provide a detailed description of the reproduction materials. Se
 ADD: how a reproduction package [should look like](https://social-science-data-editors.github.io/guidance/Verification_guidance.html.)
 
 
-## Describe the inputs.
+## Describe the inputs. {#describe-inputs}
 This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a description a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.
 
 The following terms will be used in this section:     
