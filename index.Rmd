@@ -92,9 +92,8 @@ output:
       </tr>
       <tr>
          <td>[Record results is Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5)</td>
-         <td colspan=2>[Record results is Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</td>
-         <td>Record results is Survey</td>
-         <td></td>
+         <th colspan=3>[Record results is Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</th>
+         <td>[Record results is Survey 3](ADD LINK)</td>
          <td></td>
       </tr>
    </tbody>

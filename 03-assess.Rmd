@@ -1,3 +1,5 @@
+# Assessment
+
 The goal of this stage is to conduct a standardized assessment of your chosen paper’s computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
 First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
