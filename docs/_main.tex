@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-02-27}
+\date{2020-03-11}
 
 \begin{document}
 \maketitle
@@ -165,18 +165,20 @@ Record results is Survey
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-Last year (2019), the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.
+In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low \citep{galiani2018make, chang2015economics} to just low \citep{kingi2018reproducibility}. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
 
-Replication, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' Computational reproducibility, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of reproduction. At the center of this process is the reproducer (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the original author (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) (King 1995) is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
+
+This exercise is part of the Advancing Computational Reproducibility in Economics (ACRE) project led by the Berkeley Initiative for Transparency in the Social Sciences \href{bitss.org}{(BITSS)} and Prof.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The ACRE project builds on efforts to improve the reproducibility of economics research through the updated \href{https://www.aeaweb.org/journals/policies/data-code/}{Data and Code Availability Policy}, which since 2019 mandates pre-publication verification of computational reproducibility by the AEA Data Editor. Several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were also produced to facilitate the authors' compliance.
 
 \hypertarget{beyond-binary-judgments}{%
 \section{Beyond binary judgments}\label{beyond-binary-judgments}}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper ``reproducible'' or non-reproducible". These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducer to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as reproducible or not.
+Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducers to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally, there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
 
 I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
 
@@ -215,34 +217,34 @@ This reproduction exercise is divided into four stages, with a fifth optional st
 \end{verbatim}
 \end{enumerate}
 
-(\textbf{JOEL}: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push button replications (one of the authors is Sayak Khatua)
+(\textbf{JOEL}: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push button replications (one of the authors is Sayak Khatua. From Katie: Working paper here says 3 hours per replication: \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS})
 
-Figure 1 depicts the suggested levels of effort for each stage of the exercise depending on the context in which you are performing this exercise. This process need not be chronologically linear, e.g.~you can realize that the scope of their reproduction is too ambitious and then switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the current level of reproducibility.
+Figure 1 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear, e.g., you may realize that the scope of a reproduction is too ambitious and switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
 
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
 
-You will be asked to record the results of your reproduction as you make progress through different stages. After the \protect\hyperlink{scoping}{scoping stage}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} that records paper of choice and specific outputs to reproduce. In the \protect\hyperlink{assessment}{assessment stage}, you should inspect all the reproduction materials (raw data, analysis data and code), draw diagrams that connect the target output (to reproduce) with all its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. At the \href{(\#improvements)}{improvement stage}, you can record any specific improvements report any potential increase in the reported level of reproducibility in a second short survey. Finally, in the \protect\hyperlink{robust}{robustness stage} you will record any analytical choice and possible variations of it.
+You will be asked to record the results of your reproduction progress through each stage. After \protect\hyperlink{scoping}{scoping}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In \protect\hyperlink{assessment}{assessment}, you will inspect the paper's reproduction materials (raw data, analysis data, and code), draw diagrams connecting the \textbf{output to be reproduce} with its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In \href{(\#improvements)}{improvement}, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in \protect\hyperlink{robust}{robustness checks} you will record any analytical choices and their possible variations.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this first stage, you are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise. \textbf{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1} to record your work as part of this stage.}
+In the Scoping stage, you will choose a paper to reproduce. , or be assigned one. Chapter 2 describes the steps for defining the scope of a reproduction exercise. \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1} to record your work for this stage.}}
 
 \hypertarget{steps}{%
 \section{Steps}\label{steps}}
 
-Before you invest any time in reading/summarizing the paper:
+Before you invest any time in reading or summarizing a paper, complete steps 2.1.1--2.1.2:
 
-\hypertarget{check-acre}{%
-\subsection{Check records on the ACRE platform}\label{check-acre}}
+\hypertarget{check-records-on-the-acre-platform-check-acre.}{%
+\subsection{Check records on the ACRE platform \{\#check-acre\}.}\label{check-records-on-the-acre-platform-check-acre.}}
 
-Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is ``open to reproductions'', and create a new entry\footnote{If the paper appears as ``closed to reproductions'' it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. }.
+Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the \textbf{paper status} is ``open to reproductions'', and create a new entry\footnote{If the paper status is ``closed to reproductions'', ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.}.
 
-\hypertarget{verify-rep-mat}{%
-\subsection{Verify that reproduction materials exist}\label{verify-rep-mat}}
+\hypertarget{verify-that-reproduction-materials-exist-verify-rep-mat.}{%
+\subsection{Verify that reproduction materials exist \{\#verify-rep-mat\}.}\label{verify-that-reproduction-materials-exist-verify-rep-mat.}}
 
-Verify that the paper has reproduction materials (consult the AEA unofficial \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Verify that the paper has reproduction materials (consult the unofficial AEA \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested \href{LINK}{here}, making sure to copy (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 2 week
 
@@ -309,30 +311,33 @@ Extension
 10\%
 
 \hypertarget{read-sum}{%
-\subsection{Read and summarize the paper}\label{read-sum}}
+\subsection{Read and summarize the paper.}\label{read-sum}}
 
-Depending on the duration of the exercise, it is recommended to create a short summary of the paper to reproduce, written in the reproducers own words. This serves two purposes: reminder of the key elements to focus for the reproduction, and demonstrating understanding.
+Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).
 
-Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
+Read the paper and write a two-page summary, answering the following: What is the main question the paper attempts to answer? What methodologies doe is employ? What data sources do the authors use?
 
-\hypertarget{declare-scope-of-the-exercise}{%
-\subsection{Declare scope of the exercise}\label{declare-scope-of-the-exercise}}
+\hypertarget{declare-scope-of-the-exercise.}{%
+\subsection{Declare scope of the exercise.}\label{declare-scope-of-the-exercise.}}
 
-Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data. See definitions of these concepts below.
+Declare if your assessment will be of all of the paper's results (\textbf{complete}) or just the \textbf{main results}, and if you will aim to start with \textbf{raw data} or \textbf{processed data}. Find definitions of these concepts below.
 
 ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.
 
-\hypertarget{reproduction-margins}{%
-\subsubsection{Reproduction margins}\label{reproduction-margins}}
+\hypertarget{define-your-reproduction-margins.}{%
+\subsubsection{Define your reproduction margins.}\label{define-your-reproduction-margins.}}
 
 \hypertarget{outputs}{%
-\paragraph{Extensive margin: outputs to reproduced}\label{outputs}}
+\paragraph{\texorpdfstring{Define the \emph{extensive margin}: outputs to reproduced}{Define the extensive margin: outputs to reproduced}}\label{outputs}}
 
-\protect\hyperlink{complete}{COMPLETE}
-Number of output
+Define whether you will attempt to reproduce all of your chosen paper's results or just the main results.
+- \textbf{Complete}: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.
+- \textbf{Main results}: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper's abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.
 
-\hypertarget{types-of-output}{%
-\subparagraph{Types of output:}\label{types-of-output}}
+\hypertarget{describe-the-types-of-output.}{%
+\subparagraph{Describe the types of output.}\label{describe-the-types-of-output.}}
+
+Broadly describe the outputs you will attempt to reproduce.
 
 \begin{itemize}
 \tightlist
@@ -349,50 +354,47 @@ Number of output
 \end{itemize}
 
 \hypertarget{intensive}{%
-\paragraph{Intensive margin: depth of reproduction in terms of original data}\label{intensive}}
+\paragraph{\texorpdfstring{Define the \emph{intensive margin}: depth of reproduction in terms of original data.}{Define the intensive margin: depth of reproduction in terms of original data.}}\label{intensive}}
 
 \begin{itemize}
+\tightlist
 \item
-  \textbf{Raw data:} A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
+  \textbf{Raw data} sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}.
 \item
-  \textbf{Processed data:} a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
+  \textbf{Processed data} are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:
 
   \begin{itemize}
   \tightlist
   \item
-    \emph{Intermediate data:} a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
+    \emph{Intermediate data} are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
   \item
-    \emph{Analytic data:} data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
+    \emph{Analytic data} is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
   \end{itemize}
 \end{itemize}
 
-\hypertarget{how-to-classify-a-data-set}{%
-\subparagraph{How to classify a data set?}\label{how-to-classify-a-data-set}}
+\hypertarget{classifying-a-data-set}{%
+\subparagraph{Classifying a data set}\label{classifying-a-data-set}}
 
-To classify a data set as \textbf{raw} you can use some of the following strategies:
+A data set may be classified as \textbf{raw} if it fits any of the following criteria:
 
 \begin{itemize}
 \tightlist
 \item
-  Check if the data is stored in a folder labeled as ``raw''\\
+  The data is stored in a folder or file labeled as ``raw''.\\
 \item
-  Check if the file name has the word ``raw'' in some part of it\\
+  The data set is not the output of any code script in the reproduction materials.\\
 \item
-  Verify that the data set is not the output of any code script in the reproduction materials\\
-\item
-  Verify that the same file can be independently obtained from the data source cited in the paper
+  The same data file can be independently obtained from the data source cited in the paper.
 \end{itemize}
 
-To classify a data set as \textbf{analytic} you can use some of the following strategies:
+A data set may be classified as \textbf{analytic} if it fits any of the following criteria:
 
 \begin{itemize}
 \tightlist
 \item
-  Check if the data is stored in a folder denominated as ``analytic'' or ``analysis''\\
+  The data is stored in a folder or file labeled as ``analytic'' or ``analysis.''
 \item
-  Check if the file name has the word ``analytic'' or ``analysis'' in some part of it\\
-\item
-  Verify that the data set is the last input required to produce some of the output (formatted or unformatted) of the paper
+  The data set is the last input required to produce some of the output (formatted or unformatted) of the paper.
 \end{itemize}
 
 \hypertarget{sample-strategies-for-scoping}{%
@@ -403,66 +405,72 @@ ADD.
 \hypertarget{strategy-1}{%
 \subsection{Strategy 1:}\label{strategy-1}}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
-  First main estimates from paper.
+  Attempt to reproduce the paper's main estimates.
 \item
-  Then main 2 main tables and/or two main figures.
+  Attempt to reproduce two main tables and/or two main figures.
 \item
-  Once done with improvements stage of these outcomes, then go back to rest of the paper.
-\end{itemize}
+  Try to make improvements to these outputs.
+\item
+  Try to reproduce the rest of the paper.
+\end{enumerate}
 
 \hypertarget{strategy-2}{%
 \subsection{Strategy 2:}\label{strategy-2}}
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  get everything to run up to analytic data, then go to improvements. Once completed go back for raw data (or in parallel?)
-\end{itemize}
+  Attempt to reproduce all outputs resulting from the analytic data.
+\item
+  Once you can do that, try to make improvements.
+\item
+  If you can make improvements, attempt to reproduce the outputs starting from raw data. (or in parallel?)
+\end{enumerate}
 
-\hypertarget{assessment}{%
-\chapter{Assessment}\label{assessment}}
+The goal of this stage is to conduct a standardized assessment of your chosen paper's computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
-The goal of this stage is to provide a standardized assessment of computational reproducibility. All the details required in this section are designed to leave a record of most of the learning process behind a reproduction. Such a record facilitates incremental improvements, allowing new reproducers to pick up where others left.
-
-First, you will be asked to provide a detailed description of all the reproduction materials. Second, you requested to connect the outputs chosen to reproduce with all of their corresponding inputs. With all this elements in place, you can then score the level of reproducibility of a specific output, and report on paper-level dimensions of reproducibility.
+First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you've chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.
 
 \textbf{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Survey 2} to record your work as part of this step.}
 
-\emph{Tip: }We recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the assessment to this first output, you will have a much easier time translating those improvements to other outputs.
+\emph{Tip:} We recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.
 
 ADD: how a reproduction package \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html.}{should look like}
 
-\hypertarget{describe-inputs}{%
-\section{Describe inputs}\label{describe-inputs}}
+\hypertarget{describe-the-inputs.}{%
+\section{Describe the inputs.}\label{describe-the-inputs.}}
 
-This section explains how to list all the input materials found or referred to in the reproduction package. First, identify all data sources and connect them with raw data files (when available). Second, locate and provide a description a brief description of the analytic files. In the last step, locate, inspect and describe all the computer code used in the paper.
+This section explains how to list all the input materials found or referred to in the reproduction package. First, you'll identify data sources and connect them with their raw data files (when available). Second, you'll locate and provide a description a brief description of the analytic data files. Finally, you'll locate, inspect, and describe the analytic code used in the paper.
 
-In addition to the concepts of \protect\hyperlink{intensive}{raw and processed data}, defined already, this section use the following concepts:
+The following terms will be used in this section:
 
 \begin{itemize}
 \item
-  \textbf{Cleaning code:} a script can be classified as primarily data cleaning if most of its content is dedicated to actions such as: deleting variables or observations, merging data sets, removing outliers, and reshaping the structure of the data (from long to wide or vice versa).
+  \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).
 
   \begin{itemize}
   \item
-    \textbf{Analysis code:} a script can be classified as primarily analysis code if most of its content is dedicated to actions such as: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+    \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
   \item
     ADD DEFINITION FOR REPRODUCTION PACKAGE.
   \end{itemize}
 \end{itemize}
 
-\hypertarget{describe-data-sources-and-raw-data}{%
-\subsection{Describe data sources and raw data}\label{describe-data-sources-and-raw-data}}
+\hypertarget{describe-the-data-sources-and-raw-data.}{%
+\subsection{Describe the data sources and raw data.}\label{describe-the-data-sources-and-raw-data.}}
 
-In the paper to reproduce, find references to all the data sources used in the analysis. A data source is usually described in a narrative form, for example the body of the paper can have text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}''-- in this example, the data source is ``Current Population Survey 2018''. It is mentioned for the first time on page 1 of the appendix, so its location should be recorded as ``A1''. Do this for all the data sources mentioned in the paper.
+In the paper to be reproduced, find references to all data sources used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all data sources mentioned in the paper.
 
-Data sources also vary in unit of analysis, with some sources matching the same unit of analysis of the paper (like the previous examples), and other less clear like ``our information on regional minimum wages comes from the Bureau of Labor Statistics'' (to be recorded as ``regional minimum wages from the Bureau of Labor Statistics'').
+Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., ``our information on regional minimum wages comes from the Bureau of Labor Statistics.'' This should be recorded as ``regional minimum wages from the Bureau of Labor Statistics''.).
 
-Next, look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record its folder location relative to the main reproduction folder. In addition to looking at all the existing data files, it is recommended to review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. By inspecting these scripts you might be able to understand how each different data sources is used, and possibly identify any missing files from the reproduction package.
+Next look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.
 
-Record all the information of this section into a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} with the following structure:
+Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} with the following structure:
 
 \begin{verbatim}
   Raw data information:
@@ -483,12 +491,12 @@ Record all the information of this section into a \href{https://docs.google.com/
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
 \end{verbatim}
 
-\hypertarget{describe-analytic-data-sets}{%
-\subsection{Describe analytic data sets}\label{describe-analytic-data-sets}}
+\hypertarget{describe-the-analytic-data-sets.}{%
+\subsection{Describe the analytic data sets.}\label{describe-the-analytic-data-sets.}}
 
-List all the analytic files that you find in the reproduction materials and identify its location relative to the main reproduction folder\footnote{relative location takes the form \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that has the form \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. Record all this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1299317837\&range=A1}{standardized spreadsheet}.
+List all the analytic files you can find in the reproduction materials, and identify their locations relative to the main reproduction folder\footnote{relative location takes the form \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that has the form \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1299317837\&range=A1}{standardized spreadsheet}.
 
-On an initial review, it will probably be hard to provide a one-line description of each analytic data set. But as you progress through the exercise, return to the spreadsheet and add a one-line description of the main content in each file (for example: \texttt{all\_waves.csv} has the simple description \texttt{data\ for\ region-level\ analysis}).
+As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: \texttt{all\_waves.csv} has the simple description \texttt{data\ for\ region-level\ analysis}). This may be difficult in an initial review, but will become easier as you go along.
 
 The resulting report will have the following structure:
 
@@ -505,22 +513,22 @@ The resulting report will have the following structure:
       |----------------|-----------------------|--------------------------------|
 \end{verbatim}
 
-\hypertarget{describe-code-scripts}{%
-\subsection{Describe code scripts}\label{describe-code-scripts}}
+\hypertarget{describe-the-code-scripts.}{%
+\subsection{Describe the code scripts.}\label{describe-the-code-scripts.}}
 
-List all the code files that you find in the reproduction materials and identify its location relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Examples of inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g.: \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). Examples of outputs are other data sets, or plain text files that are typically at the end of a script (e.g.: \texttt{save}, \texttt{write}, \texttt{export}). Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}.
+List all code files that you find in the reproduction materials and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). Outputs may inlcude other data sets or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}.
 
-As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as analysis or cleaning type. This subjective assessment should be made base on the students' interpretation of the main role of each script.
+As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. This subjective assessment should be made based on your interpretation of each script's main role.
 
-Record all this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}
+Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}
 
-List any input file (data and code) required to execute this file successfully. Separate each item with ``;''
+List any input files (data and code) required to execute this file successfully. Separate each item with ``;''.
 
-List all the outputs generated with this file. This includes: data sets, figures and tables, and objects used later on. Separate each item with ``;''
+List all outputs generated with this file. This includes data sets, figures and tables, and objects used later on. Separate each item with ``;''.
 
-Provide a one line description of what this script does
+Provide a one-line description of what each script does.
 
-Classify the code as ``primarily cleaning code''or ``primarily analysis code''
+Classify the code as ``primarily cleaning code'' or ``primarily analysis code''.
 
 \begin{verbatim}
   |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -541,9 +549,9 @@ Classify the code as ``primarily cleaning code''or ``primarily analysis code''
 \hypertarget{diagram}{%
 \section{Connect each output to all its inputs}\label{diagram}}
 
-Draw diagrams from output to raw data sources. To do this begin by finding the code script that generates the target output (formatted or not). Then find all the inputs required to execute that script (including data and other code files). Repeat until reaching the raw data or the last available file.
+Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
 
-When a connection cannot be drawn do to missing component use the ``-\textbar{}\textbar{}-'' symbol. For more examples of diagrams connecting final output to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.
+When a connection cannot be drawn due to a missing component, use the ``-\textbar{}\textbar{}-'' symbol. For more examples of diagrams connecting final output to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.
 
 \begin{verbatim}
   table 1
@@ -560,7 +568,7 @@ When a connection cannot be drawn do to missing component use the ``-\textbar{}\
                           └───[data] admin_01raw.csv  
 \end{verbatim}
 
-This diagram can be represented in data format by specifying how each component depends to its inputs. For example:
+This diagram can be represented in data format by specifying how each component depends on its inputs. For example:
 
 \begin{verbatim}
   Data representation of diagram behind Table 1.
@@ -579,29 +587,29 @@ This diagram can be represented in data format by specifying how each component 
       |--------|-------|-------------------|---------------------|------------|
 \end{verbatim}
 
-Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standardized spreadsheet}.
-In case of any difficulty translating the diagram into a spreadsheet, students can draw it with pen and paper, take a picture and upload the picture in the assessment survey.
+Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standardized spreadsheet}.
+If you have difficulty translating the diagram into a spreadsheet, you can draw it with pen and paper, take a picture and upload it to the assessment survey.
 
 \hypertarget{score}{%
-\section{Assign a reproducibility score}\label{score}}
+\section{Assign a reproducibility score.}\label{score}}
 
-Once all the possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, it is possible to assess the output-specific level of reproducibility.
+Once all possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility.
 
 The following concepts will be used in this section:
 
 \begin{itemize}
 \item
-  \textbf{Computationally Reproducible from Analytic data (CRA):} the output can be reproduced with minimal effort starting from the analytic data sets.
+  \textbf{Computationally Reproducible from Analytic data (CRA):} The output can be reproduced with minimal effort starting from the analytic data sets.
 \item
-  \textbf{Computationally Reproducible from Raw data (CRR):} the output can be reproduced with minimal effort from the raw data sets.
+  \textbf{Computationally Reproducible from Raw data (CRR):} The output can be reproduced with minimal effort from the raw data sets.
 \item
-  \textbf{Minimal effort:} spending five minutes or less in getting the code running. This five minutes do not include the computing time.
+  \textbf{Minimal effort:} Five minutes or less are required to run the code, not including computing time.
 \end{itemize}
 
 \hypertarget{levels-of-computational-reproducibility-for-a-specific-output}{%
 \subsection{Levels of Computational Reproducibility for a Specific Output}\label{levels-of-computational-reproducibility-for-a-specific-output}}
 
-We can now outline different levels of computational reproducibility. Each level is defined on the basis of data and code availability, possible improvements, and whether or not it achieves some type of reproducibility. In the next chapter we describe each possible improvement with more detail.
+Here we outline different levels of computational reproducibility. Each level is defined by data and code availability, possible improvements, and whether or not they achieve some type of reproducibility. In the next chapter we'll describe each possible improvement in more detail.
 
 MAKE EXPLICIT UNDERLYING VALUATIONS:
 
@@ -625,31 +633,31 @@ MAKE EXPLICIT UNDERLYING VALUATIONS:
 
 ADD ONE QUESTION AT THE END OF SURVEY TWO TO ASK REPRODUCER IF THEY AGREE WITH THIS ORDER, AND IF THEY WOULD ADD/DELETE/MODIFY ANY SPECIFIC LEVEL
 
-The assessment is made at the output level. Hence a paper can be highly reproducible for its main results, but suffer of low reproducibility for other outputs. The assessment is on a 10-level scale, where 0 represents that, under the current circumstances, reproducers cannot access any reproduction materials and 10 represents access to all the materials and the target outcome can be reproduced starting from raw data.
+The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction materials, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
 
-\textbf{Level 1 (L1):} There are no data or code available of any type. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleannig code and analysis code (+CC, +AC).
+\textbf{Level 1 (L1):} No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
 
-\textbf{Level 1.5 (L1.5):} There are only code scripts available, but no data of any type are available. Possible improvements include adding: raw data (+AD), analysis data (+RD).
+\textbf{Level 1.5 (L1.5):} Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
 
-\textbf{Level 2 (L2):} There are analytic data available, but no raw data or any type of code. Possible improvements include: adding raw data (+RD) and adding analysis code (+AC).
+\textbf{Level 2 (L2):} Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).
 
-\textbf{Level 3 (L3):} Both analytic data sets and analysis code are available. However, the code does not run or produces different results than those of the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
+\textbf{Level 3 (L3):} Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
 
-\textbf{Level 4 (L4):} Both analytic data sets and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.
+\textbf{Level 4 (L4):} Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.
 
-\textbf{Level 5 (L5):} All data, analytic and raw, are available. However, some or all the codes for cleaning and analysis are missing. Steps for improvement include adding analysis code (+AC) and/or cleaning code (+CC).
+\textbf{Level 5 (L5):} Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).
 
-\textbf{Level 6 (L6):} All data and analysis code are available. However, the code does not run or produces different results than those of the paper (not CRA). Possible improvements include adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
+\textbf{Level 6 (L6):} All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
 
-\textbf{Level 7 (L7):} All data and analysis code are available, and they produce the same output as in the paper (yes CRA). The reproducibility package can still be improved by adding the missing cleaning code (+CD).
+\textbf{Level 7 (L7):} All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).
 
-\textbf{Level 8 (L8):} All materials (raw and analysis data, and cleaning and analysis code) are available. However, the code does not run or produces different results than those of the paper (not CRR and not CRA). Possible improvements include debugging the cleaning code (DCC) or debugging the analysis code (DAC).
+\textbf{Level 8 (L8):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).
 
-\textbf{Level 9 (L9):} All materials (raw and analysis data, and cleaning and analysis code) are available, and the analysis code produces the same output as in the paper (yes CRA). However the cleaning code does not run or produces different results that those of the paper (not CRR). Possible improvements include debugging the cleaning code (DCC).
+\textbf{Level 9 (L9):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).
 
-\textbf{Level 10 (L10):} All materials are available and produce the same results as in the paper with minimal effort, starting from the analytic data sets (yes CRA) and from the raw data (yes CRR).
+\textbf{Level 10 (L10):} All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).
 
-The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be possible improvements that have been done already (-), that can be done to move up one level of reproducibility (\texttt{✔}) or that are out of reach given the current level of reproducibility (\texttt{x}).
+The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (\texttt{✔}), or are out of reach given the current level of reproducibility (\texttt{x}).
 
 Figure 1: Levels of Computational Reproducibility and Possible Improvements
 
@@ -694,17 +702,17 @@ Choose the appropiate level of computational reproducibility and record it using
       |-------------|-------|------------------------|------------|
 \end{verbatim}
 
-Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
+Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
 
-In addition to an output-specific assessment of computational reproducibility, there are several practices that facilitate the overall computational reproducibility of the paper. These practices are described in detail in the Improvement chapter. In this section of assessment it is only required that you verify that the original reproduction package made use of any of the following:
+In addition to an output-specific assessment of computational reproducibility, several practices can facilitate a paper's overall computational reproducibility. These practices are described in detail in the Improvement chapter. In the Assessment section, it is only required that you verify whether the original reproduction package made use of any of the following:
 
 \begin{itemize}
 \tightlist
 \item
-  master script that runs all the steps
+  master script that runs all steps
 \item
   readme file
 \item
@@ -719,7 +727,7 @@ In addition to an output-specific assessment of computational reproducibility, t
   computing capsule (e.g.~CodeOcean, Binder, etc.)
 \end{itemize}
 
-Congratulations! You have now completed the Assessment stage. You just provided a concrete building block of knowledge to better understand the state of reproducibility in Economics.
+Congratulations! You have now completed the Assessment stage. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics.
 
 Please continue to the \protect\hyperlink{improvements}{next section} where you can help to improve it!
 
@@ -729,6 +737,8 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 After completing the assessment of the current reproducibility packages, it is possible to propose ways to increase the reproducibility of the paper. Creating improvements provides an opportunity to gain a more in-depth knowledge of the paper, including its methods, findings, and its overall contribution. In addition to this individual benefits, each contribution will be assessed by the ACRE community and can potentially be used by students and researchers around the world as an improved version of the reproducibility package for the paper.
 
 As in the Assessment section, we recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the improvements to this first output, you will have a much easier time translating those improvements to other outputs.
+
+\textbf{Use Survey 2 to record your work as part of this step.}
 
 \hypertarget{types-of-output-level-improvements}{%
 \section{Types of output-level improvements}\label{types-of-output-level-improvements}}
@@ -1092,9 +1102,9 @@ Walk the students on checking that they have completed all the steps and where c
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}
 
-The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and the original authors. Exchanges that contain charged or/and adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps that reproducers can take to ensure that their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): treat others and their work, as you would like others to treat you and your work!
+The purpose of this chapter is to facilitate constructive and respectful communication between reproducers (you) and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
-\textbf{1. Carefully and transparently plan your study. }
+\textbf{1. Carefully and transparently plan your study.}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -1118,11 +1128,11 @@ The purpose of this chapter is to facilitate constructive and respectful communi
   \def\labelenumii{\alph{enumii}.}
   \tightlist
   \item
-    Avoid binary judgments such as ``failed to reproduce,'' and clearly state which results reproduced, and which did not (e.g. ``we successfully reproduced X, but failed to reproduce Y''), unless you uncover a case of apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}).\\
+    Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}).\\
   \item
     Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
   \item
-    Discuss what the literature learns from your reproduction, and refrain from claiming to give the final answer to the question.\\
+    Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
   \item
     For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
   \item
@@ -1136,9 +1146,9 @@ To help put these recommendations into practice, we provide template language fo
 
 A. Contacting the original author(s) to request items that are missing;\\
 B. Asking for additional guidance when some materials have been shared;\\
-C. Response when the original author has refused to share an item due to undisclosed reasons;\\
-D. Response when the original author has refused to share data due to legal or ethical constraints;\\
-E. Contacting the original author to share the results of your reproduction exercise;\\
+C. Response to an original author who has refused to share an item due to undisclosed reasons;\\
+D. Response to an original author who has refused to share data due to legal or ethical constraints;\\
+E. Contacting the original author(s) to share the results of your reproduction;\\
 F. Responding to adversarial responses from original authors.
 
 \textbf{For authors:}
@@ -1148,7 +1158,7 @@ H. Acknowledging that some information is missing {[}TODO{]}\\
 I. Acknowledging that some material is still embargoed for future research {[}TODO{]}\\
 J. Responding to incomplete/aggressive requests from reproducers {[}TODO{]}
 
-We hope that you will find these useful. At the same time, note that they are \emph{only recommendations}, and you are welcome to modify them based on the context and the needs of your project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.
+While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.
 
 \hypertarget{for-reproducers-contacting-the-authors-of-the-original-study}{%
 \section{For Reproducers Contacting the Authors of the Original Study}\label{for-reproducers-contacting-the-authors-of-the-original-study}}
@@ -1176,9 +1186,9 @@ Considering the following:
   \def\labelenumii{\arabic{enumii}.}
   \setcounter{enumii}{1}
   \item
-    If reproduction materials are not readily available in the location where the article is published (e.g.~the journal website), check the author'(s) website, Dataverse profile, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.
+    If reproduction materials are not readily available in the location where the article is published (e.g., the journal website), check the authors' websites, Dataverse profiles, the ICPSR Publications Related Archive, and other relevant archives and/or data repositories.
   \item
-    If steps 1 and 2 don't work, then contact the corresponding author (copying the co-authors, if any), and try to consolidate your requests into as few emails as possible. In your email, make sure to include the following details:
+    If steps 1 and 2 don't work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:
 
     \begin{itemize}
     \tightlist
@@ -1193,10 +1203,10 @@ Considering the following:
     \item
       Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?\\
     \item
-      A deadline to respond (we suggest at two weeks or longer).
+      A deadline to respond (we suggest at least two weeks).
     \end{itemize}
   \item
-    Follow up if you don't get a response within two weeks, and include any details/clarifications that were left out in your first email.
+    Follow up if you don't get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
   \end{enumerate}
 \end{enumerate}
 
@@ -1213,13 +1223,13 @@ Considering the following:
 Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
 I am contacting you about reproduction materials for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
-I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working to reproduce this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.\ this\ is\ a\ seminal\ paper\ in\ my\ field),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
+I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working to reproduce this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
 
-To be able to reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, however I was not able to locate those items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+To be able to reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, however I was not able to locate the items there. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 
-Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) platform {[}ADD LINK{]}, an online catalog of reproduction projects in economics. ACRE is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences (BITSS)}. Let me know if you would like me to share the outcome of my exercise with you {[}and whether you are interested in providing a response.
+Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) platform {[}ADD LINK{]}, an online catalog of reproduction projects in economics. ACRE is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences (BITSS)}. Let me know if you would like me to share the outcome of my exercise with you and whether you are interested in providing a response.
 
-Since I am required to complete this project by \texttt{{[}date{]}}, I would appreciate your response no later than \texttt{{[}deadline{]}}.
+Since I am required to complete this project by \texttt{{[}date{]}}, I would appreciate your response by \texttt{{[}deadline{]}}.
 
 Let me know if you have any questions. Please also feel free to contact my supervisor/instructor \texttt{{[}Name\ (email){]}} for further details on this exercise. Thank you in advance for your help!
 
@@ -1230,7 +1240,7 @@ Best regards,\\
 \hypertarget{b.-asking-for-additional-guidance-when-some-materials-have-been-shared}{%
 \subsection{B. Asking for additional guidance when some materials have been shared}\label{b.-asking-for-additional-guidance-when-some-materials-have-been-shared}}
 
-\emph{Note:} Even in cases where the corresponding author has shared the reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications and/or share missing materials. Just like in the first scenario above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
+\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
 
 \textbf{Template email:}
 
@@ -1243,7 +1253,7 @@ Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
 Thank you for sharing the materials. They have been immensely helpful for my work.
 
-Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. \texttt{{[}Describe\ the\ issues\ and\ how\ you\ have\ tried\ to\ resolve\ them.\ Describe\ whatever\ files\ or\ parts\ of\ the\ data\ and/or\ code\ are\ missing.\ Refer\ to\ examples\ B.1\ and\ B.2\ below\ for\ more\ details{]}}.
+Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. \texttt{{[}Describe\ the\ issues\ and\ how\ you\ have\ tried\ to\ resolve\ them.\ Describe\ whatever\ files\ or\ parts\ of\ the\ data\ or\ code\ are\ missing.\ Refer\ to\ examples\ B.1\ and\ B.2\ below\ for\ more\ details{]}}.
 
 Thank you in advance for your help.
 
@@ -1255,7 +1265,7 @@ Best regards,\\
 \subsubsection{B.1 An example of well described issues:}\label{b.1-an-example-of-well-described-issues}}
 
 \begin{quote}
-Specifically, I am attempting to reproduce OUTPUT X (eg table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:
+Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:
 \end{quote}
 
 \begin{verbatim}
@@ -1274,7 +1284,7 @@ Specifically, I am attempting to reproduce OUTPUT X (eg table 1, figure 3). I fo
 \end{verbatim}
 
 \begin{quote}
-I have marked with an asterix (`` * '') the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that and may have to contact you again in case I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+I have marked with an asterix (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that and that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 
 I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproducibility package for your paper on the ACRE platform. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
 \end{quote}
@@ -1289,7 +1299,7 @@ Your paper does not reproduce. I have tried for several hours now, and can't get
 \hypertarget{c.-response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons}{%
 \subsection{C. Response when the original author has refused to share due to undisclosed reasons}\label{c.-response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons}}
 
-\emph{Note:} You can also use this template in cases where the corresponding author has not submitted a response after two or more follow-up emails.
+\emph{Note:} You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
 \textbf{Template email:}
 
@@ -1300,7 +1310,7 @@ Your paper does not reproduce. I have tried for several hours now, and can't get
 \begin{quote}
 Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
-Thank you for your response. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale{[}ADD LINK{]}.
+Thank you for considering my request. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the ACRE reproducibility scale {[}ADD LINK{]}.
 
 Let me know if you have any questions.
 
@@ -1330,12 +1340,12 @@ Though I understand that you are unable to share the raw data, there may be alte
 \item
   Sharing the analytic version of the data (the version of the dataset that was used in the final version of your paper);\\
 \item
-  Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the cost and the duration of the process (find an example/checklist here{[}ADD EXAMPLE{]}); and\\
+  Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the costs and the duration of the process (find an example/checklist here{[}ADD EXAMPLE{]}); and\\
 \item
   Providing access to all data and materials for which the constraints do not apply.
 \end{enumerate}
 
-Based on my assessment, your paper would currently rank at \texttt{{[}level\ X{]}} on the ACRE reproducibility scale{[}ADD LINK{]}, however \emph{this score can be easily improved}. Being able to provide analytic data would elevate the reproducibility of your paper to \texttt{{[}level\ Y{]}}. Providing public instructions on how other parties can access the data would further elevate its reproducibility to \texttt{{[}level\ Z{]}}.
+Based on my assessment, your paper would currently rank at \texttt{{[}level\ X{]}} on the ACRE reproducibility scale {[}ADD LINK{]}, however \emph{this score can be easily improved}. Being able to provide analytic data would elevate the reproducibility of your paper to \texttt{{[}level\ Y{]}}. Providing public instructions on how other parties can access the data would further elevate its reproducibility to \texttt{{[}level\ Z{]}}.
 
 I would be happy to help if you are interested in taking any of the steps I outlined above. Let me know if that would be helpful.
 
@@ -1403,14 +1413,14 @@ Here are a some steps you can take if you believe you have bullying, discriminat
 \begin{itemize}
 \tightlist
 \item
-  \textbf{File a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.} Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person you are making the complaint about need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
+  \textbf{File a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.} Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person about whome you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of categories including race, color, national origin, gender, age, sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California) system, ``Office of Equity and Title IX'', etc.
+    \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California) system, ``Office of Equity and Title IX'', etc.
   \item
-    \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall may outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
+    \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
   \item
     \textbf{Access mental health services at your institution.} Many universities offer short-term Counseling \& Psychological Services (CAPS) for academic, career, and personal issues.
   \item
@@ -1563,7 +1573,7 @@ Create a section with short summaries of great resources for comp. repro and inv
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Coding errors:} a coding error will occur when a section in the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
+  \textbf{Coding errors:} A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
 \end{itemize}
 
 Create a section with short summaries of great resources for comp. repro and invite reader to contribute.
@@ -1571,8 +1581,8 @@ Create a section with short summaries of great resources for comp. repro and inv
 \hypertarget{some-summaries-1}{%
 \section{Some summaries}\label{some-summaries-1}}
 
-\hypertarget{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1}{%
-\subsection{\texorpdfstring{Summary on reproducbile workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducbile workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent-1}}
+\hypertarget{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}{%
+\subsection{\texorpdfstring{Summary on reproducible workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}}
 
 \begin{itemize}
 \tightlist

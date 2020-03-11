@@ -1,18 +1,18 @@
 # Scoping
 
-In this first stage, you are assigned or choose a paper to reproduce. This section describes the different steps required to successfully define the scope of a reproduction exercise. **Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work as part of this stage.**
+In the Scoping stage, you will choose a paper to reproduce. , or be assigned one. Chapter 2 describes the steps for defining the scope of a reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.***
 
 ## Steps
 
-Before you invest any time in reading/summarizing the paper: 
+Before you invest any time in reading or summarizing a paper, complete steps 2.1.1–2.1.2: 
 
-### Check records on the ACRE platform {#check-acre}  
+### Check records on the ACRE platform {#check-acre}.
 
-Check the [ACRE database](ADD LINK) for previous assessments of the same paper. If there is no previous assessment, create the first entry. If there are previous entries, check if the paper-status is “open to reproductions”, and create a new entry^[If the paper appears as "closed to reproductions" it means that ACRE has documented interactions between previous reproductors and original authors, showing that it is not possible to access any further required materials. ].   
+Check the [ACRE database](ADD LINK) for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the **paper status** is “open to reproductions”, and create a new entry^[If the paper status is "closed to reproductions", ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.].   
 
-### Verify that reproduction materials exist  {#verify-rep-mat}
+### Verify that reproduction materials exist  {#verify-rep-mat}.
 
-Verify that the paper has reproduction materials (consult the AEA unofficial [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start). If yes, continue. If no, verify in our records if authors have been requested these materials before. If nobody has submitted a similar request before, contact the authors using the language suggested here, and make sure to CC (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Verify that the paper has reproduction materials (consult the unofficial AEA [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested [here](LINK), making sure to copy (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 <!--  
 ### Advise on scoping for different course length
@@ -82,53 +82,55 @@ Verify that the paper has reproduction materials (consult the AEA unofficial [Da
 </table>
 
 
-### Read and summarize the paper {#read-sum}
+### Read and summarize the paper. {#read-sum}
 
-Depending on the duration of the exercise, it is recommended to create a short summary of the paper to reproduce, written in the reproducers own words. This serves two purposes: reminder of the key elements to focus for the reproduction, and demonstrating understanding.
+Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).
 
-Read the paper and write a two-page summary: focus on what is the main question the paper answers, its methodology and data sources.
+Read the paper and write a two-page summary, answering the following: What is the main question the paper attempts to answer? What methodologies doe is employ? What data sources do the authors use?
 
-### Declare scope of the exercise
+### Declare scope of the exercise.
 
-Declare if assessment will be about all or main output, and if it aims to start from raw data, or analytic data. See definitions of these concepts below. 
+Declare if your assessment will be of all of the paper’s results (**complete**) or just the **main results**, and if you will aim to start with **raw data** or **processed data**. Find definitions of these concepts below. 
 
 ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.  
 
 
-#### Reproduction margins  
+#### Define your reproduction margins.
 
-##### Extensive margin: outputs to reproduced {#outputs}  
+##### Define the *extensive margin*: outputs to reproduced {#outputs}  
 
-[COMPLETE]
-Number of output
+Define whether you will attempt to reproduce all of your chosen paper’s results or just the main results. 
+  - **Complete**: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.
+  - **Main results**: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper’s abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.
 
-###### Types of output:   
+###### Describe the types of output.   
+
+Broadly describe the outputs you will attempt to reproduce.
+
   - **Tables:** Describe how to cite record location. 
   - **Figures:**  ADD   
   - **In-line:**  ADD    
 
 
-##### Intensive margin: depth of reproduction in terms of original data {#intensive}
+##### Define the *intensive margin*: depth of reproduction in terms of original data. {#intensive}
 
- - **Raw data:** A data set is considered to be raw, if it corresponds to the a unmodified file that was obtained by the authors from the sources cited in the paper. The only possible modification that can be made to raw data, without changing its category to processed data, is that of deleting personally identifiable information.
+ - **Raw data** sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it *processed*.
+ - **Processed data** are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:
+      - *Intermediate data* are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
+      - *Analytic data* is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
 
- - **Processed data:** a raw data set that has gone through any transformation should be defined as processed data. Processed data can be separated into intermediate data and analytic data.
-      - *Intermediate data:* a processed dataset is defined as intermediate if it is not directly used as final input for an analysis in the final paper (including appendix). Intermediate data should not contain direct identifiers.
-      - *Analytic data:* data will be defined as analytic if it will be used as the last input in the workflow, to produce a statistic displayed in the final paper (including the appendix).
+###### Classifying a data set
+A data set may be classified as **raw** if it fits any of the following criteria:    
 
-###### How to classify a data set?
-To classify a data set as **raw** you can use some of the following strategies:    
+ - The data is stored in a folder or file labeled as “raw”.  
+ - The data set is not the output of any code script in the reproduction materials.    
+ - The same data file can be independently obtained from the data source cited in the paper.  
 
- - Check if the data is stored in a folder labeled as "raw"  
- - Check if the file name has the word "raw" in some part of it  
- - Verify that the data set is not the output of any code script in the reproduction materials  
- - Verify that the same file can be independently obtained from the data source cited in the paper  
+A data set may be classified as **analytic** if it fits any of the following criteria:   
 
-To classify a data set as **analytic** you can use some of the following strategies:   
-
- - Check if the data is stored in a folder denominated as "analytic" or "analysis"  
- - Check if the file name has the word "analytic" or "analysis" in some part of it  
- - Verify that the data set is the last input required to produce some of the output (formatted or unformatted) of the paper  
+ - The data is stored in a folder or file labeled as “analytic” or “analysis.”
+ - The data set is the last input required to produce some of the output (formatted or unformatted) of the paper.
+  
 
 
 ## Sample strategies for scoping  
@@ -137,14 +139,17 @@ ADD.
 
 ### Strategy 1: 
 
-- First main estimates from paper.
-
-- Then main 2 main tables and/or two main figures.
-
-- Once done with improvements stage of these outcomes, then go back to rest of the paper.    
+1. Attempt to reproduce the paper’s main estimates.
+2. Attempt to reproduce two main tables and/or two main figures.
+3. Try to make improvements to these outputs. 
+4. Try to reproduce the rest of the paper.
+   
 
 ### Strategy 2:  
 
- - get everything to run up to analytic data, then go to improvements. Once completed go back for raw data (or in parallel?)  
+1. Attempt to reproduce all outputs resulting from the analytic data.
+2. Once you can do that,  try to make improvements.
+3. If you can make improvements, attempt to reproduce the outputs starting from raw data. (or in parallel?)
+ 
  
  
