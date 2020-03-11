@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  11 MAR 2020 12:55
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  11 MAR 2020 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1760,6 +1760,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1131--1133
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+
+ []
+
+
 Overfull \hbox (231.23015pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 40 \TU/lmr/m/sl/10 CHAPTER 7.  GUIDANCE FOR A CONSTRUCTIVE EXCHA
 NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
@@ -1771,28 +1776,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1190--1192
+Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1194
+Underfull \hbox (badness 10000) in paragraph at lines 1178--1180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1194--1196
+Underfull \hbox (badness 10000) in paragraph at lines 1180--1182
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1200
+Underfull \hbox (badness 2285) in paragraph at lines 1203--1205
+[]\TU/lmr/m/n/10 I am contacting you about reproduction materials for your
+ []
 
+
+Underfull \hbox (badness 2080) in paragraph at lines 1203--1205
+\TU/lmr/m/n/10 paper titled \TU/lmtt/m/n/10 [Title] \TU/lmr/m/n/10 which was pu
+blished in \TU/lmtt/m/n/10 [Journal] \TU/lmr/m/n/10 in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+\TU/lmtt/m/n/10 context for why you want to reproduce this particular
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+\TU/lmtt/m/n/10 paper using neutral language (e.g., "This is a seminal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+\TU/lmtt/m/n/10 paper in my field"), avoiding any statements that would
  []
 
 
@@ -1802,49 +1828,23 @@ UDY \TU/lmr/m/n/10 41
  []
 
 [41]
-Underfull \hbox (badness 2285) in paragraph at lines 1219--1221
-[]\TU/lmr/m/n/10 I am contacting you about reproduction materials for your
- []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 1219--1221
-\TU/lmr/m/n/10 paper titled \TU/lmtt/m/n/10 [Title] \TU/lmr/m/n/10 which was pu
-blished in \TU/lmtt/m/n/10 [Journal] \TU/lmr/m/n/10 in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
-\TU/lmtt/m/n/10 context for why you want to reproduce this particular
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
-\TU/lmtt/m/n/10 paper using neutral language (e.g., "This is a seminal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
-\TU/lmtt/m/n/10 paper in my field"), avoiding any statements that would
- []
-
-
-Underfull \hbox (badness 5036) in paragraph at lines 1222--1223
+Underfull \hbox (badness 5036) in paragraph at lines 1206--1207
 \TU/lmr/m/n/10 can share the following items: [\TU/lmtt/m/n/10 list items missi
 ng from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 \TU/lmtt/m/n/10 reproduction package, preferably bulleted if more than
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 \TU/lmtt/m/n/10 one (raw/analytic data, code, protocols for conducting
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1222--1223
+Underfull \hbox (badness 1902) in paragraph at lines 1206--1207
 \TU/lmtt/m/n/10 where you searched for items, with links provided]\TU/lmr/m/n/1
 0 , how-
  []
@@ -1856,22 +1856,15 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
 \TU/lmtt/m/n/10 tried to resolve them. Describe whatever files or parts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1250--1251
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
 \TU/lmtt/m/n/10 of the data or code are missing. Refer to examples B.1
  []
 
-
-Overfull \hbox (67.54124pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 7.1.  FOR REPRODUCERS CONTACTING THE AUTHORS OF THE ORIGINAL ST
-UDY \TU/lmr/m/n/10 43
- []
-
-[43]
 Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
@@ -1917,27 +1910,30 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 1005) in paragraph at lines 1281--1282
+Underfull \hbox (badness 1005) in paragraph at lines 1265--1266
 \TU/lmr/m/n/10 find in the reproduction materials: \TU/lmr/bx/n/10 data_cleanin
 g01.R \TU/lmr/m/n/10 and
  []
 
 
-Underfull \vbox (badness 1803) has occurred while \output is active []
+Overfull \hbox (67.54124pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 7.1.  FOR REPRODUCERS CONTACTING THE AUTHORS OF THE ORIGINAL ST
+UDY \TU/lmr/m/n/10 43
+ []
 
-
+[43]
 Overfull \hbox (231.23015pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 44 \TU/lmr/m/sl/10 CHAPTER 7.  GUIDANCE FOR A CONSTRUCTIVE EXCHA
 NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1337
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1339
+Underfull \hbox (badness 10000) in paragraph at lines 1321--1323
 
  []
 
@@ -1954,9 +1950,9 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [46]
-Overfull \hbox (67.54124pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 7.1.  FOR REPRODUCERS CONTACTING THE AUTHORS OF THE ORIGINAL ST
-UDY \TU/lmr/m/n/10 47
+Overfull \hbox (71.88234pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 7.2.  FOR ORIGINAL AUTHORS RESPONDING TO REQUESTS FROM REPRODUC
+ERS \TU/lmr/m/n/10 47
  []
 
 [47]
@@ -2067,42 +2063,42 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1529--1531
+Underfull \hbox (badness 10000) in paragraph at lines 1515--1517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1531--1533
+Underfull \hbox (badness 10000) in paragraph at lines 1517--1519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1535
+Underfull \hbox (badness 10000) in paragraph at lines 1519--1521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1537--1539
+Underfull \hbox (badness 10000) in paragraph at lines 1523--1525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1544--1546
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1548--1550
+Underfull \hbox (badness 10000) in paragraph at lines 1534--1536
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1550--1552
+Underfull \hbox (badness 10000) in paragraph at lines 1536--1538
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1552--1554
+Underfull \hbox (badness 10000) in paragraph at lines 1538--1540
 
  []
 
@@ -2111,42 +2107,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 1552--1554
 ]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1595--1597
+Underfull \hbox (badness 10000) in paragraph at lines 1581--1583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1597--1599
+Underfull \hbox (badness 10000) in paragraph at lines 1583--1585
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1599--1601
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1587
 
  []
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1603--1605
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1591
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1610--1612
+Underfull \hbox (badness 10000) in paragraph at lines 1596--1598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1614--1616
+Underfull \hbox (badness 10000) in paragraph at lines 1600--1602
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1616--1618
+Underfull \hbox (badness 10000) in paragraph at lines 1602--1604
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1618--1620
+Underfull \hbox (badness 10000) in paragraph at lines 1604--1606
 
  []
 
@@ -2157,27 +2153,27 @@ Chapter 12.
 ] [60
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1637.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1623.
 [61]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1637.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1623.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1637.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1637.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1623.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1623.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
 (rerunfilecheck)             Checksum: E649CB3C8BE0FF45CC36FE6A06E10804;7025.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1637.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1623.
  ) 
 Here is how much of TeX's memory you used:
- 16246 strings out of 481780
- 292980 string characters out of 5935856
+ 16247 strings out of 481780
+ 293002 string characters out of 5935856
  735157 words of memory out of 5000000
- 33020 multiletter control sequences out of 15000+600000
+ 33021 multiletter control sequences out of 15000+600000
  538837 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,8n,115p,1074b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,8n,115p,1074b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on _main.pdf (61 pages).
