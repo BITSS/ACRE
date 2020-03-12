@@ -20,24 +20,6 @@ The purpose of this chapter is to facilitate constructive and respectful communi
    
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
    
-   
-**For reproducers:**  
-
-   A. Contacting the original author(s) to request items that are missing;  
-   B. Asking for additional guidance when some materials have been shared;  
-   C. Response to an original author who has refused to share an item due to undisclosed reasons;  
-   D. Response to an original author who has refused to share data due to legal or ethical constraints;  
-   E. Contacting the original author(s) to share the results of your reproduction;  
-   F. Responding to adversarial responses from original authors.  
-  
-**For authors:**  
-
-   G. Responding to a request [TODO]  
-   H. Acknowledging that some information is missing [TODO]  
-   I. Acknowledging that some material is still embargoed for future research  [TODO]  
-   J. Responding to incomplete/aggressive requests from reproducers  [TODO]  
-
-
 While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.  
 
 
@@ -65,7 +47,7 @@ Considering the following:
    4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.   
  
  
-### A. Contacting the original author(s) to request items that are missing  
+### Contacting the original author(s) to request items that are missing  
 
 **Template email:**  
 
@@ -87,7 +69,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >Best regards,  
 >`[Reproducer]`
 
-### B. Asking for additional guidance when some materials have been shared  
+### Asking for additional guidance when some materials have been shared  
 
 *Note:* Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.  
 
@@ -107,7 +89,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >`[Reproducer]`  
 
 
-#### B.1 An example of well described issues:
+#### An example of well described issues:
 
 >Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:     
 
@@ -129,11 +111,11 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 
 
-#### B.2 An example of poorly described issues:  
+#### An example of poorly described issues:  
 
 >Your paper does not reproduce. I have tried for several hours now, and can’t get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are a basic principle of open science, so I am confident that you will do the right thing.
 
-### C. Response when the original author has refused to share due to undisclosed reasons   
+### Response when the original author has refused to share due to undisclosed reasons   
 
 *Note:* You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
@@ -151,7 +133,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 ><<Reproducer>>
 
 
-### D. Response when the original author has refused to share due to legal or ethical restrictions of the data
+### Response when the original author has refused to share due to legal or ethical restrictions of the data
 
 **Template email:**  
 
@@ -177,12 +159,12 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >`[Reproducer]`
 
 
-### E. Contacting the original author to share the results of your reproduction exercise
+### Contacting the original author to share the results of your reproduction exercise
 
 [WORK IN PROGRESS]
 
 
-### F. Responding to hostile responses from original authors
+### Responding to hostile responses from original authors
 
 *Note:* Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment.
 
@@ -233,11 +215,12 @@ Here are a some steps you can take if you believe you have bullying, discriminat
 
 ### Responding to a repeated request
 
-[TO DO] 
+[TO DO]   
+
 ### Acknowledging that some information is missing
 
-[TO DO]  
-
+[TO DO]    
+  
 ### Acknowledging that some material is still embargoed for future research
 
 [TO DO]

@@ -20,16 +20,6 @@ The purpose of this chapter is to facilitate constructive and respectful communi
    
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
    
-   
-**For reproducers:**  
-
-   1. Contacting the original author(s) to request items that are missing;  
-   2. Asking for additional guidance when some materials have been shared;  
-   3. Response to an original author who has refused to share an item due to undisclosed reasons;  
-   4. Response to an original author who has refused to share data due to legal or ethical constraints;  
-   5. Contacting the original author(s) to share the results of your reproduction;  
-   6. Responding to adversarial responses from original authors.  
- 
 While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.  
 
 
@@ -124,6 +114,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 ### Response when the original author has refused to share due to *undisclosed reasons*   
 
+
 *Note:* You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
 **Template email:**  
@@ -171,6 +162,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 *Note*: Reporting the results of reproductions is probably the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
 
 Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: *reproduce the work of others as you would like for others to reproduce yours*, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
+
 
 **Template email:**
 >*Subject:* Reproducibility Assessment of <Paper>
@@ -233,4 +225,5 @@ Here are a some steps you can take if you believe you have experienced bullying,
   - **Contact your institution’s Ombudsperson/Ombuds Office.** If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case. 
   - **Access mental health services at your institution.** Many universities offer short-term Counseling & Psychological Services (CAPS) for academic, career, and personal issues.
   - **Ask for support from your academic supervisor.** If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
+
   
