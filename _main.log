@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  11 MAR 2020 14:50
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.2.12)  12 MAR 2020 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1760,7 +1760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1131--1133
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1158--1160
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1157
 
  []
 
@@ -1771,53 +1771,53 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1174--1176
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1176--1178
+Underfull \hbox (badness 10000) in paragraph at lines 1173--1175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1175--1177
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1180--1182
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1182--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1179--1181
 
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 1203--1205
+Underfull \hbox (badness 2285) in paragraph at lines 1200--1202
 []\TU/lmr/m/n/10 I am contacting you about reproduction materials for your
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 1203--1205
+Underfull \hbox (badness 2080) in paragraph at lines 1200--1202
 \TU/lmr/m/n/10 paper titled \TU/lmtt/m/n/10 [Title] \TU/lmr/m/n/10 which was pu
 blished in \TU/lmtt/m/n/10 [Journal] \TU/lmr/m/n/10 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
 \TU/lmtt/m/n/10 context for why you want to reproduce this particular
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
 \TU/lmtt/m/n/10 paper using neutral language (e.g., "This is a seminal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1202
 \TU/lmtt/m/n/10 paper in my field"), avoiding any statements that would
  []
 
@@ -1828,23 +1828,23 @@ UDY \TU/lmr/m/n/10 41
  []
 
 [41]
-Underfull \hbox (badness 5036) in paragraph at lines 1206--1207
+Underfull \hbox (badness 5036) in paragraph at lines 1203--1204
 \TU/lmr/m/n/10 can share the following items: [\TU/lmtt/m/n/10 list items missi
 ng from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
 \TU/lmtt/m/n/10 reproduction package, preferably bulleted if more than
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
 \TU/lmtt/m/n/10 one (raw/analytic data, code, protocols for conducting
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1206--1207
+Underfull \hbox (badness 1902) in paragraph at lines 1203--1204
 \TU/lmtt/m/n/10 where you searched for items, with links provided]\TU/lmr/m/n/1
 0 , how-
  []
@@ -1856,13 +1856,13 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
 \TU/lmtt/m/n/10 tried to resolve them. Describe whatever files or parts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1235
-\TU/lmtt/m/n/10 of the data or code are missing. Refer to examples B.1
+Underfull \hbox (badness 10000) in paragraph at lines 1231--1232
+\TU/lmtt/m/n/10 of the data or code are missing. Refer to examples 1 and
  []
 
 Missing character: There is no └ in font [lmmono10-regular]:!
@@ -1910,7 +1910,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 1005) in paragraph at lines 1265--1266
+Underfull \hbox (badness 1005) in paragraph at lines 1261--1262
 \TU/lmr/m/n/10 find in the reproduction materials: \TU/lmr/bx/n/10 data_cleanin
 g01.R \TU/lmr/m/n/10 and
  []
@@ -1928,12 +1928,12 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1319--1321
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1321--1323
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1318
 
  []
 
@@ -1944,15 +1944,144 @@ UDY \TU/lmr/m/n/10 45
  []
 
 [45]
+Underfull \hbox (badness 2310) in paragraph at lines 1346--1348
+\TU/lmr/m/n/10 applicable). \TU/lmtt/m/n/10 [Include the following items in the
+ body of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 your email: - Briefly describe which parts of the paper
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 you tried to reproduce (e.g. a specific estimate, a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 table, etc.).  - Within the scope of your reproduction,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 describe exactly which items you managed to reproduce.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 - Discuss the differences you observed between the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 results of your reproduction and the original work,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 and demonstrate that you did your due diligence in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 trying to reproduce the item. Remember that it is more
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 constructive to discuss discrepancies, differences or
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 deviations, rather than errors, mistakes or failures,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 and *always talk about the work -- not the author!* -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 Use sensitive language when presenting discrepancies,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 e.g. “Unfortunately, I found X, which differs from the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 Y result in the original paper...”. Be cognizant of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 any potential limitations of your work, and explain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 how you have tried to address them -- that way you will
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 proactively address potential criticism!  - Describe how
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 you tried to improve, the reproducibility of the paper.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 If some of the improvements are based on discretionary
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 judgment (e.g. file organization or code commenting),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 try to explain why you think they are an upgrade over
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 the original work. If you didn’t make improvements,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 point out some concrete steps that the author(s) can
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1346--1348
+\TU/lmtt/m/n/10 take to improve the reproducibility of the section you
+ []
+
+
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+
 Overfull \hbox (231.23015pt too wide) has occurred while \output is active
 \TU/lmr/m/n/10 46 \TU/lmr/m/sl/10 CHAPTER 7.  GUIDANCE FOR A CONSTRUCTIVE EXCHA
 NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [46]
-Overfull \hbox (71.88234pt too wide) has occurred while \output is active
-\TU/lmr/m/sl/10 7.2.  FOR ORIGINAL AUTHORS RESPONDING TO REQUESTS FROM REPRODUC
-ERS \TU/lmr/m/n/10 47
+Overfull \hbox (67.54124pt too wide) has occurred while \output is active
+\TU/lmr/m/sl/10 7.1.  FOR REPRODUCERS CONTACTING THE AUTHORS OF THE ORIGINAL ST
+UDY \TU/lmr/m/n/10 47
  []
 
 [47]
@@ -2063,42 +2192,42 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1517
+Underfull \hbox (badness 10000) in paragraph at lines 1506--1508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1517--1519
+Underfull \hbox (badness 10000) in paragraph at lines 1508--1510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1519--1521
+Underfull \hbox (badness 10000) in paragraph at lines 1510--1512
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1523--1525
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1516
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1532
+Underfull \hbox (badness 10000) in paragraph at lines 1521--1523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1536
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1527
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1536--1538
+Underfull \hbox (badness 10000) in paragraph at lines 1527--1529
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1538--1540
+Underfull \hbox (badness 10000) in paragraph at lines 1529--1531
 
  []
 
@@ -2107,42 +2236,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 1538--1540
 ]
 Chapter 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1581--1583
+Underfull \hbox (badness 10000) in paragraph at lines 1572--1574
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1585
+Underfull \hbox (badness 10000) in paragraph at lines 1574--1576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1587
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1578
 
  []
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1589--1591
+Underfull \hbox (badness 10000) in paragraph at lines 1580--1582
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1596--1598
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1589
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1600--1602
+Underfull \hbox (badness 10000) in paragraph at lines 1591--1593
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1602--1604
+Underfull \hbox (badness 10000) in paragraph at lines 1593--1595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1604--1606
+Underfull \hbox (badness 10000) in paragraph at lines 1595--1597
 
  []
 
@@ -2153,27 +2282,27 @@ Chapter 12.
 ] [60
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1623.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1614.
 [61]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1623.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1614.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1623.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1623.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1614.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1614.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: E649CB3C8BE0FF45CC36FE6A06E10804;7025.
+(rerunfilecheck)             Checksum: 389B936C866EE72395EA50B9161D1EA4;6649.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1623.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1614.
  ) 
 Here is how much of TeX's memory you used:
- 16247 strings out of 481780
- 293002 string characters out of 5935856
+ 16241 strings out of 481780
+ 292663 string characters out of 5935856
  735157 words of memory out of 5000000
- 33021 multiletter control sequences out of 15000+600000
- 538837 words of font info for 83 fonts, out of 8000000 for 9000
+ 33014 multiletter control sequences out of 15000+600000
+ 538845 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 52i,8n,115p,1074b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 52i,8n,115p,1613b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on _main.pdf (61 pages).
