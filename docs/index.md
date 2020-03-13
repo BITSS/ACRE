@@ -1,7 +1,7 @@
 --- 
 title: "Guidelines for Computational Reproducibility in Economics"
 author: "ACRE Team"
-date: "2020-03-12"
+date: "2020-03-13"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -27,11 +27,11 @@ output:
 <table>
    <thead>
       <tr>
-         <th>[Scoping](#scoping) </th>
-         <th>[Assessment](#assessment)</th>
-         <th colspan=2>[Improvement](#improvements)</th>
-         <th>[Robustness](#robust)</th>
-         <th>Extensions</th>
+         <th>[(1) Scoping](#scoping) </th>
+         <th>[(2) Assessment](#assessment)</th>
+         <th colspan=2>[(3) <br> Improvement](#improvements)</th>
+         <th>[(4) Robustness](#robust)</th>
+         <th>(5) Extensions</th>
       </tr>
    </thead>
    <tbody>

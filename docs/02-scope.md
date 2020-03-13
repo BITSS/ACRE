@@ -10,9 +10,9 @@ Before you invest any time in reading or summarizing a paper, complete steps 2.1
 
 Check the [ACRE database](ADD LINK) for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the **paper status** is “open to reproductions”, and create a new entry^[If the paper status is "closed to reproductions", ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.].   
 
-### Verify that reproduction materials exist.  {#verify-rep-mat}
+### Verify that reproduction package exist.  {#verify-rep-mat}
 
-Verify that the paper has reproduction materials (consult the unofficial AEA [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested [here](LINK), making sure to copy (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Verify that the paper has reproduction package (consult the unofficial AEA [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested [here](LINK), making sure to copy (acre@berkeley.edu). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 <!--  
 ### Advise on scoping for different course length
@@ -99,9 +99,11 @@ ADD description that scoping involves chosing paper, output and level of depth t
 
 ##### Define the *extensive margin*: outputs to reproduced {#outputs}  
 
-Define whether you will attempt to reproduce all of your chosen paper’s results or just the main results. 
-  - **Complete**: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.
-  - **Main results**: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper’s abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.
+Define whether you will attempt to reproduce all of your chosen paper’s results or just the main results.    
+
+- **Complete**: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.  
+  
+- **Main results**: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper’s abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.  
 
 ###### Describe the types of output.   
 
@@ -114,16 +116,16 @@ Broadly describe the outputs you will attempt to reproduce.
 
 ##### Define the *intensive margin*: depth of reproduction in terms of original data. {#intensive}
 
- - **Raw data** sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it *processed*.
- - **Processed data** are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:
-      - *Intermediate data* are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
-      - *Analytic data* is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
+ - **Raw data** sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it *processed*.  
+ - **Processed data** are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:  
+      - *Intermediate data* are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.  
+      - *Analytic data* is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).  
 
 ###### Classifying a data set
 A data set may be classified as **raw** if it fits any of the following criteria:    
 
  - The data is stored in a folder or file labeled as “raw”.  
- - The data set is not the output of any code script in the reproduction materials.    
+ - The data set is not the output of any code script in the reproduction package.    
  - The same data file can be independently obtained from the data source cited in the paper.  
 
 A data set may be classified as **analytic** if it fits any of the following criteria:   

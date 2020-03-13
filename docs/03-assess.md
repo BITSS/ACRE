@@ -2,7 +2,7 @@
 
 The goal of this stage is to conduct a standardized assessment of your chosen paper’s computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
-First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
+First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
   
 
 **Use [Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7) to record your work as part of this step.**
@@ -50,7 +50,7 @@ Record this information in a [standardized spreadsheet](https://docs.google.com/
 
 ### Describe the analytic data sets.
 
-List all the analytic files you can find in the reproduction materials, and identify their locations relative to the main reproduction folder. Record this information in a [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&range=A1).
+List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in a [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&range=A1).
 
 As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: `all_waves.csv` has the simple description `data for region-level analysis`). This may be difficult in an initial review, but will become easier as you go along.
 
@@ -69,23 +69,9 @@ The resulting report will have the following structure:
           |----------------|-----------------------|--------------------------------|
 
 
-### Describe the code scripts.
+### Describe the code scripts.{#desc-scripts}
 
-List all code files that you find in the reproduction materials and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). Outputs may include other data sets or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1).
-
-As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1). Once finished with the reproduction exercise, classify each code file as *analysis* or *cleaning*. This subjective assessment should be made based on your interpretation of each script's main role.   
-
-Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1)  
-
-
-List any input files (data and code) required to execute this file successfully. Separate each item with ";".
-
-List all outputs generated with this file. This includes data sets, figures and tables, and objects used later on. Separate each item with ";".
-
-Provide a one-line description of what each script does.
-
-Classify the code as "primarily cleaning code" or "primarily analysis code".
-
+List all code files that you find in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other data sets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1) with the following structure:
 
 
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -103,11 +89,16 @@ Classify the code as "primarily cleaning code" or "primarily analysis code".
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
  
 
+As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1). Once finished with the reproduction exercise, classify each code file as *analysis* or *cleaning*. This subjective assessment should be made based on your interpretation of each script's main role.   
+
+
 ## Connect each output to all its inputs {#diagram}
 
-Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
+With all the information collected above, you can trace your output to reprodue to its primary sources. Upload the standarized table you build to the decribe the code above into the [ACRE workflow diagram builder](ADD LINK). 
 
-When a connection cannot be drawn due to a missing component, use the "-||-" symbol. For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
+### Complete workflow information 
+
+If you were able to identify all the relevant components in the previous section, the ACRE builder will produce and diagram like the following.  
 
           table 1
             └───[code] formatting_table1.R
@@ -122,8 +113,7 @@ When a connection cannot be drawn due to a missing component, use the "-||-" sym
                            └───[code] data_cleaning02.R
                               └───[data] admin_01raw.csv  
 
-This diagram can be represented in data format by specifying how each component depends on its inputs. For example: 
-
+The ACRE diagram builder will also generate a table that reprents the diagram above in a data set with the following structure:
 
           Data representation of diagram behind Table 1.
           |--------|-------|-------------------|---------------------|------------|
@@ -140,9 +130,20 @@ This diagram can be represented in data format by specifying how each component 
           | ...    | ...   | ...               | ...                 | ...        |
           |--------|-------|-------------------|---------------------|------------|
 
+
+### Incomplete workflow information 
+If there are some components missing, then...   
+
+[Joel and Fernando need to workshop a better solution, until then...]
+
+Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
+
+When a connection cannot be drawn due to a missing component, use the "-||-" symbol. For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
+This diagram can be represented in data format by specifying how each component depends on its inputs. For example: 
+
+
 Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). 
 If you have difficulty translating the diagram into a spreadsheet, you can draw it with pen and paper, take a picture and upload it to the assessment survey.
-
 
 ## Assign a reproducibility score. {#score}
 
@@ -158,72 +159,60 @@ The following concepts will be used in this section:
 
 ### Levels of Computational Reproducibility for a Specific Output  
 
-Here we outline different levels of computational reproducibility. Each level is defined by data and code availability, possible improvements, and whether or not they achieve some type of reproducibility. In the next chapter we'll describe each possible improvement in more detail.
+Here we outline different levels of computational reproducibility. Each level is defined by availability of data and materials, and whether or not some type of reproducibility is achieved. In addition, for each level we briefly describe the type of improvements that can be done to improve the current reproducibility. In the next chapter we'll describe each possible improvement in more detail.
 
+The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
 
-MAKE EXPLICIT UNDERLYING VALUATIONS:    
+ - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC). 
 
-- L1: The worst is to have no access to any data or code.    
-- L2: Having only code is better than nothing, but worst than any other combination   
-- L3: Having analytic data but not code is better than having code and no data. 
-- L4 and L5: Conditional on having all analytic material. Reproducible is better than not 
-- L6: Having raw and analytic data is better than having code but no data.  
-- L7: Given that there is raw and analysis data, having cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)  
-- L9: Having all materials that but not being able to reproduce is better than all previous cases. Achieving  CRA (lvl 10) and CRR (lvl 11) are the best levels according to this criteria.
+ - **Level 2 (L2):** Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD). 
 
-ADD ONE QUESTION AT THE END OF SURVEY TWO TO ASK REPRODUCER IF THEY AGREE WITH THIS ORDER, AND IF THEY WOULD ADD/DELETE/MODIFY ANY SPECIFIC LEVEL
+ - **Level 3 (L3):** Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).  
 
+ - **Level 4 (L4):** Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).    
 
-The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction materials, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
+ - **Level 5 (L5):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.   
 
- **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC). 
+ - **Level 6 (L6):** Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).   
 
- **Level 1.5 (L1.5):** Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD). 
+ - **Level 7 (L7):**  All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).   
 
- **Level 2 (L2):** Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).  
+ - **Level 8 (L8):**  All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).
 
- **Level 3 (L3):** Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).    
+ - **Level 9 (L9):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).
 
- **Level 4 (L4):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.   
+ - **Level 10 (L10):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
 
- **Level 5 (L5):** Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).   
-
- **Level 6 (L6):**  All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).   
-
- **Level 7 (L7):**  All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).
-
- **Level 8 (L8):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).
-
- **Level 9 (L9):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
-
- **Level 10 (L10):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).    
+ - **Level 11 (L11):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).    
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (`✔`), or are out of reach given the current level of reproducibility (`x`).
 
     Figure 1: Levels of Computational Reproducibility and Possible Improvements   
 
-                                               |       |               Possible improvements              |
-                                               -----------------------------------------------------------
-                                               | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
-                                               |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
-                                               --------|---------|--------|---------|---------|-----|-----|
-    What data are available?                   |       |         |        |         |         |     |     |
-    ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-    ├── Analytic data only. Code?              |       |         |        |         |         |     |     |
-    |   ├── No code or cleaning code only......|   L2  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-    |   └── Analysis code only. Is it CRA?     |       |         |        |         |         |     |     |
-    |      ├── No..............................|   L3  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
-    |      └── Yes.............................|   L4  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
-    └── Raw & Analytic data. Code?             |       |         |        |         |         |     |     |
-       ├── None ...............................|   L5  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
-       ├── Analysis code only. CRA?            |       |         |        |         |         |     |     |
-       |  ├── No...............................|   L6  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
-       |  └── Yes..............................|   L7  |    -    |    -   |    -    |    ✔    |  -  |  x  |
-       └── A. and cleaning code. Is it CRR?    |       |         |        |         |         |     |     |
-           ├── No. CRA?                        |       |         |        |         |         |     |     |
-           |  ├── No...........................|   L8  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
-           |  └── Yes..........................|   L9  |    -    |    -   |    -    |    -    |  -  |  ✔  |
-           └── Yes.............................|   L10 |    -    |    -   |    -    |    -    |  -  |  -  |
+                                                 | Level |               Possible improvements              |
+                                                 |----------------------------------------------------------|
+                                                 |       |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
+                                                 |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
+                                                 --------|---------|--------|---------|---------|-----|-----|
+    Data and code available ?                    |       |         |        |         |         |     |     |     
+      ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
+      ├── Some code only.........................|   L2  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
+      └── What data are available?               |       |         |        |         |         |     |     |
+          ├── Analytic data only. Code?          |       |         |        |         |         |     |     |
+          |   ├── No code or cleaning code only..|   L3  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
+          |   └── Analysis code only. Is it CRA? |       |         |        |         |         |     |     |
+          |      ├── No..........................|   L4  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
+          |      └── Yes.........................|   L5  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
+          └── Raw & Analytic data. Code?         |       |         |        |         |         |     |     |
+             ├── None ...........................|   L6  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
+             ├── Analysis code only. CRA?        |       |         |        |         |         |     |     |
+             |  ├── No...........................|   L7  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
+             |  └── Yes..........................|   L8  |    -    |    -   |    -    |    ✔    |  -  |  x  |
+             └── A. and C. code. Is it CRR?      |       |         |        |         |         |     |     |
+                 ├── No. CRA?                    |       |         |        |         |         |     |     |
+                 |  ├── No.......................|   L9  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
+                 |  └── Yes......................|   L10 |    -    |    -   |    -    |    -    |  -  |  ✔  |
+                 └── Yes.........................|   L11 |    -    |    -   |    -    |    -    |  -  |  -  |
 
 Choose the appropriate level of computational reproducibility and record it using the following format.
 
@@ -241,6 +230,18 @@ Choose the appropriate level of computational reproducibility and record it usin
           |-------------|-------|------------------------|------------|
 
 Record this information in the  [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
+
+To present each category above as levels that reflect a gradient of improvement, we need to make explicit the following underlying valuations. 
+
+- L1: The worst is to have no access to any data or code.    
+- L2: Having only some code is better than nothing, but worst than any data.
+- L3: Having analytic data but not code is better than having code and no data. 
+- L4 and L5: Conditional on having all analytic material. Reproducible is better than not 
+- L6: Having raw and analytic data, even without any code, is better than having CRA.  
+- L7: Given that there is raw and analysis data, having a cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)  
+- L9: Having all materials that but not being able to reproduce is better than all previous cases. Achieving  CRA (lvl 10) and CRR (lvl 11) are the best levels according to these criteria.
+
+The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, or ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the ADD IMAGE button above.
 
 
 ### Reproducibility dimensions at the paper level   
