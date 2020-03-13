@@ -79,8 +79,9 @@
 <li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#steps"><i class="fa fa-check"></i><b>2.1</b> Steps</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>2.1.1</b> Check records on the ACRE platform.</a></li>
 <li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction materials exist.</a></li>
-<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.3</b> Read and summarize the paper.</a></li>
-<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>2.1.4</b> Declare scope of the exercise.</a></li>
+<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#advise-on-scoping-for-different-course-length"><i class="fa fa-check"></i><b>2.1.3</b> Advise on scoping for different course length</a></li>
+<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.4</b> Read and summarize the paper.</a></li>
+<li class="chapter" data-level="2.1.5" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>2.1.5</b> Declare scope of the exercise.</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#sample-strategies-for-scoping"><i class="fa fa-check"></i><b>2.2</b> Sample strategies for scoping</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="scoping.html"><a href="scoping.html#strategy-1"><i class="fa fa-check"></i><b>2.2.1</b> Strategy 1:</a></li>
@@ -157,7 +158,6 @@
 <li class="chapter" data-level="11.2" data-path="additional-resources-1.html"><a href="additional-resources-1.html#links-1"><i class="fa fa-check"></i><b>11.2</b> Links</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>12</b> Definitions</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -184,25 +184,22 @@
 <p>First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.</p>
 <p><strong>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7">Survey 2</a> to record your work as part of this step.</strong></p>
 <p><em>Tip:</em> We recommend that you first focus on one specific output (e.g. “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.</p>
-<p>ADD: how a reproduction package <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html.">should look like</a></p>
 <div id="describe-inputs" class="section level2">
 <h2><span class="header-section-number">3.1</span> Describe the inputs.</h2>
-<p>This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a description a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.</p>
+<p>This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.</p>
 <p>The following terms will be used in this section:</p>
 <ul>
-<li><p><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).</p>
-<ul>
+<li><p><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).</p></li>
 <li><p><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</p></li>
-<li><p>ADD DEFINITION FOR REPRODUCTION PACKAGE.</p></li>
-</ul></li>
+<li><p><strong>Reproduction package:</strong> Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (‘original reproduction package’), or it may contain additional resources added by a reproducer (‘reproducer X reproduction package’). See the <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">verification list</a> from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.</p></li>
 </ul>
 <div id="describe-the-data-sources-and-raw-data." class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Describe the data sources and raw data.</h3>
-<p>In the paper to be reproduced, find references to all data sources used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all data sources mentioned in the paper.</p>
+<p>In the paper to be reproduced, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all data sources mentioned in the paper.</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”.).</p>
-<p>Next look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.</p>
+<p>Next look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.</p>
 <p>Record this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> with the following structure:</p>
-<pre><code>  Raw data information:
+<pre><code>      Raw data information:
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
       | data_source          | page | data_files                                    | known_missing       | directory           |
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -221,10 +218,10 @@
 </div>
 <div id="describe-the-analytic-data-sets." class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Describe the analytic data sets.</h3>
-<p>List all the analytic files you can find in the reproduction materials, and identify their locations relative to the main reproduction folder<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Record this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
+<p>List all the analytic files you can find in the reproduction materials, and identify their locations relative to the main reproduction folder. Record this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
-<pre><code>  Analysis data information:
+<pre><code>      Analysis data information:
       |----------------|-----------------------|--------------------------------|
       | analysis_data  | location              | description                    |
       |----------------|-----------------------|--------------------------------|
@@ -237,14 +234,14 @@
 </div>
 <div id="describe-the-code-scripts." class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Describe the code scripts.</h3>
-<p>List all code files that you find in the reproduction materials and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). Outputs may inlcude other data sets or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>.</p>
+<p>List all code files that you find in the reproduction materials and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). Outputs may include other data sets or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you gain an understanding of each code script, you will likely find more inputs and outputs – we encourage you to update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>. Once finished with the reproduction exercise, classify each code file as <em>analysis</em> or <em>cleaning</em>. This subjective assessment should be made based on your interpretation of each script’s main role.</p>
 <p>Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a></p>
 <p>List any input files (data and code) required to execute this file successfully. Separate each item with “;”.</p>
 <p>List all outputs generated with this file. This includes data sets, figures and tables, and objects used later on. Separate each item with “;”.</p>
 <p>Provide a one-line description of what each script does.</p>
 <p>Classify the code as “primarily cleaning code” or “primarily analysis code”.</p>
-<pre><code>  |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+<pre><code>      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
@@ -263,7 +260,7 @@
 <h2><span class="header-section-number">3.2</span> Connect each output to all its inputs</h2>
 <p>Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.</p>
 <p>When a connection cannot be drawn due to a missing component, use the “-||-” symbol. For more examples of diagrams connecting final output to initial raw data, <a href="#additional-diagrams">see here</a>.</p>
-<pre><code>  table 1
+<pre><code>      table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -276,7 +273,7 @@
                        └───[code] data_cleaning02.R
                           └───[data] admin_01raw.csv  </code></pre>
 <p>This diagram can be represented in data format by specifying how each component depends on its inputs. For example:</p>
-<pre><code>  Data representation of diagram behind Table 1.
+<pre><code>      Data representation of diagram behind Table 1.
       |--------|-------|-------------------|---------------------|------------|
       | ouput  | order | component         | depends_on          | inpt_type  |
       |--------|-------|-------------------|---------------------|------------|
@@ -313,7 +310,7 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 </li>
 <li>L3: Having analytic data but not code is better than having code and no data.</li>
 <li>L4 and L5: Conditional on having all analytic material. Reproducible is better than not</li>
-<li>L6: Having raw and analyitic data is better than having code but no data.<br />
+<li>L6: Having raw and analytic data is better than having code but no data.<br />
 </li>
 <li>L7: Given that there is raw and analysis data, having cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)<br />
 </li>
@@ -333,8 +330,9 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 <p><strong>Level 9 (L9):</strong> All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).</p>
 <p><strong>Level 10 (L10):</strong> All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).</p>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (<code>✔</code>), or are out of reach given the current level of reproducibility (<code>x</code>).</p>
-<p>Figure 1: Levels of Computational Reproducibility and Possible Improvements</p>
-<pre><code>                                       |       |               Possible improvements              |
+<pre><code>Figure 1: Levels of Computational Reproducibility and Possible Improvements   
+
+                                           |       |               Possible improvements              |
                                            -----------------------------------------------------------
                                            | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
                                            |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
@@ -356,8 +354,8 @@ What data are available?                   |       |         |        |         
        |  ├── No...........................|   L8  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
        |  └── Yes..........................|   L9  |    -    |    -   |    -    |    -    |  -  |  ✔  |
        └── Yes.............................|   L10 |    -    |    -   |    -    |    -    |  -  |  -  |</code></pre>
-<p>Choose the appropiate level of computational reproducibility and record it using the following format.</p>
-<pre><code>  |-------------|-------|------------------------|------------|
+<p>Choose the appropriate level of computational reproducibility and record it using the following format.</p>
+<pre><code>      |-------------|-------|------------------------|------------|
       | output_name | level | additional_explanation | other_info |
       |-------------|-------|------------------------|------------|
       | table 1     | 4     |                        | ...        |
@@ -393,8 +391,8 @@ What data are available?                   |       |         |        |         
 </div>
 <div class="footnotes">
 <hr />
-<ol start="2">
-<li id="fn2"><p>relative location takes the form <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that has the form <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref2" class="footnote-back">↩</a></p></li>
+<ol start="1">
+<li id="fn1"><p>relative location takes the form <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that has the form <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
