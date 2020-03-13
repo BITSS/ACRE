@@ -31,7 +31,7 @@ output:
          <th>[(2) Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>
          <th>[(4) Robustness](#robust)</th>
-         <th>(5) Extensions</th>
+         <th>(5) <br> Extensions</th>
       </tr>
    </thead>
    <tbody>

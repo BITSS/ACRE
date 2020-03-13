@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-03-12}
+\date{2020-03-13}
 
 \begin{document}
 \maketitle
@@ -92,82 +92,88 @@
                |_________|  |___________________|
 \end{verbatim}
 
-\protect\hyperlink{scoping}{Scoping}
+\protect\hyperlink{scoping}{(1) Scoping}
 
-\protect\hyperlink{assessment}{Assessment}
+\protect\hyperlink{assessment}{(2) Assessment}
 
-\protect\hyperlink{improvements}{Improvement}
+\protect\hyperlink{improvements}{(3) Improvement}
 
-\protect\hyperlink{robust}{Robustness}
+\protect\hyperlink{robust}{(4) Robustness}
 
-Extensions
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+   Extensions
 
-\protect\hyperlink{improvements}{Outcome-level}
+  \protect\hyperlink{improvements}{Outcome-level}
 
-\protect\hyperlink{paper-level}{Paper-level}
+  \protect\hyperlink{paper-level}{Paper-level}
 
-☐ Select paper
+  ☐ Select paper
 
-\protect\hyperlink{describe-inputs}{☐ Describe inputs}
+  \protect\hyperlink{describe-inputs}{☐ Describe inputs}
 
-\protect\hyperlink{rd}{☐ + Raw data}
+  \protect\hyperlink{rd}{☐ + Raw data}
 
-\protect\hyperlink{paper-level}{☐ + Version control}
+  \protect\hyperlink{paper-level}{☐ + Version control}
 
-\protect\hyperlink{id-analy}{☐ Analytical choices}
+  \protect\hyperlink{id-analy}{☐ Analytical choices}
 
-☐ New method
+  ☐ New method
 
-\protect\hyperlink{check-acre}{☐ Check ACRE}
+  \protect\hyperlink{check-acre}{☐ Check ACRE}
 
-\protect\hyperlink{diagram}{☐ Reproduction diagrams}
+  \protect\hyperlink{diagram}{☐ Reproduction diagrams}
 
-\protect\hyperlink{ad}{☐ + Analysis data}
+  \protect\hyperlink{ad}{☐ + Analysis data}
 
-\protect\hyperlink{paper-level}{☐ + Documentation}
+  \protect\hyperlink{paper-level}{☐ + Documentation}
 
-\protect\hyperlink{id-type}{☐ Type of choice}
+  \protect\hyperlink{id-type}{☐ Type of choice}
 
-☐ New data
+  ☐ New data
 
-☐ \protect\hyperlink{verify-rep-mat}{Search for rep. mat.}
+  ☐ \protect\hyperlink{verify-rep-mat}{Search for rep. mat.}
 
-\protect\hyperlink{score}{☐ Reproduction score}
+  \protect\hyperlink{score}{☐ Reproduction score}
 
-\protect\hyperlink{ac}{☐ + Analysis code}
+  \protect\hyperlink{ac}{☐ + Analysis code}
 
-\protect\hyperlink{paper-level}{☐ + Dynamic document}
+  \protect\hyperlink{paper-level}{☐ + Dynamic document}
 
-\protect\hyperlink{id-val}{☐ Choice value}
+  \protect\hyperlink{id-val}{☐ Choice value}
 
-☐ New data
+  ☐ New data
 
-\protect\hyperlink{read-summ}{☐ Read and summ.}
+  \protect\hyperlink{read-summ}{☐ Read and summ.}
 
-\protect\hyperlink{dac}{☐ Debug analysis code}
+  \protect\hyperlink{dac}{☐ Debug analysis code}
 
-\protect\hyperlink{paper-level}{☐ + File structure}
+  \protect\hyperlink{paper-level}{☐ + File structure}
 
-\protect\hyperlink{test-rob}{☐ Justify and test alternatives}
+  \protect\hyperlink{test-rob}{☐ Justify and test alternatives}
 
-\protect\hyperlink{outputs}{☐ Output(s)}
+  \protect\hyperlink{outputs}{☐ Output(s)}
 
-\protect\hyperlink{dcc}{☐ Debug cleaning code}
+  \protect\hyperlink{dcc}{☐ Debug cleaning code}
 
-\protect\hyperlink{intensive}{☐ Depth}
+  \protect\hyperlink{intensive}{☐ Depth}
 
-\protect\hyperlink{dcc}{☐ Debug cleaning code}
+  \protect\hyperlink{dcc}{☐ Debug cleaning code}
 
-\href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Record results is Survey 1}
+  \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Record results is Survey 1}
 
-\href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Record results is Survey 2}
+  \href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Record results is Survey 2}
 
-\href{ADD\%20LINK}{Record results is Survey 3}
+  \href{ADD\%20LINK}{Record results is Survey 3}
+\end{enumerate}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.
+In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction package.
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low \citep{galiani2018make, chang2015economics} to just low \citep{kingi2018reproducibility}. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
 
@@ -194,9 +200,9 @@ This reproduction exercise is divided into four stages, with a fifth optional st
 \item
   \textbf{Scoping}, where the reproducer defines the scope of the exercise by declaring a paper and specific output(s) on which they will focus;\\
 \item
-  \textbf{Assessment}, where the reproducer reviews and describes in detail the available reproduction materials (or the ``reproduction package'') and assess current levels of computational reproducibility;\\
+  \textbf{Assessment}, where the reproducer reviews and describes in detail the available reproduction package (or the ``reproduction materials'') and assess current levels of computational reproducibility;\\
 \item
-  \textbf{Improvement}, where the reproducer modifies the content and/or the organization of the reproduction materials to improve its reproducibility;\\
+  \textbf{Improvement}, where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;\\
 \item
   \textbf{Robustness checks}, where the reproducer assesses the quality of selected analytical choices from the paper; and\\
 \item
@@ -226,7 +232,7 @@ Figure 1 depicts suggested levels of effort for each stage of the exercise depen
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
 
-You will be asked to record the results of your reproduction progress through each stage. After \protect\hyperlink{scoping}{scoping}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In \protect\hyperlink{assessment}{assessment}, you will inspect the paper's reproduction materials (raw data, analysis data, and code), draw diagrams connecting the \textbf{output to be reproduce} with its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In \href{(\#improvements)}{improvement}, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in \protect\hyperlink{robust}{robustness checks} you will record any analytical choices and their possible variations.
+You will be asked to record the results of your reproduction progress through each stage. After \protect\hyperlink{scoping}{scoping}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In \protect\hyperlink{assessment}{assessment}, you will inspect the paper's reproduction package (raw data, analysis data, and code), draw diagrams connecting the \textbf{output to be reproduce} with its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In \href{(\#improvements)}{improvement}, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in \protect\hyperlink{robust}{robustness checks} you will record any analytical choices and their possible variations.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
@@ -244,9 +250,9 @@ Before you invest any time in reading or summarizing a paper, complete steps 2.1
 Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the \textbf{paper status} is ``open to reproductions'', and create a new entry\footnote{If the paper status is ``closed to reproductions'', ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.}.
 
 \hypertarget{verify-rep-mat}{%
-\subsection{Verify that reproduction materials exist.}\label{verify-rep-mat}}
+\subsection{Verify that reproduction package exist.}\label{verify-rep-mat}}
 
-Verify that the paper has reproduction materials (consult the unofficial AEA \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested \href{LINK}{here}, making sure to copy (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Verify that the paper has reproduction package (consult the unofficial AEA \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested \href{LINK}{here}, making sure to copy (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
 
 2 week
 
@@ -333,8 +339,13 @@ ADD description that scoping involves chosing paper, output and level of depth t
 \paragraph{\texorpdfstring{Define the \emph{extensive margin}: outputs to reproduced}{Define the extensive margin: outputs to reproduced}}\label{outputs}}
 
 Define whether you will attempt to reproduce all of your chosen paper's results or just the main results.
-- \textbf{Complete}: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.
-- \textbf{Main results}: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper's abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.
+
+\begin{itemize}
+\item
+  \textbf{Complete}: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.
+\item
+  \textbf{Main results}: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper's abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.
+\end{itemize}
 
 \hypertarget{describe-the-types-of-output.}{%
 \subparagraph{Describe the types of output.}\label{describe-the-types-of-output.}}
@@ -361,14 +372,14 @@ Broadly describe the outputs you will attempt to reproduce.
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Raw data} sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}.
+  \textbf{Raw data} sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}.\\
 \item
   \textbf{Processed data} are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:
 
   \begin{itemize}
   \tightlist
   \item
-    \emph{Intermediate data} are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
+    \emph{Intermediate data} are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.\\
   \item
     \emph{Analytic data} is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
   \end{itemize}
@@ -384,7 +395,7 @@ A data set may be classified as \textbf{raw} if it fits any of the following cri
 \item
   The data is stored in a folder or file labeled as ``raw''.\\
 \item
-  The data set is not the output of any code script in the reproduction materials.\\
+  The data set is not the output of any code script in the reproduction package.\\
 \item
   The same data file can be independently obtained from the data source cited in the paper.
 \end{itemize}
@@ -439,18 +450,16 @@ ADD.
 
 The goal of this stage is to conduct a standardized assessment of your chosen paper's computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
-First, you will provide a detailed description of the reproduction materials. Second, you will connect the outputs you've chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.
+First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you've chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.
 
 \textbf{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Survey 2} to record your work as part of this step.}
 
 \emph{Tip:} We recommend that you first focus on one specific output (e.g. ``Table 1''). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.
 
-ADD: how a reproduction package \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html.}{should look like}
-
 \hypertarget{describe-inputs}{%
 \section{Describe the inputs.}\label{describe-inputs}}
 
-This section explains how to list all the input materials found or referred to in the reproduction package. First, you'll identify data sources and connect them with their raw data files (when available). Second, you'll locate and provide a description a brief description of the analytic data files. Finally, you'll locate, inspect, and describe the analytic code used in the paper.
+This section explains how to list all the input materials found or referred to in the reproduction package. First, you'll identify data sources and connect them with their raw data files (when available). Second, you'll locate and provide a brief description of the analytic data files. Finally, you'll locate, inspect, and describe the analytic code used in the paper.
 
 The following terms will be used in this section:
 
@@ -462,18 +471,18 @@ The following terms will be used in this section:
   \item
     \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
   \item
-    ADD DEFINITION FOR REPRODUCTION PACKAGE.
+    \textbf{Reproduction package:} Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (`original reproduction package'), or it may contain additional resources added by a reproducer (`reproducer X reproduction package'). See the \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{verification list} from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.
   \end{itemize}
 \end{itemize}
 
 \hypertarget{describe-the-data-sources-and-raw-data.}{%
 \subsection{Describe the data sources and raw data.}\label{describe-the-data-sources-and-raw-data.}}
 
-In the paper to be reproduced, find references to all data sources used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all data sources mentioned in the paper.
+In the paper to be reproduced, find references to all \emph{data sources} used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all data sources mentioned in the paper.
 
 Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., ``our information on regional minimum wages comes from the Bureau of Labor Statistics.'' This should be recorded as ``regional minimum wages from the Bureau of Labor Statistics''.).
 
-Next look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.
+Next look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder\footnote{relative location takes the form \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that has the form \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.
 
 Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} with the following structure:
 
@@ -499,7 +508,7 @@ Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdV
 \hypertarget{describe-the-analytic-data-sets.}{%
 \subsection{Describe the analytic data sets.}\label{describe-the-analytic-data-sets.}}
 
-List all the analytic files you can find in the reproduction materials, and identify their locations relative to the main reproduction folder\footnote{relative location takes the form \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that has the form \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1299317837\&range=A1}{standardized spreadsheet}.
+List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in a \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1299317837\&range=A1}{standardized spreadsheet}.
 
 As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: \texttt{all\_waves.csv} has the simple description \texttt{data\ for\ region-level\ analysis}). This may be difficult in an initial review, but will become easier as you go along.
 
@@ -518,22 +527,10 @@ The resulting report will have the following structure:
       |----------------|-----------------------|--------------------------------|
 \end{verbatim}
 
-\hypertarget{describe-the-code-scripts.}{%
-\subsection{Describe the code scripts.}\label{describe-the-code-scripts.}}
+\hypertarget{desc-scripts}{%
+\subsection{Describe the code scripts.}\label{desc-scripts}}
 
-List all code files that you find in the reproduction materials and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). Outputs may inlcude other data sets or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}.
-
-As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. This subjective assessment should be made based on your interpretation of each script's main role.
-
-Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}
-
-List any input files (data and code) required to execute this file successfully. Separate each item with ``;''.
-
-List all outputs generated with this file. This includes data sets, figures and tables, and objects used later on. Separate each item with ``;''.
-
-Provide a one-line description of what each script does.
-
-Classify the code as ``primarily cleaning code'' or ``primarily analysis code''.
+List all code files that you find in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). For each code file, record all inputs together and separate each item with ``;''. Outputs may include other data sets, figures, or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). For each code file, record all outputs together and separate each item with ``;''. Provide a one-line description of what each code file does. Record all this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet} with the following structure:
 
 \begin{verbatim}
   |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -551,12 +548,17 @@ Classify the code as ``primarily cleaning code'' or ``primarily analysis code''.
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
 \end{verbatim}
 
+As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. This subjective assessment should be made based on your interpretation of each script's main role.
+
 \hypertarget{diagram}{%
 \section{Connect each output to all its inputs}\label{diagram}}
 
-Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
+With all the information collected above, you can trace your output to reprodue to its primary sources. Upload the standarized table you build to the decribe the code above into the \href{ADD\%20LINK}{ACRE workflow diagram builder}.
 
-When a connection cannot be drawn due to a missing component, use the ``-\textbar{}\textbar{}-'' symbol. For more examples of diagrams connecting final output to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.
+\hypertarget{complete-workflow-information}{%
+\subsection{Complete workflow information}\label{complete-workflow-information}}
+
+If you were able to identify all the relevant components in the previous section, the ACRE builder will produce and diagram like the following.
 
 \begin{verbatim}
   table 1
@@ -573,7 +575,7 @@ When a connection cannot be drawn due to a missing component, use the ``-\textba
                           └───[data] admin_01raw.csv  
 \end{verbatim}
 
-This diagram can be represented in data format by specifying how each component depends on its inputs. For example:
+The ACRE diagram builder will also generate a table that reprents the diagram above in a data set with the following structure:
 
 \begin{verbatim}
   Data representation of diagram behind Table 1.
@@ -591,6 +593,18 @@ This diagram can be represented in data format by specifying how each component 
       | ...    | ...   | ...               | ...                 | ...        |
       |--------|-------|-------------------|---------------------|------------|
 \end{verbatim}
+
+\hypertarget{incomplete-workflow-information}{%
+\subsection{Incomplete workflow information}\label{incomplete-workflow-information}}
+
+If there are some components missing, then\ldots{}
+
+{[}Joel and Fernando need to workshop a better solution, until then\ldots{}{]}
+
+Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
+
+When a connection cannot be drawn due to a missing component, use the ``-\textbar{}\textbar{}-'' symbol. For more examples of diagrams connecting final output to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.\\
+This diagram can be represented in data format by specifying how each component depends on its inputs. For example:
 
 Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standardized spreadsheet}.
 If you have difficulty translating the diagram into a spreadsheet, you can draw it with pen and paper, take a picture and upload it to the assessment survey.
@@ -614,84 +628,67 @@ The following concepts will be used in this section:
 \hypertarget{levels-of-computational-reproducibility-for-a-specific-output}{%
 \subsection{Levels of Computational Reproducibility for a Specific Output}\label{levels-of-computational-reproducibility-for-a-specific-output}}
 
-Here we outline different levels of computational reproducibility. Each level is defined by data and code availability, possible improvements, and whether or not they achieve some type of reproducibility. In the next chapter we'll describe each possible improvement in more detail.
+Here we outline different levels of computational reproducibility. Each level is defined by availability of data and materials, and whether or not some type of reproducibility is achieved. In addition, for each level we briefly describe the type of improvements that can be done to improve the current reproducibility. In the next chapter we'll describe each possible improvement in more detail.
 
-MAKE EXPLICIT UNDERLYING VALUATIONS:
+The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
 
 \begin{itemize}
-\tightlist
 \item
-  L1: The worst is to have no access to any data or code.\\
+  \textbf{Level 1 (L1):} No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
 \item
-  L2: Having only code is better than nothing, but worst than any other combination\\
+  \textbf{Level 2 (L2):} Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
 \item
-  L3: Having analytic data but not code is better than having code and no data.
+  \textbf{Level 3 (L3):} Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).
 \item
-  L4 and L5: Conditional on having all analytic material. Reproducible is better than not
+  \textbf{Level 4 (L4):} Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
 \item
-  L6: Having raw and analyitic data is better than having code but no data.\\
+  \textbf{Level 5 (L5):} Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.
 \item
-  L7: Given that there is raw and analysis data, having cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)\\
+  \textbf{Level 6 (L6):} Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).
 \item
-  L9: Having all materials that but not being able to reproduce is better than all previous cases. Achieving CRA (lvl 10) and CRR (lvl 11) are the best levels according to this criteria.
+  \textbf{Level 7 (L7):} All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
+\item
+  \textbf{Level 8 (L8):} All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).
+\item
+  \textbf{Level 9 (L9):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).
+\item
+  \textbf{Level 10 (L10):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).
+\item
+  \textbf{Level 11 (L11):} All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).
 \end{itemize}
-
-ADD ONE QUESTION AT THE END OF SURVEY TWO TO ASK REPRODUCER IF THEY AGREE WITH THIS ORDER, AND IF THEY WOULD ADD/DELETE/MODIFY ANY SPECIFIC LEVEL
-
-The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction materials, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
-
-\textbf{Level 1 (L1):} No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
-
-\textbf{Level 1.5 (L1.5):} Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
-
-\textbf{Level 2 (L2):} Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).
-
-\textbf{Level 3 (L3):} Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).
-
-\textbf{Level 4 (L4):} Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.
-
-\textbf{Level 5 (L5):} Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).
-
-\textbf{Level 6 (L6):} All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).
-
-\textbf{Level 7 (L7):} All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).
-
-\textbf{Level 8 (L8):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).
-
-\textbf{Level 9 (L9):} All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).
-
-\textbf{Level 10 (L10):} All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (\texttt{✔}), or are out of reach given the current level of reproducibility (\texttt{x}).
 
 Figure 1: Levels of Computational Reproducibility and Possible Improvements
 
 \begin{verbatim}
-                                       |       |               Possible improvements              |
-                                           -----------------------------------------------------------
-                                           | Level |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
-                                           |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
-                                           --------|---------|--------|---------|---------|-----|-----|
-What data are available?                   |       |         |        |         |         |     |     |
-├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-├── Analytic data only. Code?              |       |         |        |         |         |     |     |
-|   ├── No code or cleaning code only......|   L2  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-|   └── Analysis code only. Is it CRA?     |       |         |        |         |         |     |     |
-|      ├── No..............................|   L3  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
-|      └── Yes.............................|   L4  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
-└── Raw & Analytic data. Code?             |       |         |        |         |         |     |     |
-   ├── None ...............................|   L5  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
-   ├── Analysis code only. CRA?            |       |         |        |         |         |     |     |
-   |  ├── No...............................|   L6  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
-   |  └── Yes..............................|   L7  |    -    |    -   |    -    |    ✔    |  -  |  x  |
-   └── A. and cleaning code. Is it CRR?    |       |         |        |         |         |     |     |
-       ├── No. CRA?                        |       |         |        |         |         |     |     |
-       |  ├── No...........................|   L8  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
-       |  └── Yes..........................|   L9  |    -    |    -   |    -    |    -    |  -  |  ✔  |
-       └── Yes.............................|   L10 |    -    |    -   |    -    |    -    |  -  |  -  |
+                                         | Level |               Possible improvements              |
+                                             |----------------------------------------------------------|
+                                             |       |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
+                                             |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
+                                             --------|---------|--------|---------|---------|-----|-----|
+Data and code available ?                    |       |         |        |         |         |     |     |     
+  ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
+  ├── Some code only.........................|   L2  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
+  └── What data are available?               |       |         |        |         |         |     |     |
+      ├── Analytic data only. Code?          |       |         |        |         |         |     |     |
+      |   ├── No code or cleaning code only..|   L3  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
+      |   └── Analysis code only. Is it CRA? |       |         |        |         |         |     |     |
+      |      ├── No..........................|   L4  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
+      |      └── Yes.........................|   L5  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
+      └── Raw & Analytic data. Code?         |       |         |        |         |         |     |     |
+         ├── None ...........................|   L6  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
+         ├── Analysis code only. CRA?        |       |         |        |         |         |     |     |
+         |  ├── No...........................|   L7  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
+         |  └── Yes..........................|   L8  |    -    |    -   |    -    |    ✔    |  -  |  x  |
+         └── A. and C. code. Is it CRR?      |       |         |        |         |         |     |     |
+             ├── No. CRA?                    |       |         |        |         |         |     |     |
+             |  ├── No.......................|   L9  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
+             |  └── Yes......................|   L10 |    -    |    -   |    -    |    -    |  -  |  ✔  |
+             └── Yes.........................|   L11 |    -    |    -   |    -    |    -    |  -  |  -  |
 \end{verbatim}
 
-Choose the appropiate level of computational reproducibility and record it using the following format.
+Choose the appropriate level of computational reproducibility and record it using the following format.
 
 \begin{verbatim}
   |-------------|-------|------------------------|------------|
@@ -708,6 +705,28 @@ Choose the appropiate level of computational reproducibility and record it using
 \end{verbatim}
 
 Record this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1384504774\&range=A1}{standarized spreadsheet}. You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
+
+To present each category above as levels that reflect a gradient of improvement, we need to make explicit the following underlying valuations.
+
+\begin{itemize}
+\tightlist
+\item
+  L1: The worst is to have no access to any data or code.\\
+\item
+  L2: Having only some code is better than nothing, but worst than any data.
+\item
+  L3: Having analytic data but not code is better than having code and no data.
+\item
+  L4 and L5: Conditional on having all analytic material. Reproducible is better than not
+\item
+  L6: Having raw and analytic data, even without any code, is better than having CRA.\\
+\item
+  L7: Given that there is raw and analysis data, having a cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)\\
+\item
+  L9: Having all materials that but not being able to reproduce is better than all previous cases. Achieving CRA (lvl 10) and CRR (lvl 11) are the best levels according to these criteria.
+\end{itemize}
+
+The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, or ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the ADD IMAGE button above.
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
@@ -882,7 +901,7 @@ There are at least six additional improvements you can make to improve a paper's
 \item
   If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write it using an open source statistical software (e.g., R, Python, or Julia).
 \item
-  Re re-organize the reproduction materials into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order, with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.\\
+  Re re-organize the reproduction package into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order, with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.\\
 \item
   Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
 \end{enumerate}

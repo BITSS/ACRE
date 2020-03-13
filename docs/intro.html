@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-03-12" />
+<meta name="date" content="2020-03-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -78,7 +78,7 @@
 <li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a><ul>
 <li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#steps"><i class="fa fa-check"></i><b>2.1</b> Steps</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>2.1.1</b> Check records on the ACRE platform.</a></li>
-<li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction materials exist.</a></li>
+<li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction package exist.</a></li>
 <li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.3</b> Read and summarize the paper.</a></li>
 <li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>2.1.4</b> Declare scope of the exercise.</a></li>
 </ul></li>
@@ -91,9 +91,12 @@
 <li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe the inputs.</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#describe-the-data-sources-and-raw-data."><i class="fa fa-check"></i><b>3.1.1</b> Describe the data sources and raw data.</a></li>
 <li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#describe-the-analytic-data-sets."><i class="fa fa-check"></i><b>3.1.2</b> Describe the analytic data sets.</a></li>
-<li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#describe-the-code-scripts."><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts.</a></li>
+<li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#desc-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts.</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect each output to all its inputs</a></li>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect each output to all its inputs</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="assessment.html"><a href="assessment.html#complete-workflow-information"><i class="fa fa-check"></i><b>3.2.1</b> Complete workflow information</a></li>
+<li class="chapter" data-level="3.2.2" data-path="assessment.html"><a href="assessment.html#incomplete-workflow-information"><i class="fa fa-check"></i><b>3.2.2</b> Incomplete workflow information</a></li>
+</ul></li>
 <li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score.</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
 <li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper level</a></li>
@@ -180,7 +183,7 @@
             <section class="normal" id="section-">
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> began requiring all the materials for reproduction of any new publication. In addition to the requirements, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate the authors’ compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction materials.</p>
+<p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> began requiring all the materials for reproduction of any new publication. In addition to the requirements, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate the authors’ compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction package.</p>
 <p>As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>)</span> to just low <span class="citation">(Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.</p>
 <p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) (King 1995) is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
 <p>This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.</p>
@@ -196,9 +199,9 @@
 <ol style="list-style-type: decimal">
 <li><strong>Scoping</strong>, where the reproducer defines the scope of the exercise by declaring a paper and specific output(s) on which they will focus;<br />
 </li>
-<li><strong>Assessment</strong>, where the reproducer reviews and describes in detail the available reproduction materials (or the “reproduction package”) and assess current levels of computational reproducibility;<br />
+<li><strong>Assessment</strong>, where the reproducer reviews and describes in detail the available reproduction package (or the “reproduction materials”) and assess current levels of computational reproducibility;<br />
 </li>
-<li><strong>Improvement</strong>, where the reproducer modifies the content and/or the organization of the reproduction materials to improve its reproducibility;<br />
+<li><strong>Improvement</strong>, where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;<br />
 </li>
 <li><strong>Robustness checks</strong>, where the reproducer assesses the quality of selected analytical choices from the paper; and<br />
 </li>
@@ -222,7 +225,7 @@
 </div>
 <div id="recording-the-results-of-the-exercise" class="section level2">
 <h2><span class="header-section-number">1.3</span> Recording the results of the exercise</h2>
-<p>You will be asked to record the results of your reproduction progress through each stage. After <a href="scoping.html#scoping">scoping</a>, you will be asked to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN">a survey</a> recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In <a href="assessment.html#assessment">assessment</a>, you will inspect the paper’s reproduction materials (raw data, analysis data, and code), draw diagrams connecting the <strong>output to be reproduce</strong> with its inputs, and score the level of reproducibility. All this information will be recorded in a <a href="ADD%20LINK">standarized spreadsheet</a>. In <a href="(#improvements)">improvement</a>, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in <a href="robust.html#robust">robustness checks</a> you will record any analytical choices and their possible variations.</p>
+<p>You will be asked to record the results of your reproduction progress through each stage. After <a href="scoping.html#scoping">scoping</a>, you will be asked to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN">a survey</a> recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In <a href="assessment.html#assessment">assessment</a>, you will inspect the paper’s reproduction package (raw data, analysis data, and code), draw diagrams connecting the <strong>output to be reproduce</strong> with its inputs, and score the level of reproducibility. All this information will be recorded in a <a href="ADD%20LINK">standarized spreadsheet</a>. In <a href="(#improvements)">improvement</a>, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in <a href="robust.html#robust">robustness checks</a> you will record any analytical choices and their possible variations.</p>
 
 </div>
 </div>
