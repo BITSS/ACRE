@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
@@ -12,7 +12,7 @@ In 2019, the [American Economic Association](https://www.aeaweb.org/journals/pol
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low [@galiani2018make; @chang2015economics] to just low [@kingi2018reproducibility]. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics. 
 
-*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) (King 1995) is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
+*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) [@King95] is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
 
@@ -23,7 +23,11 @@ This exercise is part of the Advancing Computational Reproducibility in Economic
 Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducers to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally, there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
 
 
-
+<div class="figure">
+<!--html_preserve--><div id="htmlwidget-1e7a6870f929d3d1c5a7" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1e7a6870f929d3d1c5a7">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=filled ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE]\nclaim1 [label = \"Claim 1\"]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"Opt 1\"]\noutput2 [label = \"Opt 2\"]\noutput3 [label = \"Opt 3\"]\noutput4 [label = \"Opt 4\"]\noutput5 [label = \"Opt 5\"]\noutput6 [label = \"Opt 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S1\"]\nspec2 [label = \"S2\"]\nspec3 [label = \"S3\"]\nspec4 [label = \"S4\"]\nspec5 [label = \"S5\"]\nspec6 [label = \"S6\"]\nspec7 [label = \"S7\"]\nspec8 [label = \"S8\"]\nspec9 [label = \"S9\"]\nspec10 [label = \"S10\"]\nspec11 [label = \"S11\"]\nspec12 [label = \"S12\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1 claim2 claim3}       ##[label = ...] adds text on the edge\nclaim1 -> {output1 output2} \nclaim2 -> {output3 output4} \nclaim3 -> {output5 output6} \noutput1 -> {spec1 spec2} \noutput2 -> {spec3 spec4} \noutput3 -> {spec5 spec6} \noutput4 -> {spec7 spec8} \noutput5 -> {spec9 spec10} \noutput6 -> {spec11 spec12} \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:diagram)Components to reproduce in a paper</p>
+</div>
 
 I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community. 
 

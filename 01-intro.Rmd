@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
@@ -12,7 +12,7 @@ In 2019, the [American Economic Association](https://www.aeaweb.org/journals/pol
 
 As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low [@galiani2018make; @chang2015economics] to just low [@kingi2018reproducibility]. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics. 
 
-*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) (King 1995) is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
+*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) [@King95] is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
 
@@ -20,31 +20,92 @@ This exercise is part of the Advancing Computational Reproducibility in Economic
 
 ## Beyond binary judgments
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducers to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally, there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
+Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. First, one paper usually contains several scientific claims, and those claims can vary in computational reproducibility. Second, each claim is typically measured through several specifications. This makes easier for reproducers to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally, there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
 
 
-```{r diagram, eval=FALSE, include=FALSE}
+```{r diagram, echo=FALSE, fig.cap="Components to reproduce in a paper"}
 # JOEL: can you figure out why this to run int the html version of the book?
 library(DiagrammeR)
 
-DiagrammeR("
-   graph TB
-   Paper-->Claim1
-   Paper-->Claim2
-   Paper-->Claim3
-   Claim1-->Spec11
-   Claim1-->Spec12
-   Claim1-->Spec13
-   Claim2-->Spec21
-   Claim2-->Spec22
-   Claim2-->Spec23
-   Claim3-->Spec31
-   Claim3-->Spec32
-   Claim3-->Spec33
-   ")
+grViz("
+digraph a_nice_graph {
+
+graph [layout = neato, rankdir= TB]  ## layout = [neato|twopi, etc]
+#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html
+
+
+# node definitions with substituted label text
+node [fontname = Helvetica, shape = box, style=filled ]
+paper [label = '@@1']    ## label indicates the position of the letter
+
+node [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE]
+claim1 [label = '@@2-1']
+claim2 [label = '@@2-2']
+claim3 [label = '@@2-3']
+
+node [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]
+output1 [label = '@@3-1']
+output2 [label = '@@3-2']
+output3 [label = '@@3-3']
+output4 [label = '@@3-4']
+output5 [label = '@@3-5']
+output6 [label = '@@3-6']
+
+node [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]
+spec1 [label = '@@4-1']
+spec2 [label = '@@4-2']
+spec3 [label = '@@4-3']
+spec4 [label = '@@4-4']
+spec5 [label = '@@4-5']
+spec6 [label = '@@4-6']
+spec7 [label = '@@4-7']
+spec8 [label = '@@4-8']
+spec9 [label = '@@4-9']
+spec10 [label = '@@4-10']
+spec11 [label = '@@4-11']
+spec12 [label = '@@4-12']
+
+
+# edge definitions with the node IDs
+paper -> {claim1 claim2 claim3}       ##[label = ...] adds text on the edge
+claim1 -> {output1 output2} 
+claim2 -> {output3 output4} 
+claim3 -> {output5 output6} 
+output1 -> {spec1 spec2} 
+output2 -> {spec3 spec4} 
+output3 -> {spec5 spec6} 
+output4 -> {spec7 spec8} 
+output5 -> {spec9 spec10} 
+output6 -> {spec11 spec12} 
+}
+
+[1]: 'Paper'            ## adds label to each box
+[2]: c('Claim 1', 'Claim 2', 'Claim 3')
+[3]: c('Opt 1' , 'Opt 2', 'Opt 3', 'Opt 4', 'Opt 5', 'Opt 6')
+[4]: c('S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9', 'S10', 'S11', 'S12')
+[5]: 'ghfd'
+")
+
+
+
+# DiagrammeR("
+#    graph TB
+#    Paper-->Claim1
+#    Paper-->Claim2
+#    Paper-->Claim3
+#    Claim1-->Spec11
+#    Claim1-->Spec12
+#    Claim1-->Spec13
+#    Claim2-->Spec21
+#    Claim2-->Spec22
+#    Claim2-->Spec23
+#    Claim3-->Spec31
+#    Claim3-->Spec32
+#    Claim3-->Spec33
+#    ")
 ```
 
-I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community. 
+It should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community. 
 
 
 ## Stages of the exercise
