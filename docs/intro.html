@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-03-13" />
+<meta name="date" content="2020-03-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -83,9 +83,8 @@
 <li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#steps"><i class="fa fa-check"></i><b>2.1</b> Steps</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>2.1.1</b> Check records on the ACRE platform.</a></li>
 <li class="chapter" data-level="2.1.2" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>2.1.2</b> Verify that reproduction package exist.</a></li>
-<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#advise-on-scoping-for-different-course-length"><i class="fa fa-check"></i><b>2.1.3</b> Advise on scoping for different course length</a></li>
-<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.4</b> Read and summarize the paper.</a></li>
-<li class="chapter" data-level="2.1.5" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>2.1.5</b> Declare scope of the exercise.</a></li>
+<li class="chapter" data-level="2.1.3" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1.3</b> Read and summarize the paper.</a></li>
+<li class="chapter" data-level="2.1.4" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>2.1.4</b> Declare scope of the exercise.</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#sample-strategies-for-scoping"><i class="fa fa-check"></i><b>2.2</b> Sample strategies for scoping</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="scoping.html"><a href="scoping.html#strategy-1"><i class="fa fa-check"></i><b>2.2.1</b> Strategy 1:</a></li>
@@ -165,6 +164,7 @@
 <li class="chapter" data-level="11.2" data-path="additional-resources-1.html"><a href="additional-resources-1.html#links-1"><i class="fa fa-check"></i><b>11.2</b> Links</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>12</b> Definitions</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -193,19 +193,17 @@
 <p>This exercise is part of the Advancing Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project led by the Berkeley Initiative for Transparency in the Social Sciences <a href="bitss.org">(BITSS)</a> and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The project of Advancing Computational Reproducibility in Economics (ACRE) looks to assess, enable, and improve the computational reproducibility of published economics research.</p>
 <div id="beyond-binary-judgments" class="section level2">
 <h2><span class="header-section-number">1.1</span> Beyond binary judgments</h2>
-<p>AQUI VOY
-Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
+<p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
 Two reasons:</p>
-<p>First, a paper usually contains several scientific claims, out of which all can vary in computational reproducibility. Each claim is typically tested using diffrent methodologies. Typically the claim-specific results will be presented in one ore more outputs (like table and figures). And each output will itself contain several specifications. Figure <a href="intro.html#fig:diagram">1.1</a></p>
-<p>Second, for a given part there are several levels of reproducibility that can be achieve.</p>
-<p>First, Finally, there are several levels of reproducibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.</p>
+<p>First, a paper usually contains several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using diffrent methodologies. Typically the claim-specific results will be presented in one ore more outputs (like table and figures). And each output will itself contain several specifications. Figure <a href="intro.html#fig:diagram">1.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-95daf37458281a2e5304" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-95daf37458281a2e5304">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-dfc6d8ddfd84ff97bd6e" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dfc6d8ddfd84ff97bd6e">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 1.1: One paper has multiple components to reproduce
 </p>
 </div>
+<p>Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.</p>
 <p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and it should not be expected of all published research (especially before 2019). Instead, this standard is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.</p>
 </div>
 <div id="stages-of-the-exercise" class="section level2">

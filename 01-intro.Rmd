@@ -18,7 +18,6 @@ This exercise is part of the Advancing Computational Reproducibility in Economic
 
 ## Beyond binary judgments
 
-AQUI VOY 
 Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant. 
 Two reasons:
 

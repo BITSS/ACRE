@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-03-13}
+\date{2020-03-18}
 
 \begin{document}
 \maketitle
@@ -173,22 +173,31 @@
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
 
-In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} began requiring all the materials for reproduction of any new publication. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate the authors' compliance. This change in policy and guidance should radically improve the computational reproducibility of all new published research. However all the published research before 2019 did not have neither the requirements nor the guidance to develop proper reproduction package.
+In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy, which now mandates that the AEA Data Editor verifies the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all newly published research, after several studies showed that rates of \emph{computational reproducibility} in economics at large range from alarmingly low \citep{galiani2018make, chang2015economics} to just low \citep{kingi2018reproducibility}.
 
-As a result, several studies point towards rates of computational reproducibility in economics that range from alarmingly low \citep{galiani2018make, chang2015economics} to just low \citep{kingi2018reproducibility}. The project of Advancing Computational Reproducibility in Economics (ACRE) has the goals of improving, and having a much clearer picture of, computational reproducibility in economics.
+\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
-\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) (King 1995) is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
 
-This exercise is designed for reproductions performed in Economics graduate courses or undergraduate theses, with the goal of providing common terminology and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
-
-This exercise is part of the Advancing Computational Reproducibility in Economics (ACRE) project led by the Berkeley Initiative for Transparency in the Social Sciences \href{bitss.org}{(BITSS)} and Prof.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The ACRE project builds on efforts to improve the reproducibility of economics research through the updated \href{https://www.aeaweb.org/journals/policies/data-code/}{Data and Code Availability Policy}, which since 2019 mandates pre-publication verification of computational reproducibility by the AEA Data Editor. Several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were also produced to facilitate the authors' compliance.
+This exercise is part of the Advancing Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project led by the Berkeley Initiative for Transparency in the Social Sciences \href{bitss.org}{(BITSS)} and Prof.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The project of Advancing Computational Reproducibility in Economics (ACRE) looks to assess, enable, and improve the computational reproducibility of published economics research.
 
 \hypertarget{beyond-binary-judgments}{%
 \section{Beyond binary judgments}\label{beyond-binary-judgments}}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare a entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuance approach by highlighting three dimensions that make binary judgement less relevant. Firs one paper usually contains several scientific claims, and those claims can vary in computational reproducbility. Second, each claim is typically measured through several specifications. This makes easier for reproducers to hypothesize after the fact about which are the main specifications where reproducibility assessed. Finally, there are several levels of reproucibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
+Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
+Two reasons:
 
-I should be noticed that the highest level of reproducibility, which requires complete reproducibility starting from the raw data, is very demanding and it should not be expected of published research (especially that published before 2019). This high bar is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
+First, a paper usually contains several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using diffrent methodologies. Typically the claim-specific results will be presented in one ore more outputs (like table and figures). And each output will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
+
+\begin{figure}
+\centering
+\includegraphics{01-intro_files/figure-latex/diagram-1.pdf}
+\caption{\label{fig:diagram}One paper has multiple components to reproduce}
+\end{figure}
+
+Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
+
+Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and it should not be expected of all published research (especially before 2019). Instead, this standard is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
 
 \hypertarget{stages-of-the-exercise}{%
 \section{Stages of the exercise}\label{stages-of-the-exercise}}
@@ -198,15 +207,15 @@ This reproduction exercise is divided into four stages, with a fifth optional st
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \textbf{Scoping}, where the reproducer defines the scope of the exercise by declaring a paper and specific output(s) on which they will focus;\\
+  \textbf{Scoping}, where the reproducer defines the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;\\
 \item
-  \textbf{Assessment}, where the reproducer reviews and describes in detail the available reproduction package (or the ``reproduction materials'') and assess current levels of computational reproducibility;\\
+  \textbf{Assessment}, where the reproducer reviews and describes in detail the available reproduction package (or the ``reproduction materials'') and provides an assessment of the current level of computational reproducibility of the selected outputs;\\
 \item
   \textbf{Improvement}, where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;\\
 \item
   \textbf{Robustness checks}, where the reproducer assesses the quality of selected analytical choices from the paper; and\\
 \item
-  \textbf{Extension} (if applicable), where the reproducer may ``extend'' the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to replication.
+  \textbf{Extension} (if applicable), where the reproducer may ``extend'' the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to \emph{replication}.
 
 \begin{verbatim}
             (1)       (2)         (3)        (4)        (5)
@@ -232,7 +241,7 @@ Figure 1 depicts suggested levels of effort for each stage of the exercise depen
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
 
-You will be asked to record the results of your reproduction progress through each stage. After \protect\hyperlink{scoping}{scoping}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey} recording your paper of choice and specific outputs you will attempt to reproduce. This step also involves writing a brief 1-2 page summary of your chosen paper. In \protect\hyperlink{assessment}{assessment}, you will inspect the paper's reproduction package (raw data, analysis data, and code), draw diagrams connecting the \textbf{output to be reproduce} with its inputs, and score the level of reproducibility. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In \href{(\#improvements)}{improvement}, a second short survey will ask you to record specific improvements and report potential increases in the level of reproducibility. Finally, in \protect\hyperlink{robust}{robustness checks} you will record any analytical choices and their possible variations.
+You will be asked to record the results of your reproduction progress through each stage. As part of Stage 1:\protect\hyperlink{scoping}{Scoping}, you will be asked to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{a survey}, where you will declare your paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: \protect\hyperlink{assessment}{Assessment}, you will inspect the paper's reproduction package (raw data, analysis data, and code), draw diagrams connecting the \textbf{output to reproduce} with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a \href{ADD\%20LINK}{standarized spreadsheet}. In Stage 3: \href{(\#improvements)}{Improvement}, a second survey will ask you to record specific improvements and report potential changes in the level of reproducibility. Finally, in Stage 4: \protect\hyperlink{robust}{Robustness Checks} you will record any analytical choices and their possible variations.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
