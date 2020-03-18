@@ -1756,75 +1756,76 @@ summary {
 </ol>
 <!--chapter:end:index.Rmd-->
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
+<div id="intro" class="section level1 unnumbered">
+<h1>Introduction</h1>
 <p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> updated its Data and Code Availability Policy, which now mandates that the AEA Data Editor verifies the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all newly published research, after several studies showed that rates of <em>computational reproducibility</em> in economics at large range from alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>)</span> to just low <span class="citation">(Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>.</p>
 <p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
 <p>This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.</p>
 <p>This exercise is part of the Advancing Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project led by the Berkeley Initiative for Transparency in the Social Sciences <a href="bitss.org">(BITSS)</a> and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The project of Advancing Computational Reproducibility in Economics (ACRE) looks to assess, enable, and improve the computational reproducibility of published economics research.</p>
-<div id="beyond-binary-judgments" class="section level2">
-<h2><span class="header-section-number">1.1</span> Beyond binary judgments</h2>
+<div id="beyond-binary-judgments" class="section level2 unnumbered">
+<h2>Beyond binary judgments</h2>
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
 Two reasons:</p>
-<p>First, a paper usually contains several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using diffrent methodologies. Typically the claim-specific results will be presented in one ore more outputs (like table and figures). And each output will itself contain several specifications. Figure <a href="#fig:diagram">1.1</a> illustrates this idea.</p>
+<p>First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure <a href="#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-da713e0aa9bb0ce25a9a" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-da713e0aa9bb0ce25a9a">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2f6492e0b1b48160e923" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2f6492e0b1b48160e923">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
-Figure 1.1: One paper has multiple components to reproduce
+Figure 0.1: One paper has multiple components to reproduce
 </p>
 </div>
-<p>Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to the complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.</p>
+<p>Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.</p>
 <p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and it should not be expected of all published research (especially before 2019). Instead, this standard is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.</p>
 </div>
-<div id="stages-of-the-exercise" class="section level2">
-<h2><span class="header-section-number">1.2</span> Stages of the exercise</h2>
-<p>This reproduction exercise is divided into four stages, with a fifth optional stage :</p>
+<div id="stages-of-the-exercise" class="section level2 unnumbered">
+<h2>Stages of the exercise</h2>
+<p>This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guideleines, with a fifth optional stage :</p>
 <ol style="list-style-type: decimal">
-<li><strong>Scoping</strong>, where the reproducer defines the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;<br />
+<li><a href="#scoping"><strong>Scoping</strong></a>, where the reproducer defines the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;<br />
 </li>
-<li><strong>Assessment</strong>, where the reproducer reviews and describes in detail the available reproduction package (or the “reproduction materials”) and provides an assessment of the current level of computational reproducibility of the selected outputs;<br />
+<li><a href="#assessment"><strong>Assessment</strong></a>, where the reproducer reviews and describes in detail the available reproduction package (or the “reproduction materials”) and provides an assessment of the current level of computational reproducibility of the selected outputs;<br />
 </li>
-<li><strong>Improvement</strong>, where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;<br />
+<li><a href="#improvements"><strong>Improvement</strong></a>, where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;<br />
 </li>
-<li><strong>Robustness checks</strong>, where the reproducer assesses the quality of selected analytical choices from the paper; and<br />
+<li><a href="#robust"><strong>Robustness checks</strong></a>, where the reproducer assesses the quality of selected analytical choices from the paper; and<br />
 </li>
 <li><p><strong>Extension</strong> (if applicable), where the reproducer may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to <em>replication</em>.</p>
-<pre><code>            (1)       (2)         (3)        (4)        (5)
-          scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
-           ▲         |  |                   ▲
-           |         |  |                   |
-           |_________|  |___________________|
+<pre><code>       Figure 2: Steps for reproduction
 
-    Suggested level of effort:
-- Graduate
-  research:   5%       10%        5%         10%         70%
-- Graduate
-  course:    10%       25%       20%         40%         5%
-- Undergrad.
-  thesis:    10%       30%       40%         20%         0%</code></pre></li>
+              (1)       (2)         (3)        (4)        (5)
+            scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
+             ▲         |  |                   ▲
+             |         |  |                   |
+             |_________|  |___________________|
+
+   Suggested level of effort:
+  - Graduate
+    research:   5%       10%        5%         10%         70%
+  - Graduate
+    course:    10%       25%       20%         40%         5%
+  - Undergrad.
+    thesis:    10%       30%       40%         20%         0%</code></pre></li>
 </ol>
-<p>(<strong>JOEL</strong>: Please add guesstimates of level of efforts for projects that last 2 weeks, 1 month or one semester. Ask Katie for a paper form 3ie on Push button replications (one of the authors is Sayak Khatua. From Katie: Working paper here says 3 hours per replication: <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS" class="uri">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS</a>)</p>
-<p>Figure 1 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear, e.g., you may realize that the scope of a reproduction is too ambitious and switch to a less intensive reproduction. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper’s level of reproducibility.</p>
+<p>Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which the reproducer is performing a reproduction. This process need not be chronologically linear, e.g., the reproducer may realize that the scope of a reproduction is too ambitious and switch to a less intensive reproduction. Later in the exercise, the reproducer can also begin testing different specifications for robustness while also assessing a paper’s level of reproducibility.</p>
 </div>
-<div id="recording-the-results-of-the-exercise" class="section level2">
-<h2><span class="header-section-number">1.3</span> Recording the results of the exercise</h2>
-<p>You will be asked to record the results of your reproduction progress through each stage. As part of Stage 1:<a href="#scoping">Scoping</a>, you will be asked to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN">a survey</a>, where you will declare your paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: <a href="#assessment">Assessment</a>, you will inspect the paper’s reproduction package (raw data, analysis data, and code), draw diagrams connecting the <strong>output to reproduce</strong> with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a <a href="ADD%20LINK">standarized spreadsheet</a>. In Stage 3: <a href="(#improvements)">Improvement</a>, a second survey will ask you to record specific improvements and report potential changes in the level of reproducibility. Finally, in Stage 4: <a href="#robust">Robustness Checks</a> you will record any analytical choices and their possible variations.</p>
+<div id="recording-the-results-of-the-exercise" class="section level2 unnumbered">
+<h2>Recording the results of the exercise</h2>
+<p>Reproducers will be asked to record the results of their reproduction progress through each stage. As part of Stage 1:<a href="#scoping">Scoping</a>, they will be asked to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN">a first survey</a>, where they will declare the paper of choice and the specific output(s) on which they will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: <a href="#assessment">Assessment</a>, you will inspect the paper’s reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a <a href="https://docs.google.com/spreadsheets/d/1Uj5rEwSpFh_RXsmRhFnbz8cL88PUA5cRKp_38xV4eeE/copy?usp=sharing">standarized spreadsheet</a>. In Stage 3: <a href="#improvements">Improvement</a>, reproducers will be asked you to record specific improvements and report potential changes in the level of reproducibility. Results from stage 2 and 3 will be recorded in a <a href="ADD%20LINK">second survey</a>. In a <a href="ADD%20LINK">third and final survey</a> for Stage 4: <a href="#robust">Robustness Checks</a> reproducers will help to track the different analytical choices and test possible variations.</p>
 <!--chapter:end:01-intro.Rmd-->
 </div>
 </div>
 <div id="scoping" class="section level1">
-<h1><span class="header-section-number">2</span> Scoping</h1>
+<h1><span class="header-section-number">1</span> Scoping</h1>
 <p>In the Scoping stage, you will choose a paper to reproduce. , or be assigned one. Chapter 2 describes the steps for defining the scope of a reproduction exercise. <strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5">Survey 1</a> to record your work for this stage.</em></strong></p>
 <div id="steps" class="section level2">
-<h2><span class="header-section-number">2.1</span> Steps</h2>
+<h2><span class="header-section-number">1.1</span> Steps</h2>
 <p>Before you invest any time in reading or summarizing a paper, complete steps 2.1.1–2.1.2:</p>
 <div id="check-acre" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Check records on the ACRE platform.</h3>
+<h3><span class="header-section-number">1.1.1</span> Check records on the ACRE platform.</h3>
 <p>Check the <a href="ADD%20LINK">ACRE database</a> for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the <strong>paper status</strong> is “open to reproductions”, and create a new entry<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
 </div>
 <div id="verify-rep-mat" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Verify that reproduction package exist.</h3>
+<h3><span class="header-section-number">1.1.2</span> Verify that reproduction package exist.</h3>
 <p>Verify that the paper has reproduction package (consult the unofficial AEA <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">Data and Code Guidance</a> to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested <a href="LINK">here</a>, making sure to copy (<a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.</p>
 <!--  
 ### Advise on scoping for different course length
@@ -1957,27 +1958,28 @@ Extension
 </td>
 </tr>
 </table>
+<p>Working paper here says 3 hours per replication: <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS" class="uri">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS</a>)</p>
 </div>
 <div id="read-sum" class="section level3">
-<h3><span class="header-section-number">2.1.3</span> Read and summarize the paper.</h3>
+<h3><span class="header-section-number">1.1.3</span> Read and summarize the paper.</h3>
 <p>Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).</p>
 <p>Read the paper and write a two-page summary, answering the following: What is the main question the paper attempts to answer? What methodologies doe is employ? What data sources do the authors use?</p>
 </div>
 <div id="declare-scope-of-the-exercise." class="section level3">
-<h3><span class="header-section-number">2.1.4</span> Declare scope of the exercise.</h3>
+<h3><span class="header-section-number">1.1.4</span> Declare scope of the exercise.</h3>
 <p>Declare if your assessment will be of all of the paper’s results (<strong>complete</strong>) or just the <strong>main results</strong>, and if you will aim to start with <strong>raw data</strong> or <strong>processed data</strong>. Find definitions of these concepts below.</p>
 <p>ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.</p>
 <div id="define-your-reproduction-margins." class="section level4">
-<h4><span class="header-section-number">2.1.4.1</span> Define your reproduction margins.</h4>
+<h4><span class="header-section-number">1.1.4.1</span> Define your reproduction margins.</h4>
 <div id="outputs" class="section level5">
-<h5><span class="header-section-number">2.1.4.1.1</span> Define the <em>extensive margin</em>: outputs to reproduced</h5>
+<h5><span class="header-section-number">1.1.4.1.1</span> Define the <em>extensive margin</em>: outputs to reproduced</h5>
 <p>Define whether you will attempt to reproduce all of your chosen paper’s results or just the main results.</p>
 <ul>
 <li><p><strong>Complete</strong>: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.</p></li>
 <li><p><strong>Main results</strong>: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper’s abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.</p></li>
 </ul>
 <div id="describe-the-types-of-output." class="section level6">
-<h6><span class="header-section-number">2.1.4.1.1.1</span> Describe the types of output.</h6>
+<h6><span class="header-section-number">1.1.4.1.1.1</span> Describe the types of output.</h6>
 <p>Broadly describe the outputs you will attempt to reproduce.</p>
 <ul>
 <li><strong>Tables:</strong> Describe how to cite record location.
@@ -1990,7 +1992,7 @@ Extension
 </div>
 </div>
 <div id="intensive" class="section level5">
-<h5><span class="header-section-number">2.1.4.1.2</span> Define the <em>intensive margin</em>: depth of reproduction in terms of original data.</h5>
+<h5><span class="header-section-number">1.1.4.1.2</span> Define the <em>intensive margin</em>: depth of reproduction in terms of original data.</h5>
 <ul>
 <li><strong>Raw data</strong> sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it <em>processed</em>.<br />
 </li>
@@ -2002,7 +2004,7 @@ Extension
 </ul></li>
 </ul>
 <div id="classifying-a-data-set" class="section level6">
-<h6><span class="header-section-number">2.1.4.1.2.1</span> Classifying a data set</h6>
+<h6><span class="header-section-number">1.1.4.1.2.1</span> Classifying a data set</h6>
 <p>A data set may be classified as <strong>raw</strong> if it fits any of the following criteria:</p>
 <ul>
 <li>The data is stored in a folder or file labeled as “raw”.<br />
@@ -2022,10 +2024,10 @@ Extension
 </div>
 </div>
 <div id="sample-strategies-for-scoping" class="section level2">
-<h2><span class="header-section-number">2.2</span> Sample strategies for scoping</h2>
+<h2><span class="header-section-number">1.2</span> Sample strategies for scoping</h2>
 <p>ADD.</p>
 <div id="strategy-1" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Strategy 1:</h3>
+<h3><span class="header-section-number">1.2.1</span> Strategy 1:</h3>
 <ol style="list-style-type: decimal">
 <li>Attempt to reproduce the paper’s main estimates.</li>
 <li>Attempt to reproduce two main tables and/or two main figures.</li>
@@ -2034,7 +2036,7 @@ Extension
 </ol>
 </div>
 <div id="strategy-2" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> Strategy 2:</h3>
+<h3><span class="header-section-number">1.2.2</span> Strategy 2:</h3>
 <ol style="list-style-type: decimal">
 <li>Attempt to reproduce all outputs resulting from the analytic data.</li>
 <li>Once you can do that, try to make improvements.</li>
@@ -2045,13 +2047,13 @@ Extension
 </div>
 </div>
 <div id="assessment" class="section level1">
-<h1><span class="header-section-number">3</span> Assessment</h1>
+<h1><span class="header-section-number">2</span> Assessment</h1>
 <p>The goal of this stage is to conduct a standardized assessment of your chosen paper’s computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.</p>
 <p>First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.</p>
 <p><strong>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7">Survey 2</a> to record your work as part of this step.</strong></p>
 <p><em>Tip:</em> We recommend that you first focus on one specific output (e.g. “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.</p>
 <div id="describe-inputs" class="section level2">
-<h2><span class="header-section-number">3.1</span> Describe the inputs.</h2>
+<h2><span class="header-section-number">2.1</span> Describe the inputs.</h2>
 <p>This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.</p>
 <p>The following terms will be used in this section:</p>
 <ul>
@@ -2062,7 +2064,7 @@ Extension
 </ul></li>
 </ul>
 <div id="describe-the-data-sources-and-raw-data." class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Describe the data sources and raw data.</h3>
+<h3><span class="header-section-number">2.1.1</span> Describe the data sources and raw data.</h3>
 <p>In the paper to be reproduced, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all data sources mentioned in the paper.</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”.).</p>
 <p>Next look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. In addition to looking at the existing data files, we recommend you review the first lines of all code files (especially cleaning code), looking for lines that call the data sets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files missing from the reproduction package.</p>
@@ -2085,7 +2087,7 @@ Extension
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|</code></pre>
 </div>
 <div id="describe-the-analytic-data-sets." class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Describe the analytic data sets.</h3>
+<h3><span class="header-section-number">2.1.2</span> Describe the analytic data sets.</h3>
 <p>List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in a <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
@@ -2101,7 +2103,7 @@ Extension
       |----------------|-----------------------|--------------------------------|</code></pre>
 </div>
 <div id="desc-scripts" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Describe the code scripts.</h3>
+<h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
 <p>List all code files that you find in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). For each code file, record all inputs together and separate each item with “;”. Outputs may include other data sets, figures, or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). For each code file, record all outputs together and separate each item with “;”. Provide a one-line description of what each code file does. Record all this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a> with the following structure:</p>
 <pre><code>  |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
@@ -2120,10 +2122,10 @@ Extension
 </div>
 </div>
 <div id="diagram" class="section level2">
-<h2><span class="header-section-number">3.2</span> Connect each output to all its inputs</h2>
+<h2><span class="header-section-number">2.2</span> Connect each output to all its inputs</h2>
 <p>With all the information collected above, you can trace your output to reprodue to its primary sources. Upload the standarized table you build to the decribe the code above into the <a href="ADD%20LINK">ACRE workflow diagram builder</a>.</p>
 <div id="complete-workflow-information" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Complete workflow information</h3>
+<h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
 <p>If you were able to identify all the relevant components in the previous section, the ACRE builder will produce and diagram like the following.</p>
 <pre><code>  table 1
         └───[code] formatting_table1.R
@@ -2154,7 +2156,7 @@ Extension
       |--------|-------|-------------------|---------------------|------------|</code></pre>
 </div>
 <div id="incomplete-workflow-information" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Incomplete workflow information</h3>
+<h3><span class="header-section-number">2.2.2</span> Incomplete workflow information</h3>
 <p>If there are some components missing, then…</p>
 <p>[Joel and Fernando need to workshop a better solution, until then…]</p>
 <p>Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.</p>
@@ -2165,7 +2167,7 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 </div>
 </div>
 <div id="score" class="section level2">
-<h2><span class="header-section-number">3.3</span> Assign a reproducibility score.</h2>
+<h2><span class="header-section-number">2.3</span> Assign a reproducibility score.</h2>
 <p>Once all possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility.</p>
 <p>The following concepts will be used in this section:</p>
 <ul>
@@ -2174,7 +2176,7 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 <li><p><strong>Minimal effort:</strong> Five minutes or less are required to run the code, not including computing time.</p></li>
 </ul>
 <div id="levels-of-computational-reproducibility-for-a-specific-output" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
+<h3><span class="header-section-number">2.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
 <p>Here we outline different levels of computational reproducibility. Each level is defined by availability of data and materials, and whether or not some type of reproducibility is achieved. In addition, for each level we briefly describe the type of improvements that can be done to improve the current reproducibility. In the next chapter we’ll describe each possible improvement in more detail.</p>
 <p>The assessment is made at the output level – a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.</p>
 <ul>
@@ -2245,7 +2247,7 @@ Data and code available ?                    |       |         |        |       
 <p>The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, or ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the ADD IMAGE button above.</p>
 </div>
 <div id="reproducibility-dimensions-at-the-paper-level" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Reproducibility dimensions at the paper level</h3>
+<h3><span class="header-section-number">2.3.2</span> Reproducibility dimensions at the paper level</h3>
 <p>In addition to an output-specific assessment of computational reproducibility, several practices can facilitate a paper’s overall computational reproducibility. These practices are described in detail in the Improvement chapter. In the Assessment section, it is only required that you verify whether the original reproduction package made use of any of the following:</p>
 <ul>
 <li>master script that runs all steps</li>
@@ -2266,14 +2268,14 @@ Data and code available ?                    |       |         |        |       
 </div>
 </div>
 <div id="improvements" class="section level1">
-<h1><span class="header-section-number">4</span> Improvements</h1>
+<h1><span class="header-section-number">3</span> Improvements</h1>
 <p>After completing an assessment of the paper’s reproducibility packages, you can start proposing ways to improve it’s reproducibility. Making improvements provides an opportunity to gain deeper understanding of the paper’s methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community–other students and researchers using the ACRE platform around the world.</p>
 <p>As in the Assessment section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.</p>
 <p><strong>Use Survey 2 to record your work as part of this step.</strong></p>
 <div id="types-of-output-level-improvements" class="section level2">
-<h2><span class="header-section-number">4.1</span> Types of output-level improvements</h2>
+<h2><span class="header-section-number">3.1</span> Types of output-level improvements</h2>
 <div id="rd" class="section level3">
-<h3><span class="header-section-number">4.1.1</span> Adding missing raw data files or meta-data (+RD)</h3>
+<h3><span class="header-section-number">3.1.1</span> Adding missing raw data files or meta-data (+RD)</h3>
 <p>Reproduction packages often do not include all original <a href="#describe-inputs">raw datasets</a>. To obtain any missing raw data, or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify a specific missing file. During <a href="#assessment">Assessment</a>, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.<br />
@@ -2294,7 +2296,7 @@ Data and code available ?                    |       |         |        |       
 <p>In addition to trying to obtain raw data, you can also contribute by obtaining missing analytic data.</p>
 </div>
 <div id="ad" class="section level3">
-<h3><span class="header-section-number">4.1.2</span> Adding missing analytic data files (+AD)</h3>
+<h3><span class="header-section-number">3.1.2</span> Adding missing analytic data files (+AD)</h3>
 <p><a href="#describe-inputs">Analytic data</a> can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (eg <code>analysis_data_03.csv</code>).<br />
@@ -2307,7 +2309,7 @@ Data and code available ?                    |       |         |        |       
 </ol>
 </div>
 <div id="ac" class="section level3">
-<h3><span class="header-section-number">4.1.3</span> Adding missing analysis code (+AC)</h3>
+<h3><span class="header-section-number">3.1.3</span> Adding missing analysis code (+AC)</h3>
 <p><a href="#describe-inputs">Analysis code</a> can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to…” or “We estimate this regression using a bandwidth of…”).</p></li>
@@ -2318,11 +2320,11 @@ Data and code available ?                    |       |         |        |       
 </ol>
 </div>
 <div id="cc" class="section level3">
-<h3><span class="header-section-number">4.1.4</span> Adding missing data cleaning code (+CC)</h3>
+<h3><span class="header-section-number">3.1.4</span> Adding missing data cleaning code (+CC)</h3>
 <p><a href="#describe-inputs">Data cleaning (processing)</a> code might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).</p>
 </div>
 <div id="dac" class="section level3">
-<h3><span class="header-section-number">4.1.5</span> Debugging analysis code (DAC)</h3>
+<h3><span class="header-section-number">3.1.5</span> Debugging analysis code (DAC)</h3>
 <p>Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:</p>
 <ul>
 <li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
@@ -2336,11 +2338,11 @@ Data and code available ?                    |       |         |        |       
 </ul>
 </div>
 <div id="debugging-cleaning-code-dcc" class="section level3">
-<h3><span class="header-section-number">4.1.6</span> Debugging cleaning code (DCC)</h3>
+<h3><span class="header-section-number">3.1.6</span> Debugging cleaning code (DCC)</h3>
 <p>Use the same steps as you took to debug the analysis code, but report them separately.</p>
 </div>
 <div id="reporting-results" class="section level3">
-<h3><span class="header-section-number">4.1.7</span> Reporting results</h3>
+<h3><span class="header-section-number">3.1.7</span> Reporting results</h3>
 <p>Track all the different types of improvements you make and record in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A3">this standarized spreadsheet</a> with the following structure:</p>
 <pre><code>   Level-specific quality improvements: add data/code, debug code.
 
@@ -2356,7 +2358,7 @@ Data and code available ?                    |       |         |        |       
 </div>
 </div>
 <div id="paper-level" class="section level2">
-<h2><span class="header-section-number">4.2</span> Types of paper-level improvements</h2>
+<h2><span class="header-section-number">3.2</span> Types of paper-level improvements</h2>
 <p>There are at least six additional improvements you can make to improve a paper’s overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10).</p>
 <ol style="list-style-type: decimal">
 <li>Set up the reproduction package using version control software, such as Git.</li>
@@ -2368,14 +2370,14 @@ Data and code available ?                    |       |         |        |       
 <li>Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see <a href="https://mybinder.org/">Binder</a> and <a href="https://codeocean.com/">Code Ocean</a>.</li>
 </ol>
 <div id="reporting-improvements" class="section level3">
-<h3><span class="header-section-number">4.2.1</span> Reporting improvements</h3>
+<h3><span class="header-section-number">3.2.1</span> Reporting improvements</h3>
 <p>You will be asked to provide this information in the <a href="ADD%20LINK">Assessment and Improvement Survey</a>.</p>
 <!--chapter:end:04-improve.Rmd-->
 </div>
 </div>
 </div>
 <div id="robust" class="section level1">
-<h1><span class="header-section-number">5</span> Checking for Robustness</h1>
+<h1><span class="header-section-number">4</span> Checking for Robustness</h1>
 <p>[UNDER CONSTRUCION]</p>
 <ul>
 <li>Identify all possible analytical choices: original and repeated ones.<br />
@@ -2386,7 +2388,7 @@ Data and code available ?                    |       |         |        |       
 <li>Suggest choice alternative and justify (one line)</li>
 </ul>
 <div id="id-analy" class="section level2">
-<h2><span class="header-section-number">5.1</span> Identifying Analytical Choices</h2>
+<h2><span class="header-section-number">4.1</span> Identifying Analytical Choices</h2>
 <p>As part of the requirements to <a href="requirements_comprehension.md">demonstrate comprehension of the paper and the code</a> researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.</p>
 <p>In your copy of the replication code, add the comment <code>“# ANALYTICAL CHOICE OF TYPE ____. RECORDED FOR THE FIRST TIME [HERE or IN &quot;FILE_NAME-LINE_NUMBER&quot;]”</code> above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):</p>
 <ul>
@@ -2470,19 +2472,19 @@ Data and code available ?                    |       |         |        |       
 </table>
 </div>
 <div id="id-analy" class="section level2">
-<h2><span class="header-section-number">5.2</span> Identifying Choice Type</h2>
+<h2><span class="header-section-number">4.2</span> Identifying Choice Type</h2>
 </div>
 <div id="id-analy" class="section level2">
-<h2><span class="header-section-number">5.3</span> Identifying Analytical Choices</h2>
+<h2><span class="header-section-number">4.3</span> Identifying Analytical Choices</h2>
 </div>
 <div id="id-val" class="section level2">
-<h2><span class="header-section-number">5.4</span> Identifying Analytical Value</h2>
+<h2><span class="header-section-number">4.4</span> Identifying Analytical Value</h2>
 </div>
 <div id="test-rob" class="section level2">
-<h2><span class="header-section-number">5.5</span> Choose and justify alternative values for analytical choices</h2>
+<h2><span class="header-section-number">4.5</span> Choose and justify alternative values for analytical choices</h2>
 </div>
 <div id="test-the-robustness-of-results" class="section level2">
-<h2><span class="header-section-number">5.6</span> Test the robustness of results</h2>
+<h2><span class="header-section-number">4.6</span> Test the robustness of results</h2>
 <p>Test the robustness of results to alternative (sensible) specifications</p>
 <ul>
 <li>Identify sensible alternatives to analytical choices.
@@ -2497,11 +2499,11 @@ Data and code available ?                    |       |         |        |       
 </div>
 </div>
 <div id="concluding-the-reproduction" class="section level1">
-<h1><span class="header-section-number">6</span> Concluding the reproduction</h1>
+<h1><span class="header-section-number">5</span> Concluding the reproduction</h1>
 <p>[UNDER CONSTRUCTION] but testing now</p>
 <p>Walk the students on checking that they have completed all the steps and where can they see their output.</p>
 <div id="final-products" class="section level2">
-<h2><span class="header-section-number">6.1</span> Final products</h2>
+<h2><span class="header-section-number">5.1</span> Final products</h2>
 <ul>
 <li>One-page introduction describing why you chose this paper</li>
 <li>Two-page summary of paper</li>
@@ -2523,7 +2525,7 @@ analytical choices identified in the exercise.</li>
 </div>
 </div>
 <div id="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors" class="section level1">
-<h1><span class="header-section-number">7</span> Guidance for a Constructive Exchange Between Reproducers and Original Authors</h1>
+<h1><span class="header-section-number">6</span> Guidance for a Constructive Exchange Between Reproducers and Original Authors</h1>
 <p>The purpose of this chapter is to facilitate constructive and respectful communication between reproducers (you) and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (<a href="https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf">2019</a>) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): <em>treat others and their work, as you would like others to treat you and your work!</em></p>
 <p><strong>1. Carefully and transparently plan your study.</strong></p>
 <ol style="list-style-type: lower-alpha">
@@ -2549,7 +2551,7 @@ analytical choices identified in the exercise.</li>
 <p>To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.</p>
 <p>While we hope that you find these useful, note that they are <em>only recommendations</em>, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.</p>
 <div id="for-reproducers-contacting-the-authors-of-the-original-study" class="section level2">
-<h2><span class="header-section-number">7.1</span> For Reproducers Contacting the Authors of the Original Study</h2>
+<h2><span class="header-section-number">6.1</span> For Reproducers Contacting the Authors of the Original Study</h2>
 <p>Consider the following <em>before</em> you contact the original author:</p>
 <ol style="list-style-type: decimal">
 <li>Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">Data and Code Guidance</a> to determine whether you have everything before you start. A few things to consider:
@@ -2578,7 +2580,7 @@ analytical choices identified in the exercise.</li>
 </ol></li>
 </ol>
 <div id="contacting-the-original-authors-to-request-items-that-are-missing" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Contacting the original author(s) to request items that are missing</h3>
+<h3><span class="header-section-number">6.1.1</span> Contacting the original author(s) to request items that are missing</h3>
 <p><strong>Template email:</strong></p>
 <blockquote>
 <p><strong>Subject:</strong> Reproduction materials for <code>[“Title of the paper”]</code></p>
@@ -2596,7 +2598,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="asking-for-additional-guidance-when-some-materials-have-been-shared" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> Asking for additional guidance when some materials have been shared</h3>
+<h3><span class="header-section-number">6.1.2</span> Asking for additional guidance when some materials have been shared</h3>
 <p><em>Note:</em> Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2636,7 +2638,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons" class="section level3">
-<h3><span class="header-section-number">7.1.3</span> Response when the original author has refused to share due to <em>undisclosed reasons</em></h3>
+<h3><span class="header-section-number">6.1.3</span> Response when the original author has refused to share due to <em>undisclosed reasons</em></h3>
 <p><em>Note:</em> You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2651,7 +2653,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data" class="section level3">
-<h3><span class="header-section-number">7.1.4</span> Response when the original author has refused to share due to legal or ethical restrictions of the data</h3>
+<h3><span class="header-section-number">6.1.4</span> Response when the original author has refused to share due to legal or ethical restrictions of the data</h3>
 <p><strong>Template email:</strong></p>
 <blockquote>
 <p><strong>Subject:</strong> Re: Reproduction materials for `[“Title of the paper”]</p>
@@ -2675,7 +2677,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise" class="section level3">
-<h3><span class="header-section-number">7.1.5</span> Contacting the original author to share the results of your reproduction exercise</h3>
+<h3><span class="header-section-number">6.1.5</span> Contacting the original author to share the results of your reproduction exercise</h3>
 <p><em>Note</em>: Reporting the results of reproductions is probably the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.</p>
 <p>Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: <em>reproduce the work of others as you would like for others to reproduce yours</em>, and make sure that is reflected in how you discuss any discrepancies between your and the original work.</p>
 <p><strong>Template email:</strong>
@@ -2691,10 +2693,10 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="responding-to-hostile-responses-from-original-authors" class="section level3">
-<h3><span class="header-section-number">7.1.6</span> Responding to hostile responses from original authors</h3>
+<h3><span class="header-section-number">6.1.6</span> Responding to hostile responses from original authors</h3>
 <p><em>Note:</em> Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment.</p>
 <div id="dismissive-comments" class="section level4">
-<h4><span class="header-section-number">7.1.6.1</span> Dismissive comments</h4>
+<h4><span class="header-section-number">6.1.6.1</span> Dismissive comments</h4>
 <p>In cases of dismissive comments, the best course of action may be to simply thank the author for their response and continue with the exercise.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2709,7 +2711,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="harassment-andor-discrimination" class="section level4">
-<h4><span class="header-section-number">7.1.6.2</span> Harassment and/or discrimination</h4>
+<h4><span class="header-section-number">6.1.6.2</span> Harassment and/or discrimination</h4>
 <p>The AEA and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the <a href="https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination">AEA Policy on Harassment and Discrimination</a> has listed as unacceptable, and could emerge in a hostile exchange regarding a reproduction:</p>
 <ul>
 <li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)
@@ -2735,28 +2737,28 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </div>
 </div>
 <div id="code-of-conduct" class="section level1">
-<h1><span class="header-section-number">8</span> Code of Conduct</h1>
+<h1><span class="header-section-number">7</span> Code of Conduct</h1>
 <p>[UNDER CONSTRUCTION]</p>
 <!--chapter:end:08-code-of-conduct.Rmd-->
 </div>
 <div id="contributions" class="section level1">
-<h1><span class="header-section-number">9</span> Contributions</h1>
+<h1><span class="header-section-number">8</span> Contributions</h1>
 <p>TO DO</p>
 <div id="ask-for-feedback-on-guidelines" class="section level2">
-<h2><span class="header-section-number">9.1</span> Ask for feedback on guidelines</h2>
+<h2><span class="header-section-number">8.1</span> Ask for feedback on guidelines</h2>
 </div>
 <div id="list-of-contributors" class="section level2">
-<h2><span class="header-section-number">9.2</span> List of Contributors</h2>
+<h2><span class="header-section-number">8.2</span> List of Contributors</h2>
 <!--chapter:end:09-contributions.Rmd-->
 </div>
 </div>
 <div id="reproduction-diagrams" class="section level1">
-<h1><span class="header-section-number">10</span> Reproduction Diagrams</h1>
+<h1><span class="header-section-number">9</span> Reproduction Diagrams</h1>
 <div id="different-scenarios" class="section level2">
-<h2><span class="header-section-number">10.1</span> Different Scenarios</h2>
+<h2><span class="header-section-number">9.1</span> Different Scenarios</h2>
 <p>JOEL: PLease fill-in.</p>
 <div id="complete" class="section level3">
-<h3><span class="header-section-number">10.1.1</span> Complete</h3>
+<h3><span class="header-section-number">9.1.1</span> Complete</h3>
 <pre><code>  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
@@ -2771,7 +2773,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
                           └───[data] admin_01raw.csv  </code></pre>
 </div>
 <div id="raw-data-and-analytic-data-but-cleaning-code-is-missing." class="section level3">
-<h3><span class="header-section-number">10.1.2</span> Raw data and analytic data, but cleaning code is missing.</h3>
+<h3><span class="header-section-number">9.1.2</span> Raw data and analytic data, but cleaning code is missing.</h3>
 <pre><code>  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
@@ -2787,19 +2789,19 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </div>
 </div>
 <div id="additional-resources" class="section level2">
-<h2><span class="header-section-number">10.2</span> Additional resources</h2>
+<h2><span class="header-section-number">9.2</span> Additional resources</h2>
 <p>Create a section with short summaries of great resources for comp. repro and invite reader to contribute.</p>
 <div id="some-summaries" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> Some summaries</h3>
+<h3><span class="header-section-number">9.2.1</span> Some summaries</h3>
 </div>
 <div id="summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent" class="section level3">
-<h3><span class="header-section-number">10.2.2</span> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
+<h3><span class="header-section-number">9.2.2</span> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
 <ul>
 <li>TODO</li>
 </ul>
 </div>
 <div id="links" class="section level3">
-<h3><span class="header-section-number">10.2.3</span> Links</h3>
+<h3><span class="header-section-number">9.2.3</span> Links</h3>
 <ul>
 <li><a href="https://www.projecttier.org/tier-protocol/">Project TIER</a><br />
 </li>
@@ -2832,22 +2834,22 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </div>
 </div>
 <div id="additional-resources-1" class="section level1">
-<h1><span class="header-section-number">11</span> Additional resources</h1>
+<h1><span class="header-section-number">10</span> Additional resources</h1>
 <ul>
 <li><strong>Coding errors:</strong> A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the <a href="ADD%20LINK">ACRE procedure to report coding errors</a>.</li>
 </ul>
 <p>Create a section with short summaries of great resources for comp. repro and invite reader to contribute.</p>
 <div id="some-summaries-1" class="section level2">
-<h2><span class="header-section-number">11.1</span> Some summaries</h2>
+<h2><span class="header-section-number">10.1</span> Some summaries</h2>
 <div id="summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent" class="section level3">
-<h3><span class="header-section-number">11.1.1</span> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
+<h3><span class="header-section-number">10.1.1</span> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
 <ul>
 <li>TODO</li>
 </ul>
 </div>
 </div>
 <div id="links-1" class="section level2">
-<h2><span class="header-section-number">11.2</span> Links</h2>
+<h2><span class="header-section-number">10.2</span> Links</h2>
 <p>TODO: Add and classify</p>
 <ul>
 <li><a href="https://www.projecttier.org/tier-protocol/">Project TIER</a><br />
@@ -2880,7 +2882,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </div>
 </div>
 <div id="definitions" class="section level1">
-<h1><span class="header-section-number">12</span> Definitions</h1>
+<h1><span class="header-section-number">11</span> Definitions</h1>
 <p>TO DO</p>
 <!--chapter:end:12-glossary.Rmd-->
 </div>

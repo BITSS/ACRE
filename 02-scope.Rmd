@@ -81,6 +81,8 @@ Verify that the paper has reproduction package (consult the unofficial AEA [Data
   </tr>
 </table>
 
+Working paper here says 3 hours per replication: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS)
+
 
 ### Read and summarize the paper. {#read-sum}
 
