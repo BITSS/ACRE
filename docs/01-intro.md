@@ -32,13 +32,13 @@ Note that the highest level of reproducibility, which requires complete reproduc
 
 ## Stages of the exercise {-}
 
-This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guideleines, with a fifth optional stage :   
+This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guideleines, with an fifth optional stage :   
 
-1. [**Scoping**](#scoping), where the reproducer defines the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;  
-2.	[**Assessment**](#assessment), where the reproducer reviews and describes in detail the available reproduction package (or the “reproduction materials”) and provides an assessment of the current level of computational reproducibility of the selected outputs;  
-3.	[**Improvement**](#improvements), where the reproducer modifies the content and/or the organization of the reproduction package to improve its reproducibility;  
-4.	[**Robustness checks**](#robust), where the reproducer assesses the quality of selected analytical choices from the paper; and  
-5.	**Extension** (if applicable), where the reproducer may “extend” the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
+1. [**Scoping**](#scoping), where you (the reproducer) wil define the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;  
+2.	[**Assessment**](#assessment), where you will review and describe in detail the available reproduction package (or the “reproduction materials”) and provides an assessment of the current level of computational reproducibility of the selected outputs; 
+3.	[**Improvement**](#improvements), where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;  
+4.	[**Robustness checks**](#robust), where will assess the quality of selected analytical choices from the paper; and  
+5.	**Extension** (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
 
                Figure 2: Steps for reproduction
 
@@ -61,4 +61,4 @@ Figure 2 depicts suggested levels of effort for each stage of the exercise depen
 
 ## Recording the results of the exercise {-}
 
-Reproducers will be asked to record the results of their reproduction progress through each stage. As part of Stage 1:[Scoping](#scoping), they will be asked to complete [a first survey](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN), where they will declare the paper of choice and the specific output(s) on which they will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: [Assessment](#assessment), you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1Uj5rEwSpFh_RXsmRhFnbz8cL88PUA5cRKp_38xV4eeE/copy?usp=sharing). In Stage 3: [Improvement](#improvements), reproducers will be asked you to record specific improvements and report potential changes in the level of reproducibility. Results from stage 2 and 3 will be recorded in a [second survey](ADD LINK). In a [third and final survey](ADD LINK) for Stage 4: [Robustness Checks](#robust) reproducers will help to track the different analytical choices and test possible variations.
+You will be asked to record the results of their reproduction progress through each stage. As part of Stage 1:[Scoping](#scoping), they will be asked to complete [a first survey](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN), where you will declare the paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: [Assessment](#assessment), you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1Uj5rEwSpFh_RXsmRhFnbz8cL88PUA5cRKp_38xV4eeE/copy?usp=sharing). In Stage 3: [Improvement](#improvements), reproducers will be asked you to record specific improvements and report potential changes in the level of reproducibility. Results from stage 2 and 3 will be recorded in a [second survey](ADD LINK). In a [third and final survey](ADD LINK) for Stage 4: [Robustness Checks](#robust) reproducers will help to track the different analytical choices and test possible variations.

@@ -1,10 +1,10 @@
 # Scoping
 
-In the Scoping stage, you will choose a paper to reproduce. , or be assigned one. Chapter 2 describes the steps for defining the scope of a reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.***
+In the Scoping stage, you will choose a paper to reproduce, or be assigned one, verify that the paper has some reproduction materials, read the paper, and declare the scope of the reprodcution excercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.***
 
 ## Steps
 
-Before you invest any time in reading or summarizing a paper, complete steps 2.1.1–2.1.2: 
+Before you invest any time in reading or summarizing a paper, complete steps 1.1.1 and 1.1.2: 
 
 ### Check records on the ACRE platform. {#check-acre}
 
@@ -33,9 +33,9 @@ Verify that the paper has reproduction package (consult the unofficial AEA [Data
 <table class="tg">
   <tr>
     <th class="tg-0pky"></th>
-    <th class="tg-c3ow" colspan="2">2 week</th>
-    <th class="tg-c3ow" colspan="2">1 month</th>
-    <th class="tg-c3ow" colspan="2">1 semester</th>
+    <th class="tg-c3ow" colspan="2">2 weeks <br> (~10 days)</th>
+    <th class="tg-c3ow" colspan="2">1 month <br> (~20 days)</th>
+    <th class="tg-c3ow" colspan="2">1 semester <br> (~100 days)</th>
   </tr>
   <tr>
     <td class="tg-0pky"></td>
