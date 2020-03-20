@@ -15,11 +15,11 @@ This section explains how to list all the input materials found or referred to i
 
 The following terms will be used in this section:     
   
-  -	**Cleaning code:** A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).  
+ -	**Cleaning code:** A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).  
   
-  -	**Analysis code:** A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+ -	**Analysis code:** A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
-  - **Reproduction package:** Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication ('original reproduction package'), or it may contain additional resources added by a reproducer ('reproducer X reproduction package'). See the [verification list](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package. 
+
 
 ### Describe the data sources and raw data. 
 

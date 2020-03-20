@@ -18,8 +18,7 @@ This exercise is part of the Advancing Computational Reproducibility in Economic
 
 ## Beyond binary judgments {-}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant. 
-Two reasons:
+Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant. 
 
 First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 

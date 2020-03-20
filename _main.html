@@ -11,7 +11,7 @@
 
 <meta name="author" content="ACRE Team" />
 
-<meta name="date" content="2020-03-18" />
+<meta name="date" content="2020-03-19" />
 
 <title>Guidelines for Computational Reproducibility in Economics</title>
 
@@ -1581,7 +1581,7 @@ summary {
 
 <h1 class="title toc-ignore">Guidelines for Computational Reproducibility in Economics</h1>
 <h4 class="author">ACRE Team</h4>
-<h4 class="date">2020-03-18</h4>
+<h4 class="date">2020-03-19</h4>
 
 </div>
 
@@ -1764,12 +1764,11 @@ summary {
 <p>This exercise is part of the Advancing Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project led by the Berkeley Initiative for Transparency in the Social Sciences <a href="bitss.org">(BITSS)</a> and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The project of Advancing Computational Reproducibility in Economics (ACRE) looks to assess, enable, and improve the computational reproducibility of published economics research.</p>
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
 <h2>Beyond binary judgments</h2>
-<p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
-Two reasons:</p>
+<p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant.</p>
 <p>First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure <a href="#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-ddb21e32830826ebf898" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ddb21e32830826ebf898">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-cc3aa02c0b23e0e130ce" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cc3aa02c0b23e0e130ce">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce
 </p>
@@ -1815,22 +1814,13 @@ Figure 0.1: One paper has multiple components to reproduce
 </div>
 <div id="scoping" class="section level1">
 <h1><span class="header-section-number">1</span> Scoping</h1>
-<p>In the Scoping stage, you will choose a paper to reproduce, or be assigned one, verify that the paper has some reproduction materials, read the paper, and declare the scope of the reprodcution excercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. <strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5">Survey 1</a> to record your work for this stage.</em></strong></p>
-<div id="steps" class="section level2">
-<h2><span class="header-section-number">1.1</span> Steps</h2>
-<p>Before you invest any time in reading or summarizing a paper, complete steps 1.1.1 and 1.1.2:</p>
-<div id="check-acre" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Check records on the ACRE platform.</h3>
-<p>Check the <a href="ADD%20LINK">ACRE database</a> for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the <strong>paper status</strong> is “open to reproductions”, and create a new entry<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-</div>
-<div id="verify-rep-mat" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Verify that reproduction package exist.</h3>
-<p>Verify that the paper has reproduction package (consult the unofficial AEA <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">Data and Code Guidance</a> to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested <a href="LINK">here</a>, making sure to copy (<a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.</p>
-<!--  
-### Advise on scoping for different course length
-
-2-week courses should not try to improve reproducibility from raw data
--->
+<p>In the Scoping stage, you will choose a paper to reproduce, or be assigned one, verify that the paper has some reproduction materials, and if materials are available you will read the paper and declare the scope of the reprodcution excercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. <strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5">Survey 1</a> to record your work for this stage.</em></strong></p>
+<div id="before-you-begin." class="section level2">
+<h2><span class="header-section-number">1.1</span> Before you begin.</h2>
+<div id="identify-your-relevant-timeline." class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Identify your relevant timeline.</h3>
+<p>Be mindful of your time limitations when defining the scope of your reproduction activity. This will be given by the type of excercise chosen by the instructor/academic advisor. These will vary from the format of a homeworrk over a couple of weeks, to a longer project that accounts a for a larger fraction of a class (or independent study) that may take a month to complete, or to a semester long project (most likely in the undergraduate thesis format).</p>
+<p>Table 1 shows tentative distribution of time across three different reproduction formats. The scoping aand assessment stages are expected to last raoughly the same across all formats (with some additional day for the semester long format, forseeing less experience with research if the reprducer is an undergraduate). Difference emerge when distribution the time for the last two main stages: Improvements and Robustness. For excercises of short duraction, we recommend to stay away from any possible improvements to the raw data (or cleaning code), this will inturn limit the amount of robustness check (for example by not being able to reconstruct variable according to slightly different definitions), but it should leave plenty of space for testing different specifications at the analysis level.</p>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
@@ -1879,7 +1869,7 @@ raw data
 </tr>
 <tr>
 <td class="tg-dvpl">
-scoping
+Scoping
 </td>
 <td class="tg-c3ow" colspan="2">
 10% (1 day)
@@ -1929,8 +1919,11 @@ Improvement
 <td class="tg-0pky">
 Robustness
 </td>
-<td class="tg-c3ow" colspan="2">
-40%
+<td class="tg-c3ow">
+30%
+</td>
+<td class="tg-c3ow">
+10%
 </td>
 <td class="tg-c3ow" colspan="2">
 30%
@@ -1959,26 +1952,47 @@ Extension
 </table>
 <p>Working paper here says 3 hours per replication: <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS" class="uri">https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS</a>)</p>
 </div>
-<div id="read-sum" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> Read and summarize the paper.</h3>
+<div id="check-the-acre-records-to" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Check the ACRE records to</h3>
+<p>Before you invest any time in reading or summarizing a paper, complete steps 1.1.1 and 1.1.2:</p>
+</div>
+</div>
+<div id="check-acre" class="section level2">
+<h2><span class="header-section-number">1.2</span> Check records on the ACRE platform.</h2>
+<p>Check the <a href="ADD%20LINK">ACRE database</a> for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the <strong>paper status</strong> is “open to reproductions”, and create a new entry<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+</div>
+<div id="verify-rep-mat" class="section level2">
+<h2><span class="header-section-number">1.3</span> Verify that reproduction package exist.</h2>
+<ul>
+<li><strong>Reproduction package:</strong> Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (‘original reproduction package’), or it may contain additional resources added by a reproducer (‘reproducer X reproduction package’). See the <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">verification list</a> from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.</li>
+</ul>
+<p>Verify that the paper has reproduction package. If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has not yet submitted a similar request, contact the authors using language suggested <a href="#for-reproducers-contacting-the-authors-of-the-original-study">here</a>, making sure to copy (<a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.</p>
+<!--  
+### Advise on scoping for different course length
+
+2-week courses should not try to improve reproducibility from raw data
+-->
+</div>
+<div id="read-sum" class="section level2">
+<h2><span class="header-section-number">1.4</span> Read and summarize the paper.</h2>
 <p>Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).</p>
 <p>Read the paper and write a two-page summary, answering the following: What is the main question the paper attempts to answer? What methodologies doe is employ? What data sources do the authors use?</p>
 </div>
-<div id="declare-scope-of-the-exercise." class="section level3">
-<h3><span class="header-section-number">1.1.4</span> Declare scope of the exercise.</h3>
+<div id="declare-scope-of-the-exercise." class="section level2">
+<h2><span class="header-section-number">1.5</span> Declare scope of the exercise.</h2>
 <p>Declare if your assessment will be of all of the paper’s results (<strong>complete</strong>) or just the <strong>main results</strong>, and if you will aim to start with <strong>raw data</strong> or <strong>processed data</strong>. Find definitions of these concepts below.</p>
 <p>ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.</p>
-<div id="define-your-reproduction-margins." class="section level4">
-<h4><span class="header-section-number">1.1.4.1</span> Define your reproduction margins.</h4>
-<div id="outputs" class="section level5">
-<h5><span class="header-section-number">1.1.4.1.1</span> Define the <em>extensive margin</em>: outputs to reproduced</h5>
+<div id="define-your-reproduction-margins." class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Define your reproduction margins.</h3>
+<div id="outputs" class="section level4">
+<h4><span class="header-section-number">1.5.1.1</span> Define the <em>extensive margin</em>: outputs to reproduced</h4>
 <p>Define whether you will attempt to reproduce all of your chosen paper’s results or just the main results.</p>
 <ul>
 <li><p><strong>Complete</strong>: A successful complete reproduction obtains all of the same estimates presented in the chosen paper. This includes tables, figures, and inline estimates, both in the main body of the paper and the appendices.</p></li>
 <li><p><strong>Main results</strong>: A successful reproduction of main results obtains the same estimates as those highlighted in the chosen paper’s abstract, introduction, or conclusion. If no estimate is highlighted, you should choose the main result and declare it at the beggining of the reproduction.</p></li>
 </ul>
-<div id="describe-the-types-of-output." class="section level6">
-<h6><span class="header-section-number">1.1.4.1.1.1</span> Describe the types of output.</h6>
+<div id="describe-the-types-of-output." class="section level5">
+<h5><span class="header-section-number">1.5.1.1.1</span> Describe the types of output.</h5>
 <p>Broadly describe the outputs you will attempt to reproduce.</p>
 <ul>
 <li><strong>Tables:</strong> Describe how to cite record location.
@@ -1990,8 +2004,8 @@ Extension
 </ul>
 </div>
 </div>
-<div id="intensive" class="section level5">
-<h5><span class="header-section-number">1.1.4.1.2</span> Define the <em>intensive margin</em>: depth of reproduction in terms of original data.</h5>
+<div id="intensive" class="section level4">
+<h4><span class="header-section-number">1.5.1.2</span> Define the <em>intensive margin</em>: depth of reproduction in terms of original data.</h4>
 <ul>
 <li><strong>Raw data</strong> sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it <em>processed</em>.<br />
 </li>
@@ -2002,8 +2016,8 @@ Extension
 <li><em>Analytic data</em> is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).</li>
 </ul></li>
 </ul>
-<div id="classifying-a-data-set" class="section level6">
-<h6><span class="header-section-number">1.1.4.1.2.1</span> Classifying a data set</h6>
+<div id="classifying-a-data-set" class="section level5">
+<h5><span class="header-section-number">1.5.1.2.1</span> Classifying a data set</h5>
 <p>A data set may be classified as <strong>raw</strong> if it fits any of the following criteria:</p>
 <ul>
 <li>The data is stored in a folder or file labeled as “raw”.<br />
@@ -2021,12 +2035,11 @@ Extension
 </div>
 </div>
 </div>
-</div>
 <div id="sample-strategies-for-scoping" class="section level2">
-<h2><span class="header-section-number">1.2</span> Sample strategies for scoping</h2>
+<h2><span class="header-section-number">1.6</span> Sample strategies for scoping</h2>
 <p>ADD.</p>
 <div id="strategy-1" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> Strategy 1:</h3>
+<h3><span class="header-section-number">1.6.1</span> Strategy 1:</h3>
 <ol style="list-style-type: decimal">
 <li>Attempt to reproduce the paper’s main estimates.</li>
 <li>Attempt to reproduce two main tables and/or two main figures.</li>
@@ -2035,7 +2048,7 @@ Extension
 </ol>
 </div>
 <div id="strategy-2" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> Strategy 2:</h3>
+<h3><span class="header-section-number">1.6.2</span> Strategy 2:</h3>
 <ol style="list-style-type: decimal">
 <li>Attempt to reproduce all outputs resulting from the analytic data.</li>
 <li>Once you can do that, try to make improvements.</li>
@@ -2056,11 +2069,8 @@ Extension
 <p>This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.</p>
 <p>The following terms will be used in this section:</p>
 <ul>
-<li><p><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).</p>
-<ul>
+<li><p><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).</p></li>
 <li><p><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</p></li>
-<li><p><strong>Reproduction package:</strong> Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (‘original reproduction package’), or it may contain additional resources added by a reproducer (‘reproducer X reproduction package’). See the <a href="https://social-science-data-editors.github.io/guidance/Verification_guidance.html">verification list</a> from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.</p></li>
-</ul></li>
 </ul>
 <div id="describe-the-data-sources-and-raw-data." class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Describe the data sources and raw data.</h3>
@@ -2735,29 +2745,13 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </div>
 </div>
 </div>
-<div id="code-of-conduct" class="section level1">
-<h1><span class="header-section-number">7</span> Code of Conduct</h1>
-<p>[UNDER CONSTRUCTION]</p>
-<!--chapter:end:08-code-of-conduct.Rmd-->
-</div>
-<div id="contributions" class="section level1">
-<h1><span class="header-section-number">8</span> Contributions</h1>
-<p>TO DO</p>
-<div id="ask-for-feedback-on-guidelines" class="section level2">
-<h2><span class="header-section-number">8.1</span> Ask for feedback on guidelines</h2>
-</div>
-<div id="list-of-contributors" class="section level2">
-<h2><span class="header-section-number">8.2</span> List of Contributors</h2>
-<!--chapter:end:09-contributions.Rmd-->
-</div>
-</div>
 <div id="reproduction-diagrams" class="section level1">
-<h1><span class="header-section-number">9</span> Reproduction Diagrams</h1>
+<h1><span class="header-section-number">7</span> Reproduction Diagrams</h1>
 <div id="different-scenarios" class="section level2">
-<h2><span class="header-section-number">9.1</span> Different Scenarios</h2>
+<h2><span class="header-section-number">7.1</span> Different Scenarios</h2>
 <p>JOEL: PLease fill-in.</p>
 <div id="complete" class="section level3">
-<h3><span class="header-section-number">9.1.1</span> Complete</h3>
+<h3><span class="header-section-number">7.1.1</span> Complete</h3>
 <pre><code>  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
@@ -2772,7 +2766,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
                           └───[data] admin_01raw.csv  </code></pre>
 </div>
 <div id="raw-data-and-analytic-data-but-cleaning-code-is-missing." class="section level3">
-<h3><span class="header-section-number">9.1.2</span> Raw data and analytic data, but cleaning code is missing.</h3>
+<h3><span class="header-section-number">7.1.2</span> Raw data and analytic data, but cleaning code is missing.</h3>
 <pre><code>  table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
@@ -2785,70 +2779,27 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
                     └───[data] analysis_data02.csv
                        └───[code] MISSIN FILE(S)
                           └───[data] admin_01raw.csv  </code></pre>
-</div>
-</div>
-<div id="additional-resources" class="section level2">
-<h2><span class="header-section-number">9.2</span> Additional resources</h2>
-<p>Create a section with short summaries of great resources for comp. repro and invite reader to contribute.</p>
-<div id="some-summaries" class="section level3">
-<h3><span class="header-section-number">9.2.1</span> Some summaries</h3>
-</div>
-<div id="summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent" class="section level3">
-<h3><span class="header-section-number">9.2.2</span> Summary on reproducbile workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
-<ul>
-<li>TODO</li>
-</ul>
-</div>
-<div id="links" class="section level3">
-<h3><span class="header-section-number">9.2.3</span> Links</h3>
-<ul>
-<li><a href="https://www.projecttier.org/tier-protocol/">Project TIER</a><br />
-</li>
-<li><a href="http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383">IDB’s cheatsheet for transparency, reproducibility and ethics</a><br />
-</li>
-<li><a href="https://github.com/labordynamicsinstitute/replicability-training/wiki">Lars Vilhuber LDI’s Wiki for Reproducibility</a>. Particularly <a href="https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication">this section</a>.<br />
-</li>
-<li>World Bank <a href="https://dimewiki.worldbank.org/wiki/Main_Page">DIME’s Wiki for transparent and reproducible research</a>.</li>
-<li>Dynamic documents in <a href="https://rmarkdown.rstudio.com/gallery.html">R</a>, <a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#economics-and-finance">Python</a> and <a href="https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata%20Markdown.pdf">Stata</a><br />
-</li>
-<li>Git resources:
-<ul>
-<li><a href="https://happygitwithr.com">Jenny Bryan’s book</a> and <a href="https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/">video</a><br />
-</li>
-<li><a href="https://lab.github.com/">Github learning lab</a></li>
-<li><a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775">Udacity’s intro</a><br />
-</li>
-<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV">Git for poets</a><br />
-</li>
-<li><a href="https://github.com/kbjarkefur/GitHubDropBox">Combining GitHub and Dropbox</a><br />
-</li>
-<li><a href="https://www.atlassian.com/git/tutorials">Atlassian intro to Git</a></li>
-<li><a href="https://swcarpentry.github.io/git-novice/">Software Carpentry tutorial from the command line</a></li>
-</ul></li>
-<li><a href="https://osf.io">Open Science Framework (OSF)</a></li>
-<li><a href="https://github.com/hblackburn/R4Econ/blob/master/Resources.md">R for Stata users</a></li>
-</ul>
-<!--chapter:end:10-reproduction-diagrams.Rmd-->
+<!--chapter:end:08-reproduction-diagrams.Rmd-->
 </div>
 </div>
 </div>
-<div id="additional-resources-1" class="section level1">
-<h1><span class="header-section-number">10</span> Additional resources</h1>
+<div id="additional-resources" class="section level1">
+<h1><span class="header-section-number">8</span> Additional resources</h1>
 <ul>
 <li><strong>Coding errors:</strong> A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the <a href="ADD%20LINK">ACRE procedure to report coding errors</a>.</li>
 </ul>
 <p>Create a section with short summaries of great resources for comp. repro and invite reader to contribute.</p>
-<div id="some-summaries-1" class="section level2">
-<h2><span class="header-section-number">10.1</span> Some summaries</h2>
+<div id="some-summaries" class="section level2">
+<h2><span class="header-section-number">8.1</span> Some summaries</h2>
 <div id="summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent" class="section level3">
-<h3><span class="header-section-number">10.1.1</span> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
+<h3><span class="header-section-number">8.1.1</span> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</h3>
 <ul>
 <li>TODO</li>
 </ul>
 </div>
 </div>
-<div id="links-1" class="section level2">
-<h2><span class="header-section-number">10.2</span> Links</h2>
+<div id="links" class="section level2">
+<h2><span class="header-section-number">8.2</span> Links</h2>
 <p>TODO: Add and classify</p>
 <ul>
 <li><a href="https://www.projecttier.org/tier-protocol/">Project TIER</a><br />
@@ -2877,17 +2828,28 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <li><a href="https://osf.io">Open Science Framework (OSF)</a></li>
 <li><a href="https://github.com/hblackburn/R4Econ/blob/master/Resources.md">R for Stata users</a></li>
 </ul>
-<!--chapter:end:11-additional-resources.Rmd-->
+<!--chapter:end:09-additional-resources.Rmd-->
+</div>
+</div>
+<div id="contributions" class="section level1">
+<h1><span class="header-section-number">9</span> Contributions</h1>
+<p>TO DO</p>
+<div id="ask-for-feedback-on-guidelines" class="section level2">
+<h2><span class="header-section-number">9.1</span> Ask for feedback on guidelines</h2>
+</div>
+<div id="list-of-contributors" class="section level2">
+<h2><span class="header-section-number">9.2</span> List of Contributors</h2>
+<!--chapter:end:10-contributions.Rmd-->
 </div>
 </div>
 <div id="definitions" class="section level1">
-<h1><span class="header-section-number">11</span> Definitions</h1>
+<h1><span class="header-section-number">10</span> Definitions</h1>
 <p>TO DO</p>
-<!--chapter:end:12-glossary.Rmd-->
+<!--chapter:end:11-glossary.Rmd-->
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
-<!--chapter:end:13-references.Rmd-->
+<!--chapter:end:12-references.Rmd-->
 <div id="refs" class="references">
 <div id="ref-chang2015economics">
 <p>Chang, Andrew, and Phillip Li. 2015. “Is Economics Research Replicable? Sixty Published Papers from Thirteen Journals Say’usually Not’.” <em>Available at SSRN 2669564</em>.</p>

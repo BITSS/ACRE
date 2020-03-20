@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-03-18}
+\date{2020-03-19}
 
 \begin{document}
 \maketitle
@@ -186,8 +186,7 @@ This exercise is part of the Advancing Computational Reproducibility in Economic
 \section*{Beyond binary judgments}\label{beyond-binary-judgments}}
 \addcontentsline{toc}{section}{Beyond binary judgments}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuanced approach by highlighting three dimensions that make binary judgment less relevant.
-Two reasons:
+Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant.
 
 First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
@@ -250,22 +249,17 @@ You will be asked to record the results of their reproduction progress through e
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In the Scoping stage, you will choose a paper to reproduce, or be assigned one, verify that the paper has some reproduction materials, read the paper, and declare the scope of the reprodcution excercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1} to record your work for this stage.}}
+In the Scoping stage, you will choose a paper to reproduce, or be assigned one, verify that the paper has some reproduction materials, and if materials are available you will read the paper and declare the scope of the reprodcution excercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1} to record your work for this stage.}}
 
-\hypertarget{steps}{%
-\section{Steps}\label{steps}}
+\hypertarget{before-you-begin.}{%
+\section{Before you begin.}\label{before-you-begin.}}
 
-Before you invest any time in reading or summarizing a paper, complete steps 1.1.1 and 1.1.2:
+\hypertarget{identify-your-relevant-timeline.}{%
+\subsection{Identify your relevant timeline.}\label{identify-your-relevant-timeline.}}
 
-\hypertarget{check-acre}{%
-\subsection{Check records on the ACRE platform.}\label{check-acre}}
+Be mindful of your time limitations when defining the scope of your reproduction activity. This will be given by the type of excercise chosen by the instructor/academic advisor. These will vary from the format of a homeworrk over a couple of weeks, to a longer project that accounts a for a larger fraction of a class (or independent study) that may take a month to complete, or to a semester long project (most likely in the undergraduate thesis format).
 
-Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the \textbf{paper status} is ``open to reproductions'', and create a new entry\footnote{If the paper status is ``closed to reproductions'', ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.}.
-
-\hypertarget{verify-rep-mat}{%
-\subsection{Verify that reproduction package exist.}\label{verify-rep-mat}}
-
-Verify that the paper has reproduction package (consult the unofficial AEA \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything you need before you start). If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has yet submitted a similar request, contact the authors using language suggested \href{LINK}{here}, making sure to copy (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+Table 1 shows tentative distribution of time across three different reproduction formats. The scoping aand assessment stages are expected to last raoughly the same across all formats (with some additional day for the semester long format, forseeing less experience with research if the reprducer is an undergraduate). Difference emerge when distribution the time for the last two main stages: Improvements and Robustness. For excercises of short duraction, we recommend to stay away from any possible improvements to the raw data (or cleaning code), this will inturn limit the amount of robustness check (for example by not being able to reconstruct variable according to slightly different definitions), but it should leave plenty of space for testing different specifications at the analysis level.
 
 2 weeks (\textasciitilde{}10 days)
 
@@ -285,7 +279,7 @@ analysis data
 
 raw data
 
-scoping
+Scoping
 
 10\% (1 day)
 
@@ -315,7 +309,9 @@ Improvement
 
 Robustness
 
-40\%
+30\%
+
+10\%
 
 30\%
 
@@ -333,25 +329,46 @@ Extension
 
 Working paper here says 3 hours per replication: \url{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS})
 
+\hypertarget{check-the-acre-records-to}{%
+\subsection{Check the ACRE records to}\label{check-the-acre-records-to}}
+
+Before you invest any time in reading or summarizing a paper, complete steps 1.1.1 and 1.1.2:
+
+\hypertarget{check-acre}{%
+\section{Check records on the ACRE platform.}\label{check-acre}}
+
+Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of the same paper. If there are none, create the first entry. If there are previous entries, check if the \textbf{paper status} is ``open to reproductions'', and create a new entry\footnote{If the paper status is ``closed to reproductions'', ACRE has documented interactions between previous reproductors and original authors, so it is not possible to access any further required materials.}.
+
+\hypertarget{verify-rep-mat}{%
+\section{Verify that reproduction package exist.}\label{verify-rep-mat}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Reproduction package:} Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (`original reproduction package'), or it may contain additional resources added by a reproducer (`reproducer X reproduction package'). See the \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{verification list} from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.
+\end{itemize}
+
+Verify that the paper has reproduction package. If any of the materials are missing, use our records to check if requests to authors for these materials have been made before. If nobody has not yet submitted a similar request, contact the authors using language suggested \protect\hyperlink{for-reproducers-contacting-the-authors-of-the-original-study}{here}, making sure to copy (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}). If the authors have been contacted before and the information is still missing, submit a request for closing the paper for further reproductions and choose another paper.
+
 \hypertarget{read-sum}{%
-\subsection{Read and summarize the paper.}\label{read-sum}}
+\section{Read and summarize the paper.}\label{read-sum}}
 
 Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).
 
 Read the paper and write a two-page summary, answering the following: What is the main question the paper attempts to answer? What methodologies doe is employ? What data sources do the authors use?
 
 \hypertarget{declare-scope-of-the-exercise.}{%
-\subsection{Declare scope of the exercise.}\label{declare-scope-of-the-exercise.}}
+\section{Declare scope of the exercise.}\label{declare-scope-of-the-exercise.}}
 
 Declare if your assessment will be of all of the paper's results (\textbf{complete}) or just the \textbf{main results}, and if you will aim to start with \textbf{raw data} or \textbf{processed data}. Find definitions of these concepts below.
 
 ADD description that scoping involves chosing paper, output and level of depth to improve. Given output assessment is all the way to raw data. But improvement and robustness should be limited to the amount of time is provided for the excercise.
 
 \hypertarget{define-your-reproduction-margins.}{%
-\subsubsection{Define your reproduction margins.}\label{define-your-reproduction-margins.}}
+\subsection{Define your reproduction margins.}\label{define-your-reproduction-margins.}}
 
 \hypertarget{outputs}{%
-\paragraph{\texorpdfstring{Define the \emph{extensive margin}: outputs to reproduced}{Define the extensive margin: outputs to reproduced}}\label{outputs}}
+\subsubsection{\texorpdfstring{Define the \emph{extensive margin}: outputs to reproduced}{Define the extensive margin: outputs to reproduced}}\label{outputs}}
 
 Define whether you will attempt to reproduce all of your chosen paper's results or just the main results.
 
@@ -363,7 +380,7 @@ Define whether you will attempt to reproduce all of your chosen paper's results 
 \end{itemize}
 
 \hypertarget{describe-the-types-of-output.}{%
-\subparagraph{Describe the types of output.}\label{describe-the-types-of-output.}}
+\paragraph{Describe the types of output.}\label{describe-the-types-of-output.}}
 
 Broadly describe the outputs you will attempt to reproduce.
 
@@ -382,7 +399,7 @@ Broadly describe the outputs you will attempt to reproduce.
 \end{itemize}
 
 \hypertarget{intensive}{%
-\paragraph{\texorpdfstring{Define the \emph{intensive margin}: depth of reproduction in terms of original data.}{Define the intensive margin: depth of reproduction in terms of original data.}}\label{intensive}}
+\subsubsection{\texorpdfstring{Define the \emph{intensive margin}: depth of reproduction in terms of original data.}{Define the intensive margin: depth of reproduction in terms of original data.}}\label{intensive}}
 
 \begin{itemize}
 \tightlist
@@ -401,7 +418,7 @@ Broadly describe the outputs you will attempt to reproduce.
 \end{itemize}
 
 \hypertarget{classifying-a-data-set}{%
-\subparagraph{Classifying a data set}\label{classifying-a-data-set}}
+\paragraph{Classifying a data set}\label{classifying-a-data-set}}
 
 A data set may be classified as \textbf{raw} if it fits any of the following criteria:
 
@@ -481,13 +498,8 @@ The following terms will be used in this section:
 \begin{itemize}
 \item
   \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions such as deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide or vice versa).
-
-  \begin{itemize}
-  \item
-    \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
-  \item
-    \textbf{Reproduction package:} Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain only the information provided in the original publication (`original reproduction package'), or it may contain additional resources added by a reproducer (`reproducer X reproduction package'). See the \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{verification list} from the Data and Code Guidance by Data Editors for examples of what to look for (or add) to a reproduction package.
-  \end{itemize}
+\item
+  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions such as running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 \end{itemize}
 
 \hypertarget{describe-the-data-sources-and-raw-data.}{%
@@ -1454,22 +1466,6 @@ Here are a some steps you can take if you believe you have experienced bullying,
   \end{itemize}
 \end{itemize}
 
-\hypertarget{code-of-conduct}{%
-\chapter{Code of Conduct}\label{code-of-conduct}}
-
-{[}UNDER CONSTRUCTION{]}
-
-\hypertarget{contributions}{%
-\chapter{Contributions}\label{contributions}}
-
-TO DO
-
-\hypertarget{ask-for-feedback-on-guidelines}{%
-\section{Ask for feedback on guidelines}\label{ask-for-feedback-on-guidelines}}
-
-\hypertarget{list-of-contributors}{%
-\section{List of Contributors}\label{list-of-contributors}}
-
 \hypertarget{reproduction-diagrams}{%
 \chapter{Reproduction Diagrams}\label{reproduction-diagrams}}
 
@@ -1515,65 +1511,7 @@ JOEL: PLease fill-in.
 \end{verbatim}
 
 \hypertarget{additional-resources}{%
-\section{Additional resources}\label{additional-resources}}
-
-Create a section with short summaries of great resources for comp. repro and invite reader to contribute.
-
-\hypertarget{some-summaries}{%
-\subsection{Some summaries}\label{some-summaries}}
-
-\hypertarget{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent}{%
-\subsection{\texorpdfstring{Summary on reproducbile workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducbile workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducbile-workflow-chapter-11-from-christensen2019transparent}}
-
-\begin{itemize}
-\tightlist
-\item
-  TODO
-\end{itemize}
-
-\hypertarget{links}{%
-\subsection{Links}\label{links}}
-
-\begin{itemize}
-\tightlist
-\item
-  \href{https://www.projecttier.org/tier-protocol/}{Project TIER}\\
-\item
-  \href{http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383}{IDB's cheatsheet for transparency, reproducibility and ethics}\\
-\item
-  \href{https://github.com/labordynamicsinstitute/replicability-training/wiki}{Lars Vilhuber LDI's Wiki for Reproducibility}. Particularly \href{https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication}{this section}.\\
-\item
-  World Bank \href{https://dimewiki.worldbank.org/wiki/Main_Page}{DIME's Wiki for transparent and reproducible research}.
-\item
-  Dynamic documents in \href{https://rmarkdown.rstudio.com/gallery.html}{R}, \href{https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks\#economics-and-finance}{Python} and \href{https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata\%20Markdown.pdf}{Stata}\\
-\item
-  Git resources:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \href{https://happygitwithr.com}{Jenny Bryan's book} and \href{https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/}{video}\\
-  \item
-    \href{https://lab.github.com/}{Github learning lab}
-  \item
-    \href{https://www.udacity.com/course/how-to-use-git-and-github--ud775}{Udacity's intro}\\
-  \item
-    \href{https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV}{Git for poets}\\
-  \item
-    \href{https://github.com/kbjarkefur/GitHubDropBox}{Combining GitHub and Dropbox}\\
-  \item
-    \href{https://www.atlassian.com/git/tutorials}{Atlassian intro to Git}
-  \item
-    \href{https://swcarpentry.github.io/git-novice/}{Software Carpentry tutorial from the command line}
-  \end{itemize}
-\item
-  \href{https://osf.io}{Open Science Framework (OSF)}
-\item
-  \href{https://github.com/hblackburn/R4Econ/blob/master/Resources.md}{R for Stata users}
-\end{itemize}
-
-\hypertarget{additional-resources-1}{%
-\chapter{Additional resources}\label{additional-resources-1}}
+\chapter{Additional resources}\label{additional-resources}}
 
 \begin{itemize}
 \tightlist
@@ -1583,8 +1521,8 @@ Create a section with short summaries of great resources for comp. repro and inv
 
 Create a section with short summaries of great resources for comp. repro and invite reader to contribute.
 
-\hypertarget{some-summaries-1}{%
-\section{Some summaries}\label{some-summaries-1}}
+\hypertarget{some-summaries}{%
+\section{Some summaries}\label{some-summaries}}
 
 \hypertarget{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}{%
 \subsection{\texorpdfstring{Summary on reproducible workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}}
@@ -1595,8 +1533,8 @@ Create a section with short summaries of great resources for comp. repro and inv
   TODO
 \end{itemize}
 
-\hypertarget{links-1}{%
-\section{Links}\label{links-1}}
+\hypertarget{links}{%
+\section{Links}\label{links}}
 
 TODO: Add and classify
 
@@ -1637,6 +1575,17 @@ TODO: Add and classify
 \item
   \href{https://github.com/hblackburn/R4Econ/blob/master/Resources.md}{R for Stata users}
 \end{itemize}
+
+\hypertarget{contributions}{%
+\chapter{Contributions}\label{contributions}}
+
+TO DO
+
+\hypertarget{ask-for-feedback-on-guidelines}{%
+\section{Ask for feedback on guidelines}\label{ask-for-feedback-on-guidelines}}
+
+\hypertarget{list-of-contributors}{%
+\section{List of Contributors}\label{list-of-contributors}}
 
 \hypertarget{definitions}{%
 \chapter{Definitions}\label{definitions}}
