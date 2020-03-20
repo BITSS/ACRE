@@ -155,7 +155,7 @@ The following concepts will be used in this section:
 
  - **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the raw data sets.
 
- - **Minimal effort:** Five minutes or less are required to run the code, not including computing time.
+ - **Minimal effort:** One hour or less are required to run the code, not including computing time.
 
 ### Levels of Computational Reproducibility for a Specific Output  
 
