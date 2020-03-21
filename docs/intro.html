@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-03-19" />
+<meta name="date" content="2020-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -80,19 +80,14 @@
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#recording-the-results-of-the-exercise"><i class="fa fa-check"></i>Recording the results of the exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>1</b> Scoping</a><ul>
-<li class="chapter" data-level="1.1" data-path="scoping.html"><a href="scoping.html#before-you-begin."><i class="fa fa-check"></i><b>1.1</b> Before you begin.</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="scoping.html"><a href="scoping.html#identify-your-relevant-timeline."><i class="fa fa-check"></i><b>1.1.1</b> Identify your relevant timeline.</a></li>
-<li class="chapter" data-level="1.1.2" data-path="scoping.html"><a href="scoping.html#check-the-acre-records-to"><i class="fa fa-check"></i><b>1.1.2</b> Check the ACRE records to</a></li>
-</ul></li>
+<li class="chapter" data-level="1.1" data-path="scoping.html"><a href="scoping.html#select-a-candidate-paper-or-be-assigned-one."><i class="fa fa-check"></i><b>1.1</b> Select a candidate paper or be assigned one.</a></li>
 <li class="chapter" data-level="1.2" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>1.2</b> Check records on the ACRE platform.</a></li>
 <li class="chapter" data-level="1.3" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>1.3</b> Verify that reproduction package exist.</a></li>
 <li class="chapter" data-level="1.4" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>1.4</b> Read and summarize the paper.</a></li>
-<li class="chapter" data-level="1.5" data-path="scoping.html"><a href="scoping.html#declare-scope-of-the-exercise."><i class="fa fa-check"></i><b>1.5</b> Declare scope of the exercise.</a><ul>
-<li class="chapter" data-level="1.5.1" data-path="scoping.html"><a href="scoping.html#define-your-reproduction-margins."><i class="fa fa-check"></i><b>1.5.1</b> Define your reproduction margins.</a></li>
-</ul></li>
-<li class="chapter" data-level="1.6" data-path="scoping.html"><a href="scoping.html#sample-strategies-for-scoping"><i class="fa fa-check"></i><b>1.6</b> Sample strategies for scoping</a><ul>
-<li class="chapter" data-level="1.6.1" data-path="scoping.html"><a href="scoping.html#strategy-1"><i class="fa fa-check"></i><b>1.6.1</b> Strategy 1:</a></li>
-<li class="chapter" data-level="1.6.2" data-path="scoping.html"><a href="scoping.html#strategy-2"><i class="fa fa-check"></i><b>1.6.2</b> Strategy 2:</a></li>
+<li class="chapter" data-level="1.5" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>1.5</b> Declare scope of the exercise.</a><ul>
+<li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#declare-specific-estimates-to-reproduce."><i class="fa fa-check"></i>Declare specific estimates to reproduce.</a></li>
+<li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#declare-possible-robustness-checks-optional."><i class="fa fa-check"></i>Declare possible robustness checks (optional).</a></li>
+<li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#bonus-identify-your-relevant-timeline."><i class="fa fa-check"></i>Bonus: Identify your relevant timeline.</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>2</b> Assessment</a><ul>
@@ -161,7 +156,9 @@
 <li class="chapter" data-level="9.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>9.1</b> Ask for feedback on guidelines</a></li>
 <li class="chapter" data-level="9.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>9.2</b> List of Contributors</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -194,8 +191,8 @@
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant.</p>
 <p>First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-f9f8ec2fe4502b156d58" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f9f8ec2fe4502b156d58">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-43eafb2a2cd526a2ead4" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-43eafb2a2cd526a2ead4">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce
 </p>
