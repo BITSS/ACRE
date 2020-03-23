@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-03-22" />
+<meta name="date" content="2020-03-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 
 
 
@@ -78,7 +82,7 @@
 <li class="chapter" data-level="1" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>1</b> Scoping</a><ul>
 <li class="chapter" data-level="1.1" data-path="scoping.html"><a href="scoping.html#select-a-candidate-paper-or-be-assigned-one."><i class="fa fa-check"></i><b>1.1</b> Select a candidate paper or be assigned one.</a></li>
 <li class="chapter" data-level="1.2" data-path="scoping.html"><a href="scoping.html#check-acre"><i class="fa fa-check"></i><b>1.2</b> Check records on the ACRE platform.</a></li>
-<li class="chapter" data-level="1.3" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>1.3</b> Verify that reproduction package exist.</a></li>
+<li class="chapter" data-level="1.3" data-path="scoping.html"><a href="scoping.html#verify-rep-mat"><i class="fa fa-check"></i><b>1.3</b> Verify that a reproduction package exist.</a></li>
 <li class="chapter" data-level="1.4" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>1.4</b> Read and summarize the paper.</a></li>
 <li class="chapter" data-level="1.5" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>1.5</b> Declare scope of the exercise.</a><ul>
 <li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#declare-specific-estimates-to-reproduce."><i class="fa fa-check"></i>Declare specific estimates to reproduce.</a></li>
@@ -155,6 +159,7 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -198,7 +203,7 @@
 </blockquote>
 </div>
 <div id="verify-rep-mat" class="section level2">
-<h2><span class="header-section-number">1.3</span> Verify that reproduction package exist.</h2>
+<h2><span class="header-section-number">1.3</span> Verify that a reproduction package exist.</h2>
 <p>Verify that the paper has a reproduction package. If there is no reproduction package, use our records to check if requests to authors a reproduction package have been made before. If nobody has yet submitted a similar request, you are encouraged to contact the authors using language suggested <a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study">here</a>, making sure to copy (<a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>).</p>
 <p>We will define a <strong>reproduction package</strong> as the collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code, and documentation. When the materials are provided in the original publication they will be labeled as ‘original reproduction package’, when they provided by a previous reproducer they will be referred to as ‘reproducer X’s reproduction package’. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage.</p>
 <p>If the authors provide any materials, create a public project in the [Open Science Framework/ICPSRopen/Dataverse] and deposit all these materials under the name <code>Original reproduction materials for - Title of the paper</code>. Provide the URL for the repository in the ACRE records.</p>
@@ -210,9 +215,9 @@
 <p><summary>View Decision Tree To Select Paper</summary></p>
 <!--
 
-![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0QTBbU2VsZWN0IFBhcGVyXS0tPkFcbiAgQVtDaGVjayBBQ1JFXSAtLT4gQjFbTm8gcGFwZXIgZW50cnldXG4gIEFbQ2hlY2sgQUNSRV0gLS0-IEIyW1BhcGVyIGVudHJ5XVxuICBCMSAtLT4gfENyZWF0ZSBvbmV8QzFbQ2hlY2sgbWF0ZXJpYWxzXVxuICBCMiAtLT4gQzNbbm8gUi5QLl1cbiAgQjIgLS0-IEMyW1IuUC4gZXhpc3RzXVx0XHRcbiAgQzMgLS0-IEQzW1ByZXZpb3VzIGNvbnRhY3Q_XVxuICBEMyAtLT4geWVzX2Z1W1llcyA8YnI-IGZvbGxvdyB1cD9dXG4gIEQzIC0tPiBFMVtOb11cbiAgRTEgLS0-IEcyW0VtYWlsXVxuICBHMiAtLT4gcmVzcF9lbTFbUmVzcG9uc2VdXG4gIEcyIC0tPiByZXNwX2VtMltObyByZXNwb25zZV1cbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwMVtNYXRlcmlhbHMgPGJyPiBvcGVuXSBcbiAgcG9zX3Jlc3AxIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AyW01hdGVyaWFscyA8YnI-IGNsb3NlZF1cbiAgcG9zX3Jlc3AyIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AzW0Nhbid0IDxicj4gcGFydGlhbF1cbiAgcG9zX3Jlc3AzIC0tPnJlY19zZW1pW0NoYW5nZSBwYXBlcj9dXG4gIHJlY19zZW1pIC0tPiBvd25fYnVpbGRcbiAgcmVjX3NlbWkgLS0-IHllc19jaGFuZ2VcbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwNVtMb3N0IDxicj4gb3Blbl1cbiAgcG9zX3Jlc3A1IC0tPnJlY19zZW1pXG4gIHJlc3BfZW0xIC0tPiBwb3NfcmVzcDRbQ2FuJ3QgPGJyPiBub3RoaW5nXVxuICBwb3NfcmVzcDQgLS0-IHllc19jaGFuZ2VcblxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3A2W0xvc3QgPGJyPiBjbG9zZWRdXG4gIHBvc19yZXNwNiAtLT4geWVzX2NoYW5nZVxuICByZXNwX2VtMiAtLT4gSDRcbiAgRTEgLS0-IEcxW05vIGVtYWlsXVxuICBHMSAtLT4gSDRbUl1cbiAgeWVzX2Z1IC0tPiBvd25fYnVpbGRcbiAgeWVzX2Z1LS0-RzJcdFx0XG4gIHllc19mdS0tPkcxXG4gIEMxIC0tPiBSUF9leFtSLlAuIGV4aXN0c11cdFx0XHRcdFx0IFxuICBSUF9leC0tPlJfUlBbUl1cbiAgUl9SUCAtLT4gcmVhZF9wW1wiUmVhZCAoRGVjbGFyZWQpIFBhcGVyXCJdXG4gIEMyIC0tPiByZWFkX3BcbiAgQzEgLS0-IEQxW25vIFIuUC5dXG4gIEQxIC0tPiBJMVtDaGFuZ2UgcGFwZXJdXG4gIEkxLS0-eWVzX2NoYW5nZVtZZXNdICBcbiAgeWVzX2NoYW5nZS0tPiBINCAgXG4gIEkxLS0-bm9fY2hhbmdlW05vXSAgXG4gIG5vX2NoYW5nZS0tPiBvd25fYnVpbGRbQnVpbGQgUi5QLl1cbiAgbm9fY2hhbmdlLS0-IEcyXG4gIG93bl9idWlsZCAtLT4gUlBfZXhcbiAgSDQgLS0-IEEwXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
 
 -->
+<p><img src="candidate-paper.jpeg" /></p>
 </details>
 </div>
 <div id="read-sum" class="section level2">
