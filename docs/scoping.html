@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-03-21" />
+<meta name="date" content="2020-03-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,10 +50,6 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 
 
 
@@ -159,7 +155,6 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -185,7 +180,7 @@
 <p>In the Scoping stage, you will choose a paper to reproduce or be assigned one, verify that the paper has some reproduction materials, and if materials are available you will read the paper and declare the scope of the reproduction exercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. <strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5">Survey 1</a> to record your work for this stage.</em></strong> In this stage, you are not expected to review the reproduction materials in detail, and most of the exercise’s time should be dedicated to the later stages. You are expected to spend between 1-3 days in the Scoping stage.</p>
 <div id="select-a-candidate-paper-or-be-assigned-one." class="section level2">
 <h2><span class="header-section-number">1.1</span> Select a candidate paper or be assigned one.</h2>
-<p>Ideally, you should select your candidate paper without previously exploring the availability of materials. In the following sections (X - Y) these guidelines will show you how to inspect the feasibility of starting a reproduction exercise in your candidate paper. If there are not enough materials to pursue a reproduction, you will be asked to create a short entry in the ACRE platform (&lt;15 minutes) and select a new candidate paper.</p>
+<p>Ideally, you should select your candidate paper without previously exploring the availability of materials. In the following sections (<a href="scoping.html#check-acre">1.2</a> and <a href="scoping.html#verify-rep-mat">1.3</a>) these guidelines will show you how to inspect the feasibility of starting a reproduction exercise in your candidate paper. If there are not enough materials to pursue a reproduction, you will be asked to create a short entry in the ACRE platform (&lt;15 minutes) and select a new candidate paper.</p>
 <p>Repeat this step until you have found a paper with a reproduction package, this will be your declared paper. Do not invest time in doing a detailed read of any paper until you are sure to have declared paper.</p>
 </div>
 <div id="check-acre" class="section level2">
@@ -214,9 +209,8 @@
 <details>
 <p><summary>View Decision Tree To Select Paper</summary></p>
 <!--
-JOEL: remove comment to see bug when compiling to book
 
-[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0QTBbU2VsZWN0IFBhcGVyXS0tPkFcbiAgQVtDaGVjayBBQ1JFXSAtLT4gQjFbTm8gcGFwZXIgZW50cnldXG4gIEFbQ2hlY2sgQUNSRV0gLS0-IEIyW1BhcGVyIGVudHJ5XVxuICBCMSAtLT4gfENyZWF0ZSBvbmV8QzFbQ2hlY2sgbWF0ZXJpYWxzXVxuICBCMiAtLT4gQzNbbm8gUi5QLl1cbiAgQjIgLS0-IEMyW1IuUC4gZXhpc3RzXVx0XHRcbiAgQzMgLS0-IEQzW1ByZXZpb3VzIGNvbnRhY3Q_XVxuICBEMyAtLT4geWVzX2Z1W1llcyA8YnI-IGZvbGxvdyB1cD9dXG4gIEQzIC0tPiBFMVtOb11cbiAgRTEgLS0-IEcyW0VtYWlsXVxuICBHMiAtLT4gcmVzcF9lbTFbUmVzcG9uc2VdXG4gIEcyIC0tPiByZXNwX2VtMltObyByZXNwb25zZV1cbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwMVtNYXRlcmlhbHMgPGJyPiBvcGVuXSBcbiAgcG9zX3Jlc3AxIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AyW01hdGVyaWFscyA8YnI-IGNsb3NlZF1cbiAgcG9zX3Jlc3AyIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AzW0Nhbid0IDxicj4gcGFydGlhbF1cbiAgcG9zX3Jlc3AzIC0tPnJlY19zZW1pW0NoYW5nZSBwYXBlcj9dXG4gIHJlY19zZW1pIC0tPiBvd25fYnVpbGRcbiAgcmVjX3NlbWkgLS0-IHllc19jaGFuZ2VcbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwNVtMb3N0IDxicj4gb3Blbl1cbiAgcG9zX3Jlc3A1IC0tPnJlY19zZW1pXG4gIHJlc3BfZW0xIC0tPiBwb3NfcmVzcDRbQ2FuJ3QgPGJyPiBub3RoaW5nXVxuICBwb3NfcmVzcDQgLS0-IHllc19jaGFuZ2VcblxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3A2W0xvc3QgPGJyPiBjbG9zZWRdXG4gIHBvc19yZXNwNiAtLT4geWVzX2NoYW5nZVxuICByZXNwX2VtMiAtLT4gSDRcbiAgRTEgLS0-IEcxW05vIGVtYWlsXVxuICBHMSAtLT4gSDRbUl1cbiAgeWVzX2Z1IC0tPiBvd25fYnVpbGRcbiAgeWVzX2Z1LS0-RzJcdFx0XG4gIHllc19mdS0tPkcxXG4gIEMxIC0tPiBSUF9leFtSLlAuIGV4aXN0c11cdFx0XHRcdFx0IFxuICBSUF9leC0tPlJfUlBbUl1cbiAgUl9SUCAtLT4gcmVhZF9wW1JlYWQgUGFwZXJdXG4gIEMyIC0tPiByZWFkX3BbUmVhZCBQYXBlcl1cbiAgQzEgLS0-IEQxW25vIFIuUC5dXG4gIEQxIC0tPiBJMVtDaGFuZ2UgcGFwZXJdXG4gIEkxLS0-eWVzX2NoYW5nZVtZZXNdICBcbiAgeWVzX2NoYW5nZS0tPiBINCAgXG4gIEkxLS0-bm9fY2hhbmdlW05vXSAgXG4gIG5vX2NoYW5nZS0tPiBvd25fYnVpbGRbQnVpbGQgUi5QLl1cbiAgbm9fY2hhbmdlLS0-IEcyXG4gIG93bl9idWlsZCAtLT4gUlBfZXhcbiAgSDQgLS0-IEEwXG4gIFxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblx0QTBbU2VsZWN0IFBhcGVyXS0tPkFcbiAgQVtDaGVjayBBQ1JFXSAtLT4gQjFbTm8gcGFwZXIgZW50cnldXG4gIEFbQ2hlY2sgQUNSRV0gLS0-IEIyW1BhcGVyIGVudHJ5XVxuICBCMSAtLT4gfENyZWF0ZSBvbmV8QzFbQ2hlY2sgbWF0ZXJpYWxzXVxuICBCMiAtLT4gQzNbbm8gUi5QLl1cbiAgQjIgLS0-IEMyW1IuUC4gZXhpc3RzXVx0XHRcbiAgQzMgLS0-IEQzW1ByZXZpb3VzIGNvbnRhY3Q_XVxuICBEMyAtLT4geWVzX2Z1W1llcyA8YnI-IGZvbGxvdyB1cD9dXG4gIEQzIC0tPiBFMVtOb11cbiAgRTEgLS0-IEcyW0VtYWlsXVxuICBHMiAtLT4gcmVzcF9lbTFbUmVzcG9uc2VdXG4gIEcyIC0tPiByZXNwX2VtMltObyByZXNwb25zZV1cbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwMVtNYXRlcmlhbHMgPGJyPiBvcGVuXSBcbiAgcG9zX3Jlc3AxIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AyW01hdGVyaWFscyA8YnI-IGNsb3NlZF1cbiAgcG9zX3Jlc3AyIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AzW0Nhbid0IDxicj4gcGFydGlhbF1cbiAgcG9zX3Jlc3AzIC0tPnJlY19zZW1pW0NoYW5nZSBwYXBlcj9dXG4gIHJlY19zZW1pIC0tPiBvd25fYnVpbGRcbiAgcmVjX3NlbWkgLS0-IHllc19jaGFuZ2VcbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwNVtMb3N0IDxicj4gb3Blbl1cbiAgcG9zX3Jlc3A1IC0tPnJlY19zZW1pXG4gIHJlc3BfZW0xIC0tPiBwb3NfcmVzcDRbQ2FuJ3QgPGJyPiBub3RoaW5nXVxuICBwb3NfcmVzcDQgLS0-IHllc19jaGFuZ2VcblxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3A2W0xvc3QgPGJyPiBjbG9zZWRdXG4gIHBvc19yZXNwNiAtLT4geWVzX2NoYW5nZVxuICByZXNwX2VtMiAtLT4gSDRcbiAgRTEgLS0-IEcxW05vIGVtYWlsXVxuICBHMSAtLT4gSDRbUl1cbiAgeWVzX2Z1IC0tPiBvd25fYnVpbGRcbiAgeWVzX2Z1LS0-RzJcdFx0XG4gIHllc19mdS0tPkcxXG4gIEMxIC0tPiBSUF9leFtSLlAuIGV4aXN0c11cdFx0XHRcdFx0IFxuICBSUF9leC0tPlJfUlBbUl1cbiAgUl9SUCAtLT4gcmVhZF9wW1JlYWQgUGFwZXJdXG4gIEMyIC0tPiByZWFkX3BbUmVhZCBQYXBlcl1cbiAgQzEgLS0-IEQxW25vIFIuUC5dXG4gIEQxIC0tPiBJMVtDaGFuZ2UgcGFwZXJdXG4gIEkxLS0-eWVzX2NoYW5nZVtZZXNdICBcbiAgeWVzX2NoYW5nZS0tPiBINCAgXG4gIEkxLS0-bm9fY2hhbmdlW05vXSAgXG4gIG5vX2NoYW5nZS0tPiBvd25fYnVpbGRbQnVpbGQgUi5QLl1cbiAgbm9fY2hhbmdlLS0-IEcyXG4gIG93bl9idWlsZCAtLT4gUlBfZXhcbiAgSDQgLS0-IEEwXG4gIFxuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
+![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblx0QTBbU2VsZWN0IFBhcGVyXS0tPkFcbiAgQVtDaGVjayBBQ1JFXSAtLT4gQjFbTm8gcGFwZXIgZW50cnldXG4gIEFbQ2hlY2sgQUNSRV0gLS0-IEIyW1BhcGVyIGVudHJ5XVxuICBCMSAtLT4gfENyZWF0ZSBvbmV8QzFbQ2hlY2sgbWF0ZXJpYWxzXVxuICBCMiAtLT4gQzNbbm8gUi5QLl1cbiAgQjIgLS0-IEMyW1IuUC4gZXhpc3RzXVx0XHRcbiAgQzMgLS0-IEQzW1ByZXZpb3VzIGNvbnRhY3Q_XVxuICBEMyAtLT4geWVzX2Z1W1llcyA8YnI-IGZvbGxvdyB1cD9dXG4gIEQzIC0tPiBFMVtOb11cbiAgRTEgLS0-IEcyW0VtYWlsXVxuICBHMiAtLT4gcmVzcF9lbTFbUmVzcG9uc2VdXG4gIEcyIC0tPiByZXNwX2VtMltObyByZXNwb25zZV1cbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwMVtNYXRlcmlhbHMgPGJyPiBvcGVuXSBcbiAgcG9zX3Jlc3AxIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AyW01hdGVyaWFscyA8YnI-IGNsb3NlZF1cbiAgcG9zX3Jlc3AyIC0tPiBSUF9leFxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3AzW0Nhbid0IDxicj4gcGFydGlhbF1cbiAgcG9zX3Jlc3AzIC0tPnJlY19zZW1pW0NoYW5nZSBwYXBlcj9dXG4gIHJlY19zZW1pIC0tPiBvd25fYnVpbGRcbiAgcmVjX3NlbWkgLS0-IHllc19jaGFuZ2VcbiAgcmVzcF9lbTEgLS0-IHBvc19yZXNwNVtMb3N0IDxicj4gb3Blbl1cbiAgcG9zX3Jlc3A1IC0tPnJlY19zZW1pXG4gIHJlc3BfZW0xIC0tPiBwb3NfcmVzcDRbQ2FuJ3QgPGJyPiBub3RoaW5nXVxuICBwb3NfcmVzcDQgLS0-IHllc19jaGFuZ2VcblxuICByZXNwX2VtMSAtLT4gcG9zX3Jlc3A2W0xvc3QgPGJyPiBjbG9zZWRdXG4gIHBvc19yZXNwNiAtLT4geWVzX2NoYW5nZVxuICByZXNwX2VtMiAtLT4gSDRcbiAgRTEgLS0-IEcxW05vIGVtYWlsXVxuICBHMSAtLT4gSDRbUl1cbiAgeWVzX2Z1IC0tPiBvd25fYnVpbGRcbiAgeWVzX2Z1LS0-RzJcdFx0XG4gIHllc19mdS0tPkcxXG4gIEMxIC0tPiBSUF9leFtSLlAuIGV4aXN0c11cdFx0XHRcdFx0IFxuICBSUF9leC0tPlJfUlBbUl1cbiAgUl9SUCAtLT4gcmVhZF9wW1wiUmVhZCAoRGVjbGFyZWQpIFBhcGVyXCJdXG4gIEMyIC0tPiByZWFkX3BcbiAgQzEgLS0-IEQxW25vIFIuUC5dXG4gIEQxIC0tPiBJMVtDaGFuZ2UgcGFwZXJdXG4gIEkxLS0-eWVzX2NoYW5nZVtZZXNdICBcbiAgeWVzX2NoYW5nZS0tPiBINCAgXG4gIEkxLS0-bm9fY2hhbmdlW05vXSAgXG4gIG5vX2NoYW5nZS0tPiBvd25fYnVpbGRbQnVpbGQgUi5QLl1cbiAgbm9fY2hhbmdlLS0-IEcyXG4gIG93bl9idWlsZCAtLT4gUlBfZXhcbiAgSDQgLS0-IEEwXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ)
 
 -->
 </details>
@@ -241,7 +235,7 @@ JOEL: remove comment to see bug when compiling to book
 <div id="declare-estimates" class="section level2">
 <h2><span class="header-section-number">1.5</span> Declare scope of the exercise.</h2>
 <p>By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You need not, however, have spend any time reviewing the reproduction package in detail.</p>
-<p>At this point, you should clearly specify which part of the paper you will attempt to reproduce. The reproduction excercise, as presented in these guidelines, is less focused on the whole paper and more focused on specific estimtates, represented by a unique combination of claim-output-specification. If you are planning on assessing more than one claim or output, we strongly advice to start with one and record your results. Then you can initiate another record in ACRE for the second (or third) component to reproduce, and use the materials and knowledge you develop in the first excercise.</p>
+<p>At this point, you should clearly specify which part of the paper you will attempt to reproduce. The reproduction excercise, as presented in these guidelines, is less focused on the whole paper and more focused on specific estimates, represented by a unique combination of claim-output-specification. If you are planning on assessing more than one claim or output, we strongly advise to start with one and record your results. Then you can initiate another record in ACRE for the second (or third) component to reproduce, and use the materials and knowledge you develop in the first exercise.</p>
 <div id="declare-specific-estimates-to-reproduce." class="section level3 unnumbered">
 <h3>Declare specific estimates to reproduce.</h3>
 <p>The reproduction excercise will be estimate-especific. For this you will be asked to identify one of the scientific claims, and their corresponding preferred specification. If the authors did not explicitly choose a particular estimate, you will be ask to select one. In addition to the preferred estimate you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.</p>

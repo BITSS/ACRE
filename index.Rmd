@@ -58,7 +58,7 @@ output:
          <td>&#9744; New data</td>
       </tr>
       <tr>
-         <td>&#9744; [Rep. pkg exists](#verify-rep-mat)</td>
+         <td>&#9744; [Check Rep. pkg exists](#verify-rep-mat)</td>
          <td>[&#9744; Reproduction score](#score)</td>
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>

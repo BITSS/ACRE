@@ -1,7 +1,7 @@
 --- 
 title: "Guidelines for Computational Reproducibility in Economics"
 author: "ACRE Team"
-date: "2020-03-21"
+date: "2020-03-22"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -58,7 +58,7 @@ output:
          <td>&#9744; New data</td>
       </tr>
       <tr>
-         <td>&#9744; [Rep. pkg exists](#verify-rep-mat)</td>
+         <td>&#9744; [Check Rep. pkg exists](#verify-rep-mat)</td>
          <td>[&#9744; Reproduction score](#score)</td>
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>
