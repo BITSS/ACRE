@@ -1,6 +1,6 @@
 # Scoping
 
-In the Scoping stage, you will choose a paper to reproduce or be assigned one, verify that the paper has some reproduction materials, and if materials are available you will read the paper and declare the scope of the reproduction exercise. Chapter 1 describes the steps for defining the scope of a reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.*** In this stage, you are not expected to review the reproduction materials in detail, and most of the exercise’s time should be dedicated to the later stages. You are expected to spend between 1-3 days in the Scoping stage. 
+In the Scoping stage, you will choose a paper to reproduce or be assigned one, verify that the paper has some reproduction materials, and if materials are available you will read the paper and declare the scope of the reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.*** In this stage, you are not expected to review the reproduction materials in detail, and most of the exercise’s time should be dedicated to the later stages. You are expected to spend between 1-3 days in the Scoping stage. 
 
 
 ## Select a candidate paper or be assigned one. 
@@ -27,33 +27,29 @@ Check the [ACRE database](ADD LINK) for previous assessments of the your candida
 
 ## Verify that a reproduction package exist.  {#verify-rep-mat}
 
+We will define a **reproduction package** as the collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code, and/or documentation. At this point you are *only assessing the existence* of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage. When the materials are provided in the original publication they will be labeled as 'original reproduction package', when they provided by a previous reproducer they will be referred to as 'reproducer X's reproduction package'. 
 
-Verify that the paper has a reproduction package. If there is no reproduction package, use our records to check if requests to authors a reproduction package have been made before. If nobody has yet submitted a similar request, you are encouraged to contact the authors using language suggested [here](#for-reproducers-contacting-the-authors-of-the-original-study), making sure to copy (acre@berkeley.edu). 
+Verify that the paper has a reproduction package. If there is no reproduction package, use our records to check if requests to authors have been made before asking for a reproduction package. If nobody has yet submitted a similar request, you are encouraged to contact the authors using language suggested [here](#for-reproducers-contacting-the-authors-of-the-original-study), making sure to copy (acre@berkeley.edu). 
 
-We will define a **reproduction package** as the collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code, and documentation. When the materials are provided in the original publication they will be labeled as 'original reproduction package', when they provided by a previous reproducer they will be referred to as 'reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage. 
+### Contacting the original authors to request a reproduction package. {-}  
 
-If the authors provide any materials, create a public project in the [Open Science Framework/ICPSRopen/Dataverse] and deposit all these materials under the name `Original reproduction materials for - Title of the paper`. Provide the URL for the repository in the ACRE records.   
+**Reproducers are encouraged to contact authors several weeks before the expected date of officially starting the assignment. For this reason, Instructors are suggested to release the announce the scoping exercise, at the beginning of the semester.**
 
-If the authors have been contacted before and provided no response, you are encouraged to follow up with a reminder email using the same language. Do not forget to copy (acre@berkeley.edu). 
 
-If the authors have provided a response but the reproduction package is still missing, you should verify the category assigned to the original response. If the author indicated that they cannot provide any additional information you are discourage from contacting them again. Create a record in the ACRE database. 
+If you contact the authors using the ACRE template, please classify their response in one of the following two categories: (1) the authors provided a reproduction package, or (2) the authors were not able to share a reproduction package. If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction materials for - Title of the paper`. Provide the URL for the repository in the ACRE records.
 
-If you verified the existence of a reproduction package, your candidate paper is now your declared paper for the ACRE exercise. You can now read the paper! 
+If the authors have provided a response but the reproduction package is still missing, you should verify the category assigned to the original response. If the author indicated that they cannot provide any additional information you are discouraged from contacting them again. Create a record in the ACRE database. If the authors have been contacted before and provided no response, you are encouraged to follow up with a reminder email using the same language. Do not forget to copy (acre@berkeley.edu). 
 
-If you verified the reproduction package does not exist, please leave the proper record in our ACRE database and select a new candidate paper. 
+If you verified the reproduction package does not exist, please leave the proper record in our ACRE database and select a new candidate paper. If you verified the existence of a reproduction package, your candidate paper is now your declared paper for the ACRE exercise. You can now read the paper! 
 
 
 <details><summary>View Decision Tree To Select Paper</summary>
 
 
-<!--
 
-
--->
 ![](candidate-paper.jpeg)
 
 </details>
-
 
 ## Read and summarize the paper. {#read-sum}
 
@@ -74,17 +70,17 @@ When reading/summarizing the paper, you should try to answer the following main 
 
 
 ## Declare scope of the exercise.{#declare-estimates}
-By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You need not, however, have spend any time reviewing the reproduction package in detail. 
+By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You need not, however, have spent any time reviewing the reproduction package in detail. 
 
-At this point, you should clearly specify which part of the paper you will attempt to reproduce. The reproduction excercise, as presented in these guidelines, is less focused on the whole paper and more focused on specific estimates, represented by a unique combination of claim-output-specification. If you are planning on assessing more than one claim or output, we strongly advise to start with one and record your results. Then you can initiate another record in ACRE for the second (or third) component to reproduce, and use the materials and knowledge you develop in the first exercise. 
+At this point, you should clearly specify which part of the paper will be the main focus of your reproduction excercise^[Later in the assessment stage you will be asked to identify all the outputs that are part of your assessment.]. You are asked to focus on specific estimates, represented by a unique combination of claim-output-specification, that represented the authors’ preferred specification for a given claim (or yours). If you are planning to scope more than one claim, we strongly advise to start with one and record your results. Then you can initiate another record in ACRE for the second ( third, or more) claim to reproduce, and use the materials and knowledge you developed in the first exercise. 
     
 
-### Declare specific estimates to reproduce. {-}    
+### Declare specific main estimates to reproduce. {-}    
 
-The reproduction excercise will be estimate-especific. For this you will be asked to identify one of the scientific claims, and their corresponding preferred specification. If the authors did not explicitly choose a particular estimate, you will be ask to select one.  In addition to the preferred estimate you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate. 
+Identify one of the scientific claims, and their corresponding preferred specification, and recorded its magnitude, standard error, and location in the paper (page, table #, and row and column in the table). If the authors did not explicitly choose a particular estimate, you will be asked to select one.  In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate. 
 
 
-### Declare possible robustness checks (optional). {-}  
+### Declare possible robustness checks to main estimates (optional). {-}  
 After reading the paper you might have wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done *within the same methodology*, and *using the same data* (eg., including/excluding a subset of the data like "high-school dropouts" o "women"), please specify a robustness test that you would like to test before starting the assessment stage.  
 
 This concludes all the elements that you will need to conduct the scoping stage. **You now have all the elements necesary to complete [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5)**. 
