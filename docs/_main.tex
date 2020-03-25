@@ -593,7 +593,7 @@ The following concepts will be used in this section:
 \item
   \textbf{Computationally Reproducible from Raw data (CRR):} The output can be reproduced with minimal effort from the raw data sets.
 \item
-  \textbf{Minimal effort:} Five minutes or less are required to run the code, not including computing time.
+  \textbf{Minimal effort:} One hour or less are required to run the code, not including computing time.
 \end{itemize}
 
 \hypertarget{levels-of-computational-reproducibility-for-a-specific-output}{%
@@ -630,33 +630,25 @@ The assessment is made at the output level -- a paper can be highly reproducible
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (\texttt{✔}), or are out of reach given the current level of reproducibility (\texttt{x}).
 
-Figure 1: Levels of Computational Reproducibility and Possible Improvements
-
 \begin{verbatim}
-                                         | Level |               Possible improvements              |
-                                             |----------------------------------------------------------|
-                                             |       |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
-                                             |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
-                                             --------|---------|--------|---------|---------|-----|-----|
-Data and code available ?                    |       |         |        |         |         |     |     |     
-  ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-  ├── Some code only.........................|   L2  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
-  └── What data are available?               |       |         |        |         |         |     |     |
-      ├── Analytic data only. Code?          |       |         |        |         |         |     |     |
-      |   ├── No code or cleaning code only..|   L3  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-      |   └── Analysis code only. Is it CRA? |       |         |        |         |         |     |     |
-      |      ├── No..........................|   L4  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
-      |      └── Yes.........................|   L5  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
-      └── Raw & Analytic data. Code?         |       |         |        |         |         |     |     |
-         ├── None ...........................|   L6  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
-         ├── Analysis code only. CRA?        |       |         |        |         |         |     |     |
-         |  ├── No...........................|   L7  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
-         |  └── Yes..........................|   L8  |    -    |    -   |    -    |    ✔    |  -  |  x  |
-         └── A. and C. code. Is it CRR?      |       |         |        |         |         |     |     |
-             ├── No. CRA?                    |       |         |        |         |         |     |     |
-             |  ├── No.......................|   L9  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
-             |  └── Yes......................|   L10 |    -    |    -   |    -    |    -    |  -  |  ✔  |
-             └── Yes.........................|   L11 |    -    |    -   |    -    |    -    |  -  |  -  |
+                Figure 1: Levels of Computational Reproducibility    
+
+                                 | Availavility of materials, and reproducibility |
+                                 |------------------------------------------------|
+                                 |Analysis| Analysis| CRA | Cleaning| Raw   | CRR |
+                                 |Code    | Data    |     | Code    | Data  |     |
+                                 ---------|---------|-----|---------|-------|-----|
+                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
+L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |     
+L2: Only code and/or docs........| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |     
+L3: Partial analyiss data & code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+L4: All analysis data & code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 \end{verbatim}
 
 Choose the appropriate level of computational reproducibility and record it using the following format.
@@ -1175,6 +1167,48 @@ Consider the following \emph{before} you contact the original author:
   \end{enumerate}
 \end{enumerate}
 
+\hypertarget{contacting-the-original-authors-when-there-is-no-reproduction-package}{%
+\subsection{Contacting the original author(s) when there is no reproduction package}\label{contacting-the-original-authors-when-there-is-no-reproduction-package}}
+
+{[}Aleks Please complete{]}
+
+This is the only email that you will be suggested to send almost verbatim.
+
+\begin{itemize}
+\tightlist
+\item
+  Ask for materials.
+\item
+  Remark that standards have change and you (the author) are not being forced to comply with this request.
+\item
+  Point out that ACRE will track responses to avoid duplication of questions in the future.\\
+\item
+  Specifically ask to answer the two following questions:
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Please classify your response into one of the 5 following categories:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    I am providing the complete reproduction package
+  \item
+    I am providing partial content of the reproduction package
+  \item
+    I cannot provide the reproduction package because is sensitive/propietary data, but providing the code and clear documentation on how to obtain access.
+  \item
+    I cannot provide the reproduction package because is sensitive/propietary data.
+  \item
+    Negative response.
+  \end{itemize}
+\item
+  In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise?
+\end{enumerate}
+
 \hypertarget{contacting-the-original-authors-to-request-items-that-are-missing}{%
 \subsection{Contacting the original author(s) to request items that are missing}\label{contacting-the-original-authors-to-request-items-that-are-missing}}
 
@@ -1409,6 +1443,27 @@ Here are a some steps you can take if you believe you have experienced bullying,
     \textbf{Ask for support from your academic supervisor.} If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
   \end{itemize}
 \end{itemize}
+
+\hypertarget{for-original-authors-responding-to-requests-from-reproducers}{%
+\section{For Original Authors Responding to Requests from Reproducers}\label{for-original-authors-responding-to-requests-from-reproducers}}
+
+{[}Aleks: would it be possible for you to work on this next week (3/30)?{]}
+
+\hypertarget{responding-to-a-repeated-request}{%
+\subsection{Responding to a repeated request}\label{responding-to-a-repeated-request}}
+
+{[}TO DO{]}
+\#\#\# Acknowledging that some information is missing
+
+{[}TO DO{]}
+
+\hypertarget{acknowledging-that-some-material-is-still-embargoed-for-future-research}{%
+\subsection{Acknowledging that some material is still embargoed for future research}\label{acknowledging-that-some-material-is-still-embargoed-for-future-research}}
+
+{[}TO DO{]}
+
+\hypertarget{responding-to-incompleteaggressive-requests-from-reproducer}{%
+\subsection{Responding to incomplete/aggressive requests from reproducer}\label{responding-to-incompleteaggressive-requests-from-reproducer}}
 
 \hypertarget{reproduction-diagrams}{%
 \chapter{Reproduction Diagrams}\label{reproduction-diagrams}}

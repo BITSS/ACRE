@@ -155,7 +155,7 @@ The following concepts will be used in this section:
 
  - **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the raw data sets.
 
- - **Minimal effort:** Five minutes or less are required to run the code, not including computing time.
+ - **Minimal effort:** One hour or less are required to run the code, not including computing time.
 
 ### Levels of Computational Reproducibility for a Specific Output  
 
@@ -187,32 +187,24 @@ The assessment is made at the output level -- a paper can be highly reproducible
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (`✔`), or are out of reach given the current level of reproducibility (`x`).
 
-    Figure 1: Levels of Computational Reproducibility and Possible Improvements   
+                        Figure 1: Levels of Computational Reproducibility    
 
-                                                 | Level |               Possible improvements              |
-                                                 |----------------------------------------------------------|
-                                                 |       |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
-                                                 |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
-                                                 --------|---------|--------|---------|---------|-----|-----|
-    Data and code available ?                    |       |         |        |         |         |     |     |     
-      ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-      ├── Some code only.........................|   L2  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
-      └── What data are available?               |       |         |        |         |         |     |     |
-          ├── Analytic data only. Code?          |       |         |        |         |         |     |     |
-          |   ├── No code or cleaning code only..|   L3  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-          |   └── Analysis code only. Is it CRA? |       |         |        |         |         |     |     |
-          |      ├── No..........................|   L4  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
-          |      └── Yes.........................|   L5  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
-          └── Raw & Analytic data. Code?         |       |         |        |         |         |     |     |
-             ├── None ...........................|   L6  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
-             ├── Analysis code only. CRA?        |       |         |        |         |         |     |     |
-             |  ├── No...........................|   L7  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
-             |  └── Yes..........................|   L8  |    -    |    -   |    -    |    ✔    |  -  |  x  |
-             └── A. and C. code. Is it CRR?      |       |         |        |         |         |     |     |
-                 ├── No. CRA?                    |       |         |        |         |         |     |     |
-                 |  ├── No.......................|   L9  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
-                 |  └── Yes......................|   L10 |    -    |    -   |    -    |    -    |  -  |  ✔  |
-                 └── Yes.........................|   L11 |    -    |    -   |    -    |    -    |  -  |  -  |
+                                     | Availavility of materials, and reproducibility |
+                                     |------------------------------------------------|
+                                     |Analysis| Analysis| CRA | Cleaning| Raw   | CRR |
+                                     |Code    | Data    |     | Code    | Data  |     |
+                                     ---------|---------|-----|---------|-------|-----|
+                                     | P | C  | P  | C  |     | P  |  C | P | C |     |
+    L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |     
+    L2: Only code and/or docs........| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |     
+    L3: Partial analyiss data & code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+    L4: All analysis data & code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+    L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+    L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+    L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+    L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+    L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+    L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
 Choose the appropriate level of computational reproducibility and record it using the following format.
 

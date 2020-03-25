@@ -43,6 +43,28 @@ Consider the following *before* you contact the original author:
 
    4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.   
  
+### Contacting the original author(s) when there is no reproduction package
+
+[Aleks Please complete]
+
+This is the only email that you will be suggested to send almost verbatim. 
+
+- Ask for materials.
+- Remark that standards have change and you (the author) are not being forced to comply with this request. 
+- Point out that ACRE will track responses to avoid duplication of questions in the future.  
+- Specifically ask to answer the two following questions:  
+
+1. Please classify your response into one of the 5 following categories:
+   - I am providing the complete reproduction package
+   - I am providing partial content of the reproduction package
+   - I cannot provide the reproduction package because is sensitive/propietary data, but providing the code and clear documentation on how to obtain access. 
+   - I cannot provide the reproduction package because is sensitive/propietary data.
+   - Negative response. 
+   
+2. In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise? 
+
+   
+
  
 ### Contacting the original author(s) to request items that are missing  
 
@@ -227,3 +249,18 @@ Here are a some steps you can take if you believe you have experienced bullying,
   - **Ask for support from your academic supervisor.** If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.
 
   
+## For Original Authors Responding to Requests from Reproducers  
+[Aleks: would it be possible for you to work on this next week (3/30)?]
+
+### Responding to a repeated request
+
+[TO DO] 
+### Acknowledging that some information is missing
+
+[TO DO]  
+
+### Acknowledging that some material is still embargoed for future research
+
+[TO DO]
+
+###  Responding to incomplete/aggressive requests from reproducer

@@ -1766,8 +1766,8 @@ summary {
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible”. These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant.</p>
 <p>First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure <a href="#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-2eaf19c0089e207b04df" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2eaf19c0089e207b04df">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ca09a6775d45484bbd2b" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ca09a6775d45484bbd2b">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce
 </p>
@@ -2141,7 +2141,7 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 <ul>
 <li><p><strong>Computationally Reproducible from Analytic data (CRA):</strong> The output can be reproduced with minimal effort starting from the analytic data sets.</p></li>
 <li><p><strong>Computationally Reproducible from Raw data (CRR):</strong> The output can be reproduced with minimal effort from the raw data sets.</p></li>
-<li><p><strong>Minimal effort:</strong> Five minutes or less are required to run the code, not including computing time.</p></li>
+<li><p><strong>Minimal effort:</strong> One hour or less are required to run the code, not including computing time.</p></li>
 </ul>
 <div id="levels-of-computational-reproducibility-for-a-specific-output" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
@@ -2161,31 +2161,24 @@ If you have difficulty translating the diagram into a spreadsheet, you can draw 
 <li><p><strong>Level 11 (L11):</strong> All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (<code>✔</code>), or are out of reach given the current level of reproducibility (<code>x</code>).</p>
-<p>Figure 1: Levels of Computational Reproducibility and Possible Improvements</p>
-<pre><code>                                         | Level |               Possible improvements              |
-                                             |----------------------------------------------------------|
-                                             |       |+Analysis|  +Raw  |+Analysis|+Cleaning|Debug|Debug|
-                                             |       |   Data  |  Data  | Code(AC)| Code(CC)|  AC |  CC |
-                                             --------|---------|--------|---------|---------|-----|-----|
-Data and code available ?                    |       |         |        |         |         |     |     |     
-  ├── None ..................................|   L1  |    ✔    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-  ├── Some code only.........................|   L2  |    ✔    |    ✔   |    x    |    x    |  x  |  x  |
-  └── What data are available?               |       |         |        |         |         |     |     |
-      ├── Analytic data only. Code?          |       |         |        |         |         |     |     |
-      |   ├── No code or cleaning code only..|   L3  |    -    |    ✔   |    ✔    |    ✔    |  x  |  x  |
-      |   └── Analysis code only. Is it CRA? |       |         |        |         |         |     |     |
-      |      ├── No..........................|   L4  |    -    |    ✔   |    -    |    ✔    |  ✔  |  x  |
-      |      └── Yes.........................|   L5  |    -    |    ✔   |    -    |    ✔    |  -  |  x  |
-      └── Raw &amp; Analytic data. Code?         |       |         |        |         |         |     |     |
-         ├── None ...........................|   L6  |    -    |    -   |    ✔    |    ✔    |  x  |  x  |
-         ├── Analysis code only. CRA?        |       |         |        |         |         |     |     |
-         |  ├── No...........................|   L7  |    -    |    -   |    -    |    ✔    |  ✔  |  x  |
-         |  └── Yes..........................|   L8  |    -    |    -   |    -    |    ✔    |  -  |  x  |
-         └── A. and C. code. Is it CRR?      |       |         |        |         |         |     |     |
-             ├── No. CRA?                    |       |         |        |         |         |     |     |
-             |  ├── No.......................|   L9  |    -    |    -   |    -    |    -    |  ✔  |  ✔  |
-             |  └── Yes......................|   L10 |    -    |    -   |    -    |    -    |  -  |  ✔  |
-             └── Yes.........................|   L11 |    -    |    -   |    -    |    -    |  -  |  -  |</code></pre>
+<pre><code>                Figure 1: Levels of Computational Reproducibility    
+
+                                 | Availavility of materials, and reproducibility |
+                                 |------------------------------------------------|
+                                 |Analysis| Analysis| CRA | Cleaning| Raw   | CRR |
+                                 |Code    | Data    |     | Code    | Data  |     |
+                                 ---------|---------|-----|---------|-------|-----|
+                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
+L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |     
+L2: Only code and/or docs........| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |     
+L3: Partial analyiss data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+L4: All analysis data &amp; code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
 <p>Choose the appropriate level of computational reproducibility and record it using the following format.</p>
 <pre><code>  |-------------|-------|------------------------|------------|
       | output_name | level | additional_explanation | other_info |
@@ -2547,8 +2540,31 @@ analytical choices identified in the exercise.</li>
 <li><p>Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.</p></li>
 </ol></li>
 </ol>
+<div id="contacting-the-original-authors-when-there-is-no-reproduction-package" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Contacting the original author(s) when there is no reproduction package</h3>
+<p>[Aleks Please complete]</p>
+<p>This is the only email that you will be suggested to send almost verbatim.</p>
+<ul>
+<li>Ask for materials.</li>
+<li>Remark that standards have change and you (the author) are not being forced to comply with this request.</li>
+<li>Point out that ACRE will track responses to avoid duplication of questions in the future.<br />
+</li>
+<li>Specifically ask to answer the two following questions:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Please classify your response into one of the 5 following categories:
+<ul>
+<li>I am providing the complete reproduction package</li>
+<li>I am providing partial content of the reproduction package</li>
+<li>I cannot provide the reproduction package because is sensitive/propietary data, but providing the code and clear documentation on how to obtain access.</li>
+<li>I cannot provide the reproduction package because is sensitive/propietary data.</li>
+<li>Negative response.</li>
+</ul></li>
+<li>In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise?</li>
+</ol>
+</div>
 <div id="contacting-the-original-authors-to-request-items-that-are-missing" class="section level3">
-<h3><span class="header-section-number">6.1.1</span> Contacting the original author(s) to request items that are missing</h3>
+<h3><span class="header-section-number">6.1.2</span> Contacting the original author(s) to request items that are missing</h3>
 <p><strong>Template email:</strong></p>
 <blockquote>
 <p><strong>Subject:</strong> Reproduction materials for <code>[“Title of the paper”]</code></p>
@@ -2566,7 +2582,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="asking-for-additional-guidance-when-some-materials-have-been-shared" class="section level3">
-<h3><span class="header-section-number">6.1.2</span> Asking for additional guidance when some materials have been shared</h3>
+<h3><span class="header-section-number">6.1.3</span> Asking for additional guidance when some materials have been shared</h3>
 <p><em>Note:</em> Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2606,7 +2622,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons" class="section level3">
-<h3><span class="header-section-number">6.1.3</span> Response when the original author has refused to share due to <em>undisclosed reasons</em></h3>
+<h3><span class="header-section-number">6.1.4</span> Response when the original author has refused to share due to <em>undisclosed reasons</em></h3>
 <p><em>Note:</em> You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2621,7 +2637,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data" class="section level3">
-<h3><span class="header-section-number">6.1.4</span> Response when the original author has refused to share due to legal or ethical restrictions of the data</h3>
+<h3><span class="header-section-number">6.1.5</span> Response when the original author has refused to share due to legal or ethical restrictions of the data</h3>
 <p><strong>Template email:</strong></p>
 <blockquote>
 <p><strong>Subject:</strong> Re: Reproduction materials for `[“Title of the paper”]</p>
@@ -2645,7 +2661,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise" class="section level3">
-<h3><span class="header-section-number">6.1.5</span> Contacting the original author to share the results of your reproduction exercise</h3>
+<h3><span class="header-section-number">6.1.6</span> Contacting the original author to share the results of your reproduction exercise</h3>
 <p><em>Note</em>: Reporting the results of reproductions is probably the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.</p>
 <p>Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: <em>reproduce the work of others as you would like for others to reproduce yours</em>, and make sure that is reflected in how you discuss any discrepancies between your and the original work.</p>
 <p><strong>Template email:</strong>
@@ -2661,10 +2677,10 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="responding-to-hostile-responses-from-original-authors" class="section level3">
-<h3><span class="header-section-number">6.1.6</span> Responding to hostile responses from original authors</h3>
+<h3><span class="header-section-number">6.1.7</span> Responding to hostile responses from original authors</h3>
 <p><em>Note:</em> Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment.</p>
 <div id="dismissive-comments" class="section level4">
-<h4><span class="header-section-number">6.1.6.1</span> Dismissive comments</h4>
+<h4><span class="header-section-number">6.1.7.1</span> Dismissive comments</h4>
 <p>In cases of dismissive comments, the best course of action may be to simply thank the author for their response and continue with the exercise.</p>
 <p><strong>Template email:</strong></p>
 <blockquote>
@@ -2679,7 +2695,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 </blockquote>
 </div>
 <div id="harassment-andor-discrimination" class="section level4">
-<h4><span class="header-section-number">6.1.6.2</span> Harassment and/or discrimination</h4>
+<h4><span class="header-section-number">6.1.7.2</span> Harassment and/or discrimination</h4>
 <p>The AEA and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the <a href="https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination">AEA Policy on Harassment and Discrimination</a> has listed as unacceptable, and could emerge in a hostile exchange regarding a reproduction:</p>
 <ul>
 <li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)
@@ -2699,8 +2715,25 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <li><strong>Ask for support from your academic supervisor.</strong> If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.</li>
 </ul></li>
 </ul>
-<!--chapter:end:07-tips-for-a-productive.Rmd-->
 </div>
+</div>
+</div>
+<div id="for-original-authors-responding-to-requests-from-reproducers" class="section level2">
+<h2><span class="header-section-number">6.2</span> For Original Authors Responding to Requests from Reproducers</h2>
+<p>[Aleks: would it be possible for you to work on this next week (3/30)?]</p>
+<div id="responding-to-a-repeated-request" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Responding to a repeated request</h3>
+<p>[TO DO]
+### Acknowledging that some information is missing</p>
+<p>[TO DO]</p>
+</div>
+<div id="acknowledging-that-some-material-is-still-embargoed-for-future-research" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Acknowledging that some material is still embargoed for future research</h3>
+<p>[TO DO]</p>
+</div>
+<div id="responding-to-incompleteaggressive-requests-from-reproducer" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Responding to incomplete/aggressive requests from reproducer</h3>
+<!--chapter:end:07-tips-for-a-productive.Rmd-->
 </div>
 </div>
 </div>
