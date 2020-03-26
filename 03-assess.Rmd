@@ -75,7 +75,7 @@ The resulting report will have the following structure:
 
 List all code files that you find in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other data sets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1) with the following structure:
 
-
+          Code scripts information:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
           | file_name         | location         | inputs              | outputs             | description          | primary_type |
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -105,98 +105,99 @@ Upload the standardized table you build to the describe the code above into the 
 
 If you were able to identify all the relevant components in the previous section, the ACRE builder will produce and diagram like the following.  
 
-    table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-                |___[code] final_merge.do
-                    |___cleaned_1_2.dta
-                    |   |___[code] clean_merged_1_2.do
-                    |       |___merged_1_2.dta
-                    |           |___[code] merge_1_2.do
-                    |               |___cleaned_1.dta
-                    |               |   |___[code] clean_raw_1.py
-                    |               |       |___raw_1.dta
-                    |               |___cleaned_2.dta
-                    |                   |___[code] clean_raw_2.py
-                    |                       |___raw_2.dta
-                    |___cleaned_3_4.dta
-                        |___[code] clean_merged_3_4.do
-                            |___merged_3_4.dta
-                                |___[code] merge_3_4.do
-                                    |___cleaned_3.dta
-                                    |   |___[code] clean_raw_3.py
-                                    |       |___raw_3.dta
-                                    |___cleaned_4.dta
-                                        |___[code] clean_raw_4.py
-                                            |___raw_4.dta
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+                    |___[code] final_merge.do
+                        |___cleaned_1_2.dta
+                        |   |___[code] clean_merged_1_2.do
+                        |       |___merged_1_2.dta
+                        |           |___[code] merge_1_2.do
+                        |               |___cleaned_1.dta
+                        |               |   |___[code] clean_raw_1.py
+                        |               |       |___raw_1.dta
+                        |               |___cleaned_2.dta
+                        |                   |___[code] clean_raw_2.py
+                        |                       |___raw_2.dta
+                        |___cleaned_3_4.dta
+                            |___[code] clean_merged_3_4.do
+                                |___merged_3_4.dta
+                                    |___[code] merge_3_4.do
+                                        |___cleaned_3.dta
+                                        |   |___[code] clean_raw_3.py
+                                        |       |___raw_3.dta
+                                        |___cleaned_4.dta
+                                            |___[code] clean_raw_4.py
+                                                |___raw_4.dta
 
 This diagram, built with the information provided by you (the reproducer), is already an important contribution to understanding all the necessary components required to reproduce a specific output. It conveys key information in a summarized fashion allowing for a more constructive exchange with original authors or other reproducers. For example, when contacting the original authors a request of the type "...file `cleaned_4.dta` in the diagram below (paste diagram) seems to be missing in the reproduction package. Could you please provide access to it?" is a specific and actionable request. It also demonstrates that the reproducer spent significant time understanding the relevant components of the reproduction package. 
 
 ### Incomplete workflow information 
 
 In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE builder will return partial reproduction tree. For example, and using the diagram from above, if the reproduction materials had missing the files `merge_1_2.do, merge_3_4.do, final_merge.do`, the diagrams produced by the builder will be the following: 
-
-    cleaned_3.dta
-        |___[code] clean_raw_3.py
-            |___raw_3.dta
     
-    table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-    
-    cleaned_3_4.dta
-        |___[code] clean_merged_3_4.do
-            |___merged_3_4.dta
-    
-    cleaned_1.dta
-        |___[code] clean_raw_1.py
-            |___raw_1.dta
-    
-    cleaned_2.dta
-        |___[code] clean_raw_2.py
-            |___raw_2.dta
-    
-    cleaned_4.dta
-        |___[code] clean_raw_4.py
-            |___raw_4.dta
-    
-    cleaned_1_2.dta
-        |___[code] clean_merged_1_2.do
-            |___merged_1_2.dta
-    Unusued data sources: None.
+        cleaned_3.dta
+            |___[code] clean_raw_3.py
+                |___raw_3.dta
+        
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+        
+        cleaned_3_4.dta
+            |___[code] clean_merged_3_4.do
+                |___merged_3_4.dta
+        
+        cleaned_1.dta
+            |___[code] clean_raw_1.py
+                |___raw_1.dta
+        
+        cleaned_2.dta
+            |___[code] clean_raw_2.py
+                |___raw_2.dta
+        
+        cleaned_4.dta
+            |___[code] clean_raw_4.py
+                |___raw_4.dta
+        
+        cleaned_1_2.dta
+            |___[code] clean_merged_1_2.do
+                |___merged_1_2.dta
+        Unusued data sources: None.
 
 In this case, the reproducer can still combine this partial information with her knowledge from the paper and produce a candidate tree. One result could be the following: 
 
     
-    table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-                |___MISSSING CODE FILE(S) #3
-                    |___cleaned_3_4.dta
-                    |       |___[code] clean_merged_3_4.do
-                    |           |___merged_3_4.dta
-                    |               |___MISSSING CODE FILE(S) #2
-                    |                   |___cleaned_3.dta
-                    |                   |       |___[code] clean_raw_3.py
-                    |                   |           |___raw_3.dta    
-                    |                   |___cleaned_4.dta
-                    |                           |___[code] clean_raw_4.py
-                    |                               |___raw_4.dta
-                    |___cleaned_1_2.dta
-                            |___[code] clean_merged_1_2.do
-                                |___merged_1_2.dta
-                                    |___MISSSING CODE FILE(S) #1
-                                        |___cleaned_1.dta
-                                        |       |___[code] clean_raw_1.py
-                                        |           |___raw_1.dta
-                                        |   
-                                        |___cleaned_2.dta
-                                                |___[code] clean_raw_2.py
-                                                    |___raw_2.dta
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+                    |___MISSSING CODE FILE(S) #3
+                        |___cleaned_3_4.dta
+                        |       |___[code] clean_merged_3_4.do
+                        |           |___merged_3_4.dta
+                        |               |___MISSSING CODE FILE(S) #2
+                        |                   |___cleaned_3.dta
+                        |                   |       |___[code] clean_raw_3.py
+                        |                   |           |___raw_3.dta    
+                        |                   |___cleaned_4.dta
+                        |                           |___[code] clean_raw_4.py
+                        |                               |___raw_4.dta
+                        |___cleaned_1_2.dta
+                                |___[code] clean_merged_1_2.do
+                                    |___merged_1_2.dta
+                                        |___MISSSING CODE FILE(S) #1
+                                            |___cleaned_1.dta
+                                            |       |___[code] clean_raw_1.py
+                                            |           |___raw_1.dta
+                                            |   
+                                            |___cleaned_2.dta
+                                                    |___[code] clean_raw_2.py
+                                                        |___raw_2.dta
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should go to the code description spreadsheet and add the following entries: 
 
+          Adding additional rows to code spreadsheet:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
           | file_name         | location         | inputs              | outputs             | description          | primary_type |
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -211,6 +212,7 @@ To leave a record of the reconstructed diagrams, you will have to amend the inpu
           | missing_file3     | unknown          | cleaned_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
           |                   |                  | cleaned_1_2.dta     |                     |                      |              |                  
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          
 
 As in the case with the complete workflow, this diagrams (the fragmented trees, or the reconstructed one) provide important information to assess and improve the reproducibility of a specific output. Reproducers can compare reconstructed trees, and/or contact original authors with highly specific inquiries.
 
