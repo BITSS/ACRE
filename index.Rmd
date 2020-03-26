@@ -32,7 +32,7 @@ output:
          <th>[(2) Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>
          <th>[(4) Robustness](#robust)</th>
-         <th>(5) <br> Extensions</th>
+         <th>[(5) Extensions]()</th>
       </tr>
    </thead>
    <tbody>
@@ -64,12 +64,12 @@ output:
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>
          <td>[&#9744; Choice value](#id-val)</td>
-         <td>&#9744; New data</td>
+         <td></td>
       </tr>
       <tr>
          <td>[&#9744;  Read paper](#read-summ)</td>
          <td></td>
-         <td>[&#9744; Debug analysis code](#dac)</td>
+         <td>[&#9744; + Cleaning code](#cc)</td>
          <td>[&#9744; + File structure](#paper-level)</td>
          <td>[&#9744; Justify and test alternatives](#test-rob)</td>
          <td></td>
@@ -77,7 +77,7 @@ output:
       <tr>
          <td>[&#9744; Declare estimates](#declare-estimates)</td>
          <td></td>
-         <td>[&#9744; Debug cleaning code](#dcc)</td>
+         <td>[&#9744; Debug analysis code](#dac)</td>
          <td></td>
          <td>
          <td></td>

@@ -1,7 +1,7 @@
 --- 
 title: "Guidelines for Computational Reproducibility in Economics"
 author: "ACRE Team"
-date: "2020-03-24"
+date: "2020-03-25"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -32,7 +32,7 @@ output:
          <th>[(2) Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>
          <th>[(4) Robustness](#robust)</th>
-         <th>(5) <br> Extensions</th>
+         <th>[(5) Extensions]()</th>
       </tr>
    </thead>
    <tbody>
@@ -64,12 +64,12 @@ output:
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>
          <td>[&#9744; Choice value](#id-val)</td>
-         <td>&#9744; New data</td>
+         <td></td>
       </tr>
       <tr>
          <td>[&#9744;  Read paper](#read-summ)</td>
          <td></td>
-         <td>[&#9744; Debug analysis code](#dac)</td>
+         <td>[&#9744; + Cleaning code](#cc)</td>
          <td>[&#9744; + File structure](#paper-level)</td>
          <td>[&#9744; Justify and test alternatives](#test-rob)</td>
          <td></td>
@@ -77,7 +77,7 @@ output:
       <tr>
          <td>[&#9744; Declare estimates](#declare-estimates)</td>
          <td></td>
-         <td>[&#9744; Debug cleaning code](#dcc)</td>
+         <td>[&#9744; Debug analysis code](#dac)</td>
          <td></td>
          <td>
          <td></td>
@@ -92,9 +92,9 @@ output:
          <td></td>
       </tr>
       <tr>
-         <td>[Record results is Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5)</td>
-         <th colspan=3>[Record results is Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</th>
-         <td>[Record results is Survey 3](ADD LINK)</td>
+         <td>[Record results in Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5)</td>
+         <th colspan=3>[Record results in Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</th>
+         <td>[Record results in Survey 3](ADD LINK)</td>
          <td></td>
       </tr>
    </tbody>

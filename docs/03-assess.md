@@ -2,8 +2,10 @@
 
 The goal of this stage is to conduct a standardized assessment of your chosen paper’s computational reproducibility. This stage is designed to record as much of the learning process behind a reproduction as possible. Such a record facilitates future incremental improvements, allowing new reproducers to pick up where others have left off.
 
+
 First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
-  
+
+In the Scope stage you declared a paper, identified the specific claims you will be reproducing, and record the main estimates that support such claim. In this stage you will identify all the outputs contain those estimates. You will have to decide if you are interested in assessing the reproducibility of that entire output (e.g. "Table 1"), or focused only on the pre-specified estimates (e.g. "rows 3 and 4 of Table 1"). Additionally, you will be able to include other outputs of interest in your assessment. 
 
 **Use [Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7) to record your work as part of this step.**
 
@@ -11,7 +13,7 @@ First, you will provide a detailed description of the reproduction package. Seco
 
 
 ## Describe the inputs. {#describe-inputs}
-This section explains how to list all the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.
+This section explains how to list *all* the input materials found or referred to in the reproduction package. First, you’ll identify data sources and connect them with their raw data files (when available). Second, you’ll locate and provide a brief description of the analytic data files. Finally, you’ll locate, inspect, and describe the analytic code used in the paper.
 
 The following terms will be used in this section:     
   
@@ -21,7 +23,7 @@ The following terms will be used in this section:
 
 
 
-### Describe the data sources and raw data. 
+### Describe the data sources and raw data. {#desc-sourc} 
 
 In the paper to be reproduced, find references to all *data sources* used in the analysis. A data source is usually described in narrative form. For example, if the body of the paper uses text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all data sources mentioned in the paper.   
 
@@ -48,7 +50,7 @@ Record this information in a [standardized spreadsheet](https://docs.google.com/
           | ...                  | ...  | ...                                           | ...                 | ...                 |
           |----------------------|------|-----------------------------------------------|---------------------|---------------------|
 
-### Describe the analytic data sets.
+### Describe the analytic data sets. {#desc-analy}
 
 List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in a [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&range=A1).
 
@@ -94,56 +96,125 @@ As you gain an understanding of each code script, you will likely find more inpu
 
 ## Connect each output to all its inputs {#diagram}
 
-With all the information collected above, you can trace your output to reprodue to its primary sources. Upload the standarized table you build to the decribe the code above into the [ACRE workflow diagram builder](ADD LINK). 
+With all the information collected above, you can trace your output to reprodue to its primary sources. Email the standarized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to acre@berkeley.edu. With-in 24hrs you should receive an email with a reproduction tree that represents the information available on the workflow for behind a specific output. 
 
+<!--
+Upload the standarized table you build to the decribe the code above into the [ACRE workflow diagram builder](ADD LINK). 
+-->
 ### Complete workflow information 
 
 If you were able to identify all the relevant components in the previous section, the ACRE builder will produce and diagram like the following.  
 
-          table 1
-            └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
-                |       └───[data] analysis_data01.csv
-                |          └───[code] data_cleaning01.R
-                |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
-                        └───[data] analysis_data02.csv
-                           └───[code] data_cleaning02.R
-                              └───[data] admin_01raw.csv  
+    table1.tex
+        |___[code] analysis.R
+            |___analysis_data.dta
+                |___[code] final_merge.do
+                    |___cleaned_1_2.dta
+                    |   |___[code] clean_merged_1_2.do
+                    |       |___merged_1_2.dta
+                    |           |___[code] merge_1_2.do
+                    |               |___cleaned_1.dta
+                    |               |   |___[code] clean_raw_1.py
+                    |               |       |___raw_1.dta
+                    |               |___cleaned_2.dta
+                    |                   |___[code] clean_raw_2.py
+                    |                       |___raw_2.dta
+                    |___cleaned_3_4.dta
+                        |___[code] clean_merged_3_4.do
+                            |___merged_3_4.dta
+                                |___[code] merge_3_4.do
+                                    |___cleaned_3.dta
+                                    |   |___[code] clean_raw_3.py
+                                    |       |___raw_3.dta
+                                    |___cleaned_4.dta
+                                        |___[code] clean_raw_4.py
+                                            |___raw_4.dta
 
-The ACRE diagram builder will also generate a table that reprents the diagram above in a data set with the following structure:
-
-          Data representation of diagram behind Table 1.
-          |--------|-------|-------------------|---------------------|------------|
-          | ouput  | order | component         | depends_on          | inpt_type  |
-          |--------|-------|-------------------|---------------------|------------|
-          | table1 | 1     | table1            | formatting_table1.R | code       |
-          |--------|-------|-------------------|---------------------|------------|
-          | table1 | 2     |formatting_table1.R| output1_part2.txt   | output     |
-          |--------|-------|-------------------|---------------------|------------|
-          | table1 | 3     |formatting_table1.R| output1_part1.txt   | output     |
-          |--------|-------|-------------------|---------------------|------------|
-          | table1 | 4     | output_table1.do  | analysis_data01.csv | data       |
-          |--------|-------|-------------------|---------------------|------------|
-          | ...    | ...   | ...               | ...                 | ...        |
-          |--------|-------|-------------------|---------------------|------------|
-
+This diagram, built with the information provided by you (the reproducer), is already an important contribution to understanding all the necesary components required to reproduce a specific output. It conveys key information in a summarized fashion allowing for a more constructive exchange with original authors or other reproducers. For example, when contacting the original authors a request of the type "...file `cleaned_4.dta` in the diagram below (paste diagram) seems to be missing in the reproducction package. Could you please provide access to it?" is a specific and actionable request. It also demonstrates that the reproducer spent significant time understanding the relevant components of the reproduction package. 
 
 ### Incomplete workflow information 
-If there are some components missing, then...   
 
-[Joel and Fernando need to workshop a better solution, until then...]
+In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE builder will return partial reproduction tree. For example, and using the diagram from above, if the reproduction materials had missing the files `merge_1_2.do, merge_3_4.do, final_merge.do`, the diagrams produced by the builder will be the following: 
 
-Draw diagrams connecting outputs to raw data sources. To do this, find the code script that generates the target output (formatted or not), then find all inputs required to execute the script (including data and other code files). Repeat until you reach the raw data or the last available file.
+    cleaned_3.dta
+        |___[code] clean_raw_3.py
+            |___raw_3.dta
+    
+    table1.tex
+        |___[code] analysis.R
+            |___analysis_data.dta
+    
+    cleaned_3_4.dta
+        |___[code] clean_merged_3_4.do
+            |___merged_3_4.dta
+    
+    cleaned_1.dta
+        |___[code] clean_raw_1.py
+            |___raw_1.dta
+    
+    cleaned_2.dta
+        |___[code] clean_raw_2.py
+            |___raw_2.dta
+    
+    cleaned_4.dta
+        |___[code] clean_raw_4.py
+            |___raw_4.dta
+    
+    cleaned_1_2.dta
+        |___[code] clean_merged_1_2.do
+            |___merged_1_2.dta
+    Unusued data sources: None.
 
-When a connection cannot be drawn due to a missing component, use the "-||-" symbol. For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
-This diagram can be represented in data format by specifying how each component depends on its inputs. For example: 
+In this case, the reproducer can still combine this partial information with her knowledge from the paper and produce a candidate tree. One result could be the following: 
+
+    
+    table1.tex
+        |___[code] analysis.R
+            |___analysis_data.dta
+                |___MISSSING CODE FILE(S) #3
+                    |___cleaned_3_4.dta
+                    |       |___[code] clean_merged_3_4.do
+                    |           |___merged_3_4.dta
+                    |               |___MISSSING CODE FILE(S) #2
+                    |                   |___cleaned_3.dta
+                    |                   |       |___[code] clean_raw_3.py
+                    |                   |           |___raw_3.dta    
+                    |                   |___cleaned_4.dta
+                    |                           |___[code] clean_raw_4.py
+                    |                               |___raw_4.dta
+                    |___cleaned_1_2.dta
+                            |___[code] clean_merged_1_2.do
+                                |___merged_1_2.dta
+                                    |___MISSSING CODE FILE(S) #1
+                                        |___cleaned_1.dta
+                                        |       |___[code] clean_raw_1.py
+                                        |           |___raw_1.dta
+                                        |   
+                                        |___cleaned_2.dta
+                                                |___[code] clean_raw_2.py
+                                                    |___raw_2.dta
 
 
-Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). 
-If you have difficulty translating the diagram into a spreadsheet, you can draw it with pen and paper, take a picture and upload it to the assessment survey.
+To leave a record of the reconstructed diagrams, you will have to ammend the input spreadsheets using placeholders for the missing components. In the example above, you should go to the code description spreadsheet and add the following entries: 
+
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | file_name         | location         | inputs              | outputs             | description          | primary_type |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | ...               | ...              | ...                 | ...                 | ...                  | ...          |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | missing_file1     | unknown          | cleaned_1.dta,      | merged_1_2.dta      | missing code         | unknown      |
+          |                   |                  | cleaned_2.dta       |                     |                      |              |
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | missing_file2     | unknown          | cleaned_3.dta,      | merged_3_4.dta      | missing code         | unknown      |
+          |                   |                  | cleaned_4.dta       |                     |                      |              |                  
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+          | missing_file3     | unknown          | cleaned_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
+          |                   |                  | cleaned_1_2.dta     |                     |                      |              |                  
+          |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
+
+As in the case with the complete workflow, this diagrams (the fragmented trees, or the reconstructed one) provide important information to assess and improve the reproducibility of a specific output. Reproducers can compare reconstructed trees, and/or contact original authors with highly specific inquiries.
+
+For more examples of diagrams connecting final output to initial raw data, [see here](#additional-diagrams).    
 
 ## Assign a reproducibility score. {#score}
 
@@ -206,20 +277,6 @@ The following figure summarizes the different levels of computational reproducib
     L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
     L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
-Choose the appropriate level of computational reproducibility and record it using the following format.
-
-
-          |-------------|-------|------------------------|------------|
-          | output_name | level | additional_explanation | other_info |
-          |-------------|-------|------------------------|------------|
-          | table 1     | 4     |                        | ...        |
-          |-------------|-------|------------------------|------------|
-          | table 2     | 7     |                        | ...        |
-          |-------------|-------|------------------------|------------|
-          | figure 1    | 5     |                        | ...        |
-          |-------------|-------|------------------------|------------|
-          | ...         | ...   | ...                    | ...        |
-          |-------------|-------|------------------------|------------|
 
 Record this information in the  [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&range=A1). You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 

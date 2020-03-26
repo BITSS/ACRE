@@ -14,30 +14,35 @@ In 2019, the [American Economic Association](https://www.aeaweb.org/journals/pol
 
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates future replication, extension, and collaboration.
 
-This exercise is part of the Advancing Computational Reproducibility in Economics [(ACRE)](https://www.bitss.org/ecosystem/acre/) project led by the Berkeley Initiative for Transparency in the Social Sciences [(BITSS)](bitss.org) and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). The project of Advancing Computational Reproducibility in Economics (ACRE) looks to assess, enable, and improve the computational reproducibility of published economics research.
+This exercise is part of the Accelerating Computational Reproducibility in Economics [(ACRE)](https://www.bitss.org/ecosystem/acre/) project led by the Berkeley Initiative for Transparency in the Social Sciences [(BITSS)](bitss.org) and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). ACRE looks to assess, enable, and improve the computational reproducibility of published economics research.
 
 ## Beyond binary judgments {-}
 
 Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper "reproducible" or "non-reproducible". These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant. 
 
-First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies where results are presented in one ore more outputs (like table and figures). Each output will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
+First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more outputs (like table and figures). Each output will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 
-![(\#fig:diagram)One paper has multiple components to reproduce](01-intro_files/figure-docx/diagram-1.png)
+<div class="figure">
+<!--html_preserve--><div id="htmlwidget-cfdfcdc5baef5064a8af" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cfdfcdc5baef5064a8af">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:diagram)One paper has multiple components to reproduce</p>
+</div>
 
 Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
 
-Note that the highest level of reproducibility, which requires complete reproducibility starting from  raw data, is very demanding and it should not be expected of all published research (especially before 2019). Instead, this standard is set up as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
+Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and it should not be expected of all published research -- especially before 2019. Instead, this level serves as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
 
 
 ## Stages of the exercise {-}
 
-This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guideleines, with an fifth optional stage :   
+This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guidelines, with a fifth optional stage :   
 
-1. [**Scoping**](#scoping), where you (the reproducer) wil define the scope of the exercise by declaring a paper and the specific output(s) on which they will focus;  
-2.	[**Assessment**](#assessment), where you will review and describe in detail the available reproduction package (or the “reproduction materials”) and provides an assessment of the current level of computational reproducibility of the selected outputs; 
-3.	[**Improvement**](#improvements), where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;  
-4.	[**Robustness checks**](#robust), where will assess the quality of selected analytical choices from the paper; and  
-5.	**Extension** (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
+1. [**Scoping**](#scoping), where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus in the remainder of the exercise;  
+2.    [**Assessment**](#assessment), where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected outputs; 
+3.    [**Improvement**](#improvements), where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;  
+4.    [**Robustness checks**](#robust), where will assess the quality of selected analytical choices from the paper; and  
+5.    **Extension** (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
+
 
                Figure 2: Steps for reproduction
 
@@ -60,4 +65,10 @@ Figure 2 depicts suggested levels of effort for each stage of the exercise depen
 
 ## Recording the results of the exercise {-}
 
-You will be asked to record the results of their reproduction progress through each stage. As part of Stage 1:[Scoping](#scoping), they will be asked to complete [a first survey](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN), where you will declare the paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper. In Stage 2: [Assessment](#assessment), you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. All this information will be recorded in a [standarized spreadsheet](https://docs.google.com/spreadsheets/d/1Uj5rEwSpFh_RXsmRhFnbz8cL88PUA5cRKp_38xV4eeE/copy?usp=sharing). In Stage 3: [Improvement](#improvements), reproducers will be asked you to record specific improvements and report potential changes in the level of reproducibility. Results from stage 2 and 3 will be recorded in a [second survey](ADD LINK). In a [third and final survey](ADD LINK) for Stage 4: [Robustness Checks](#robust) reproducers will help to track the different analytical choices and test possible variations.
+You will be asked to record the results of their reproduction progress through each stage. 
+
+At *Stage 1:[Scoping](#scoping)*, complete **[Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN)**, where you will declare the paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (confirm this with your instructor). 
+
+At *Stage 2: [Assessment](#assessment)*, you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. At *Stage 3: [Improvement](#improvements)*, you will try to improve the reproducibility of the selected outputs by adding missing files and documentation, and will report potential changes in the level of reproducibility. Use **Survey 2** to record your work at Stages 2 and 3.
+
+At *Stage 4: [Robustness Checks](#robust)* you will assess different analytical choices and test possible variations. Use **Survey 3** to record your work at this stage.
