@@ -189,8 +189,8 @@
             <section class="normal" id="section-">
 <div id="improvements" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Improvements</h1>
-<p>After completing an assessment of the paper’s reproducibility packages, you can start proposing ways to improve it’s reproducibility. Making improvements provides an opportunity to gain deeper understanding of the paper’s methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community–other students and researchers using the ACRE platform around the world.</p>
-<p>As in the Assessment section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.</p>
+<p>After assessing the paper’s reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper’s methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.</p>
+<p>Like in the <em>Assessment</em> section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.</p>
 <p><strong>Use Survey 2 to record your work as part of this step.</strong></p>
 <div id="types-of-output-level-improvements" class="section level2">
 <h2><span class="header-section-number">3.1</span> Types of output-level improvements</h2>
@@ -198,26 +198,26 @@
 <h3><span class="header-section-number">3.1.1</span> Adding missing raw data files or meta-data (+RD)</h3>
 <p>Reproduction packages often do not include all original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data, or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>Identify a specific missing file. During <a href="assessment.html#assessment">Assessment</a>, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.<br />
+<li>Identify the missing file. During <a href="assessment.html#assessment">Assessment</a>, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.<br />
 </li>
 <li>Verify whether this file (or files) can be easily obtained from the web.
 <ul>
-<li>2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the origina author to repost this data. See <a href="#tips-for-communication">tips for communication</a> for a template email.<br />
+<li>2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See <a href="#tips-for-communication">tips for communication</a> for relevant guidance.<br />
 </li>
 <li>2.2 - If no: proceed to step 3.<br />
 </li>
 </ul></li>
 <li><a href="ADD%20LINK">Use the ACRE database</a> to verify whether there have been previous attempts to contact the authors regarding this paper.<br />
 </li>
-<li>Contact the original authors and politely request the original materials. Be mindful of the authors’ time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See <a href="#tips-for-communication">tips for communication</a> for sample language on how to approach authors.<br />
+<li>Contact the original authors and politely request the original materials. Be mindful of the authors’ time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See <a href="#tips-for-communication">tips for communication</a> for sample language on how to approach the authors.<br />
 </li>
-<li>If the data sets are not available due to confidentiality or proprietary issues, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs.</li>
+<li>If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs.</li>
 </ol>
-<p>In addition to trying to obtain raw data, you can also contribute by obtaining missing analytic data.</p>
+<p>In addition to trying to obtain the raw data, you can also contribute by obtaining missing analytic data.</p>
 </div>
 <div id="ad" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Adding missing analytic data files (+AD)</h3>
-<p><a href="assessment.html#describe-inputs">Analytic data</a> can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:</p>
+<p><a href="assessment.html#describe-inputs">Analytic data</a> can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing, and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (eg <code>analysis_data_03.csv</code>).<br />
 </li>
@@ -233,10 +233,10 @@
 <p><a href="assessment.html#describe-inputs">Analysis code</a> can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to…” or “We estimate this regression using a bandwidth of…”).</p></li>
-<li><p>Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the <a href="assessment.html#diagram">reproduction diagram</a>.</p></li>
+<li><p>Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the <a href="assessment.html#diagram">reproduction diagram</a>.</p></li>
 <li><p><a href="ADD%20LINK">Use the ACRE database</a> to verify if previous attempts have been made to contact the authors about this issue.</p></li>
 <li><p><a href="#tips-for-communication">Contact the authors</a> and request the specific code files.</p></li>
-<li><p>If the authors don’t respond, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.</p></li>
+<li><p>If step #4 does not work, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.</p></li>
 </ol>
 </div>
 <div id="cc" class="section level3">
@@ -249,7 +249,7 @@
 <ul>
 <li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
 <ul>
-<li><em>Performance improvement:</em> Replace instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another, but obtain the same results).<br />
+<li><em>Performance improvement:</em> Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another, but obtain the same results).<br />
 </li>
 <li><em>Environment set up:</em> Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.<br />
 </li>
@@ -259,7 +259,7 @@
 </div>
 <div id="debugging-cleaning-code-dcc" class="section level3">
 <h3><span class="header-section-number">3.1.6</span> Debugging cleaning code (DCC)</h3>
-<p>Use the same steps as you took to debug the analysis code, but report them separately.</p>
+<p>Follow the same steps that you did to debug the analysis code, but report them separately.</p>
 </div>
 <div id="reporting-results" class="section level3">
 <h3><span class="header-section-number">3.1.7</span> Reporting results</h3>

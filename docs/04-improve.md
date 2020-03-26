@@ -1,8 +1,8 @@
 # Improvements   
 
-After completing an assessment of the paper's reproducibility packages, you can start proposing ways to improve it's reproducibility. Making improvements provides an opportunity to gain deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community--other students and researchers using the ACRE platform around the world.
+After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
-As in the Assessment section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
+Like in the *Assessment* section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
 
 **Use Survey 2 to record your work as part of this step.**
 
@@ -12,20 +12,20 @@ As in the Assessment section, we recommend that you first focus on one specific 
 
 Reproduction packages often do not include all original [raw datasets](#describe-inputs). To obtain any missing raw data, or information about them, follow these steps:
 
-1. Identify a specific missing file. During [Assessment](#assessment), you identified all data sources from the paper's body and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the `data_file` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.      
+1. Identify the missing file. During [Assessment](#assessment), you identified all data sources from the paper's body and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the `data_file` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.      
 2. Verify whether this file (or files) can be easily obtained from the web.   
-      - 2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the origina author to repost this data. See [tips for communication](#tips-for-communication) for a template email.   
+      - 2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See [tips for communication](#tips-for-communication) for relevant guidance.   
       - 2.2 - If no: proceed to step 3.   
 3. [Use the ACRE database](ADD LINK) to verify whether there have been previous attempts to contact the authors regarding this paper.  
-4. Contact the original authors and politely request the original materials. Be mindful of the authors’ time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See [tips for communication](#tips-for-communication) for sample language on how to approach authors.  
-5. If the data sets are not available due to confidentiality or proprietary issues, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs.
+4. Contact the original authors and politely request the original materials. Be mindful of the authors’ time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See [tips for communication](#tips-for-communication) for sample language on how to approach the authors.  
+5. If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs.
 
-In addition to trying to obtain raw data, you can also contribute by obtaining missing analytic data.   
+In addition to trying to obtain the raw data, you can also contribute by obtaining missing analytic data.   
 
 
 ### Adding missing analytic data files (+AD) {#ad}
 
-[Analytic data](#describe-inputs) can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:
+[Analytic data](#describe-inputs) can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing, and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:
 
 1. Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (eg `analysis_data_03.csv`).   
 2. Verify that the data cannot be obtained by running the data cleaning code over the raw data.    
@@ -38,13 +38,13 @@ In addition to trying to obtain raw data, you can also contribute by obtaining m
 
 1. Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to...” or “We estimate this regression using a bandwidth of...”).  
 
-2. Identify the code file and the approximate line in the script where the analysis can be carried out. If no relevant code file is found, identify the location of the missing file relative to the steps in the [reproduction diagram](#diagram).   
+2. Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the [reproduction diagram](#diagram).   
 
 3. [Use the ACRE database](ADD LINK) to verify if previous attempts have been made to contact the authors about this issue.     
 
 4. [Contact the authors](#tips-for-communication) and request the specific code files.     
 
-5. If the authors don't respond, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.   
+5. If step #4 does not work, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.   
 
 ### Adding missing data cleaning code (+CC) {#cc}  
 
@@ -55,14 +55,14 @@ In addition to trying to obtain raw data, you can also contribute by obtaining m
 Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:  
 
   - *Code cleaning:* Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.  
-  - *Performance improvement:* Replace instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another, but obtain the same results).    
+  - *Performance improvement:* Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another, but obtain the same results).    
   - *Environment set up:* Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.    
   - *Correcting errors:* A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will happen if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the [ACRE procedure to report coding errors](ADD LINK).  
 
 
 ### Debugging cleaning code (DCC)
 
-Use the same steps as you took to debug the analysis code, but report them separately.  
+Follow the same steps that you did to debug the analysis code, but report them separately.  
 
 
 ### Reporting results    

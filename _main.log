@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  26 MAR 2020 14:01
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  26 MAR 2020 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1581,12 +1581,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 907--909
 
  []
 
-
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 909--911
 
  []
 
-[33]
+
 Overfull \hbox (1.5pt too wide) in paragraph at lines 937--937
 []   \TU/lmtt/m/n/10 Level-specific quality improvements: add data/code, debug 
 code.[] 
