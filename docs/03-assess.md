@@ -5,7 +5,7 @@ The goal of this stage is to conduct a standardized assessment of your chosen pa
 
 First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.  
 
-In the Scope stage you declared a paper, identified the specific claims you will be reproducing, and record the main estimates that support such claim. In this stage you will identify all the outputs contain those estimates. You will have to decide if you are interested in assessing the reproducibility of that entire output (e.g. "Table 1"), or focused only on the pre-specified estimates (e.g. "rows 3 and 4 of Table 1"). Additionally, you will be able to include other outputs of interest in your assessment. 
+In the Scope stage you declared a paper, identified the specific claims you will be reproducing, and record the main estimates that support such claim. In this stage, you will identify all the outputs that contain those estimates. You will have to decide if you are interested in assessing the reproducibility of that entire output (e.g. "Table 1"), or focused only on the pre-specified estimates (e.g. "rows 3 and 4 of Table 1"). Additionally, you will be able to include other outputs of interest in your assessment. 
 
 **Use [Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7) to record your work as part of this step.**
 
@@ -96,10 +96,10 @@ As you gain an understanding of each code script, you will likely find more inpu
 
 ## Connect each output to all its inputs {#diagram}
 
-With all the information collected above, you can trace your output to reprodue to its primary sources. Email the standarized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to acre@berkeley.edu. With-in 24hrs you should receive an email with a reproduction tree that represents the information available on the workflow for behind a specific output. 
+With all the information collected above, you can trace your output to reproduce to its primary sources. Email the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to acre@berkeley.edu. With-in 24hrs you should receive an email with a reproduction tree that represents the information available on the workflow for behind a specific output. 
 
 <!--
-Upload the standarized table you build to the decribe the code above into the [ACRE workflow diagram builder](ADD LINK). 
+Upload the standardized table you build to the describe the code above into the [ACRE workflow diagram builder](ADD LINK). 
 -->
 ### Complete workflow information 
 
@@ -130,7 +130,7 @@ If you were able to identify all the relevant components in the previous section
                                         |___[code] clean_raw_4.py
                                             |___raw_4.dta
 
-This diagram, built with the information provided by you (the reproducer), is already an important contribution to understanding all the necesary components required to reproduce a specific output. It conveys key information in a summarized fashion allowing for a more constructive exchange with original authors or other reproducers. For example, when contacting the original authors a request of the type "...file `cleaned_4.dta` in the diagram below (paste diagram) seems to be missing in the reproducction package. Could you please provide access to it?" is a specific and actionable request. It also demonstrates that the reproducer spent significant time understanding the relevant components of the reproduction package. 
+This diagram, built with the information provided by you (the reproducer), is already an important contribution to understanding all the necessary components required to reproduce a specific output. It conveys key information in a summarized fashion allowing for a more constructive exchange with original authors or other reproducers. For example, when contacting the original authors a request of the type "...file `cleaned_4.dta` in the diagram below (paste diagram) seems to be missing in the reproduction package. Could you please provide access to it?" is a specific and actionable request. It also demonstrates that the reproducer spent significant time understanding the relevant components of the reproduction package. 
 
 ### Incomplete workflow information 
 
@@ -195,7 +195,7 @@ In this case, the reproducer can still combine this partial information with her
                                                     |___raw_2.dta
 
 
-To leave a record of the reconstructed diagrams, you will have to ammend the input spreadsheets using placeholders for the missing components. In the example above, you should go to the code description spreadsheet and add the following entries: 
+To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should go to the code description spreadsheet and add the following entries: 
 
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
           | file_name         | location         | inputs              | outputs             | description          | primary_type |
@@ -237,7 +237,7 @@ The assessment is made at the output level -- a paper can be highly reproducible
 
  - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC). 
 
-Comment on level 1AAA
+TO DO: add comment on how level 1 is detected on the scoping stage (unsuccessful candidate papers) 
 
  - **Level 2 (L2):** Code scripts are available (partially or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD). 
 
@@ -247,7 +247,7 @@ Comment on level 1AAA
 
  - **Level 5 (L5):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.   
 
-Comment on level 5AAAa. Starting from level 6, all the following levels have CRA as a requirement.
+TO DO: Add comment on how level 5 should is CRA and how this might represent most of the previously published papers. Starting from level 6, all the following levels have CRA as a requirement.
 
  - **Level 6 (L6):** Cleaning code is partially available, but raw data is not. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).   
 
@@ -259,7 +259,7 @@ Comment on level 5AAAa. Starting from level 6, all the following levels have CRA
 
  - **Level 10 (L10):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).    
 
-Comment on level 10
+TO DO: Add comment on how level 10 is really hard but should be taken aspirationally. 
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (`✔`), can be made to move up one level of reproducibility (-).
 
@@ -287,7 +287,7 @@ The following figure summarizes the different levels of computational reproducib
 
 The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, that can be ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the edit button above.
 
-#### Adjusting Levels To Account for Propietary/Confidential Data {-}
+#### Adjusting Levels To Account for Proprietary/Confidential Data {-}
 
          Levels of Computational Reproducibility with Propietary/Confidential Data    
 
@@ -311,19 +311,17 @@ The reproducer and/or reader of this information can disagree with this subjecti
     L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
     L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
-TO DO
+TO DO: describe. 
 
- - **Adjusted Level 4 (L4\*):** All analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include debugging the analysis code (DAC) or obtaining raw data (+RD).      
+ - **Adjusted Level 4 (L4\*):** All instructions to analytic data: inst, contact information, costs, times. 
 
- - **Adjusted Level 5 (L5\*):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.   
+ - **Adjusted Level 5 (L5\*):** Third party CRA (add reference to french start-up)  
 
- - **Adjusted Level 8 (L8\*):** Cleaning code is available and complete, and raw data is partially available. Possible improvements include: adding raw data (+RD).
+ - **Adjusted Level 8 (L8\*):** Some instructions to raw data: inst, contact information, costs, times.
 
- - **Adjusted Level 9 (L9\*):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
+ - **Adjusted Level 9 (L9\*):**  Detailed instructions to raw data. 
 
- - **Adjusted Level 10 (L10*):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).    
-
-
+ - **Adjusted Level 10 (L10*):** Third party CRR (add reference to french start-up)    
 
 You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
 
