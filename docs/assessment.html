@@ -386,52 +386,79 @@ Unusued data sources: None.</code></pre>
 <p>Here we outline different levels of computational reproducibility. Each level is defined by availability of data and materials, and whether or not some type of reproducibility is achieved. In addition, for each level we briefly describe the type of improvements that can be done to improve the current reproducibility. In the next chapter we’ll describe each possible improvement in more detail.</p>
 <p>The assessment is made at the output level – a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.</p>
 <ul>
-<li><p><strong>Level 1 (L1):</strong> No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).</p></li>
-<li><p><strong>Level 2 (L2):</strong> Code scripts are available, but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).</p></li>
-<li><p><strong>Level 3 (L3):</strong> Analytic data are available, but raw data and code are not. Possible improvements include adding: raw data (+RD) and analysis code (+AC).</p></li>
-<li><p><strong>Level 4 (L4):</strong> Analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include obtaining raw data (+RD) or debugging the analysis code (DAC).</p></li>
-<li><p><strong>Level 5 (L5):</strong> Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets, or by documenting the steps required to obtain those files.</p></li>
-<li><p><strong>Level 6 (L6):</strong> Analytic data and raw data are available. However, some or all cleaning and analysis code are missing. Possible improvements include: adding analysis code (+AC) and/or cleaning code (+CC).</p></li>
-<li><p><strong>Level 7 (L7):</strong> All data and analysis code are available. However, the code does not run or produces different results than those presented in the paper (not CRA). Possible improvements include: adding the missing cleaning code (+CD) or debugging the analysis code (DAC).</p></li>
-<li><p><strong>Level 8 (L8):</strong> All data and analysis code are available, but cleaning code may be missing. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by adding the missing cleaning code (+CD).</p></li>
-<li><p><strong>Level 9 (L9):</strong> All materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the code does not run or produces different results than those presented in the paper (not CRR and not CRA). Possible improvements include: debugging the cleaning code (DCC) or debugging the analysis code (DAC).</p></li>
-<li><p><strong>Level 10 (L10):</strong> All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).</p></li>
-<li><p><strong>Level 11 (L11):</strong> All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).</p></li>
+<li><strong>Level 1 (L1):</strong> No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).</li>
 </ul>
-<p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (-), can be made to move up one level of reproducibility (<code>✔</code>), or are out of reach given the current level of reproducibility (<code>x</code>).</p>
-<pre><code>                    Figure 1: Levels of Computational Reproducibility    
+<p>Comment on level 1AAA</p>
+<ul>
+<li><p><strong>Level 2 (L2):</strong> Code scripts are available (partially or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).</p></li>
+<li><p><strong>Level 3 (L3):</strong> Analytic data and code are partially available, but raw data and cleaning code are not. Possible improvements include: completing analysis data and/or code, adding raw data (+RD) and adding analysis code (+AC).</p></li>
+<li><p><strong>Level 4 (L4):</strong> All analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include debugging the analysis code (DAC) or obtaining raw data (+RD).</p></li>
+<li><p><strong>Level 5 (L5):</strong> Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.</p></li>
+</ul>
+<p>Comment on level 5AAAa. Starting from level 6, all the following levels have CRA as a requirement.</p>
+<ul>
+<li><p><strong>Level 6 (L6):</strong> Cleaning code is partially available, but raw data is not. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).</p></li>
+<li><p><strong>Level 7 (L7):</strong> Cleaning code is available and complete, but raw data is not. Possible improvements include: adding raw data (+RD).</p></li>
+<li><p><strong>Level 8 (L8):</strong> Cleaning code is available and complete, and raw data is partially available. Possible improvements include: adding raw data (+RD).</p></li>
+<li><p><strong>Level 9 (L9):</strong> All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).</p></li>
+<li><p><strong>Level 10 (L10):</strong> All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).</p></li>
+</ul>
+<p>Comment on level 10</p>
+<p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (<code>✔</code>), can be made to move up one level of reproducibility (-).</p>
+<pre><code>                     Levels of Computational Reproducibility    
 
                                  | Availavility of materials, and reproducibility |
                                  |------------------------------------------------|
-                                 |Analysis| Analysis| CRA | Cleaning| Raw   | CRR |
-                                 |Code    | Data    |     | Code    | Data  |     |
-                                 ---------|---------|-----|---------|-------|-----|
+                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                 |Code    | Data    | CRA | Code    | Data  | CRR |
                                  | P | C  | P  | C  |     | P  |  C | P | C |     |
-L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |     
-L2: Only code and/or docs........| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |     
-L3: Partial analyiss data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+                                 ---------|---------|-----|---------|-------|-----|
+L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+---------------------------------|--------|---------|-----|---------|-------|-----|
+L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
 L4: All analysis data &amp; code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
 L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+---------------------------------|--------|---------|-----|---------|-------|-----|
 L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
 L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
 L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
 L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
 L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
-<p>Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1384504774&amp;range=A1">standarized spreadsheet</a>. You will be asked to provide this information in the <a href="ADD%20LINK">assessment and improvement survey</a>.</p>
-<p>To present each category above as levels that reflect a gradient of improvement, we need to make explicit the following underlying valuations.</p>
+<p>The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, that can be ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the edit button above.</p>
+<div id="adjusting-levels-to-account-for-propietaryconfidential-data" class="section level4 unnumbered">
+<h4>Adjusting Levels To Account for Propietary/Confidential Data</h4>
+<pre><code>     Levels of Computational Reproducibility with Propietary/Confidential Data    
+
+                                 | Availavility of materials, and reproducibility |
+                                 |------------------------------------------------|
+                                 |        | Instr.  |     |         | Instr.|     |
+                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                 |Code    | Data    | CRA | Code    | Data  | CRR |
+                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
+                                 ---------|---------|-----|---------|-------|-----|
+L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+---------------------------------|--------|---------|-----|---------|-------|-----|
+L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+---------------------------------|--------|---------|-----|---------|-------|-----|
+L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
+<p>TO DO</p>
 <ul>
-<li>L1: The worst is to have no access to any data or code.<br />
-</li>
-<li>L2: Having only some code is better than nothing, but worst than any data.</li>
-<li>L3: Having analytic data but not code is better than having code and no data.</li>
-<li>L4 and L5: Conditional on having all analytic material. Reproducible is better than not</li>
-<li>L6: Having raw and analytic data, even without any code, is better than having CRA.<br />
-</li>
-<li>L7: Given that there is raw and analysis data, having a cleaning code only does not add much. having analysis code does add (to lvl 7 and lvl 8 if CRA)<br />
-</li>
-<li>L9: Having all materials that but not being able to reproduce is better than all previous cases. Achieving CRA (lvl 10) and CRR (lvl 11) are the best levels according to these criteria.</li>
+<li><p><strong>Adjusted Level 4 (L4*):</strong> All analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include debugging the analysis code (DAC) or obtaining raw data (+RD).</p></li>
+<li><p><strong>Adjusted Level 5 (L5*):</strong> Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.</p></li>
+<li><p><strong>Adjusted Level 8 (L8*):</strong> Cleaning code is available and complete, and raw data is partially available. Possible improvements include: adding raw data (+RD).</p></li>
+<li><p><strong>Adjusted Level 9 (L9*):</strong> All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).</p></li>
+<li><p>**Adjusted Level 10 (L10*):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).</p></li>
 </ul>
-<p>The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, or ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the ADD IMAGE button above.</p>
+<p>You will be asked to provide this information in the <a href="ADD%20LINK">assessment and improvement survey</a>.</p>
+</div>
 </div>
 <div id="reproducibility-dimensions-at-the-paper-level" class="section level3">
 <h3><span class="header-section-number">2.3.2</span> Reproducibility dimensions at the paper level</h3>
@@ -442,7 +469,7 @@ L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 <li>standard file organization<br />
 </li>
 <li>version control</li>
-<li>analysis uses open source software<br />
+<li>analysis uses open source (statistical) software<br />
 </li>
 <li>dynamic document<br />
 </li>
