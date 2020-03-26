@@ -136,30 +136,6 @@ This diagram, built with the information you provided is already an important co
 
 In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE diagram builder will return a partial reproduction tree diagram. For example, if the files `merge_1_2.do`, `merge_3_4.do`, and `final_merge.do` are missing from the previous diagram, the ACRE builder will produce the following diagram:
 
-    cleaned_3.dta
-        |___[code] clean_raw_3.py
-            |___raw_3.dta
-
-    table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-
-    cleaned_3_4.dta
-        |___[code] clean_merged_3_4.do
-            |___merged_3_4.dta
-
-    cleaned_1.dta
-        |___[code] clean_raw_1.py
-            |___raw_1.dta
-
-    cleaned_2.dta
-        |___[code] clean_raw_2.py
-            |___raw_2.dta
-
-    cleaned_4.dta
-        |___[code] clean_raw_4.py
-            |___raw_4.dta
-
         cleaned_3.dta
             |___[code] clean_raw_3.py
                 |___raw_3.dta
