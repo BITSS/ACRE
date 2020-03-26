@@ -218,36 +218,35 @@ For more examples of diagrams connecting final output to initial raw data, [see 
 
 ## Assign a reproducibility score. {#score}
 
-Once all possible inputs have been identified, and there is a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility. 
+Once you have identified all possible inputs and have a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility. 
 
-The following concepts will be used in this section:     
+Take note of the following concepts in this section:     
 
- - **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the analytic data sets.
+ - **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.
 
- - **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the raw data sets.
+ - **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.
 
  - **Minimal effort:** One hour or less are required to run the code, not including computing time.
 
 ### Levels of Computational Reproducibility for a Specific Output  
 
-Here we outline different levels of computational reproducibility. Each level is defined by availability of data and materials, and whether or not some type of reproducibility is achieved. In addition, for each level we briefly describe the type of improvements that can be done to improve the current reproducibility. In the next chapter we'll describe each possible improvement in more detail.
+Each level of computational reproducibility is defined by the availability of data and materials, and whether or not the available materials faithfully reproduce the output of interest. The description of each level also includes possible improvements that can help advance the reproducibility of the output to a higher level. You will learn in more detail about the possible improvements. 
 
-The assessment is made at the output level -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment is made using a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and that the target outcome can be reproduced starting from raw data.
+Note that the assessment is made *at the output level* -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.
 
+ - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
+ 
+ You will have detected papers that are reproducible at Level 1 as part of the Scoping stage (unsuccessful candidate papers). Make sure to take record them in Survey 1.
+ 
+ - **Level 2 (L2):** Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD). 
 
- - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC). 
-
-TO DO: add comment on how level 1 is detected on the scoping stage (unsuccessful candidate papers) 
-
- - **Level 2 (L2):** Code scripts are available (partially or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD). 
-
- - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are not. Possible improvements include: completing analysis data and/or code, adding raw data (+RD) and adding analysis code (+AC).  
+ - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are not. Possible improvements include: completing analysis data and/or code, adding raw data (+RD), and adding analysis code (+AC).  
 
  - **Level 4 (L4):** All analytic data sets and analysis code are available. However, code does not run or produces different results than those in the paper (not CRA). Possible improvements include debugging the analysis code (DAC) or obtaining raw data (+RD).      
 
- - **Level 5 (L5):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.   
-
-TO DO: Add comment on how level 5 should is CRA and how this might represent most of the previously published papers. Starting from level 6, all the following levels have CRA as a requirement.
+ - **Level 5 (L5):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.
+ 
+This is the highest level that most published research papers can attain currently. Computational reproducibility *from raw data* is required for papers that are reproducible at Level 6 and above.
 
  - **Level 6 (L6):** Cleaning code is partially available, but raw data is not. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).   
 
@@ -255,13 +254,11 @@ TO DO: Add comment on how level 5 should is CRA and how this might represent mos
 
  - **Level 8 (L8):** Cleaning code is available and complete, and raw data is partially available. Possible improvements include: adding raw data (+RD).
 
- - **Level 9 (L9):**  All materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
+ - **Level 9 (L9):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
 
- - **Level 10 (L10):** All materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).    
+ - **Level 10 (L10):** All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).  Note that Level 10 is aspirational and may be very difficult to attain for most research published today. 
 
-TO DO: Add comment on how level 10 is really hard but should be taken aspirationally. 
-
-The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that: have been made (`✔`), can be made to move up one level of reproducibility (-).
+The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
                          Levels of Computational Reproducibility    
 
@@ -285,7 +282,7 @@ The following figure summarizes the different levels of computational reproducib
     L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
 
-The reproducer and/or reader of this information can disagree with this subjective valuations. In this scenario, the levels should be understood as unordered categories, that can be ordered under different criteria. The reader of these guidelines are also encouraged to submit suggested edits using the edit button above.
+You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
 
 #### Adjusting Levels To Account for Proprietary/Confidential Data {-}
 
@@ -328,17 +325,18 @@ You will be asked to provide this information in the [assessment and improvement
  
 ### Reproducibility dimensions at the paper level   
 
-In addition to an output-specific assessment of computational reproducibility, several practices can facilitate a paper's overall computational reproducibility. These practices are described in detail in the Improvement chapter. In the Assessment section, it is only required that you verify whether the original reproduction package made use of any of the following:  
+In addition to the output-specific assessment and improvement of computational reproducibility, several practices can facilitate reproducibility at the level of the overall paper. You can read about such practices in greater detail in the next chapter, dedicated to Stage 3: *Improvements*. In this  Assessment section, you should only verify whether the original reproduction package made use of any of the following: 
 
 - master script that runs all steps
 - readme file
-- standard file organization       
+- standardized file organization       
 - version control 
-- analysis uses open source (statistical) software  
+- open source (statistical) software  
 - dynamic document        
 - computing capsule (e.g. CodeOcean, Binder, etc.)     
 
-Congratulations! You have now completed the Assessment stage. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics. 
+Congratulations! You have now completed the *Assessment* stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics. 
 
 Please continue to the [next section](#improvements) where you can help to improve it!
+
 
