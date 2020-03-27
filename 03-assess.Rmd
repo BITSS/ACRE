@@ -95,7 +95,7 @@ As you gain an understanding of each code script, you will likely find more inpu
 
 ## Connect each output to all its inputs {#diagram}
 
-Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to acre@berkeley.edu. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output. 
+Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to the ACRE Diagram Builder at acre@berkeley.edu. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output. 
 
 
 <!--
@@ -103,7 +103,7 @@ Upload the standardized table you build to the describe the code above into the 
 -->
 ### Complete workflow information 
 
-If you were able to identify all the relevant components in the previous section, the ACRE diagram builder will produce a diagram that looks similar to the one below.
+If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
         table1.tex
             |___[code] analysis.R
@@ -134,7 +134,7 @@ This diagram, built with the information you provided is already an important co
 
 ### Incomplete workflow information 
 
-In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE diagram builder will return a partial reproduction tree diagram. For example, if the files `merge_1_2.do`, `merge_3_4.do`, and `final_merge.do` are missing from the previous diagram, the ACRE builder will produce the following diagram:
+In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files `merge_1_2.do`, `merge_3_4.do`, and `final_merge.do` are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
 
         cleaned_3.dta
             |___[code] clean_raw_3.py
@@ -261,7 +261,8 @@ This is the highest level that most published research papers can attain current
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
-                         Levels of Computational Reproducibility    
+                         Levels of Computational Reproducibility 
+                         (P denotes "partial", C denotes "complete"_
 
                                      | Availavility of materials, and reproducibility |
                                      |------------------------------------------------|
@@ -328,13 +329,13 @@ You will be asked to provide this information in the [assessment and improvement
 
 In addition to the output-specific assessment and improvement of computational reproducibility, several practices can facilitate reproducibility at the level of the overall paper. You can read about such practices in greater detail in the next chapter, dedicated to Stage 3: *Improvements*. In this  Assessment section, you should only verify whether the original reproduction package made use of any of the following: 
 
-- master script that runs all steps
-- readme file
-- standardized file organization       
-- version control 
-- open source (statistical) software  
-- dynamic document        
-- computing capsule (e.g. CodeOcean, Binder, etc.)     
+- Master script that runs all steps
+- Readme file
+- Standardized file organization       
+- Version control 
+- Open source (statistical) software  
+- Dynamic document        
+- Computing capsule (e.g. CodeOcean, Binder, etc.)     
 
 Congratulations! You have now completed the *Assessment* stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics. 
 
