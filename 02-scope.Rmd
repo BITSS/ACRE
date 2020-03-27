@@ -1,6 +1,6 @@
 # Scoping
 
-In this stage, you will choose a paper to reproduce or be assigned one, verify that the paper has reproduction materials. If materials are available, you will read the paper and declare the scope of the reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5) to record your work for this stage.*** In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. You can expect to spend between 1-3 days in the Scoping stage. 
+In this stage, you will choose a paper to reproduce or be assigned one, verify that the paper has reproduction materials. If materials are available, you will read the paper and declare the scope of the reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work for this stage.*** In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. You can expect to spend between 1-3 days in the Scoping stage. 
 
 
 ## Select a candidate paper or be assigned one. 
@@ -34,7 +34,7 @@ Verify that the paper has a reproduction package that contains at least some mat
 
 **We strongly encourage you to contact authors several weeks before officially starting the Scoping stage of this exercise. Instructors should also plan to use the ACRE exercise accordingly.**
 
-Before contacting the authors, we recommend that you review and use language from [Chapter 6: Communications guidance](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) below. Once you have contacted the authors, please record your interaction using this survey [ADD LINK]. If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction materials for - Title of the paper`. Provide the URL of the repository in Survey 1. If you fail to to obtain the reproduction package and would like to choose a different paper, please record this in the "abandoned reproduction" section of Survey 1.
+Before contacting the authors, we recommend that you review and use language from [Chapter 6: Communications guidance](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) below. If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction materials for - Title of the paper`. Provide the URL of the repository in Survey 1. If you fail to to obtain the reproduction package and would like to choose a different paper, please record this in the "abandoned reproduction" section of Survey 1.
 
 Now that you have verified the existence of a reproduction package, your *candidate paper* is now your *declared paper*. You can now move forward with the exercise! 
 
@@ -133,7 +133,7 @@ Identify one of the scientific claims, and their corresponding preferred specifi
 ### Declare possible robustness checks to main estimates (optional). {-}  
 After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done *within the same methodology*, and *using the same data* (eg., including/excluding a subset of the data like "high-school dropouts" or "women"), please specify a robustness test that you would like to test before starting the assessment stage.  
 
-These are the elements you will need to conduct the scoping stage. **You now have all the elements necesary to complete [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5).** 
+These are the elements you will need to conduct the scoping stage. **You now have all the elements necesary to complete [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv).** 
 
 -----
 
