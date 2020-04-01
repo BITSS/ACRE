@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-03-26}
+\date{2020-04-01}
 
 \begin{document}
 \maketitle
@@ -164,7 +164,7 @@
 \chapter*{Introduction}\label{intro}}
 \addcontentsline{toc}{chapter}{Introduction}
 
-In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy, which now mandates that the AEA Data Editor verifies the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all newly published research, after several studies showed that rates of \emph{computational reproducibility} in economics at large range from alarmingly low \citep{galiani2018make, chang2015economics} to just low \citep{kingi2018reproducibility}.
+In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy, which now requires that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of \emph{computational reproducibility} in economics at large range were alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
 \emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
@@ -176,9 +176,9 @@ This exercise is part of the Accelerating Computational Reproducibility in Econo
 \section*{Beyond binary judgments}\label{beyond-binary-judgments}}
 \addcontentsline{toc}{section}{Beyond binary judgments}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible''. These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgment less relevant.
+Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible.'' These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.
 
-First, a paper may contain several scientific claims, out of which all can vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more outputs (like table and figures). Each output will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
+First, a paper may contain several scientific claims that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more outputs (like table and figures). Each output will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
 \begin{figure}
 \centering
@@ -186,15 +186,15 @@ First, a paper may contain several scientific claims, out of which all can vary 
 \caption{\label{fig:diagram}One paper has multiple components to reproduce}
 \end{figure}
 
-Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from the raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simple labeling as (ir)reproducible.
+Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
 
-Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and it should not be expected of all published research -- especially before 2019. Instead, this level serves as an aspiration to improve the current reproducibility of research and facilitate the transmission of knowledge in the scientific community.
+Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research -- especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
 
 \hypertarget{stages-of-the-exercise}{%
 \section*{Stages of the exercise}\label{stages-of-the-exercise}}
 \addcontentsline{toc}{section}{Stages of the exercise}
 
-This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guidelines, with a fifth optional stage :
+This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guidelines, with a fifth optional stage:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -205,7 +205,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 \item
   \protect\hyperlink{improvements}{\textbf{Improvement}}, where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;\\
 \item
-  \protect\hyperlink{robust}{\textbf{Robustness checks}}, where will assess the quality of selected analytical choices from the paper; and\\
+  \protect\hyperlink{robust}{\textbf{Robustness checks}}, where you will assess the quality of selected analytical choices; and\\
 \item
   \textbf{Extension} (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to \emph{replication}.
 
@@ -228,7 +228,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 \end{verbatim}
 \end{enumerate}
 
-Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which the reproducer is performing a reproduction. This process need not be chronologically linear, e.g., the reproducer may realize that the scope of a reproduction is too ambitious and switch to a less intensive reproduction. Later in the exercise, the reproducer can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
+Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
 
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section*{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
@@ -236,23 +236,25 @@ Figure 2 depicts suggested levels of effort for each stage of the exercise depen
 
 You will be asked to record the results of their reproduction progress through each stage.
 
-At \emph{Stage 1:\protect\hyperlink{scoping}{Scoping}}, complete \textbf{\href{https://berkeley.qualtrics.com/jfe/form/SV_8hLHNI6LGSYchEN}{Survey 1}}, where you will declare the paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (confirm this with your instructor).
+In \emph{Stage 1:\protect\hyperlink{scoping}{Scoping}}, complete \textbf{\href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}}, where you will declare your paper of choice and the specific output(s) on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (confirm this with your instructor).
 
-At \emph{Stage 2: \protect\hyperlink{assessment}{Assessment}}, you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output to reproduce with its inputs, and assign a reproducibility score to each output. At \emph{Stage 3: \protect\hyperlink{improvements}{Improvement}}, you will try to improve the reproducibility of the selected outputs by adding missing files and documentation, and will report potential changes in the level of reproducibility. Use \textbf{Survey 2} to record your work at Stages 2 and 3.
+In \emph{Stage 2: \protect\hyperlink{assessment}{Assessment}}, you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the output-to-be-reproduced with its inputs, and assign a reproducibility score to each output.
 
-At \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}} you will assess different analytical choices and test possible variations. Use \textbf{Survey 3} to record your work at this stage.
+In \emph{Stage 3: \protect\hyperlink{improvements}{Improvement}}, you will try to improve the reproducibility of the selected outputs by adding missing files and documentation, and report potential changes in the level of reproducibility. Use \textbf{Survey 2} to record your work at Stages 2 and 3 (you will receive access instructions for Survey 2 when you submit Survey 1).
+
+In \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}}, you will assess different analytical choices and test possible variations. Use \textbf{Survey 3} to record your work at this stage.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this stage, you will choose a paper to reproduce or be assigned one, verify that the paper has some reproduction materials, and if materials are available, you will read the paper and declare the scope of the reproduction exercise. \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1} to record your work for this stage.}} In this stage, \emph{you are not expected to review the reproduction materials in detail}, as you will dedicate most of your time to this in the later stages of the exercise. You can expect to spend between 1-3 days in the Scoping stage.
+In this stage, you will choose a paper to reproduce or be assigned one, verify that the paper has reproduction materials. If materials are available, you will read the paper and declare the scope of the reproduction exercise. \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1} to record your work for this stage.}} In this stage, \emph{you are not expected to review the reproduction materials in detail}, as you will dedicate most of your time to this in later stages of the exercise. You can expect to spend between 1-3 days in the Scoping stage.
 
 \hypertarget{select-a-candidate-paper-or-be-assigned-one.}{%
 \section{Select a candidate paper or be assigned one.}\label{select-a-candidate-paper-or-be-assigned-one.}}
 
-Ideally, you should select your candidate paper without previously exploring the availability of materials. In the following sections (\ref{check-acre} and \ref{verify-rep-mat}) these guidelines will show you how to inspect the feasibility of starting a reproduction exercise in your candidate paper. If there are not enough materials to pursue a reproduction, you will be asked to create a short entry in the ACRE platform (\textless{}15 minutes) and select a new candidate paper.
+Ideally you will select your candidate paper without having previously explored the availability of its materials. In the following sections (\ref{check-acre} and \ref{verify-rep-mat}), these guidelines will show you how to inspect the feasibility of starting a reproduction exercise for your candidate paper. If there are not enough materials to pursue a reproduction, you will be asked to create a short entry in the ACRE platform (no more than 15 minutes) and select a new candidate paper.
 
-Repeat this step until you have found a paper with a reproduction package -- this will be your \textbf{\emph{declared paper}} and you will try to reproduce it in the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
+Repeat this step until you have found a paper with a reproduction package -- this will be your \textbf{\emph{declared paper}} and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
 \hypertarget{check-acre}{%
 \section{Check records on the ACRE platform.}\label{check-acre}}
@@ -273,19 +275,19 @@ Check the \href{ADD\%20LINK}{ACRE database} for previous assessments of your can
 \hypertarget{verify-rep-mat}{%
 \section{Verify that a reproduction package exists}\label{verify-rep-mat}}
 
-We will define a \textbf{reproduction package} (it may also be referred to as a ``replication package'') as the collection of all the materials that make it possible for a reproducer to reproduce the paper. Such package may contain data, code, and/or documentation. At this point you are \emph{only validating the existence} of one (or more) reproduction packages and will not be assessing the quality of its content. When the materials are provided in the original publication, they will be labeled as \emph{``the original reproduction package''}. If subsequently created by a reproducer, they will be referred to as \emph{``reproducer X' reproduction package''}.
+We define a \textbf{reproduction package} (sometimes referred to as a ``replication package'') as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. At this point you are \emph{only validating the existence} of one (or more) reproduction packages and not assessing the quality of its content. When the materials are provided in the original publication, they will be labeled as \emph{``the original reproduction package''}. If they are later created by a reproducer, they will be referred to as \emph{``reproducer X' reproduction package''}.
 
-Verify that the paper has a reproduction package that contains at least some materials. If there is no reproduction package, use our records to check if requests to authors have been made before asking for a reproduction package. If nobody has yet submitted a similar request, you can contact the authors using language suggested \protect\hyperlink{for-reproducers-contacting-the-authors-of-the-original-study}{here}. Alternatively, you can simply choose a different paper and record the candidate paper at the beginning of Survey 1.
+Verify that the paper has a reproduction package that contains at least some materials. If there is no reproduction package, use our records to check if requests to authors have been made before requesting materials from original authors. If no one has submitted a similar request, you can contact the authors using language suggested \protect\hyperlink{for-reproducers-contacting-the-authors-of-the-original-study}{here}. Alternatively, you can simply choose a different paper and record the candidate paper at the beginning of Survey 1.
 
 \hypertarget{contacting-the-original-authors-to-request-a-reproduction-package.}{%
 \subsection*{Contacting the original authors to request a reproduction package.}\label{contacting-the-original-authors-to-request-a-reproduction-package.}}
 \addcontentsline{toc}{subsection}{Contacting the original authors to request a reproduction package.}
 
-\textbf{We strongly encourage reproducers to contact authors several weeks before officially starting the Scoping stage of this exercise. Instructors should also plan the use of ACRE exercise accordingly.}
+\textbf{We strongly encourage you to contact authors several weeks before officially starting the Scoping stage of this exercise. Instructors should also plan to use the ACRE exercise accordingly.}
 
-Before contacting the authors, we recommend that you review and use language from \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6: Communications guidance} below. Once you have contacted the authors, please record your interaction using this survey {[}ADD LINK{]}. If the authors provide any materials, deposit them in a trusted repository (for example \href{https://osf.io/}{Open Science Framework}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, or \href{https://dataverse.org/}{Dataverse}) and deposit all these materials under the name \texttt{Original\ reproduction\ materials\ for\ -\ Title\ of\ the\ paper}. Provide the URL of the repository in Survey 1. If you fail to to obtain the reproduction package and would like to choose a different paper, please use Survey 1 to record this in the ``abandoned reproduction'' secton of Survey 1.
+Before contacting the authors, we recommend that you review and use language from \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6: Communications guidance} below. If the authors provide any materials, deposit them in a trusted repository (for example \href{https://osf.io/}{Open Science Framework}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, or \href{https://dataverse.org/}{Dataverse}) and deposit all these materials under the name \texttt{Original\ reproduction\ materials\ for\ -\ Title\ of\ the\ paper}. Provide the URL of the repository in Survey 1. If you fail to to obtain the reproduction package and would like to choose a different paper, please record this in the ``abandoned reproduction'' section of Survey 1.
 
-Now that you have verified the existence of a reproduction package, your \emph{candidate paper} is now your \emph{declared paper}. You can now move foreard with the exercise!
+Now that you have verified the existence of a reproduction package, your \emph{candidate paper} is now your \emph{declared paper}. You can now move forward with the exercise!
 
 View Decision Tree To Select Paper
 
@@ -323,23 +325,23 @@ When reading/summarizing the paper, you should try to answer the following main 
 \hypertarget{declare-estimates}{%
 \section{Declare scope of the exercise.}\label{declare-estimates}}
 
-By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You need not, however, have spent any time reviewing the reproduction package in detail.
+By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.
 
-At this point, you should clearly specify which part of the paper will be the main focus of your reproduction excercise\footnote{Later in the assessment stage you will be asked to identify all the outputs that are part of your assessment.}. You are asked to focus on specific estimates, represented by a unique combination of claim-output-specification, that represented the authors' preferred specification for a given claim (or yours). If you are planning to scope more than one claim, we strongly advise to start with one and record your results. Then you can initiate another record in ACRE for the second ( third, or more) claim to reproduce, and use the materials and knowledge you developed in the first exercise.
+At this point, you should clearly specify which part of the paper will be the main focus of your reproduction excercise\footnote{Later in the assessment stage you will be asked to identify all the outputs that are part of your assessment.}. You are asked to focus on specific estimates, represented by a unique combination of claim-output-specification, that represented the authors' preferred specification for a given claim (or yours). If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.
 
 \hypertarget{declare-specific-main-estimates-to-reproduce.}{%
 \subsection*{Declare specific main estimates to reproduce.}\label{declare-specific-main-estimates-to-reproduce.}}
 \addcontentsline{toc}{subsection}{Declare specific main estimates to reproduce.}
 
-Identify one of the scientific claims, and their corresponding preferred specification, and recorded its magnitude, standard error, and location in the paper (page, table \#, and row and column in the table). If the authors did not explicitly choose a particular estimate, you will be asked to select one. In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
+Identify one of the scientific claims, and their corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and row and column in the table). If the authors did not explicitly choose a particular estimate, you will be asked to select one. In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
 
 \hypertarget{declare-possible-robustness-checks-to-main-estimates-optional.}{%
 \subsection*{Declare possible robustness checks to main estimates (optional).}\label{declare-possible-robustness-checks-to-main-estimates-optional.}}
 \addcontentsline{toc}{subsection}{Declare possible robustness checks to main estimates (optional).}
 
-After reading the paper you might have wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology}, and \emph{using the same data} (eg., including/excluding a subset of the data like ``high-school dropouts'' o ``women''), please specify a robustness test that you would like to test before starting the assessment stage.
+After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology}, and \emph{using the same data} (eg., including/excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to test before starting the assessment stage.
 
-This concludes all the elements that you will need to conduct the scoping stage. \textbf{You now have all the elements necesary to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Survey 1}}.
+These are the elements you will need to conduct the scoping stage. \textbf{You now have all the elements necesary to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -347,9 +349,9 @@ This concludes all the elements that you will need to conduct the scoping stage.
 \subsection*{Bonus: Identify your relevant timeline.}\label{bonus-identify-your-relevant-timeline.}}
 \addcontentsline{toc}{subsection}{Bonus: Identify your relevant timeline.}
 
-Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your Instructor/Advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. This will be given by the type of exercise chosen by the instructor/academic advisory. These will vary from a short format of a homework over a couple of weeks, to a medium format corresponding to a longer class project that that may take a month to complete, long format of a semester-long project (for example as an undergraduate thesis).
+Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor, and may vary from a homework assignment (e.g., over a couple of weeks), to longer class project that that may take a month to complete or a semester-long project (for example as an undergraduate thesis).
 
-Table 1 shows tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same across all formats (with some additional day for the semester long format, foreseeing less experience with research if the reproducer is an undergraduate). Difference emerge in distribution the time for the last two main stages: Improvements and Robustness. For exercises of short duration, we recommend to stay away from any possible improvements to the raw data (or cleaning code), this will intern limit the amount of robustness check (for example by not being able to reconstruct variable according to slightly different definitions), but it should leave plenty of space for testing different specifications at the analysis level.
+Table 1 shows a tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code) as this will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
 2 weeks (\textasciitilde{}10 days)
 
@@ -525,12 +527,12 @@ As you gain an understanding of each code script, you will likely find more inpu
 \hypertarget{diagram}{%
 \section{Connect each output to all its inputs}\label{diagram}}
 
-Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \ref{desc-sourc}, \ref{desc-analy} and \ref{desc-scripts}) to \href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.
+Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \ref{desc-sourc}, \ref{desc-analy} and \ref{desc-scripts}) to the ACRE Diagram Builder at \href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.
 
 \hypertarget{complete-workflow-information}{%
 \subsection{Complete workflow information}\label{complete-workflow-information}}
 
-If you were able to identify all the relevant components in the previous section, the ACRE diagram builder will produce a diagram that looks similar to the one below.
+If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
 \begin{verbatim}
 table1.tex
@@ -564,7 +566,7 @@ This diagram, built with the information you provided is already an important co
 \hypertarget{incomplete-workflow-information}{%
 \subsection{Incomplete workflow information}\label{incomplete-workflow-information}}
 
-In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE diagram builder will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the ACRE builder will produce the following diagram:
+In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
 
 \begin{verbatim}
 cleaned_3.dta
@@ -711,7 +713,8 @@ This is the highest level that most published research papers can attain current
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (\texttt{✔}) or can be made to move up one level of reproducibility (-).
 
 \begin{verbatim}
-                 Levels of Computational Reproducibility    
+                 Levels of Computational Reproducibility 
+                   (P denotes "partial", C denotes "complete")
 
                                  | Availavility of materials, and reproducibility |
                                  |------------------------------------------------|
@@ -763,22 +766,46 @@ L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 \end{verbatim}
 
-TO DO: describe.
+A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred as administrative data. Given the nature of this data, some of the levels from the guidelines need to be modified. The underlying theme in these modifications is that when data cannot be provided, materials will be assessed on how detailed are the instructions to obtain access. Similarly, when reproducibility cannot be verified publicly, the reproduction materials should demonstrate that a third party (not involved in the original research team) was able to reproduce the results.
 
 \begin{itemize}
 \item
-  \textbf{Adjusted Level 4 (L4*):} All instructions to analytic data: inst, contact information, costs, times.
+  \textbf{Adjusted Level 3 (L3*):} All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve partial status, the reproduction package should include the following information:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    \emph{Partial contact information:} name of the organization where to obtain data and contact information of at least one specific person.\\
+  \item
+    \emph{Partial information on data files (meta-data):} number, file size, number of variables and observations in each file.\\
+  \item
+    \emph{Partial estimated costs:} monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.
+  \end{enumerate}
 \item
-  \textbf{Adjusted Level 5 (L5*):} Third party CRA (add reference to french start-up)
+  \textbf{Adjusted Level 4 (L4*):} All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve complete status, the reproduction package should have enough information that will allow others researchers to access the data without having to duplicate previous tasks. This should include the following information:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    \emph{Contact information:} name of the organization where to obtain data and contact information of at least one specific person. Sample request forms, data use agreements and detail procedures on who should be contacted when.\\
+  \item
+    \emph{Information on data files (meta-data):} number, file size, number of variables and observations in each file. Detailed summary description of each variable (dictionary), and summary statistics. If possible a synthetic data set (fake data with the same statistical properties as the original data) should be provided in the reproduction package.\\
+  \item
+    \emph{Estimated costs:} monetary costs on fees and licences to access the data and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data. The description on costs should be detailed providing a timeline and estimated costs at the different steps involved in obtaining the data.
+  \end{enumerate}
 \item
-  \textbf{Adjusted Level 8 (L8*):} Some instructions to raw data: inst, contact information, costs, times.
+  \textbf{Adjusted Level 5 (L5*):} Level 4* + the reproduction package includes a certification that the output can be reproduced from the analysis data (CRA) by a third party research (not part involved in the original research team). Examples include a signed letter by a colleague of one of the researchers in the original team, or more professional certificates offered by some organization (eg., see \href{https://www.cascad.tech/}{cascad})
 \item
-  \textbf{Adjusted Level 9 (L9*):} Detailed instructions to raw data.
+  \textbf{Adjusted Level 8 (L8*):} Level 7 + partial description on how to access the raw data. To assess the the same criteria as in level 3*.
 \item
-  **Adjusted Level 10 (L10*):** Third party CRR (add reference to french start-up)
+  \textbf{Adjusted Level 9 (L9*):} Level 7 + complete description on how to access the raw data. To assess the the same criteria as in level 4*.
+\item
+  \textbf{Adjusted Level 10 (L10*):} Level 9 + computational reproducibility starting from raw data can be certified by a third party researcher (not involved in the original research team). Standards of certification are identical to those of level 5*
 \end{itemize}
 
-You will be asked to provide this information in the \href{ADD\%20LINK}{assessment and improvement survey}.
+You will be asked to provide this information in the Assessment and Improvement Survey.
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
@@ -788,19 +815,19 @@ In addition to the output-specific assessment and improvement of computational r
 \begin{itemize}
 \tightlist
 \item
-  master script that runs all steps
+  Master script that runs all steps
 \item
-  readme file
+  Readme file
 \item
-  standardized file organization\\
+  Standardized file organization\\
 \item
-  version control
+  Version control
 \item
-  open source (statistical) software\\
+  Open source (statistical) software\\
 \item
-  dynamic document\\
+  Dynamic document\\
 \item
-  computing capsule (e.g.~CodeOcean, Binder, etc.)
+  Computing capsule (e.g.~CodeOcean, Binder, etc.)
 \end{itemize}
 
 Congratulations! You have now completed the \emph{Assessment} stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics.

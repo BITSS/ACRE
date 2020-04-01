@@ -95,7 +95,7 @@ As you gain an understanding of each code script, you will likely find more inpu
 
 ## Connect each output to all its inputs {#diagram}
 
-Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to acre@berkeley.edu. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output. 
+Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to the ACRE Diagram Builder at acre@berkeley.edu. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output. 
 
 
 <!--
@@ -103,7 +103,7 @@ Upload the standardized table you build to the describe the code above into the 
 -->
 ### Complete workflow information 
 
-If you were able to identify all the relevant components in the previous section, the ACRE diagram builder will produce a diagram that looks similar to the one below.
+If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
         table1.tex
             |___[code] analysis.R
@@ -134,7 +134,7 @@ This diagram, built with the information you provided is already an important co
 
 ### Incomplete workflow information 
 
-In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the ACRE diagram builder will return a partial reproduction tree diagram. For example, if the files `merge_1_2.do`, `merge_3_4.do`, and `final_merge.do` are missing from the previous diagram, the ACRE builder will produce the following diagram:
+In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files `merge_1_2.do`, `merge_3_4.do`, and `final_merge.do` are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
 
         cleaned_3.dta
             |___[code] clean_raw_3.py
@@ -261,7 +261,8 @@ This is the highest level that most published research papers can attain current
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
-                         Levels of Computational Reproducibility    
+                         Levels of Computational Reproducibility 
+                       (P denotes "partial", C denotes "complete")
 
                                      | Availavility of materials, and reproducibility |
                                      |------------------------------------------------|
@@ -309,32 +310,42 @@ You may disagree with some of the levels outlined above, particularly wherever s
     L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
     L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
-TO DO: describe. 
+A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred as administrative data. Given the nature of this data, some of the levels from the guidelines need to be modified. The underlying theme in these modifications is that when data cannot be provided, materials will be assessed on how detailed are the instructions to obtain access. Similarly, when reproducibility cannot be verified publicly, the reproduction materials should demonstrate that a third party (not involved in the original research team) was able to reproduce the results. 
 
- - **Adjusted Level 4 (L4\*):** All instructions to analytic data: inst, contact information, costs, times. 
 
- - **Adjusted Level 5 (L5\*):** Third party CRA (add reference to french start-up)  
+ - **Adjusted Level 3 (L3\*):** All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve partial status, the reproduction package should include the following information: 
+    1. *Partial contact information:* name of the organization where to obtain data and contact information of at least one specific person.  
+    2. *Partial information on data files (meta-data):* number, file size, number of variables and observations in each file.   
+    3. *Partial estimated costs:* monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.  
 
- - **Adjusted Level 8 (L8\*):** Some instructions to raw data: inst, contact information, costs, times.
+ - **Adjusted Level 4 (L4\*):** All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve complete status, the reproduction package should have enough information that will allow others researchers to access the data without having to duplicate previous tasks. This should include the following information: 
+    1. *Contact information:* name of the organization where to obtain data and contact information of at least one specific person. Sample request forms, data use agreements and detail procedures on who should be contacted when.   
+    2. *Information on data files (meta-data):* number, file size, number of variables and observations in each file. Detailed summary description of each variable (dictionary), and summary statistics. If possible a synthetic data set (fake data with the same statistical properties as the original data) should be provided in the reproduction package.  
+    3. *Estimated costs:* monetary costs on fees and licences to access the data and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data. The description on costs should be detailed providing a timeline and estimated costs at the different steps involved in obtaining the data. 
 
- - **Adjusted Level 9 (L9\*):**  Detailed instructions to raw data. 
 
- - **Adjusted Level 10 (L10*):** Third party CRR (add reference to french start-up)    
+ - **Adjusted Level 5 (L5\*):** Level 4\* + the reproduction package includes a certification that the output can be reproduced from the analysis data (CRA) by a third party research (not part involved in the original research team). Examples include a signed letter by a colleague of one of the researchers in the original team, or more professional certificates offered by some organization (eg., see [cascad](https://www.cascad.tech/))  
 
-You will be asked to provide this information in the [assessment and improvement survey](ADD LINK).   
+ - **Adjusted Level 8 (L8\*):** Level 7 + partial description on how to access the raw data. To assess the the same criteria as in level 3\*. 
 
- 
+ - **Adjusted Level 9 (L9\*):**  Level 7 + complete description on how to access the raw data. To assess the the same criteria as in level 4\*.
+
+ - **Adjusted Level 10 (L10\*):** Level 9 + computational reproducibility starting from raw data can be certified by a third party researcher (not involved in the original research team). Standards of certification are identical to those of level 5\* 
+
+You will be asked to provide this information in the Assessment and Improvement Survey.
+
+
 ### Reproducibility dimensions at the paper level   
 
 In addition to the output-specific assessment and improvement of computational reproducibility, several practices can facilitate reproducibility at the level of the overall paper. You can read about such practices in greater detail in the next chapter, dedicated to Stage 3: *Improvements*. In this  Assessment section, you should only verify whether the original reproduction package made use of any of the following: 
 
-- master script that runs all steps
-- readme file
-- standardized file organization       
-- version control 
-- open source (statistical) software  
-- dynamic document        
-- computing capsule (e.g. CodeOcean, Binder, etc.)     
+- Master script that runs all steps
+- Readme file
+- Standardized file organization       
+- Version control 
+- Open source (statistical) software  
+- Dynamic document        
+- Computing capsule (e.g. CodeOcean, Binder, etc.)     
 
 Congratulations! You have now completed the *Assessment* stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics. 
 
