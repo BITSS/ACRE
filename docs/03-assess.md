@@ -288,7 +288,8 @@ You may disagree with some of the levels outlined above, particularly wherever s
 
 #### Adjusting Levels To Account for Proprietary/Confidential Data {-}
 
-         Levels of Computational Reproducibility with Propietary/Confidential Data    
+         Levels of Computational Reproducibility with Propietary/Confidential Data 
+                       (P denotes "partial", C denotes "complete")    
 
                                      | Availavility of materials, and reproducibility |
                                      |------------------------------------------------|
