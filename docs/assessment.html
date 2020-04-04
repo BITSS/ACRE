@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-04-01" />
+<meta name="date" content="2020-04-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 
 
 
@@ -139,9 +143,8 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -163,6 +166,7 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -202,9 +206,9 @@
 <h3><span class="header-section-number">2.1.1</span> Describe the data sources and raw data.</h3>
 <p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
-<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
+<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
 <p>Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:</p>
-<pre><code>      Raw data information:
+<pre><code>  Raw data information:
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
       | data_source          | page | data_files                                    | known_missing       | directory           |
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -226,7 +230,7 @@
 <p>List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
-<pre><code>      Analysis data information:
+<pre><code>  Analysis data information:
       |----------------|-----------------------|--------------------------------|
       | analysis_data  | location              | description                    |
       |----------------|-----------------------|--------------------------------|
@@ -240,7 +244,7 @@
 <div id="desc-scripts" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
 <p>List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). For each code file, record all inputs together and separate each item with “;”. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). For each code file, record all outputs together and separate each item with “;”. Provide a one-line description of what each code file does. Record all of this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>, using the following structure:</p>
-<pre><code>      Code files information:
+<pre><code>  Code files information:
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -266,7 +270,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="complete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
 <p>If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.</p>
-<pre><code>    table1.tex
+<pre><code>table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___[code] final_merge.do
@@ -295,7 +299,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="incomplete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Incomplete workflow information</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files <code>merge_1_2.do</code>, <code>merge_3_4.do</code>, and <code>final_merge.do</code> are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:</p>
-<pre><code>    cleaned_3.dta
+<pre><code>cleaned_3.dta
         |___[code] clean_raw_3.py
             |___raw_3.dta
     
@@ -323,8 +327,8 @@ Upload the standardized table you build to the describe the code above into the 
         |___[code] clean_merged_1_2.do
             |___merged_1_2.dta
     Unusued data sources: None.</code></pre>
-<p>In this case, you can still combine this partial information with your knowledge from the paper and produce a “candidate” tree diagram. This may look like the following:</p>
-<pre><code>    table1.tex
+<p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
+<pre><code>table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___MISSSING CODE FILE(S) #3
@@ -350,7 +354,7 @@ Upload the standardized table you build to the describe the code above into the 
                                                 |___[code] clean_raw_2.py
                                                     |___raw_2.dta</code></pre>
 <p>To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:</p>
-<pre><code>    Adding rows to code spreadsheet:
+<pre><code>Adding rows to code spreadsheet:
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
     | file_name         | location         | inputs              | outputs             | description          | primary_type |
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -381,7 +385,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="levels-of-computational-reproducibility-for-a-specific-output" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
 <p>Each level of computational reproducibility is defined by the availability of data and materials, and whether or not the available materials faithfully reproduce the output of interest. The description of each level also includes possible improvements that can help advance the reproducibility of the output to a higher level. You will learn in more detail about the possible improvements.</p>
-<p>Note that the assessment is made <em>at the output level</em> – a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.</p>
+<p>Note that the assessment is made <em>at the output level</em> – a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 1 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.</p>
 <ul>
 <li><strong>Level 1 (L1):</strong> No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).</li>
 </ul>
@@ -401,7 +405,7 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<pre><code>                     Levels of Computational Reproducibility 
+<pre><code>                 Levels of Computational Reproducibility 
                    (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)
 
                                  | Availavility of materials, and reproducibility |
@@ -425,52 +429,138 @@ L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 <p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the “Edit” button above (top left corner if you are reading this document in your browser).</p>
 <div id="adjusting-levels-to-account-for-proprietaryconfidential-data" class="section level4 unnumbered">
 <h4>Adjusting Levels To Account for Proprietary/Confidential Data</h4>
-<pre><code>     Levels of Computational Reproducibility with Propietary/Confidential Data 
-                   (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
-
-                                 | Availavility of materials, and reproducibility |
-                                 |------------------------------------------------|
-                                 |        | Instr.  |     |         | Instr.|     |
-                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                 |Code    | Data    | CRA | Code    | Data  | CRR |
-                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                 ---------|---------|-----|---------|-------|-----|
-L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
-<p>A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred as administrative data. Given the nature of this data, some of the levels from the guidelines need to be modified. The underlying theme in these modifications is that when data cannot be provided, materials will be assessed on how detailed are the instructions to obtain access. Similarly, when reproducibility cannot be verified publicly, the reproduction materials should demonstrate that a third party (not involved in the original research team) was able to reproduce the results.</p>
+<p>A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred to as <em>administrative data</em>. Given that administrative and proprietary data are usually not publicly accessible, some of the reproducibility levels presented above need to be modified before applying them to outputs based on such data. The underlying theme in these modifications is that when data cannot be provided, reproducers can assign reproducibility scores based on the level of detail included in the instructions to obtain access to the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) was able to reproduce the results.</p>
 <ul>
-<li><strong>Adjusted Level 3 (L3*):</strong> All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve partial status, the reproduction package should include the following information:
-<ol style="list-style-type: decimal">
-<li><em>Partial contact information:</em> name of the organization where to obtain data and contact information of at least one specific person.<br />
-</li>
-<li><em>Partial information on data files (meta-data):</em> number, file size, number of variables and observations in each file.<br />
-</li>
-<li><em>Partial estimated costs:</em> monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.</li>
+<li><p><strong>Levels 1 and 2</strong> can be applied as described above.</p></li>
+<li><strong>Adjusted Level 3 (L3*):</strong> All the analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all of the following information:
+<ol style="list-style-type: lower-alpha">
+<li><em>Contact information</em>, including name of the organization(s) that provides access to the data and contact information of at least one specific person.</li>
+<li><em>Terms of use</em>, including licenses and eligibility criteria to access the data, if any.</li>
+<li><em>Information on data files (meta-data)</em>, including name(s) and number of files, file size, relevant version of file(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including description dataset dictionary, summary statistics, and sythetic data (fake data with the same statistical properties as the original data)</li>
+<li><em>Estimated costs for access</em>, including monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.</li>
 </ol></li>
-<li><strong>Adjusted Level 4 (L4*):</strong> All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve complete status, the reproduction package should have enough information that will allow others researchers to access the data without having to duplicate previous tasks. This should include the following information:
-<ol style="list-style-type: decimal">
-<li><em>Contact information:</em> name of the organization where to obtain data and contact information of at least one specific person. Sample request forms, data use agreements and detail procedures on who should be contacted when.<br />
-</li>
-<li><em>Information on data files (meta-data):</em> number, file size, number of variables and observations in each file. Detailed summary description of each variable (dictionary), and summary statistics. If possible a synthetic data set (fake data with the same statistical properties as the original data) should be provided in the reproduction package.<br />
-</li>
-<li><em>Estimated costs:</em> monetary costs on fees and licences to access the data and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data. The description on costs should be detailed providing a timeline and estimated costs at the different steps involved in obtaining the data.</li>
-</ol></li>
-<li><p><strong>Adjusted Level 5 (L5*):</strong> Level 4* + the reproduction package includes a certification that the output can be reproduced from the analysis data (CRA) by a third party research (not part involved in the original research team). Examples include a signed letter by a colleague of one of the researchers in the original team, or more professional certificates offered by some organization (eg., see <a href="https://www.cascad.tech/">cascad</a>)</p></li>
-<li><p><strong>Adjusted Level 8 (L8*):</strong> Level 7 + partial description on how to access the raw data. To assess the the same criteria as in level 3*.</p></li>
-<li><p><strong>Adjusted Level 9 (L9*):</strong> Level 7 + complete description on how to access the raw data. To assess the the same criteria as in level 4*.</p></li>
-<li><p><strong>Adjusted Level 10 (L10*):</strong> Level 9 + computational reproducibility starting from raw data can be certified by a third party researcher (not involved in the original research team). Standards of certification are identical to those of level 5*</p></li>
+<li><p><strong>Adjusted Level 4 (L4*):</strong> All the analysis code is provided, and complete and detailed instructions on how to access the <em>analysis data</em> are available.</p></li>
+<li><p><strong>Adjusted Level 5 (L5*):</strong> All requirements for Level 4* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (eg., see <a href="https://www.cascad.tech/">cascad</a>).</p></li>
+<li><p><strong>Levels 6 and 7</strong> can be applied as described above.</p></li>
+<li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met and the authors provide incomplete instructions on how to access the <strong><em>raw</em></strong> data. Use the instructions described in Level 3 above to assess the completeness of the instructions.</p></li>
+<li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met and the authors provide complete instructions on how to access the <strong><em>raw</em></strong> data.</p></li>
+<li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met and the authors provide a certification that the output can be reproduced from the raw data.</p>
+<pre><code>  Levels of Computational Reproducibility with Propietary/Confidential Data 
+                (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
+
+                              | Availavility of materials, and reproducibility |
+                              |------------------------------------------------|
+                              |        | Instr.  |     |         | Instr.|     |
+                              |Analysis| Analysis|     | Cleaning| Raw   |     |
+                              |Code    | Data    | CRA | Code    | Data  | CRR |
+                              | P | C  | P  | C  |     | P  |  C | P | C |     |
+                              ---------|---------|-----|---------|-------|-----|</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>L1: No materials……………..</th>
+<th>- -</th>
+<th>- -</th>
+<th>-</th>
+<th>- -</th>
+<th>- -</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L2: Only code ……………….</td>
+<td>✔ ✔</td>
+<td>- -</td>
+<td>-</td>
+<td>- -</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>L3: Partial analysis data &amp; code.</td>
+<td>✔ ✔</td>
+<td>✔ -</td>
+<td>-</td>
+<td>- -</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>L4*: All analysis data &amp; code….</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>-</td>
+<td>- -</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>L5*: Proof of third party CRA….</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>- -</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>———————————</td>
+<td>——–</td>
+<td>———</td>
+<td>—–</td>
+<td>———</td>
+<td>——-</td>
+<td>—–</td>
+</tr>
+<tr class="even">
+<td>L6: Some cleaning code………..</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>✔ -</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>L7: All cleaning code…………</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>✔ ✔</td>
+<td>- -</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>L8*: Some instr. for raw data….</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>✔ ✔</td>
+<td>✔ -</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>L9*: All instr. for raw data…..</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>L10*:Proof of third party CRR….</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+<td>✔ ✔</td>
+<td>✔ ✔</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table></li>
 </ul>
-<p>You will be asked to provide this information in the Assessment and Improvement Survey.</p>
 </div>
 </div>
 <div id="reproducibility-dimensions-at-the-paper-level" class="section level3">
@@ -496,8 +586,8 @@ L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>a relative location takes the form of <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
+<ol start="2">
+<li id="fn2"><p>a relative location takes the form of <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

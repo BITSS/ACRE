@@ -165,7 +165,8 @@ In many cases, some of the components of the workflow will not be easily identif
                 |___merged_1_2.dta
         Unusued data sources: None.
 
-In this case, you can still combine this partial information with your knowledge from the paper and produce a "candidate" tree diagram. This may look like the following: 
+
+In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a "candidate" tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following: 
 
     
         table1.tex

@@ -71,7 +71,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-04-01}
+\date{2020-04-04}
 
 \begin{document}
 \maketitle
@@ -154,7 +154,7 @@
 
 \protect\hyperlink{dcc}{☐ Debug cleaning code}
 
-\href{https://berkeley.qualtrics.com/jfe/form/SV_3UWe5xu3qjeh0c5}{Record results in Survey 1}
+\href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Record results in Survey 1}
 
 \href{https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7}{Record results in Survey 2}
 
@@ -599,7 +599,7 @@ cleaned_3.dta
     Unusued data sources: None.
 \end{verbatim}
 
-In this case, you can still combine this partial information with your knowledge from the paper and produce a ``candidate'' tree diagram. This may look like the following:
+In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
 \begin{verbatim}
 table1.tex
@@ -674,7 +674,7 @@ Take note of the following concepts in this section:
 
 Each level of computational reproducibility is defined by the availability of data and materials, and whether or not the available materials faithfully reproduce the output of interest. The description of each level also includes possible improvements that can help advance the reproducibility of the output to a higher level. You will learn in more detail about the possible improvements.
 
-Note that the assessment is made \emph{at the output level} -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 0 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.
+Note that the assessment is made \emph{at the output level} -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 1 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.
 
 \begin{itemize}
 \tightlist
@@ -742,70 +742,70 @@ You may disagree with some of the levels outlined above, particularly wherever s
 \subsubsection*{Adjusting Levels To Account for Proprietary/Confidential Data}\label{adjusting-levels-to-account-for-proprietaryconfidential-data}}
 \addcontentsline{toc}{subsubsection}{Adjusting Levels To Account for Proprietary/Confidential Data}
 
-\begin{verbatim}
- Levels of Computational Reproducibility with Propietary/Confidential Data    
-
-                                 | Availavility of materials, and reproducibility |
-                                 |------------------------------------------------|
-                                 |        | Instr.  |     |         | Instr.|     |
-                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                 |Code    | Data    | CRA | Code    | Data  | CRR |
-                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                 ---------|---------|-----|---------|-------|-----|
-L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-L4*: All analysis data & code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
-\end{verbatim}
-
-A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred as administrative data. Given the nature of this data, some of the levels from the guidelines need to be modified. The underlying theme in these modifications is that when data cannot be provided, materials will be assessed on how detailed are the instructions to obtain access. Similarly, when reproducibility cannot be verified publicly, the reproduction materials should demonstrate that a third party (not involved in the original research team) was able to reproduce the results.
+A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred to as \emph{administrative data}. Given that administrative and proprietary data are usually not publicly accessible, some of the reproducibility levels presented above need to be modified before applying them to outputs based on such data. The underlying theme in these modifications is that when data cannot be provided, reproducers can assign reproducibility scores based on the level of detail included in the instructions to obtain access to the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) was able to reproduce the results.
 
 \begin{itemize}
 \item
-  \textbf{Adjusted Level 3 (L3*):} All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve partial status, the reproduction package should include the following information:
+  \textbf{Levels 1 and 2} can be applied as described above.
+\item
+  \textbf{Adjusted Level 3 (L3*):} All the analysis code is provided, but only partial instructions on how to access the \textbf{\emph{analysis data}} are available. This means that the authors have provided some, but not all of the following information:
 
   \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
+  \def\labelenumi{\alph{enumi}.}
   \tightlist
   \item
-    \emph{Partial contact information:} name of the organization where to obtain data and contact information of at least one specific person.\\
+    \emph{Contact information}, including name of the organization(s) that provides access to the data and contact information of at least one specific person.
   \item
-    \emph{Partial information on data files (meta-data):} number, file size, number of variables and observations in each file.\\
+    \emph{Terms of use}, including licenses and eligibility criteria to access the data, if any.
   \item
-    \emph{Partial estimated costs:} monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.
+    \emph{Information on data files (meta-data)}, including name(s) and number of files, file size, relevant version of file(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including description dataset dictionary, summary statistics, and sythetic data (fake data with the same statistical properties as the original data)
+  \item
+    \emph{Estimated costs for access}, including monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.
   \end{enumerate}
 \item
-  \textbf{Adjusted Level 4 (L4*):} All the analysis code is provided, but only partial instructions on how to access the analysis data are available. To achieve complete status, the reproduction package should have enough information that will allow others researchers to access the data without having to duplicate previous tasks. This should include the following information:
+  \textbf{Adjusted Level 4 (L4*):} All the analysis code is provided, and complete and detailed instructions on how to access the \emph{analysis data} are available.
+\item
+  \textbf{Adjusted Level 5 (L5*):} All requirements for Level 4* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (eg., see \href{https://www.cascad.tech/}{cascad}).
+\item
+  \textbf{Levels 6 and 7} can be applied as described above.
+\item
+  \textbf{Adjusted Level 8 (L8*):} All requirements for Level 7* are met and the authors provide incomplete instructions on how to access the \textbf{\emph{raw}} data. Use the instructions described in Level 3 above to assess the completeness of the instructions.
+\item
+  \textbf{Adjusted Level 9 (L9*):} All requirements for Level 8* are met and the authors provide complete instructions on how to access the \textbf{\emph{raw}} data.
+\item
+  \textbf{Adjusted Level 10 (L10*):} All requirements for Level 9* are met and the authors provide a certification that the output can be reproduced from the raw data.
 
-  \begin{enumerate}
-  \def\labelenumi{\arabic{enumi}.}
-  \tightlist
-  \item
-    \emph{Contact information:} name of the organization where to obtain data and contact information of at least one specific person. Sample request forms, data use agreements and detail procedures on who should be contacted when.\\
-  \item
-    \emph{Information on data files (meta-data):} number, file size, number of variables and observations in each file. Detailed summary description of each variable (dictionary), and summary statistics. If possible a synthetic data set (fake data with the same statistical properties as the original data) should be provided in the reproduction package.\\
-  \item
-    \emph{Estimated costs:} monetary costs on fees and licences to access the data and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data. The description on costs should be detailed providing a timeline and estimated costs at the different steps involved in obtaining the data.
-  \end{enumerate}
-\item
-  \textbf{Adjusted Level 5 (L5*):} Level 4* + the reproduction package includes a certification that the output can be reproduced from the analysis data (CRA) by a third party research (not part involved in the original research team). Examples include a signed letter by a colleague of one of the researchers in the original team, or more professional certificates offered by some organization (eg., see \href{https://www.cascad.tech/}{cascad})
-\item
-  \textbf{Adjusted Level 8 (L8*):} Level 7 + partial description on how to access the raw data. To assess the the same criteria as in level 3*.
-\item
-  \textbf{Adjusted Level 9 (L9*):} Level 7 + complete description on how to access the raw data. To assess the the same criteria as in level 4*.
-\item
-  \textbf{Adjusted Level 10 (L10*):} Level 9 + computational reproducibility starting from raw data can be certified by a third party researcher (not involved in the original research team). Standards of certification are identical to those of level 5*
+\begin{verbatim}
+  Levels of Computational Reproducibility with Propietary/Confidential Data 
+                (P denotes "partial", C denotes "complete")    
+
+                              | Availavility of materials, and reproducibility |
+                              |------------------------------------------------|
+                              |        | Instr.  |     |         | Instr.|     |
+                              |Analysis| Analysis|     | Cleaning| Raw   |     |
+                              |Code    | Data    | CRA | Code    | Data  | CRR |
+                              | P | C  | P  | C  |     | P  |  C | P | C |     |
+                              ---------|---------|-----|---------|-------|-----|
+\end{verbatim}
+
+  \begin{longtable}[]{@{}lllllll@{}}
+  \toprule
+  L1: No materials\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}.. & - - & - - & - & - - & - - & -\tabularnewline
+  \midrule
+  \endhead
+  L2: Only code \ldots{}\ldots{}\ldots{}\ldots{}\ldots{}\ldots{}. & ✔ ✔ & - - & - & - - & - - & -\tabularnewline
+  L3: Partial analysis data \& code. & ✔ ✔ & ✔ - & - & - - & - - & -\tabularnewline
+  L4*: All analysis data \& code\ldots{}. & ✔ ✔ & ✔ ✔ & - & - - & - - & -\tabularnewline
+  L5*: Proof of third party CRA\ldots{}. & ✔ ✔ & ✔ ✔ & ✔ & - - & - - & -\tabularnewline
+  --------------------------------- & -------- & --------- & ----- & --------- & ------- & -----\tabularnewline
+  L6: Some cleaning code\ldots{}\ldots{}\ldots{}.. & ✔ ✔ & ✔ ✔ & ✔ & ✔ - & - - & -\tabularnewline
+  L7: All cleaning code\ldots{}\ldots{}\ldots{}\ldots{} & ✔ ✔ & ✔ ✔ & ✔ & ✔ ✔ & - - & -\tabularnewline
+  L8*: Some instr. for raw data\ldots{}. & ✔ ✔ & ✔ ✔ & ✔ & ✔ ✔ & ✔ - & -\tabularnewline
+  L9*: All instr. for raw data\ldots{}.. & ✔ ✔ & ✔ ✔ & ✔ & ✔ ✔ & ✔ ✔ & -\tabularnewline
+  L10*:Proof of third party CRR\ldots{}. & ✔ ✔ & ✔ ✔ & ✔ & ✔ ✔ & ✔ ✔ & ✔\tabularnewline
+  \bottomrule
+  \end{longtable}
 \end{itemize}
-
-You will be asked to provide this information in the Assessment and Improvement Survey.
 
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper level}\label{reproducibility-dimensions-at-the-paper-level}}
