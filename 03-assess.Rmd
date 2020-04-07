@@ -287,29 +287,29 @@ The following figure summarizes the different levels of computational reproducib
 
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
 
-#### Adjusting Levels To Account for Proprietary/Confidential Data {-}
+#### Adjusting Levels To Account for Confidential/Proprietary Data {-}
 
-A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred to as *administrative data*. Given that administrative and proprietary data are usually not publicly accessible, some of the reproducibility levels presented above need to be modified before applying them to outputs based on such data. The underlying theme in these modifications is that when data cannot be provided, reproducers can assign reproducibility scores based on the level of detail included in the instructions to obtain access to the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) was able to reproduce the results.
+A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and generally referred to as *administrative data*. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.
 
  - **Levels 1 and 2** can be applied as described above.
  
- - **Adjusted Level 3 (L3\*):** All the analysis code is provided, but only partial instructions on how to access the ***analysis data*** are available. This means that the authors have provided some, but not all of the following information:
-    a. *Contact information*, including name of the organization(s) that provides access to the data and contact information of at least one specific person.
-    b. *Terms of use*, including licenses and eligibility criteria to access the data, if any. 
-    c. *Information on data files (meta-data)*, including name(s) and number of files, file size, relevant version of file(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including description dataset dictionary, summary statistics, and sythetic data (fake data with the same statistical properties as the original data)
-    d. *Estimated costs for access*, including monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.  
+ - **Adjusted Level 3 (L3\*):** All analysis code is provided, but only partial instructions on how to access the ***analysis data*** are available. This means that the authors have provided some, but not all, of the following information:
+    a. *Contact information*, including name of the organization(s) that provides access to the data and contact information of at least one individual.
+    b. *Terms of use*, including licenses and eligibility criteria for accessing the data, if any. 
+    c. *Information on data files (meta-data)*, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a description dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data)
+    d. *Estimated costs for access*, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access the data.  
 
- - **Adjusted Level 4 (L4\*):** All the analysis code is provided, and complete and detailed instructions on how to access the *analysis data* are available.
+ - **Adjusted Level 4 (L4\*):** All analysis code is provided, and complete and detailed instructions on how to access the *analysis data* are available.
 
- - **Adjusted Level 5 (L5\*):** All requirements for Level 4\* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (eg., see [cascad](https://www.cascad.tech/)).
+ - **Adjusted Level 5 (L5\*):** All requirements for Level 4\* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (e.g., see [cascad](https://www.cascad.tech/)).
  
  - **Levels 6 and 7** can be applied as described above.
 
- - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met and the authors provide incomplete instructions on how to access the ***raw*** data. Use the instructions described in Level 3 above to assess the completeness of the instructions.
+ - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, but instructions for accessing the ***raw data*** are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
 
- - **Adjusted Level 9 (L9\*):**  All requirements for Level 8\* are met and the authors provide complete instructions on how to access the ***raw*** data. 
+ - **Adjusted Level 9 (L9\*):**  All requirements for Level 8\* are met, and instructions for accessing the ***raw data*** are complete. 
 
- - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met and the authors provide a certification that the output can be reproduced from the raw data. 
+ - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided. 
  
          Levels of Computational Reproducibility with Propietary/Confidential Data 
                        (P denotes "partial", C denotes "complete")    
