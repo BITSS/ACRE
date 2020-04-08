@@ -1,5 +1,4 @@
 # Improvements   
-
 After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
 Like in the *Assessment* section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   

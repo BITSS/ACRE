@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  4 APR 2020 00:19
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  8 APR 2020 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,15 +1158,15 @@ Overfull \hbox (316.5pt too wide) in paragraph at lines 650--650
  []
 
 
-Overfull \hbox (316.5pt too wide) in paragraph at lines 650--650
-[]    \TU/lmtt/m/n/10 | missing_file3     | unknown          | cleaned_3_4.dta,
-    | analysis_data.dta   | missing code         | unknown      |[] 
+Overfull \hbox (311.25pt too wide) in paragraph at lines 650--650
+[]    \TU/lmtt/m/n/10 | missing_file3     | unknown          | merged_3_4.dta, 
+   | analysis_data.dta   | missing code         | unknown      |[] 
  []
 
 
-Overfull \hbox (316.5pt too wide) in paragraph at lines 650--650
-[]    \TU/lmtt/m/n/10 |                   |                  | cleaned_1_2.dta 
-    |                     |                      |              |[] 
+Overfull \hbox (311.25pt too wide) in paragraph at lines 650--650
+[]    \TU/lmtt/m/n/10 |                   |                  | merged_1_2.dta  
+   |                     |                      |              |[] 
  []
 
 
@@ -1180,96 +1180,85 @@ Underfull \vbox (badness 3199) has occurred while \output is active []
 
 [23] [24]
 Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (1.5pt too wide) in paragraph at lines 737--737
+[]                       \TU/lmtt/m/n/10 (P denotes "partial", C denotes "compl
+ete")[] 
+ []
+
 [25]
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 | Availavility of materials,
- and reproducibility |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 | Availavility of material
+s, and reproducibility |[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 |---------------------------
----------------------|[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 |-------------------------
+-----------------------|[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 |Analysis| Analysis|     | C
-leaning| Raw   |     |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 |Analysis| Analysis|     |
+ Cleaning| Raw   |     |[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 |Code    | Data    | CRA | C
-ode    | Data  | CRR |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 |Code    | Data    | CRA |
+ Code    | Data  | CRR |[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 | P | C  | P  | C  |     | P
-  |  C | P | C |     |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 | P | C  | P  | C  |     |
+ P  |  C | P | C |     |[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]                                 \TU/lmtt/m/n/10 ---------|---------|-----|--
--------|-------|-----|[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]                                   \TU/lmtt/m/n/10 ---------|---------|-----|
+---------|-------|-----|[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L1: No materials.................| -   -  | -    -  |  -  |  
--    - | -   - |  -  |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L1: No materials.................| -   -  | -    -  |  -  |
+  -    - | -   - |  -  |[] 
  []
 
 
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|--
--------|-------|-----|[] 
- []
-
-Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
-
-Overfull \hbox (85.85pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L2: Only code ...................| ✔   ✔  | -    -  |  -  |  
--    - | -   - |  -  |[] 
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|
+---------|-------|-----|[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (83.40001pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |  
--    - | -   - |  -  |[] 
+Overfull \hbox (96.35pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L2: Only code ...................| ✔   ✔  | -    -  |  -  |
+  -    - | -   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (80.95001pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L4: All analysis data & code.....| ✔   ✔  | ✔    ✔  |  -  |  
--    - | -   - |  -  |[] 
+Overfull \hbox (93.90001pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |
+  -    - | -   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (78.50002pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  
--    - | -   - |  -  |[] 
- []
-
-
-Overfull \hbox (90.75pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|--
--------|-------|-----|[] 
+Overfull \hbox (91.45001pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L4: All analysis data & code.....| ✔   ✔  | ✔    ✔  |  -  |
+  -    - | -   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
@@ -1277,11 +1266,16 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (76.05002pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  
-✔    - | -   - |  -  |[] 
+Overfull \hbox (89.00002pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |
+  -    - | -   - |  -  |[] 
+ []
+
+
+Overfull \hbox (101.25pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|
+---------|-------|-----|[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
@@ -1290,11 +1284,10 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (73.60002pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  
-✔    ✔ | -   - |  -  |[] 
+Overfull \hbox (86.55002pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    - | -   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
@@ -1304,11 +1297,10 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (71.15002pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  
-✔    ✔ | ✔   - |  -  |[] 
+Overfull \hbox (84.10002pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | -   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
@@ -1319,11 +1311,10 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
-Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (68.70003pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  
-✔    ✔ | ✔   ✔ |  -  |[] 
+Overfull \hbox (81.65002pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   - |  -  |[] 
  []
 
 Missing character: There is no ✔ in font [lmmono10-regular]:!
@@ -1335,123 +1326,216 @@ Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (79.20003pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   ✔ |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
 Missing character: There is no ✔ in font [lmmono10-regular]:!
 
-Overfull \hbox (66.25003pt too wide) in paragraph at lines 737--737
-[]\TU/lmtt/m/n/10 L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  
-✔    ✔ | ✔   ✔ |  ✔  |[] 
+Overfull \hbox (76.75003pt too wide) in paragraph at lines 737--737
+[]  \TU/lmtt/m/n/10 L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   ✔ |  ✔  |[] 
  []
 
 [26]
-Overfull \hbox (73.75pt too wide) in paragraph at lines 789--789
- []  \TU/lmtt/m/n/10 Levels of Computational Reproducibility with Propietary/Co
-nfidential Data[] 
+Overfull \hbox (115.75pt too wide) in paragraph at lines 801--801
+ []          \TU/lmtt/m/n/10 Levels of Computational Reproducibility with Propi
+etary/Confidential Data[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 | Availavility of materials, a
-nd reproducibility |[] 
+Overfull \hbox (31.75pt too wide) in paragraph at lines 801--801
+ []                        \TU/lmtt/m/n/10 (P denotes "partial", C denotes "com
+plete")[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 |-----------------------------
--------------------|[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 | Availavility of material
+s, and reproducibility |[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 |        | Instr.  |     |    
-     | Instr.|     |[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 |-------------------------
+-----------------------|[] 
+ []
+
+
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 |        | Instr.  |     |
+         | Instr.|     |[] 
+ []
+
+
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 |Analysis| Analysis|     |
+ Cleaning| Raw   |     |[] 
+ []
+
+
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 |Code    | Data    | CRA |
+ Code    | Data  | CRR |[] 
+ []
+
+
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 | P | C  | P  | C  |     |
+ P  |  C | P | C |     |[] 
  []
 
 [27]
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 |Analysis| Analysis|     | Cle
-aning| Raw   |     |[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ []                                  \TU/lmtt/m/n/10 ---------|---------|-----|
+---------|-------|-----|[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 |Code    | Data    | CRA | Cod
-e    | Data  | CRR |[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L1: No materials.................| -   -  | -    -  |  -  |
+  -    - | -   - |  -  |[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 | P | C  | P  | C  |     | P  
-|  C | P | C |     |[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|
+---------|-------|-----|[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (116.1pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L2: Only code ...................| ✔   ✔  | -    -  |  -  |
+  -    - | -   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (113.65001pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |
+  -    - | -   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (111.20001pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L4*: All analysis data & code....| ✔   ✔  | ✔    ✔  |  -  |
+  -    - | -   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (108.75002pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |
+  -    - | -   - |  -  |[] 
  []
 
 
-Overfull \hbox (100.0pt too wide) in paragraph at lines 789--789
- []                              \TU/lmtt/m/n/10 ---------|---------|-----|----
------|-------|-----|[] 
+Overfull \hbox (121.0pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 ---------------------------------|--------|---------|-----|
+---------|-------|-----|[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (106.30002pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    - | -   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (103.85002pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | -   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (101.40002pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   - |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (98.95003pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   ✔ |  -  |[] 
+ []
+
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+Missing character: There is no ✔ in font [lmmono10-regular]:!
+
+Overfull \hbox (96.50003pt too wide) in paragraph at lines 801--801
+ [] \TU/lmtt/m/n/10 L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |
+  ✔    ✔ | ✔   ✔ |  ✔  |[] 
  []
 
 
-Overfull \hbox (11.31012pt too wide) in alignment at lines 791--795
- [] [] [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 816--818
+
  []
 
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no ✔ in font [lmroman10-regular]:mapping=tex-text;!
 
-Overfull \hbox (11.31012pt too wide) in alignment at lines 795--807
- [] [] [] [] [] [] [] 
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
+
  []
 
 
@@ -1459,132 +1543,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 822--824
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 826--828
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 828--830
-
- []
-
 [28]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--860
+Underfull \hbox (badness 10000) in paragraph at lines 852--854
 
  []
 
 [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 865--867
+Underfull \hbox (badness 10000) in paragraph at lines 859--861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--868
+Underfull \hbox (badness 10000) in paragraph at lines 861--862
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--872
+Underfull \hbox (badness 10000) in paragraph at lines 864--866
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 872--874
+Underfull \hbox (badness 10000) in paragraph at lines 866--868
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--890
+Underfull \hbox (badness 10000) in paragraph at lines 882--884
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 890--892
+Underfull \hbox (badness 10000) in paragraph at lines 884--886
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 892--894
+Underfull \hbox (badness 10000) in paragraph at lines 886--888
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 934--936
+Underfull \hbox (badness 10000) in paragraph at lines 928--930
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 936--938
+Underfull \hbox (badness 10000) in paragraph at lines 930--932
 
  []
 
 
-Overfull \hbox (1.5pt too wide) in paragraph at lines 964--964
+Overfull \hbox (1.5pt too wide) in paragraph at lines 958--958
 []   \TU/lmtt/m/n/10 Level-specific quality improvements: add data/code, debug 
 code.[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | output_name | imprv | description_of_added_files    
     | lvl |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 |-------------|-------|-------------------------------
 ----|-----|[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | table 1     | +AD   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | table 1     | +RD   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | table 1     | DCC   |        ADD EXAMPLES           
     |  5  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | figure 1    | +CC   |                               
     |  6  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | figure 1    | DAC   |                               
     |  6  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | inline 1    | DAC   |                               
     |  8  |[] 
  []
 
 
-Overfull \hbox (33.0pt too wide) in paragraph at lines 964--964
+Overfull \hbox (33.0pt too wide) in paragraph at lines 958--958
 []       \TU/lmtt/m/n/10 | ...         | ...   | ...                           
     | ... |[] 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 983--985
+Underfull \hbox (badness 10000) in paragraph at lines 977--979
 
  []
 
@@ -1593,42 +1667,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 983--985
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1003
+Underfull \hbox (badness 10000) in paragraph at lines 995--997
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
+Underfull \hbox (badness 10000) in paragraph at lines 997--999
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
 \TU/lmtt/m/n/10 CHOICE OF TYPE ____. RECORDED FOR THE FIRST TIME [HERE or IN
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 1015--1016
+Underfull \hbox (badness 4556) in paragraph at lines 1009--1010
 \TU/lmtt/m/n/10 "FILE_NAME-LINE_NUMBER"]” \TU/lmr/m/n/10 above each analytical 
 choice detected in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1027
+Underfull \hbox (badness 10000) in paragraph at lines 1019--1021
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1027--1029
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1029--1031
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
 
  []
 
 [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1035
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1037
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1039
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1039--1041
 
  []
@@ -1644,42 +1733,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1043--1045
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1049
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1049--1051
-
- []
-
-
-Overfull \hbox (9.1079pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (9.1079pt too wide) in paragraph at lines 1058--1059
 []\TU/lmr/m/n/10 file_name|  
  []
 
 
-Overfull \hbox (18.1998pt too wide) in paragraph at lines 1066--1067
+Overfull \hbox (18.1998pt too wide) in paragraph at lines 1060--1061
 []\TU/lmr/m/n/10 line_number|  
  []
 
 
-Overfull \hbox (16.05789pt too wide) in paragraph at lines 1077--1078
+Overfull \hbox (16.05789pt too wide) in paragraph at lines 1071--1072
 []\TU/lmr/m/n/10 code_01.do|  
  []
 
 
-Overfull \hbox (16.05789pt too wide) in paragraph at lines 1088--1089
+Overfull \hbox (16.05789pt too wide) in paragraph at lines 1082--1083
 []\TU/lmr/m/n/10 code_01.do|  
  []
 
 
-Overfull \hbox (12.8579pt too wide) in paragraph at lines 1099--1100
+Overfull \hbox (12.8579pt too wide) in paragraph at lines 1093--1094
 []\TU/lmr/m/n/10 code_05.R|  
  []
 
@@ -1687,7 +1761,7 @@ Overfull \hbox (12.8579pt too wide) in paragraph at lines 1099--1100
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1150
+Underfull \hbox (badness 10000) in paragraph at lines 1142--1144
 
  []
 
@@ -1696,41 +1770,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 1148--1150
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1177--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1171--1174
 
  []
 
 [39] [40]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1214
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1208
 
  []
 
 [41
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 1217--1219
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1221
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1223
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1223--1225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1225--1227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1229--1231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1249
 
  []
 
@@ -1741,6 +1815,21 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [42]
+Underfull \hbox (badness 10000) in paragraph at lines 1263--1265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1265--1267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1267--1269
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1269--1271
 
  []
@@ -1751,43 +1840,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1271--1273
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1277
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1279
-
- []
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 1298--1300
+Underfull \hbox (badness 2285) in paragraph at lines 1292--1294
 []\TU/lmr/m/n/10 I am contacting you about reproduction materials for your
  []
 
 
-Underfull \hbox (badness 2080) in paragraph at lines 1298--1300
+Underfull \hbox (badness 2080) in paragraph at lines 1292--1294
 \TU/lmr/m/n/10 paper titled \TU/lmtt/m/n/10 [Title] \TU/lmr/m/n/10 which was pu
 blished in \TU/lmtt/m/n/10 [Journal] \TU/lmr/m/n/10 in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1294
 \TU/lmtt/m/n/10 context for why you want to reproduce this particular
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1294
 \TU/lmtt/m/n/10 paper using neutral language (e.g., "This is a seminal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1294
 \TU/lmtt/m/n/10 paper in my field"), avoiding any statements that would
  []
 
@@ -1798,23 +1872,23 @@ UDY \TU/lmr/m/n/10 43
  []
 
 [43]
-Underfull \hbox (badness 5036) in paragraph at lines 1301--1302
+Underfull \hbox (badness 5036) in paragraph at lines 1295--1296
 \TU/lmr/m/n/10 can share the following items: [\TU/lmtt/m/n/10 list items missi
 ng from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
 \TU/lmtt/m/n/10 reproduction package, preferably bulleted if more than
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
+Underfull \hbox (badness 10000) in paragraph at lines 1295--1296
 \TU/lmtt/m/n/10 one (raw/analytic data, code, protocols for conducting
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 1301--1302
+Underfull \hbox (badness 1902) in paragraph at lines 1295--1296
 \TU/lmtt/m/n/10 where you searched for items, with links provided]\TU/lmr/m/n/1
 0 , how-
  []
@@ -1826,12 +1900,12 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1330
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
 \TU/lmtt/m/n/10 tried to resolve them. Describe whatever files or parts
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1330
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
 \TU/lmtt/m/n/10 of the data or code are missing. Refer to examples 1 and
  []
 
@@ -1880,7 +1954,7 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 
-Underfull \hbox (badness 1005) in paragraph at lines 1359--1360
+Underfull \hbox (badness 1005) in paragraph at lines 1353--1354
 \TU/lmr/m/n/10 find in the reproduction materials: \TU/lmr/bx/n/10 data_cleanin
 g01.R \TU/lmr/m/n/10 and
  []
@@ -1898,12 +1972,12 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 1412--1414
+Underfull \hbox (badness 10000) in paragraph at lines 1406--1408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1414--1416
+Underfull \hbox (badness 10000) in paragraph at lines 1408--1410
 
  []
 
@@ -1914,128 +1988,128 @@ UDY \TU/lmr/m/n/10 47
  []
 
 [47]
-Underfull \hbox (badness 2310) in paragraph at lines 1444--1446
+Underfull \hbox (badness 2310) in paragraph at lines 1438--1440
 \TU/lmr/m/n/10 applicable). \TU/lmtt/m/n/10 [Include the following items in the
  body of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 your email: - Briefly describe which parts of the paper
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 you tried to reproduce (e.g. a specific estimate, a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 table, etc.).  - Within the scope of your reproduction,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 describe exactly which items you managed to reproduce.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 - Discuss the differences you observed between the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 results of your reproduction and the original work,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 and demonstrate that you did your due diligence in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 trying to reproduce the item. Remember that it is more
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 constructive to discuss discrepancies, differences or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 deviations, rather than errors, mistakes or failures,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 and *always talk about the work -- not the author!* -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 Use sensitive language when presenting discrepancies,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 e.g. “Unfortunately, I found X, which differs from the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 Y result in the original paper...”. Be cognizant of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 any potential limitations of your work, and explain
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 how you have tried to address them -- that way you will
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 proactively address potential criticism!  - Describe how
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 you tried to improve, the reproducibility of the paper.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 If some of the improvements are based on discretionary
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 judgment (e.g. file organization or code commenting),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 try to explain why you think they are an upgrade over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 the original work. If you didn’t make improvements,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 point out some concrete steps that the author(s) can
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1444--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1438--1440
 \TU/lmtt/m/n/10 take to improve the reproducibility of the section you
  []
 
@@ -2168,24 +2242,34 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 [54]
 Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1617--1619
+Underfull \hbox (badness 10000) in paragraph at lines 1611--1613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1621
+Underfull \hbox (badness 10000) in paragraph at lines 1613--1615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1621--1623
+Underfull \hbox (badness 10000) in paragraph at lines 1615--1617
 
  []
 
 [55
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1627
+Underfull \hbox (badness 10000) in paragraph at lines 1619--1621
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1630--1632
 
  []
 
@@ -2195,17 +2279,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1632--1634
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1636--1638
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1638--1640
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1640--1642
+Underfull \hbox (badness 10000) in paragraph at lines 1634--1636
 
  []
 
@@ -2218,42 +2292,42 @@ Chapter 9.
 ]
 Chapter 10.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1676--1678
+Underfull \hbox (badness 10000) in paragraph at lines 1670--1672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1678--1680
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1674
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1688--1690
+Underfull \hbox (badness 10000) in paragraph at lines 1682--1684
 
  []
 
 [59] (./_main.bbl [60])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1710.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1704.
 [61
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1710.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1704.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1710.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1710.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1704.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1704.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
 (rerunfilecheck)             Checksum: 0A60FC0DD1CC93CDCF51539D15789736;7824.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1710.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1704.
  ) 
 Here is how much of TeX's memory you used:
- 16272 strings out of 481765
- 293699 string characters out of 5935379
+ 16271 strings out of 481765
+ 293694 string characters out of 5935379
  736744 words of memory out of 5000000
- 33055 multiletter control sequences out of 15000+600000
+ 33054 multiletter control sequences out of 15000+600000
  538845 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  52i,8n,115p,1613b,551s stack positions out of 5000i,500n,10000p,200000b,80000s

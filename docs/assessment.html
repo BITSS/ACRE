@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-04-04" />
+<meta name="date" content="2020-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -265,7 +265,7 @@
 <h2><span class="header-section-number">2.2</span> Connect each output to all its inputs</h2>
 <p>Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections <a href="assessment.html#desc-sourc">2.1.1</a>, <a href="assessment.html#desc-analy">2.1.2</a> and <a href="assessment.html#desc-scripts">2.1.3</a>) to the ACRE Diagram Builder at <a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.</p>
 <!--
-Upload the standardized table you build to the describe the code above into the [ACRE workflow diagram builder](ADD LINK). 
+Upload the standardized table you build to the describe the code above into the [ACRE workflow diagram builder](ADD LINK).
 -->
 <div id="complete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
@@ -302,27 +302,27 @@ Upload the standardized table you build to the describe the code above into the 
 <pre><code>cleaned_3.dta
         |___[code] clean_raw_3.py
             |___raw_3.dta
-    
+
     table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
-    
+
     cleaned_3_4.dta
         |___[code] clean_merged_3_4.do
             |___merged_3_4.dta
-    
+
     cleaned_1.dta
         |___[code] clean_raw_1.py
             |___raw_1.dta
-    
+
     cleaned_2.dta
         |___[code] clean_raw_2.py
             |___raw_2.dta
-    
+
     cleaned_4.dta
         |___[code] clean_raw_4.py
             |___raw_4.dta
-    
+
     cleaned_1_2.dta
         |___[code] clean_merged_1_2.do
             |___merged_1_2.dta
@@ -366,8 +366,8 @@ Upload the standardized table you build to the describe the code above into the 
     | missing_file2     | unknown          | cleaned_3.dta,      | merged_3_4.dta      | missing code         | unknown      |
     |                   |                  | cleaned_4.dta       |                     |                      |              |                  
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file3     | unknown          | cleaned_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
-    |                   |                  | cleaned_1_2.dta     |                     |                      |              |                  
+    | missing_file3     | unknown          | merged_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
+    |                   |                  | merged_1_2.dta     |                     |                      |              |                  
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|</code></pre>
 <p>As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.</p>
 <p>For more examples of diagrams connecting final outputs to initial raw data, <a href="#additional-diagrams">see here</a>.</p>
@@ -405,161 +405,68 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<pre><code>                 Levels of Computational Reproducibility 
-                   (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)
+<pre><code>                    Levels of Computational Reproducibility
+                       (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)
 
-                                 | Availavility of materials, and reproducibility |
-                                 |------------------------------------------------|
-                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                 |Code    | Data    | CRA | Code    | Data  | CRR |
-                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                 ---------|---------|-----|---------|-------|-----|
-L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-L4: All analysis data &amp; code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
+                                   | Availavility of materials, and reproducibility |
+                                   |------------------------------------------------|
+                                   |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                   |Code    | Data    | CRA | Code    | Data  | CRR |
+                                   | P | C  | P  | C  |     | P  |  C | P | C |     |
+                                   ---------|---------|-----|---------|-------|-----|
+  L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+  ---------------------------------|--------|---------|-----|---------|-------|-----|
+  L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+  L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+  L4: All analysis data &amp; code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+  L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+  ---------------------------------|--------|---------|-----|---------|-------|-----|
+  L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+  L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+  L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+  L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+  L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
 <p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the “Edit” button above (top left corner if you are reading this document in your browser).</p>
-<div id="adjusting-levels-to-account-for-proprietaryconfidential-data" class="section level4 unnumbered">
-<h4>Adjusting Levels To Account for Proprietary/Confidential Data</h4>
-<p>A large fraction of published research in economics is done using confidential and/or proprietary data. The most common type of such data is government data on tax records or provision of services, usually referred to as <em>administrative data</em>. Given that administrative and proprietary data are usually not publicly accessible, some of the reproducibility levels presented above need to be modified before applying them to outputs based on such data. The underlying theme in these modifications is that when data cannot be provided, reproducers can assign reproducibility scores based on the level of detail included in the instructions to obtain access to the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) was able to reproduce the results.</p>
+<div id="adjusting-levels-to-account-for-confidentialproprietary-data" class="section level4 unnumbered">
+<h4>Adjusting Levels To Account for Confidential/Proprietary Data</h4>
+<p>A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and generally referred to as <em>administrative data</em>. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.</p>
 <ul>
 <li><p><strong>Levels 1 and 2</strong> can be applied as described above.</p></li>
-<li><strong>Adjusted Level 3 (L3*):</strong> All the analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all of the following information:
+<li><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all, of the following information:
 <ol style="list-style-type: lower-alpha">
-<li><em>Contact information</em>, including name of the organization(s) that provides access to the data and contact information of at least one specific person.</li>
-<li><em>Terms of use</em>, including licenses and eligibility criteria to access the data, if any.</li>
-<li><em>Information on data files (meta-data)</em>, including name(s) and number of files, file size, relevant version of file(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including description dataset dictionary, summary statistics, and sythetic data (fake data with the same statistical properties as the original data)</li>
-<li><em>Estimated costs for access</em>, including monetary costs on fees and licences required to access the data, and non-monetary costs like wait times and specific geographical locations where there researchers need to be to access the data.</li>
+<li><em>Contact information</em>, including name of the organization(s) that provides access to the data and contact information of at least one individual.</li>
+<li><em>Terms of use</em>, including licenses and eligibility criteria for accessing the data, if any.</li>
+<li><em>Information on data files (meta-data)</em>, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a description dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data)</li>
+<li><em>Estimated costs for access</em>, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access the data.</li>
 </ol></li>
-<li><p><strong>Adjusted Level 4 (L4*):</strong> All the analysis code is provided, and complete and detailed instructions on how to access the <em>analysis data</em> are available.</p></li>
-<li><p><strong>Adjusted Level 5 (L5*):</strong> All requirements for Level 4* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (eg., see <a href="https://www.cascad.tech/">cascad</a>).</p></li>
+<li><p><strong>Adjusted Level 4 (L4*):</strong> All analysis code is provided, and complete and detailed instructions on how to access the <em>analysis data</em> are available.</p></li>
+<li><p><strong>Adjusted Level 5 (L5*):</strong> All requirements for Level 4* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (e.g., see <a href="https://www.cascad.tech/">cascad</a>).</p></li>
 <li><p><strong>Levels 6 and 7</strong> can be applied as described above.</p></li>
-<li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met and the authors provide incomplete instructions on how to access the <strong><em>raw</em></strong> data. Use the instructions described in Level 3 above to assess the completeness of the instructions.</p></li>
-<li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met and the authors provide complete instructions on how to access the <strong><em>raw</em></strong> data.</p></li>
-<li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met and the authors provide a certification that the output can be reproduced from the raw data.</p>
-<pre><code>  Levels of Computational Reproducibility with Propietary/Confidential Data 
-                (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
+<li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met, but instructions for accessing the <strong><em>raw data</em></strong> are incomplete. Use the instructions described in Level 3 above to assess the instructions’ completeness.</p></li>
+<li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met, and instructions for accessing the <strong><em>raw data</em></strong> are complete.</p></li>
+<li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p>
+<pre><code>          Levels of Computational Reproducibility with Propietary/Confidential Data
+                        (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
 
-                              | Availavility of materials, and reproducibility |
-                              |------------------------------------------------|
-                              |        | Instr.  |     |         | Instr.|     |
-                              |Analysis| Analysis|     | Cleaning| Raw   |     |
-                              |Code    | Data    | CRA | Code    | Data  | CRR |
-                              | P | C  | P  | C  |     | P  |  C | P | C |     |
-                              ---------|---------|-----|---------|-------|-----|</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th>L1: No materials……………..</th>
-<th>- -</th>
-<th>- -</th>
-<th>-</th>
-<th>- -</th>
-<th>- -</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>L2: Only code ……………….</td>
-<td>✔ ✔</td>
-<td>- -</td>
-<td>-</td>
-<td>- -</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>L3: Partial analysis data &amp; code.</td>
-<td>✔ ✔</td>
-<td>✔ -</td>
-<td>-</td>
-<td>- -</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="odd">
-<td>L4*: All analysis data &amp; code….</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>-</td>
-<td>- -</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>L5*: Proof of third party CRA….</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>- -</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="odd">
-<td>———————————</td>
-<td>——–</td>
-<td>———</td>
-<td>—–</td>
-<td>———</td>
-<td>——-</td>
-<td>—–</td>
-</tr>
-<tr class="even">
-<td>L6: Some cleaning code………..</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>✔ -</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="odd">
-<td>L7: All cleaning code…………</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>✔ ✔</td>
-<td>- -</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>L8*: Some instr. for raw data….</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>✔ ✔</td>
-<td>✔ -</td>
-<td>-</td>
-</tr>
-<tr class="odd">
-<td>L9*: All instr. for raw data…..</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>-</td>
-</tr>
-<tr class="even">
-<td>L10*:Proof of third party CRR….</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-<td>✔ ✔</td>
-<td>✔ ✔</td>
-<td>✔</td>
-</tr>
-</tbody>
-</table></li>
+                                  | Availavility of materials, and reproducibility |
+                                  |------------------------------------------------|
+                                  |        | Instr.  |     |         | Instr.|     |
+                                  |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                  |Code    | Data    | CRA | Code    | Data  | CRR |
+                                  | P | C  | P  | C  |     | P  |  C | P | C |     |
+                                  ---------|---------|-----|---------|-------|-----|
+ L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+ ---------------------------------|--------|---------|-----|---------|-------|-----|
+ L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+ L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+ L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+ L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+ ---------------------------------|--------|---------|-----|---------|-------|-----|
+ L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+ L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+ L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+ L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+ L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre></li>
 </ul>
 </div>
 </div>
