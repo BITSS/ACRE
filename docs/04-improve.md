@@ -1,13 +1,13 @@
 # Improvements   
 After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
-Like in the *Assessment* section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
+As with the *Assessment* section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.   
 
 **Use Survey 2 to record your work as part of this step.**
 
 ## Types of output-level improvements
 
-### Adding missing raw data files or meta-data (+RD) {#rd}
+### Adding missing raw data files or meta-data {#rd}
 
 Reproduction packages often do not include all original [raw datasets](#describe-inputs). To obtain any missing raw data, or information about them, follow these steps:
 
@@ -22,7 +22,7 @@ Reproduction packages often do not include all original [raw datasets](#describe
 In addition to trying to obtain the raw data, you can also contribute by obtaining missing analytic data.   
 
 
-### Adding missing analytic data files (+AD) {#ad}
+### Adding missing analytic data files {#ad}
 
 [Analytic data](#describe-inputs) can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing, and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:
 
@@ -31,7 +31,7 @@ In addition to trying to obtain the raw data, you can also contribute by obtaini
 3. [Use the ACRE database](ADD LINK) to verify if previous attempts have been made to contact the authors about this data.    
 4. [Contact the authors](#tips-for-communication) and request the specific data set.       
 
-### Adding missing analysis code (+AC) {#ac}
+### Adding missing analysis code {#ac}
 
 [Analysis code](#describe-inputs) can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:  
 
@@ -45,11 +45,11 @@ In addition to trying to obtain the raw data, you can also contribute by obtaini
 
 5. If step #4 does not work, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.   
 
-### Adding missing data cleaning code (+CC) {#cc}  
+### Adding missing data cleaning code {#cc}  
 
 [Data cleaning (processing)](#describe-inputs) code might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).  
 
-### Debugging analysis code (DAC) {#dac}
+### Debugging analysis code  {#dac}
 
 Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:  
 
@@ -59,7 +59,7 @@ Whenever code is available in the reproduction package, you should be able to de
   - *Correcting errors:* A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will happen if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the [ACRE procedure to report coding errors](ADD LINK).  
 
 
-### Debugging cleaning code (DCC)
+### Debugging cleaning code 
 
 Follow the same steps that you did to debug the analysis code, but report them separately.  
 

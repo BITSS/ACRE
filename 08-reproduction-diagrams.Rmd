@@ -7,7 +7,9 @@ output:
 
 ## Different Scenarios
 
+<!--
 JOEL: PLease fill-in. 
+-->
 
 ### Complete
           table 1

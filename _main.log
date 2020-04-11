@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  8 APR 2020 12:38
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019) (preloaded format=xelatex 2020.3.22)  11 APR 2020 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2214,19 +2214,19 @@ Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no └ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no └ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no └ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
+Missing character: There is no ─ in font [lmmono10-regular]:!
 [53]
-Missing character: There is no └ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no └ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no └ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
-Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no └ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
 Missing character: There is no ─ in font [lmmono10-regular]:!
@@ -2242,6 +2242,11 @@ Missing character: There is no ─ in font [lmmono10-regular]:!
 [54]
 Chapter 8.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1609--1611
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1611--1613
 
  []
@@ -2251,20 +2256,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1613--1615
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1615--1617
-
- []
-
 [55
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1619--1621
+Underfull \hbox (badness 10000) in paragraph at lines 1617--1619
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1628--1630
 
  []
 
@@ -2278,11 +2283,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 1632--1634
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1634--1636
-
- []
-
 [56]
 Chapter 9.
 [57
@@ -2292,40 +2292,40 @@ Chapter 9.
 ]
 Chapter 10.
 
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1670
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1670--1672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1672--1674
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1682--1684
+Underfull \hbox (badness 10000) in paragraph at lines 1680--1682
 
  []
 
 [59] (./_main.bbl [60])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1704.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1702.
 [61
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1704.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1702.
 (./_main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1704.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1704.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1702.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1702.
 
 Package rerunfilecheck Info: File `_main.out' has not changed.
 (rerunfilecheck)             Checksum: 0A60FC0DD1CC93CDCF51539D15789736;7824.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1704.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1702.
  ) 
 Here is how much of TeX's memory you used:
  16271 strings out of 481765
- 293694 string characters out of 5935379
+ 293690 string characters out of 5935379
  736744 words of memory out of 5000000
  33054 multiletter control sequences out of 15000+600000
  538845 words of font info for 84 fonts, out of 8000000 for 9000

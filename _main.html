@@ -11,7 +11,7 @@
 
 <meta name="author" content="ACRE Team" />
 
-<meta name="date" content="2020-04-08" />
+<meta name="date" content="2020-04-11" />
 
 <title>Guidelines for Computational Reproducibility in Economics</title>
 
@@ -1581,7 +1581,7 @@ summary {
 
 <h1 class="title toc-ignore">Guidelines for Computational Reproducibility in Economics</h1>
 <h4 class="author">ACRE Team</h4>
-<h4 class="date">2020-04-08</h4>
+<h4 class="date">2020-04-11</h4>
 
 </div>
 
@@ -1763,8 +1763,8 @@ summary {
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.</p>
 <p>First, a paper may contain several scientific claims that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more outputs (like table and figures). Each output will itself contain several specifications. Figure <a href="#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-3252d9ac4bf4eb819e35" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3252d9ac4bf4eb819e35">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d102006e91bbda80e90c" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d102006e91bbda80e90c">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"o1\", color = red]\noutput2 [label = \"o2\"]\noutput3 [label = \"o3\"]\noutput4 [label = \"o4\"]\noutput5 [label = \"o5\"]\noutput6 [label = \"o6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"s1\", color=red]\nspec2 [label = \"s2\"]\nspec3 [label = \"s3\"]\nspec4 [label = \"s4\"]\nspec5 [label = \"s5\"]\nspec6 [label = \"s6\"]\nspec7 [label = \"s7\"]\nspec8 [label = \"s8\"]\nspec9 [label = \"s9\"]\nspec10 [label = \"s10\"]\nspec11 [label = \"s10\"]\nspec12 [label = \"s10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce
 </p>
@@ -2325,12 +2325,12 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="improvements" class="section level1">
 <h1><span class="header-section-number">3</span> Improvements</h1>
 <p>After assessing the paper’s reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper’s methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.</p>
-<p>Like in the <em>Assessment</em> section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.</p>
+<p>As with the <em>Assessment</em> section, we recommend that you first focus on one specific output (e.g., “Table 1”). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.</p>
 <p><strong>Use Survey 2 to record your work as part of this step.</strong></p>
 <div id="types-of-output-level-improvements" class="section level2">
 <h2><span class="header-section-number">3.1</span> Types of output-level improvements</h2>
 <div id="rd" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Adding missing raw data files or meta-data (+RD)</h3>
+<h3><span class="header-section-number">3.1.1</span> Adding missing raw data files or meta-data</h3>
 <p>Reproduction packages often do not include all original <a href="#describe-inputs">raw datasets</a>. To obtain any missing raw data, or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the missing file. During <a href="#assessment">Assessment</a>, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>data_file</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, recorded it as “Some (or all) of the files used in the paper corresponding to data source X”.<br />
@@ -2351,7 +2351,7 @@ Upload the standardized table you build to the describe the code above into the 
 <p>In addition to trying to obtain the raw data, you can also contribute by obtaining missing analytic data.</p>
 </div>
 <div id="ad" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Adding missing analytic data files (+AD)</h3>
+<h3><span class="header-section-number">3.1.2</span> Adding missing analytic data files</h3>
 <p><a href="#describe-inputs">Analytic data</a> can be missing for two reasons: (i) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (ii) some or all raw data is missing, and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (eg <code>analysis_data_03.csv</code>).<br />
@@ -2364,7 +2364,7 @@ Upload the standardized table you build to the describe the code above into the 
 </ol>
 </div>
 <div id="ac" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Adding missing analysis code (+AC)</h3>
+<h3><span class="header-section-number">3.1.3</span> Adding missing analysis code</h3>
 <p><a href="#describe-inputs">Analysis code</a> can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to…” or “We estimate this regression using a bandwidth of…”).</p></li>
@@ -2375,11 +2375,11 @@ Upload the standardized table you build to the describe the code above into the 
 </ol>
 </div>
 <div id="cc" class="section level3">
-<h3><span class="header-section-number">3.1.4</span> Adding missing data cleaning code (+CC)</h3>
+<h3><span class="header-section-number">3.1.4</span> Adding missing data cleaning code</h3>
 <p><a href="#describe-inputs">Data cleaning (processing)</a> code might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).</p>
 </div>
 <div id="dac" class="section level3">
-<h3><span class="header-section-number">3.1.5</span> Debugging analysis code (DAC)</h3>
+<h3><span class="header-section-number">3.1.5</span> Debugging analysis code</h3>
 <p>Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:</p>
 <ul>
 <li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
@@ -2392,8 +2392,8 @@ Upload the standardized table you build to the describe the code above into the 
 </ul></li>
 </ul>
 </div>
-<div id="debugging-cleaning-code-dcc" class="section level3">
-<h3><span class="header-section-number">3.1.6</span> Debugging cleaning code (DCC)</h3>
+<div id="debugging-cleaning-code" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> Debugging cleaning code</h3>
 <p>Follow the same steps that you did to debug the analysis code, but report them separately.</p>
 </div>
 <div id="reporting-results" class="section level3">
@@ -2812,7 +2812,9 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <h1><span class="header-section-number">7</span> Reproduction Diagrams</h1>
 <div id="different-scenarios" class="section level2">
 <h2><span class="header-section-number">7.1</span> Different Scenarios</h2>
-<p>JOEL: PLease fill-in.</p>
+<!--
+JOEL: PLease fill-in. 
+-->
 <div id="complete" class="section level3">
 <h3><span class="header-section-number">7.1.1</span> Complete</h3>
 <pre><code>  table 1
