@@ -1,6 +1,10 @@
 # Scoping
 
-In this stage, you will choose a paper to reproduce or be assigned one, verify that the paper has reproduction materials. If materials are available, you will read the paper and declare the scope of the reproduction exercise. ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work for this stage.*** In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. You can expect to spend between 1-3 days in the Scoping stage. 
+In this stage, you will choose a candidate paper to reproduce or be assigned one. You will verify weather or not a reproduction package for your candidate paper exists. If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under curren development), and choose another candidate paper. Optionally, you are also suggested how to contact the authors with a specific request for materials to create a public reproduction package. 
+
+In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage. 
+
+***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work for this stage.***
 
 
 ## Select a candidate paper or be assigned one. 
@@ -13,7 +17,7 @@ Repeat this step until you have found a paper with a reproduction package -- thi
 ## Check records on the ACRE platform. {#check-acre}
 
 
-Check the [ACRE database](ADD LINK) for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information: 
+Check the ACRE database (under development) for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information: 
 
 > **Title:**  Sample Title   
 > **Authors:**  Jane Doe & John Doe  
@@ -34,7 +38,7 @@ Verify that the paper has a reproduction package that contains at least some mat
 
 **We strongly encourage you to contact authors several weeks before officially starting the Scoping stage of this exercise. Instructors should also plan to use the ACRE exercise accordingly.**
 
-Before contacting the authors, we recommend that you review and use language from [Chapter 6: Communications guidance](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) below. If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction package for - Title of the paper`. Provide the URL of the repository in Survey 1. If you fail to to obtain the reproduction package and would like to choose a different paper, please record this in the "abandoned reproduction" section of Survey 1.
+Before contacting the authors, we recommend that you review and use language from [Chapter 6: Communications guidance](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) below. If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction package for - Title of the paper`. Provide the URL of the repository in Survey 1. If you fail to obtain the reproduction package and would like to choose a different paper, please record this in the "abandoned reproduction" section of Survey 1.
 
 Now that you have verified the existence of a reproduction package, your *candidate paper* is now your *declared paper*. You can now move forward with the exercise! 
 
@@ -48,7 +52,7 @@ Now that you have verified the existence of a reproduction package, your *candid
 
 ## Read and summarize the paper. {#read-sum}
 
-Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and potentially for the original author).
+Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
 
 When reading/summarizing the paper, you should try to answer the following main questions:  
 
@@ -86,7 +90,7 @@ These are the elements you will need to conduct the scoping stage. **You now hav
 
 Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor, and may vary from a homework assignment (e.g., over a couple of weeks), to longer class project that that may take a month to complete or a semester-long project (for example as an undergraduate thesis).
 
-Table 1 shows a tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code) as this will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level. 
+Table 1 shows a tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level. 
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -115,13 +119,13 @@ Table 1 shows a tentative distribution of time across three different reproducti
     <td class="tg-0pky">raw data</td>
   </tr>
   <tr>
-    <td class="tg-dvpl">Scoping</td>
+    <td class="tg-0pky">Scoping</td>
     <td class="tg-c3ow" colspan="2">10% (1 day)</td>
     <td class="tg-c3ow" colspan="2">5% (1 day)</td>
     <td class="tg-c3ow" colspan="2">3% (3 days)</td>
   </tr>
   <tr>
-    <td class="tg-dvpl">Assessment</td>
+    <td class="tg-0pky">Assessment</td>
     <td class="tg-c3ow" colspan="2">25%</td>
     <td class="tg-c3ow" colspan="2">15%</td>
     <td class="tg-c3ow" colspan="2">7%</td>
