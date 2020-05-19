@@ -1,6 +1,6 @@
 # Scoping
 
-In this stage, you will choose a candidate paper to reproduce or be assigned one. You will verify weather or not a reproduction package for your candidate paper exists. If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under curren development), and choose another candidate paper. Optionally, you are also suggested how to contact the authors with a specific request for materials to create a public reproduction package. 
+In this stage, you will choose a candidate paper to reproduce or be assigned one. You will verify whether or not a reproduction package for your candidate paper exists. If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under current development), and choose another candidate paper. Optionally, you are also suggested to contact the authors with a specific request for materials to create a public reproduction package. 
 
 In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage. 
 
