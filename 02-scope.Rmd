@@ -121,7 +121,7 @@ When reading/summarizing the paper, you should try to answer the following main 
  - What is the author's preferred specification (or yours if authors are not clear)?
  - What are some robustness checks to the preferred specification?
  
-
+<!-- I don't think I understand what "preferred specification" means in this context -->
 
 ## Declare scope of the exercise.{#declare-estimates}
 By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail. 
