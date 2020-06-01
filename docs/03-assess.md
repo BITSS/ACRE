@@ -130,7 +130,7 @@ If you were able to identify all the relevant components in the previous section
                                             |___[code] clean_raw_4.py
                                                 |___raw_4.dta
 
-This diagram, built with the information you provided is already an important contribution to understanding the necessary components required to reproduce a specific output. It summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package.  
+This diagram, built with the information you provided, is already an important contribution to understanding the necessary components required to reproduce a specific output. It summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package.  
 
 ### Incomplete workflow information
 
@@ -163,7 +163,7 @@ In many cases, some of the components of the workflow will not be easily identif
         cleaned_1_2.dta
             |___[code] clean_merged_1_2.do
                 |___merged_1_2.dta
-        Unusued data sources: None.
+        Unused data sources: None.
 
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a "candidate" tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
@@ -265,7 +265,7 @@ The following figure summarizes the different levels of computational reproducib
                             Levels of Computational Reproducibility
                            (P denotes "partial", C denotes "complete")
     
-                                       | Availavility of materials, and reproducibility |
+                                       | Availability of materials, and reproducibility |
                                        |------------------------------------------------|
                                        |Analysis| Analysis|     | Cleaning| Raw   |     |
                                        |Code    | Data    | CRA | Code    | Data  | CRR |
@@ -289,7 +289,7 @@ You may disagree with some of the levels outlined above, particularly wherever s
 
 #### Adjusting Levels To Account for Confidential/Proprietary Data {-}
 
-A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and generally referred to as *administrative data*. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.
+A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and what is generally referred to as *administrative data*. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.
 
  - **Levels 1 and 2** can be applied as described above.
 
@@ -311,10 +311,10 @@ A large portion of published research in economics uses confidential or propriet
 
  - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided.
 
-                 Levels of Computational Reproducibility with Propietary/Confidential Data
+                 Levels of Computational Reproducibility with Proprietary/Confidential Data
                                (P denotes "partial", C denotes "complete")    
       
-                                         | Availavility of materials, and reproducibility |
+                                         | Availability of materials, and reproducibility |
                                          |------------------------------------------------|
                                          |        | Instr.  |     |         | Instr.|     |
                                          |Analysis| Analysis|     | Cleaning| Raw   |     |

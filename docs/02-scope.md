@@ -1,6 +1,6 @@
 # Scoping
 
-In this stage, you will choose a candidate paper to reproduce or be assigned one. You will verify weather or not a reproduction package for your candidate paper exists. If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under curren development), and choose another candidate paper. Optionally, you are also suggested how to contact the authors with a specific request for materials to create a public reproduction package. 
+In this stage, you will choose a candidate paper to reproduce or be assigned one. You will verify whether or not a reproduction package for your candidate paper exists. If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under current development), and choose another candidate paper. Optionally, you are also suggested to contact the authors with a specific request for materials to create a public reproduction package. 
 
 In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage. 
 
@@ -66,17 +66,17 @@ When reading/summarizing the paper, you should try to answer the following main 
  - What is the author's preferred specification (or yours if authors are not clear)?
  - What are some robustness checks to the preferred specification?
  
-
+<!-- I don't think I understand what "preferred specification" means in this context -->
 
 ## Declare scope of the exercise.{#declare-estimates}
 By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail. 
 
-At this point, you should clearly specify which part of the paper will be the main focus of your reproduction excercise^[Later in the assessment stage you will be asked to identify all the outputs that are part of your assessment.]. You are asked to focus on specific estimates, represented by a unique combination of claim-output-specification, that represented the authors’ preferred specification for a given claim (or yours). If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. 
+At this point, you should clearly specify which part of the paper will be the main focus of your reproduction excercise^[Later in the assessment stage you will be asked to identify all the outputs that are part of your assessment.]. You are asked to focus on specific estimates, represented by a unique combination of claim-output-specification, that represent the authors’ preferred specification for a given claim (or yours). If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. 
     
 
 ### Declare specific main estimates to reproduce. {-}    
 
-Identify one of the scientific claims, and their corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table #, and row and column in the table). If the authors did not explicitly choose a particular estimate, you will be asked to select one. In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate. 
+Identify one of the scientific claims, and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table #, and row and column in the table). If the authors did not explicitly choose a particular estimate, you will be asked to select one. In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate. 
 
 
 ### Declare possible robustness checks to main estimates (optional). {-}  
@@ -88,7 +88,7 @@ These are the elements you will need to conduct the scoping stage. **You now hav
 
 ### Bonus: Identify your relevant timeline. {-} 
 
-Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor, and may vary from a homework assignment (e.g., over a couple of weeks), to longer class project that that may take a month to complete or a semester-long project (for example as an undergraduate thesis).
+Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor, and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that that may take a month to complete or a semester-long project (for example as an undergraduate thesis).
 
 Table 1 shows a tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level. 
 

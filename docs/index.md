@@ -1,7 +1,7 @@
 --- 
 title: "Guidelines for Computational Reproducibility in Economics"
 author: "ACRE Team"
-date: "2020-04-15"
+date: "2020-06-01"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
