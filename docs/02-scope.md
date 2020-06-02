@@ -46,7 +46,7 @@ Now that you have verified the existence of a reproduction package, your *candid
 
 
 
-![](candidate-paper.jpeg)
+![](candidate-to-declared-paper.svg)
 
 </details>
 

@@ -49,59 +49,32 @@ Now that you have verified the existence of a reproduction package, your *candid
 #
 mermaid("
 graph TD
-graph TD
-	A0[Select Paper]-->A
-  A[Check ACRE] --> B1[No paper entry]
-  A[Check ACRE] --> B2[Paper entry]
-  B1 --> |Create one|C1[Check materials]
-  B2 --> C3[no R.P.]
-  B2 --> C2[R.P. exists]		
-  C3 --> D3[Previous contact?]
-  D3 --> yes_fu[Yes <br> follow up?]
-  D3 --> E1[No]
-  E1 --> G2[Email]
-  G2 --> resp_em1[Response]
-  G2 --> resp_em2[No response]
-  resp_em1 --> pos_resp1[Materials <br> open] 
-  pos_resp1 --> RP_ex
-  resp_em1 --> pos_resp2[Materials <br> closed]
-  pos_resp2 --> RP_ex
-  resp_em1 --> pos_resp3[Can't <br> partial]
-  pos_resp3 -->rec_semi[Change paper?]
-  rec_semi --> own_build
-  rec_semi --> yes_change
-  resp_em1 --> pos_resp5[Lost <br> open]
-  pos_resp5 -->rec_semi
-  resp_em1 --> pos_resp4[Can't <br> nothing]
-  pos_resp4 --> yes_change
+	A0[Select Candidate Paper] --> A[Check ACRE]
+  A --> |No paper entry|B1[Reproduction Package RP ?]
+  B1 --> |Yes|F1[Declare & Read]
+  B1 --> |No|C1[Contact Authors?]
+  C1 --> |Yes|D1[Found RP?]
+  C1 --> |No|R[Brief Record]
+  D1 --> |Yes|F1
+  D1 --> |No|E1[Build RP?]
+  E1 --> |Yes|F1[Declare & Read]
+  E1 --> |No|R
 
-  resp_em1 --> pos_resp6[Lost <br> closed]
-  pos_resp6 --> yes_change
-  resp_em2 --> H4
-  E1 --> G1[No email]
-  G1 --> H4[R]
-  yes_fu --> own_build
-  yes_fu-->G2		
-  yes_fu-->G1
-  C1 --> RP_ex[R.P. exists]					 
-  RP_ex-->R_RP[R]
-  R_RP --> read_p["Read (Declared) Paper"]
-  C2 --> read_p
-  C1 --> D1[no R.P.]
-  D1 --> I1[Change paper]
-  I1-->yes_change[Yes]  
-  yes_change--> H4  
-  I1-->no_change[No]  
-  no_change--> own_build[Build R.P.]
-  no_change--> G2
-  own_build --> RP_ex
-  H4 --> A0
+  A --> |Paper entry|B2[Status on ACRE]
+  B2 --> |RP exists|F1
+  B2 --> |No RP. No Contact to Authors|C1
+  B2 --> |No RP. Authors contacted|D2[Follow up?]
+  D2 --> |Yes|C1
+  D2 --> |No|R
 
+  R -->A0
 ")  
+# https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiXG5ncmFwaCBURFxuXHRBMFtTZWxlY3QgQ2FuZGlkYXRlIFBhcGVyXSAtLT4gQVtDaGVjayBBQ1JFXVxuICBBIC0tPiB8Tm8gcGFwZXIgZW50cnl8QjFbUmVwcm9kdWN0aW9uIFBhY2thZ2UgUlAgP11cbiAgQjEgLS0-IHxZZXN8RjFbRGVjbGFyZSAmIFJlYWRdXG4gIEIxIC0tPiB8Tm98QzFbQ29udGFjdCBBdXRob3JzP11cbiAgQzEgLS0-IHxZZXN8RDFbRm91bmQgUlA_XVxuICBDMSAtLT4gfE5vfFJbQnJpZWYgUmVjb3JkXVxuICBEMSAtLT4gfFllc3xGMVxuICBEMSAtLT4gfE5vfEUxW0J1aWxkIFJQP11cbiAgRTEgLS0-IHxZZXN8RjFbRGVjbGFyZSAmIFJlYWRdXG4gIEUxIC0tPiB8Tm98UlxuXG4gIEEgLS0-IHxQYXBlciBlbnRyeXxCMltTdGF0dXMgb24gQUNSRV1cbiAgQjIgLS0-IHxSUCBleGlzdHN8RjFcbiAgQjIgLS0-IHxObyBSUC4gTm8gQ29udGFjdCB0byBBdXRob3JzfEMxXG4gIEIyIC0tPiB8Tm8gUlAuIEF1dGhvcnMgY29udGFjdGVkfEQyW0ZvbGxvdyB1cD9dXG4gIEQyIC0tPiB8WWVzfEMxXG4gIEQyIC0tPiB8Tm98UlxuXG4gIFIgLS0-QTAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ
+
 
 ```
 
-![](candidate-paper.jpeg)
+![](candidate-to-declared-paper.svg)
 
 </details>
 
