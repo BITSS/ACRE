@@ -14,6 +14,8 @@ Assessments of reproducibility can easily gravitate towards binary assessments t
 
 First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 
+![(\#fig:diagram)One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification ](01-intro_files/figure-docx/diagram-1.png)
+
 Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
 
 Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research -- especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.

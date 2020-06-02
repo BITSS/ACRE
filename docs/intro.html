@@ -50,6 +50,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 
 
 
@@ -193,7 +197,14 @@
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
 <h2>Beyond binary judgments</h2>
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.</p>
-<p>First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure <a href="#fig:diagram"><strong>??</strong></a> illustrates this idea.</p>
+<p>First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
+<div class="figure"><span id="fig:diagram"></span>
+<div id="htmlwidget-ed12da9abde6b62bca95" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ed12da9abde6b62bca95">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"DI 1\", color = red]\noutput2 [label = \"DI 2\"]\noutput3 [label = \"DI 3\"]\noutput4 [label = \"DI 4\"]\noutput5 [label = \"DI 5\"]\noutput6 [label = \"DI 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S 1\", color=red]\nspec2 [label = \"S 2\"]\nspec3 [label = \"S 3\"]\nspec4 [label = \"S 4\"]\nspec5 [label = \"S 5\"]\nspec6 [label = \"S 6\"]\nspec7 [label = \"S 7\"]\nspec8 [label = \"S 8\"]\nspec9 [label = \"S 9\"]\nspec10 [label = \"S 10\"]\nspec11 [label = \"S 10\"]\nspec12 [label = \"S 10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
+</p>
+</div>
 <p>Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.</p>
 <p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research – especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.</p>
 </div>

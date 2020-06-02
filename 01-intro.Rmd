@@ -14,6 +14,73 @@ Assessments of reproducibility can easily gravitate towards binary assessments t
 
 First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 
+```{r diagram, eval=TRUE, echo=FALSE, fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification "}
+library(DiagrammeR)
+
+
+grViz("
+digraph a_nice_graph {
+
+graph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]
+#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html
+
+
+# node definitions with substituted label text
+node [fontname = Helvetica, shape = box, style=empty ]
+paper [label = '@@1']    ## label indicates the position of the letter
+
+node [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]
+claim1 [label = '@@2-1', color=red]
+claim2 [label = '@@2-2']
+claim3 [label = '@@2-3']
+
+node [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]
+output1 [label = '@@3-1', color = red]
+output2 [label = '@@3-2']
+output3 [label = '@@3-3']
+output4 [label = '@@3-4']
+output5 [label = '@@3-5']
+output6 [label = '@@3-6']
+
+node [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]
+spec1 [label = '@@4-1', color=red]
+spec2 [label = '@@4-2']
+spec3 [label = '@@4-3']
+spec4 [label = '@@4-4']
+spec5 [label = '@@4-5']
+spec6 [label = '@@4-6']
+spec7 [label = '@@4-7']
+spec8 [label = '@@4-8']
+spec9 [label = '@@4-9']
+spec10 [label = '@@4-10']
+spec11 [label = '@@4-11']
+spec12 [label = '@@4-12']
+
+
+# edge definitions with the node IDs
+paper -> {claim1} [color=red]      ##[label = ...] adds text on the edge
+paper -> {claim2 claim3} 
+claim1 -> {output1} [color=red]
+claim1 -> {output2} 
+claim2 -> {output3 output4}
+claim3 -> {output5 output6}
+output1 -> {spec1} [color=red]
+output1 -> {spec2} 
+output2 -> {spec3 spec4}
+output3 -> {spec5 spec6}
+output4 -> {spec7 spec8}
+output5 -> {spec9 spec10}
+output6 -> {spec11 spec12}
+}
+
+[1]: 'Paper'            ## adds label to each box
+[2]: c('Claim 1', 'Claim 2', 'Claim 3')
+[3]: c('DI 1' , 'DI 2', 'DI 3', 'DI 4', 'DI 5', 'DI 6')
+[4]: paste0('S ', 1:10)
+
+")
+```
+
 Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
 
 Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research -- especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
