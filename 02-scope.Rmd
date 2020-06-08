@@ -92,23 +92,25 @@ graph TD
 
 When you follow step 1, and check ACRE for a  previous entry on the paper you will either find and entry, or that no entry exists yet. Then:   
 
-  - If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:   
-  
-    - A reproduction package exists. In this case, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).      
-    - If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.     
-        - If authors are not contacted, you are asked to leave a record in the ACRE platform (as "original reproduction package is not available, and authors were not contacted"), and select a new candidate paper.    
-        - If authors are contacted, there are two possible results:     
-            - A reproduction package was provided. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).      
-            - A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).     
-                - If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as "original reproduction package is not available, and authors were contacted"), and select a new candidate paper.     
-                - If you decide to build a reproduction package independently, the candidate paper becomes the declare paper and you can move onto next section.      
-                
-  - If there is at least one ACRE entry on the candidate paper, you will be able to see the its information as presented in Box 1.     
-      - If a reproduction package exists, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).        
-      - If there is no reproduction package, and authors have not been contacted, you should will have the same alternatives for contacting them as with no previous entry     
-      - If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.     
-          - If authors asked to not been contacted any further, you will have the options of building the reproduction package independently or choosing a new candidate paper (after leaving a brief record).   
-          - If authors allowed future follow-ups, you could choose to follow up, build their own reproduction package independently or switch to a new candidate paper (after leaving a brief record).  
+If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:   
+
+- A reproduction package exists. In this case, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).      
+- If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.     
+  - If authors are not contacted, you are asked to leave a record in the ACRE platform (as "original reproduction package is not available, and authors were not contacted"), and select a new candidate paper.    
+  - If authors are contacted, there are two possible results:     
+    - A reproduction package was provided. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).      
+    - A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).     
+      - If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as "original reproduction package is not available, and authors were contacted"), and select a new candidate paper.     
+      - If you decide to build a reproduction package independently, the candidate paper becomes the declare paper and you can move onto next section.
+        
+        
+If there is at least one ACRE entry on the candidate paper, you will be able to see the its information as presented in Box 1. 
+
+- If a reproduction package exists, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).        
+- If there is no reproduction package, and authors have not been contacted, you should will have the same alternatives for contacting them as with no previous entry     
+- If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.     
+  - If authors asked to not been contacted any further, you will have the options of building the reproduction package independently or choosing a new candidate paper (after leaving a brief record).   
+  - If authors allowed future follow-ups, you could choose to follow up, build their own reproduction package independently or switch to a new candidate paper (after leaving a brief record).  
 
 Go through this decision trees until you have found a paper with a reproduction package -- this will be your ***declared paper*** and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper. 
 
