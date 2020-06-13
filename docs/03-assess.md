@@ -132,6 +132,8 @@ Upload the standardized table you build to the describe the code above into the 
 
 If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
+<!-- Emma: add a label to this figure below -->  
+
         table1.tex
             |___[code] analysis.R
                 |___analysis_data.dta

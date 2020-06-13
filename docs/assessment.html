@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-07" />
+<meta name="date" content="2020-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -139,9 +143,8 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -152,7 +155,7 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>8</b> Additional resources</a><ul>
 <li class="chapter" data-level="8.1" data-path="additional-resources.html"><a href="additional-resources.html#some-summaries"><i class="fa fa-check"></i><b>8.1</b> Some summaries</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>8.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</a></li>
+<li class="chapter" data-level="8.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>8.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="additional-resources.html"><a href="additional-resources.html#links"><i class="fa fa-check"></i><b>8.2</b> Links</a></li>
 </ul></li>
@@ -163,6 +166,7 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -187,9 +191,9 @@
 <h1><span class="header-section-number">Chapter 2</span> Assessment</h1>
 <p>In this stage, you will review and describe in detail the available reproduction materials, and assess levels of computational reproducibility for the selected outputs, as well as for the overall paper. This stage is designed to record as much of the learning process behind a reproduction as possible to facilitate incremental improvements, and allow future reproducers to pick up easily where others have left off.</p>
 <p>First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.</p>
-<p>In the <em>Scoping</em> stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will identify all outputs that contain those estimates. You will also decide if you are interested in assessing the reproducibility of that entire output (e.g., &quot;Table 1&quot;), or will assess only a pre-specified estimates (e.g., &quot;rows 3 and 4 of Table 1&quot;). Additionally, you can include other outputs of interest.</p>
+<p>In the <em>Scoping</em> stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will identify all outputs that contain those estimates. You will also decide if you are interested in assessing the reproducibility of that entire output (e.g., “Table 1”), or will assess only a pre-specified estimates (e.g., “rows 3 and 4 of Table 1”). Additionally, you can include other outputs of interest.</p>
 <p><strong>Use <em>Survey 2</em> to record your work as part of this step.</strong></p>
-<p>*<a href="Tip:*" class="uri">Tip:*</a> We recommend that you first focus on one specific output (e.g., “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.</p>
+<p><em>Tip:</em> We recommend that you first focus on one specific output (e.g., “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.</p>
 <div id="describe-inputs" class="section level2">
 <h2><span class="header-section-number">2.1</span> Describe the inputs.</h2>
 <p>This section explains how to list <em>all</em> input materials found or referred to in the reproduction package. First, you will identify data sources and connect them with their raw data files (when available). Second, you will locate and provide a brief description of the analytic data files. Finally, you will locate, inspect, and describe the analytic code used in the paper.</p>
@@ -201,8 +205,8 @@
 <div id="desc-sourc" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Describe the data sources and raw data.</h3>
 <p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.</p>
-<p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., &quot;our information on regional minimum wages comes from the Bureau of Labor Statistics.&quot; This should be recorded as &quot;regional minimum wages from the Bureau of Labor Statistics&quot;).</p>
-<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
+<p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
+<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
 <p>Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:</p>
 <table>
 <caption><span id="tab:raw-data-information">Table 2.1: </span>Raw data information</caption>
@@ -217,36 +221,36 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">&quot;Current Population Survey 2018&quot;</td>
+<td align="left">“Current Population Survey 2018”</td>
 <td align="left">A1</td>
 <td align="left">cepr_march_2018.dta</td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">\</td>
 </tr>
 <tr class="even">
-<td align="left">&quot;DHS 2010 - 2013&quot;</td>
+<td align="left">“DHS 2010 - 2013”</td>
 <td align="left">4</td>
 <td align="left">nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv</td>
 <td align="left">boliviaDHS_2011.csv</td>
-<td align="left"></td>
+<td align="left">\</td>
 </tr>
 <tr class="odd">
-<td align="left">&quot;2017 SAT scores&quot;</td>
+<td align="left">“2017 SAT scores”</td>
 <td align="left">4</td>
 <td align="left">Not available</td>
 <td align="left"></td>
-<td align="left">_clean</td>
+<td align="left">_clean\</td>
 </tr>
 <tr class="even">
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
 </tr>
 </tbody>
 </table>
-<pre><code>      Raw data information:
+<pre><code>  Raw data information:
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
       | data_source          | page | data_files                                    | known_missing       | directory           |
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -266,7 +270,7 @@
 <div id="desc-analy" class="section level3">
 <h3><span class="header-section-number">2.1.2</span> Describe the analytic data sets.</h3>
 <p>List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
-<p>As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
+<p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
 <table>
 <caption><span id="tab:analysis-data-information">Table 2.2: </span>Analysis data information</caption>
@@ -289,13 +293,13 @@
 <td align="left">data for region-level analysis</td>
 </tr>
 <tr class="odd">
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
 </tr>
 </tbody>
 </table>
-<pre><code>      Analysis data information:
+<pre><code>  Analysis data information:
       |----------------|-----------------------|--------------------------------|
       | analysis_data  | location              | description                    |
       |----------------|-----------------------|--------------------------------|
@@ -308,7 +312,7 @@
 </div>
 <div id="desc-scripts" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
-<p>List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). For each code file, record all inputs together and separate each item with &quot;;&quot;. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). For each code file, record all outputs together and separate each item with &quot;;&quot;. Provide a one-line description of what each code file does. Record all of this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>, using the following structure:</p>
+<p>List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). For each code file, record all inputs together and separate each item with “;”. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). For each code file, record all outputs together and separate each item with “;”. Provide a one-line description of what each code file does. Record all of this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>, using the following structure:</p>
 <table>
 <caption><span id="tab:code-files-information">Table 2.3: </span>Code files information</caption>
 <thead>
@@ -339,16 +343,16 @@
 <td align="left">cleaning</td>
 </tr>
 <tr class="odd">
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
 </tr>
 </tbody>
 </table>
-<pre><code>      Code files information:
+<pre><code>  Code files information:
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -362,19 +366,20 @@
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | ...               | ...              | ...                 | ...                 | ...                  | ...          |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|</code></pre>
-<p>As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>. Once finished with the reproduction exercise, classify each code file as <em>analysis</em> or <em>cleaning</em>. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.</p>
+<p>As you gain an understanding of each code script, you will likely find more inputs and outputs – we encourage you to update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>. Once finished with the reproduction exercise, classify each code file as <em>analysis</em> or <em>cleaning</em>. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script’s main role.</p>
 </div>
 </div>
 <div id="diagram" class="section level2">
 <h2><span class="header-section-number">2.2</span> Connect each output to all its inputs</h2>
-<p>Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections <a href="assessment.html#desc-sourc">2.1.1</a>, <a href="assessment.html#desc-analy">2.1.2</a> and <a href="assessment.html#desc-scripts">2.1.3</a>) to the ACRE Diagram Builder at <a href="mailto:acre@berkeley.edu">acre@berkeley.edu</a>. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.</p>
+<p>Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections <a href="assessment.html#desc-sourc">2.1.1</a>, <a href="assessment.html#desc-analy">2.1.2</a> and <a href="assessment.html#desc-scripts">2.1.3</a>) to the ACRE Diagram Builder at <a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.</p>
 <!--
 Upload the standardized table you build to the describe the code above into the [ACRE workflow diagram builder](ADD LINK).
 -->
 <div id="complete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
 <p>If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.</p>
-<pre><code>    table1.tex
+<!-- Emma: add a label to this figure below -->
+<pre><code>table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___[code] final_merge.do
@@ -403,7 +408,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="incomplete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Incomplete workflow information</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files <code>merge_1_2.do</code>, <code>merge_3_4.do</code>, and <code>final_merge.do</code> are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:</p>
-<pre><code>    cleaned_3.dta
+<pre><code>cleaned_3.dta
         |___[code] clean_raw_3.py
             |___raw_3.dta
 
@@ -431,8 +436,8 @@ Upload the standardized table you build to the describe the code above into the 
         |___[code] clean_merged_1_2.do
             |___merged_1_2.dta
     Unused data sources: None.</code></pre>
-<p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a &quot;candidate&quot; tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<pre><code>    table1.tex
+<p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
+<pre><code>table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___MISSSING CODE FILE(S) #3
@@ -472,12 +477,12 @@ Upload the standardized table you build to the describe the code above into the 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
-<td align="left">...</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
+<td align="left">…</td>
 </tr>
 <tr class="even">
 <td align="left">missing_file1</td>
@@ -505,7 +510,7 @@ Upload the standardized table you build to the describe the code above into the 
 </tr>
 </tbody>
 </table>
-<pre><code>    Adding rows to code spreadsheet:
+<pre><code>Adding rows to code spreadsheet:
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
     | file_name         | location         | inputs              | outputs             | description          | primary_type |
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -536,7 +541,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="levels-of-computational-reproducibility-for-a-specific-output" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
 <p>Each level of computational reproducibility is defined by the availability of data and materials, and whether or not the available materials faithfully reproduce the output of interest. The description of each level also includes possible improvements that can help advance the reproducibility of the output to a higher level. You will learn in more detail about the possible improvements.</p>
-<p>Note that the assessment is made <em>at the output level</em> -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 1 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.</p>
+<p>Note that the assessment is made <em>at the output level</em> – a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 1 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.</p>
 <ul>
 <li><strong>Level 1 (L1):</strong> No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).</li>
 </ul>
@@ -556,7 +561,7 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<pre><code>                        Levels of Computational Reproducibility
+<pre><code>                    Levels of Computational Reproducibility
                        (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)
 
                                    | Availability of materials, and reproducibility |
@@ -577,7 +582,7 @@ Upload the standardized table you build to the describe the code above into the 
   L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
   L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
   L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
-<p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the &quot;Edit&quot; button above (top left corner if you are reading this document in your browser).</p>
+<p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the “Edit” button above (top left corner if you are reading this document in your browser).</p>
 <div id="adjusting-levels-to-account-for-confidentialproprietary-data" class="section level4 unnumbered">
 <h4>Adjusting Levels To Account for Confidential/Proprietary Data</h4>
 <p>A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and what is generally referred to as <em>administrative data</em>. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.</p>
@@ -593,31 +598,31 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Adjusted Level 4 (L4*):</strong> All analysis code is provided, and complete and detailed instructions on how to access the <em>analysis data</em> are available.</p></li>
 <li><p><strong>Adjusted Level 5 (L5*):</strong> All requirements for Level 4* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (e.g., see <a href="https://www.cascad.tech/">cascad</a>).</p></li>
 <li><p><strong>Levels 6 and 7</strong> can be applied as described above.</p></li>
-<li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met, but instructions for accessing the <strong><em>raw data</em></strong> are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.</p></li>
+<li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met, but instructions for accessing the <strong><em>raw data</em></strong> are incomplete. Use the instructions described in Level 3 above to assess the instructions’ completeness.</p></li>
 <li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met, and instructions for accessing the <strong><em>raw data</em></strong> are complete.</p></li>
 <li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p>
-<pre><code>         Levels of Computational Reproducibility with Proprietary/Confidential Data
-                       (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
+<pre><code>          Levels of Computational Reproducibility with Proprietary/Confidential Data
+                        (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
 
-                                 | Availability of materials, and reproducibility |
-                                 |------------------------------------------------|
-                                 |        | Instr.  |     |         | Instr.|     |
-                                 |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                 |Code    | Data    | CRA | Code    | Data  | CRR |
-                                 | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                 ---------|---------|-----|---------|-------|-----|
-L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
----------------------------------|--------|---------|-----|---------|-------|-----|
-L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre></li>
+                                  | Availability of materials, and reproducibility |
+                                  |------------------------------------------------|
+                                  |        | Instr.  |     |         | Instr.|     |
+                                  |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                  |Code    | Data    | CRA | Code    | Data  | CRR |
+                                  | P | C  | P  | C  |     | P  |  C | P | C |     |
+                                  ---------|---------|-----|---------|-------|-----|
+ L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+ ---------------------------------|--------|---------|-----|---------|-------|-----|
+ L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+ L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+ L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+ L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+ ---------------------------------|--------|---------|-----|---------|-------|-----|
+ L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+ L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+ L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+ L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+ L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre></li>
 </ul>
 </div>
 </div>
@@ -634,7 +639,7 @@ L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 </li>
 <li>Dynamic document<br />
 </li>
-<li>Computing capsule (e.g. CodeOcean, Binder, etc.)</li>
+<li>Computing capsule (e.g. CodeOcean, Binder, etc.)</li>
 </ul>
 <p>Congratulations! You have now completed the <em>Assessment</em> stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics.</p>
 <p>Please continue to the <a href="improvements.html#improvements">next section</a> where you can help improve it!</p>
@@ -645,7 +650,7 @@ L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    �
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>a relative location takes the form of <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1">↩</a></p></li>
+<li id="fn1"><p>a relative location takes the form of <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

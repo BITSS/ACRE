@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-07" />
+<meta name="date" content="2020-06-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,10 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -139,9 +143,8 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -152,7 +155,7 @@
 </ul></li>
 <li class="chapter" data-level="8" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>8</b> Additional resources</a><ul>
 <li class="chapter" data-level="8.1" data-path="additional-resources.html"><a href="additional-resources.html#some-summaries"><i class="fa fa-check"></i><b>8.1</b> Some summaries</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>8.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<a href="#ref-christensen2019transparent">2019</a>)</span>:</a></li>
+<li class="chapter" data-level="8.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>8.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="additional-resources.html"><a href="additional-resources.html#links"><i class="fa fa-check"></i><b>8.2</b> Links</a></li>
 </ul></li>
@@ -163,6 +166,7 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -185,7 +189,7 @@
             <section class="normal" id="section-">
 <div id="scoping" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Scoping</h1>
-<p>In this stage, you will choose or be assigned a candidate paper to reproduce. You will verify whether or not a reproduction package for your candidate paper exists. We define a <strong>reproduction package</strong> (sometimes referred to as a &quot;replication package&quot;) as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation.</p>
+<p>In this stage, you will choose or be assigned a candidate paper to reproduce. You will verify whether or not a reproduction package for your candidate paper exists. We define a <strong>reproduction package</strong> (sometimes referred to as a “replication package”) as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation.</p>
 <p>If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under current development), and choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.</p>
 <p>In this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage.</p>
 <p><strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a> to record your work for this stage.</em></strong></p>
@@ -198,7 +202,7 @@
 <ol style="list-style-type: decimal">
 <li>Verify the existence of a previous entry on ACRE (under construction) on your candidate paper.<br />
 </li>
-<li>Check the paper's webpage in the official journal or publishers website. Look for links similar to &quot;Data and Materials&quot;, &quot;Supplemental Materials&quot;, &quot;Reproduction/Replication Package/Materials&quot;.<br />
+<li>Check the paper’s webpage in the official journal or publishers website. Look for links similar to “Data and Materials”, “Supplemental Materials”, “Reproduction/Replication Package/Materials”.<br />
 </li>
 <li>Look for links in the paper (review footnotes and appendices).<br />
 </li>
@@ -216,8 +220,8 @@
 <strong>Title:</strong> Sample Title<br />
 <strong>Authors:</strong> Jane Doe &amp; John Doe<br />
 <strong>Original Reproduction Package Available:</strong> URL/No<br />
-[If &quot;No&quot;] <strong>Contacted Authors?:</strong> Yes/No<br />
-[If &quot;Yes(contacted)&quot;] <strong>Type of Response:</strong> Categories (6).<br />
+[If “No”] <strong>Contacted Authors?:</strong> Yes/No<br />
+[If “Yes(contacted)”] <strong>Type of Response:</strong> Categories (6).<br />
 <strong>Additional Reproduction Packages:</strong> Number (eg., 2)<br />
 <strong>Authors Available for Further Questions for ACRE Reproductions:</strong> Yes/No/Unknown<br />
 <strong>Open for reproductions:</strong> Yes/No</p>
@@ -226,31 +230,31 @@
 <div id="decision-tree-to-move-from-candidate-to-declared-paper" class="section level3">
 <h3><span class="header-section-number">1.1.3</span> Decision Tree to Move From Candidate to Declared Paper</h3>
 <p>To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined next.</p>
-<p><details><summary>View Decision Tree To Select Paper (Emma: add title) </summary></p>
-<div class="figure">
-<img src="candidate-to-declared-paper.png" />
-
-</div>
-<p></details></p>
+<details>
+<p><summary>View Decision Tree To Select Paper (Emma: add title) </summary></p>
+<p><img src="candidate-to-declared-paper.png" /></p>
+</details>
 <!-- Emma there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 <p>When you follow step 1, and check ACRE for a previous entry on the paper you will either find and entry, or that no entry exists yet. Then:</p>
 <p>If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:</p>
 <ul>
 <li>A reproduction package exists. In this case, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).<br />
 </li>
-<li>If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.<br />
-</li>
-<li>If authors are not contacted, you are asked to leave a record in the ACRE platform (as &quot;original reproduction package is not available, and authors were not contacted&quot;), and select a new candidate paper.<br />
+<li>If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.
+<ul>
+<li>If authors are not contacted, you are asked to leave a record in the ACRE platform (as “original reproduction package is not available, and authors were not contacted”), and select a new candidate paper.<br />
 </li>
 <li>If authors are contacted, there are two possible results:
 <ul>
 <li>A reproduction package was provided. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).<br />
 </li>
-<li>A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).<br />
-</li>
-<li>If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as &quot;original reproduction package is not available, and authors were contacted&quot;), and select a new candidate paper.<br />
+<li>A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).
+<ul>
+<li>If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as “original reproduction package is not available, and authors were contacted”), and select a new candidate paper.<br />
 </li>
 <li>If you decide to build a reproduction package independently, the candidate paper becomes the declare paper and you can move onto next section.</li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 <p>If there is at least one ACRE entry on the candidate paper, you will be able to see the its information as presented in Box 1.</p>
@@ -259,16 +263,17 @@
 </li>
 <li>If there is no reproduction package, and authors have not been contacted, you should will have the same alternatives for contacting them as with no previous entry<br />
 </li>
-<li>If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.<br />
-</li>
+<li>If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.
+<ul>
 <li>If authors asked to not been contacted any further, you will have the options of building the reproduction package independently or choosing a new candidate paper (after leaving a brief record).<br />
 </li>
 <li>If authors allowed future follow-ups, you could choose to follow up, build their own reproduction package independently or switch to a new candidate paper (after leaving a brief record).</li>
+</ul></li>
 </ul>
-<p>Go through this decision trees until you have found a paper with a reproduction package -- this will be your <strong><em>declared paper</em></strong> and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
+<p>Go through this decision trees until you have found a paper with a reproduction package – this will be your <strong><em>declared paper</em></strong> and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
 <div id="a-final-note-on-contacting-the-authors" class="section level4">
 <h4><span class="header-section-number">1.1.3.1</span> A final note on contacting the authors</h4>
-<p>Before contacting the authors, we recommend that you review and use language from <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 6: Communications guidance</a> below, in this section we have drafter a template email for this specific scenario [ALEKS inciter link to email here] (contacting the authors for obtain access to gain access to a reproduction package for the first time). If the authors provide any materials, deposit them in a trusted repository (for example <a href="https://osf.io/">Open Science Framework</a>, <a href="https://www.openicpsr.org/openicpsr/">Open ICPSR</a>, or <a href="https://dataverse.org/">Dataverse</a>) and deposit all these materials under the name <code>Original reproduction package for - Title of the paper</code>. Provide the URL of the repository in Survey 1. If you fail to obtain the reproduction package and would like to choose a different paper, please record this in the &quot;candidate paper&quot; section of Survey 1.</p>
+<p>Before contacting the authors, we recommend that you review and use language from <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 6: Communications guidance</a> below, in this section we have drafter a template email for this specific scenario [ALEKS inciter link to email here] (contacting the authors for obtain access to gain access to a reproduction package for the first time). If the authors provide any materials, deposit them in a trusted repository (for example <a href="https://osf.io/">Open Science Framework</a>, <a href="https://www.openicpsr.org/openicpsr/">Open ICPSR</a>, or <a href="https://dataverse.org/">Dataverse</a>) and deposit all these materials under the name <code>Original reproduction package for - Title of the paper</code>. Provide the URL of the repository in Survey 1. If you fail to obtain the reproduction package and would like to choose a different paper, please record this in the “candidate paper” section of Survey 1.</p>
 <p>Now that you have verified the existence of a reproduction package, your <em>candidate paper</em> is now your <em>declared paper</em>. You can now move forward with the exercise!</p>
 </div>
 </div>
@@ -280,7 +285,7 @@
 <p>Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).</p>
 <p>When reading/summarizing the paper, you should try to answer the following main questions:</p>
 <ul>
-<li>Would you classify the paper's scientific claims as mainly focused on estimating a causal relationship, estimating/predicting a descriptive statistic of a population, or something else?</li>
+<li>Would you classify the paper’s scientific claims as mainly focused on estimating a causal relationship, estimating/predicting a descriptive statistic of a population, or something else?</li>
 <li>How many scientific claims (descriptive or causal) are investigated in the paper?</li>
 <li>What is the population for which the estimates apply?</li>
 <li>What is the main population that is the focus of the paper as a whole?</li>
@@ -288,14 +293,14 @@
 <li>How many display items are in the paper (tables, figures and inline results)?<br />
 </li>
 <li>What is the main statistical or econometric method used to examine each claim?</li>
-<li>What is the author's preferred specification (or yours if authors are not clear)?</li>
+<li>What is the author’s preferred specification (or yours if authors are not clear)?</li>
 <li>What are some robustness checks to the preferred specification?</li>
 </ul>
 </div>
 <div id="declare-estimates" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Record scope of the exercise.</h3>
 <p>By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.</p>
-<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in <a href="#fig:diagram"><strong>??</strong></a>. If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.</p>
+<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in <a href="intro.html#fig:diagram">0.1</a>. If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.</p>
 <p>In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.</p>
 <div id="declare-specific-main-estimates-to-reproduce." class="section level4 unnumbered">
 <h4>Declare specific main estimates to reproduce.</h4>
@@ -303,7 +308,7 @@
 </div>
 <div id="declare-possible-robustness-checks-to-main-estimates-optional." class="section level4 unnumbered">
 <h4>Declare possible robustness checks to main estimates (optional).</h4>
-<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em>, and <em>using the same data</em> (eg., including/excluding a subset of the data like &quot;high-school dropouts&quot; or &quot;women&quot;), please specify a robustness test that you would like to test before starting the assessment stage.</p>
+<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em>, and <em>using the same data</em> (eg., including/excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to test before starting the assessment stage.</p>
 <p>These are the elements you will need to conduct the scoping stage. <strong>You now have all the elements necessary to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a>.</strong></p>
 <hr />
 </div>
@@ -326,53 +331,121 @@
 </style>
 <table class="tg">
 <tr>
-<pre><code>&lt;th class=&quot;tg-0pky&quot;&gt;&lt;/th&gt;
-&lt;th class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;2 weeks &lt;br&gt; (~10 days)&lt;/th&gt;
-&lt;th class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;1 month &lt;br&gt; (~20 days)&lt;/th&gt;
-&lt;th class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;1 semester &lt;br&gt; (~100 days)&lt;/th&gt;</code></pre>
+<th class="tg-0pky">
+</th>
+<th class="tg-c3ow" colspan="2">
+2 weeks <br> (~10 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 month <br> (~20 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 semester <br> (~100 days)
+</th>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0pky&quot;&gt;&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;analysis data&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;raw data&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;analysis data&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;raw data&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;analysis data&lt;/td&gt;
-&lt;td class=&quot;tg-0pky&quot;&gt;raw data&lt;/td&gt;</code></pre>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0pky&quot;&gt;Scoping&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;10% (1 day)&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;5% (1 day)&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;5% (5 days)&lt;/td&gt;</code></pre>
+<td class="tg-0pky">
+Scoping
+</td>
+<td class="tg-c3ow" colspan="2">
+10% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (5 days)
+</td>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0pky&quot;&gt;Assessment&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;35%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;25%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;15%&lt;/td&gt;</code></pre>
+<td class="tg-0pky">
+Assessment
+</td>
+<td class="tg-c3ow" colspan="2">
+35%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+<td class="tg-c3ow" colspan="2">
+15%
+</td>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0pky&quot;&gt;Improvement&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;25%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;0%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;40%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;20%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;30%&lt;/td&gt;</code></pre>
+<td class="tg-0pky">
+Improvement
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+0%
+</td>
+<td class="tg-c3ow" colspan="2">
+40%
+</td>
+<td class="tg-c3ow">
+20%
+</td>
+<td class="tg-c3ow">
+30%
+</td>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0pky&quot;&gt;Robustness&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;25%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot;&gt;5%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;25%&lt;/td&gt;
-&lt;td class=&quot;tg-c3ow&quot; colspan=&quot;2&quot;&gt;25%&lt;/td&gt;</code></pre>
+<td class="tg-0pky">
+Robustness
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+5%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
 </tr>
 <tr>
-<pre><code>&lt;td class=&quot;tg-0lax&quot;&gt;Extension&lt;/td&gt;
-&lt;td class=&quot;tg-baqh&quot;&gt;0%&lt;/td&gt;
-&lt;td class=&quot;tg-baqh&quot;&gt;0%&lt;/td&gt;
-&lt;td class=&quot;tg-baqh&quot; colspan=&quot;2&quot;&gt;5%&lt;/td&gt;
-&lt;td class=&quot;tg-baqh&quot; colspan=&quot;2&quot;&gt;5%&lt;/td&gt;</code></pre>
+<td class="tg-0lax">
+Extension
+</td>
+<td class="tg-baqh">
+0%
+</td>
+<td class="tg-baqh">
+0%
+</td>
+<td class="tg-baqh" colspan="2">
+5%
+</td>
+<td class="tg-baqh" colspan="2">
+5%
+</td>
 </tr>
 </table>
 <p><a href="https://osf.io/4jvq2/download">Paper on PBR</a>. <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS">Repro package</a></p>
