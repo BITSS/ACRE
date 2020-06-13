@@ -1,7 +1,34 @@
 # Checking for Robustness {#robust}
 
+Once you have assess and improve the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term robustness check to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest.  
 
-[UNDER CONSTRUCION]
+Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section is begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which the authors (or yourself in their abscense) is declared as the main or preferred specification. Identify which display item contains this specificaiton and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following: 
+<!-- Emma: add reference to label in assessement stage-->
+
+        table1.tex (contains preferred specification)
+            |___[code] analysis.R
+                    |___[code] final_merge.do
+                            |___[code] clean_merged_1_2.do
+                            |       |___[code] merge_1_2.do
+                            |               |___[code] clean_raw_1.py
+                            |               |___[code] clean_raw_2.py
+                            |___[code] clean_merged_3_4.do
+                                    |___[code] merge_3_4.do
+                                            |___[code] clean_raw_3.py
+                                            |___[code] clean_raw_4.py
+                                            
+This simplified tree gives you a list of potential files where you could test different **reasonable specifications**. Here we use ([CITE SIMONS](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)) definition of reasonable specification which are consist of "(1) sensible tests of the research question, (2) expected
+to be statistically valid, and (3) not redundant with other specifications in the set" 
+
+The extension of robustness checks depends on the level of reproducibility. A claim with an associated level 0 or 1 display item cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim from level 5 can check the robustness to core of analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definition and data manipulations. 
+
+It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. 
+
+Connect to reproduction diagrams trees. 
+
+Write down analytic choice data base. 
+
+
 
 - Identify all possible analytical choices: original and repeated ones.   
 - Identify type of choice.  
@@ -37,7 +64,7 @@ The resulting data base should have the [following structure](https://docs.googl
 
 | file_name  | line_number | choice_type         | choice_value                   | Source              |
 |------------|-------------|---------------------|--------------------------------|---------------------|
-| code_01.do | 73          | data subsetting     | males                          | original            |
+| code_01.do | 73          | data sub-setting     | males                          | original            |
 | code_01.do | 122         | variable definition | income = wages + capital gains | "code_01.do-L103" |
 | code_05.R  | 143         | controls            | age, income, education         | original            |
 | ...        | ...         | ...                 | ...                            | ...                 |

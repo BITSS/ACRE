@@ -50,10 +50,6 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.5/grViz.js"></script>
 
 
 
@@ -143,8 +139,9 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -166,7 +163,6 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -189,7 +185,27 @@
             <section class="normal" id="section-">
 <div id="robust" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Checking for Robustness</h1>
-<p>[UNDER CONSTRUCION]</p>
+<p>Once you have assess and improve the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term robustness check to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest.</p>
+<p>Going back to our diagram that represents the multiple parts of a paper (<a href="#fig:diagram"><strong>??</strong></a>), the robustness section is begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which the authors (or yourself in their abscense) is declared as the main or preferred specification. Identify which display item contains this specificaiton and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following:
+<!-- Emma: add reference to label in assessement stage--></p>
+<pre><code>    table1.tex (contains preferred specification)
+        |___[code] analysis.R
+                |___[code] final_merge.do
+                        |___[code] clean_merged_1_2.do
+                        |       |___[code] merge_1_2.do
+                        |               |___[code] clean_raw_1.py
+                        |               |___[code] clean_raw_2.py
+                        |___[code] clean_merged_3_4.do
+                                |___[code] merge_3_4.do
+                                        |___[code] clean_raw_3.py
+                                        |___[code] clean_raw_4.py
+                                        </code></pre>
+<p>This simplified tree gives you a list of potential files where you could test different <strong>reasonable specifications</strong>. Here we use (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">CITE SIMONS</a>) definition of reasonable specification which are consist of “(1) sensible tests of the research question, (2) expected
+to be statistically valid, and (3) not redundant with other specifications in the set”</p>
+<p>The extension of robustness checks depends on the level of reproducibility. A claim with an associated level 0 or 1 display item cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim from level 5 can check the robustness to core of analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definition and data manipulations.</p>
+<p>It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition <em>and</em> an alternative core analytical choice.</p>
+<p>Connect to reproduction diagrams trees.</p>
+<p>Write down analytic choice data base.</p>
 <ul>
 <li>Identify all possible analytical choices: original and repeated ones.<br />
 </li>
@@ -254,7 +270,7 @@
 <tr class="odd">
 <td>code_01.do</td>
 <td>73</td>
-<td>data subsetting</td>
+<td>data sub-setting</td>
 <td>males</td>
 <td>original</td>
 </tr>
@@ -298,13 +314,11 @@
 <h2><span class="header-section-number">4.6</span> Test the robustness of results</h2>
 <p>Test the robustness of results to alternative (sensible) specifications</p>
 <ul>
-<li>Identify sensible alternatives to analytical choices.
-<ul>
+<li>Identify sensible alternatives to analytical choices.</li>
 <li>Sample from sensible analytical choices and re-run: report how much do results change as fraction of standard deviations.<br />
 </li>
 <li>Jackknife the preferred estimate.</li>
 <li>Use ML to select among covariates…</li>
-</ul></li>
 </ul>
 
 </div>
