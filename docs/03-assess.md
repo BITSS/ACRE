@@ -32,6 +32,16 @@ Next, look at the reproduction package and map the *data sources* mentioned in t
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
 
+Table: (\#tab:raw-data-information)Raw data information
+
+data_source                        page   data_files                                                                                                                                                 known_missing         directory       
+---------------------------------  -----  ---------------------------------------------------------------------------------------------------------------------------------------------------------  --------------------  ----------------
+"Current Population Survey 2018"   A1     cepr_march_2018.dta                                                                                                                                                              \data\          
+"DHS 2010 - 2013"                  4      nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv   boliviaDHS_2011.csv   \rawdata\DHS\   
+"2017 SAT scores"                  4      Not available                                                                                                                                                                    \data\to_clean\ 
+...                                ...    ...                                                                                                                                                        ...                   ...             
+
+
           Raw data information:
           |----------------------|------|-----------------------------------------------|---------------------|---------------------|
           | data_source          | page | data_files                                    | known_missing       | directory           |
@@ -58,6 +68,14 @@ As you progress through the exercise, add to the spreadsheet a one-line descript
 The resulting report will have the following structure:  
 
 
+Table: (\#tab:analysis-data-information)Analysis data information
+
+analysis_data    location                description                    
+---------------  ----------------------  -------------------------------
+final_data.csv   /analysis/fig1/         data for figure1               
+all_waves.csv    /final_data/v1_april/   data for region-level analysis 
+...              ...                     ...                            
+
           Analysis data information:
           |----------------|-----------------------|--------------------------------|
           | analysis_data  | location              | description                    |
@@ -73,6 +91,15 @@ The resulting report will have the following structure:
 ### Describe the code scripts.{#desc-scripts}
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
+
+
+Table: (\#tab:code-files-information)Code files information
+
+file_name           location          inputs                outputs               description                                             primary_type 
+------------------  ----------------  --------------------  --------------------  ------------------------------------------------------  -------------
+output_table1.do    /code/analysis/   analysis_data01.csv   output1_part1.txt     produces first part of table 1 (unformatted             analysis     
+data_cleaning02.R   /code/cleaning    admin_01raw.csv       analysis_data02.csv   removes outliers and missing vals from raw admin data   cleaning     
+...                 ...               ...                   ...                   ...                                                     ...          
 
           Code files information:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -197,6 +224,15 @@ In this case, you can still manually combine this partial information with your 
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+
+Table: (\#tab:adding-rows)Adding rows to code spreadsheet
+
+file_name       location   inputs                           outputs             description    primary_type 
+--------------  ---------  -------------------------------  ------------------  -------------  -------------
+...             ...        ...                              ...                 ...            ...          
+missing_file1   unknown    cleaned_1.dta, cleaned_2.dta     merged_1_2.dta      missing code   unknown      
+missing_file2   unknown    cleaned_3.dta, cleaned_4.dta     merged_3_4.dta      missing code   unknown      
+missing_file3   unknown    merged_3_4.dta, merged_1_2.dta   analysis_data.dta   missing code   unknown      
 
         Adding rows to code spreadsheet:
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
