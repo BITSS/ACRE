@@ -31,6 +31,18 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `/folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
+```{r raw-data-information, echo = FALSE}
+raw_data_info <- data.frame(data_source = c('"Current Population Survey 2018"', '"DHS 2010 - 2013"', '"2017 SAT scores"', "..."),
+                            page = c("A1", "4", "4", "..."),
+                            data_files = c("cepr_march_2018.dta", "nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv", "Not available", "..."),
+                            known_missing = c(" ", "boliviaDHS_2011.csv", " ", "..."),
+                            directory = c("\\data\\", "\\rawdata\\DHS\\", "\\data\\to_clean\\", "...")) # column doesn't display correctly after converting to HTML
+
+knitr::kable(raw_data_info, ## file doesn't knit when using pipe?
+             caption = "Raw data information")
+
+```
+
 
           Raw data information:
           |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -57,6 +69,14 @@ As you progress through the exercise, add to the spreadsheet a one-line descript
 
 The resulting report will have the following structure:  
 
+```{r analysis-data-information, echo = FALSE}
+analysis_data_info <- data.frame(analysis_data = c("final_data.csv", "all_waves.csv", "..."),
+                                 location = c("/analysis/fig1/", "/final_data/v1_april/", "..."),
+                                 description = c("data for figure1", "data for region-level analysis", "..."))
+                         
+knitr::kable(analysis_data_info, ## file doesn't knit when using pipe?
+             caption = "Analysis data information")
+```
 
           Analysis data information:
           |----------------|-----------------------|--------------------------------|
@@ -73,6 +93,18 @@ The resulting report will have the following structure:
 ### Describe the code scripts.{#desc-scripts}
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
+
+```{r code-files-information, echo = FALSE}
+code_files_info <- data.frame(file_name = c("output_table1.do", "data_cleaning02.R", "..."),
+                              location = c("/code/analysis/", "/code/cleaning", "..."),
+                              inputs = c("analysis_data01.csv", "admin_01raw.csv", "..."),
+                              outputs = c("output1_part1.txt", "analysis_data02.csv","..."),
+                              description = c("produces first part of table 1 (unformatted", "removes outliers and missing vals from raw admin data", "..."),
+                              primary_type = c("analysis", "cleaning", "..."))
+                         
+knitr::kable(code_files_info, ## file doesn't knit when using pipe?
+             caption = "Code files information")
+```
 
           Code files information:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -197,6 +229,17 @@ In this case, you can still manually combine this partial information with your 
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+```{r adding-rows, echo = FALSE}
+adding_rows_to_code <- data.frame(file_name = c("...", "missing_file1", "missing_file2", "missing_file3"),
+                                  location = c("...", "unknown", "unknown", "unknown"),
+                                  inputs = c("...", "cleaned_1.dta, cleaned_2.dta", "cleaned_3.dta, cleaned_4.dta", "merged_3_4.dta, merged_1_2.dta"),
+                                  outputs = c("...", "merged_1_2.dta", "merged_3_4.dta", "analysis_data.dta"),
+                                  description = c("...", "missing code", "missing code", "missing code"),
+                                  primary_type = c("...", "unknown", "unknown", "unknown"))
+                         
+knitr::kable(adding_rows_to_code, ## file doesn't knit when using pipe?
+             caption = "Adding rows to code spreadsheet")
+```
 
         Adding rows to code spreadsheet:
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
