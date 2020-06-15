@@ -52,7 +52,7 @@ To move from candidate to declared paper, you will basically need to assess if a
 
 
 
-<details><summary>View Decision Tree To Select Paper (Emma: add title) </summary>
+<details><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary>
 
 ```{r candidate-paper-dec-tree, eval=FALSE, echo=FALSE}
 #JOEL: help to get this to run within the code chunk
