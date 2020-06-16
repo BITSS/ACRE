@@ -1,6 +1,6 @@
 # Guidance for a Constructive Exchange Between Reproducers and Original Authors
 
-The purpose of this chapter is to facilitate constructive and respectful communication between reproducers (you) and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese ([2019](https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf)) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): *treat others and their work, as you would like others to treat you and your work!*
+The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese ([2019](https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf)) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): *treat others and their work, as you would like others to treat you and your work!*
 
 
    **1. Carefully and transparently plan your study.**  
@@ -41,30 +41,40 @@ Consider the following *before* you contact the original author:
       - Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?    
       - A deadline to respond (we suggest at least two weeks).  
 
-   4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.   
+   4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
+   
+   5. Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
+   - A *complete* reproduction package was provided
+   - An *incomplete* reproduction package was provided. You can also select one of the following reasons:
+            - Data is of sensitive, confidential, or proprietary character and cannot be shared;
+            - Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
+   - Author *refused* to share the reproduction package
+   - Author *did not respond* (including after a reminder was sent) within 4 weeks after the initial request.
  
 ### Contacting the original author(s) when there is no reproduction package
 
-[Aleks Please complete]
+If you haven't been able to locate an entry of a reproduction 
 
-This is the only email that you will be suggested to send almost verbatim. 
+*Template email:**  
 
-- Ask for materials.
-- Remark that standards have change and you (the author) are not being forced to comply with this request. 
-- Point out that ACRE will track responses to avoid duplication of questions in the future.  
-- Specifically ask to answer the two following questions:  
+>**Subject:** Reproduction materials for `[“Title of the paper”]`
 
-1. Please classify your response into one of the 5 following categories:
-   - I am providing the complete reproduction package
-   - I am providing partial content of the reproduction package
-   - I cannot provide the reproduction package because is sensitive/propietary data, but providing the code and clear documentation on how to obtain access. 
-   - I cannot provide the reproduction package because is sensitive/propietary data.
-   - Negative response. 
+>Dear Dr. `[Lastname of Corresponding Author]`,
+>
+> I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Journal]` in `[year]` (vol `[volume]`, no. `[no.]`), `[link]`. A reproduction package may contain (raw and/or analytic data), code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
+>
+>I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context for why you want to reproduce this particular paper using neutral language (e.g., "This is a seminal paper in my field"), avoiding any statements that would put the respondent on the defensive]`. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your paper.
+>
+>I will record the result of my reproduction attempt on the Advancing Computational Reproducibility in Economics (ACRE) platform, which is an open-source repository to systematically source, collect and present the results of verifications of computational reproducibility of published work in economics. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+>
+>In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise? Though your cooperation with mine and/or future request would be extremely helpful, please note that you are *not required to comply*.
 
-2. In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise? 
-
-
- 
+>Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
+>
+>Let me know if you have any questions. Please also feel free to contact my supervisor/instructor `[Name (email)]` for further details on this exercise. Thank you in advance for your help!
+>
+>Best regards,  
+>`[Reproducer]`
   
 ### Contacting the original author(s) to request a missing reproduction package or missing items  
 
