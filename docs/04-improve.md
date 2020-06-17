@@ -32,7 +32,6 @@ In addition to trying to obtain the raw data, you can also contribute by obtaini
 4. [Contact the authors](#tips-for-communication) and request the specific data set.       
 
 ### Adding missing analysis code {#ac}
-
 [Analysis code](#describe-inputs) can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:  
 
 1. Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to...” or “We estimate this regression using a bandwidth of...”).  

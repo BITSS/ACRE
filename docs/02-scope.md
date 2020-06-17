@@ -15,26 +15,20 @@ Note that in this stage, *you are not expected to review the reproduction materi
 
 ## From candidate to declared paper
 
-###  Select a candidate paper or be assigned one (several weeks before starting the exercise).
+After selecting a candidate paper, follow these steps to verify the existence of a reproduction package (and stop whenever you find the reproduction package):
 
-The first step is to identify a candidate paper. You might be able to choose among a pool of paper assigned by your instructor, or might be assigned a specific paper. In any case, it is important ot highlight that this might not be your final paper. It can be the case that you will not find any reproduction package and switch to another paper. The distinction between candidate and declared paper is meant to track precisely this circumstances.  
-
-Verify the existence of a reproduction package by going through these steps (stop whenever you find the reproduction package):
-
-  1. Verify the existence of a previous entry on ACRE (under construction) on your candidate paper.     
-  2. Check the paper's webpage in the official journal or publishers website. Look for links similar to "Data and Materials", "Supplemental Materials", "Reproduction/Replication Package/Materials".    
+  1. Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (read more on this in the next section below).
+  2. Check the paper's webpage on the website of the journal or publishers, looking for materials named "Data and Materials", "Supplemental Materials", "Reproduction/Replication Package/Materials", etc.  
   3. Look for links in the paper (review footnotes and appendices).  
-  4. Review the personal websites of all the authors in the paper. 
+  4. Review the personal websites of all the authors of the paper. 
   
-Once you have cover steps 1-4 and have not find any reproduction materials, then we suggest to select another candidate paper or to contact the authors.   
-  
-**We strongly encourage you to contact authors several weeks before officially starting the main parts of Scoping stage of this exercise. Instructors should also plan to use the ACRE exercise accordingly (eg. if the reproduction is expected to take place in the middle of the semester, students should plan on contacting the authors of a missing reproduction package on the first few weeks of the semester.**  
+If you have covered steps 1-4 and have not found any reproduction materials, then we suggest to either select another candidate paper or to contact the authors. We strongly encourage you to contact the authors **at least three weeks** before starting your analysis of the paper. Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).  
 
 ### Verify existence of reproduction package for candidate paper
 
 At this point you are *only validating the existence* of (at least) one reproduction package and not assessing the quality of its content. 
 
-Check the ACRE database (under development) for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information:   
+Check the ACRE database for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information:   
 
 >**Box 1:** Summary Report Card for ACRE Paper Entry     
 > **Title:**  Sample Title   
@@ -46,11 +40,8 @@ Check the ACRE database (under development) for previous assessments of your can
 > **Authors Available for Further Questions for ACRE Reproductions:** Yes/No/Unknown   
 > **Open for reproductions:** Yes/No  
 
-
 ### Decision Tree to Move From Candidate to Declared Paper
-To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined next. 
-
-
+To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined below. 
 
 <details><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary>
 
@@ -66,7 +57,7 @@ When you follow step 1, and check ACRE for a  previous entry on the paper you wi
 
 If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:   
 
-- A reproduction package exists. In this case, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).      
+- A reproduction package exists. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).      
 - If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.     
   - If authors are not contacted, you are asked to leave a record in the ACRE platform (as "original reproduction package is not available, and authors were not contacted"), and select a new candidate paper.    
   - If authors are contacted, there are two possible results:     
