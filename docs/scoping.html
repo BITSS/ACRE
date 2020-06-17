@@ -50,10 +50,6 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -143,8 +139,9 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -166,7 +163,6 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -189,10 +185,10 @@
             <section class="normal" id="section-">
 <div id="scoping" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Scoping</h1>
-<p>In this stage, you will choose or be assigned a candidate paper to reproduce. You will verify whether or not a reproduction package for your candidate paper exists. We define a <strong>reproduction package</strong> (sometimes referred to as a “replication package”) as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation.</p>
-<p>If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under current development), and choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.</p>
-<p>In this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage.</p>
-<p><strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a> to record your work for this stage.</em></strong></p>
+<p>In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the “declared paper”), you may first consider a few other papers (we refer to those as “candidate papers”).</p>
+<p>Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a <strong>reproduction package</strong> (in other contexts referred to as a “replication package”) as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 6</a>) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, we ask that you record your candidate papers in the ACRE database (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.</p>
+<p>Note that in this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.</p>
+<p><strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a> to record your work in this stage.</em></strong></p>
 <div id="from-candidate-to-declared-paper" class="section level2">
 <h2><span class="header-section-number">1.1</span> From candidate to declared paper</h2>
 <div id="select-a-candidate-paper-or-be-assigned-one-several-weeks-before-starting-the-exercise." class="section level3">
@@ -231,7 +227,7 @@
 <h3><span class="header-section-number">1.1.3</span> Decision Tree to Move From Candidate to Declared Paper</h3>
 <p>To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined next.</p>
 <details>
-<p><summary>View Decision Tree To Select Paper (Emma: add title) </summary></p>
+<p><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary></p>
 <p><img src="candidate-to-declared-paper.png" /></p>
 </details>
 <!-- Emma there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
@@ -300,7 +296,7 @@
 <div id="declare-estimates" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Record scope of the exercise.</h3>
 <p>By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.</p>
-<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in <a href="intro.html#fig:diagram">0.1</a>. If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.</p>
+<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in <a href="#fig:diagram"><strong>??</strong></a>. If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.</p>
 <p>In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.</p>
 <div id="declare-specific-main-estimates-to-reproduce." class="section level4 unnumbered">
 <h4>Declare specific main estimates to reproduce.</h4>

@@ -5,13 +5,13 @@ editor_options:
 ---
 # Scoping
 
-In this stage, you will choose or be assigned a candidate paper to reproduce. You will verify whether or not a reproduction package for your candidate paper exists. We define a **reproduction package** (sometimes referred to as a "replication package") as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation.
+In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the "declared paper"), you may first consider a few other papers (we refer to those as "candidate papers"). 
 
-If your candidate paper has a reproduction package, only then it will become your declared paper. If your candidate paper does not have a reproduction package you will be asked to leave a brief record in the ACRE database (under current development), and choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
+Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a **reproduction package** (in other contexts referred to as a "replication package") as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in [Chapter 6](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html)) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, we ask that you record your candidate papers in the ACRE database (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
 
-In this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage. 
+Note that in this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.
 
-***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work for this stage.***
+***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work in this stage.***
 
 ## From candidate to declared paper
 
@@ -52,7 +52,7 @@ To move from candidate to declared paper, you will basically need to assess if a
 
 
 
-<details><summary>View Decision Tree To Select Paper (Emma: add title) </summary>
+<details><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary>
 
 
 

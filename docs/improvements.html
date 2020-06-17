@@ -50,10 +50,6 @@
 
 
 
-<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
-<script src="libs/viz-1.8.2/viz.js"></script>
-<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
 
@@ -143,8 +139,9 @@
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
 <li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-information-is-missing"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some information is missing</a></li>
+<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="6.2.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.4</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
@@ -166,7 +163,6 @@
 <li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
 <li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -247,14 +243,13 @@
 <h3><span class="header-section-number">3.1.5</span> Debugging analysis code</h3>
 <p>Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:</p>
 <ul>
-<li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
-<ul>
+<li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.<br />
+</li>
 <li><em>Performance improvement:</em> Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another, but obtain the same results).<br />
 </li>
 <li><em>Environment set up:</em> Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.<br />
 </li>
 <li><em>Correcting errors:</em> A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will happen if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the <a href="ADD%20LINK">ACRE procedure to report coding errors</a>.</li>
-</ul></li>
 </ul>
 </div>
 <div id="debugging-cleaning-code" class="section level3">
@@ -264,7 +259,7 @@
 <div id="reporting-results" class="section level3">
 <h3><span class="header-section-number">3.1.7</span> Reporting results</h3>
 <p>Track all the different types of improvements you make and record in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A3">this standarized spreadsheet</a> with the following structure:</p>
-<pre><code>   Level-specific quality improvements: add data/code, debug code.
+<pre><code>       Level-specific quality improvements: add data/code, debug code.
 
        | output_name | imprv | description_of_added_files        | lvl |
        |-------------|-------|-----------------------------------|-----|
@@ -285,7 +280,7 @@
 <li>Improve documentation by adding extensive comments to the code.</li>
 <li>Integrate the documentation with code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).</li>
 <li>If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write it using an open source statistical software (e.g., R, Python, or Julia).</li>
-<li>Re re-organize the reproduction package into a set of folders and sub-folders that follow <a href="https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation">standardized best practices</a>, and add a master script that executes all the code in order, with no further modifications. <a href="https://github.com/AEADataEditor/replication-template">See AEA’s reproduction template</a>.<br />
+<li>Re-organize the reproduction package into a set of folders and sub-folders that follow <a href="https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation">standardized best practices</a>, and add a master script that executes all the code in order, with no further modifications. <a href="https://github.com/AEADataEditor/replication-template">See AEA’s reproduction template</a>.<br />
 </li>
 <li>Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see <a href="https://mybinder.org/">Binder</a> and <a href="https://codeocean.com/">Code Ocean</a>.</li>
 </ol>
