@@ -1,3 +1,8 @@
+```{r setup-improvements}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
 # Improvements   
 After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
@@ -67,6 +72,15 @@ Follow the same steps that you did to debug the analysis code, but report them s
 
 Track all the different types of improvements you make and record in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A3) with the following structure:   
 
+```{r improvements-spreadsheet, echo = FALSE}
+improvements <- data.frame(output_name = c("table 1", "table 1", "table 1", "figure 1", "figure 1", "inline 1", "..."),
+                           imprv = c("+AD", "+RD", "DCC", "+CC", "DAC", "DAC", "..."),
+                           description_of_added_files = c("ADD EXAMPLES", "ADD EXAMPLES", "ADD EXAMPLES", "", "", "", "..."),
+                           lvl= c("5", "5", "5", "6", "6", "8", "..."))
+
+improvements %>%
+    knitr::kable(caption = "Level-specific quality improvements: add data/code, debug code")
+```
            Level-specific quality improvements: add data/code, debug code.
 
            | output_name | imprv | description_of_added_files        | lvl |

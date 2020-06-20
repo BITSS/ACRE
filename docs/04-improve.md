@@ -1,3 +1,40 @@
+
+```r
+library(tidyverse)
+```
+
+```
+## ── Attaching packages ──────────────────────────────────────────────── tidyverse 1.3.0 ──
+```
+
+```
+## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
+## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0
+```
+
+```
+## ── Conflicts ─────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(knitr)
+library(kableExtra)
+```
+
+```
+## 
+## Attaching package: 'kableExtra'
+```
+
+```
+## The following object is masked from 'package:dplyr':
+## 
+##     group_rows
+```
 # Improvements   
 After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
@@ -67,6 +104,61 @@ Follow the same steps that you did to debug the analysis code, but report them s
 
 Track all the different types of improvements you make and record in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A3) with the following structure:   
 
+<table>
+<caption>(\#tab:improvements-spreadsheet)Level-specific quality improvements: add data/code, debug code</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> output_name </th>
+   <th style="text-align:left;"> imprv </th>
+   <th style="text-align:left;"> description_of_added_files </th>
+   <th style="text-align:left;"> lvl </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> table 1 </td>
+   <td style="text-align:left;"> +AD </td>
+   <td style="text-align:left;"> ADD EXAMPLES </td>
+   <td style="text-align:left;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> table 1 </td>
+   <td style="text-align:left;"> +RD </td>
+   <td style="text-align:left;"> ADD EXAMPLES </td>
+   <td style="text-align:left;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> table 1 </td>
+   <td style="text-align:left;"> DCC </td>
+   <td style="text-align:left;"> ADD EXAMPLES </td>
+   <td style="text-align:left;"> 5 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> figure 1 </td>
+   <td style="text-align:left;"> +CC </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> figure 1 </td>
+   <td style="text-align:left;"> DAC </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> 6 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> inline 1 </td>
+   <td style="text-align:left;"> DAC </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> 8 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+  </tr>
+</tbody>
+</table>
            Level-specific quality improvements: add data/code, debug code.
 
            | output_name | imprv | description_of_added_files        | lvl |
