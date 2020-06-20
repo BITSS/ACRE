@@ -5,9 +5,9 @@ editor_options:
 ---
 # Scoping
 
-In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the "declared paper"), you may first consider a few other papers (we refer to those as "candidate papers"). 
+In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the **"declared paper"**), you may first consider a few other papers, but not analyze them closer (we refer to those as **"candidate papers"**). 
 
-Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a **reproduction package** (in other contexts referred to as a "replication package") as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in [Chapter 6](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html)) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, we ask that you record your candidate papers in the ACRE database (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
+Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a **reproduction package** (in other contexts referred to as a "replication package") as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in [Chapter 6](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html)) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, **we ask that you record your candidate papers in the ACRE database** (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
 
 Note that in this stage, *you are not expected to review the reproduction materials in detail*, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.
 
@@ -15,33 +15,34 @@ Note that in this stage, *you are not expected to review the reproduction materi
 
 ## From candidate to declared paper
 
-After selecting a candidate paper, follow these steps to verify the existence of a reproduction package (and stop whenever you find the reproduction package):
+At this point of the exercise, you are *only validating the existence* of (at least) one reproduction package and not assessing the quality of its content. Follow the five steps to verify the existence of a reproduction package, and stop whenever you find it (which would mean that you have found your declared paper).
 
-  1. Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (read more on this in the next section below).
-  2. Check the paper's webpage on the website of the journal or publishers, looking for materials named "Data and Materials", "Supplemental Materials", "Reproduction/Replication Package/Materials", etc.  
+  1. Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (learn more in the next section).
+  2. Check the paper's webpage on the website of the journal or publisher, looking for materials named "Data and Materials", "Supplemental Materials", "Reproduction/Replication Package/Materials", etc.  
   3. Look for links in the paper (review footnotes and appendices).  
-  4. Review the personal websites of all the authors of the paper. 
+  4. Review the personal websites of the author(s) of the paper.
+  5. Contact the author to request the reproduction package using [this](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package) email template. In this and your future interactions with authors, we encourage you to follow our guidance outlined in [Chapter 6](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package).
+  6. Deposit the reproduction package in a trusted repository (e.g., [Dataverse](https://dataverse.org/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), [Zenodo](https://zenodo.org/), or the [Open Science Framework](https://osf.io/)) under the name `Original reproduction package for - Title of the paper`. You will be asked to provide the URL of the repository in Survey 1. 
   
-If you have covered steps 1-4 and have not found any reproduction materials, then we suggest to either select another candidate paper or to contact the authors. We strongly encourage you to contact the authors **at least three weeks** before starting your analysis of the paper. Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).  
+In case you need to contact the authors, make sure to *allocate sufficient time for this step* (we suggest at least three weeks before the date when you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
+  
+Review the decision tree (Figure #) below for a more detailed overview of this process. Remember, *if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database* before moving to another candidate paper. Once you have obtained the reproduction package, the *candidate paper* becomes your *declared paper* and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper. 
 
-### Verify existence of reproduction package for candidate paper
+### Candidate paper entries in the ACRE Database
 
-At this point you are *only validating the existence* of (at least) one reproduction package and not assessing the quality of its content. 
-
-Check the ACRE database for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information:   
+If the ACRE database contains previous reproduction attempts of the paper, you will see a report card with the following information:   
 
 >**Box 1:** Summary Report Card for ACRE Paper Entry     
 > **Title:**  Sample Title   
 > **Authors:**  Jane Doe & John Doe  
-> **Original Reproduction Package Available:** URL/No  
+> **Original Reproduction Package Available:** URL/No [What does this mean? Add some context]. 
 > [If "No"] **Contacted Authors?:** Yes/No  
 > [If "Yes(contacted)"] **Type of Response:** Categories (6).  
 > **Additional Reproduction Packages:** Number (eg., 2)   
 > **Authors Available for Further Questions for ACRE Reproductions:** Yes/No/Unknown   
-> **Open for reproductions:** Yes/No  
+> **Open for reproductions:** Yes/No  [Same as above: what does this mean? Add more context].
 
-### Decision Tree to Move From Candidate to Declared Paper
-To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined below. 
+If after going through steps 1-5 above (or for other reason) you were unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above. 
 
 <details><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary>
 
@@ -81,57 +82,29 @@ graph TD
 
 <!-- Emma there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 
-When you follow step 1, and check ACRE for a  previous entry on the paper you will either find and entry, or that no entry exists yet. Then:   
-
-If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:   
-
-- A reproduction package exists. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).      
-- If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.     
-  - If authors are not contacted, you are asked to leave a record in the ACRE platform (as "original reproduction package is not available, and authors were not contacted"), and select a new candidate paper.    
-  - If authors are contacted, there are two possible results:     
-    - A reproduction package was provided. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).      
-    - A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).     
-      - If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as "original reproduction package is not available, and authors were contacted"), and select a new candidate paper.     
-      - If you decide to build a reproduction package independently, the candidate paper becomes the declare paper and you can move onto next section.
-        
-        
-If there is at least one ACRE entry on the candidate paper, you will be able to see the its information as presented in Box 1. 
-
-- If a reproduction package exists, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).        
-- If there is no reproduction package, and authors have not been contacted, you should will have the same alternatives for contacting them as with no previous entry     
-- If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.     
-  - If authors asked to not been contacted any further, you will have the options of building the reproduction package independently or choosing a new candidate paper (after leaving a brief record).   
-  - If authors allowed future follow-ups, you could choose to follow up, build their own reproduction package independently or switch to a new candidate paper (after leaving a brief record).  
-
-Go through this decision trees until you have found a paper with a reproduction package -- this will be your ***declared paper*** and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper. 
-
-#### A final note on contacting the authors  
-
-Before contacting the authors, we recommend that you review and use language from [Chapter 6: Communications guidance](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) below, in this section we have drafter a template email for this specific scenario [ALEKS inciter link to email here] (contacting the authors for obtain access to gain access to a reproduction package for the first time). If the authors provide any materials, deposit them in a trusted repository (for example [Open Science Framework](https://osf.io/), [Open ICPSR](https://www.openicpsr.org/openicpsr/), or  [Dataverse](https://dataverse.org/)) and deposit all these materials under the name `Original reproduction package for - Title of the paper`. Provide the URL of the repository in Survey 1. If you fail to obtain the reproduction package and would like to choose a different paper, please record this in the "candidate paper" section of Survey 1.
-
-Now that you have verified the existence of a reproduction package, your *candidate paper* is now your *declared paper*. You can now move forward with the exercise! 
-
 ## Scoping your declared paper  
 
-### Read and summarize the paper. {#read-sum}
+Once you have identified your declared paper, it is time to get familiarized with the paper and decide on the specific output(s) on which you will focus on the remainder of the exercise. The following sections in this chapter will show you how to do that.
 
-Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
+### Read and summarize the paper {#read-sum}
 
-When reading/summarizing the paper, you should try to answer the following main questions:  
+Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
+
+When reading/summarizing the paper, try to answer the following questions:  
 
  - Would you classify the paper's scientific claims as mainly focused on estimating a causal relationship, estimating/predicting a descriptive statistic of a population, or something else? 
  - How many scientific claims (descriptive or causal) are investigated in the paper? 
  - What is the population for which the estimates apply?
- - What is the main population that is the focus of the paper as a whole?
+ - What is the population that is the focus of the paper as a whole?
  - What are the main data sources used in the paper?
- - How many display items are in the paper (tables, figures and inline results)?  
+ - How many display items are there in the paper (tables, figures, and inline results)?  
  - What is the main statistical or econometric method used to examine each claim?
- - What is the author's preferred specification (or yours if authors are not clear)?
+ - What is the author's preferred specification (or yours, if authors are not clear)?
  - What are some robustness checks to the preferred specification?
  
-### Record scope of the exercise.{#declare-estimates}
+### Record scope of the exercise {#declare-estimates}
 
-By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail. 
+By now you should have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.
 
 At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in \@ref(fig:diagram). If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. 
 
