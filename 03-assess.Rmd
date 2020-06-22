@@ -67,6 +67,8 @@ raw_data_info %>%
           | ...                  | ...  | ...                                           | ...                 | ...                 |
           |----------------------|------|-----------------------------------------------|---------------------|---------------------|
 
+**Note:** lists if files in the data_files and known_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.
+
 ### Describe the analytic data sets. {#desc-analy}
 
 List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&range=A1).
@@ -133,6 +135,7 @@ code_files_info %>%
 
 As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1). Once finished with the reproduction exercise, classify each code file as *analysis* or *cleaning*. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
 
+**Note:** If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ACRE Diagram Builder.
 
 ## Connect each output to all its inputs {#diagram}
 
@@ -259,19 +262,45 @@ adding_rows_to_code %>%
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
         | ...               | ...              | ...                 | ...                 | ...                  | ...          |
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-        | missing_file1     | unknown          | cleaned_1.dta,      | merged_1_2.dta      | missing code         | unknown      |
+        | missing_file1     | unknown          | cleaned_1.dta;      | merged_1_2.dta      | missing code         | unknown      |
         |                   |                  | cleaned_2.dta       |                     |                      |              |
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-        | missing_file2     | unknown          | cleaned_3.dta,      | merged_3_4.dta      | missing code         | unknown      |
+        | missing_file2     | unknown          | cleaned_3.dta;      | merged_3_4.dta      | missing code         | unknown      |
         |                   |                  | cleaned_4.dta       |                     |                      |              |                  
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-        | missing_file3     | unknown          | merged_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
+        | missing_file3     | unknown          | merged_3_4.dta;    | analysis_data.dta   | missing code         | unknown      |
         |                   |                  | merged_1_2.dta     |                     |                      |              |                  
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
-For more examples of diagrams connecting final outputs to initial raw data, [see here](#additional-diagrams).    
+For more examples of diagrams connecting final outputs to initial raw data, [see here](#additional-diagrams).  
+
+### Unused Data Sources
+
+It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
+
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+        
+        Unused data sources:
+        raw_1.dta
+        raw_2.dta
+        raw_3.dta
+        raw_4.dta
+        
+        Unused analysis data:
+        cleaned_1.dta
+        cleaned_2.dta
+        cleaned_3.dta
+        cleaned_4.dta
+        merged_1_2.dta
+        merged_3_4.dta
+        cleaned_1_2.dta
+        cleaned_3_4.dta
+        
+In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package. 
 
 ## Assign a reproducibility score. {#score}
 
