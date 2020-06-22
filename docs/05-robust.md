@@ -55,18 +55,24 @@ For each analytical choice recorded, add the specific choice that the paper used
 
 The advantage of this type of contribution is that you are not requiered to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications. 
 
-## Proposing reasonable alternatives
+## Proposing a specific robustness check
 
-When performing the different robustness tests, you will be asked to refer to the relevant sections of the code that will be modified. If you are building on top previous records provided by other reproducers to ACRE,  and provide a brief justification of its validity and sensibility.   
+When performing a specific robustness test you will ask to follow these steps: 
 
-Propose a reasonable alternative:  
+1. Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (`entry_id`). If there is no entry corresponding for the specific lines to test, please create one. 
 
-- identify line or section  
-- propose variation 
-- justify sensibility  
-- justify validity
-- confirm that test is not redundant with other tests in the paper/robustness excercise.  
+2. Propose a specific variation to this analytical choice. 
 
+3. Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income hispanics from the sample?). 
+
+4. Discuss how this variation could affect the validity of the results (e.g. likely effects on ommited variable bias, measurement error, change in the Local Averge Treatment Effects underlying population) 
+
+5. Confirm that test is not redundant with other tests in the paper/robustness excercise. 
+
+6. Report the results from the robustness check (new estimate, standard error, and units)
+
+
+The advantage of this approach is that allows for an in deph inspection of a specific section of the paper. The main limitation is that justifying sensbility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper. 
 
 
 <!--

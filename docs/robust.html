@@ -117,7 +117,7 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>4</b> Checking for Robustness</a><ul>
 <li class="chapter" data-level="4.1" data-path="robust.html"><a href="robust.html#mapping-the-universe-of-robustness-checks"><i class="fa fa-check"></i><b>4.1</b> Mapping the universe of robustness checks</a></li>
-<li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#proposing-reasonable-alternatives"><i class="fa fa-check"></i><b>4.2</b> Proposing reasonable alternatives</a></li>
+<li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#proposing-a-specific-robustness-check"><i class="fa fa-check"></i><b>4.2</b> Proposing a specific robustness check</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>5</b> Concluding the reproduction</a><ul>
 <li class="chapter" data-level="5.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#final-products"><i class="fa fa-check"></i><b>5.1</b> Final products</a></li>
@@ -294,19 +294,18 @@
 </table>
 <p>The advantage of this type of contribution is that you are not requiered to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.</p>
 </div>
-<div id="proposing-reasonable-alternatives" class="section level2">
-<h2><span class="header-section-number">4.2</span> Proposing reasonable alternatives</h2>
-<p>When performing the different robustness tests, you will be asked to refer to the relevant sections of the code that will be modified. If you are building on top previous records provided by other reproducers to ACRE, and provide a brief justification of its validity and sensibility.</p>
-<p>Propose a reasonable alternative:</p>
-<ul>
-<li>identify line or section<br />
-</li>
-<li>propose variation</li>
-<li>justify sensibility<br />
-</li>
-<li>justify validity</li>
-<li>confirm that test is not redundant with other tests in the paper/robustness excercise.</li>
-</ul>
+<div id="proposing-a-specific-robustness-check" class="section level2">
+<h2><span class="header-section-number">4.2</span> Proposing a specific robustness check</h2>
+<p>When performing a specific robustness test you will ask to follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (<code>entry_id</code>). If there is no entry corresponding for the specific lines to test, please create one.</p></li>
+<li><p>Propose a specific variation to this analytical choice.</p></li>
+<li><p>Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income hispanics from the sample?).</p></li>
+<li><p>Discuss how this variation could affect the validity of the results (e.g. likely effects on ommited variable bias, measurement error, change in the Local Averge Treatment Effects underlying population)</p></li>
+<li><p>Confirm that test is not redundant with other tests in the paper/robustness excercise.</p></li>
+<li><p>Report the results from the robustness check (new estimate, standard error, and units)</p></li>
+</ol>
+<p>The advantage of this approach is that allows for an in deph inspection of a specific section of the paper. The main limitation is that justifying sensbility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper.</p>
 <!--
 ## Test the robustness of results  
 
