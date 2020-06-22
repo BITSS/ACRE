@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-16" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,6 +56,68 @@
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -78,17 +140,17 @@
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#stages-of-the-exercise"><i class="fa fa-check"></i>Stages of the exercise</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#recording-the-results-of-the-exercise"><i class="fa fa-check"></i>Recording the results of the exercise</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#reproduction-strategies"><i class="fa fa-check"></i>Reproduction Strategies</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>1</b> Scoping</a><ul>
 <li class="chapter" data-level="1.1" data-path="scoping.html"><a href="scoping.html#from-candidate-to-declared-paper"><i class="fa fa-check"></i><b>1.1</b> From candidate to declared paper</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="scoping.html"><a href="scoping.html#verify-existence-of-reproduction-package-for-candidate-paper"><i class="fa fa-check"></i><b>1.1.1</b> Verify existence of reproduction package for candidate paper</a></li>
-<li class="chapter" data-level="1.1.2" data-path="scoping.html"><a href="scoping.html#decision-tree-to-move-from-candidate-to-declared-paper"><i class="fa fa-check"></i><b>1.1.2</b> Decision Tree to Move From Candidate to Declared Paper</a></li>
+<li class="chapter" data-level="1.1.1" data-path="scoping.html"><a href="scoping.html#candidate-paper-entries-in-the-acre-database"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the ACRE Database</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="scoping.html"><a href="scoping.html#scoping-your-declared-paper"><i class="fa fa-check"></i><b>1.2</b> Scoping your declared paper</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>1.2.1</b> Read and summarize the paper.</a></li>
-<li class="chapter" data-level="1.2.2" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>1.2.2</b> Record scope of the exercise.</a></li>
+<li class="chapter" data-level="1.2.1" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>1.2.1</b> Read and summarize the paper</a></li>
+<li class="chapter" data-level="1.2.2" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>1.2.2</b> Record scope of the exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#bonus-identify-your-relevant-timeline."><i class="fa fa-check"></i>Bonus: Identify your relevant timeline.</a></li>
+<li class="chapter" data-level="" data-path="scoping.html"><a href="scoping.html#identify-your-relevant-timeline."><i class="fa fa-check"></i>Identify your relevant timeline.</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>2</b> Assessment</a><ul>
 <li class="chapter" data-level="2.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>2.1</b> Describe the inputs.</a><ul>
@@ -99,6 +161,7 @@
 <li class="chapter" data-level="2.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>2.2</b> Connect each output to all its inputs</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="assessment.html"><a href="assessment.html#complete-workflow-information"><i class="fa fa-check"></i><b>2.2.1</b> Complete workflow information</a></li>
 <li class="chapter" data-level="2.2.2" data-path="assessment.html"><a href="assessment.html#incomplete-workflow-information"><i class="fa fa-check"></i><b>2.2.2</b> Incomplete workflow information</a></li>
+<li class="chapter" data-level="2.2.3" data-path="assessment.html"><a href="assessment.html#unused-data-sources"><i class="fa fa-check"></i><b>2.2.3</b> Unused Data Sources</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>2.3</b> Assign a reproducibility score.</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>2.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
@@ -107,7 +170,7 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>3</b> Improvements</a><ul>
 <li class="chapter" data-level="3.1" data-path="improvements.html"><a href="improvements.html#types-of-output-level-improvements"><i class="fa fa-check"></i><b>3.1</b> Types of output-level improvements</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="improvements.html"><a href="improvements.html#rd"><i class="fa fa-check"></i><b>3.1.1</b> Adding missing raw data files or meta-data</a></li>
+<li class="chapter" data-level="3.1.1" data-path="improvements.html"><a href="improvements.html#rd"><i class="fa fa-check"></i><b>3.1.1</b> Adding raw data: missing files or metadata</a></li>
 <li class="chapter" data-level="3.1.2" data-path="improvements.html"><a href="improvements.html#ad"><i class="fa fa-check"></i><b>3.1.2</b> Adding missing analytic data files</a></li>
 <li class="chapter" data-level="3.1.3" data-path="improvements.html"><a href="improvements.html#ac"><i class="fa fa-check"></i><b>3.1.3</b> Adding missing analysis code</a></li>
 <li class="chapter" data-level="3.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>3.1.4</b> Adding missing data cleaning code</a></li>
@@ -120,50 +183,44 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>4</b> Checking for Robustness</a><ul>
-<li class="chapter" data-level="4.1" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>4.1</b> Identifying Analytical Choices</a></li>
-<li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>4.2</b> Identifying Choice Type</a></li>
-<li class="chapter" data-level="4.3" data-path="robust.html"><a href="robust.html#id-analy"><i class="fa fa-check"></i><b>4.3</b> Identifying Analytical Choices</a></li>
-<li class="chapter" data-level="4.4" data-path="robust.html"><a href="robust.html#id-val"><i class="fa fa-check"></i><b>4.4</b> Identifying Analytical Value</a></li>
-<li class="chapter" data-level="4.5" data-path="robust.html"><a href="robust.html#test-rob"><i class="fa fa-check"></i><b>4.5</b> Choose and justify alternative values for analytical choices</a></li>
-<li class="chapter" data-level="4.6" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>4.6</b> Test the robustness of results</a></li>
+<li class="chapter" data-level="4.1" data-path="robust.html"><a href="robust.html#mapping-the-universe-of-robustness-checks"><i class="fa fa-check"></i><b>4.1</b> Mapping the universe of robustness checks</a></li>
+<li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#proposing-a-specific-robustness-check"><i class="fa fa-check"></i><b>4.2</b> Proposing a specific robustness check</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>5</b> Concluding the reproduction</a><ul>
-<li class="chapter" data-level="5.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#final-products"><i class="fa fa-check"></i><b>5.1</b> Final products</a></li>
+<li class="chapter" data-level="5" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><i class="fa fa-check"></i><b>5</b> Guidance for a Constructive Exchange Between Reproducers and Original Authors</a><ul>
+<li class="chapter" data-level="5.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>5.1</b> For Reproducers Contacting the Authors of the Original Study</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package"><i class="fa fa-check"></i><b>5.1.1</b> Contacting the original author(s) when there is no reproduction package</a></li>
+<li class="chapter" data-level="5.1.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package"><i class="fa fa-check"></i><b>5.1.2</b> Contacting the original author(s) to request specific missing items of a reproduction package</a></li>
+<li class="chapter" data-level="5.1.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>5.1.3</b> Asking for additional guidance when some materials have been shared</a></li>
+<li class="chapter" data-level="5.1.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>5.1.4</b> Response when the original author has refused to share due to <em>undisclosed reasons</em></a></li>
+<li class="chapter" data-level="5.1.5" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>5.1.5</b> Response when the original author has refused to share due to legal or ethical restrictions of the data</a></li>
+<li class="chapter" data-level="5.1.6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>5.1.6</b> Contacting the original author to share the results of your reproduction exercise</a></li>
+<li class="chapter" data-level="5.1.7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-hostile-responses-from-original-authors"><i class="fa fa-check"></i><b>5.1.7</b> Responding to hostile responses from original authors</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><i class="fa fa-check"></i><b>6</b> Guidance for a Constructive Exchange Between Reproducers and Original Authors</a><ul>
-<li class="chapter" data-level="6.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>6.1</b> For Reproducers Contacting the Authors of the Original Study</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package"><i class="fa fa-check"></i><b>6.1.1</b> Contacting the original author(s) when there is no reproduction package</a></li>
-<li class="chapter" data-level="6.1.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package"><i class="fa fa-check"></i><b>6.1.2</b> Contacting the original author(s) to request specific missing items of a reproduction package</a></li>
-<li class="chapter" data-level="6.1.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>6.1.3</b> Asking for additional guidance when some materials have been shared</a></li>
-<li class="chapter" data-level="6.1.4" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#response-when-the-original-author-has-refused-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>6.1.4</b> Response when the original author has refused to share due to <em>undisclosed reasons</em></a></li>
-<li class="chapter" data-level="6.1.5" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#response-when-the-original-author-has-refused-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>6.1.5</b> Response when the original author has refused to share due to legal or ethical restrictions of the data</a></li>
-<li class="chapter" data-level="6.1.6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>6.1.6</b> Contacting the original author to share the results of your reproduction exercise</a></li>
-<li class="chapter" data-level="6.1.7" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-hostile-responses-from-original-authors"><i class="fa fa-check"></i><b>6.1.7</b> Responding to hostile responses from original authors</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>6.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>6.2.1</b> Responding to a repeated request</a></li>
-<li class="chapter" data-level="6.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>6.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
-<li class="chapter" data-level="6.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>6.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
+<li class="chapter" data-level="5.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>5.2</b> For Original Authors Responding to Requests from Reproducers</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-a-repeated-request"><i class="fa fa-check"></i><b>5.2.1</b> Responding to a repeated request</a></li>
+<li class="chapter" data-level="5.2.2" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>5.2.2</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="5.2.3" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#responding-to-incompleteaggressive-requests-from-reproducer"><i class="fa fa-check"></i><b>5.2.3</b> Responding to incomplete/aggressive requests from reproducer</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>7</b> Reproduction Diagrams</a><ul>
-<li class="chapter" data-level="7.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#different-scenarios"><i class="fa fa-check"></i><b>7.1</b> Different Scenarios</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#complete"><i class="fa fa-check"></i><b>7.1.1</b> Complete</a></li>
-<li class="chapter" data-level="7.1.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#raw-data-and-analytic-data-but-cleaning-code-is-missing."><i class="fa fa-check"></i><b>7.1.2</b> Raw data and analytic data, but cleaning code is missing.</a></li>
+<li class="chapter" data-level="6" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html"><i class="fa fa-check"></i><b>6</b> Reproduction Diagrams</a><ul>
+<li class="chapter" data-level="6.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#different-scenarios"><i class="fa fa-check"></i><b>6.1</b> Different Scenarios</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#complete"><i class="fa fa-check"></i><b>6.1.1</b> Complete</a></li>
+<li class="chapter" data-level="6.1.2" data-path="reproduction-diagrams.html"><a href="reproduction-diagrams.html#raw-data-and-analytic-data-but-cleaning-code-is-missing."><i class="fa fa-check"></i><b>6.1.2</b> Raw data and analytic data, but cleaning code is missing.</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>8</b> Additional resources</a><ul>
-<li class="chapter" data-level="8.1" data-path="additional-resources.html"><a href="additional-resources.html#some-summaries"><i class="fa fa-check"></i><b>8.1</b> Some summaries</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>8.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
+<li class="chapter" data-level="7" data-path="additional-resources.html"><a href="additional-resources.html"><i class="fa fa-check"></i><b>7</b> Additional resources</a><ul>
+<li class="chapter" data-level="7.1" data-path="additional-resources.html"><a href="additional-resources.html#some-summaries"><i class="fa fa-check"></i><b>7.1</b> Some summaries</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="additional-resources.html"><a href="additional-resources.html#summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent"><i class="fa fa-check"></i><b>7.1.1</b> Summary on reproducible workflow (Chapter 11) from <span class="citation">Christensen, Freese, and Miguel (<span>2019</span>)</span>:</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="additional-resources.html"><a href="additional-resources.html#links"><i class="fa fa-check"></i><b>8.2</b> Links</a></li>
+<li class="chapter" data-level="7.2" data-path="additional-resources.html"><a href="additional-resources.html#links"><i class="fa fa-check"></i><b>7.2</b> Links</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>9</b> Contributions</a><ul>
-<li class="chapter" data-level="9.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>9.1</b> Ask for feedback on guidelines</a></li>
-<li class="chapter" data-level="9.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>9.2</b> List of Contributors</a></li>
+<li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
+<li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>8.1</b> Ask for feedback on guidelines</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>8.2</b> List of Contributors</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
-<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#basic-concepts."><i class="fa fa-check"></i><b>10.1</b> Basic concepts.</a></li>
+<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
+<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
+<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -197,8 +254,8 @@
 <p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.</p>
 <p>First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-936f2c48eb9eddb800ca" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-936f2c48eb9eddb800ca">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"DI 1\", color = red]\noutput2 [label = \"DI 2\"]\noutput3 [label = \"DI 3\"]\noutput4 [label = \"DI 4\"]\noutput5 [label = \"DI 5\"]\noutput6 [label = \"DI 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S 1\", color=red]\nspec2 [label = \"S 2\"]\nspec3 [label = \"S 3\"]\nspec4 [label = \"S 4\"]\nspec5 [label = \"S 5\"]\nspec6 [label = \"S 6\"]\nspec7 [label = \"S 7\"]\nspec8 [label = \"S 8\"]\nspec9 [label = \"S 9\"]\nspec10 [label = \"S 10\"]\nspec11 [label = \"S 10\"]\nspec12 [label = \"S 10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-80445182be40719ba890" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-80445182be40719ba890">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"DI 1\", color = red]\noutput2 [label = \"DI 2\"]\noutput3 [label = \"DI 3\"]\noutput4 [label = \"DI 4\"]\noutput5 [label = \"DI 5\"]\noutput6 [label = \"DI 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S 1\", color=red]\nspec2 [label = \"S 2\"]\nspec3 [label = \"S 3\"]\nspec4 [label = \"S 4\"]\nspec5 [label = \"S 5\"]\nspec6 [label = \"S 6\"]\nspec7 [label = \"S 7\"]\nspec8 [label = \"S 8\"]\nspec9 [label = \"S 9\"]\nspec10 [label = \"S 10\"]\nspec11 [label = \"S 10\"]\nspec12 [label = \"S 10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
 </p>
@@ -231,7 +288,7 @@ Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Ite
   research:   5%       10%        5%         10%         70%
 - Graduate
   course:    10%       25%       20%         40%         5%
-- Undergrad.
+- Undergrad
   thesis:    10%       30%       40%         20%         0%</code></pre></li>
 </ol>
 <p>Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper’s level of reproducibility.</p>
@@ -243,6 +300,11 @@ Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Ite
 <p>In <em>Stage 2: <a href="assessment.html#assessment">Assessment</a></em>, you will inspect the paper’s reproduction package (raw data, analysis data, and code), connect the display item to be reproduced with its inputs, and assign a reproducibility score to each output.</p>
 <p>In <em>Stage 3: <a href="improvements.html#improvements">Improvement</a></em>, you will try to improve the reproducibility of the selected outputs by adding missing files, documentation, and report any potential changes in the level of reproducibility. Use <strong>Survey 2</strong> to record your work at Stages 2 and 3 (you will receive access instructions for Survey 2 when you submit Survey 1).</p>
 <p>In <em>Stage 4: <a href="robust.html#robust">Robustness Checks</a></em>, you will assess different analytical choices and test possible variations. Use <strong>Survey 3</strong> to record your work at this stage.</p>
+</div>
+<div id="reproduction-strategies" class="section level2 unnumbered">
+<h2>Reproduction Strategies</h2>
+<p>Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a <em>reproduction strategy</em>. For example, a reproduction may closely follow the order of the steps outlined above, with the reproducer first choosing a set of results they are interested in assessing or understanding the production of, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy may be for the reproducer to develop potential robustness checks or extensions while reading the study, which leads to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particularly data set they have access to or are interested in using and reproduce the all of the results that use that data set as an input, then probe the robustness of the results to various data cleaning decisions.</p>
+<p>The many potential uses of reproduction to various ends makes the number of potential reproduction strategies very large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples in the above paragraph, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.</p>
 
 </div>
 </div>

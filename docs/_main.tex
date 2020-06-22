@@ -34,6 +34,46 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
@@ -66,12 +106,26 @@
 \makeatother
 
 \usepackage{booktabs}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-06-16}
+\date{2020-06-22}
 
 \begin{document}
 \maketitle
@@ -223,7 +277,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
   research:   5%       10%        5%         10%         70%
 - Graduate
   course:    10%       25%       20%         40%         5%
-- Undergrad.
+- Undergrad
   thesis:    10%       30%       40%         20%         0%
 \end{verbatim}
 \end{enumerate}
@@ -244,12 +298,20 @@ In \emph{Stage 3: \protect\hyperlink{improvements}{Improvement}}, you will try t
 
 In \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}}, you will assess different analytical choices and test possible variations. Use \textbf{Survey 3} to record your work at this stage.
 
+\hypertarget{reproduction-strategies}{%
+\section*{Reproduction Strategies}\label{reproduction-strategies}}
+\addcontentsline{toc}{section}{Reproduction Strategies}
+
+Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above, with the reproducer first choosing a set of results they are interested in assessing or understanding the production of, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy may be for the reproducer to develop potential robustness checks or extensions while reading the study, which leads to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particularly data set they have access to or are interested in using and reproduce the all of the results that use that data set as an input, then probe the robustness of the results to various data cleaning decisions.
+
+The many potential uses of reproduction to various ends makes the number of potential reproduction strategies very large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples in the above paragraph, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.
+
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the ``declared paper''), you may first consider a few other papers (we refer to those as ``candidate papers'').
+In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the \textbf{``declared paper''}), you may first consider a few other papers, but not analyze them closer (we refer to those as \textbf{``candidate papers''}).
 
-Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a \textbf{reproduction package} (in other contexts referred to as a ``replication package'') as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6}) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, we ask that you record your candidate papers in the ACRE database (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
+Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a \textbf{reproduction package} (in other contexts referred to as a ``replication package'') as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6}) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, \textbf{we ask that you record your candidate papers in the ACRE database} (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
 
 Note that in this stage, \emph{you are not expected to review the reproduction materials in detail}, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.
 
@@ -258,125 +320,63 @@ Note that in this stage, \emph{you are not expected to review the reproduction m
 \hypertarget{from-candidate-to-declared-paper}{%
 \section{From candidate to declared paper}\label{from-candidate-to-declared-paper}}
 
-After selecting a candidate paper, follow these steps to verify the existence of a reproduction package (and stop whenever you find the reproduction package):
+At this point of the exercise, you are \emph{only validating the existence} of (at least) one reproduction package and not assessing the quality of its content. Follow the five steps to verify the existence of a reproduction package, and stop whenever you find it (which would mean that you have found your declared paper).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (read more on this in the next section below).
+  Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (learn more in the next section).
 \item
-  Check the paper's webpage on the website of the journal or publishers, looking for materials named ``Data and Materials'', ``Supplemental Materials'', ``Reproduction/Replication Package/Materials'', etc.\\
+  Check the paper's webpage on the website of the journal or publisher, looking for materials named ``Data and Materials'', ``Supplemental Materials'', ``Reproduction/Replication Package/Materials'', etc.\\
 \item
   Look for links in the paper (review footnotes and appendices).\\
 \item
-  Review the personal websites of all the authors of the paper.
+  Review the personal websites of the author(s) of the paper.
+\item
+  Contact the author to request the reproduction package using \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{this} email template. In this and your future interactions with authors, we encourage you to follow our guidance outlined in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{Chapter 6}.
+\item
+  Deposit the reproduction package in a trusted repository (e.g., \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, \href{https://zenodo.org/}{Zenodo}, or the \href{https://osf.io/}{Open Science Framework}) under the name \texttt{Original\ reproduction\ package\ for\ -\ Title\ of\ the\ paper}. You will be asked to provide the URL of the repository in Survey 1.
 \end{enumerate}
 
-If you have covered steps 1-4 and have not found any reproduction materials, then we suggest to either select another candidate paper or to contact the authors. We strongly encourage you to contact the authors \textbf{at least three weeks} before starting your analysis of the paper. Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
+In case you need to contact the authors, make sure to \emph{allocate sufficient time for this step} (we suggest at least three weeks before the date when you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
 
-\hypertarget{verify-existence-of-reproduction-package-for-candidate-paper}{%
-\subsection{Verify existence of reproduction package for candidate paper}\label{verify-existence-of-reproduction-package-for-candidate-paper}}
+Review the decision tree (Figure \#) below for a more detailed overview of this process. Remember, \emph{if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database} before moving to another candidate paper. Once you have obtained the reproduction package, the \emph{candidate paper} becomes your \emph{declared paper} and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
-At this point you are \emph{only validating the existence} of (at least) one reproduction package and not assessing the quality of its content.
+\hypertarget{candidate-paper-entries-in-the-acre-database}{%
+\subsection{Candidate paper entries in the ACRE Database}\label{candidate-paper-entries-in-the-acre-database}}
 
-Check the ACRE database for previous assessments of your candidate paper. If there are previous entries, you will see a brief report card with the following information:
+If the ACRE database contains previous reproduction attempts of the paper, you will see a report card with the following information:
 
 \begin{quote}
 \textbf{Box 1:} Summary Report Card for ACRE Paper Entry\\
 \textbf{Title:} Sample Title\\
 \textbf{Authors:} Jane Doe \& John Doe\\
-\textbf{Original Reproduction Package Available:} URL/No\\
+\textbf{Original Reproduction Package Available:} URL/No {[}What does this mean? Add some context{]}.
 {[}If ``No''{]} \textbf{Contacted Authors?:} Yes/No\\
 {[}If ``Yes(contacted)''{]} \textbf{Type of Response:} Categories (6).\\
 \textbf{Additional Reproduction Packages:} Number (eg., 2)\\
 \textbf{Authors Available for Further Questions for ACRE Reproductions:} Yes/No/Unknown\\
-\textbf{Open for reproductions:} Yes/No
+\textbf{Open for reproductions:} Yes/No {[}Same as above: what does this mean? Add more context{]}.
 \end{quote}
 
-\hypertarget{decision-tree-to-move-from-candidate-to-declared-paper}{%
-\subsection{Decision Tree to Move From Candidate to Declared Paper}\label{decision-tree-to-move-from-candidate-to-declared-paper}}
-
-To move from candidate to declared paper, you will basically need to assess if a reproduction package exists. Following the steps describe above, and leaving a record for each reproduction package that did not had a reproduction package will lead to a a decision tree (collection of sequential decisions) like the one outlined below.
+If after going through steps 1-5 above (or for other reason) you were unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.
 
 View Decision Tree To Select Paper (Emma: add title and solve bug with svg)
 
 \includegraphics{candidate-to-declared-paper.png}
 
-When you follow step 1, and check ACRE for a previous entry on the paper you will either find and entry, or that no entry exists yet. Then:
-
-If there is no paper entry, create one. For this you will need to verify if a reproduction package exist in any of the steps outlined above (2-4). Here there will be two possible scenarios:
-
-\begin{itemize}
-\tightlist
-\item
-  A reproduction package exists. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).\\
-\item
-  If no reproduction package exists, then you have the option to contact the original authors following the ACRE recommendations.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If authors are not contacted, you are asked to leave a record in the ACRE platform (as ``original reproduction package is not available, and authors were not contacted''), and select a new candidate paper.\\
-  \item
-    If authors are contacted, there are two possible results:
-
-    \begin{itemize}
-    \tightlist
-    \item
-      A reproduction package was provided. In this case, the candidate paper becomes the declared paper and you can move onto the next section (read the paper).\\
-    \item
-      A reproduction package was not provided. You will have the final option of independently building a reproduction package (finding data and writing code independently).
-
-      \begin{itemize}
-      \tightlist
-      \item
-        If you decide not to build a reproduction package independently, please leave a record in the ACRE platform (as ``original reproduction package is not available, and authors were contacted''), and select a new candidate paper.\\
-      \item
-        If you decide to build a reproduction package independently, the candidate paper becomes the declare paper and you can move onto next section.
-      \end{itemize}
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
-
-If there is at least one ACRE entry on the candidate paper, you will be able to see the its information as presented in Box 1.
-
-\begin{itemize}
-\tightlist
-\item
-  If a reproduction package exists, the candidate paper becomes the declare paper and you can move onto the next section (read the paper).\\
-\item
-  If there is no reproduction package, and authors have not been contacted, you should will have the same alternatives for contacting them as with no previous entry\\
-\item
-  If there is no reproduction package, and authors have been contacted, you should observe the authors availability to be contacted for follow-ups.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    If authors asked to not been contacted any further, you will have the options of building the reproduction package independently or choosing a new candidate paper (after leaving a brief record).\\
-  \item
-    If authors allowed future follow-ups, you could choose to follow up, build their own reproduction package independently or switch to a new candidate paper (after leaving a brief record).
-  \end{itemize}
-\end{itemize}
-
-Go through this decision trees until you have found a paper with a reproduction package -- this will be your \textbf{\emph{declared paper}} and you will try to reproduce it for the remainder of the ACRE exercise. Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
-
-\hypertarget{a-final-note-on-contacting-the-authors}{%
-\subsubsection{A final note on contacting the authors}\label{a-final-note-on-contacting-the-authors}}
-
-Before contacting the authors, we recommend that you review and use language from \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6: Communications guidance} below, in this section we have drafter a template email for this specific scenario {[}ALEKS inciter link to email here{]} (contacting the authors for obtain access to gain access to a reproduction package for the first time). If the authors provide any materials, deposit them in a trusted repository (for example \href{https://osf.io/}{Open Science Framework}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, or \href{https://dataverse.org/}{Dataverse}) and deposit all these materials under the name \texttt{Original\ reproduction\ package\ for\ -\ Title\ of\ the\ paper}. Provide the URL of the repository in Survey 1. If you fail to obtain the reproduction package and would like to choose a different paper, please record this in the ``candidate paper'' section of Survey 1.
-
-Now that you have verified the existence of a reproduction package, your \emph{candidate paper} is now your \emph{declared paper}. You can now move forward with the exercise!
-
 \hypertarget{scoping-your-declared-paper}{%
 \section{Scoping your declared paper}\label{scoping-your-declared-paper}}
 
+Once you have identified your declared paper, it is time to get familiarized with the paper and decide on the specific output(s) on which you will focus on the remainder of the exercise. The following sections in this chapter will show you how to do that.
+
 \hypertarget{read-sum}{%
-\subsection{Read and summarize the paper.}\label{read-sum}}
+\subsection{Read and summarize the paper}\label{read-sum}}
 
-Depending on how much time you have, we recommend that you write a short summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
+Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
 
-When reading/summarizing the paper, you should try to answer the following main questions:
+When reading/summarizing the paper, try to answer the following questions:
 
 \begin{itemize}
 \tightlist
@@ -387,25 +387,25 @@ When reading/summarizing the paper, you should try to answer the following main 
 \item
   What is the population for which the estimates apply?
 \item
-  What is the main population that is the focus of the paper as a whole?
+  What is the population that is the focus of the paper as a whole?
 \item
   What are the main data sources used in the paper?
 \item
-  How many display items are in the paper (tables, figures and inline results)?\\
+  How many display items are there in the paper (tables, figures, and inline results)?\\
 \item
   What is the main statistical or econometric method used to examine each claim?
 \item
-  What is the author's preferred specification (or yours if authors are not clear)?
+  What is the author's preferred specification (or yours, if authors are not clear)?
 \item
   What are some robustness checks to the preferred specification?
 \end{itemize}
 
 \hypertarget{declare-estimates}{%
-\subsection{Record scope of the exercise.}\label{declare-estimates}}
+\subsection{Record scope of the exercise}\label{declare-estimates}}
 
-By now you should have selected a paper that contains a reproduction package, and have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.
+By now you should have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.
 
-At this point, you should clearly specify which part of the paper will be the main focus of your reproduction exercise. You are asked to focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in \ref{fig:diagram}. If you plan to scope more than one claim, we strongly recommend starting with one and recording your results. You can initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise.
+At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in \ref{fig:diagram}. If you plan to scope more than one claim, \emph{we strongly recommend starting with just one} and recording your results. You can then initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.
 
 In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.
 
@@ -413,7 +413,7 @@ In the Assessment stage, the reproduction will be centered around the display it
 \subsubsection*{Declare specific main estimates to reproduce.}\label{declare-specific-main-estimates-to-reproduce.}}
 \addcontentsline{toc}{subsubsection}{Declare specific main estimates to reproduce.}
 
-Identify one of the scientific claims, and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and row and column in the table). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, you will be asked to reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
+Identify one of the scientific claims, and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and row and column in the table). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
 
 \hypertarget{declare-possible-robustness-checks-to-main-estimates-optional.}{%
 \subsubsection*{Declare possible robustness checks to main estimates (optional).}\label{declare-possible-robustness-checks-to-main-estimates-optional.}}
@@ -425,13 +425,13 @@ These are the elements you will need to conduct the scoping stage. \textbf{You n
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{bonus-identify-your-relevant-timeline.}{%
-\section*{Bonus: Identify your relevant timeline.}\label{bonus-identify-your-relevant-timeline.}}
-\addcontentsline{toc}{section}{Bonus: Identify your relevant timeline.}
+\hypertarget{identify-your-relevant-timeline.}{%
+\section*{Identify your relevant timeline.}\label{identify-your-relevant-timeline.}}
+\addcontentsline{toc}{section}{Identify your relevant timeline.}
 
-Before you begin working on the three main stages of the reproduction exercise (assessment, improvement, and robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor, and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that that may take a month to complete or a semester-long project (for example as an undergraduate thesis).
+Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that may take a month to complete, or a semester-long project (for example as an undergraduate thesis).
 
-Table 1 shows a tentative distribution of time across three different reproduction formats. The scoping and assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
+Table 1 shows a tentative distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities and expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
 Emma: please write this table using R and KableExtra
 
@@ -503,6 +503,47 @@ Extension
 
 \href{https://osf.io/4jvq2/download}{Paper on PBR}. \href{https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS}{Repro package}
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(knitr)}
+\KeywordTok{library}\NormalTok{(kableExtra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'kableExtra'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     group_rows
+\end{verbatim}
+
 \hypertarget{assessment}{%
 \chapter{Assessment}\label{assessment}}
 
@@ -539,26 +580,7 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 
 Next, look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder\footnote{a relative location takes the form of \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that takes the form of \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
-Record this information in this \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} (download it or make a copy for yourself), using the following structure:\\
-
-\begin{table}
-
-\caption{\label{tab:raw-data-information}Raw data information}
-\centering
-\begin{tabular}[t]{l|l|l|l|l}
-\hline
-data\_source & page & data\_files & known\_missing & directory\\
-\hline
-"Current Population Survey 2018" & A1 & cepr\_march\_2018.dta &  & \textbackslash{}data\textbackslash{}\\
-\hline
-"DHS 2010 - 2013" & 4 & nicaraguaDHS\_2010.csv; boliviaDHS2010.csv; nicaraguaDHS\_2011.csv; nicaraguaDHS\_2012.csv; boliviaDHS\_2012.csv; nicaraguaDHS\_2013.csv; boliviaDHS\_2013.csv & boliviaDHS\_2011.csv & \textbackslash{}rawdata\textbackslash{}DHS\textbackslash{}\\
-\hline
-"2017 SAT scores" & 4 & Not available &  & \textbackslash{}data\textbackslash{}to\_clean\textbackslash{}\\
-\hline
-... & ... & ... & ... & ...\\
-\hline
-\end{tabular}
-\end{table}
+Record this information in this \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} (download it or make a copy for yourself), using the following structure:
 
 \begin{verbatim}
   Raw data information:
@@ -579,6 +601,8 @@ data\_source & page & data\_files & known\_missing & directory\\
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
 \end{verbatim}
 
+\textbf{Note:} lists if files in the data\_files and known\_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.
+
 \hypertarget{desc-analy}{%
 \subsection{Describe the analytic data sets.}\label{desc-analy}}
 
@@ -587,23 +611,6 @@ List all the analytic files you can find in the reproduction package, and identi
 As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: \texttt{all\_waves.csv} has the simple description \texttt{data\ for\ region-level\ analysis}). This may be difficult in an initial review, but will become easier as you go along.
 
 The resulting report will have the following structure:
-
-\begin{table}
-
-\caption{\label{tab:analysis-data-information}Analysis data information}
-\centering
-\begin{tabular}[t]{l|l|l}
-\hline
-analysis\_data & location & description\\
-\hline
-final\_data.csv & /analysis/fig1/ & data for figure1\\
-\hline
-all\_waves.csv & /final\_data/v1\_april/ & data for region-level analysis\\
-\hline
-... & ... & ...\\
-\hline
-\end{tabular}
-\end{table}
 
 \begin{verbatim}
   Analysis data information:
@@ -623,23 +630,6 @@ all\_waves.csv & /final\_data/v1\_april/ & data for region-level analysis\\
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). For each code file, record all inputs together and separate each item with ``;''. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). For each code file, record all outputs together and separate each item with ``;''. Provide a one-line description of what each code file does. Record all of this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}, using the following structure:
 
-\begin{table}
-
-\caption{\label{tab:code-files-information}Code files information}
-\centering
-\begin{tabular}[t]{l|l|l|l|l|l}
-\hline
-file\_name & location & inputs & outputs & description & primary\_type\\
-\hline
-output\_table1.do & /code/analysis/ & analysis\_data01.csv & output1\_part1.txt & produces first part of table 1 (unformatted & analysis\\
-\hline
-data\_cleaning02.R & /code/cleaning & admin\_01raw.csv & analysis\_data02.csv & removes outliers and missing vals from raw admin data & cleaning\\
-\hline
-... & ... & ... & ... & ... & ...\\
-\hline
-\end{tabular}
-\end{table}
-
 \begin{verbatim}
   Code files information:
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -658,6 +648,8 @@ data\_cleaning02.R & /code/cleaning & admin\_01raw.csv & analysis\_data02.csv & 
 \end{verbatim}
 
 As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
+
+\textbf{Note:} If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ACRE Diagram Builder.
 
 \hypertarget{diagram}{%
 \section{Connect each output to all its inputs}\label{diagram}}
@@ -766,25 +758,6 @@ table1.tex
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 
-\begin{table}
-
-\caption{\label{tab:adding-rows}Adding rows to code spreadsheet}
-\centering
-\begin{tabular}[t]{l|l|l|l|l|l}
-\hline
-file\_name & location & inputs & outputs & description & primary\_type\\
-\hline
-... & ... & ... & ... & ... & ...\\
-\hline
-missing\_file1 & unknown & cleaned\_1.dta, cleaned\_2.dta & merged\_1\_2.dta & missing code & unknown\\
-\hline
-missing\_file2 & unknown & cleaned\_3.dta, cleaned\_4.dta & merged\_3\_4.dta & missing code & unknown\\
-\hline
-missing\_file3 & unknown & merged\_3\_4.dta, merged\_1\_2.dta & analysis\_data.dta & missing code & unknown\\
-\hline
-\end{tabular}
-\end{table}
-
 \begin{verbatim}
 Adding rows to code spreadsheet:
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -792,13 +765,13 @@ Adding rows to code spreadsheet:
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
     | ...               | ...              | ...                 | ...                 | ...                  | ...          |
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file1     | unknown          | cleaned_1.dta,      | merged_1_2.dta      | missing code         | unknown      |
+    | missing_file1     | unknown          | cleaned_1.dta;      | merged_1_2.dta      | missing code         | unknown      |
     |                   |                  | cleaned_2.dta       |                     |                      |              |
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file2     | unknown          | cleaned_3.dta,      | merged_3_4.dta      | missing code         | unknown      |
+    | missing_file2     | unknown          | cleaned_3.dta;      | merged_3_4.dta      | missing code         | unknown      |
     |                   |                  | cleaned_4.dta       |                     |                      |              |                  
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file3     | unknown          | merged_3_4.dta,    | analysis_data.dta   | missing code         | unknown      |
+    | missing_file3     | unknown          | merged_3_4.dta;    | analysis_data.dta   | missing code         | unknown      |
     |                   |                  | merged_1_2.dta     |                     |                      |              |                  
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
 \end{verbatim}
@@ -806,6 +779,36 @@ Adding rows to code spreadsheet:
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
 For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{additional-diagrams}{see here}.
+
+\hypertarget{unused-data-sources}{%
+\subsection{Unused Data Sources}\label{unused-data-sources}}
+
+It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
+
+\begin{verbatim}
+table1.tex
+        |___[code] analysis.R
+            |___analysis_data.dta
+    
+    Unused data sources:
+    raw_1.dta
+    raw_2.dta
+    raw_3.dta
+    raw_4.dta
+    
+    Unused analysis data:
+    cleaned_1.dta
+    cleaned_2.dta
+    cleaned_3.dta
+    cleaned_4.dta
+    merged_1_2.dta
+    merged_3_4.dta
+    cleaned_1_2.dta
+    cleaned_3_4.dta
+    
+\end{verbatim}
+
+In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
 
 \hypertarget{score}{%
 \section{Assign a reproducibility score.}\label{score}}
@@ -982,12 +985,53 @@ Congratulations! You have now completed the \emph{Assessment} stage of this exer
 
 Please continue to the \protect\hyperlink{improvements}{next section} where you can help improve it!
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
+\end{verbatim}
+
+\begin{verbatim}
+## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(knitr)}
+\KeywordTok{library}\NormalTok{(kableExtra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'kableExtra'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:dplyr':
+## 
+##     group_rows
+\end{verbatim}
+
 \hypertarget{improvements}{%
 \chapter{Improvements}\label{improvements}}
 
 After assessing the paper's reproducibility package, you can start proposing ways to improve its reproducibility. Making improvements provides an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider ACRE community, including other students and researchers using the ACRE platform.
 
-As with the \emph{Assessment} section, we recommend that you first focus on one specific output (e.g., ``Table 1''). After making improvements to this first output, you will have a much easier time translating those improvements to other outputs.
+As with the \emph{Assessment} section, we recommend that you first focus on one specific display item (e.g., ``Table 1''). After making improvements to this first item, you will have a much easier time translating those improvements to other ones.
 
 \textbf{Use Survey 2 to record your work as part of this step.}
 
@@ -995,7 +1039,7 @@ As with the \emph{Assessment} section, we recommend that you first focus on one 
 \section{Types of output-level improvements}\label{types-of-output-level-improvements}}
 
 \hypertarget{rd}{%
-\subsection{Adding missing raw data files or meta-data}\label{rd}}
+\subsection{Adding raw data: missing files or metadata}\label{rd}}
 
 Reproduction packages often do not include all original \protect\hyperlink{describe-inputs}{raw datasets}. To obtain any missing raw data, or information about them, follow these steps:
 
@@ -1003,7 +1047,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Identify the missing file. During \protect\hyperlink{assessment}{Assessment}, you identified all data sources from the paper's body and appendices (column \texttt{data\_source} in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{this standarized spreadsheet}). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the \texttt{data\_file} field of the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{same spreadsheet} as above. If not, record it as ``Some (or all) of the files used in the paper corresponding to data source X''.\\
+  Identify the missing file. During \protect\hyperlink{assessment}{Assessment}, you identified all data sources from the paper's body and appendices (column \texttt{data\_source} in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{this standarized spreadsheet}). However, some data sources (as collected by the original investigators) might be missing one or more data files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the \texttt{known\_,missing} field of the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{same spreadsheet} as above. If not, record it as ``Some/All'' in the \texttt{known\_,missing} field of the for each specific data source.\\
 \item
   Verify whether this file (or files) can be easily obtained from the web.
 
@@ -1015,11 +1059,11 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
     2.2 - If no: proceed to step 3.\\
   \end{itemize}
 \item
-  \href{ADD\%20LINK}{Use the ACRE database} to verify whether there have been previous attempts to contact the authors regarding this paper.\\
+  \href{ADD\%20LINK}{Use the ACRE database} to verify whether there have been previous attempts to contact the authors regarding this paper, about this specific missing raw files.\\
 \item
-  Contact the original authors and politely request the original materials. Be mindful of the authors' time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See \protect\hyperlink{tips-for-communication}{tips for communication} for sample language on how to approach the authors.\\
+  Contact the original authors and politely request the original materials. Be mindful of the authors' time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See \protect\hyperlink{tips-for-communication}{tips for communication} for sample language on how to approach the authors for this specific scenario.\\
 \item
-  If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs.
+  If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data.
 \end{enumerate}
 
 In addition to trying to obtain the raw data, you can also contribute by obtaining missing analytic data.
@@ -1064,7 +1108,7 @@ In addition to trying to obtain the raw data, you can also contribute by obtaini
 \hypertarget{cc}{%
 \subsection{Adding missing data cleaning code}\label{cc}}
 
-\protect\hyperlink{describe-inputs}{Data cleaning (processing)} code might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).
+\protect\hyperlink{describe-inputs}{Data cleaning (processing) code} might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).
 
 \hypertarget{dac}{%
 \subsection{Debugging analysis code}\label{dac}}
@@ -1097,10 +1141,35 @@ Follow the same steps that you did to debug the analysis code, but report them s
 
 Track all the different types of improvements you make and record in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A3}{this standarized spreadsheet} with the following structure:
 
-\begin{verbatim}
-   Level-specific quality improvements: add data/code, debug code.
+\begin{table}
 
-       | output_name | imprv | description_of_added_files        | lvl |
+\caption{\label{tab:improvements-spreadsheet}Level-specific quality improvements: add data/code, debug code}
+\centering
+\begin{tabular}[t]{l|l|l|l}
+\hline
+output\_name & imprv & description\_of\_added\_files & lvl\\
+\hline
+table 1 & +AD & ADD EXAMPLES & 5\\
+\hline
+table 1 & +RD & ADD EXAMPLES & 5\\
+\hline
+table 1 & DCC & ADD EXAMPLES & 5\\
+\hline
+figure 1 & +CC &  & 6\\
+\hline
+figure 1 & DAC &  & 6\\
+\hline
+inline 1 & DAC &  & 8\\
+\hline
+... & ... & ... & ...\\
+\hline
+\end{tabular}
+\end{table}
+
+Level-specific quality improvements: add data/code, debug code.
+
+\begin{verbatim}
+   | output_name | imprv | description_of_added_files        | lvl |
        |-------------|-------|-----------------------------------|-----|
        | table 1     | +AD   |        ADD EXAMPLES               |  5  |
        | table 1     | +RD   |        ADD EXAMPLES               |  5  |
@@ -1141,13 +1210,13 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
 
-Once you have assess and improve the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term robustness check to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest.
+Once you have assessed and improved the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term \textbf{robustness checks} to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
 
-The extension of robustness checks depends on the level of reproducibility. A claim with an associated level 0 or 1 display item cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim from level 5 can check the robustness to core of analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definition and data manipulations.
+The extension of new robustness checks will depend on the current level of reproducibility. A claim supported by display items with reproducibility levels of 0 or 1 cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim based on display items at level 5 can check the robustness to the core of the analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definitions and data manipulations.
 
 It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
 
-Going back to our diagram that represents the multiple parts of a paper (\ref{fig:diagram}), the robustness section is begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which the authors (or yourself in their abscense) is declared as the main or preferred specification. Identify which display item contains this specificaiton and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following:
+Going back to our diagram that represents the multiple parts of a paper (\ref{fig:diagram}), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their absence) as the main or preferred specification. Identify which display item contains this specification and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following:
 
 \begin{verbatim}
 table1.tex (contains preferred specification of a given claim)
@@ -1164,46 +1233,12 @@ table1.tex (contains preferred specification of a given claim)
                                         
 \end{verbatim}
 
-This simplified tree gives you a list of potential files where you could test different \textbf{reasonable specifications}. Here we use (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{CITE SIMONS}) definition of reasonable specification which consists on a set of ``(1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set''. When performing the different robustness tests, you will be asked to record the relevant section of the code that will be modified, and provide a brief justication of its validity and sensibility.
+This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) referring to files in a specific reproduction package.
 
-With the potential list then two approaches: wide range of RT, or specific targeted test.
+\hypertarget{mapping-the-universe-of-robustness-checks}{%
+\section{Mapping the universe of robustness checks}\label{mapping-the-universe-of-robustness-checks}}
 
-wide range:
-
-\begin{itemize}
-\tightlist
-\item
-  Identify all possible analytical choices: original and repeated ones.\\
-\item
-  Identify type of choice.\\
-\item
-  Identify choice value.
-\item
-  Suggest choice alternative and justify (one line)
-\end{itemize}
-
-Targeted test:
-
-\begin{itemize}
-\tightlist
-\item
-  identify line or section\\
-\item
-  propose variation
-\item
-  justify sensibility\\
-\item
-  justify validity
-\item
-  confirm that test is not redundant with other tests in the paper/robustness excercise.
-\end{itemize}
-
-\hypertarget{id-analy}{%
-\section{Identifying Analytical Choices}\label{id-analy}}
-
-As part of the requirements to \href{requirements_comprehension.md}{demonstrate comprehension of the paper and the code} researchers conducting the reproduction will be asked to record all the analytical choices identified during the code review process. This is done in two steps: first adding comment lines into the code files where an analytic choice are found, and second, compiling those analytic choices into a standardized data set.
-
-In your copy of the replication code, add the comment \texttt{“\#\ ANALYTICAL\ CHOICE\ OF\ TYPE\ \_\_\_\_.\ RECORDED\ FOR\ THE\ FIRST\ TIME\ {[}HERE\ or\ IN\ "FILE\_NAME-LINE\_NUMBER"{]}”} above each analytical choice detected in the code. Possible types of analytical choices include (but are not limited to):
+When examining a specific code file, or a specific section within a file, you will be asked to identify and record all specific analytical choices in that file or section. Possible types of analytical choices include (but are not limited to):
 
 \begin{itemize}
 \tightlist
@@ -1245,140 +1280,116 @@ In your copy of the replication code, add the comment \texttt{“\#\ ANALYTICAL\
   \end{itemize}
 \end{itemize}
 
-Once finished, transcribe all the information on analytical choices into a data set. For the \texttt{source} field type ``original'' whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103} respectively).
+Once finished, transcribe all the information on analytical choices into a data set (the ACRE platform will allow for easier recording once deployed). For the \texttt{source} field type ``original'' whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103} respectively).
 
-The resulting data base should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
+For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
 
-\begin{longtable}[]{@{}lllll@{}}
+\begin{longtable}[]{@{}lllllll@{}}
 \toprule
-\begin{minipage}[b]{0.10\columnwidth}\raggedright
+\begin{minipage}[b]{0.05\columnwidth}\raggedright
+entry\_id\strut
+\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
 file\_name\strut
-\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
 line\_number\strut
-\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
 choice\_type\strut
-\end{minipage} & \begin{minipage}[b]{0.28\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
 choice\_value\strut
 \end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
+choice\_range\strut
+\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
 Source\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.10\columnwidth}\raggedright
+\begin{minipage}[t]{0.05\columnwidth}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
 code\_01.do\strut
-\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
 73\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 data sub-setting\strut
-\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 males\strut
 \end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+males, female,\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 original\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.10\columnwidth}\raggedright
+\begin{minipage}[t]{0.05\columnwidth}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
 code\_01.do\strut
-\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
 122\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 variable definition\strut
-\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 income = wages + capital gains\strut
 \end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+wages, capital gains, gifts\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 ``code\_01.do-L103''\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.10\columnwidth}\raggedright
+\begin{minipage}[t]{0.05\columnwidth}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
 code\_05.R\strut
-\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
 143\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 controls\strut
-\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 age, income, education\strut
 \end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+age, income, education, region\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 original\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.10\columnwidth}\raggedright
+\begin{minipage}[t]{0.05\columnwidth}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
 \ldots{}\strut
 \end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.28\columnwidth}\raggedright
-\ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
 \ldots{}\strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
-\hypertarget{id-analy}{%
-\section{Identifying Choice Type}\label{id-analy}}
+The advantage of this type of contribution is that you are not required to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.
 
-\hypertarget{id-analy}{%
-\section{Identifying Analytical Choices}\label{id-analy}}
+\hypertarget{proposing-a-specific-robustness-check}{%
+\section{Proposing a specific robustness check}\label{proposing-a-specific-robustness-check}}
 
-\hypertarget{id-val}{%
-\section{Identifying Analytical Value}\label{id-val}}
+When performing a specific robustness test you will ask to follow these steps:
 
-\hypertarget{test-rob}{%
-\section{Choose and justify alternative values for analytical choices}\label{test-rob}}
-
-\hypertarget{test-the-robustness-of-results}{%
-\section{Test the robustness of results}\label{test-the-robustness-of-results}}
-
-Test the robustness of results to alternative (sensible) specifications
-
-\begin{itemize}
-\tightlist
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
-  Specification curves: DESCRIBE.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Jackknife the preferred estimate: DESCRIBE.\\
-  \item
-    Use ML to select among covariates: DESCRIBE.
-  \end{itemize}
-\end{itemize}
-
-\hypertarget{concluding-the-reproduction}{%
-\chapter{Concluding the reproduction}\label{concluding-the-reproduction}}
-
-{[}UNDER CONSTRUCTION{]} but testing now
-
-Walk the students on checking that they have completed all the steps and where can they see their output.
-
-\hypertarget{final-products}{%
-\section{Final products}\label{final-products}}
-
-\begin{itemize}
+  Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (\texttt{entry\_id}). If there is no entry corresponding for the specific lines to test, please create one.
 \item
-  One-page introduction describing why you chose this paper
+  Propose a specific variation to this analytical choice.
 \item
-  Two-page summary of paper
+  Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g.~does it make sense to include exclude low income Hispanics from the sample?).
 \item
-  2 Completed surveys:
+  Discuss how this variation could affect the validity of the results (e.g.~likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects underlying population)
+\item
+  Confirm that test is not redundant with other tests in the paper/robustness exercise.
+\item
+  Report the results from the robustness check (new estimate, standard error, and units)
+\end{enumerate}
 
-  \begin{itemize}
-  \tightlist
-  \item
-    i - General information about the paper and specific
-    information about output to reproduce.\\
-  \item
-    ii - Assessment of how (computationally) reproducible is the paper;
-    description of improvements to its reproducibility; record of all the
-    analytical choices identified in the exercise.
-  \end{itemize}
-\item
-  ACRE report card with all the improvements that were created by the researcher reproducing the paper. The list of improvements will be made public and original authors will receive a copy of the report card. The option of anonymity will be provided to the researchers reproducing the paper.
-\item
-  New Readme file (autogenerated).
-\item
-  Data with all analytical choices identified.
-\item
-  ?? Narrated description of improvements to original CR of the paper, assessment of robustness of results. Lessons from the exercise and possible future extensions.
-\end{itemize}
+The advantage of this approach is that allows for an in depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper.
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}
@@ -1898,12 +1909,12 @@ TO DO
 \hypertarget{definitions}{%
 \chapter{Definitions}\label{definitions}}
 
-\hypertarget{basic-concepts.}{%
-\section{Basic concepts.}\label{basic-concepts.}}
+\hypertarget{concepts-in-reproducibility}{%
+\section{Concepts in reproducibility}\label{concepts-in-reproducibility}}
 
 \begin{itemize}
 \item
-  \textbf{Raw data} sets are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}. A data set may be classified as \textbf{raw} if it fits any of the following criteria:
+  \textbf{Raw data} are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}. A data set may be classified as \textbf{raw} if it fits any of the following criteria:
 
   \begin{itemize}
   \tightlist
@@ -1938,6 +1949,17 @@ TO DO
   \textbf{Descriptive/predictive claim:} This paper estimates the value of Y (estimated or predicted) for population P under dimensions X using method M. Example: ``Drawing on a unique Swiss data set (population P) and exploiting systematic anomalies in countries' portfolio investment positions (method M), I find that around 8\% of the global financial wealth of households is held in tax havens (value of Y)''
 \item
   \textbf{Reproduction package:} Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as `original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage.
+\end{itemize}
+
+\hypertarget{concepts-in-the-acre-exercise-and-platform}{%
+\section{Concepts in the ACRE exercise and platform}\label{concepts-in-the-acre-exercise-and-platform}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Candidate paper} is a paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
+\item
+  \textbf{Declared paper} is the paper that the reproducer analyzes throughout the exercise.
 \end{itemize}
 
 \bibliography{book.bib,packages.bib}

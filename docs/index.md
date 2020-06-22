@@ -1,13 +1,14 @@
 --- 
 title: "Guidelines for Computational Reproducibility in Economics"
 author: "ACRE Team"
-date: "2020-06-16"
+date: "2020-06-22"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: BITSS/ACRE
 heading_anchors: true
+always_allow_html: true
 site: bookdown::bookdown_site
 description: "Materials to support the reproduction of published research in economics."
 output:

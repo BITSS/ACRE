@@ -1,3 +1,8 @@
+---
+always_allow_html: true
+---
+
+
 ```{r setup-assessment}
 library(tidyverse)
 library(knitr)
@@ -37,7 +42,7 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `/folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
-```{r raw-data-information, echo = FALSE}
+```{r raw-data-information, echo = FALSE, eval=FALSE}
 raw_data_info <- data.frame(data_source = c('"Current Population Survey 2018"', '"DHS 2010 - 2013"', '"2017 SAT scores"', "..."),
                             page = c("A1", "4", "4", "..."),
                             data_files = c("cepr_march_2018.dta", "nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv", "Not available", "..."),
@@ -77,7 +82,7 @@ As you progress through the exercise, add to the spreadsheet a one-line descript
 
 The resulting report will have the following structure:  
 
-```{r analysis-data-information, echo = FALSE}
+```{r analysis-data-information, echo = FALSE, eval=FALSE}
 analysis_data_info <- data.frame(analysis_data = c("final_data.csv", "all_waves.csv", "..."),
                                  location = c("/analysis/fig1/", "/final_data/v1_april/", "..."),
                                  description = c("data for figure1", "data for region-level analysis", "..."))
@@ -103,7 +108,7 @@ analysis_data_info %>%
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
 
-```{r code-files-information, echo = FALSE}
+```{r code-files-information, echo = FALSE, eval=FALSE}
 code_files_info <- data.frame(file_name = c("output_table1.do", "data_cleaning02.R", "..."),
                               location = c("/code/analysis/", "/code/cleaning", "..."),
                               inputs = c("analysis_data01.csv", "admin_01raw.csv", "..."),
@@ -243,7 +248,7 @@ In this case, you can still manually combine this partial information with your 
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
-```{r adding-rows, echo = FALSE}
+```{r adding-rows, echo = FALSE, eval=FALSE}
 adding_rows_to_code <- data.frame(file_name = c("...", "missing_file1", "missing_file2", "missing_file3"),
                                   location = c("...", "unknown", "unknown", "unknown"),
                                   inputs = c("...", "cleaned_1.dta, cleaned_2.dta", "cleaned_3.dta, cleaned_4.dta", "merged_3_4.dta, merged_1_2.dta"),
@@ -346,7 +351,7 @@ This is the highest level that most published research papers can attain current
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
-```{r levels-of-computational-reproducibility, echo = FALSE}
+```{r levels-of-computational-reproducibility, echo = FALSE, eval=FALSE}
 lcr_levels <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4: All analysis data & code","L5: Reproducible from analysis", "L6: Some cleaning code","L7: All cleaning code", "L8: Some raw data", "L9: All raw data", "L10: Reproducible from raw data"))
 availability <- data.frame(col1 = c("--",rep("✔", 9)),
                          col2 = c("--",rep("✔", 9)),
@@ -420,7 +425,7 @@ A large portion of published research in economics uses confidential or propriet
 
  - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided.
 
-```{r levels-of-computational-reproducibility-adjusted, echo = FALSE}
+```{r levels-of-computational-reproducibility-adjusted, echo = FALSE, eval=FALSE}
 lcr_levels_adjusted <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4*: All analysis data & code","L5*: Proof of third party CRA", "L6: Some cleaning code","L7: All cleaning code", "L8*: Some instr. for raw data", "L9*: All instr. for raw data", "L10*: Proof of third party CRR"))
 #using same content as the last table
 assign_lcr_adjusted <- cbind(lcr_levels_adjusted, availability)

@@ -6,8 +6,8 @@ The extension of new robustness checks will depend on the current level of repro
 
 It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. 
 
-Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their abscense) as the main or preferred specification. Identify which display item contains this specificaiton and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following: 
-<!-- Emma: add reference to label in assessement stage-->
+Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their absence) as the main or preferred specification. Identify which display item contains this specification and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following: 
+<!-- Emma: add reference to label in assessment stage-->
 
         table1.tex (contains preferred specification of a given claim)
             |___[code] analysis.R
@@ -21,7 +21,7 @@ Going back to our diagram that represents the multiple parts of a paper (\@ref(f
                                             |___[code] clean_raw_3.py
                                             |___[code] clean_raw_4.py
                                             
-This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) refering to files in a specific reproduction package. 
+This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) referring to files in a specific reproduction package. 
 
 ## Mapping the universe of robustness checks
 
@@ -53,7 +53,7 @@ For each analytical choice recorded, add the specific choice that the paper used
 |   3    | code_05.R  | 143         | controls            | age, income, education         | age, income, education, region| original            |
 | ...    | ...        | ...         | ...                 | ...                            | ...                           | ...                 |
 
-The advantage of this type of contribution is that you are not requiered to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications. 
+The advantage of this type of contribution is that you are not required to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications. 
 
 ## Proposing a specific robustness check
 
@@ -63,16 +63,16 @@ When performing a specific robustness test you will ask to follow these steps:
 
 2. Propose a specific variation to this analytical choice. 
 
-3. Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income hispanics from the sample?). 
+3. Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income Hispanics from the sample?). 
 
-4. Discuss how this variation could affect the validity of the results (e.g. likely effects on ommited variable bias, measurement error, change in the Local Averge Treatment Effects underlying population) 
+4. Discuss how this variation could affect the validity of the results (e.g. likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects underlying population) 
 
-5. Confirm that test is not redundant with other tests in the paper/robustness excercise. 
+5. Confirm that test is not redundant with other tests in the paper/robustness exercise. 
 
 6. Report the results from the robustness check (new estimate, standard error, and units)
 
 
-The advantage of this approach is that allows for an in deph inspection of a specific section of the paper. The main limitation is that justifying sensbility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper. 
+The advantage of this approach is that allows for an in depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper. 
 
 
 <!--
@@ -82,7 +82,7 @@ Test the robustness of results to alternative (sensible) specifications
 
   - Specification curves: DESCRIBE. 
   - Jackknife the preferred estimate: DESCRIBE.  
-  - Use ML to select among covariates: DESCRIBE.    
+  - Use ML to select among excoriates: DESCRIBE.    
 -->
  
 
