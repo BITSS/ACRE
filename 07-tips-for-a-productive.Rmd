@@ -81,14 +81,14 @@ Consider the following *before* you contact the original author:
 
 >**Subject:** Reproduction materials for `[“Title of the paper”]`
 
->Dear Dr. `[Lastname of Corresponding Author]`,
+>Dear `[Title]` `[Lastname of Corresponding Author]`,
 >
-> I am contacting you about reproduction materials for your paper titled `[Title]` which was published in `[Journal]` in `[year]` (vol `[volume]`, no. `[no.]`), `[link]`.
-I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m working to reproduce this paper as part of a class exercise.  `[Add context for why you want to reproduce this particular paper using neutral language (e.g., "This is a seminal paper in my field"), avoiding any statements that would put the respondent on the defensive]`.  
+> I am contacting you regarding reproduction materials for your paper titled `[Title]` which was published in `[Journal]` in `[year]` (vol `[volume]`, no. `[no.]`), `[link]`.
+I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m working to reproduce this paper as part of a class exercise. `[Add context for why you want to reproduce this particular paper using neutral language (e.g., "This is a seminal paper in my field"), avoiding any statements that would put the respondent on the defensive]`.  
 >
-> To be able to reproduce the paper in full, I hope that you can share the following items: [`list items missing from reproduction package, preferably bulleted if more than one (raw/analytic data, code, protocols for conducting the experiment, etc.)`]. I have already searched `[locations where you searched for items, with links provided]`, however I was not able to locate the items there. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+> To help me reproduce the paper in full, I hope that you can share the following items: [`list items missing from reproduction package, preferably bulleted if more than one (e.g., raw/analytic data, code, protocols for conducting the experiment, etc.)`]. I have already searched `[locations where you searched for items, with links provided]`, but I was unable to locate the items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 >
->Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) [platform](https://www.bitss.org/ecosystem/acre/), an online catalog of reproduction projects in economics. ACRE is hosted by the [Berkeley Initiative for Transparency in the Social Sciences (BITSS)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you and whether you are interested in providing a response.
+>Note that I will record the outcome of my reproduction on the Accelerating Computational Reproducibility in Economics (ACRE) [platform](https://www.bitss.org/ecosystem/acre/), an online catalog of reproduction projects in economics. ACRE is hosted by the [Berkeley Initiative for Transparency in the Social Sciences (BITSS)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you, and whether you are interested in providing a response.
 >
 >Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
 >
