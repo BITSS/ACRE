@@ -2,6 +2,7 @@
 library(tidyverse)
 library(knitr)
 library(kableExtra)
+temp_eval <- FALSE
 ```
 # Checking for Robustness {#robust}
 
@@ -51,7 +52,7 @@ Once finished, transcribe all the information on analytical choices into a data 
 
 For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
 
-```{r robust-checks, echo = FALSE, eval=TRUE}
+```{r robust-checks, echo = FALSE, eval=temp_eval}
 robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
                             file_name = c("code_01.do", "code_01.do", "code_05.R", "..."),
                             line_number = c("73", "122", "143", "..."),

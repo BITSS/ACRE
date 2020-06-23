@@ -1,18 +1,18 @@
 # Guidance for a Constructive Exchange Between Reproducers and Original Authors
 
-The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese ([2019](https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf)) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): *treat others and their work, as you would like others to treat you and your work!*
+The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese ([2019](https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf)) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the **golden rule of reproductions** (and replications): *treat others and their work, as you would like others to treat you and your work!*
 
 
-   **1. Carefully and transparently plan your study.**  
+**1. Carefully and transparently plan your study.**  
    
    a. Clearly state that you are conducting a reproduction of the original work.   
-   b. Explain why you have chosen this study. Try to proactively address potential concerns for selection bias.  
+   b. Explain why you have chosen this study. 
    c. Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.  
 
 
-   **2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.**  
+**2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.**  
    
-   a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see [Broockman, Kalla and Aronow, 2015](https://osf.io/qy2se/)).  
+   a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see [Broockman, Kalla and Aronow, 2015](https://osf.io/qy2se/)). [FH: last sentence seems broken] 
    b. Talk about *the study, not the author*, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.  
    c. Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.   
    d. For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.   
@@ -20,48 +20,47 @@ The purpose of this chapter is to facilitate constructive and respectful communi
    
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
    
-While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.  
+While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials (acre@berkeley.edu).  
 
 
 ## For Reproducers Contacting the Authors of the Original Study
 
 Consider the following *before* you contact the original author:  
 
-   1. Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start. A few things to consider:  
-      - A *Readme* file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have such documentation.  
-      - Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
+1. Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start. A few things to consider:  
+   - A *Readme* file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have such documentation.  
+   - Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
 
-   2. If reproduction materials are not readily available in the location where the article is published (e.g., the journal website), check the authors’ websites, Dataverse profiles, the [ICPSR Publications Related Archive](https://www.icpsr.umich.edu/icpsrweb/), and other relevant archives and/or data repositories.
-   
-   3. If steps 1 and 2 don’t work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:  
-      - Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));   
-      - Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;  
-      - Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;  
-      - Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.  
-      - Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?    
-      - A deadline to respond (we suggest at least two weeks).  
+2. If a reproduction package is not readily available in the location where the article is published (e.g., the journal website), check the authors’ websites, Dataverse profiles, the [ICPSR Publications Related Archive](https://www.icpsr.umich.edu/icpsrweb/), and other relevant archives and/or data repositories.
 
-   4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
-   
-   5. Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
+3. If steps 1 and 2 don’t work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:  
+   - Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));   
+   - Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database; 
+   - Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;  
+   - Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.  
+   - Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?    
+   - A deadline to respond (we suggest at least two weeks).  
+
+4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email. 
+
+5. Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
    - A *complete* reproduction package was provided
-   - An *incomplete* reproduction package was provided. You can also select one of the following reasons:
-            - Data is of sensitive, confidential, or proprietary character and cannot be shared;
-            - Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
+   - An *incomplete* reproduction package was provided. You can also select one of the following reasons:  
+      - Data is of sensitive, confidential, or proprietary character and cannot be shared;
+      - Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
    - Author *refused* to share the reproduction package
    - Author *did not respond* (including after a reminder was sent) within 4 weeks after the initial request.
- 
+
 ### Contacting the original author(s) when there is no reproduction package
 
-If you haven't been able to locate an entry of a reproduction 
 
 *Template email:**  
 
->**Subject:** Reproduction materials for `[“Title of the paper”]`
+>**Subject:** Reproduction package for `[“Title of the paper”]`
 
 >Dear Dr. `[Lastname of Corresponding Author]`,
 >
-> I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Journal]` in `[year]` (vol `[volume]`, no. `[no.]`), `[link]`. A reproduction package may contain (raw and/or analytic data), code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
+> I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Journal]` in `[year]` (vol `[volume]`, no. `[no.]`), `[link]`. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
 >
 >I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context for why you want to reproduce this particular paper using neutral language (e.g., "This is a seminal paper in my field"), avoiding any statements that would put the respondent on the defensive]`. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your paper.
 >
@@ -100,7 +99,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 ### Asking for additional guidance when some materials have been shared  
 
-*Note:* Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.  
+*Note:* Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn’t discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the previous scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.  
 
 **Template email:**  
 
@@ -134,9 +133,9 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
                               └───[data] admin_01raw.csv* 
->I have marked with an asterix (*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that and that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+>I have marked with an asterix (*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 >
->I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproducibility package for your paper on the ACRE platform. **Doing this will ensure that you will not be asked twice for the same missing file.**
+>I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. **Doing this will ensure that you will not be asked twice for the same missing file.**
 
 
 
@@ -167,7 +166,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 **Template email:**  
 
->**Subject:** Re: Reproduction materials for `[“Title of the paper”]    
+>**Subject:** Re: Reproduction materials for `[“Title of the paper”]`    
 
 >Dear Dr. `[Last Name of Corresponding Author]`,
 >
@@ -196,24 +195,26 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: *reproduce the work of others as you would like for others to reproduce yours*, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
 
 
-**Template email:**
->*Subject:* Reproducibility Assessment of <Paper>
+**Template email:**  
+
+>**Subject:** Reproducibility Assessment of `[“Title of the paper”]`
 
 > Dear Dr. `[Last Name of Corresponding Author]`,
 >
 >Thank you for your support throughout my project as I worked to verify and advance the reproducibility of `[Paper]`. I’m writing now to share the results of my project with you and invite your feedback.
 >
->The results of each step of my exercise, include i) Assessment, ii) Improvements, iii) Robustness Checks, (and iv) Extensions, if applicable).
->`[Include the following items in the body of your email:
-> - Briefly describe which parts of the paper you tried to reproduce (e.g. a specific estimate, a table, etc.). 
-> - Within the scope of your reproduction, describe exactly which items you managed to reproduce.
-> - Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and *always talk about the work -- not the author!*
-> - Use sensitive language when presenting discrepancies, e.g. “Unfortunately, I found X, which differs from the Y result in the original paper...”. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism! 
-> - Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g. file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn’t make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.]`
+>The results of each step of my exercise, include i) Assessment, ii) Improvements, iii) Robustness Checks, (and iv) Extensions, if applicable).  
+>`[Include the following items in the body of your email:   
 >
->I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the ACRE platform.
+> - Briefly describe which parts of the paper you tried to reproduce (e.g. a specific estimate, a table, etc.).   
+> - Within the scope of your reproduction, describe exactly which items you managed to reproduce.  
+> - Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and *always talk about the work -- not the author!*  
+> - Use sensitive language when presenting discrepancies, e.g. “Unfortunately, I found X, which differs from the Y result in the original paper...”. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!   
+> - Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g. file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn’t make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.]`  
 >
->Best regards,
+>I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the ACRE platform.  
+>
+>Best regards,  
 >`[Reproducer]`
 
 
@@ -262,9 +263,10 @@ Here are a some steps you can take if you believe you have experienced bullying,
 ## For Original Authors Responding to Requests from Reproducers  
 [Aleks: would it be possible for you to work on this next week (3/30)?]
 
-### Responding to a repeated request
+### Responding to a repeated request  
 
-[TO DO] 
+[TO DO]   
+
 ### Acknowledging that some information is missing
 
 [TO DO]  
