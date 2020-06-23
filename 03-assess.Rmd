@@ -114,7 +114,7 @@ code_files_info <- data.frame(file_name = c("output_table1.do", "data_cleaning02
                               location = c("/code/analysis/", "/code/cleaning", "..."),
                               inputs = c("analysis_data01.csv", "admin_01raw.csv", "..."),
                               outputs = c("output1_part1.txt", "analysis_data02.csv","..."),
-                              description = c("produces first part of table 1 (unformatted", "removes outliers and missing vals from raw admin data", "..."),
+                              description = c("produces first part of table 1 (unformatted)", "removes outliers and missing vals from raw admin data", "..."),
                               primary_type = c("analysis", "cleaning", "..."))
                          
 code_files_info %>%

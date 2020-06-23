@@ -1,3 +1,8 @@
+```{r setup-robust}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
 # Checking for Robustness {#robust}
 
 Once you have assessed and improved the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term **robustness checks** to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of **reasonable specifications** ([Simonsohn et. al., 2018](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
@@ -45,6 +50,21 @@ When examining a specific code file, or a specific section within a file, you wi
 Once finished, transcribe all the information on analytical choices into a data set (the ACRE platform will allow for easier recording once deployed). For the `source` field type “original” whenever the analytical choice is identified for the first time, and  `file_name-line number` every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the `source` field should be `original` and `code_01.do-L103` respectively).
 
 For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
+
+```{r robust-checks, echo = FALSE, eval=TRUE}
+robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
+                            file_name = c("code_01.do", "code_01.do", "code_05.R", "..."),
+                            line_number = c("73", "122", "143", "..."),
+                            choice_type = c("data sub-setting", "variable definition", "controls", "..."),
+                            choice_value = c("males", "income = wages + capital gains", "age, income, education", "..."),
+                            choice_range = c("males, female", "wages, capital gains, gifts", "age, income, education, region", "..."),
+                            source = c("original", '"code_01.do-L103"', "original", "..."))
+                         
+robust_checks %>%
+    knitr::kable() %>%
+    kable_styling(full_width = TRUE) %>%
+    scroll_box(width = "100%", box_css = "border: 0px;")
+```
 
 |entry_id| file_name  | line_number | choice_type         | choice_value                   | choice_range                  | Source              |
 |--------|------------|-------------|---------------------|--------------------------------|-------------------------------|---------------------|
