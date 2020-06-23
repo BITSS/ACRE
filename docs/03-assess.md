@@ -9,18 +9,18 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
 ```
 
 ```
-## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
-## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0
+## v ggplot2 3.3.1     v purrr   0.3.4
+## v tibble  3.0.1     v dplyr   1.0.0
+## v tidyr   1.1.0     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
 ```
 
 ```
-## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ```
@@ -39,6 +39,10 @@ library(kableExtra)
 ## The following object is masked from 'package:dplyr':
 ## 
 ##     group_rows
+```
+
+```r
+temp_eval <- TRUE
 ```
 
 # Assessment
@@ -74,7 +78,24 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `/folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
+\begin{table}
 
+\caption{(\#tab:raw-data-information)Raw data information}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\hline
+data\_source & page & data\_files & known\_missing & directory\\
+\hline
+"Current Population Survey 2018" & A1 & cepr\_march\_2018.dta &  & /data/\\
+\hline
+"DHS 2010 - 2013" & 4 & nicaraguaDHS\_2010.csv; boliviaDHS2010.csv; nicaraguaDHS\_2011.csv; nicaraguaDHS\_2012.csv; boliviaDHS\_2012.csv; nicaraguaDHS\_2013.csv; boliviaDHS\_2013.csv & boliviaDHS\_2011.csv & /rawdata/DHS/\\
+\hline
+"2017 SAT scores" & 4 & Not available &  & /data/to\_clean/\\
+\hline
+... & ... & ... & ... & ...\\
+\hline
+\end{tabu}
+\end{table}
 
 
           Raw data information:
@@ -104,7 +125,22 @@ As you progress through the exercise, add to the spreadsheet a one-line descript
 
 The resulting report will have the following structure:  
 
+\begin{table}
 
+\caption{(\#tab:analysis-data-information)Analysis data information}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\hline
+analysis\_data & location & description\\
+\hline
+final\_data.csv & /analysis/fig1/ & data for figure1\\
+\hline
+all\_waves.csv & /final\_data/v1\_april/ & data for region-level analysis\\
+\hline
+... & ... & ...\\
+\hline
+\end{tabu}
+\end{table}
 
           Analysis data information:
           |----------------|-----------------------|--------------------------------|
@@ -122,7 +158,22 @@ The resulting report will have the following structure:
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
 
+<div style="border: 0px;overflow-x: scroll; width:100%; ">\begin{table}
 
+\caption{(\#tab:code-files-information)Code files information}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\hline
+file\_name & location & inputs & outputs & description & primary\_type\\
+\hline
+output\_table1.do & /code/analysis/ & analysis\_data01.csv & output1\_part1.txt & produces first part of table 1 (unformatted & analysis\\
+\hline
+data\_cleaning02.R & /code/cleaning & admin\_01raw.csv & analysis\_data02.csv & removes outliers and missing vals from raw admin data & cleaning\\
+\hline
+... & ... & ... & ... & ... & ...\\
+\hline
+\end{tabu}
+\end{table}</div>
 
           Code files information:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -250,7 +301,24 @@ In this case, you can still manually combine this partial information with your 
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+\begin{table}
 
+\caption{(\#tab:adding-rows)Adding rows to code spreadsheet}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\hline
+file\_name & location & inputs & outputs & description & primary\_type\\
+\hline
+... & ... & ... & ... & ... & ...\\
+\hline
+missing\_file1 & unknown & cleaned\_1.dta, cleaned\_2.dta & merged\_1\_2.dta & missing code & unknown\\
+\hline
+missing\_file2 & unknown & cleaned\_3.dta, cleaned\_4.dta & merged\_3\_4.dta & missing code & unknown\\
+\hline
+missing\_file3 & unknown & merged\_3\_4.dta, merged\_1\_2.dta & analysis\_data.dta & missing code & unknown\\
+\hline
+\end{tabu}
+\end{table}
 
         Adding rows to code spreadsheet:
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -342,7 +410,41 @@ This is the highest level that most published research papers can attain current
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
+\begin{table}
 
+\caption{(\#tab:levels-of-computational-reproducibility)Levels of Computational Reproducibility \
+ (P denotes "partial", C denotes "complete")}
+\centering
+\begin{tabular}[t]{l|l|l|l|l|l|l|l|l|l|l}
+\hline
+\multicolumn{1}{c|}{ } & \multicolumn{10}{c}{Availability of materials, and reproducibility} \\
+\cline{2-11}
+\multicolumn{1}{c|}{ } & \multicolumn{2}{c|}{Analysis Code} & \multicolumn{2}{c|}{Analysis Data} & \multicolumn{1}{c|}{CRA} & \multicolumn{2}{c|}{Cleaning Code} & \multicolumn{2}{c|}{Raw Data} & \multicolumn{1}{c}{CRR} \\
+\cline{2-3} \cline{4-5} \cline{6-6} \cline{7-8} \cline{9-10} \cline{11-11}
+  & P & C & P & C &   & P & C & P & C &  \\
+\hline
+L1: No materials & -- & -- & -- & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L2: Only code & ✔ & ✔ & -- & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L3: Partial analysis data \& code & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L4: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & --\\
+\hline
+L5: Reproducible from analysis & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
+\hline
+L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
+\hline
+L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
+\hline
+L8: Some raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
+\hline
+L9: All raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
+\hline
+L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
+\hline
+\end{tabular}
+\end{table}
 
 
                             Levels of Computational Reproducibility
@@ -394,7 +496,41 @@ A large portion of published research in economics uses confidential or propriet
 
  - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided.
 
+\begin{table}
 
+\caption{(\#tab:levels-of-computational-reproducibility-adjusted)Levels of Computational Reproducibility with Proprietary/Confidential Data \
+ (P denotes "partial", C denotes "complete")}
+\centering
+\begin{tabular}[t]{l|l|l|l|l|l|l|l|l|l|l}
+\hline
+\multicolumn{1}{c|}{ } & \multicolumn{10}{c}{Availability of materials, and reproducibility} \\
+\cline{2-11}
+\multicolumn{1}{c|}{ } & \multicolumn{2}{c|}{Analysis Code} & \multicolumn{2}{c|}{Instr. Analysis Data} & \multicolumn{1}{c|}{CRA} & \multicolumn{2}{c|}{Cleaning Code} & \multicolumn{2}{c|}{Instr. Raw Data} & \multicolumn{1}{c}{CRR} \\
+\cline{2-3} \cline{4-5} \cline{6-6} \cline{7-8} \cline{9-10} \cline{11-11}
+  & P & C & P & C &   & P & C & P & C &  \\
+\hline
+L1: No materials & -- & -- & -- & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L2: Only code & ✔ & ✔ & -- & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L3: Partial analysis data \& code & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & -- & --\\
+\hline
+L4*: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & --\\
+\hline
+L5*: Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
+\hline
+L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
+\hline
+L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
+\hline
+L8*: Some instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
+\hline
+L9*: All instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
+\hline
+L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
+\hline
+\end{tabular}
+\end{table}
                  Levels of Computational Reproducibility with Proprietary/Confidential Data
                                (P denotes "partial", C denotes "complete")    
       
