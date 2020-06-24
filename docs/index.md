@@ -1,7 +1,8 @@
 --- 
-title: "Guidelines for Computational Reproducibility in Economics"
+title: "Advancing Computational Reproducibility in Economics"
+subtitle: "Guidelines for Verification of Computational Reproducibility"
 author: "ACRE Team"
-date: "2020-06-23"
+date: "2020-06-24"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -17,12 +18,32 @@ output:
     toc: true
 
 ---
- 
- 
 #  {-}
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+<style type = "text/css">
+    h1{}
+    h1{
+        font-family: 'Karla';
+        text-align: center;
+    }
+    h2{
+        font-family: 'Karla';
+        text-align: center;
+    }
+    p{
+        font-family: 'Karla';
+        text-align: center;
+    }
+</style>
+</style>
 
-                    (1)       (2)         (3)        (4)        (5)
-                  scope --> assess --> improve --> robust --> extend
+![BITSS logo](BITSS_logo_horizontal.png)
+
+
+
+                    (1)       (2)         (3)        (4)        
+                  scope --> assess --> improve --> robust 
                    ▲         |  |                   ▲
                    |         |  |                   |
                    |_________|  |___________________|
