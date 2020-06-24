@@ -53,7 +53,6 @@ Consider the following *before* you contact the original author:
 
 ### Contacting the original author(s) when there is no reproduction package
 
-If you haven't been able to locate an entry of a reproduction 
 
 *Template email:**  
 
@@ -262,7 +261,7 @@ Here are a some steps you can take if you believe you have experienced bullying,
 
   
 ## For Original Authors Responding to Requests from Reproducers  
-[Aleks: would it be possible for you to work on this next week (3/30)?]
+[under development]
 
 ### Responding to a repeated request  
 
