@@ -1,5 +1,6 @@
 --- 
-title: "Guidelines for Computational Reproducibility in Economics"
+title: "Advancing Computational Reproducibility in Economics"
+subtitle: "Guidelines for Verification of Computational Reproducibility"
 author: "ACRE Team"
 date: "`r Sys.Date()`"
 documentclass: book
@@ -17,9 +18,22 @@ output:
     toc: true
 
 ---
- 
- 
 #  {-}
+
+<style type = "text/css">
+    h1, h2 {
+        font-family: karla;
+        text-align: center;
+    }
+    p{
+        font-family: karla;
+        text-align: center;
+    }
+</style>
+
+![BITSS logo](BITSS_logo_horizontal.png)
+
+
 
                     (1)       (2)         (3)        (4)        
                   scope --> assess --> improve --> robust 
