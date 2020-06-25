@@ -40,8 +40,10 @@ output:
 ```
 
 
-
-![](stages.svg)
+```{r out.width = '100%', echo=FALSE}
+# url
+knitr::include_graphics("stages.png") 
+```
 
 
 ```{r out.width = '60%', echo=FALSE}

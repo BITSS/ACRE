@@ -19,32 +19,13 @@ output:
 
 ---
 #  {-}
-<style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
-
-<style type = "text/css">
-    h1{}
-    h1{
-        font-family: 'Karla';
-        text-align: center;
-    }
-    h2{
-        font-family: 'Karla';
-        text-align: center;
-    }
-    p{
-        font-family: 'Karla';
-        text-align: center;
-    }
-</style>
-</style>
 
 
 
-![](stages.svg)
+![](stages.png){width=100%}
 
 
-<img src="BITSS_logo_horizontal.png" width="60%" />
+![](BITSS_logo_horizontal.png){width=60%}
 
 
 
@@ -109,7 +90,7 @@ output:
       </tr>
       <tr>
          <td>[Record results in Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv)</td>
-         <td colspan=3>["         Record results in Survey 2"](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</td>
+         <td colspan=3>[Record results in Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</td>
          <td>[Record results in Survey 3](ADD LINK)</td>
       </tr>
    </tbody>
