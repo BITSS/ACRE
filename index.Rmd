@@ -19,17 +19,25 @@ output:
 
 ---
 #  {-}
+```{css, echo = FALSE}
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
 
 <style type = "text/css">
-    h1, h2 {
-        font-family: karla;
+    h1{}
+    h1{
+        font-family: 'Karla';
+        text-align: center;
+    }
+    h2{
+        font-family: 'Karla';
         text-align: center;
     }
     p{
-        font-family: karla;
+        font-family: 'Karla';
         text-align: center;
     }
 </style>
+```
 
 ![BITSS logo](BITSS_logo_horizontal.png)
 
