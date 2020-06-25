@@ -29,7 +29,7 @@
 }
 \usepackage{hyperref}
 \hypersetup{
-            pdftitle={Guidelines for Computational Reproducibility in Economics},
+            pdftitle={Advancing Computational Reproducibility in Economics},
             pdfauthor={ACRE Team},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -106,6 +106,12 @@
 \makeatother
 
 \usepackage{booktabs}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -123,7 +129,9 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Guidelines for Computational Reproducibility in Economics}
+\title{Advancing Computational Reproducibility in Economics}
+\providecommand{\subtitle}[1]{}
+\subtitle{Guidelines for Verification of Computational Reproducibility}
 \author{ACRE Team}
 \date{2020-06-24}
 
@@ -137,6 +145,12 @@
 \hypertarget{section}{%
 \chapter*{}\label{section}}
 \addcontentsline{toc}{chapter}{}
+
+\begin{figure}
+\centering
+\includegraphics{BITSS_logo_horizontal.png}
+\caption{BITSS logo}
+\end{figure}
 
 \begin{verbatim}
                 (1)       (2)         (3)        (4)        
@@ -960,7 +974,7 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching packages ---------------------------------- tidyverse 1.3.0 --
+## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
 \end{verbatim}
 
 \begin{verbatim}
@@ -971,7 +985,7 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 \end{verbatim}
 
 \begin{verbatim}
-## -- Conflicts ------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 \end{verbatim}
@@ -1182,7 +1196,7 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching packages ---------------------------------- tidyverse 1.3.0 --
+## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
 \end{verbatim}
 
 \begin{verbatim}
@@ -1193,7 +1207,7 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \end{verbatim}
 
 \begin{verbatim}
-## -- Conflicts ------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 \end{verbatim}
@@ -1225,13 +1239,11 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
 
-Once you have assessed and improved the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term \textbf{robustness checks} to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
+Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by including new robustness checks in addition to those included in the original paper. We use the term \textbf{robustness checks} to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
 
-The extension of new robustness checks will depend on the current level of reproducibility. A claim supported by display items with reproducibility levels of 0 or 1 cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim based on display items at level 5 can check the robustness to the core of the analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definitions and data manipulations.
+The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper \citep[include a brief explanation why: because\ldots{}]{fhoces}. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in \emph{Stage 1: Scoping} because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice. \citep[please verify whether this is what you meant to say in the last 2 sentences]{fhoces}
 
-It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
-
-Going back to our diagram that represents the multiple parts of a paper (\ref{fig:diagram}), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their absence) as the main or preferred specification. Identify which display item contains this specification and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following:
+Going back to our diagram that represents the multiple parts of a paper (\ref{fig:diagram}), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the \emph{Assessment} stage, we can remove the data files for simplicity and obtain the following:
 
 \begin{verbatim}
 table1.tex (contains preferred specification of a given claim)
@@ -1248,56 +1260,29 @@ table1.tex (contains preferred specification of a given claim)
                                         
 \end{verbatim}
 
-This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) referring to files in a specific reproduction package.
+This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: i) mapping the universe of robustness checks and ii) testing reasonable specifications. Both contributions should be recorded in the ACRE platform referring to files in a specific reproduction package.
 
 \hypertarget{mapping-the-universe-of-robustness-checks}{%
 \section{Mapping the universe of robustness checks}\label{mapping-the-universe-of-robustness-checks}}
 
-When examining a specific code file, or a specific section within a file, you will be asked to identify and record all specific analytical choices in that file or section. Possible types of analytical choices include (but are not limited to):
+\textbf{Analytical choices in data cleaning code}
+- Variable definition\\
+- Data sub-setting\\
+- Data reshaping (merge, append, long/gather, wide/spread)\\
+- Others (specify as ``processing - other'')
+\textbf{Analytical choices in analysis code}
+- Regression function (link function)\\
+- Key parameters (tuning, tolerance parameters, etc.)\\
+- Controls\\
+- Adjustment of standard errors\\
+- Choice of weights\\
+- Treatment of missing values\\
+- Imputations
+- Other (specify as ``methods - other'')
 
-\begin{itemize}
-\tightlist
-\item
-  Analytical choices in data cleaning code:
+Once finished, transcribe all of the information on analytical choices into a dataset (the ACRE platform will allow for easier recording once deployed). For the \texttt{source} field type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} every subsequent time when the same analytical choice is applied (for example if an analytic choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103}, respectively).
 
-  \begin{itemize}
-  \tightlist
-  \item
-    Variable definition\\
-  \item
-    Data sub-setting\\
-  \item
-    Data reshaping (merge, append, long/gather, wide/spread)\\
-  \item
-    Others (specify as ``processing - other'')
-  \end{itemize}
-\item
-  Analytical choices in analysis code:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Regression function (link function)\\
-  \item
-    Key parameters (tuning, tolerance parameters, etc.)\\
-  \item
-    Controls\\
-  \item
-    Adjustment of standard errors\\
-  \item
-    Choice of weights\\
-  \item
-    Treatment of missing values\\
-  \item
-    Imputations
-  \item
-    Other (specify as ``methods - other'')
-  \end{itemize}
-\end{itemize}
-
-Once finished, transcribe all the information on analytical choices into a data set (the ACRE platform will allow for easier recording once deployed). For the \texttt{source} field type ``original'' whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103} respectively).
-
-For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
+For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting database should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule
@@ -1381,30 +1366,30 @@ original\strut
 \bottomrule
 \end{longtable}
 
-The advantage of this type of contribution is that you are not required to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.
+The advantage of this type of contribution is that you are not required to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.
 
 \hypertarget{proposing-a-specific-robustness-check}{%
 \section{Proposing a specific robustness check}\label{proposing-a-specific-robustness-check}}
 
-When performing a specific robustness test you will ask to follow these steps:
+When performing a specific robustness test, follow these steps:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (\texttt{entry\_id}). If there is no entry corresponding for the specific lines to test, please create one.
+  Search in the mapping database (previous section) \citep[is this referring to the reproduction tree diagram?]{fhoces} and record the identifier(s) corresponding to the analytical choice to test (\texttt{entry\_id}). If there is no entry corresponding for the specific lines, please create one.
 \item
   Propose a specific variation to this analytical choice.
 \item
-  Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g.~does it make sense to include exclude low income Hispanics from the sample?).
+  Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g.~does it make sense to include exclude low-income Hispanics from the sample?).
 \item
-  Discuss how this variation could affect the validity of the results (e.g.~likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects underlying population)
+  Discuss how this variation could affect the validity of the results (e.g.~likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).
 \item
   Confirm that test is not redundant with other tests in the paper/robustness exercise.
 \item
-  Report the results from the robustness check (new estimate, standard error, and units)
+  Report the results from the robustness check (new estimate, standard error, and units).
 \end{enumerate}
 
-The advantage of this approach is that allows for an in depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper.
+The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper. \citep[what does it mean to have only a general interest in the paper?]{fhoces}
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}
@@ -1936,13 +1921,24 @@ TODO: Add and classify
 \hypertarget{contributions}{%
 \chapter{Contributions}\label{contributions}}
 
-TO DO
+\hypertarget{contributing-feedback-on-these-guidelines}{%
+\section{Contributing feedback on these guidelines}\label{contributing-feedback-on-these-guidelines}}
 
-\hypertarget{ask-for-feedback-on-guidelines}{%
-\section{Ask for feedback on guidelines}\label{ask-for-feedback-on-guidelines}}
+The ACRE project welcomes feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the ``edit'' icon at the top of this page (this will prompt you to sign into or create a GitHub account, after which you'll be able to ``commit'' changes directly to the text. ``Committed'' changes will be reviewed by the ACRE project team before ``pushing'' them to these guidelines or not. For more general feedback, please contact \href{mailto:ACRE@berkeley.edu}{\nolinkurl{ACRE@berkeley.edu}}.
 
-\hypertarget{list-of-contributors}{%
-\section{List of Contributors}\label{list-of-contributors}}
+Major contributions to these guidelines will be acknowledged below. The ACRE project employs the Contributor Roles Taxonomy (\href{https://casrai.org/credit/}{CRediT}). Major contributions are defined as any pushed revisions to the guideline language or source code beyond corrections of spelling and grammar.
+
+\hypertarget{list-of-contributors-guidelines-content-and-source-code}{%
+\section{List of Contributors: Guidelines content and source code}\label{list-of-contributors-guidelines-content-and-source-code}}
+
+Aleksandar Bogdanoski -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+Carson Christiano -- Funding acquisition, Project administration, Writing (reviewing and editing)
+Joel Ferguson -- Writing (original draft), Writing (reviewing and editing)
+Fernando Hoces de la Guardia -- Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
+Katherine Hoeberling -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+Edward Miguel -- Conceptualization, Funding acquisition, Supervision
+Emma Ng -- Visualization, Writing (original draft), Writing (reviewing and editing)
+Lars Vilhuber -- Conceptualization, Funding acquisition, Supervision
 
 \hypertarget{definitions}{%
 \chapter{Definitions}\label{definitions}}

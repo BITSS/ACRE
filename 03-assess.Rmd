@@ -7,7 +7,7 @@ always_allow_html: true
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-temp_eval <- FALSE
+temp_eval <- TRUE
 ```
 
 # Assessment

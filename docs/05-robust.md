@@ -4,7 +4,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Attaching packages ────────────────────────────────── tidyverse 1.3.0 ──
+## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
 ```
 
 ```
@@ -15,7 +15,7 @@ library(tidyverse)
 ```
 
 ```
-## ── Conflicts ───────────────────────────────────── tidyverse_conflicts() ──
+## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 ```
@@ -41,13 +41,11 @@ temp_eval <- FALSE
 ```
 # Checking for Robustness {#robust}
 
-Once you have assessed and improved the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term **robustness checks** to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of **reasonable specifications** ([Simonsohn et. al., 2018](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
+Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by including new robustness checks in addition to those included in the original paper. We use the term **robustness checks** to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of **reasonable specifications** ([Simonsohn et. al., 2018](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
 
-The extension of new robustness checks will depend on the current level of reproducibility. A claim supported by display items with reproducibility levels of 0 or 1 cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim based on display items at level 5 can check the robustness to the core of the analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definitions and data manipulations. 
+The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper [@fhoces: include a brief explanation why: because...]. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in *Stage 1: Scoping* because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. [@fhoces: please verify whether this is what you meant to say in the last 2 sentences]
 
-It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. 
-
-Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their absence) as the main or preferred specification. Identify which display item contains this specification and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following: 
+Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the *Assessment* stage, we can remove the data files for simplicity and obtain the following: 
 <!-- Emma: add reference to label in assessment stage-->
 
         table1.tex (contains preferred specification of a given claim)
@@ -62,18 +60,16 @@ Going back to our diagram that represents the multiple parts of a paper (\@ref(f
                                             |___[code] clean_raw_3.py
                                             |___[code] clean_raw_4.py
                                             
-This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) referring to files in a specific reproduction package. 
+This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: i) mapping the universe of robustness checks and ii) testing reasonable specifications. Both contributions should be recorded in the ACRE platform referring to files in a specific reproduction package. 
 
 ## Mapping the universe of robustness checks
 
-When examining a specific code file, or a specific section within a file, you will be asked to identify and record all specific analytical choices in that file or section. Possible types of analytical choices include (but are not limited to):  
-
-- Analytical choices in data cleaning code:
+**Analytical choices in data cleaning code**
   - Variable definition  
   - Data sub-setting  
   - Data reshaping (merge, append, long/gather, wide/spread)  
   - Others (specify as "processing - other")
-- Analytical choices in analysis code:   
+**Analytical choices in analysis code** 
    - Regression function (link function)  
    - Key parameters (tuning, tolerance parameters, etc.)  
    - Controls  
@@ -83,9 +79,9 @@ When examining a specific code file, or a specific section within a file, you wi
    - Imputations
    - Other (specify as "methods - other")    
 
-Once finished, transcribe all the information on analytical choices into a data set (the ACRE platform will allow for easier recording once deployed). For the `source` field type “original” whenever the analytical choice is identified for the first time, and  `file_name-line number` every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the `source` field should be `original` and `code_01.do-L103` respectively).
+Once finished, transcribe all of the information on analytical choices into a dataset (the ACRE platform will allow for easier recording once deployed). For the `source` field type *“original”* whenever the analytical choice is identified for the first time, and `file_name-line number` every subsequent time when the same analytical choice is applied (for example if an analytic choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the `source` field should be `original` and `code_01.do-L103`, respectively).
 
-For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
+For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting database should have the [following structure](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
 
 
 
@@ -96,27 +92,26 @@ For each analytical choice recorded, add the specific choice that the paper used
 |   3    | code_05.R  | 143         | controls            | age, income, education         | age, income, education, region| original            |
 | ...    | ...        | ...         | ...                 | ...                            | ...                           | ...                 |
 
-The advantage of this type of contribution is that you are not required to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications. 
+The advantage of this type of contribution is that you are not required to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications. 
 
 ## Proposing a specific robustness check
 
-When performing a specific robustness test you will ask to follow these steps: 
+When performing a specific robustness test, follow these steps: 
 
-1. Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (`entry_id`). If there is no entry corresponding for the specific lines to test, please create one. 
+1. Search in the mapping database (previous section) [@fhoces, is this referring to the reproduction tree diagram?] and record the identifier(s) corresponding to the analytical choice to test (`entry_id`). If there is no entry corresponding for the specific lines, please create one. 
 
 2. Propose a specific variation to this analytical choice. 
 
-3. Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income Hispanics from the sample?). 
+3. Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g. does it make sense to include exclude low-income Hispanics from the sample?). 
 
-4. Discuss how this variation could affect the validity of the results (e.g. likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects underlying population) 
+4. Discuss how this variation could affect the validity of the results (e.g. likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population). 
 
 5. Confirm that test is not redundant with other tests in the paper/robustness exercise. 
 
-6. Report the results from the robustness check (new estimate, standard error, and units)
+6. Report the results from the robustness check (new estimate, standard error, and units).
 
 
-The advantage of this approach is that allows for an in depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper. 
-
+The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper. [@fhoces: what does it mean to have only a general interest in the paper?]
 
 <!--
 ## Test the robustness of results  

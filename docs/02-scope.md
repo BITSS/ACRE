@@ -94,7 +94,7 @@ These are the elements you will need to conduct the scoping stage. **You now hav
 
 -----
 
-## Identify your relevant timeline. {-} 
+## Identify your relevant timeline.  
 
 Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that may take a month to complete, or a semester-long project (for example as an undergraduate thesis).
 
@@ -155,17 +155,7 @@ Emma: please write this table using R and KableExtra
     <td class="tg-c3ow" colspan="2">25%</td>
     <td class="tg-c3ow" colspan="2">25%</td>
   </tr>
-  <tr>
-    <td class="tg-0lax">Extension</td>
-    <td class="tg-baqh">0%</td>
-    <td class="tg-baqh">0%</td>
-    <td class="tg-baqh" colspan="2">5%</td>
-    <td class="tg-baqh" colspan="2">5%</td>
-  </tr>
 </table>
-
-[Paper on PBR](https://osf.io/4jvq2/download).  [Repro package](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FPNITS)
-
 
 
  

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Checking for Robustness | Guidelines for Computational Reproducibility in Economics</title>
+  <title>Chapter 4 Checking for Robustness | Advancing Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Checking for Robustness | Guidelines for Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 4 Checking for Robustness | Advancing Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Checking for Robustness | Guidelines for Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 4 Checking for Robustness | Advancing Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -216,8 +217,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2" data-path="additional-resources.html"><a href="additional-resources.html#links"><i class="fa fa-check"></i><b>7.2</b> Links</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
-<li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#ask-for-feedback-on-guidelines"><i class="fa fa-check"></i><b>8.1</b> Ask for feedback on guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors"><i class="fa fa-check"></i><b>8.2</b> List of Contributors</a></li>
+<li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
 <li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
@@ -236,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guidelines for Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Advancing Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -246,10 +247,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="robust" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Checking for Robustness</h1>
-<p>Once you have assessed and improved the current computational reproducibility of a paper, it is possible to extend the robustness checks presented in the original paper to a much larger number. We use the term <strong>robustness checks</strong> to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of <strong>reasonable specifications</strong> (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">Simonsohn et. al., 2018</a>), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.</p>
-<p>The extension of new robustness checks will depend on the current level of reproducibility. A claim supported by display items with reproducibility levels of 0 or 1 cannot have any robustness checks in addition to what is already in the paper. A claim with levels 2-4 might be able to perform some robustness checks regarding the analysis, but not the specific estimates declared in Scoping (it is not computationally reproducible from analysis data or CRA). A claim based on display items at level 5 can check the robustness to the core of the analysis as describe in the paper. Finally a claim associated with levels 6-10 will allow for robustness checks to variable definitions and data manipulations.</p>
-<p>It is important to highlight that the set of feasible robustness checks grows exponentially, as its defined by all the possible combinations of available checks. For example, when checking the robustness to a new variable definition (level 6 and above) reproducers will also have the alternative to test how the main estimate changes under an alternative variable definition <em>and</em> an alternative core analytical choice.</p>
-<p>Going back to our diagram that represents the multiple parts of a paper (<a href="intro.html#fig:diagram">0.1</a>), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself in their absence) as the main or preferred specification. Identify which display item contains this specification and go back to your reproduction tree for this display item, this will give you a list of all the code files where you can potentially modify a computational choice. Using the example tree discussed in the Assessment stage, we can remove the data files for simplicity and obtain the following:
+<p>Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by including new robustness checks in addition to those included in the original paper. We use the term <strong>robustness checks</strong> to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of <strong>reasonable specifications</strong> (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">Simonsohn et. al., 2018</a>), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.</p>
+<p>The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span> include a brief explanation why: because…)</span>. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in <em>Stage 1: Scoping</em> because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition <em>and</em> an alternative core analytical choice. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span> please verify whether this is what you meant to say in the last 2 sentences)</span></p>
+<p>Going back to our diagram that represents the multiple parts of a paper (<a href="intro.html#fig:diagram">0.1</a>), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the <em>Assessment</em> stage, we can remove the data files for simplicity and obtain the following:
 <!-- Emma: add reference to label in assessment stage--></p>
 <pre><code> table1.tex (contains preferred specification of a given claim)
         |___[code] analysis.R
@@ -263,41 +263,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
                                         |___[code] clean_raw_3.py
                                         |___[code] clean_raw_4.py
                                         </code></pre>
-<p>This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: contributing to mapping the universe of robustness checks and contributing to testing reasonable specifications. Both contributions should be recorded in the ACRE platform (under development) referring to files in a specific reproduction package.</p>
+<p>This simplified tree gives you a list of potential files where you could test different reasonable specifications. Here we suggest two types of contributions to robustness checks: i) mapping the universe of robustness checks and ii) testing reasonable specifications. Both contributions should be recorded in the ACRE platform referring to files in a specific reproduction package.</p>
 <div id="mapping-the-universe-of-robustness-checks" class="section level2">
 <h2><span class="header-section-number">4.1</span> Mapping the universe of robustness checks</h2>
-<p>When examining a specific code file, or a specific section within a file, you will be asked to identify and record all specific analytical choices in that file or section. Possible types of analytical choices include (but are not limited to):</p>
-<ul>
-<li>Analytical choices in data cleaning code:
-<ul>
-<li>Variable definition<br />
-</li>
-<li>Data sub-setting<br />
-</li>
-<li>Data reshaping (merge, append, long/gather, wide/spread)<br />
-</li>
-<li>Others (specify as “processing - other”)</li>
-</ul></li>
-<li>Analytical choices in analysis code:
-<ul>
-<li>Regression function (link function)<br />
-</li>
-<li>Key parameters (tuning, tolerance parameters, etc.)<br />
-</li>
-<li>Controls<br />
-</li>
-<li>Adjustment of standard errors<br />
-</li>
-<li>Choice of weights<br />
-</li>
-<li>Treatment of missing values<br />
-</li>
-<li>Imputations</li>
-<li>Other (specify as “methods - other”)</li>
-</ul></li>
-</ul>
-<p>Once finished, transcribe all the information on analytical choices into a data set (the ACRE platform will allow for easier recording once deployed). For the <code>source</code> field type “original” whenever the analytical choice is identified for the first time, and <code>file_name-line number</code> every time that the same analytical choice is applied subsequently (for example if a analytic choice is identified for the first time in line 103 and for a second in line 122 their respective values for the <code>source</code> field should be <code>original</code> and <code>code_01.do-L103</code> respectively).</p>
-<p>For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting data base should have the <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">following structure</a>:</p>
+<p><strong>Analytical choices in data cleaning code</strong>
+- Variable definition<br />
+- Data sub-setting<br />
+- Data reshaping (merge, append, long/gather, wide/spread)<br />
+- Others (specify as “processing - other”)
+<strong>Analytical choices in analysis code</strong>
+- Regression function (link function)<br />
+- Key parameters (tuning, tolerance parameters, etc.)<br />
+- Controls<br />
+- Adjustment of standard errors<br />
+- Choice of weights<br />
+- Treatment of missing values<br />
+- Imputations
+- Other (specify as “methods - other”)</p>
+<p>Once finished, transcribe all of the information on analytical choices into a dataset (the ACRE platform will allow for easier recording once deployed). For the <code>source</code> field type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file_name-line number</code> every subsequent time when the same analytical choice is applied (for example if an analytic choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code> and <code>code_01.do-L103</code>, respectively).</p>
+<p>For each analytical choice recorded, add the specific choice that the paper used, and describe what other alternatives could have been used. The resulting database should have the <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">following structure</a>:</p>
 <table>
 <colgroup>
 <col width="5%" />
@@ -358,20 +342,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>The advantage of this type of contribution is that you are not required to have in depth knowledge of the paper and its methodology to make a contributions. This allows you to potentially map several code files achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.</p>
+<p>The advantage of this type of contribution is that you are not required to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper. The disadvantage is that you are not expected to test alternative specifications.</p>
 </div>
 <div id="proposing-a-specific-robustness-check" class="section level2">
 <h2><span class="header-section-number">4.2</span> Proposing a specific robustness check</h2>
-<p>When performing a specific robustness test you will ask to follow these steps:</p>
+<p>When performing a specific robustness test, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Search in the mapping database (previous section) and record the identifier(s) corresponding to the analytical choice to test (<code>entry_id</code>). If there is no entry corresponding for the specific lines to test, please create one.</p></li>
+<li><p>Search in the mapping database (previous section) <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span>, is this referring to the reproduction tree diagram?)</span> and record the identifier(s) corresponding to the analytical choice to test (<code>entry_id</code>). If there is no entry corresponding for the specific lines, please create one.</p></li>
 <li><p>Propose a specific variation to this analytical choice.</p></li>
-<li><p>Discuss how sensible is this variation, specifically in the context of the claim that the paper is trying to test (e.g. does it make sense to include exclude low income Hispanics from the sample?).</p></li>
-<li><p>Discuss how this variation could affect the validity of the results (e.g. likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects underlying population)</p></li>
+<li><p>Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g. does it make sense to include exclude low-income Hispanics from the sample?).</p></li>
+<li><p>Discuss how this variation could affect the validity of the results (e.g. likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).</p></li>
 <li><p>Confirm that test is not redundant with other tests in the paper/robustness exercise.</p></li>
-<li><p>Report the results from the robustness check (new estimate, standard error, and units)</p></li>
+<li><p>Report the results from the robustness check (new estimate, standard error, and units).</p></li>
 </ol>
-<p>The advantage of this approach is that allows for an in depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy to some extent) requires a much more extensive knowledge of the papers topic and methods, making it less feasible for undergraduate students or graduates with a only a general interest in the paper.</p>
+<p>The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span> what does it mean to have only a general interest in the paper?)</span></p>
 <!--
 ## Test the robustness of results  
 
