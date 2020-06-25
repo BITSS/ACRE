@@ -1714,6 +1714,13 @@ background-size: cover
 
 # 15' Break 
 
+Please make sure the following software is installed in your computer: 
+
+- RStudio (no, we will not be using R)
+- Github Desktop
+
+Also, please create and account in github.com
+
 ---
 class: inverse, center, middle
 name: part2
