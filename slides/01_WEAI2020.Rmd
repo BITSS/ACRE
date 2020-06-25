@@ -2,7 +2,7 @@
 title: "How to Teach Reproducibility in Classwork"
 subtitle: "Western Economic Association International"
 author: "Fernando Hoces, </br> Berkeley Initiative for Transparency in the Social Sciences"
-date:  "`r format(Sys.time(), '%d %B %Y')` | [slides](https://github.com/BITSS/ACRE/slides)"
+date:  "`r format(Sys.time(), '%d %B %Y')` | [slides](https://github.com/BITSS/ACRE/tree/master/slides)"
 output: 
   xaringan::moon_reader:
     footer: "These slides available at http://bit.ly/myslides"
