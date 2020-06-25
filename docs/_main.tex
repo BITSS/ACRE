@@ -125,7 +125,7 @@
 
 \title{Guidelines for Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-06-22}
+\date{2020-06-24}
 
 \begin{document}
 \maketitle
@@ -139,8 +139,8 @@
 \addcontentsline{toc}{chapter}{}
 
 \begin{verbatim}
-                (1)       (2)         (3)        (4)        (5)
-              scope --> assess --> improve --> robust --> extend
+                (1)       (2)         (3)        (4)        
+              scope --> assess --> improve --> robust 
                ▲         |  |                   ▲
                |         |  |                   |
                |_________|  |___________________|
@@ -506,46 +506,8 @@ Extension
 \begin{Shaded}
 \begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
-\end{verbatim}
-
-\begin{verbatim}
-## v ggplot2 3.3.1     v purrr   0.3.4
-## v tibble  3.0.1     v dplyr   1.0.0
-## v tidyr   1.1.0     v stringr 1.4.0
-## v readr   1.3.1     v forcats 0.5.0
-\end{verbatim}
-
-\begin{verbatim}
-## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \KeywordTok{library}\NormalTok{(knitr)}
 \KeywordTok{library}\NormalTok{(kableExtra)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'kableExtra'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:dplyr':
-## 
-##     group_rows
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \NormalTok{temp_eval <-}\StringTok{ }\OtherTok{FALSE}
 \end{Highlighting}
 \end{Shaded}
@@ -998,7 +960,7 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
+## -- Attaching packages ---------------------------------- tidyverse 1.3.0 --
 \end{verbatim}
 
 \begin{verbatim}
@@ -1009,7 +971,7 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 \end{verbatim}
 
 \begin{verbatim}
-## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 \end{verbatim}
@@ -1220,7 +1182,7 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \end{Shaded}
 
 \begin{verbatim}
-## -- Attaching packages ------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
+## -- Attaching packages ---------------------------------- tidyverse 1.3.0 --
 \end{verbatim}
 
 \begin{verbatim}
@@ -1231,7 +1193,7 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 \end{verbatim}
 
 \begin{verbatim}
-## -- Conflicts ---------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+## -- Conflicts ------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 \end{verbatim}
@@ -1447,7 +1409,7 @@ The advantage of this approach is that allows for an in depth inspection of a sp
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}
 
-The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the golden rule of reproductions (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
+The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the \textbf{golden rule of reproductions} (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
 \textbf{1. Carefully and transparently plan your study.}
 
@@ -1462,18 +1424,24 @@ The purpose of this chapter is to facilitate constructive and respectful communi
   \setcounter{enumii}{1}
   \tightlist
   \item
-    Explain why you have chosen this study. Try to proactively address potential concerns for selection bias.\\
+    Explain why you have chosen this study.
   \item
     Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
   \end{enumerate}
+\end{enumerate}
 
-  \textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.}
+\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}). {[}FH: last sentence seems broken{]}
 
   \begin{enumerate}
   \def\labelenumii{\alph{enumii}.}
+  \setcounter{enumii}{1}
   \tightlist
-  \item
-    Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g.~see \href{https://osf.io/qy2se/}{Broockman, Kalla and Aronow, 2015}).\\
   \item
     Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
   \item
@@ -1487,7 +1455,7 @@ The purpose of this chapter is to facilitate constructive and respectful communi
 
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
 
-While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials.
+While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials (\href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}).
 
 \hypertarget{for-reproducers-contacting-the-authors-of-the-original-study}{%
 \section{For Reproducers Contacting the Authors of the Original Study}\label{for-reproducers-contacting-the-authors-of-the-original-study}}
@@ -1496,7 +1464,6 @@ Consider the following \emph{before} you contact the original author:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start. A few things to consider:
 
@@ -1507,35 +1474,30 @@ Consider the following \emph{before} you contact the original author:
   \item
     Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
   \end{itemize}
+\item
+  If a reproduction package is not readily available in the location where the article is published (e.g., the journal website), check the authors' websites, Dataverse profiles, the \href{https://www.icpsr.umich.edu/icpsrweb/}{ICPSR Publications Related Archive}, and other relevant archives and/or data repositories.
+\item
+  If steps 1 and 2 don't work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:
 
-  \begin{enumerate}
-  \def\labelenumii{\arabic{enumii}.}
-  \setcounter{enumii}{1}
+  \begin{itemize}
+  \tightlist
   \item
-    If reproduction materials are not readily available in the location where the article is published (e.g., the journal website), check the authors' websites, Dataverse profiles, the \href{https://www.icpsr.umich.edu/icpsrweb/}{ICPSR Publications Related Archive}, and other relevant archives and/or data repositories.
+    Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));\\
   \item
-    If steps 1 and 2 don't work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:
-
-    \begin{itemize}
-    \tightlist
-    \item
-      Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));\\
-    \item
-      Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;\\
-    \item
-      Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;\\
-    \item
-      Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.\\
-    \item
-      Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?\\
-    \item
-      A deadline to respond (we suggest at least two weeks).
-    \end{itemize}
+    Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database;
   \item
-    Follow up if you don't get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
+    Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;\\
   \item
-    Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
-  \end{enumerate}
+    Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.\\
+  \item
+    Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?\\
+  \item
+    A deadline to respond (we suggest at least two weeks).
+  \end{itemize}
+\item
+  Follow up if you don't get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
+\item
+  Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
 
   \begin{itemize}
   \tightlist
@@ -1543,8 +1505,14 @@ Consider the following \emph{before} you contact the original author:
     A \emph{complete} reproduction package was provided
   \item
     An \emph{incomplete} reproduction package was provided. You can also select one of the following reasons:
-    - Data is of sensitive, confidential, or proprietary character and cannot be shared;
-    - Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Data is of sensitive, confidential, or proprietary character and cannot be shared;
+    \item
+      Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
+    \end{itemize}
   \item
     Author \emph{refused} to share the reproduction package
   \item
@@ -1555,20 +1523,18 @@ Consider the following \emph{before} you contact the original author:
 \hypertarget{contacting-the-original-authors-when-there-is-no-reproduction-package}{%
 \subsection{Contacting the original author(s) when there is no reproduction package}\label{contacting-the-original-authors-when-there-is-no-reproduction-package}}
 
-If you haven't been able to locate an entry of a reproduction
-
 *Template email:**
 
 \begin{quote}
-\textbf{Subject:} Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Reproduction package for \texttt{{[}“Title\ of\ the\ paper”{]}}
 \end{quote}
 
 \begin{quote}
 Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
-I am contacting you to request a reproduction package for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}. A reproduction package may contain (raw and/or analytic data), code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
+I am contacting you to request a reproduction package for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
 
-I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because \texttt{{[}add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse \texttt{{[}or\ other\ data\ and\ code\ repositories{]}}, or in your paper.
+I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because \texttt{{[}add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse \texttt{{[}or\ other\ data\ and\ code\ repositories{]}}, or in your website.
 
 I will record the result of my reproduction attempt on the Advancing Computational Reproducibility in Economics (ACRE) platform, which is an open-source repository to systematically source, collect and present the results of verifications of computational reproducibility of published work in economics. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 
@@ -1594,14 +1560,14 @@ Best regards,\\
 \end{quote}
 
 \begin{quote}
-Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
+Dear \texttt{{[}Title{]}} \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
-I am contacting you about reproduction materials for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
+I am contacting you regarding reproduction materials for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
 I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working to reproduce this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
 
-To be able to reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, however I was not able to locate the items there. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+To help me reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (e.g.,\ raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, but I was unable to locate the items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 
-Note that I will record the outcome of my reproduction on the Advancing Computational Reproducibility in Economics (ACRE) \href{https://www.bitss.org/ecosystem/acre/}{platform}, an online catalog of reproduction projects in economics. ACRE is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences (BITSS)}. Let me know if you would like me to share the outcome of my exercise with you and whether you are interested in providing a response.
+Note that I will record the outcome of my reproduction on the Accelerating Computational Reproducibility in Economics (ACRE) \href{https://www.bitss.org/ecosystem/acre/}{platform}, an online catalog of reproduction projects in economics. ACRE is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences (BITSS)}. Let me know if you would like me to share the outcome of my exercise with you, and whether you are interested in providing a response.
 
 Since I am required to complete this project by \texttt{{[}date{]}}, I would appreciate your response by \texttt{{[}deadline{]}}.
 
@@ -1614,7 +1580,7 @@ Best regards,\\
 \hypertarget{asking-for-additional-guidance-when-some-materials-have-been-shared}{%
 \subsection{Asking for additional guidance when some materials have been shared}\label{asking-for-additional-guidance-when-some-materials-have-been-shared}}
 
-\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the first scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
+\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or share missing materials. As in the previous scenario described above, demonstrate that you made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
 
 \textbf{Template email:}
 
@@ -1657,9 +1623,9 @@ Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I
 \end{verbatim}
 
 \begin{quote}
-I have marked with an asterix (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that and that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+I have marked with an asterix (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 
-I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproducibility package for your paper on the ACRE platform. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
+I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
 \end{quote}
 
 \textbf{2. An example of poorly described issues:}
@@ -1696,7 +1662,7 @@ Best regards,\\
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Re: Reproduction materials for `{[}``Title of the paper''{]}
+\textbf{Subject:} Re: Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
 \end{quote}
 
 \begin{quote}
@@ -1735,19 +1701,36 @@ Best regards,\\
 Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: \emph{reproduce the work of others as you would like for others to reproduce yours}, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
 
 \textbf{Template email:}
-\textgreater{}\emph{Subject:} Reproducibility Assessment of
+
+\begin{quote}
+\textbf{Subject:} Reproducibility Assessment of \texttt{{[}“Title\ of\ the\ paper”{]}}
+\end{quote}
 
 \begin{quote}
 Dear Dr. \texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
 
 Thank you for your support throughout my project as I worked to verify and advance the reproducibility of \texttt{{[}Paper{]}}. I'm writing now to share the results of my project with you and invite your feedback.
 
-The results of each step of my exercise, include i) Assessment, ii) Improvements, iii) Robustness Checks, (and iv) Extensions, if applicable).
-\texttt{{[}Include\ the\ following\ items\ in\ the\ body\ of\ your\ email:\ -\ Briefly\ describe\ which\ parts\ of\ the\ paper\ you\ tried\ to\ reproduce\ (e.g.\ a\ specific\ estimate,\ a\ table,\ etc.).\ \ -\ Within\ the\ scope\ of\ your\ reproduction,\ describe\ exactly\ which\ items\ you\ managed\ to\ reproduce.\ -\ Discuss\ the\ differences\ you\ observed\ between\ the\ results\ of\ your\ reproduction\ and\ the\ original\ work,\ and\ demonstrate\ that\ you\ did\ your\ due\ diligence\ in\ trying\ to\ reproduce\ the\ item.\ Remember\ that\ it\ is\ more\ constructive\ to\ discuss\ discrepancies,\ differences\ or\ deviations,\ rather\ than\ errors,\ mistakes\ or\ failures,\ and\ *always\ talk\ about\ the\ work\ -\/-\ not\ the\ author!*\ -\ Use\ sensitive\ language\ when\ presenting\ discrepancies,\ e.g.\ “Unfortunately,\ I\ found\ X,\ which\ differs\ from\ the\ Y\ result\ in\ the\ original\ paper...”.\ Be\ cognizant\ of\ any\ potential\ limitations\ of\ your\ work,\ and\ explain\ how\ you\ have\ tried\ to\ address\ them\ -\/-\ that\ way\ you\ will\ proactively\ address\ potential\ criticism!\ \ -\ Describe\ how\ you\ tried\ to\ improve,\ the\ reproducibility\ of\ the\ paper.\ If\ some\ of\ the\ improvements\ are\ based\ on\ discretionary\ judgment\ (e.g.\ file\ organization\ or\ code\ commenting),\ try\ to\ explain\ why\ you\ think\ they\ are\ an\ upgrade\ over\ the\ original\ work.\ If\ you\ didn’t\ make\ improvements,\ point\ out\ some\ concrete\ steps\ that\ the\ author(s)\ can\ take\ to\ improve\ the\ reproducibility\ of\ the\ section\ you\ reproduced.{]}}
+The results of each step of my exercise, include i) Assessment, ii) Improvements, iii) Robustness Checks, (and iv) Extensions, if applicable).\\
+`{[}Include the following items in the body of your email:
+
+\begin{itemize}
+\tightlist
+\item
+  Briefly describe which parts of the paper you tried to reproduce (e.g.~a specific estimate, a table, etc.).\\
+\item
+  Within the scope of your reproduction, describe exactly which items you managed to reproduce.\\
+\item
+  Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and \emph{always talk about the work -- not the author!}\\
+\item
+  Use sensitive language when presenting discrepancies, e.g. ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!\\
+\item
+  Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g.~file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn't make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.{]}`
+\end{itemize}
 
 I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the ACRE platform.
 
-Best regards,
+Best regards,\\
 \texttt{{[}Reproducer{]}}
 \end{quote}
 
@@ -1822,13 +1805,15 @@ Here are a some steps you can take if you believe you have experienced bullying,
 \hypertarget{for-original-authors-responding-to-requests-from-reproducers}{%
 \section{For Original Authors Responding to Requests from Reproducers}\label{for-original-authors-responding-to-requests-from-reproducers}}
 
-{[}Aleks: would it be possible for you to work on this next week (3/30)?{]}
+{[}under development{]}
 
 \hypertarget{responding-to-a-repeated-request}{%
 \subsection{Responding to a repeated request}\label{responding-to-a-repeated-request}}
 
 {[}TO DO{]}
-\#\#\# Acknowledging that some information is missing
+
+\hypertarget{acknowledging-that-some-information-is-missing}{%
+\subsection{Acknowledging that some information is missing}\label{acknowledging-that-some-information-is-missing}}
 
 {[}TO DO{]}
 

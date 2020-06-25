@@ -3,7 +3,7 @@ always_allow_html: true
 ---
 
 
-```{r setup-assessment}
+```{r setup-assessment, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
 library(kableExtra)
