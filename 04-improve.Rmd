@@ -1,4 +1,4 @@
-```{r setup-improvements}
+```{r setup-improvements, echo = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
 library(kableExtra)
