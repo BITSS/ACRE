@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction | Accelerating Computational Reproducibility in Economics</title>
+  <title>Introduction | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction | Accelerating Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Introduction | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction | Accelerating Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Introduction | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -217,11 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
 <li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code:</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
-<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
-<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>9</b> Acknowledgments</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>10.1</b> Concepts in reproducibility</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -236,7 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Accelerating Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" alt="BITSS logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%" /></a><br />
+Guidelines for Verification of <br> Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -246,29 +248,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="intro" class="section level1 unnumbered">
 <h1>Introduction</h1>
-<p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> updated its Data and Code Availability Policy, which now requires that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of <em>computational reproducibility</em> in economics at large range from somewhat low to alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>; Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>.</p>
-<p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
+<p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of <em>computational reproducibility</em> in economics at large range from somewhat low to alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>; Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>.</p>
+<p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
 <p>This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.</p>
-<p>This exercise is part of the Accelerating Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project led by the Berkeley Initiative for Transparency in the Social Sciences <a href="bitss.org">(BITSS)</a> and Prof. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). ACRE looks to assess, enable, and improve the computational reproducibility of published economics research.</p>
+<p>This exercise is part of the Accelerating Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences <a href="https://bitss.org">(BITSS)</a>—an initiative of the Center for Effective Global Action <a href="https://cega.berkeley.edu/">(CEGA)</a>—and Dr. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.</p>
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
 <h2>Beyond binary judgments</h2>
-<p>Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.</p>
-<p>First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
+<p>Assessments of reproducibility can easily gravitate towards binary judgements that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.</p>
+<p>First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<div id="htmlwidget-9bc6cb78bbb288bdf881" style="width:672px;height:480px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9bc6cb78bbb288bdf881">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"DI 1\", color = red]\noutput2 [label = \"DI 2\"]\noutput3 [label = \"DI 3\"]\noutput4 [label = \"DI 4\"]\noutput5 [label = \"DI 5\"]\noutput6 [label = \"DI 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S 1\", color=red]\nspec2 [label = \"S 2\"]\nspec3 [label = \"S 3\"]\nspec4 [label = \"S 4\"]\nspec5 [label = \"S 5\"]\nspec6 [label = \"S 6\"]\nspec7 [label = \"S 7\"]\nspec8 [label = \"S 8\"]\nspec9 [label = \"S 9\"]\nspec10 [label = \"S 10\"]\nspec11 [label = \"S 10\"]\nspec12 [label = \"S 10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-27f55b2feb46538e6c9b" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-27f55b2feb46538e6c9b">{"x":{"diagram":"\ndigraph a_nice_graph {\n\ngraph [layout = neato, rankdir= TB, overlap=true]  ## layout = [neato|twopi, etc]\n#https://rich-iannone.github.io/DiagrammeR/graphviz_and_mermaid.html\n\n\n# node definitions with substituted label text\nnode [fontname = Helvetica, shape = box, style=empty ]\npaper [label = \"Paper\"]    ## label indicates the position of the letter\n\nnode [fontname = Helvetica, shape = diamond, fontsize = 10, fixedsize = TRUE, fillcolor=Gray]\nclaim1 [label = \"Claim 1\", color=red]\nclaim2 [label = \"Claim 2\"]\nclaim3 [label = \"Claim 3\"]\n\nnode [fontname = Helvetica, shape = circle, fillcolor=YellowGreen, fixedsize = TRUE]\noutput1 [label = \"DI 1\", color = red]\noutput2 [label = \"DI 2\"]\noutput3 [label = \"DI 3\"]\noutput4 [label = \"DI 4\"]\noutput5 [label = \"DI 5\"]\noutput6 [label = \"DI 6\"]\n\nnode [fontname = Helvetica, shape = circle, fixedsize = TRUE, fillcolor=Peru]\nspec1 [label = \"S 1\", color=red]\nspec2 [label = \"S 2\"]\nspec3 [label = \"S 3\"]\nspec4 [label = \"S 4\"]\nspec5 [label = \"S 5\"]\nspec6 [label = \"S 6\"]\nspec7 [label = \"S 7\"]\nspec8 [label = \"S 8\"]\nspec9 [label = \"S 9\"]\nspec10 [label = \"S 10\"]\nspec11 [label = \"S 10\"]\nspec12 [label = \"S 10\"]\n\n\n# edge definitions with the node IDs\npaper -> {claim1} [color=red]      ##[label = ...] adds text on the edge\npaper -> {claim2 claim3} \nclaim1 -> {output1} [color=red]\nclaim1 -> {output2} \nclaim2 -> {output3 output4}\nclaim3 -> {output5 output6}\noutput1 -> {spec1} [color=red]\noutput1 -> {spec2} \noutput2 -> {spec3 spec4}\noutput3 -> {spec5 spec6}\noutput4 -> {spec7 spec8}\noutput5 -> {spec9 spec10}\noutput6 -> {spec11 spec12}\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
 </p>
 </div>
-<p>Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.</p>
-<p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research – especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.</p>
+<p>Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.</p>
+<p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research — especially before 2019. Instead, this level can serve as an aspiration for the field of economics at large as it seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.</p>
 </div>
 <div id="stages-of-the-exercise" class="section level2 unnumbered">
 <h2>Stages of the exercise</h2>
 <p>This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guidelines, with a fifth optional stage:</p>
 <ol style="list-style-type: decimal">
-<li><a href="scoping.html#scoping"><strong>Scoping</strong></a>, where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus in the remainder of the exercise;<br />
+<li><a href="scoping.html#scoping"><strong>Scoping</strong></a>, where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus for the remainder of the exercise;<br />
 </li>
 <li><a href="assessment.html#assessment"><strong>Assessment</strong></a>, where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected outputs;</li>
 <li><a href="improvements.html#improvements"><strong>Improvement</strong></a>, where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;<br />
@@ -296,16 +298,16 @@ Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Ite
 </div>
 <div id="recording-the-results-of-the-exercise" class="section level2 unnumbered">
 <h2>Recording the results of the exercise</h2>
-<p>You will be asked to record the results of their reproduction progress through each stage.</p>
-<p>In <em>Stage 1: <a href="scoping.html#scoping">Scoping</a></em>, complete <strong><a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a></strong>, where you will declare your paper of choice and the specific display item(s) and specifications on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (confirm this with your instructor).</p>
+<p>You will be asked to record the results of your reproduction as you progress through each stage.</p>
+<p>In <em>Stage 1: <a href="scoping.html#scoping">Scoping</a></em>, complete <strong><a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a></strong>, where you will declare your paper of choice and the specific display item(s) and specifications on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (depending on your instructor or goals).</p>
 <p>In <em>Stage 2: <a href="assessment.html#assessment">Assessment</a></em>, you will inspect the paper’s reproduction package (raw data, analysis data, and code), connect the display item to be reproduced with its inputs, and assign a reproducibility score to each output.</p>
 <p>In <em>Stage 3: <a href="improvements.html#improvements">Improvement</a></em>, you will try to improve the reproducibility of the selected outputs by adding missing files, documentation, and report any potential changes in the level of reproducibility. Use <strong>Survey 2</strong> to record your work at Stages 2 and 3 (you will receive access instructions for Survey 2 when you submit Survey 1).</p>
 <p>In <em>Stage 4: <a href="robust.html#robust">Robustness Checks</a></em>, you will assess different analytical choices and test possible variations. Use <strong>Survey 3</strong> to record your work at this stage.</p>
 </div>
 <div id="reproduction-strategies" class="section level2 unnumbered">
 <h2>Reproduction Strategies</h2>
-<p>Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a <em>reproduction strategy</em>. For example, a reproduction may closely follow the order of the steps outlined above, with the reproducer first choosing a set of results they are interested in assessing or understanding the production of, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy may be for the reproducer to develop potential robustness checks or extensions while reading the study, which leads to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particularly data set they have access to or are interested in using and reproduce the all of the results that use that data set as an input, then probe the robustness of the results to various data cleaning decisions.</p>
-<p>The many potential uses of reproduction to various ends makes the number of potential reproduction strategies very large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples in the above paragraph, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.</p>
+<p>Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a <em>reproduction strategy</em>. For example, a reproduction may closely follow the order of the steps outlined above. This might entail the reproducer first choosing a set of results whose pproduction they are interested in assessing or understanding, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy could be for the reproducer to develop potential robustness checks or extensions while reading the study, which would lead to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particular dataset to which they have access or an interest in using, reproducing the results that use that dataset as an input, then probing the robustness of the results to various data cleaning decisions.</p>
+<p>The various uses of reproduction makes the number of potential reproduction strategies quite large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples laid out in the paragraph above, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.</p>
 
 </div>
 </div>
@@ -372,7 +374,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
 "toc": {
 "collapse": "subsection"
 }

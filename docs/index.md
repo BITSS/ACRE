@@ -4,14 +4,14 @@ title: |
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
   Guidelines for Verification of <br> Computational Reproducibility in Economics
 author: "ACRE Team"
-date: "2020-06-25"
+date: "2020-06-26"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
+always_allow_html: true
 link-citations: yes
 github-repo: BITSS/ACRE
 heading_anchors: true
-always_allow_html: true
 site: bookdown::bookdown_site
 description: "Materials to support the reproduction of published research in economics."
 output:

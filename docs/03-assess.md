@@ -1,14 +1,11 @@
----
-always_allow_html: true
----
-
 
 
 ```r
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-temp_eval <- FALSE
+temp_eval <- TRUE
+options(tinytex.verbose = TRUE)
 ```
 
 # Assessment
@@ -44,7 +41,48 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `/folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
-
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>(\#tab:raw-data-information)Raw data information</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> data_source </th>
+   <th style="text-align:left;"> page </th>
+   <th style="text-align:left;"> data_files </th>
+   <th style="text-align:left;"> known_missing </th>
+   <th style="text-align:left;"> directory </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> "Current Population Survey 2018" </td>
+   <td style="text-align:left;"> A1 </td>
+   <td style="text-align:left;"> cepr_march_2018.dta </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> /data/ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> "DHS 2010 - 2013" </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv </td>
+   <td style="text-align:left;"> boliviaDHS_2011.csv </td>
+   <td style="text-align:left;"> /rawdata/DHS/ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> "2017 SAT scores" </td>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> Not available </td>
+   <td style="text-align:left;">  </td>
+   <td style="text-align:left;"> /data/to_clean/ </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+  </tr>
+</tbody>
+</table>
 
 
           Raw data information:
@@ -74,7 +112,33 @@ As you progress through the exercise, add to the spreadsheet a one-line descript
 
 The resulting report will have the following structure:  
 
-
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>(\#tab:analysis-data-information)Analysis data information</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> analysis_data </th>
+   <th style="text-align:left;"> location </th>
+   <th style="text-align:left;"> description </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> final_data.csv </td>
+   <td style="text-align:left;"> /analysis/fig1/ </td>
+   <td style="text-align:left;"> data for figure1 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> all_waves.csv </td>
+   <td style="text-align:left;"> /final_data/v1_april/ </td>
+   <td style="text-align:left;"> data for region-level analysis </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+  </tr>
+</tbody>
+</table>
 
           Analysis data information:
           |----------------|-----------------------|--------------------------------|
@@ -92,7 +156,45 @@ The resulting report will have the following structure:
 
 List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
 
-
+<div style="border: 0px;overflow-x: scroll; width:100%; "><table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>(\#tab:code-files-information)Code files information</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> file_name </th>
+   <th style="text-align:left;"> location </th>
+   <th style="text-align:left;"> inputs </th>
+   <th style="text-align:left;"> outputs </th>
+   <th style="text-align:left;"> description </th>
+   <th style="text-align:left;"> primary_type </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> output_table1.do </td>
+   <td style="text-align:left;"> /code/analysis/ </td>
+   <td style="text-align:left;"> analysis_data01.csv </td>
+   <td style="text-align:left;"> output1_part1.txt </td>
+   <td style="text-align:left;"> produces first part of table 1 (unformatted) </td>
+   <td style="text-align:left;"> analysis </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> data_cleaning02.R </td>
+   <td style="text-align:left;"> /code/cleaning </td>
+   <td style="text-align:left;"> admin_01raw.csv </td>
+   <td style="text-align:left;"> analysis_data02.csv </td>
+   <td style="text-align:left;"> removes outliers and missing vals from raw admin data </td>
+   <td style="text-align:left;"> cleaning </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+  </tr>
+</tbody>
+</table></div>
 
           Code files information:
           |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -220,7 +322,53 @@ In this case, you can still manually combine this partial information with your 
 
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
-
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>(\#tab:adding-rows)Adding rows to code spreadsheet</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> file_name </th>
+   <th style="text-align:left;"> location </th>
+   <th style="text-align:left;"> inputs </th>
+   <th style="text-align:left;"> outputs </th>
+   <th style="text-align:left;"> description </th>
+   <th style="text-align:left;"> primary_type </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+   <td style="text-align:left;"> ... </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> missing_file1 </td>
+   <td style="text-align:left;"> unknown </td>
+   <td style="text-align:left;"> cleaned_1.dta, cleaned_2.dta </td>
+   <td style="text-align:left;"> merged_1_2.dta </td>
+   <td style="text-align:left;"> missing code </td>
+   <td style="text-align:left;"> unknown </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> missing_file2 </td>
+   <td style="text-align:left;"> unknown </td>
+   <td style="text-align:left;"> cleaned_3.dta, cleaned_4.dta </td>
+   <td style="text-align:left;"> merged_3_4.dta </td>
+   <td style="text-align:left;"> missing code </td>
+   <td style="text-align:left;"> unknown </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> missing_file3 </td>
+   <td style="text-align:left;"> unknown </td>
+   <td style="text-align:left;"> merged_3_4.dta, merged_1_2.dta </td>
+   <td style="text-align:left;"> analysis_data.dta </td>
+   <td style="text-align:left;"> missing code </td>
+   <td style="text-align:left;"> unknown </td>
+  </tr>
+</tbody>
+</table>
 
         Adding rows to code spreadsheet:
         |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -312,7 +460,170 @@ This is the highest level that most published research papers can attain current
 
 The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
 
-
+<table>
+<caption>(\#tab:levels-of-computational-reproducibility)Levels of Computational Reproducibility \
+ (P denotes "partial", C denotes "complete")</caption>
+ <thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1"></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Availability of materials, and reproducibility</div></th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1"></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Analysis Code</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Analysis Data</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">CRA</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Cleaning Code</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Raw Data</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">CRR</div></th>
+</tr>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;">   </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;border-bottom: 1px solid"> L1: No materials </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L2: Only code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L3: Partial analysis data &amp; code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L4: All analysis data &amp; code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;border-bottom: 1px solid"> L5: Reproducible from analysis </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L6: Some cleaning code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L7: All cleaning code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L8: Some raw data </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L9: All raw data </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L10: Reproducible from raw data </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+  </tr>
+</tbody>
+</table>
 
 
                             Levels of Computational Reproducibility
@@ -364,7 +675,170 @@ A large portion of published research in economics uses confidential or propriet
 
  - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided.
 
-
+<table>
+<caption>(\#tab:levels-of-computational-reproducibility-adjusted)Levels of Computational Reproducibility with Proprietary/Confidential Data \
+ (P denotes "partial", C denotes "complete")</caption>
+ <thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1"></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Availability of materials, and reproducibility</div></th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1"></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Analysis Code</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Instr. Analysis Data</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">CRA</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Cleaning Code</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">Instr. Raw Data</div></th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">CRR</div></th>
+</tr>
+  <tr>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;">   </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;"> P </th>
+   <th style="text-align:left;"> C </th>
+   <th style="text-align:left;">   </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;border-bottom: 1px solid"> L1: No materials </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L2: Only code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L3: Partial analysis data &amp; code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L4*: All analysis data &amp; code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;border-bottom: 1px solid"> L5*: Proof of third party CRA </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> ✔ </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+   <td style="text-align:left;border-bottom: 1px solid"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L6: Some cleaning code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L7: All cleaning code </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L8*: Some instr. for raw data </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L9*: All instr. for raw data </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> -- </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> L10*: Proof of third party CRR </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+   <td style="text-align:left;"> ✔ </td>
+  </tr>
+</tbody>
+</table>
                  Levels of Computational Reproducibility with Proprietary/Confidential Data
                                (P denotes "partial", C denotes "complete")    
       

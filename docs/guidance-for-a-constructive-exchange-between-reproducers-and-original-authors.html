@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Accelerating Computational Reproducibility in Economics</title>
+  <title>Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Accelerating Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | Accelerating Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 5 Guidance for a Constructive Exchange Between Reproducers and Original Authors | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -217,11 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
 <li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code:</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
-<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
-<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>9</b> Acknowledgments</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>10.1</b> Concepts in reproducibility</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -236,7 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Accelerating Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" alt="BITSS logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%" /></a><br />
+Guidelines for Verification of <br> Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -249,16 +251,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (<a href="https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf">2019</a>) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the <strong>golden rule of reproductions</strong> (and replications): <em>treat others and their work, as you would like others to treat you and your work!</em></p>
 <p><strong>1. Carefully and transparently plan your study.</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li>Clearly state that you are conducting a reproduction of the original work.
-<ol start="2" style="list-style-type: lower-alpha">
+<li>Clearly state that you are conducting a reproduction of the original work.<br />
+</li>
 <li>Explain why you have chosen this study.</li>
 <li>Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.</li>
-</ol></li>
 </ol>
 <p><strong>2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li>Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see <a href="https://osf.io/qy2se/">Broockman, Kalla and Aronow, 2015</a>). [FH: last sentence seems broken]
-<ol start="2" style="list-style-type: lower-alpha">
+<li>Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see <a href="https://osf.io/qy2se/">Broockman, Kalla and Aronow, 2015</a>). [FH: last sentence seems broken]</li>
 <li>Talk about <em>the study, not the author</em>, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.<br />
 </li>
 <li>Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.<br />
@@ -266,7 +266,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.<br />
 </li>
 <li>Remember, <em>the goal is not to criticize previous work or hunt for errors, but to move the literature forward!</em></li>
-</ol></li>
 </ol>
 <p>To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.</p>
 <p>While we hope that you find these useful, note that they are <em>only recommendations</em>, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials (<a href="mailto:acre@berkeley.edu" class="email">acre@berkeley.edu</a>).</p>
@@ -364,7 +363,7 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <blockquote>
 <p>Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:</p>
 </blockquote>
-<pre><code>  OUTPUT X
+<pre><code>     OUTPUT X
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -475,22 +474,18 @@ I am a <code>[graduate student/postdoc/other position]</code> at <code>[Institut
 <h4><span class="header-section-number">5.1.7.2</span> Harassment and/or discrimination</h4>
 <p>The AEA and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the <a href="https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination">AEA Policy on Harassment and Discrimination</a> has listed as unacceptable, and could emerge in a hostile exchange regarding a reproduction:</p>
 <ul>
-<li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)
-<ul>
+<li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)</li>
 <li>Prejudicial actions or comments that undermine the principles of equal opportunity, fair treatment, or free academic exchange</li>
 <li>Deliberate intimidation, stalking, or following</li>
 <li>Real or implied threat of physical harm.</li>
-</ul></li>
 </ul>
 <p>Here are a some steps you can take if you believe you have experienced bullying, discrimination or harassment:</p>
 <ul>
-<li><strong>File a complaint with the <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson">AEA Ombudsperson</a>.</strong> Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson/faq">here</a>.
-<ul>
+<li><strong>File a complaint with the <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson">AEA Ombudsperson</a>.</strong> Any AEA member can file a complaint (you can also join the AEA solely for the purpose of filing a report). The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson/faq">here</a>.</li>
 <li><strong>File a report with your institution’s office for the prevention of harassment &amp; discrimination.</strong> US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include “Office for the Prevention of Harassment and Discrimination” (in institutions that are part of the University of California system), “Office of Equity and Title IX”, etc.</li>
 <li><strong>Contact your institution’s Ombudsperson/Ombuds Office.</strong> If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.</li>
 <li><strong>Access mental health services at your institution.</strong> Many universities offer short-term Counseling &amp; Psychological Services (CAPS) for academic, career, and personal issues.</li>
 <li><strong>Ask for support from your academic supervisor.</strong> If you are unsure on how to proceed, consult your academic supervisor on whether continuing the exercise would be appropriate.</li>
-</ul></li>
 </ul>
 </div>
 </div>
@@ -564,7 +559,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
 "toc": {
 "collapse": "subsection"
 }

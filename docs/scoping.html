@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Scoping | Accelerating Computational Reproducibility in Economics</title>
+  <title>Chapter 1 Scoping | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Scoping | Accelerating Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 1 Scoping | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Scoping | Accelerating Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 1 Scoping | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -217,11 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
 <li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code:</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
-<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
-<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>9</b> Acknowledgments</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>10.1</b> Concepts in reproducibility</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -236,7 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Accelerating Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" alt="BITSS logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%" /></a><br />
+Guidelines for Verification of <br> Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -246,25 +248,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="scoping" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Scoping</h1>
-<p>In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the <strong>“declared paper”</strong>), you may first consider a few other papers, but not analyze them closer (we refer to those as <strong>“candidate papers”</strong>).</p>
-<p>Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a <strong>reproduction package</strong> (in other contexts referred to as a “replication package”) as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 6</a>) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, <strong>we ask that you record your candidate papers in the ACRE database</strong> (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.</p>
-<p>Note that in this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.</p>
+<p>In this stage, you will define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as <strong>candidate papers</strong>) before moving forward with your <strong>declared paper</strong>.</p>
+<p>It is likely that you will choose a declared paper based on whether or not you can locate its reproduction package. A <strong>reproduction package</strong> is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper’s author for it (find guidance on this in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 6</a>) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.</p>
+<p>To avoid duplicating the efforts of others who may be interested in reproducing one of your candidate papers, <strong>we ask that you record your candidate papers in the ACRE database</strong> (currently under development).</p>
+<p>Note that in this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in this Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.</p>
 <p><strong><em>Use <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a> to record your work in this stage.</em></strong></p>
 <div id="from-candidate-to-declared-paper" class="section level2">
 <h2><span class="header-section-number">1.1</span> From candidate to declared paper</h2>
-<p>At this point of the exercise, you are <em>only validating the existence</em> of (at least) one reproduction package and not assessing the quality of its content. Follow the five steps to verify the existence of a reproduction package, and stop whenever you find it (which would mean that you have found your declared paper).</p>
+<p>At this point of the exercise, you are <em>only validating the availability</em> of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean mean that you have found your declared paper).</p>
 <ol style="list-style-type: decimal">
-<li>Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (learn more in the next section).</li>
-<li>Check the paper’s webpage on the website of the journal or publisher, looking for materials named “Data and Materials”, “Supplemental Materials”, “Reproduction/Replication Package/Materials”, etc.<br />
+<li>Check whether previous reproduction attempts have beeen recorded in the ACRE Database for the paper (more on the ACRE Database in the next section).</li>
+<li>Check the journal or publisher’s website, looking for materials named “Data and Materials,” “Supplemental Materials,” “Reproduction/Replication Package/Materials,” etc.<br />
 </li>
-<li>Look for links in the paper (review footnotes and appendices).<br />
+<li>Look for links in the paper (review the footnotes and appendices).<br />
 </li>
-<li>Review the personal websites of the author(s) of the paper.</li>
-<li>Contact the author to request the reproduction package using <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">this</a> email template. In this and your future interactions with authors, we encourage you to follow our guidance outlined in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">Chapter 6</a>.</li>
+<li>Review the personal websites of the paper’s author(s).</li>
+<li>Contact the author(s) to request the reproduction package using <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">this</a> email template. In this and future interactions with authors, we encourage you to follow our guidance outlined in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">Chapter 5</a>.</li>
 <li>Deposit the reproduction package in a trusted repository (e.g., <a href="https://dataverse.org/">Dataverse</a>, <a href="https://www.openicpsr.org/openicpsr/">Open ICPSR</a>, <a href="https://zenodo.org/">Zenodo</a>, or the <a href="https://osf.io/">Open Science Framework</a>) under the name <code>Original reproduction package for - Title of the paper</code>. You will be asked to provide the URL of the repository in Survey 1.</li>
 </ol>
-<p>In case you need to contact the authors, make sure to <em>allocate sufficient time for this step</em> (we suggest at least three weeks before the date when you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).</p>
-<p>Review the decision tree (Figure #) below for a more detailed overview of this process. Remember, <em>if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database</em> before moving to another candidate paper. Once you have obtained the reproduction package, the <em>candidate paper</em> becomes your <em>declared paper</em> and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
+<p>In case you need to contact the authors, make sure to <em>allocate sufficient time for this step</em> (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).</p>
+<p>Review the decision tree (Figure #) below for a more detailed overview of this process. Remember, <em>if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database</em> before moving on to another candidate paper. Once you have obtained the reproduction package, the <em>candidate paper</em> becomes your <em>declared paper</em> and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
 <div id="candidate-paper-entries-in-the-acre-database" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> Candidate paper entries in the ACRE Database</h3>
 <p>If the ACRE database contains previous reproduction attempts of the paper, you will see a report card with the following information:</p>
@@ -279,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <strong>Authors Available for Further Questions for ACRE Reproductions:</strong> Yes/No/Unknown<br />
 <strong>Open for reproductions:</strong> Yes/No [Same as above: what does this mean? Add more context].</p>
 </blockquote>
-<p>If after going through steps 1-5 above (or for other reason) you were unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.</p>
+<p>If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.</p>
 <details>
 <p><summary>View Decision Tree To Select Paper (Emma: add title and solve bug with svg) </summary></p>
 <p><img src="candidate-to-declared-paper.png" /></p>
@@ -289,11 +292,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="scoping-your-declared-paper" class="section level2">
 <h2><span class="header-section-number">1.2</span> Scoping your declared paper</h2>
-<p>Once you have identified your declared paper, it is time to get familiarized with the paper and decide on the specific output(s) on which you will focus on the remainder of the exercise. The following sections in this chapter will show you how to do that.</p>
+<p>Once you have identified your declared paper, get familiarized with it and choose the specific output(s) on which you will focus for the remainder of the exercise.</p>
 <div id="read-sum" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Read and summarize the paper</h3>
-<p>Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).</p>
-<p>When reading/summarizing the paper, try to answer the following questions:</p>
+<p>Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and demonstrate your understanding of the paper (for yourself and others like your instructor or advisor).</p>
+<p>When reading or summarizing the paper, try to answer the following questions:</p>
 <ul>
 <li>Would you classify the paper’s scientific claims as mainly focused on estimating a causal relationship, estimating/predicting a descriptive statistic of a population, or something else?</li>
 <li>How many scientific claims (descriptive or causal) are investigated in the paper?</li>
@@ -303,31 +306,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>How many display items are there in the paper (tables, figures, and inline results)?<br />
 </li>
 <li>What is the main statistical or econometric method used to examine each claim?</li>
-<li>What is the author’s preferred specification (or yours, if authors are not clear)?</li>
-<li>What are some robustness checks to the preferred specification?</li>
+<li>What is the author’s preferred specification (or yours, if the authors are not clear)?</li>
+<li>What are some robustness checks for the preferred specification?</li>
 </ul>
 </div>
 <div id="declare-estimates" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Record scope of the exercise</h3>
-<p>By now you should have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.</p>
-<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in <a href="intro.html#fig:diagram">0.1</a>. If you plan to scope more than one claim, <em>we strongly recommend starting with just one</em> and recording your results. You can then initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.</p>
+<p>By now you should have a fairly good understanding of the paper’s content. You do not, however, need to have spent any time reviewing the reproduction package in detail.</p>
+<p>At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure <a href="intro.html#fig:diagram">0.1</a>. If you plan to scope more than one claim, <em>we strongly recommend starting with just one</em> and recording your results. You can then initiate another record in ACRE later for the second (or third, fourth, etc.) claim to reproduce using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.</p>
 <p>In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.</p>
 <div id="declare-specific-main-estimates-to-reproduce." class="section level4 unnumbered">
 <h4>Declare specific main estimates to reproduce.</h4>
-<p>Identify one of the scientific claims, and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table #, and row and column in the table). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.</p>
+<p>Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table #, and table row and column). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.</p>
 </div>
-<div id="declare-possible-robustness-checks-to-main-estimates-optional." class="section level4 unnumbered">
-<h4>Declare possible robustness checks to main estimates (optional).</h4>
-<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em>, and <em>using the same data</em> (eg., including/excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to test before starting the assessment stage.</p>
-<p>These are the elements you will need to conduct the scoping stage. <strong>You now have all the elements necessary to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a>.</strong></p>
+<div id="declare-possible-robustness-checks-for-main-estimates-optional." class="section level4 unnumbered">
+<h4>Declare possible robustness checks for main estimates (optional).</h4>
+<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em> and <em>using the same data</em> (e.g., by including or excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to conduct before starting the Assessment stage.</p>
+<p>These are the elements you will need for the Scoping stage. <strong>You now have all the elements necessary to complete <a href="https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv">Survey 1</a>.</strong></p>
 <hr />
 </div>
 </div>
 </div>
 <div id="identify-your-relevant-timeline." class="section level2">
 <h2><span class="header-section-number">1.3</span> Identify your relevant timeline.</h2>
-<p>Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that may take a month to complete, or a semester-long project (for example as an undergraduate thesis).</p>
-<p>Table 1 shows a tentative distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities and expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.</p>
+<p>Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).</p>
+<p>Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledgin that less experienceed researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.</p>
 <p>Emma: please write this table using R and KableExtra</p>
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -442,10 +445,11 @@ Robustness
 </tr>
 </table>
 
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(knitr)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">library</span>(kableExtra)</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">temp_eval &lt;-<span class="st"> </span><span class="ot">FALSE</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">library</span>(knitr)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">library</span>(kableExtra)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">temp_eval &lt;-<span class="st"> </span><span class="ot">TRUE</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw">options</span>(<span class="dt">tinytex.verbose =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 </div>
 </div>
             </section>
@@ -496,7 +500,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
 "toc": {
 "collapse": "subsection"
 }

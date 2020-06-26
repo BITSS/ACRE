@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Assessment | Accelerating Computational Reproducibility in Economics</title>
+  <title>Chapter 2 Assessment | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Assessment | Accelerating Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 2 Assessment | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Assessment | Accelerating Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 2 Assessment | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -217,11 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
 <li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code:</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
-<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
-<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>9</b> Acknowledgments</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>10.1</b> Concepts in reproducibility</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -236,7 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Accelerating Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" alt="BITSS logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%" /></a><br />
+Guidelines for Verification of <br> Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -264,8 +266,101 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
 <p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
-<p>Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:</p>
-<pre><code>  Raw data information:
+Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:<br />
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:raw-data-information">Table 2.1: </span>Raw data information
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+data_source
+</th>
+<th style="text-align:left;">
+page
+</th>
+<th style="text-align:left;">
+data_files
+</th>
+<th style="text-align:left;">
+known_missing
+</th>
+<th style="text-align:left;">
+directory
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+“Current Population Survey 2018”
+</td>
+<td style="text-align:left;">
+A1
+</td>
+<td style="text-align:left;">
+cepr_march_2018.dta
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+/data/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+“DHS 2010 - 2013”
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv
+</td>
+<td style="text-align:left;">
+boliviaDHS_2011.csv
+</td>
+<td style="text-align:left;">
+/rawdata/DHS/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+“2017 SAT scores”
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+Not available
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+/data/to_clean/
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>   Raw data information:
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
       | data_source          | page | data_files                                    | known_missing       | directory           |
       |----------------------|------|-----------------------------------------------|---------------------|---------------------|
@@ -288,7 +383,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
-<pre><code>  Analysis data information:
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:analysis-data-information">Table 2.2: </span>Analysis data information
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+analysis_data
+</th>
+<th style="text-align:left;">
+location
+</th>
+<th style="text-align:left;">
+description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+final_data.csv
+</td>
+<td style="text-align:left;">
+/analysis/fig1/
+</td>
+<td style="text-align:left;">
+data for figure1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+all_waves.csv
+</td>
+<td style="text-align:left;">
+/final_data/v1_april/
+</td>
+<td style="text-align:left;">
+data for region-level analysis
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>   Analysis data information:
       |----------------|-----------------------|--------------------------------|
       | analysis_data  | location              | description                    |
       |----------------|-----------------------|--------------------------------|
@@ -302,7 +450,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="desc-scripts" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
 <p>List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., <code>load</code>, <code>read</code>, <code>source</code>, <code>run</code>, <code>do</code> ). For each code file, record all inputs together and separate each item with “;”. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., <code>save</code>, <code>write</code>, <code>export</code>). For each code file, record all outputs together and separate each item with “;”. Provide a one-line description of what each code file does. Record all of this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>, using the following structure:</p>
-<pre><code>  Code files information:
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:code-files-information">Table 2.3: </span>Code files information
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+file_name
+</th>
+<th style="text-align:left;">
+location
+</th>
+<th style="text-align:left;">
+inputs
+</th>
+<th style="text-align:left;">
+outputs
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+primary_type
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+output_table1.do
+</td>
+<td style="text-align:left;">
+/code/analysis/
+</td>
+<td style="text-align:left;">
+analysis_data01.csv
+</td>
+<td style="text-align:left;">
+output1_part1.txt
+</td>
+<td style="text-align:left;">
+produces first part of table 1 (unformatted)
+</td>
+<td style="text-align:left;">
+analysis
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+data_cleaning02.R
+</td>
+<td style="text-align:left;">
+/code/cleaning
+</td>
+<td style="text-align:left;">
+admin_01raw.csv
+</td>
+<td style="text-align:left;">
+analysis_data02.csv
+</td>
+<td style="text-align:left;">
+removes outliers and missing vals from raw admin data
+</td>
+<td style="text-align:left;">
+cleaning
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre><code>   Code files information:
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
       | file_name         | location         | inputs              | outputs             | description          | primary_type |
       |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -330,7 +569,7 @@ Upload the standardized table you build to the describe the code above into the 
 <h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
 <p>If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.</p>
 <!-- Emma: add a label to this figure below -->
-<pre><code>table1.tex
+<pre><code> table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___[code] final_merge.do
@@ -359,7 +598,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="incomplete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Incomplete workflow information</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files <code>merge_1_2.do</code>, <code>merge_3_4.do</code>, and <code>final_merge.do</code> are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:</p>
-<pre><code>cleaned_3.dta
+<pre><code> cleaned_3.dta
         |___[code] clean_raw_3.py
             |___raw_3.dta
 
@@ -388,7 +627,7 @@ Upload the standardized table you build to the describe the code above into the 
             |___merged_1_2.dta
     Unused data sources: None.</code></pre>
 <p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<pre><code>table1.tex
+<pre><code> table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
                 |___MISSSING CODE FILE(S) #3
@@ -413,8 +652,117 @@ Upload the standardized table you build to the describe the code above into the 
                                         |___cleaned_2.dta
                                                 |___[code] clean_raw_2.py
                                                     |___raw_2.dta</code></pre>
-<p>To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:</p>
-<pre><code>Adding rows to code spreadsheet:
+To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:adding-rows">Table 2.4: </span>Adding rows to code spreadsheet
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+file_name
+</th>
+<th style="text-align:left;">
+location
+</th>
+<th style="text-align:left;">
+inputs
+</th>
+<th style="text-align:left;">
+outputs
+</th>
+<th style="text-align:left;">
+description
+</th>
+<th style="text-align:left;">
+primary_type
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+missing_file1
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+<td style="text-align:left;">
+cleaned_1.dta, cleaned_2.dta
+</td>
+<td style="text-align:left;">
+merged_1_2.dta
+</td>
+<td style="text-align:left;">
+missing code
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+missing_file2
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+<td style="text-align:left;">
+cleaned_3.dta, cleaned_4.dta
+</td>
+<td style="text-align:left;">
+merged_3_4.dta
+</td>
+<td style="text-align:left;">
+missing code
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+missing_file3
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+<td style="text-align:left;">
+merged_3_4.dta, merged_1_2.dta
+</td>
+<td style="text-align:left;">
+analysis_data.dta
+</td>
+<td style="text-align:left;">
+missing code
+</td>
+<td style="text-align:left;">
+unknown
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code> Adding rows to code spreadsheet:
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
     | file_name         | location         | inputs              | outputs             | description          | primary_type |
     |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
@@ -435,7 +783,7 @@ Upload the standardized table you build to the describe the code above into the 
 <div id="unused-data-sources" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> Unused Data Sources</h3>
 <p>It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:</p>
-<pre><code>table1.tex
+<pre><code> table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
     
@@ -490,7 +838,442 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<pre><code>                    Levels of Computational Reproducibility
+<table>
+<caption>
+<span id="tab:levels-of-computational-reproducibility">Table 2.5: </span>Levels of Computational Reproducibility<br />
+(P denotes “partial”, C denotes “complete”)
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Availability of materials, and reproducibility
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Analysis Code
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Analysis Data
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+CRA
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cleaning Code
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Raw Data
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+CRR
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+L1: No materials
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L2: Only code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L3: Partial analysis data &amp; code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L4: All analysis data &amp; code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+L5: Reproducible from analysis
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L6: Some cleaning code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L7: All cleaning code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L8: Some raw data
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L9: All raw data
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L10: Reproducible from raw data
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>                     Levels of Computational Reproducibility
                        (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)
 
                                    | Availability of materials, and reproducibility |
@@ -529,30 +1312,465 @@ Upload the standardized table you build to the describe the code above into the 
 <li><p><strong>Levels 6 and 7</strong> can be applied as described above.</p></li>
 <li><p><strong>Adjusted Level 8 (L8*):</strong> All requirements for Level 7* are met, but instructions for accessing the <strong><em>raw data</em></strong> are incomplete. Use the instructions described in Level 3 above to assess the instructions’ completeness.</p></li>
 <li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met, and instructions for accessing the <strong><em>raw data</em></strong> are complete.</p></li>
-<li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p>
-<pre><code>          Levels of Computational Reproducibility with Proprietary/Confidential Data
-                        (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
-
-                                  | Availability of materials, and reproducibility |
-                                  |------------------------------------------------|
-                                  |        | Instr.  |     |         | Instr.|     |
-                                  |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                  |Code    | Data    | CRA | Code    | Data  | CRR |
-                                  | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                  ---------|---------|-----|---------|-------|-----|
- L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
- ---------------------------------|--------|---------|-----|---------|-------|-----|
- L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
- L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
- L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
- L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
- ---------------------------------|--------|---------|-----|---------|-------|-----|
- L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
- L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
- L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
- L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
- L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre></li>
+<li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p></li>
 </ul>
+<table>
+<caption>
+<span id="tab:levels-of-computational-reproducibility-adjusted">Table 2.6: </span>Levels of Computational Reproducibility with Proprietary/Confidential Data<br />
+(P denotes “partial”, C denotes “complete”)
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Availability of materials, and reproducibility
+</div>
+</th>
+</tr>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Analysis Code
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Instr. Analysis Data
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+CRA
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Cleaning Code
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Instr. Raw Data
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+CRR
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+P
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+L1: No materials
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L2: Only code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L3: Partial analysis data &amp; code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L4*: All analysis data &amp; code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid">
+L5*: Proof of third party CRA
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+✔
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+<td style="text-align:left;border-bottom: 1px solid">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L6: Some cleaning code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L7: All cleaning code
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L8*: Some instr. for raw data
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L9*: All instr. for raw data
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+–
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+L10*: Proof of third party CRR
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+<td style="text-align:left;">
+✔
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>          Levels of Computational Reproducibility with Proprietary/Confidential Data
+                           (P denotes &quot;partial&quot;, C denotes &quot;complete&quot;)    
+  
+                                     | Availability of materials, and reproducibility |
+                                     |------------------------------------------------|
+                                     |        | Instr.  |     |         | Instr.|     |
+                                     |Analysis| Analysis|     | Cleaning| Raw   |     |
+                                     |Code    | Data    | CRA | Code    | Data  | CRR |
+                                     | P | C  | P  | C  |     | P  |  C | P | C |     |
+                                     ---------|---------|-----|---------|-------|-----|
+    L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
+    ---------------------------------|--------|---------|-----|---------|-------|-----|
+    L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
+    L3: Partial analysis data &amp; code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
+    L4*: All analysis data &amp; code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
+    L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
+    ---------------------------------|--------|---------|-----|---------|-------|-----|
+    L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
+    L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
+    L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
+    L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
+    L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |</code></pre>
 </div>
 </div>
 <div id="reproducibility-dimensions-at-the-paper-level" class="section level3">
@@ -573,22 +1791,9 @@ Upload the standardized table you build to the describe the code above into the 
 <p>Congratulations! You have now completed the <em>Assessment</em> stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics.</p>
 <p>Please continue to the <a href="improvements.html#improvements">next section</a> where you can help improve it!</p>
 
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
-<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
-## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
-<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">library</span>(knitr)</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">library</span>(kableExtra)</a></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;kableExtra&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
-## 
-##     group_rows</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2"><span class="kw">library</span>(knitr)</a>
+<a class="sourceLine" id="cb14-3" data-line-number="3"><span class="kw">library</span>(kableExtra)</a></code></pre></div>
 </div>
 </div>
 </div>
@@ -646,7 +1851,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
 "toc": {
 "collapse": "subsection"
 }

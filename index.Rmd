@@ -8,10 +8,10 @@ date: "`r Sys.Date()`"
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
+always_allow_html: true
 link-citations: yes
 github-repo: BITSS/ACRE
 heading_anchors: true
-always_allow_html: true
 site: bookdown::bookdown_site
 description: "Materials to support the reproduction of published research in economics."
 output:

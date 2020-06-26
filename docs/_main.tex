@@ -29,7 +29,7 @@
 }
 \usepackage{hyperref}
 \hypersetup{
-            pdftitle={Accelerating Computational Reproducibility in Economics},
+            pdftitle={BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics},
             pdfauthor={ACRE Team},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -106,12 +106,6 @@
 \makeatother
 
 \usepackage{booktabs}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -129,11 +123,10 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Accelerating Computational Reproducibility in Economics}
-\providecommand{\subtitle}[1]{}
-\subtitle{Guidelines for Verification of Computational Reproducibility}
+\title{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\
+Guidelines for Verification of Computational Reproducibility in Economics}
 \author{ACRE Team}
-\date{2020-06-24}
+\date{2020-06-26}
 
 \begin{document}
 \maketitle
@@ -146,9 +139,15 @@
 \chapter*{}\label{section}}
 \addcontentsline{toc}{chapter}{}
 
-\includegraphics[width=1\linewidth]{stages}
+\protect\hyperlink{contributions}{See a full list of contributors}
 
-\includegraphics[width=0.6\linewidth]{BITSS_logo_horizontal}
+\begin{verbatim}
+                (1)       (2)         (3)        (4)
+              scope --> assess --> improve --> robust
+               ▲         |  |                   ▲
+               |         |  |                   |
+               |_________|  |___________________|
+\end{verbatim}
 
 \protect\hyperlink{scoping}{(1) Scoping}
 
@@ -158,7 +157,9 @@
 
 \protect\hyperlink{robust}{(4) Robustness}
 
-\protect\hyperlink{improvements}{Display-item-level}
+\href{}{(5) Extensions}
+
+\protect\hyperlink{improvements}{Outcome-level}
 
 \protect\hyperlink{paper-level}{Paper-level}
 
@@ -172,6 +173,8 @@
 
 \protect\hyperlink{id-analy}{☐ Analytical choices}
 
+☐ New method
+
 \protect\hyperlink{check-acre}{☐ Check ACRE}
 
 \protect\hyperlink{diagram}{☐ Reproduction diagrams}
@@ -181,6 +184,8 @@
 \protect\hyperlink{paper-level}{☐ + Documentation}
 
 \protect\hyperlink{id-type}{☐ Type of choice}
+
+☐ New data
 
 ☐ \protect\hyperlink{verify-rep-mat}{Check Rep.~pkg exists}
 
@@ -216,21 +221,21 @@
 \chapter*{Introduction}\label{intro}}
 \addcontentsline{toc}{chapter}{Introduction}
 
-In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy, which now requires that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of \emph{computational reproducibility} in economics at large range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
+In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of \emph{computational reproducibility} in economics at large range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
-\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party not involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
 
-This exercise is part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project led by the Berkeley Initiative for Transparency in the Social Sciences \href{bitss.org}{(BITSS)} and Prof.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). ACRE looks to assess, enable, and improve the computational reproducibility of published economics research.
+This exercise is part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and Dr.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
 
 \hypertarget{beyond-binary-judgments}{%
 \section*{Beyond binary judgments}\label{beyond-binary-judgments}}
 \addcontentsline{toc}{section}{Beyond binary judgments}
 
-Assessments of reproducibility can easily gravitate towards binary assessments that declare an entire paper ``reproducible'' or ``non-reproducible.'' These guidelines suggest a more nuanced approach by highlighting two reasons that make binary judgments less relevant.
+Assessments of reproducibility can easily gravitate towards binary judgements that declare an entire paper ``reproducible'' or ``non-reproducible.'' These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.
 
-First, a paper may contain several scientific claims (or major hypothesis) that may vary in computational reproducibility. Each claim is tested using different methodologies, where results are presented in one or more display items (outputs like table and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
+First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
 \begin{figure}
 \centering
@@ -238,9 +243,9 @@ First, a paper may contain several scientific claims (or major hypothesis) that 
 \caption{\label{fig:diagram}One paper has multiple components to reproduce. DI: Display Item, S: Specification}
 \end{figure}
 
-Second, for a given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
+Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
 
-Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research -- especially before 2019. Instead, this level can serve as an aspiration as the field of economics at large seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
+Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research --- especially before 2019. Instead, this level can serve as an aspiration for the field of economics at large as it seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
 
 \hypertarget{stages-of-the-exercise}{%
 \section*{Stages of the exercise}\label{stages-of-the-exercise}}
@@ -251,7 +256,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  \protect\hyperlink{scoping}{\textbf{Scoping}}, where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus in the remainder of the exercise;\\
+  \protect\hyperlink{scoping}{\textbf{Scoping}}, where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus for the remainder of the exercise;\\
 \item
   \protect\hyperlink{assessment}{\textbf{Assessment}}, where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected outputs;
 \item
@@ -286,9 +291,9 @@ Figure 2 depicts suggested levels of effort for each stage of the exercise depen
 \section*{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
 \addcontentsline{toc}{section}{Recording the results of the exercise}
 
-You will be asked to record the results of their reproduction progress through each stage.
+You will be asked to record the results of your reproduction as you progress through each stage.
 
-In \emph{Stage 1: \protect\hyperlink{scoping}{Scoping}}, complete \textbf{\href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}}, where you will declare your paper of choice and the specific display item(s) and specifications on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (confirm this with your instructor).
+In \emph{Stage 1: \protect\hyperlink{scoping}{Scoping}}, complete \textbf{\href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}}, where you will declare your paper of choice and the specific display item(s) and specifications on which you will focus for the remainder of the exercise. This step may also involve writing a brief 1-2 page summary of the paper (depending on your instructor or goals).
 
 In \emph{Stage 2: \protect\hyperlink{assessment}{Assessment}}, you will inspect the paper's reproduction package (raw data, analysis data, and code), connect the display item to be reproduced with its inputs, and assign a reproducibility score to each output.
 
@@ -300,46 +305,48 @@ In \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}}, you will asses
 \section*{Reproduction Strategies}\label{reproduction-strategies}}
 \addcontentsline{toc}{section}{Reproduction Strategies}
 
-Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above, with the reproducer first choosing a set of results they are interested in assessing or understanding the production of, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy may be for the reproducer to develop potential robustness checks or extensions while reading the study, which leads to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particularly data set they have access to or are interested in using and reproduce the all of the results that use that data set as an input, then probe the robustness of the results to various data cleaning decisions.
+Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above. This might entail the reproducer first choosing a set of results whose pproduction they are interested in assessing or understanding, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy could be for the reproducer to develop potential robustness checks or extensions while reading the study, which would lead to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particular dataset to which they have access or an interest in using, reproducing the results that use that dataset as an input, then probing the robustness of the results to various data cleaning decisions.
 
-The many potential uses of reproduction to various ends makes the number of potential reproduction strategies very large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples in the above paragraph, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.
+The various uses of reproduction makes the number of potential reproduction strategies quite large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples laid out in the paragraph above, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this stage, you will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus on the remainder of the exercise. But before you decide to move forward with the paper that you will analyze in the remainder of the exercise (we refer to this as the \textbf{``declared paper''}), you may first consider a few other papers, but not analyze them closer (we refer to those as \textbf{``candidate papers''}).
+In this stage, you will define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}.
 
-Most likely, you will choose a declared paper based on whether or not you can locate its reproduction package. We define a \textbf{reproduction package} (in other contexts referred to as a ``replication package'') as the collection of all materials that make it possible for a reproducer to reproduce the paper. This package may contain data, code, and/or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask for it from the author of the paper (find guidance on how to do so in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6}) or simply choose another candidate paper. For the sake of avoiding duplication of effort of others who may be interested in reproducing one of your candidate papers, \textbf{we ask that you record your candidate papers in the ACRE database} (currently under development). If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines will provide instructions on how to contact the authors with a specific request for materials to create a public reproduction package, or if this route proves unsuccessful, on how to build your reproduction package from scratch.
+It is likely that you will choose a declared paper based on whether or not you can locate its reproduction package. A \textbf{reproduction package} is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper's author for it (find guidance on this in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6}) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.
 
-Note that in this stage, \emph{you are not expected to review the reproduction materials in detail}, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in the Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.
+To avoid duplicating the efforts of others who may be interested in reproducing one of your candidate papers, \textbf{we ask that you record your candidate papers in the ACRE database} (currently under development).
+
+Note that in this stage, \emph{you are not expected to review the reproduction materials in detail}, as you will dedicate most of your time to this in later stages of the exercise. If materials are available, you will read the paper and declare the scope of the reproduction exercise. You can expect to spend between 1-3 days in this Scoping stage, though this may vary based on the length and the complexity of the paper, and the availability of reproduction materials.
 
 \textbf{\emph{Use \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1} to record your work in this stage.}}
 
 \hypertarget{from-candidate-to-declared-paper}{%
 \section{From candidate to declared paper}\label{from-candidate-to-declared-paper}}
 
-At this point of the exercise, you are \emph{only validating the existence} of (at least) one reproduction package and not assessing the quality of its content. Follow the five steps to verify the existence of a reproduction package, and stop whenever you find it (which would mean that you have found your declared paper).
+At this point of the exercise, you are \emph{only validating the availability} of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean mean that you have found your declared paper).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Check whether there are previous reproduction attempts of that paper recorded in the ACRE database (learn more in the next section).
+  Check whether previous reproduction attempts have beeen recorded in the ACRE Database for the paper (more on the ACRE Database in the next section).
 \item
-  Check the paper's webpage on the website of the journal or publisher, looking for materials named ``Data and Materials'', ``Supplemental Materials'', ``Reproduction/Replication Package/Materials'', etc.\\
+  Check the journal or publisher's website, looking for materials named ``Data and Materials,'' ``Supplemental Materials,'' ``Reproduction/Replication Package/Materials,'' etc.\\
 \item
-  Look for links in the paper (review footnotes and appendices).\\
+  Look for links in the paper (review the footnotes and appendices).\\
 \item
-  Review the personal websites of the author(s) of the paper.
+  Review the personal websites of the paper's author(s).
 \item
-  Contact the author to request the reproduction package using \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{this} email template. In this and your future interactions with authors, we encourage you to follow our guidance outlined in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{Chapter 6}.
+  Contact the author(s) to request the reproduction package using \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{this} email template. In this and future interactions with authors, we encourage you to follow our guidance outlined in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{Chapter 5}.
 \item
   Deposit the reproduction package in a trusted repository (e.g., \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, \href{https://zenodo.org/}{Zenodo}, or the \href{https://osf.io/}{Open Science Framework}) under the name \texttt{Original\ reproduction\ package\ for\ -\ Title\ of\ the\ paper}. You will be asked to provide the URL of the repository in Survey 1.
 \end{enumerate}
 
-In case you need to contact the authors, make sure to \emph{allocate sufficient time for this step} (we suggest at least three weeks before the date when you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
+In case you need to contact the authors, make sure to \emph{allocate sufficient time for this step} (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exericse is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
 
-Review the decision tree (Figure \#) below for a more detailed overview of this process. Remember, \emph{if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database} before moving to another candidate paper. Once you have obtained the reproduction package, the \emph{candidate paper} becomes your \emph{declared paper} and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
+Review the decision tree (Figure \#) below for a more detailed overview of this process. Remember, \emph{if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database} before moving on to another candidate paper. Once you have obtained the reproduction package, the \emph{candidate paper} becomes your \emph{declared paper} and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
 \hypertarget{candidate-paper-entries-in-the-acre-database}{%
 \subsection{Candidate paper entries in the ACRE Database}\label{candidate-paper-entries-in-the-acre-database}}
@@ -358,7 +365,7 @@ If the ACRE database contains previous reproduction attempts of the paper, you w
 \textbf{Open for reproductions:} Yes/No {[}Same as above: what does this mean? Add more context{]}.
 \end{quote}
 
-If after going through steps 1-5 above (or for other reason) you were unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.
+If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.
 
 View Decision Tree To Select Paper (Emma: add title and solve bug with svg)
 
@@ -367,14 +374,14 @@ View Decision Tree To Select Paper (Emma: add title and solve bug with svg)
 \hypertarget{scoping-your-declared-paper}{%
 \section{Scoping your declared paper}\label{scoping-your-declared-paper}}
 
-Once you have identified your declared paper, it is time to get familiarized with the paper and decide on the specific output(s) on which you will focus on the remainder of the exercise. The following sections in this chapter will show you how to do that.
+Once you have identified your declared paper, get familiarized with it and choose the specific output(s) on which you will focus for the remainder of the exercise.
 
 \hypertarget{read-sum}{%
 \subsection{Read and summarize the paper}\label{read-sum}}
 
-Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and to demonstrate your understanding of the paper (for yourself and others like your instructor/advisor).
+Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and demonstrate your understanding of the paper (for yourself and others like your instructor or advisor).
 
-When reading/summarizing the paper, try to answer the following questions:
+When reading or summarizing the paper, try to answer the following questions:
 
 \begin{itemize}
 \tightlist
@@ -393,17 +400,17 @@ When reading/summarizing the paper, try to answer the following questions:
 \item
   What is the main statistical or econometric method used to examine each claim?
 \item
-  What is the author's preferred specification (or yours, if authors are not clear)?
+  What is the author's preferred specification (or yours, if the authors are not clear)?
 \item
-  What are some robustness checks to the preferred specification?
+  What are some robustness checks for the preferred specification?
 \end{itemize}
 
 \hypertarget{declare-estimates}{%
 \subsection{Record scope of the exercise}\label{declare-estimates}}
 
-By now you should have a fairly good understanding of the content of the paper. You do not, however, need to have spent any time reviewing the reproduction package in detail.
+By now you should have a fairly good understanding of the paper's content. You do not, however, need to have spent any time reviewing the reproduction package in detail.
 
-At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in \ref{fig:diagram}. If you plan to scope more than one claim, \emph{we strongly recommend starting with just one} and recording your results. You can then initiate another record in ACRE later for the second (or third, etc.) claim to reproduce, using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.
+At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure \ref{fig:diagram}. If you plan to scope more than one claim, \emph{we strongly recommend starting with just one} and recording your results. You can then initiate another record in ACRE later for the second (or third, fourth, etc.) claim to reproduce using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.
 
 In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.
 
@@ -411,24 +418,24 @@ In the Assessment stage, the reproduction will be centered around the display it
 \subsubsection*{Declare specific main estimates to reproduce.}\label{declare-specific-main-estimates-to-reproduce.}}
 \addcontentsline{toc}{subsubsection}{Declare specific main estimates to reproduce.}
 
-Identify one of the scientific claims, and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and row and column in the table). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
+Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and table row and column). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
 
-\hypertarget{declare-possible-robustness-checks-to-main-estimates-optional.}{%
-\subsubsection*{Declare possible robustness checks to main estimates (optional).}\label{declare-possible-robustness-checks-to-main-estimates-optional.}}
-\addcontentsline{toc}{subsubsection}{Declare possible robustness checks to main estimates (optional).}
+\hypertarget{declare-possible-robustness-checks-for-main-estimates-optional.}{%
+\subsubsection*{Declare possible robustness checks for main estimates (optional).}\label{declare-possible-robustness-checks-for-main-estimates-optional.}}
+\addcontentsline{toc}{subsubsection}{Declare possible robustness checks for main estimates (optional).}
 
-After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology}, and \emph{using the same data} (eg., including/excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to test before starting the assessment stage.
+After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage.
 
-These are the elements you will need to conduct the scoping stage. \textbf{You now have all the elements necessary to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}.}
+These are the elements you will need for the Scoping stage. \textbf{You now have all the elements necessary to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \hypertarget{identify-your-relevant-timeline.}{%
 \section{Identify your relevant timeline.}\label{identify-your-relevant-timeline.}}
 
-Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage expectations (yours and those of your instructor/advisor). Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor/advisor and may vary from a homework assignment (e.g., over a couple of weeks), to a longer class project that may take a month to complete, or a semester-long project (for example as an undergraduate thesis).
+Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).
 
-Table 1 shows a tentative distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities and expecting less experience with research if the reproducer is an undergraduate student). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend staying away from any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
+Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledgin that less experienceed researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
 Emma: please write this table using R and KableExtra
 
@@ -1895,21 +1902,27 @@ TODO: Add and classify
 \hypertarget{contributing-feedback-on-these-guidelines}{%
 \section{Contributing feedback on these guidelines}\label{contributing-feedback-on-these-guidelines}}
 
-The ACRE project welcomes feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the ``edit'' icon at the top of this page (this will prompt you to sign into or create a GitHub account, after which you'll be able to ``commit'' changes directly to the text. ``Committed'' changes will be reviewed by the ACRE project team before ``pushing'' them to these guidelines or not. For more general feedback, please contact \href{mailto:ACRE@berkeley.edu}{\nolinkurl{ACRE@berkeley.edu}}.
+The ACRE project welcomes feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the ``edit'' icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you'll be able to suggest changes directly to the text. Please submit your suggestions using the ``create a new branch and start a pull request'' option and provide a summary of the changes you've proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to ``push'' them to the guidelines document or not. For more general feedback, please contact \href{mailto:ACRE@berkeley.edu}{\nolinkurl{ACRE@berkeley.edu}}.
 
 Major contributions to these guidelines will be acknowledged below. The ACRE project employs the Contributor Roles Taxonomy (\href{https://casrai.org/credit/}{CRediT}). Major contributions are defined as any pushed revisions to the guideline language or source code beyond corrections of spelling and grammar.
 
 \hypertarget{list-of-contributors-guidelines-content-and-source-code}{%
-\section{List of Contributors: Guidelines content and source code}\label{list-of-contributors-guidelines-content-and-source-code}}
+\section{List of Contributors: Guidelines content and source code:}\label{list-of-contributors-guidelines-content-and-source-code}}
 
-Aleksandar Bogdanoski -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
-Carson Christiano -- Funding acquisition, Project administration, Writing (reviewing and editing)
-Joel Ferguson -- Writing (original draft), Writing (reviewing and editing)
-Fernando Hoces de la Guardia -- Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
-Katherine Hoeberling -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
-Edward Miguel -- Conceptualization, Funding acquisition, Supervision
-Emma Ng -- Visualization, Writing (original draft), Writing (reviewing and editing)
-Lars Vilhuber -- Conceptualization, Funding acquisition, Supervision
+\emph{(in alphabetical order)}
+- Aleksandar Bogdanoski -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+- Carson Christiano -- Funding acquisition, Project administration, Writing (reviewing and editing)
+- Joel Ferguson -- Writing (original draft), Writing (reviewing and editing)
+- Fernando Hoces de la Guardia -- Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
+- Katherine Hoeberling -- Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+- Edward Miguel -- Conceptualization, Funding acquisition, Supervision
+- Emma Ng -- Visualization, Writing (original draft), Writing (reviewing and editing)
+- Lars Vilhuber -- Conceptualization, Funding acquisition, Supervision
+
+\hypertarget{acknowledgments}{%
+\chapter{Acknowledgments}\label{acknowledgments}}
+
+Support for the development of the ACRE Guidelines document and platform was provided by \href{https://www.arnoldventures.org/}{Arnold Ventures}.
 
 \hypertarget{definitions}{%
 \chapter{Definitions}\label{definitions}}
@@ -1917,55 +1930,32 @@ Lars Vilhuber -- Conceptualization, Funding acquisition, Supervision
 \hypertarget{concepts-in-reproducibility}{%
 \section{Concepts in reproducibility}\label{concepts-in-reproducibility}}
 
-\begin{itemize}
-\item
-  \textbf{Raw data} are unmodified files obtained by the authors from the sources cited in the paper. Raw data from which personally identifiable information (PII) has been removed is still considered raw. All other modifications to raw data make it \emph{processed}. A data set may be classified as \textbf{raw} if it fits any of the following criteria:
+\#\#Concepts in reproducibility
+- \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
+- \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''
+- \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.
+- \textbf{Data citation} -- The practice of citing a dataset, rather than just the paper in which a dataset was used. This helps other researchers find data, and rewards researchers who share data. Find guidance on data citation \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.
+- \textbf{Data sharing} -- Making the data used in an analysis widely available to others, ideally through a trusted public repository/archive.
+- \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''
+- \textbf{Disclosure} -- In addition to publicly declaring all potential conflicts of interest, researchers should detail all the ways in which they test a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in appendices or supplementary material if room is limited in the body of the text.
+- \textbf{Intermediate data} -- Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
+- \textbf{Literate programming} -- Writing code to be read and easily understood by a human. This best practice can make a researcher's code more easily reproducible.
+- \textbf{Pre-specification} -- The act of detailing the method of analysis before actually beginning data analysis.
+- \textbf{Processed data} -- Raw data that have gone through any transformation other than the removal of PII.
+- \textbf{Raw data} -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.
+- \textbf{(Trial) registry} -- A database of registered studies or trials, for example the AEA RCT Registry or clinicaltrials.gov. Some of the largest registries only accept randomized trials, hence the frequent discussion of `trial registries. \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status. Registrations are time-stamped.
+- \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to check if the published results are obtained. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
+- \textbf{Reproducibility} -- A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
+- \textbf{Reproduction package} -- A collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as 'original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage.
+" - \textbf{Researcher degrees of freedom} -- The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching, covariate adjustment, or selective reporting.
+- \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
+- \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.
+``- \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.''
+- \textbf{Version control} -- The act of tracking every change made to a computer file. This is quite useful for empirical researchers who may edit their programming code often.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    The data is stored in a folder or file labeled as ``raw''.\\
-  \item
-    The data set is not the output of any code script in the reproduction package.\\
-  \item
-    The same data file can be independently obtained from the data source cited in the paper.
-  \end{itemize}
-\item
-  \textbf{Processed data} are raw data sets that have gone through any transformation other than the removal of PII. There are two kinds of processed data:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Intermediate data} are not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.\\
-  \item
-    \textbf{Analytic data} is used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).A data set may be classified as \textbf{analytic} if it fits any of the following criteria:
-
-    \begin{itemize}
-    \tightlist
-    \item
-      The data is stored in a folder or file labeled as ``analytic'' or ``analysis.''
-    \item
-      The data set is the last input required to produce some of the output (formatted or unformatted) of the paper.
-    \end{itemize}
-  \end{itemize}
-\item
-  \textbf{Causal claim:} This paper estimates the effect of X on Y for population P, using method F. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''
-\item
-  \textbf{Descriptive/predictive claim:} This paper estimates the value of Y (estimated or predicted) for population P under dimensions X using method M. Example: ``Drawing on a unique Swiss data set (population P) and exploiting systematic anomalies in countries' portfolio investment positions (method M), I find that around 8\% of the global financial wealth of households is held in tax havens (value of Y)''
-\item
-  \textbf{Reproduction package:} Collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as `original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage.
-\end{itemize}
-
-\hypertarget{concepts-in-the-acre-exercise-and-platform}{%
-\section{Concepts in the ACRE exercise and platform}\label{concepts-in-the-acre-exercise-and-platform}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Candidate paper} is a paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
-\item
-  \textbf{Declared paper} is the paper that the reproducer analyzes throughout the exercise.
-\end{itemize}
+\#\#Concepts in the ACRE exercise and the platform
+- \textbf{Candidate paper} is a paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
+- \textbf{Declared paper} is the paper that the reproducer analyzes throughout the exercise.
 
 \bibliography{book.bib,packages.bib}
 

@@ -1,8 +1,4 @@
----
-output:
-  word_document: default
-  html_document: default
----
+
 # Reproduction Diagrams  
 
 ## Different Scenarios

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Checking for Robustness | Accelerating Computational Reproducibility in Economics</title>
+  <title>Chapter 4 Checking for Robustness | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Checking for Robustness | Accelerating Computational Reproducibility in Economics" />
+  <meta property="og:title" content="Chapter 4 Checking for Robustness | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Checking for Robustness | Accelerating Computational Reproducibility in Economics" />
+  <meta name="twitter:title" content="Chapter 4 Checking for Robustness | BITSS logo Guidelines for Verification of   Computational Reproducibility in Economics" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in economics." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-24" />
+<meta name="date" content="2020-06-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,7 @@
 <script src="libs/viz-1.8.2/viz.js"></script>
 <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
 <script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -217,11 +218,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>8</b> Contributions</a><ul>
 <li class="chapter" data-level="8.1" data-path="contributions.html"><a href="contributions.html#contributing-feedback-on-these-guidelines"><i class="fa fa-check"></i><b>8.1</b> Contributing feedback on these guidelines</a></li>
-<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code</a></li>
+<li class="chapter" data-level="8.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>8.2</b> List of Contributors: Guidelines content and source code:</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>9</b> Definitions</a><ul>
-<li class="chapter" data-level="9.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>9.1</b> Concepts in reproducibility</a></li>
-<li class="chapter" data-level="9.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-platform"><i class="fa fa-check"></i><b>9.2</b> Concepts in the ACRE exercise and platform</a></li>
+<li class="chapter" data-level="9" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>9</b> Acknowledgments</a></li>
+<li class="chapter" data-level="10" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>10</b> Definitions</a><ul>
+<li class="chapter" data-level="10.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>10.1</b> Concepts in reproducibility</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -236,7 +237,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Accelerating Computational Reproducibility in Economics</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" alt="BITSS logo" style="display: block; margin-left: auto; margin-right: auto; width: 50%" /></a><br />
+Guidelines for Verification of <br> Computational Reproducibility in Economics</a>
           </h1>
         </div>
 
@@ -250,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span> include a brief explanation why: because…)</span>. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in <em>Stage 1: Scoping</em> because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition <em>and</em> an alternative core analytical choice. <span class="citation">(<span class="citeproc-not-found" data-reference-id="fhoces"><strong>???</strong></span> please verify whether this is what you meant to say in the last 2 sentences)</span></p>
 <p>Going back to our diagram that represents the multiple parts of a paper (<a href="intro.html#fig:diagram">0.1</a>), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the <em>Assessment</em> stage, we can remove the data files for simplicity and obtain the following:
 <!-- Emma: add reference to label in assessment stage--></p>
-<pre><code> table1.tex (contains preferred specification of a given claim)
+<pre><code>    table1.tex (contains preferred specification of a given claim)
         |___[code] analysis.R
                 |___[code] final_merge.do
                         |___[code] clean_merged_1_2.do
@@ -415,7 +417,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf", "_main.epub"],
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
 "toc": {
 "collapse": "subsection"
 }

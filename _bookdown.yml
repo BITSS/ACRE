@@ -1,6 +1,9 @@
-chapter_name: "Chapter "
+book_filename: "ACRE_book"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
 repo: https://github.com/BITSS/ACRE
 output_dir: docs
 clean: [packages.bib, bookdown.bbl]
-new_session: yes
 edit: https://github.com/BITSS/ACRE/edit/master/%s
