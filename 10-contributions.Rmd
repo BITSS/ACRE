@@ -23,6 +23,6 @@ Major contributions to these guidelines will be acknowledged below. The ACRE pro
  - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision
 
 # Acknowledgments
-Support for the development of the ACRE Guidelines document and platform was provided by [Arnold Ventures](https://www.arnoldventures.org/).
+Support for the development of these guidelines was provided by [Arnold Ventures](https://www.arnoldventures.org/).
 
 
