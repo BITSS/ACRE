@@ -157,7 +157,7 @@ Guidelines for Verification of Computational Reproducibility in Economics}
 
 In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several \href{https://aeadataeditor.github.io/aea-de-guidance/}{specific recommendations} were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of \emph{computational reproducibility} in economics at large range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
-\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a necessary condition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
 
@@ -171,6 +171,10 @@ Assessments of reproducibility can easily gravitate towards binary judgements th
 
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
+\begin{figure}
+\includegraphics[width=1\linewidth]{paper-claims} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification }\label{fig:diagram}
+\end{figure}
+
 Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
 
 Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research --- especially before 2019. Instead, this level can serve as an aspiration for the field of economics at large as it seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
@@ -183,6 +187,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   \protect\hyperlink{scoping}{\textbf{Scoping}}, where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus for the remainder of the exercise;\\
 \item
@@ -190,30 +195,58 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 \item
   \protect\hyperlink{improvements}{\textbf{Improvement}}, where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;\\
 \item
-  \protect\hyperlink{robust}{\textbf{Robustness checks}}, where you will assess the quality of selected analytical choices; and\\
-\item
-  \textbf{Extension} (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to \emph{replication}.
-
-\begin{verbatim}
-     Figure 2: Steps for reproduction
-
-            (1)       (2)         (3)        (4)        (5)
-          scope --> assess --> improve --> robust --> extend
-           ▲         |  |                   ▲
-           |         |  |                   |
-           |_________|  |___________________|
-
- Suggested level of effort:
-- Graduate
-  research:   5%       10%        5%         10%         70%
-- Graduate
-  course:    10%       25%       20%         40%         5%
-- Undergrad
-  thesis:    10%       30%       40%         20%         0%
-\end{verbatim}
+  \protect\hyperlink{robust}{\textbf{Robustness checks}}, where you will assess the quality of selected analytical choices.
 \end{enumerate}
 
-Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
+These guideline do not include a possible fifth stage of \textbf{Extension}. Here you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to \emph{replication}.
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{stages} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification}\label{fig:stages-intro}
+\end{figure}
+
+\label{tab:stages-intro}Relative Level of Effort by Type of exercise
+
+Exercise
+
+Scope
+
+Assess
+
+Improve
+
+Robust
+
+Graduate course
+
+10\%
+
+35\%
+
+25\%
+
+30\%
+
+Graduate research
+
+5\%
+
+25\%
+
+40\%
+
+30\%
+
+Undergrad thesis
+
+5\%
+
+20\%
+
+50\%
+
+25\%
+
+Table \ref{tab:stages-intro} depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
 
 \hypertarget{recording-the-results-of-the-exercise}{%
 \section*{Recording the results of the exercise}\label{recording-the-results-of-the-exercise}}
@@ -233,14 +266,14 @@ In \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}}, you will asses
 \section*{Reproduction Strategies}\label{reproduction-strategies}}
 \addcontentsline{toc}{section}{Reproduction Strategies}
 
-Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above. This might entail the reproducer first choosing a set of results whose pproduction they are interested in assessing or understanding, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy could be for the reproducer to develop potential robustness checks or extensions while reading the study, which would lead to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particular dataset to which they have access or an interest in using, reproducing the results that use that dataset as an input, then probing the robustness of the results to various data cleaning decisions.
+Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above. This might entail the reproducer first choosing a set of results whose production they are interested in assessing or understanding, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy could be for the reproducer to develop potential robustness checks or extensions while reading the study, which would lead to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particular dataset to which they have access or an interest in using, reproducing the results that use that dataset as an input, then probing the robustness of the results to various data cleaning decisions.
 
 The various uses of reproduction makes the number of potential reproduction strategies quite large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples laid out in the paragraph above, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.
 
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-In this stage, you will define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}.
+The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}.
 
 It is likely that you will choose a declared paper based on whether or not you can locate its reproduction package. A \textbf{reproduction package} is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper's author for it (find guidance on this in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 6}) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.
 
@@ -1772,8 +1805,7 @@ You will be asked to provide this information in the \href{ADD\%20LINK}{Assessme
 
 Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by including new robustness checks in addition to those included in the original paper. We use the term \textbf{robustness checks} to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
 
-The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper \citep[include a brief explanation why: because\ldots{}]{fhoces}. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in \emph{Stage 1: Scoping} because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice. \citep[please verify whether this is what you meant to say in the last 2 sentences]{fhoces}
-
+The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in \emph{Stage 1: Scoping} because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
 Going back to our diagram that represents the multiple parts of a paper (\ref{fig:diagram}), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the \emph{Assessment} stage, we can remove the data files for simplicity and obtain the following:
 
 \begin{verbatim}
@@ -1797,19 +1829,40 @@ This simplified tree gives you a list of potential files where you could test di
 \section{Mapping the universe of robustness checks}\label{mapping-the-universe-of-robustness-checks}}
 
 \textbf{Analytical choices in data cleaning code}
-- Variable definition\\
-- Data sub-setting\\
-- Data reshaping (merge, append, long/gather, wide/spread)\\
-- Others (specify as ``processing - other'')
+
+\begin{itemize}
+\tightlist
+\item
+  Variable definition\\
+\item
+  Data sub-setting\\
+\item
+  Data reshaping (merge, append, long/gather, wide/spread)\\
+\item
+  Others (specify as ``processing - other'')
+\end{itemize}
+
 \textbf{Analytical choices in analysis code}
-- Regression function (link function)\\
-- Key parameters (tuning, tolerance parameters, etc.)\\
-- Controls\\
-- Adjustment of standard errors\\
-- Choice of weights\\
-- Treatment of missing values\\
-- Imputations
-- Other (specify as ``methods - other'')
+
+\begin{itemize}
+\tightlist
+\item
+  Regression function (link function)\\
+\item
+  Key parameters (tuning, tolerance parameters, etc.)\\
+\item
+  Controls\\
+\item
+  Adjustment of standard errors\\
+\item
+  Choice of weights\\
+\item
+  Treatment of missing values\\
+\item
+  Imputations
+\item
+  Other (specify as ``methods - other'')
+\end{itemize}
 
 Once finished, transcribe all of the information on analytical choices into a dataset (the ACRE platform will allow for easier recording once deployed). For the \texttt{source} field type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} every subsequent time when the same analytical choice is applied (for example if an analytic choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103}, respectively).
 
@@ -1907,7 +1960,7 @@ When performing a specific robustness test, follow these steps:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Search in the mapping database (previous section) \citep[is this referring to the reproduction tree diagram?]{fhoces} and record the identifier(s) corresponding to the analytical choice to test (\texttt{entry\_id}). If there is no entry corresponding for the specific lines, please create one.
+  Search in the mapping database (populated in the mapping section above) and record the identifier(s) corresponding to the analytical choice to test (\texttt{entry\_id}). If there is no entry corresponding for the specific lines, please create one.
 \item
   Propose a specific variation to this analytical choice.
 \item
@@ -1920,7 +1973,7 @@ When performing a specific robustness test, follow these steps:
   Report the results from the robustness check (new estimate, standard error, and units).
 \end{enumerate}
 
-The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper. \citep[what does it mean to have only a general interest in the paper?]{fhoces}
+The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper (not part of their specific research interest).
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}

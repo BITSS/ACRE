@@ -8,8 +8,7 @@ temp_eval <- FALSE
 
 Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by including new robustness checks in addition to those included in the original paper. We use the term **robustness checks** to describe any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The universe of robustness checks can be very large or potentially infinite. The focus should be on the set of **reasonable specifications** ([Simonsohn et. al., 2018](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the set.
 
-The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper [@fhoces: include a brief explanation why: because...]. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in *Stage 1: Scoping* because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. [@fhoces: please verify whether this is what you meant to say in the last 2 sentences]
-
+The addition of new robustness checks will depend on the current level of reproducibility. E.g., for claims supported by display items reproducible at level 0-1, it is not possible to perform any other robustness checks in addition to what is already in the paper because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in *Stage 1: Scoping* because the display items are not computationally reproducible from analysis data (CRA). It is possible to include additional robustness checks to validate the core conclusion of a claim based on a display item reproducible at level 5. Finally, a claim associated with display items reproducible at level 6 and above allows for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, reproducers will also have the possibility of testing how the main estimate changes under an alternative variable definition *and* an alternative core analytical choice. 
 Going back to our diagram that represents the multiple parts of a paper (\@ref(fig:diagram)), the robustness section begins at the claim level. For a given claim, there will be several specifications presented in the paper, one of which is identified by the authors (or yourself, in the absence of one designated by the authors) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files where you can potentially modify a computational choice. Using the example tree discussed in the *Assessment* stage, we can remove the data files for simplicity and obtain the following: 
 <!-- Emma: add reference to label in assessment stage-->
 
@@ -30,11 +29,14 @@ This simplified tree gives you a list of potential files where you could test di
 ## Mapping the universe of robustness checks
 
 **Analytical choices in data cleaning code**
+
   - Variable definition  
   - Data sub-setting  
   - Data reshaping (merge, append, long/gather, wide/spread)  
   - Others (specify as "processing - other")
+  
 **Analytical choices in analysis code** 
+
    - Regression function (link function)  
    - Key parameters (tuning, tolerance parameters, etc.)  
    - Controls  
@@ -76,7 +78,7 @@ The advantage of this type of contribution is that you are not required to have 
 
 When performing a specific robustness test, follow these steps: 
 
-1. Search in the mapping database (previous section) [@fhoces, is this referring to the reproduction tree diagram?] and record the identifier(s) corresponding to the analytical choice to test (`entry_id`). If there is no entry corresponding for the specific lines, please create one. 
+1. Search in the mapping database (populated  in the mapping section above) and record the identifier(s) corresponding to the analytical choice to test (`entry_id`). If there is no entry corresponding for the specific lines, please create one. 
 
 2. Propose a specific variation to this analytical choice. 
 
@@ -89,7 +91,7 @@ When performing a specific robustness test, follow these steps:
 6. Report the results from the robustness check (new estimate, standard error, and units).
 
 
-The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper. [@fhoces: what does it mean to have only a general interest in the paper?]
+The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to some extent) requires a much deeper understanding of the topic and the methods of the paper, making it less feasible for undergraduate students or graduates with only a general interest in the paper (not part of their specific research interest). 
 
 <!--
 ## Test the robustness of results  
