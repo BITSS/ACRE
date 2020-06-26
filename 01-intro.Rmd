@@ -1,8 +1,14 @@
+```{r setup-intro, echo = FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
 # Introduction {-#intro}
 
 In 2019, the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several [specific recommendations](https://aeadataeditor.github.io/aea-de-guidance/) were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of *computational reproducibility* in economics at large range from somewhat low to  alarmingly low [@galiani2018make; @chang2015economics; @kingi2018reproducibility].
 
-*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) [@King95] is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
+*Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) [@King95] is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a necessary condition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
 
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
 
@@ -14,10 +20,12 @@ Assessments of reproducibility can easily gravitate towards binary judgements th
 
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 
-```{r diagram, eval=FALSE, echo=FALSE, fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification "}
+```{r diagram, eval=TRUE, echo=FALSE,out.width = '100%', fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification "}
 library(DiagrammeR)
 
+knitr::include_graphics("paper-claims.png") 
 
+if (FALSE) {
 grViz("
 digraph a_nice_graph {
 
@@ -79,6 +87,7 @@ output6 -> {spec11 spec12}
 [4]: paste0('S ', 1:10)
 
 ")
+}
 ```
 
 Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
@@ -97,24 +106,22 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 5.    **Extension** (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
 
 
-               Figure 2: Steps for reproduction
+```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification"}
+knitr::include_graphics("stages.png") 
 
-                      (1)       (2)         (3)        (4)        (5)
-                    scope --> assess --> improve --> robust --> extend
-                     ▲         |  |                   ▲
-                     |         |  |                   |
-                     |_________|  |___________________|
-    
-           Suggested level of effort:
-          - Graduate
-            research:   5%       10%        5%         10%         70%
-          - Graduate
-            course:    10%       25%       20%         40%         5%
-          - Undergrad
-            thesis:    10%       30%       40%         20%         0%
+stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
+                            Scope    = c("10%", "5%", "5%"),
+                            Assess   = c("35%", "25%", "20%"),
+                            Improve  = c("25%", "40%", "50%"),
+                            Robust   = c("30%", "30%", "25%") )
+
+stages_info %>%
+    knitr::kable(caption = "Relative Level of Effort by Type of exercise") %>%
+    kable_styling(full_width = TRUE)
+```
 
 
-Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
+Table \@ref(tab:stages-intro) depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
 
 ## Recording the results of the exercise {-}
 

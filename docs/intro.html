@@ -183,13 +183,19 @@ Guidelines for Verification of <br> Computational Reproducibility in Economics</
 <div id="intro" class="section level1 unnumbered">
 <h1>Introduction</h1>
 <p>In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. In addition to the requirements laid out in the policy, several <a href="https://aeadataeditor.github.io/aea-de-guidance/">specific recommendations</a> were produced to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of <em>computational reproducibility</em> in economics at large range from somewhat low to alarmingly low <span class="citation">(Galiani, Gertler, and Romero <a href="#ref-galiani2018make">2018</a>; Chang and Li <a href="#ref-chang2015economics">2015</a>; Kingi et al. <a href="#ref-kingi2018reproducibility">2018</a>)</span>.</p>
-<p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a precondition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
+<p><em>Replication</em>, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) <span class="citation">(King <a href="#ref-King95">1995</a>)</span> is an essential part of the scientific process that allows science to be “self-correcting.” <em>Computational reproducibility</em>, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a necessary condition for replication. Computational reproducibility is assessed through the process of <em>reproduction</em>. At the center of this process is the <em>reproducer</em> (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.</p>
 <p>This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.</p>
 <p>This exercise is part of the Accelerating Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences <a href="https://bitss.org">(BITSS)</a>—an initiative of the Center for Effective Global Action <a href="https://cega.berkeley.edu/">(CEGA)</a>—and Dr. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.</p>
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
 <h2>Beyond binary judgments</h2>
 <p>Assessments of reproducibility can easily gravitate towards binary judgements that declare an entire paper “reproducible” or “non-reproducible.” These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.</p>
-<p>First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure <a href="#fig:diagram"><strong>??</strong></a> illustrates this idea.</p>
+<p>First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
+<div class="figure"><span id="fig:diagram"></span>
+<img src="paper-claims.png" alt="One paper has multiple components to reproduce. &lt;br&gt; DI: Display Item, S: Specification " width="100%" />
+<p class="caption">
+Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
+</p>
+</div>
 <p>Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.</p>
 <p>Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research — especially before 2019. Instead, this level can serve as an aspiration for the field of economics at large as it seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.</p>
 </div>
@@ -204,24 +210,92 @@ Guidelines for Verification of <br> Computational Reproducibility in Economics</
 </li>
 <li><a href="robust.html#robust"><strong>Robustness checks</strong></a>, where you will assess the quality of selected analytical choices; and<br />
 </li>
-<li><p><strong>Extension</strong> (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to <em>replication</em>.</p>
-<pre><code>     Figure 2: Steps for reproduction
-
-            (1)       (2)         (3)        (4)        (5)
-          scope --&gt; assess --&gt; improve --&gt; robust --&gt; extend
-           ▲         |  |                   ▲
-           |         |  |                   |
-           |_________|  |___________________|
-
- Suggested level of effort:
-- Graduate
-  research:   5%       10%        5%         10%         70%
-- Graduate
-  course:    10%       25%       20%         40%         5%
-- Undergrad
-  thesis:    10%       30%       40%         20%         0%</code></pre></li>
+<li><strong>Extension</strong> (if applicable), where you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to <em>replication</em>.</li>
 </ol>
-<p>Figure 2 depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper’s level of reproducibility.</p>
+<div class="figure"><span id="fig:stages-intro"></span>
+<img src="stages.png" alt="One paper has multiple components to reproduce. &lt;br&gt; DI: Display Item, S: Specification" width="100%" />
+<p class="caption">
+Figure 0.2: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
+</p>
+</div>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:stages-intro">Table 0.1: </span>Relative Level of Effort by Type of exercise
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Exercise
+</th>
+<th style="text-align:left;">
+Scope
+</th>
+<th style="text-align:left;">
+Assess
+</th>
+<th style="text-align:left;">
+Improve
+</th>
+<th style="text-align:left;">
+Robust
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Graduate course
+</td>
+<td style="text-align:left;">
+10%
+</td>
+<td style="text-align:left;">
+35%
+</td>
+<td style="text-align:left;">
+25%
+</td>
+<td style="text-align:left;">
+30%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Graduate research
+</td>
+<td style="text-align:left;">
+5%
+</td>
+<td style="text-align:left;">
+25%
+</td>
+<td style="text-align:left;">
+40%
+</td>
+<td style="text-align:left;">
+30%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Undergrad thesis
+</td>
+<td style="text-align:left;">
+5%
+</td>
+<td style="text-align:left;">
+20%
+</td>
+<td style="text-align:left;">
+50%
+</td>
+<td style="text-align:left;">
+25%
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table <a href="intro.html#tab:stages-intro">0.1</a> depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper’s level of reproducibility.</p>
 </div>
 <div id="recording-the-results-of-the-exercise" class="section level2 unnumbered">
 <h2>Recording the results of the exercise</h2>
