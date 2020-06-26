@@ -3,11 +3,11 @@ always_allow_html: true
 ---
 
 
-```{r setup-assessment, warning=FALSE, message=FALSE}
+```{r setup-assessment, echo = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-temp_eval <- FALSE
+temp_eval <- TRUE
 ```
 
 # Assessment
