@@ -692,6 +692,14 @@ names: Stages
 
 ---
 background-image: url(Images/scope.svg)
+background-size: contain
+count:false
+names: Stages
+
+# Stages
+
+---
+background-image: url(Images/scope.svg)
 background-size: 300px
 background-position: 0% 100% 
 
@@ -1611,7 +1619,7 @@ count: false
 ---
 background-image: url(Images/Homepage.svg)
 background-size: contain 
-names: platform
+name: platform
 
 # Platform: Home page  
 
