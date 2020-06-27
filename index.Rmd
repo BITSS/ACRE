@@ -1,8 +1,8 @@
 --- 
-title: |
+title: "Guidelines for Verification of <br> Computational Reproducibility in Economics"
+subtitle:  |
   [![BITSS logo](BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
-  Guidelines for Verification of <br> Computational Reproducibility in Economics
 author: "ACRE Team"
 date: "`r Sys.Date()`"
 documentclass: book
