@@ -369,7 +369,9 @@ kable(assign_lcr_score,
                        "CRA", "Cleaning Code" = 2, "Raw Data" = 2, "CRR")) %>%
     add_header_above(c(" ","Availability of materials, and reproducibility" = 10)) %>%
         #add horizontal line to separate sections
-    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid")
+    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
+    footnote(alphabet = c("**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
+                         "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
 ```
 
 
@@ -434,7 +436,9 @@ kable(assign_lcr_adjusted,
                        "CRA", "Cleaning Code" = 2, "Instr. Raw Data" = 2, "CRR")) %>%
     add_header_above(c(" ","Availability of materials, and reproducibility" = 10)) %>%
         #add horizontal line to separate sections
-    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid")
+    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
+    footnote(alphabet = c("**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
+                         "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
 ```
                  Levels of Computational Reproducibility with Proprietary/Confidential Data
                                (P denotes "partial", C denotes "complete")    
