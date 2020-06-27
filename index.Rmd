@@ -39,7 +39,11 @@ output:
 </style>
 ```
 
-[See a full list of contributors](#contributions)
+
+<p style="text-align: center;"> 
+  [See a full list of contributors](#contributions)
+</p>  
+
 
 
 ```{r out.width = '100%', echo=FALSE}
@@ -54,7 +58,7 @@ knitr::include_graphics("stages.png")
          <th>[(1) <br> Scoping](#scoping) </th>
          <th>[(2) Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>
-         <th>[(4) Robustness](#robust)</th>
+         <th>[(4) </br> Robustness](#robust)</th>
       </tr>
    </thead>
    <tbody>
