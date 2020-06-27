@@ -54,7 +54,7 @@ Consider the following *before* you contact the original author:
 ### Contacting the original author(s) when there is no reproduction package
 
 
-*Template email:**  
+**Template email:**  
 
 >**Subject:** Reproduction package for `[“Title of the paper”]`
 

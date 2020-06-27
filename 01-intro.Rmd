@@ -16,7 +16,7 @@ This exercise is part of the Accelerating Computational Reproducibility in Econo
 
 ## Beyond binary judgments {-}
 
-Assessments of reproducibility can easily gravitate towards binary judgements that declare an entire paper "reproducible" or "non-reproducible." These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant. 
+Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper "reproducible" or "non-reproducible." These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant. 
 
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \@ref(fig:diagram) illustrates this idea. 
 
@@ -105,7 +105,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 4.    [**Robustness checks**](#robust), where you will assess the quality of selected analytical choices.  
 
 
-These guideline do not include a possible fifth stage of **Extension**. Here you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
+These guidelines do not include a possible fifth stage of **Extension**. Here you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
 
 
 ```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification"}
