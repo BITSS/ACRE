@@ -13,16 +13,18 @@ Major contributions to these guidelines will be acknowledged below. The ACRE pro
 
 ## List of Contributors: Guidelines content and source code:
 *(in alphabetical order)*
- - Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
- - Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)
- - Joel Ferguson – Writing (original draft), Writing (reviewing and editing)
- - Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
- - Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
- - Edward Miguel – Conceptualization, Funding acquisition, Supervision
- - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)
- - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision
 
-# Acknowledgments
+ - Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)  
+ - Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)  
+ - Joel Ferguson – Writing (original draft), Writing (reviewing and editing)  
+ - Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)  
+ - Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)  
+ - Edward Miguel – Conceptualization, Funding acquisition, Supervision  
+ - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)  
+ - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision  
+
+# Acknowledgments  
+
 Support for the development of these guidelines was provided by [Arnold Ventures](https://www.arnoldventures.org/).
 
 

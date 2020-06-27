@@ -10,7 +10,7 @@ As with the *Assessment* section, we recommend that you first focus on one speci
 
 **Use Survey 2 to record your work as part of this step.**
 
-## Types of output-level improvements
+## Types of output-level improvements {#di-imp}
 
 ### Adding raw data: missing files or metadata {#rd}
 
@@ -81,18 +81,6 @@ improvements <- data.frame(output_name = c("table 1", "table 1", "table 1", "fig
 improvements %>%
     knitr::kable(caption = "Level-specific quality improvements: add data/code, debug code")
 ```
-           Level-specific quality improvements: add data/code, debug code.
-
-           | output_name | imprv | description_of_added_files        | lvl |
-           |-------------|-------|-----------------------------------|-----|
-           | table 1     | +AD   |        ADD EXAMPLES               |  5  |
-           | table 1     | +RD   |        ADD EXAMPLES               |  5  |
-           | table 1     | DCC   |        ADD EXAMPLES               |  5  |
-           | figure 1    | +CC   |                                   |  6  |
-           | figure 1    | DAC   |                                   |  6  |
-           | inline 1    | DAC   |                                   |  8  |
-           | ...         | ...   | ...                               | ... |  
-
 
 
 

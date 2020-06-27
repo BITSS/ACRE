@@ -92,7 +92,7 @@ library(fontawesome)
 .pull-left[
 ### Part I: Accelerating Computational Reproducibility in Economics (X)
 
-    [15 min break]  
+    [10 min break]  
 
 ### Part II: Hands-on Practices for Computational Reproducibility (90' - X)
 ]
@@ -428,9 +428,9 @@ name: guidelines
 - AEA updates [policy in 2019](https://www.aeaweb.org/journals/policies/data-code/). 
     - Must post all data and code. Publication is conditional on verifying reproducibility (if confidential: must document extensively) 
     - A new requirement is to post all cleaning code, even for data that is not public
-    - See Lars Vilhuber after this presentation (same zoom channel) for more information 
+    - See Lars Vilhuber's presentation after this one (same zoom channel) for more information 
 --
-
+x
 - We should expect high levels of computational reproducibility after 2019 (AEA). 
 --
 
@@ -464,8 +464,8 @@ count:false
 # Beyond Binary Judgments    
 
 Reproductions can easily gravitate towards adversarial exchanges.
-  - Original authors have a more senior position and can use it to deter in-depth reproductions from early career researchers (ECR) 
-  - ECR have also incentives to emphasize unsuccessful reproductions 
+  - Early career researcher (ECR) have incentives to emphasize unsuccessful reproductions 
+  - Original authors have a more senior position and can use it to deter in-depth reproductions from ECRs. 
   - The media also focuses on eye-catching headlines
 
 
@@ -754,7 +754,7 @@ Reproducers will be asked to draw a clear connection to from the raw data source
 --
 
 ### Data sources  
-Connect the data sources in the papers text with specific raw data files. 
+Connect the data sources in the paper's text with specific raw data files. 
 --
 
 ### Analytic data sets  
@@ -1375,7 +1375,7 @@ count:false
 >
 > I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Reference]`. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
 >
->I am a `[position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context ...]`. **Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your paper**.
+>I am a `[position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context ...]`. **Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your website**.
 >
 >**I will record the result of my reproduction attempt on ACRE [...]. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.**
 >
@@ -1478,7 +1478,7 @@ count:false
 *                             └───[data] admin_01raw.csv* 
 ```
 
->I have marked with an asterix (\*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+>I have marked with an asterix (\*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as **UNKNOWN** above) in the reproduction materials.
 >
 >I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. **Doing this will ensure that you will not be asked twice for the same missing file.**
 ]
@@ -1638,7 +1638,7 @@ background-size: contain
 
 # Ok, I Am Interested. What's Next?
 
-You can check the [ACRE guidelines](https://bitss.github.io/ACRE/), and also contribute if you want.
+You can check the ACRE Guidelines, and also contribute if you want: https://bitss.github.io/ACRE/
 
 ```{r eval = TRUE, echo=FALSE}
 knitr::include_url("https://bitss.github.io/ACRE/", height = "350px")
@@ -2086,13 +2086,52 @@ Some good habits:
 - Karthik Ram's paper on [Git for Research](https://scfbm.biomedcentral.com/articles/10.1186/1751-0473-8-7) 
 
 
+---
+# .font80[Economists Doing Highly Reproducible Work<sup>1</sup>] 
+
+.pull-left[
+
+**People**
+- [Nick Huntingon](https://github.com/NickCH-K) 
+- [Shoshana Vasserman](https://github.com/shoshievass)  
+- [Lars Vilhuber](https://github.com/larsvilhuber)
+- [Grant McDermott](https://github.com/grantmcdermott)
+- [Tyler Ransom](https://github.com/tyleransom)
+- [Ed Rubin](https://github.com/edrubin)
+- [Luiza Andrade](https://github.com/luizaandrade)
+- [Max Kasy](https://github.com/maxkasy)
+- [Matt Jensen](https://github.com/MattHJensen)
+- [Richard Evans](https://github.com/rickecon)
+- [John Horton](https://github.com/johnjosephhorton)
+- [Cora Kingdon](https://github.com/ckingdon95)
+
+]
+.pull-right[
+- [Alvaro Carril](https://github.com/acarril)
+- [Andrew Heiss](https://github.com/andrewheiss)
+- [Lisa Rennels](https://github.com/lrennels)
+- [Michael Stepner](https://github.com/michaelstepner)
+- [Lachlan Deer](https://github.com/lachlandeer) 
+- [Rebekah Din](https://github.com/rebekahanne)
+
+
+**Organizations**
+- [LOST](https://lost-stats.github.io/)
+- [Opportunity Lab](https://github.com/Opportunitylab)
+- [Congressional Budget Office](https://github.com/US-CBO)
+- [Policy Simulation Library](https://github.com/PSLmodels)
+- [Gentzkow & Shapiro Lab](https://github.com/gslab-econ)
+- [Urban Institute](https://github.com/UrbanInstitute)
+]
+
+</br></br>
+.footnote[
+[1]: Non-exhaustive list of people and organizations doing amazing reproducible work on github (other than us!)
+]
 
 
 
 
-
-
-
-```{r gen_pdf, include = FALSE, cache = FALSE, eval = FALSE}
+```{r gen_pdf, include = FALSE, cache = FALSE, eval = TRUE}
 pagedown::chrome_print("01_WEAI2020.html", output = "01_WEAI2020.pdf")
 ```

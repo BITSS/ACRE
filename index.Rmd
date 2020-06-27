@@ -65,7 +65,7 @@ knitr::include_graphics("stages.png")
       <tr>
          <td></td>
          <td></td>
-         <td>[Display-item-level](#improvements)</td>
+         <td>[Display-item-level](#di-imp)</td>
          <td>[Paper-level](#paper-level)</td>
       </tr>
       <tr>
@@ -83,7 +83,7 @@ knitr::include_graphics("stages.png")
          <td>[&#9744; Type of choice](#id-type)</td>
       </tr>
       <tr>
-         <td>&#9744; [Check Rep. pkg exists](#verify-rep-mat)</td>
+         <td>&#9744; [Declare paper](#declare)</td>
          <td>[&#9744; Reproduction score](#score)</td>
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>

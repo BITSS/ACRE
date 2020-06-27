@@ -10,7 +10,7 @@ Note that in this stage, *you are not expected to review the reproduction materi
 
 ***Use [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv) to record your work in this stage.***
 
-## From candidate to declared paper
+## From candidate to declared paper {#declare}
 
 At this point of the exercise, you are *only validating the availability* of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean mean that you have found your declared paper).
 
@@ -25,7 +25,7 @@ In case you need to contact the authors, make sure to *allocate sufficient time 
 
 Review the decision tree (Figure #) below for a more detailed overview of this process. Remember, *if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database* before moving on to another candidate paper. Once you have obtained the reproduction package, the *candidate paper* becomes your *declared paper* and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
-### Candidate paper entries in the ACRE Database
+### Candidate paper entries in the ACRE Database {#check-acre}
 
 If the ACRE database contains previous reproduction attempts of the paper, you will see a report card with the following information:   
 

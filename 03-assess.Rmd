@@ -375,29 +375,6 @@ kable(assign_lcr_score,
 ```
 
 
-                            Levels of Computational Reproducibility
-                           (P denotes "partial", C denotes "complete")
-
-                                       | Availability of materials, and reproducibility |
-                                       |------------------------------------------------|
-                                       |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                       |Code    | Data    | CRA | Code    | Data  | CRR |
-                                       | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                       ---------|---------|-----|---------|-------|-----|
-      L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
-      ---------------------------------|--------|---------|-----|---------|-------|-----|
-      L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-      L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-      L4: All analysis data & code.....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-      L5: Reproducible from analysis...| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
-      ---------------------------------|--------|---------|-----|---------|-------|-----|
-      L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-      L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-      L8: Some raw data................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-      L9: All raw data.................| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-      L10:Reproducible from raw data...| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
-
-
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
 
 #### Adjusting Levels To Account for Confidential/Proprietary Data {-}
@@ -440,28 +417,6 @@ kable(assign_lcr_adjusted,
     footnote(alphabet = c("**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
                          "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
 ```
-                 Levels of Computational Reproducibility with Proprietary/Confidential Data
-                               (P denotes "partial", C denotes "complete")    
-
-                                         | Availability of materials, and reproducibility |
-                                         |------------------------------------------------|
-                                         |        | Instr.  |     |         | Instr.|     |
-                                         |Analysis| Analysis|     | Cleaning| Raw   |     |
-                                         |Code    | Data    | CRA | Code    | Data  | CRR |
-                                         | P | C  | P  | C  |     | P  |  C | P | C |     |
-                                         ---------|---------|-----|---------|-------|-----|
-        L1: No materials.................| -   -  | -    -  |  -  |  -    - | -   - |  -  |
-        ---------------------------------|--------|---------|-----|---------|-------|-----|
-        L2: Only code ...................| ✔   ✔  | -    -  |  -  |  -    - | -   - |  -  |
-        L3: Partial analysis data & code.| ✔   ✔  | ✔    -  |  -  |  -    - | -   - |  -  |
-        L4*: All analysis data & code....| ✔   ✔  | ✔    ✔  |  -  |  -    - | -   - |  -  |
-        L5*: Proof of third party CRA....| ✔   ✔  | ✔    ✔  |  ✔  |  -    - | -   - |  -  |
-        ---------------------------------|--------|---------|-----|---------|-------|-----|
-        L6: Some cleaning code...........| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    - | -   - |  -  |
-        L7: All cleaning code............| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | -   - |  -  |
-        L8*: Some instr. for raw data....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   - |  -  |
-        L9*: All instr. for raw data.....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  -  |
-        L10*:Proof of third party CRR....| ✔   ✔  | ✔    ✔  |  ✔  |  ✔    ✔ | ✔   ✔ |  ✔  |
 
 
 ### Reproducibility dimensions at the paper level   
