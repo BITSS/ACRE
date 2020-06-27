@@ -44,6 +44,8 @@ output:
   [See a full list of contributors](#contributions)
 </p>  
 
+A beta version of the platform will be online by early September. 
+[**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta in the fall. 
 
 
 ```{r out.width = '100%', echo=FALSE}

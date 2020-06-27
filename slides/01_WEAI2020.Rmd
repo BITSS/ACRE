@@ -1726,7 +1726,7 @@ background-size: cover
 # 10' Break 
 
 .font120[
-Target Audiene for Part II: 
+Target Audience for Part II: 
  - Interested about version control software but have never used git or github. 
  - Tried to used it a couple of times but was heavily discouraged by its obscurtity. 
 
