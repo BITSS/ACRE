@@ -1,3 +1,5 @@
 [
+
 ["index.html", "", " Guidelines for Verification of Computational Reproducibility in Economics ACRE Team 2020-06-26 @import url('https://fonts.googleapis.com/css?family=Karla&display=swap'); h1{} h1, p.date{ font-family: 'Karla'; text-align: center; } p.author{ display: none; } p{ font-family: 'Karla'; } See a full list of contributors (1) Scoping (2) Assessment (3) Improvement (4) Robustness Display-item-level Paper-level ☐ Select paper ☐ Describe inputs ☐ + Raw data ☐ + Version control ☐ Analytical choices ☐ Check ACRE ☐ Reproduction diagrams ☐ + Analysis data ☐ + Documentation ☐ Type of choice ☐ Check Rep. pkg exists ☐ Reproduction score ☐ + Analysis code ☐ + Dynamic document ☐ Choice value ☐ Read paper ☐ + Cleaning code ☐ + File structure ☐ Justify and test alternatives ☐ Declare estimates ☐ Debug analysis code ☐ Debug cleaning code Record results in Survey 1 Record results in Survey 2 Record results in Survey 3 "]
+
 ]
