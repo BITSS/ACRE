@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-06-26" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -238,7 +238,7 @@ cepr_march_2018.dta
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
-/data/
+data/
 </td>
 </tr>
 <tr>
@@ -255,7 +255,7 @@ nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2
 boliviaDHS_2011.csv
 </td>
 <td style="text-align:left;">
-/rawdata/DHS/
+rawdata/DHS/
 </td>
 </tr>
 <tr>
@@ -271,7 +271,7 @@ Not available
 <td style="text-align:left;">
 </td>
 <td style="text-align:left;">
-/data/to_clean/
+data/to_clean/
 </td>
 </tr>
 <tr>
@@ -293,22 +293,6 @@ Not available
 </tr>
 </tbody>
 </table>
-<pre><code>   Raw data information:
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | data_source          | page | data_files                                    | known_missing       | directory           |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | &quot;Current Population  | A1    | cepr_march_2018.dta                          |                     | \data\              |
-      | Survey 2018&quot;         |      |                                               |                     |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | &quot;DHS 2010 - 2013&quot;    | 4    | nicaraguaDHS_2010.csv;                        | boliviaDHS_2011.csv | \rawdata\DHS\       |
-      |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |                     |                     |
-      |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |                     |                     |
-      |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |                     |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | &quot;2017 SAT scores&quot;    | 4    | Not available                                 |                     | \data\to_clean\     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | ...                  | ...  | ...                                           | ...                 | ...                 |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|</code></pre>
 <p><strong>Note:</strong> lists if files in the data_files and known_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.</p>
 </div>
 <div id="desc-analy" class="section level3">
@@ -339,7 +323,7 @@ description
 final_data.csv
 </td>
 <td style="text-align:left;">
-/analysis/fig1/
+analysis/fig1/
 </td>
 <td style="text-align:left;">
 data for figure1
@@ -350,7 +334,7 @@ data for figure1
 all_waves.csv
 </td>
 <td style="text-align:left;">
-/final_data/v1_april/
+final_data/v1_april/
 </td>
 <td style="text-align:left;">
 data for region-level analysis
@@ -369,16 +353,6 @@ data for region-level analysis
 </tr>
 </tbody>
 </table>
-<pre><code>   Analysis data information:
-      |----------------|-----------------------|--------------------------------|
-      | analysis_data  | location              | description                    |
-      |----------------|-----------------------|--------------------------------|
-      | final_data.csv | /analysis/fig1/       | data for figure1               |
-      |----------------|-----------------------|--------------------------------|
-      | all_waves.csv  | /final_data/v1_april/ | data for region-level analysis |
-      |----------------|-----------------------|--------------------------------|
-      | ...            | ...                   | ...                            |
-      |----------------|-----------------------|--------------------------------|</code></pre>
 </div>
 <div id="desc-scripts" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
@@ -416,7 +390,7 @@ primary_type
 output_table1.do
 </td>
 <td style="text-align:left;">
-/code/analysis/
+code/analysis/
 </td>
 <td style="text-align:left;">
 analysis_data01.csv
@@ -436,7 +410,7 @@ analysis
 data_cleaning02.R
 </td>
 <td style="text-align:left;">
-/code/cleaning
+code/cleaning
 </td>
 <td style="text-align:left;">
 admin_01raw.csv
@@ -474,20 +448,6 @@ cleaning
 </tbody>
 </table>
 </div>
-<pre><code>   Code files information:
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | file_name         | location         | inputs              | outputs             | description          | primary_type |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
-      |                   |                  |                     |                     | of table 1           |              |
-      |                   |                  |                     |                     | (unformatted)        |              |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliers     | cleaning     |
-      |                   |                  |                     |                     | and missing vals     |              |
-      |                   |                  |                     |                     | from raw admin data  |              |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | ...               | ...              | ...                 | ...                 | ...                  | ...          |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|</code></pre>
 <p>As you gain an understanding of each code script, you will likely find more inputs and outputs – we encourage you to update the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&amp;range=A1">standardized spreadsheet</a>. Once finished with the reproduction exercise, classify each code file as <em>analysis</em> or <em>cleaning</em>. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script’s main role.</p>
 <p><strong>Note:</strong> If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ACRE Diagram Builder.</p>
 </div>
@@ -695,21 +655,6 @@ unknown
 </tr>
 </tbody>
 </table>
-<pre><code> Adding rows to code spreadsheet:
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | file_name         | location         | inputs              | outputs             | description          | primary_type |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | ...               | ...              | ...                 | ...                 | ...                  | ...          |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file1     | unknown          | cleaned_1.dta;      | merged_1_2.dta      | missing code         | unknown      |
-    |                   |                  | cleaned_2.dta       |                     |                      |              |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file2     | unknown          | cleaned_3.dta;      | merged_3_4.dta      | missing code         | unknown      |
-    |                   |                  | cleaned_4.dta       |                     |                      |              |                  
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file3     | unknown          | merged_3_4.dta;    | analysis_data.dta   | missing code         | unknown      |
-    |                   |                  | merged_1_2.dta     |                     |                      |              |                  
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|</code></pre>
 <p>As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.</p>
 <p>For more examples of diagrams connecting final outputs to initial raw data, <a href="#additional-diagrams">see here</a>.</p>
 </div>
@@ -1710,7 +1655,7 @@ L10*: Proof of third party CRR
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>a relative location takes the form of <code>/folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>a relative location takes the form of <code>folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>

@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-06-26}
+\date{2020-07-08}
 
 \begin{document}
 \maketitle
@@ -93,6 +93,9 @@
 \addcontentsline{toc}{chapter}{}
 
 \protect\hyperlink{contributions}{See a full list of contributors}
+
+A beta version of the platform will be online by early September.
+\href{https://forms.gle/yZivWcwijCzEhrBU6}{\textbf{Sign up here}} if you would like to be part of our beta in the fall.
 
 \includegraphics[width=1\linewidth]{stages}
 
@@ -495,7 +498,7 @@ In the paper you chose, find references to all \emph{data sources} used in the a
 
 Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., ``our information on regional minimum wages comes from the Bureau of Labor Statistics.'' This should be recorded as ``regional minimum wages from the Bureau of Labor Statistics'').
 
-Next, look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder\footnote{a relative location takes the form of \texttt{/folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that takes the form of \texttt{username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
+Next, look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{data files} in the available materials. Record their folder locations relative to the main reproduction folder\footnote{a relative location takes the form of \texttt{folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that takes the form of \texttt{/username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
 
 Record this information in this \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} (download it or make a copy for yourself), using the following structure:\\
 
@@ -517,7 +520,7 @@ A1
 
 cepr\_march\_2018.dta
 
-/data/
+data/
 
 ``DHS 2010 - 2013''
 
@@ -527,7 +530,7 @@ nicaraguaDHS\_2010.csv; boliviaDHS2010.csv; nicaraguaDHS\_2011.csv; nicaraguaDHS
 
 boliviaDHS\_2011.csv
 
-/rawdata/DHS/
+rawdata/DHS/
 
 ``2017 SAT scores''
 
@@ -535,7 +538,7 @@ boliviaDHS\_2011.csv
 
 Not available
 
-/data/to\_clean/
+data/to\_clean/
 
 \ldots{}
 
@@ -546,25 +549,6 @@ Not available
 \ldots{}
 
 \ldots{}
-
-\begin{verbatim}
-   Raw data information:
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | data_source          | page | data_files                                    | known_missing       | directory           |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | "Current Population  | A1    | cepr_march_2018.dta                          |                     | \data\              |
-      | Survey 2018"         |      |                                               |                     |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | "DHS 2010 - 2013"    | 4    | nicaraguaDHS_2010.csv;                        | boliviaDHS_2011.csv | \rawdata\DHS\       |
-      |                      |      | boliviaDHS_2010.csv; nicaraguaDHS_2011.csv;   |                     |                     |
-      |                      |      | nicaraguaDHS_2012.csv; boliviaDHS_2012.csv;   |                     |                     |
-      |                      |      | nicaraguaDHS_2013.csv; boliviaDHS_2013.csv    |                     |                     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | "2017 SAT scores"    | 4    | Not available                                 |                     | \data\to_clean\     |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-      | ...                  | ...  | ...                                           | ...                 | ...                 |
-      |----------------------|------|-----------------------------------------------|---------------------|---------------------|
-\end{verbatim}
 
 \textbf{Note:} lists if files in the data\_files and known\_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.
 
@@ -587,13 +571,13 @@ description
 
 final\_data.csv
 
-/analysis/fig1/
+analysis/fig1/
 
 data for figure1
 
 all\_waves.csv
 
-/final\_data/v1\_april/
+final\_data/v1\_april/
 
 data for region-level analysis
 
@@ -602,19 +586,6 @@ data for region-level analysis
 \ldots{}
 
 \ldots{}
-
-\begin{verbatim}
-   Analysis data information:
-      |----------------|-----------------------|--------------------------------|
-      | analysis_data  | location              | description                    |
-      |----------------|-----------------------|--------------------------------|
-      | final_data.csv | /analysis/fig1/       | data for figure1               |
-      |----------------|-----------------------|--------------------------------|
-      | all_waves.csv  | /final_data/v1_april/ | data for region-level analysis |
-      |----------------|-----------------------|--------------------------------|
-      | ...            | ...                   | ...                            |
-      |----------------|-----------------------|--------------------------------|
-\end{verbatim}
 
 \hypertarget{desc-scripts}{%
 \subsection{Describe the code scripts.}\label{desc-scripts}}
@@ -637,7 +608,7 @@ primary\_type
 
 output\_table1.do
 
-/code/analysis/
+code/analysis/
 
 analysis\_data01.csv
 
@@ -649,7 +620,7 @@ analysis
 
 data\_cleaning02.R
 
-/code/cleaning
+code/cleaning
 
 admin\_01raw.csv
 
@@ -670,23 +641,6 @@ cleaning
 \ldots{}
 
 \ldots{}
-
-\begin{verbatim}
-   Code files information:
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | file_name         | location         | inputs              | outputs             | description          | primary_type |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | output_table1.do  | /code/analysis/  | analysis_data01.csv | output1_part1.txt   | produces first part  | analysis     |
-      |                   |                  |                     |                     | of table 1           |              |
-      |                   |                  |                     |                     | (unformatted)        |              |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | data_cleaning02.R | /code/cleaninig/ | admin_01raw.csv     | analysis_data02.csv | removes outliers     | cleaning     |
-      |                   |                  |                     |                     | and missing vals     |              |
-      |                   |                  |                     |                     | from raw admin data  |              |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-      | ...               | ...              | ...                 | ...                 | ...                  | ...          |
-      |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-\end{verbatim}
 
 As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
 
@@ -860,24 +814,6 @@ analysis\_data.dta
 missing code
 
 unknown
-
-\begin{verbatim}
- Adding rows to code spreadsheet:
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | file_name         | location         | inputs              | outputs             | description          | primary_type |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | ...               | ...              | ...                 | ...                 | ...                  | ...          |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file1     | unknown          | cleaned_1.dta;      | merged_1_2.dta      | missing code         | unknown      |
-    |                   |                  | cleaned_2.dta       |                     |                      |              |
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file2     | unknown          | cleaned_3.dta;      | merged_3_4.dta      | missing code         | unknown      |
-    |                   |                  | cleaned_4.dta       |                     |                      |              |                  
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-    | missing_file3     | unknown          | merged_3_4.dta;    | analysis_data.dta   | missing code         | unknown      |
-    |                   |                  | merged_1_2.dta     |                     |                      |              |                  
-    |-------------------|------------------|---------------------|---------------------|----------------------|--------------|
-\end{verbatim}
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
