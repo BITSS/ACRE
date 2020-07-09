@@ -39,7 +39,6 @@ output:
 </style>
 ```
 
-
 <p style="text-align: center;"> 
   [See a full list of contributors](#contributions)
 </p>  
