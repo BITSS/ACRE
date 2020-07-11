@@ -1,4 +1,6 @@
-# adapt to ACRE repo contributions
+# retrieve ACRE repo contributions: adapted from Hadley Wickham's scripts to credit contributors to R for Data Science
+## contributors.R (https://github.com/hadley/r4ds/blob/master/contributors.R)
+## index.Rmd (https://github.com/hadley/r4ds/blob/master/index.rmd)
 
 library(tidyverse)
 library(gh)
@@ -24,8 +26,7 @@ more_info_json <- map(
 )
 more_info <- tibble(
   login = map_chr(more_info_json, "login", .default = NA),
-  name = map_chr(more_info_json, "name", .default = NA),
-  blog = map_chr(more_info_json, "blog", .default = NA) ### do we need each contributor's blog?
+  name = map_chr(more_info_json, "name", .default = NA)
 )
 
 # combine contributor information from both tables
@@ -35,8 +36,6 @@ acre_contribs_all <- acre_contribs%>%
 
 ### r4ds stops here and writes acre_contribs_all to a csv (adds new contributor info that didn't exist
 ### in the last version of contributors.csv)
-
-### below is located in code chunk in r4ds cover page
 
 library(glue)
 
