@@ -23,6 +23,20 @@ Major contributions to these guidelines will be acknowledged below. The ACRE pro
  - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)  
  - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision  
 
+The individuals below have contributed to the [ACRE GitHub repository](https://github.com/BITSS/ACRE):
+
+```{r github-contributors, echo=FALSE, results="asis", message=FALSE}
+# adapted from Hadley Wickham's scripts to credit contributors to R for Data Science
+## contributors.R (https://github.com/hadley/r4ds/blob/master/contributors.R)
+## index.Rmd (https://github.com/hadley/r4ds/blob/master/index.rmd)
+## R for Data Science license: https://creativecommons.org/licenses/by-nc-nd/3.0/us/
+
+library(tidyverse)
+gh_contributors <- readr::read_csv("contributors.csv", col_types = list())
+
+cat(str_c(gh_contributors$desc, collapse = ", "))
+```
+
 # Acknowledgments  
 
 Support for the development of these guidelines was provided by [Arnold Ventures](https://www.arnoldventures.org/).
