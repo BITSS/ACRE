@@ -1,5 +1,5 @@
 
-# Additional resources
+# Tips and Resources for Reproducible Workflow
 
 
 
@@ -13,8 +13,31 @@ Create a section with short summaries of great resources for comp. repro and inv
 ## Some summaries
 
 ### Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:  
-- TODO   
 
+Below are best practices to make work more reproducible:
+
+**Folder organization**
+
+- Create a master folder with a descriptive name for the project, which should contain:
+  - separate folders for programming script files, raw data, edited data, output, final paper or article text
+  - a README file: description of contents of each folder, and installation and operating instructions for a reproducer
+- Keep raw data intact: any edits or datasets generated using raw data should be stored in a "data" folder separate from the "raw data" folder
+- When naming a directory or file, stick to lowercase letters with underscores (instead of spaces) to avoid cross-operating-system issues
+
+**Efficient and readable programming**
+
+- Leave a record of any changes to the data: write code in the programming environment, instead of modifying data by hand in a spreadsheet or relying on point-and-click options
+- Include comments in code to explain changes, and save intermediate datsets used in analysis
+- Give variables names that are informative to future reproducers
+- Use relative directory paths, not absolute paths, so the work can be more easily reproduced from different computers.  
+
+**Version control**  
+
+- Maintain a written record of work:
+  - In a central research log: log activities in a single central file as often as work on the project is being done ("which team member writes what code, produces what output, edits which files, and when.")
+  - in script files: "who edited which part of which file when, and why"
+  - with a version control system, such as Git: Git records changes made to files, by whom, and when
+- A brief explanation of Git: users add changed files to the staging area, and then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
 
 
 ## Links
