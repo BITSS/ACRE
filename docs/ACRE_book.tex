@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-07-08}
+\date{2020-07-17}
 
 \begin{document}
 \maketitle
@@ -172,6 +172,12 @@ In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
 
 This exercise is part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and Dr.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
+
+\begin{figure}
+\href{https://www.youtube.com/embed/Xv1t8An2gPo}{\includegraphics[width=1\linewidth]{ACRE_book_files/figure-latex/weai-presentation-1} }\caption{BITSS Project Scientist Fernando Hoces de la Guardia provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.}\label{fig:weai-presentation}
+\end{figure}
+
+\href{https://bitss.github.io/WEAI2020_slides/}{View slides used for the presentation ``How to Teach Reproducibility in Classwork''}
 
 \hypertarget{beyond-binary-judgments}{%
 \section*{Beyond binary judgments}\label{beyond-binary-judgments}}
@@ -296,13 +302,13 @@ Note that in this stage, \emph{you are not expected to review the reproduction m
 \hypertarget{declare}{%
 \section{From candidate to declared paper}\label{declare}}
 
-At this point of the exercise, you are \emph{only validating the availability} of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean mean that you have found your declared paper).
+At this point of the exercise, you are \emph{only validating the availability} of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean that you have found your declared paper).
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Check whether previous reproduction attempts have beeen recorded in the ACRE Database for the paper (more on the ACRE Database in the next section).
+  Check whether previous reproduction attempts have been recorded in the ACRE Database for the paper (more on the ACRE Database in the next section).
 \item
   Check the journal or publisher's website, looking for materials named ``Data and Materials,'' ``Supplemental Materials,'' ``Reproduction/Replication Package/Materials,'' etc.\\
 \item
@@ -406,7 +412,7 @@ These are the elements you will need for the Scoping stage. \textbf{You now have
 
 Before you begin working on the three main stages of the reproduction exercise (Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).
 
-Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledgin that less experienceed researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
+Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledging that less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
 2 weeks (\textasciitilde{}10 days)
 
@@ -2303,8 +2309,2705 @@ Here are a some steps you can take if you believe you have experienced bullying,
                           └───[data] admin_01raw.csv  
 \end{verbatim}
 
-\hypertarget{additional-resources}{%
-\chapter{Additional resources}\label{additional-resources}}
+\hypertarget{possible-missing-code-to-produce-a-display-item.-reproduction-attempt-from-an-anonymous-student-conducted-as-part-of-the-graduate-development-economics-course-uc-berkeley}{%
+\subsection{Possible Missing Code to produce a display item. (Reproduction attempt from an anonymous student conducted as part of the Graduate Development Economics course, UC Berkeley)}\label{possible-missing-code-to-produce-a-display-item.-reproduction-attempt-from-an-anonymous-student-conducted-as-part-of-the-graduate-development-economics-course-uc-berkeley}}
+
+It's likely that this excerpt from the reproduction diagram shows a missing piece of code. cps2018.dta and cps\_march2017.dta are included as inputs in the reproduction kit, but never used to make a display item.
+
+\begin{verbatim}
+    PublicSalary.dta
+    |___MakeData2.do
+        |___Paper2_ProviderDataset.dta
+        |___Paper2_SSPDataset_wIRT_final.dta
+        |___PublicFacilitySurvey_clean.dta
+    
+    Table1.xml
+    |___Table1.do
+        |___ProviderData.dta
+        |   |___MakeData4.do
+        |       |___Paper2_PoExitDataset.dta
+        |       |___Paper2_ProviderDataset.dta
+        |       |___Paper2_SSPDataset_wIRT_final.dta
+        |___VillageDataset.dta
+        |   |___MakeData8.do
+        |       |___Paper2_HouseholdDataset1.dta
+        |       |___Paper2_VillageDataset.dta
+        |___HouseholdDataset.dta
+            |___MakeData8.do
+                |___Paper2_HouseholdDataset1.dta
+                |___Paper2_VillageDataset.dta
+    
+    Unusued data sources:
+    cps2018.dta
+    cps_march2017.dta  
+\end{verbatim}
+
+\hypertarget{long-complicated-tree.-reproduction-attempt-from-an-anonymous-student-conducted-as-part-of-the-graduate-development-economics-course-uc-berkeley}{%
+\subsection{Long, complicated tree. (Reproduction attempt from an anonymous student conducted as part of the Graduate Development Economics course, UC Berkeley)}\label{long-complicated-tree.-reproduction-attempt-from-an-anonymous-student-conducted-as-part-of-the-graduate-development-economics-course-uc-berkeley}}
+
+This Diagram shows that the productiong of a given display item may be very complicated, highlighting the helpfulness of the diagram builder as a visualization tool.
+
+\begin{verbatim}
+    results_days.dta
+    |___lightspaper_replication.do
+        |___isocvout.dbf
+        |   |___v4cvggini_bycountry_prep.aml
+        |       |___ctryliggrid
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___l%sy%nm
+        |       |   |___v4lightsprep.aml
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___gluareag_alpha1.asc
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tif
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___cvg%sy%
+        |       |   |___v4lightsprep.aml
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___gluareag_alpha1.asc
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tif
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___isocvgst.dbf
+        |       |   |___pre_aml.do
+        |       |       |___afpv1.csv
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___ctrynum.dbf
+        |       |___ginistrt.dbf
+        |           |___pre_aml.do
+        |               |___afpv1.csv
+        |               |   |___v4unzip.bat
+        |               |       |___rad_cal.tar
+        |               |       |___phys_geo.zip
+        |               |       |___world_avg_fixed.tfw
+        |               |       |___af_grumpv1_ppoints_csv.zip
+        |               |       |___gl_grumpv1_area_ascii_30.zip
+        |               |       |___malaria_ecology.zip
+        |               |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |               |       |___gasflares.zip
+        |               |       |___F%sy%.v4.tar
+        |               |       |___boundaries.zip
+        |               |___ctrynum.dbf
+        |___ginioutu.dbf
+        |   |___v4cvggini_bycountry_prep.aml
+        |       |___ctryliggrid
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___l%sy%nm
+        |       |   |___v4lightsprep.aml
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___gluareag_alpha1.asc
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tif
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___cvg%sy%
+        |       |   |___v4lightsprep.aml
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___gluareag_alpha1.asc
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___world_avg.tif
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___isocvgst.dbf
+        |       |   |___pre_aml.do
+        |       |       |___afpv1.csv
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___ctrynum.dbf
+        |       |___ginistrt.dbf
+        |           |___pre_aml.do
+        |               |___afpv1.csv
+        |               |   |___v4unzip.bat
+        |               |       |___rad_cal.tar
+        |               |       |___phys_geo.zip
+        |               |       |___world_avg_fixed.tfw
+        |               |       |___af_grumpv1_ppoints_csv.zip
+        |               |       |___gl_grumpv1_area_ascii_30.zip
+        |               |       |___malaria_ecology.zip
+        |               |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |               |       |___gasflares.zip
+        |               |       |___F%sy%.v4.tar
+        |               |       |___boundaries.zip
+        |               |___ctrynum.dbf
+        |___global_total_dn_uncal_longdiff9206.dta
+        |   |___v4lights_stataprep_uncal.do
+        |       |___ctryoutu.dbf
+        |       |   |___v4ctrytables_uncal.aml
+        |       |       |___ctryliggrid
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___l%sy%nm
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___cvg%sy%
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___gluareag
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___ctrynum.dbf
+        |       |       |___gasflares.shp
+        |       |       |   |___merge_gf.pyw
+        |       |       |       |___afprimates.csv
+        |       |       |       |   |___pre_aml.do
+        |       |       |       |       |___afpv1.csv
+        |       |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |       |___gasflares.zip
+        |       |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |       |___boundaries.zip
+        |       |       |       |       |___ctrynum.dbf
+        |       |       |       |___gas flares by country
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___glp00ag
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___dhselect.xls
+        |       |___wb_dq.xls
+        |       |___ctryout2.dbf
+        |       |   |___v4ctrytables_uncal.aml
+        |       |       |___ctryliggrid
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___l%sy%nm
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___cvg%sy%
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___gluareag
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___ctrynum.dbf
+        |       |       |___gasflares.shp
+        |       |       |   |___merge_gf.pyw
+        |       |       |       |___afprimates.csv
+        |       |       |       |   |___pre_aml.do
+        |       |       |       |       |___afpv1.csv
+        |       |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |       |___gasflares.zip
+        |       |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |       |___boundaries.zip
+        |       |       |       |       |___ctrynum.dbf
+        |       |       |       |___gas flares by country
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___glp00ag
+        |       |           |___v4unzip.bat
+        |       |               |___rad_cal.tar
+        |       |               |___phys_geo.zip
+        |       |               |___world_avg_fixed.tfw
+        |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |               |___malaria_ecology.zip
+        |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |___gasflares.zip
+        |       |               |___F%sy%.v4.tar
+        |       |               |___boundaries.zip
+        |       |___ginioutu.dbf
+        |       |   |___v4cvggini_bycountry_prep.aml
+        |       |       |___ctryliggrid
+        |       |       |   |___v4unzip.bat
+        |       |       |       |___rad_cal.tar
+        |       |       |       |___phys_geo.zip
+        |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |___malaria_ecology.zip
+        |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |___gasflares.zip
+        |       |       |       |___F%sy%.v4.tar
+        |       |       |       |___boundaries.zip
+        |       |       |___l%sy%nm
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___cvg%sy%
+        |       |       |   |___v4lightsprep.aml
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___gluareag_alpha1.asc
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___world_avg.tif
+        |       |       |           |___v4unzip.bat
+        |       |       |               |___rad_cal.tar
+        |       |       |               |___phys_geo.zip
+        |       |       |               |___world_avg_fixed.tfw
+        |       |       |               |___af_grumpv1_ppoints_csv.zip
+        |       |       |               |___gl_grumpv1_area_ascii_30.zip
+        |       |       |               |___malaria_ecology.zip
+        |       |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |               |___gasflares.zip
+        |       |       |               |___F%sy%.v4.tar
+        |       |       |               |___boundaries.zip
+        |       |       |___isocvgst.dbf
+        |       |       |   |___pre_aml.do
+        |       |       |       |___afpv1.csv
+        |       |       |       |   |___v4unzip.bat
+        |       |       |       |       |___rad_cal.tar
+        |       |       |       |       |___phys_geo.zip
+        |       |       |       |       |___world_avg_fixed.tfw
+        |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |       |       |___malaria_ecology.zip
+        |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |       |       |___gasflares.zip
+        |       |       |       |       |___F%sy%.v4.tar
+        |       |       |       |       |___boundaries.zip
+        |       |       |       |___ctrynum.dbf
+        |       |       |___ginistrt.dbf
+        |       |           |___pre_aml.do
+        |       |               |___afpv1.csv
+        |       |               |   |___v4unzip.bat
+        |       |               |       |___rad_cal.tar
+        |       |               |       |___phys_geo.zip
+        |       |               |       |___world_avg_fixed.tfw
+        |       |               |       |___af_grumpv1_ppoints_csv.zip
+        |       |               |       |___gl_grumpv1_area_ascii_30.zip
+        |       |               |       |___malaria_ecology.zip
+        |       |               |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |               |       |___gasflares.zip
+        |       |               |       |___F%sy%.v4.tar
+        |       |               |       |___boundaries.zip
+        |       |               |___ctrynum.dbf
+        |       |___wdi_limited.dta
+        |       |___imf_dds.xls
+        |       |___ginistata_uncal.dta
+        |           |___v4ginicalc_uncal.do
+        |               |___ginioutu.dbf
+        |                   |___v4cvggini_bycountry_prep.aml
+        |                       |___ctryliggrid
+        |                       |   |___v4unzip.bat
+        |                       |       |___rad_cal.tar
+        |                       |       |___phys_geo.zip
+        |                       |       |___world_avg_fixed.tfw
+        |                       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |___malaria_ecology.zip
+        |                       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |___gasflares.zip
+        |                       |       |___F%sy%.v4.tar
+        |                       |       |___boundaries.zip
+        |                       |___l%sy%nm
+        |                       |   |___v4lightsprep.aml
+        |                       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___world_avg.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___gluareag_alpha1.asc
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___world_avg.tif
+        |                       |           |___v4unzip.bat
+        |                       |               |___rad_cal.tar
+        |                       |               |___phys_geo.zip
+        |                       |               |___world_avg_fixed.tfw
+        |                       |               |___af_grumpv1_ppoints_csv.zip
+        |                       |               |___gl_grumpv1_area_ascii_30.zip
+        |                       |               |___malaria_ecology.zip
+        |                       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |               |___gasflares.zip
+        |                       |               |___F%sy%.v4.tar
+        |                       |               |___boundaries.zip
+        |                       |___cvg%sy%
+        |                       |   |___v4lightsprep.aml
+        |                       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___world_avg.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___gluareag_alpha1.asc
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.cf_cvg.tif
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___world_avg.tif
+        |                       |           |___v4unzip.bat
+        |                       |               |___rad_cal.tar
+        |                       |               |___phys_geo.zip
+        |                       |               |___world_avg_fixed.tfw
+        |                       |               |___af_grumpv1_ppoints_csv.zip
+        |                       |               |___gl_grumpv1_area_ascii_30.zip
+        |                       |               |___malaria_ecology.zip
+        |                       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |               |___gasflares.zip
+        |                       |               |___F%sy%.v4.tar
+        |                       |               |___boundaries.zip
+        |                       |___isocvgst.dbf
+        |                       |   |___pre_aml.do
+        |                       |       |___afpv1.csv
+        |                       |       |   |___v4unzip.bat
+        |                       |       |       |___rad_cal.tar
+        |                       |       |       |___phys_geo.zip
+        |                       |       |       |___world_avg_fixed.tfw
+        |                       |       |       |___af_grumpv1_ppoints_csv.zip
+        |                       |       |       |___gl_grumpv1_area_ascii_30.zip
+        |                       |       |       |___malaria_ecology.zip
+        |                       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                       |       |       |___gasflares.zip
+        |                       |       |       |___F%sy%.v4.tar
+        |                       |       |       |___boundaries.zip
+        |                       |       |___ctrynum.dbf
+        |                       |___ginistrt.dbf
+        |                           |___pre_aml.do
+        |                               |___afpv1.csv
+        |                               |   |___v4unzip.bat
+        |                               |       |___rad_cal.tar
+        |                               |       |___phys_geo.zip
+        |                               |       |___world_avg_fixed.tfw
+        |                               |       |___af_grumpv1_ppoints_csv.zip
+        |                               |       |___gl_grumpv1_area_ascii_30.zip
+        |                               |       |___malaria_ecology.zip
+        |                               |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |                               |       |___gasflares.zip
+        |                               |       |___F%sy%.v4.tar
+        |                               |       |___boundaries.zip
+        |                               |___ctrynum.dbf
+        |___samptab.txt
+        |   |___v4lightsprep.aml
+        |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___world_avg.tfw
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___gluareag_alpha1.asc
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___F%sy%.v4b_web.cf_cvg.tif
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___F%sy%.v4b_web.cf_cvg.tfw
+        |       |   |___v4unzip.bat
+        |       |       |___rad_cal.tar
+        |       |       |___phys_geo.zip
+        |       |       |___world_avg_fixed.tfw
+        |       |       |___af_grumpv1_ppoints_csv.zip
+        |       |       |___gl_grumpv1_area_ascii_30.zip
+        |       |       |___malaria_ecology.zip
+        |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+        |       |       |___gasflares.zip
+        |       |       |___F%sy%.v4.tar
+        |       |       |___boundaries.zip
+        |       |___world_avg.tif
+        |           |___v4unzip.bat
+        |               |___rad_cal.tar
+        |               |___phys_geo.zip
+        |               |___world_avg_fixed.tfw
+        |               |___af_grumpv1_ppoints_csv.zip
+        |               |___gl_grumpv1_area_ascii_30.zip
+        |               |___malaria_ecology.zip
+        |               |___gl_gpwv3_pcount_00_wrk_25.zip
+        |               |___gasflares.zip
+        |               |___F%sy%.v4.tar
+        |               |___boundaries.zip
+        |___global_total_dn_uncal.dta
+            |___v4lights_stataprep_uncal.do
+                |___ctryoutu.dbf
+                |   |___v4ctrytables_uncal.aml
+                |       |___ctryliggrid
+                |       |   |___v4unzip.bat
+                |       |       |___rad_cal.tar
+                |       |       |___phys_geo.zip
+                |       |       |___world_avg_fixed.tfw
+                |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |___malaria_ecology.zip
+                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |___gasflares.zip
+                |       |       |___F%sy%.v4.tar
+                |       |       |___boundaries.zip
+                |       |___l%sy%nm
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___cvg%sy%
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___gluareag
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___ctrynum.dbf
+                |       |___gasflares.shp
+                |       |   |___merge_gf.pyw
+                |       |       |___afprimates.csv
+                |       |       |   |___pre_aml.do
+                |       |       |       |___afpv1.csv
+                |       |       |       |   |___v4unzip.bat
+                |       |       |       |       |___rad_cal.tar
+                |       |       |       |       |___phys_geo.zip
+                |       |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |       |___malaria_ecology.zip
+                |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |       |___gasflares.zip
+                |       |       |       |       |___F%sy%.v4.tar
+                |       |       |       |       |___boundaries.zip
+                |       |       |       |___ctrynum.dbf
+                |       |       |___gas flares by country
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___glp00ag
+                |           |___v4unzip.bat
+                |               |___rad_cal.tar
+                |               |___phys_geo.zip
+                |               |___world_avg_fixed.tfw
+                |               |___af_grumpv1_ppoints_csv.zip
+                |               |___gl_grumpv1_area_ascii_30.zip
+                |               |___malaria_ecology.zip
+                |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |               |___gasflares.zip
+                |               |___F%sy%.v4.tar
+                |               |___boundaries.zip
+                |___dhselect.xls
+                |___wb_dq.xls
+                |___ctryout2.dbf
+                |   |___v4ctrytables_uncal.aml
+                |       |___ctryliggrid
+                |       |   |___v4unzip.bat
+                |       |       |___rad_cal.tar
+                |       |       |___phys_geo.zip
+                |       |       |___world_avg_fixed.tfw
+                |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |___malaria_ecology.zip
+                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |___gasflares.zip
+                |       |       |___F%sy%.v4.tar
+                |       |       |___boundaries.zip
+                |       |___l%sy%nm
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___cvg%sy%
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___gluareag
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___ctrynum.dbf
+                |       |___gasflares.shp
+                |       |   |___merge_gf.pyw
+                |       |       |___afprimates.csv
+                |       |       |   |___pre_aml.do
+                |       |       |       |___afpv1.csv
+                |       |       |       |   |___v4unzip.bat
+                |       |       |       |       |___rad_cal.tar
+                |       |       |       |       |___phys_geo.zip
+                |       |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |       |___malaria_ecology.zip
+                |       |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |       |___gasflares.zip
+                |       |       |       |       |___F%sy%.v4.tar
+                |       |       |       |       |___boundaries.zip
+                |       |       |       |___ctrynum.dbf
+                |       |       |___gas flares by country
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___glp00ag
+                |           |___v4unzip.bat
+                |               |___rad_cal.tar
+                |               |___phys_geo.zip
+                |               |___world_avg_fixed.tfw
+                |               |___af_grumpv1_ppoints_csv.zip
+                |               |___gl_grumpv1_area_ascii_30.zip
+                |               |___malaria_ecology.zip
+                |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |               |___gasflares.zip
+                |               |___F%sy%.v4.tar
+                |               |___boundaries.zip
+                |___ginioutu.dbf
+                |   |___v4cvggini_bycountry_prep.aml
+                |       |___ctryliggrid
+                |       |   |___v4unzip.bat
+                |       |       |___rad_cal.tar
+                |       |       |___phys_geo.zip
+                |       |       |___world_avg_fixed.tfw
+                |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |___malaria_ecology.zip
+                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |___gasflares.zip
+                |       |       |___F%sy%.v4.tar
+                |       |       |___boundaries.zip
+                |       |___l%sy%nm
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___cvg%sy%
+                |       |   |___v4lightsprep.aml
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___gluareag_alpha1.asc
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tif
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___F%sy%.v4b_web.cf_cvg.tfw
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___world_avg.tif
+                |       |           |___v4unzip.bat
+                |       |               |___rad_cal.tar
+                |       |               |___phys_geo.zip
+                |       |               |___world_avg_fixed.tfw
+                |       |               |___af_grumpv1_ppoints_csv.zip
+                |       |               |___gl_grumpv1_area_ascii_30.zip
+                |       |               |___malaria_ecology.zip
+                |       |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |               |___gasflares.zip
+                |       |               |___F%sy%.v4.tar
+                |       |               |___boundaries.zip
+                |       |___isocvgst.dbf
+                |       |   |___pre_aml.do
+                |       |       |___afpv1.csv
+                |       |       |   |___v4unzip.bat
+                |       |       |       |___rad_cal.tar
+                |       |       |       |___phys_geo.zip
+                |       |       |       |___world_avg_fixed.tfw
+                |       |       |       |___af_grumpv1_ppoints_csv.zip
+                |       |       |       |___gl_grumpv1_area_ascii_30.zip
+                |       |       |       |___malaria_ecology.zip
+                |       |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |       |       |       |___gasflares.zip
+                |       |       |       |___F%sy%.v4.tar
+                |       |       |       |___boundaries.zip
+                |       |       |___ctrynum.dbf
+                |       |___ginistrt.dbf
+                |           |___pre_aml.do
+                |               |___afpv1.csv
+                |               |   |___v4unzip.bat
+                |               |       |___rad_cal.tar
+                |               |       |___phys_geo.zip
+                |               |       |___world_avg_fixed.tfw
+                |               |       |___af_grumpv1_ppoints_csv.zip
+                |               |       |___gl_grumpv1_area_ascii_30.zip
+                |               |       |___malaria_ecology.zip
+                |               |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                |               |       |___gasflares.zip
+                |               |       |___F%sy%.v4.tar
+                |               |       |___boundaries.zip
+                |               |___ctrynum.dbf
+                |___wdi_limited.dta
+                |___imf_dds.xls
+                |___ginistata_uncal.dta
+                    |___v4ginicalc_uncal.do
+                        |___ginioutu.dbf
+                            |___v4cvggini_bycountry_prep.aml
+                                |___ctryliggrid
+                                |   |___v4unzip.bat
+                                |       |___rad_cal.tar
+                                |       |___phys_geo.zip
+                                |       |___world_avg_fixed.tfw
+                                |       |___af_grumpv1_ppoints_csv.zip
+                                |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |___malaria_ecology.zip
+                                |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |___gasflares.zip
+                                |       |___F%sy%.v4.tar
+                                |       |___boundaries.zip
+                                |___l%sy%nm
+                                |   |___v4lightsprep.aml
+                                |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___world_avg.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___gluareag_alpha1.asc
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.cf_cvg.tif
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.cf_cvg.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___world_avg.tif
+                                |           |___v4unzip.bat
+                                |               |___rad_cal.tar
+                                |               |___phys_geo.zip
+                                |               |___world_avg_fixed.tfw
+                                |               |___af_grumpv1_ppoints_csv.zip
+                                |               |___gl_grumpv1_area_ascii_30.zip
+                                |               |___malaria_ecology.zip
+                                |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |               |___gasflares.zip
+                                |               |___F%sy%.v4.tar
+                                |               |___boundaries.zip
+                                |___cvg%sy%
+                                |   |___v4lightsprep.aml
+                                |       |___F%sy%.v4b_web.stable_lights.avg_vis.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.stable_lights.avg_vis.tif
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___world_avg.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___gluareag_alpha1.asc
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.cf_cvg.tif
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___F%sy%.v4b_web.cf_cvg.tfw
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___world_avg.tif
+                                |           |___v4unzip.bat
+                                |               |___rad_cal.tar
+                                |               |___phys_geo.zip
+                                |               |___world_avg_fixed.tfw
+                                |               |___af_grumpv1_ppoints_csv.zip
+                                |               |___gl_grumpv1_area_ascii_30.zip
+                                |               |___malaria_ecology.zip
+                                |               |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |               |___gasflares.zip
+                                |               |___F%sy%.v4.tar
+                                |               |___boundaries.zip
+                                |___isocvgst.dbf
+                                |   |___pre_aml.do
+                                |       |___afpv1.csv
+                                |       |   |___v4unzip.bat
+                                |       |       |___rad_cal.tar
+                                |       |       |___phys_geo.zip
+                                |       |       |___world_avg_fixed.tfw
+                                |       |       |___af_grumpv1_ppoints_csv.zip
+                                |       |       |___gl_grumpv1_area_ascii_30.zip
+                                |       |       |___malaria_ecology.zip
+                                |       |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                |       |       |___gasflares.zip
+                                |       |       |___F%sy%.v4.tar
+                                |       |       |___boundaries.zip
+                                |       |___ctrynum.dbf
+                                |___ginistrt.dbf
+                                    |___pre_aml.do
+                                        |___afpv1.csv
+                                        |   |___v4unzip.bat
+                                        |       |___rad_cal.tar
+                                        |       |___phys_geo.zip
+                                        |       |___world_avg_fixed.tfw
+                                        |       |___af_grumpv1_ppoints_csv.zip
+                                        |       |___gl_grumpv1_area_ascii_30.zip
+                                        |       |___malaria_ecology.zip
+                                        |       |___gl_gpwv3_pcount_00_wrk_25.zip
+                                        |       |___gasflares.zip
+                                        |       |___F%sy%.v4.tar
+                                        |       |___boundaries.zip
+                                        |___ctrynum.dbf
+\end{verbatim}
+
+\hypertarget{tips-and-resources-for-reproducible-workflow}{%
+\chapter{Tips and Resources for Reproducible Workflow}\label{tips-and-resources-for-reproducible-workflow}}
 
 \begin{itemize}
 \tightlist
@@ -2320,10 +5023,60 @@ Create a section with short summaries of great resources for comp. repro and inv
 \hypertarget{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}{%
 \subsection{\texorpdfstring{Summary on reproducible workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}}
 
+Below are best practices to make work more reproducible:
+
+\textbf{Folder organization}
+
 \begin{itemize}
 \tightlist
 \item
-  TODO
+  Create a master folder with a descriptive name for the project, which should contain:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    separate folders for programming script files, raw data, edited data, output, final paper or article text
+  \item
+    a README file: description of contents of each folder, and installation and operating instructions for a reproducer
+  \end{itemize}
+\item
+  Keep raw data intact: any edits or datasets generated using raw data should be stored in a ``data'' folder separate from the ``raw data'' folder
+\item
+  When naming a directory or file, stick to lowercase letters with underscores (instead of spaces) to avoid cross-operating-system issues
+\end{itemize}
+
+\textbf{Efficient and readable programming}
+
+\begin{itemize}
+\tightlist
+\item
+  Leave a record of any changes to the data: write code in the programming environment, instead of modifying data by hand in a spreadsheet or relying on point-and-click options
+\item
+  Include comments in code to explain changes, and save intermediate datsets used in analysis
+\item
+  Give variables names that are informative to future reproducers
+\item
+  Use relative directory paths, not absolute paths, so the work can be more easily reproduced from different computers.
+\end{itemize}
+
+\textbf{Version control}
+
+\begin{itemize}
+\tightlist
+\item
+  Maintain a written record of work:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In a central research log: log activities in a single central file as often as work on the project is being done (``which team member writes what code, produces what output, edits which files, and when.'')
+  \item
+    in script files: ``who edited which part of which file when, and why''
+  \item
+    with a version control system, such as Git: Git records changes made to files, by whom, and when
+  \end{itemize}
+\item
+  A brief explanation of Git: users add changed files to the staging area, and then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
 \end{itemize}
 
 \hypertarget{links}{%
@@ -2404,6 +5157,10 @@ Major contributions to these guidelines will be acknowledged below. The ACRE pro
   Lars Vilhuber -- Conceptualization, Funding acquisition, Supervision
 \end{itemize}
 
+The individuals below have contributed to the \href{https://github.com/BITSS/ACRE}{ACRE GitHub repository}:
+
+\href{https://github.com/abogdanoski}{@abogdanoski}, Emma Ng (\href{https://github.com/em-ng21}{@em-ng21}), Fernando Hoces de la Guardia (\href{https://github.com/fhoces}{@fhoces}), Joel Ferguson (\href{https://github.com/joelferg}{@joelferg}), Katie Hoeberling (\href{https://github.com/khoeberling}{@khoeberling}), Michael Weiss (\href{https://github.com/mweiss}{@mweiss})
+
 \hypertarget{acknowledgments}{%
 \chapter{Acknowledgments}\label{acknowledgments}}
 
@@ -2415,32 +5172,69 @@ Support for the development of these guidelines was provided by \href{https://ww
 \hypertarget{concepts-in-reproducibility}{%
 \section{Concepts in reproducibility}\label{concepts-in-reproducibility}}
 
-\#\#Concepts in reproducibility
-- \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).
-- \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''
-- \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.
-- \textbf{Data citation} -- The practice of citing a dataset, rather than just the paper in which a dataset was used. This helps other researchers find data, and rewards researchers who share data. Find guidance on data citation \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.
-- \textbf{Data sharing} -- Making the data used in an analysis widely available to others, ideally through a trusted public repository/archive.
-- \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''
-- \textbf{Disclosure} -- In addition to publicly declaring all potential conflicts of interest, researchers should detail all the ways in which they test a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in appendices or supplementary material if room is limited in the body of the text.
-- \textbf{Intermediate data} -- Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
-- \textbf{Literate programming} -- Writing code to be read and easily understood by a human. This best practice can make a researcher's code more easily reproducible.
-- \textbf{Pre-specification} -- The act of detailing the method of analysis before actually beginning data analysis.
-- \textbf{Processed data} -- Raw data that have gone through any transformation other than the removal of PII.
-- \textbf{Raw data} -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.
-- \textbf{(Trial) registry} -- A database of registered studies or trials, for example the AEA RCT Registry or clinicaltrials.gov. Some of the largest registries only accept randomized trials, hence the frequent discussion of `trial registries. \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status. Registrations are time-stamped.
-- \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to check if the published results are obtained. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
-- \textbf{Reproducibility} -- A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
-- \textbf{Reproduction package} -- A collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as 'original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you are will not be assessing the quality of its content at this stage.
-" - \textbf{Researcher degrees of freedom} -- The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching, covariate adjustment, or selective reporting.
-- \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
-- \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.
-``- \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.''
-- \textbf{Version control} -- The act of tracking every change made to a computer file. This is quite useful for empirical researchers who may edit their programming code often.
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).\\
+\item
+  \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
+\item
+  \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
+\item
+  \textbf{Data citation} -- The practice of citing a dataset, rather than just the paper in which a dataset was used. This helps other researchers find data, and rewards researchers who share data. Find guidance on data citation \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
+\item
+  \textbf{Data sharing} -- Making the data used in an analysis widely available to others, ideally through a trusted public repository/archive.\\
+\item
+  \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
+\item
+  \textbf{Disclosure} -- In addition to publicly declaring all potential conflicts of interest, researchers should detail all the ways in which they test a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in appendices or supplementary material if room is limited in the body of the text.
+\item
+  \textbf{Intermediate data} -- Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
+\item
+  \textbf{Literate programming} -- Writing code to be read and easily understood by a human. This best practice can make a researcher's code more easily reproducible.
+\item
+  \textbf{Pre-specification} -- The act of detailing the method of analysis before actually beginning data analysis.
+\item
+  \textbf{Processed data} -- Raw data that have gone through any transformation other than the removal of PII.\\
+\item
+  \textbf{Raw data} -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.\\
+\item
+  \textbf{(Trial) registry} -- A database of registered studies or trials, for example the AEA RCT Registry or clinicaltrials.gov. Some of the largest registries only accept randomized trials, hence the frequent discussion of `trial registries. \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status. Registrations are time-stamped.
+\item
+  \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to check if the published results are obtained. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
+\item
+  \textbf{Reproducibility} -- A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
+\item
+  \textbf{Reproduction package} -- A collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as `original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you will not be assessing the quality of its content at this stage.
+\item
+  \textbf{Researcher degrees of freedom} -- The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching, covariate adjustment, or selective reporting.
+\item
+  \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
+\item
+  \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.
+  ``- \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.''
+\item
+  \textbf{Version control} -- The act of tracking every change made to a computer file. This is quite useful for empirical researchers who may edit their programming code often.
+\end{itemize}
 
-\#\#Concepts in the ACRE exercise and the platform
-- \textbf{Candidate paper} is a paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
-- \textbf{Declared paper} is the paper that the reproducer analyzes throughout the exercise.
+\hypertarget{concepts-in-the-acre-exercise-and-the-platform}{%
+\section{Concepts in the ACRE exercise and the platform}\label{concepts-in-the-acre-exercise-and-the-platform}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Analysis code} -- A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.\\
+\item
+  \textbf{Candidate paper} -- A paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
+\item
+  \textbf{Cleaning code} -- A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).\\
+\item
+  \textbf{Declared paper} -- The paper that the reproducer analyzes throughout the exercise.
+\item
+  \textbf{Display item} -- {[}DEFINITION{]}\\
+\item
+  \textbf{Reproduction tree/ diagram} -- {[}DEFINITION{]}
+\end{itemize}
 
 \bibliography{book.bib,packages.bib}
 
