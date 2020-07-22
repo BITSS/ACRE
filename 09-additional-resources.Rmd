@@ -3,20 +3,15 @@
 
 
 
-
-
- - **Coding errors:**  A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the [ACRE procedure to report coding errors](ADD LINK).  
-
-
 Create a section with short summaries of great resources for comp. repro and invite reader to contribute. 
 
 ## Some summaries
 
 ### Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:  
 
-Below are best practices to make work more reproducible:
-
 **Folder organization**
+
+Basic file organization is a necessary component of a reproducible workflow. The following structure is suggested, but can be changed to accommodate different reproducers or different types of research. The name of the master folder should be easy to read and meaningful to all collaborators on the the project. 
 
 - Create a master folder with a descriptive name for the project, which should contain:
   - separate folders for programming script files, raw data, edited data, output, final paper or article text
@@ -26,17 +21,21 @@ Below are best practices to make work more reproducible:
 
 **Efficient and readable programming**
 
+The core of programming for reproducibility is to write code wherever possible. Writing scripts leaves a record of any changes to data, which allows other researchers to reproduce work exactly. It is also helpful to leave comments in code in order to explain the reasoning behind changes or any gaps left if using point-and-click methods is necessary.    
+
 - Leave a record of any changes to the data: write code in the programming environment, instead of modifying data by hand in a spreadsheet or relying on point-and-click options
-- Include comments in code to explain changes, and save intermediate datsets used in analysis
+- Include comments in code to explain changes, and save intermediate datasets used in analysis
 - Give variables names that are informative to future reproducers
 - Use relative directory paths, not absolute paths, so the work can be more easily reproduced from different computers.  
 
 **Version control**  
 
+Version control software is used to keep a record of changes to project files. Although it is possible to manually track changes in a central research log or as notes in individual script files, many social scientists recognize the benefits of a distributed version control system. Because each collaborator is able to have a local copy of the project's entire work history, these systems are particularly suited to collaborative projects. Below are descriptions of methods to manually track changes and a brief explanation of a popular distributed version control system, Git.  
+
 - Maintain a written record of work:
-  - In a central research log: log activities in a single central file as often as work on the project is being done ("which team member writes what code, produces what output, edits which files, and when.")
-  - in script files: "who edited which part of which file when, and why"
-  - with a version control system, such as Git: Git records changes made to files, by whom, and when
+  - In a central research log: log activities in a single central file as often as work on the project is being done (keep track of "which team member writes what code, produces what output, edits which files, and when.")
+  - In individual script files: record "who edited which part of which file when, and why"
+  - With a version control system, such as Git: Git records changes made to files, by whom, and when
 - A brief explanation of Git: users add changed files to the staging area, and then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
 
 
