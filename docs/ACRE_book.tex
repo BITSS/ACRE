@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-07-17}
+\date{2020-07-21}
 
 \begin{document}
 \maketitle
@@ -5177,15 +5177,23 @@ Support for the development of these guidelines was provided by \href{https://ww
 \item
   \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).\\
 \item
-  \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
+  \textbf{Claim (concept)} -- A major hypothesis in a paper, whose results are presented in one or more \textbf{display items}. {[}ALEKS/FERNANDO{]}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
+  \item
+    \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
+  \end{itemize}
+\item
+  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}. {[}ALEKS/FERNANDO{]}
 \item
   \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
 \item
   \textbf{Data citation} -- The practice of citing a dataset, rather than just the paper in which a dataset was used. This helps other researchers find data, and rewards researchers who share data. Find guidance on data citation \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
 \item
   \textbf{Data sharing} -- Making the data used in an analysis widely available to others, ideally through a trusted public repository/archive.\\
-\item
-  \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
 \item
   \textbf{Disclosure} -- In addition to publicly declaring all potential conflicts of interest, researchers should detail all the ways in which they test a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in appendices or supplementary material if room is limited in the body of the text.
 \item
@@ -5211,8 +5219,13 @@ Support for the development of these guidelines was provided by \href{https://ww
 \item
   \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
 \item
-  \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.
-  ``- \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.''
+  \textbf{Reasonable specification} -- {[}ALEKS/FERNANDO{]}
+\item
+  \textbf{Specification} -- {[}ALEKS/FERNANDO{]}
+\item
+  \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.\\
+\item
+  \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.\\
 \item
   \textbf{Version control} -- The act of tracking every change made to a computer file. This is quite useful for empirical researchers who may edit their programming code often.
 \end{itemize}
@@ -5231,9 +5244,9 @@ Support for the development of these guidelines was provided by \href{https://ww
 \item
   \textbf{Declared paper} -- The paper that the reproducer analyzes throughout the exercise.
 \item
-  \textbf{Display item} -- {[}DEFINITION{]}\\
+  \textbf{Display item} -- A display item is a figure or table that presents results described in the paper. Each display item contains several \textbf{specifications}. {[}ALEKS/FERNANDO{]}\\
 \item
-  \textbf{Reproduction tree/ diagram} -- {[}DEFINITION{]}
+  \textbf{Reproduction tree/ diagram} -- A diagram generated by the ACRE Diagram Builder which represents the available information on the workflow behind a specific output. The diagram allows reproducers to trace a display item to its primary sources. {[}ALEKS/FERNANDO{]}
 \end{itemize}
 
 \bibliography{book.bib,packages.bib}
