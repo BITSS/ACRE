@@ -2,16 +2,11 @@
 # Tips and Resources for Reproducible Workflow
 
 
-
-Create a section with short summaries of great resources for comp. repro and invite reader to contribute. 
-
-## Some summaries
-
-### Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:  
+## Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:  
 
 **Folder organization**
 
-Basic file organization is a necessary component of a reproducible workflow. The following structure is suggested, but can be changed to accommodate different reproducers or different types of research. The name of the master folder should be easy to read and meaningful to all collaborators on the the project. 
+Basic file organization is a necessary component of a reproducible workflow. The following structure is suggested, but can be changed to accommodate different reproducers or different types of research. The name of the master folder should be easy to read and meaningful to all collaborators on the the project.
 
 - Create a master folder with a descriptive name for the project, which should contain:
   - separate folders for programming script files, raw data, edited data, output, final paper or article text
@@ -58,6 +53,3 @@ TODO: Add and classify
   - [Software Carpentry tutorial from the command line](https://swcarpentry.github.io/git-novice/)
 - [Open Science Framework (OSF)](https://osf.io)
 - [R for Stata users](https://github.com/hblackburn/R4Econ/blob/master/Resources.md)  
-
-
-
