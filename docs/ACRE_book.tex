@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-07-21}
+\date{2020-07-22}
 
 \begin{document}
 \maketitle
@@ -5009,23 +5009,12 @@ This Diagram shows that the productiong of a given display item may be very comp
 \hypertarget{tips-and-resources-for-reproducible-workflow}{%
 \chapter{Tips and Resources for Reproducible Workflow}\label{tips-and-resources-for-reproducible-workflow}}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Coding errors:} A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
-\end{itemize}
-
-Create a section with short summaries of great resources for comp. repro and invite reader to contribute.
-
-\hypertarget{some-summaries}{%
-\section{Some summaries}\label{some-summaries}}
-
 \hypertarget{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}{%
-\subsection{\texorpdfstring{Summary on reproducible workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}}
-
-Below are best practices to make work more reproducible:
+\section{\texorpdfstring{Summary on reproducible workflow (Chapter 11) from \citet{christensen2019transparent}:}{Summary on reproducible workflow (Chapter 11) from @christensen2019transparent:}}\label{summary-on-reproducible-workflow-chapter-11-from-christensen2019transparent}}
 
 \textbf{Folder organization}
+
+Basic file organization is a necessary component of a reproducible workflow. The following structure is suggested, but can be changed to accommodate different reproducers or different types of research. The name of the master folder should be easy to read and meaningful to all collaborators on the the project.
 
 \begin{itemize}
 \tightlist
@@ -5047,12 +5036,14 @@ Below are best practices to make work more reproducible:
 
 \textbf{Efficient and readable programming}
 
+The core of programming for reproducibility is to write code wherever possible. Writing scripts leaves a record of any changes to data, which allows other researchers to reproduce work exactly. It is also helpful to leave comments in code in order to explain the reasoning behind changes or any gaps left if using point-and-click methods is necessary.
+
 \begin{itemize}
 \tightlist
 \item
   Leave a record of any changes to the data: write code in the programming environment, instead of modifying data by hand in a spreadsheet or relying on point-and-click options
 \item
-  Include comments in code to explain changes, and save intermediate datsets used in analysis
+  Include comments in code to explain changes, and save intermediate datasets used in analysis
 \item
   Give variables names that are informative to future reproducers
 \item
@@ -5060,6 +5051,8 @@ Below are best practices to make work more reproducible:
 \end{itemize}
 
 \textbf{Version control}
+
+Version control software is used to keep a record of changes to project files. Although it is possible to manually track changes in a central research log or as notes in individual script files, many social scientists recognize the benefits of a distributed version control system. Because each collaborator is able to have a local copy of the project's entire work history, these systems are particularly suited to collaborative projects. Below are descriptions of methods to manually track changes and a brief explanation of a popular distributed version control system, Git.
 
 \begin{itemize}
 \tightlist
@@ -5069,11 +5062,11 @@ Below are best practices to make work more reproducible:
   \begin{itemize}
   \tightlist
   \item
-    In a central research log: log activities in a single central file as often as work on the project is being done (``which team member writes what code, produces what output, edits which files, and when.'')
+    In a central research log: log activities in a single central file as often as work on the project is being done (keep track of ``which team member writes what code, produces what output, edits which files, and when.'')
   \item
-    in script files: ``who edited which part of which file when, and why''
+    In individual script files: record ``who edited which part of which file when, and why''
   \item
-    with a version control system, such as Git: Git records changes made to files, by whom, and when
+    With a version control system, such as Git: Git records changes made to files, by whom, and when
   \end{itemize}
 \item
   A brief explanation of Git: users add changed files to the staging area, and then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
