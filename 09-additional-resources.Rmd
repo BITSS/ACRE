@@ -28,6 +28,7 @@ The core of programming for reproducibility is to write code wherever possible. 
 Version control software is used to keep a record of changes to project files. Although it is possible to manually track changes in a central research log or as notes in individual script files, many social scientists recognize the benefits of a distributed version control system. Because each collaborator is able to have a local copy of the project's entire work history, these systems are particularly suited to collaborative projects. Below are descriptions of methods to manually track changes and a brief explanation of a popular distributed version control system, Git.  
 
 - Maintain a written record of work:
+
   - In a central research log: log activities in a single central file as often as work on the project is being done (keep track of "which team member writes what code, produces what output, edits which files, and when.")
   - In individual script files: record "who edited which part of which file when, and why"
   - With a version control system, such as Git: Git records changes made to files, by whom, and when
