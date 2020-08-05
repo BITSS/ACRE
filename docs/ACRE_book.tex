@@ -1,55 +1,42 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[
-]{book}
+\documentclass[]{book}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
-% Use upquote if available, for straight quotes in verbatim environments
+% use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
 \hypersetup{
-  pdftitle={Guidelines for Verification of   Computational Reproducibility in Economics},
-  pdfauthor={ACRE Team},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
+            pdftitle={Guidelines for Verification of   Computational Reproducibility in Economics},
+            pdfauthor={ACRE Team},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
 \usepackage{longtable,booktabs}
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -59,28 +46,40 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-\usepackage{booktabs}
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-\title{Guidelines for Verification of Computational Reproducibility in Economics}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{booktabs}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Guidelines for Verification of Computational Reproducibility in Economics}
+\providecommand{\subtitle}[1]{}
+\subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-08-03}
+\date{2020-08-05}
 
 \begin{document}
 \maketitle
@@ -174,14 +173,8 @@ This exercise is designed for reproductions performed in economics graduate cour
 
 This exercise is part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and Dr.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
 
-\begin{verbatim}
-## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.
-\end{verbatim}
-
 \begin{figure}
-
-\label{fig:weai-presentation}BITSS Project Scientist Fernando Hoces de la Guardia provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.
-
+\href{https://www.youtube.com/embed/Xv1t8An2gPo}{\includegraphics[width=1\linewidth]{ACRE_book_files/figure-latex/weai-presentation-1} }\caption{BITSS Project Scientist Fernando Hoces de la Guardia provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.}\label{fig:weai-presentation}
 \end{figure}
 
 \href{https://bitss.github.io/WEAI2020_slides/}{View slides used for the presentation ``How to Teach Reproducibility in Classwork''}
@@ -421,11 +414,11 @@ Before you begin working on the three main stages of the reproduction exercise (
 
 Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledging that less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
-2 weeks (\textasciitilde10 days)
+2 weeks (\textasciitilde{}10 days)
 
-1 month (\textasciitilde20 days)
+1 month (\textasciitilde{}20 days)
 
-1 semester (\textasciitilde100 days)
+1 semester (\textasciitilde{}100 days)
 
 analysis data
 
@@ -507,7 +500,7 @@ The following terms will be used in this section:
 \hypertarget{desc-sourc}{%
 \subsection{Describe the data sources and raw data.}\label{desc-sourc}}
 
-In the paper you chose, find references to all \emph{data sources} used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like ``\ldots for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all the data sources mentioned in the paper.
+In the paper you chose, find references to all \emph{data sources} used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all the data sources mentioned in the paper.
 
 Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., ``our information on regional minimum wages comes from the Bureau of Labor Statistics.'' This should be recorded as ``regional minimum wages from the Bureau of Labor Statistics'').
 
@@ -1987,7 +1980,7 @@ Consider the following \emph{before} you contact the original author:
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
 I am contacting you to request a reproduction package for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
 
@@ -2046,7 +2039,7 @@ Best regards,\\
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Lastname\ of\ Corresponding\ Author{]}},
 
 Thank you for sharing the materials. They have been immensely helpful for my work.
 
@@ -2103,7 +2096,7 @@ Your paper does not reproduce. I have tried for several hours now, and can't get
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
 
 Thank you for considering my request. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the \href{https://bitss.github.io/ACRE/assessment.html\#levels-of-computational-reproducibility-for-a-specific-output}{ACRE reproducibility scale}.
 
@@ -2123,7 +2116,7 @@ Best regards,\\
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
 
 Thank you for your response and for clarifying the terms of use of the reproduction materials.
 
@@ -2164,7 +2157,7 @@ Regardless of the outcome of the reproduction exercise, the guidance from the in
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
 
 Thank you for your support throughout my project as I worked to verify and advance the reproducibility of \texttt{{[}Paper{]}}. I'm writing now to share the results of my project with you and invite your feedback.
 
@@ -2180,7 +2173,7 @@ The results of each step of my exercise, include i) Assessment, ii) Improvements
 \item
   Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and \emph{always talk about the work -- not the author!}\\
 \item
-  Use sensitive language when presenting discrepancies, e.g.~``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!\\
+  Use sensitive language when presenting discrepancies, e.g. ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!\\
 \item
   Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g.~file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn't make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.{]}`
 \end{itemize}
@@ -2208,7 +2201,7 @@ In cases of dismissive comments, the best course of action may be to simply than
 \end{quote}
 
 \begin{quote}
-Dear Dr.~\texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
+Dear Dr. \texttt{{[}Last\ Name\ of\ Corresponding\ Author{]}},
 
 Thank you for your response. I will work to reproduce using the available materials, and will record my results accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the \href{https://bitss.github.io/ACRE/assessment.html\#levels-of-computational-reproducibility-for-a-specific-output}{ACRE reproducibility scale}.
 
@@ -5252,6 +5245,6 @@ Support for the development of these guidelines was provided by \href{https://ww
   \textbf{Reproduction tree/ diagram} -- A diagram generated by the ACRE Diagram Builder which represents the available information on the workflow behind a specific output. The diagram allows reproducers to trace a display item to its primary sources. {[}ALEKS/FERNANDO{]}
 \end{itemize}
 
-  \bibliography{book.bib,packages.bib}
+\bibliography{book.bib,packages.bib}
 
 \end{document}
