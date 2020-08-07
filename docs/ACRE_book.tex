@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-08-05}
+\date{2020-08-07}
 
 \begin{document}
 \maketitle
@@ -172,10 +172,6 @@ In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American
 This exercise is designed for reproductions performed in economics graduate courses or undergraduate theses, with the goal of providing a common approach, terminology, and standards for conducting reproductions. The goal of reproduction, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
 
 This exercise is part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and Dr.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
-
-\begin{figure}
-\href{https://www.youtube.com/embed/Xv1t8An2gPo}{\includegraphics[width=1\linewidth]{ACRE_book_files/figure-latex/weai-presentation-1} }\caption{BITSS Project Scientist Fernando Hoces de la Guardia provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.}\label{fig:weai-presentation}
-\end{figure}
 
 \href{https://bitss.github.io/WEAI2020_slides/}{View slides used for the presentation ``How to Teach Reproducibility in Classwork''}
 
@@ -1867,6 +1863,64 @@ When performing a specific robustness test, follow these steps:
 \end{enumerate}
 
 The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper's topic and the methods, making it less feasible for undergraduate students or graduates with only a surface-level interest in the paper.
+
+\hypertarget{concluding-the-reproduction}{%
+\chapter{Concluding the Reproduction}\label{concluding-the-reproduction}}
+
+Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that at least one display item has been assessed.
+
+Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit submit however, you will not be able to further modify your reproduction attempt. If you wish to modify your reproduction attempt after submission, you will have to record a new reproduction attempt on the ACRE platform and link to the previously completed reproduction attempt.
+
+\hypertarget{outputs}{%
+\section{Outputs}\label{outputs}}
+
+By the end of a reproduction attempt you will have created 3 different types of output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Revised reproduction package.} You are asked to submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include:\ldots{} . You should submit a revised reproduction package any time that you perform any type of \protect\hyperlink{improvements}{improvement} to the original reproduction package. This revised reproduction package is expected to be self contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?), or it contains data that you don't have permissions to share, you will be asked to remove the specific files and add a reference to the original reproduction package.\\
+  Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Has a digital object identifier (DOI). Dataverse, OSF, Zenodo, Figshare (?), ICPSR (?) will generate a DOI associated with your repository. This is a stable, citable link that will allow others to find your work.\\
+  \item
+    It is titled in the following way: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer}
+  \item
+    If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previous revised reproduction package), and the relative file location of the missing files (e.g. \texttt{/data/raw/large\_file.csv}).
+  \end{itemize}
+\item
+  \textbf{Reproduction report(s).} At the end of each stage, the ACRE platform will give you the option to generate a standardized report. Additionally once you finalize and submit your reproduction attempt ACRE will automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (eg. reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be part problem set 2). Each report will contain the following information:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Scoping:} descriptive statistics on number of claims identified and on the subset to be assessed. Summary of claims and associated specifications.
+  \item
+    \emph{Assessment:} Summary of display items assessed and connection with claims.
+  \item
+    \emph{Improvement:} Descriptions of improvement realized and of improvements suggested for future reproduction attempts. Summary of change in reproducibility score (if any).
+  \item
+    \emph{Robustness:} Summary of all the analytical choices identified, plus description of the results of robustness test to reasonable new specification if any.\\
+  \item
+    \emph{Final reproduction report:} include everything, plus final comments, and it cannot be edited after submission.
+  \end{itemize}
+\item
+  \textbf{Your data.} You will be able to export a csv file containing all your responses in the ACRE platform.
+\end{enumerate}
+
+\hypertarget{possible-anonymity-and-data-sharing}{%
+\section{Possible anonymity and data sharing}\label{possible-anonymity-and-data-sharing}}
+
+\begin{itemize}
+\item
+  Anonymity: if reproducers are concerned about a possible retaliation from the original authors, it is possible to request that your reproduction attempt to remain anonymous with the provision for a predetermined period of time. During this period your reproduction attempt
+\item
+  How are we going to use your data: descriptive statistics on reproducibility. Published on the website and likely publication after. Your data will also be released as part of a reproduction-attempt level data set for anybody to research on.
+\end{itemize}
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
 \chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}

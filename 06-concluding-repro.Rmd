@@ -1,0 +1,38 @@
+# Concluding the Reproduction 
+
+Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that at least one display item has been assessed. 
+
+Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit submit however, you will not be able to further modify your reproduction attempt. If you wish to modify your reproduction attempt after submission, you will have to record a new reproduction attempt on the ACRE platform and link to the previously completed reproduction attempt. 
+
+## Outputs
+
+By the end of a reproduction attempt you will have created 3 different types of output: 
+
+1. **Revised reproduction package.** You are asked to submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include:... . You should submit a revised reproduction package any time that you perform any type of [improvement](#improvements) to the original reproduction package. This revised reproduction package is expected to be self contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?), or it contains data that you don’t have permissions to share, you will be asked to remove the specific files and add a reference to the original reproduction package.  
+Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:   
+     - Has a digital object identifier (DOI). Dataverse, OSF, Zenodo, Figshare (?), ICPSR (?) will generate a DOI associated with your repository. This is a stable, citable link that will allow others to find your work.   
+     - It is titled in the following way: `revised reproduction package for - title of the paper - last name of reproducer` 
+     - If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previous revised reproduction package), and the relative file location of the missing files (e.g. `/data/raw/large_file.csv`).
+     
+  
+2.  **Reproduction report(s).** At the end of each stage, the ACRE platform will give you the option to generate a standardized report. Additionally once you finalize and submit your reproduction attempt ACRE will automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (eg. reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be part problem set 2). Each report will contain the following information: 
+     - *Scoping:* descriptive statistics on number of claims identified and on the subset to be assessed. Summary of claims and associated specifications. 
+     - *Assessment:* Summary of display items assessed and connection with claims.
+     - *Improvement:* Descriptions of improvement realized and of improvements suggested for future reproduction attempts. Summary of change in reproducibility score (if any). 
+     - *Robustness:* Summary of all the analytical choices identified, plus description of the results of robustness test to reasonable new specification if any.      
+     - *Final reproduction report:* include everything, plus final comments, and it cannot be edited after submission. 
+  
+
+3.  **Your data.** You will be able to export a csv file containing all your responses in the ACRE platform. 
+
+## Possible anonymity and data sharing 
+
+- Anonymity: if reproducers are concerned about a possible retaliation from the original authors, it is possible to request that your reproduction attempt to remain anonymous with the provision for a predetermined period of time. During this period your reproduction attempt   
+
+- How are we going to use your data: descriptive statistics on reproducibility. Published on the website and likely publication after. Your data will also be released as part of a reproduction-attempt level data set for anybody to research on. 
+
+
+
+
+
+
