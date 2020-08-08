@@ -75,7 +75,7 @@ knitr::include_graphics("candidate-to-declared-paper.png")
 ```
 
 
-<!-- Emma there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
+<!-- Bug: there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 
 ## Scoping your declared paper  
 
