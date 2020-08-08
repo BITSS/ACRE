@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-08-07}
+\date{2020-08-08}
 
 \begin{document}
 \maketitle
@@ -212,10 +212,10 @@ This reproduction exercise is divided into four stages, corresponding to the fir
   \protect\hyperlink{robust}{\textbf{Robustness checks}}, where you will assess the quality of selected analytical choices.
 \end{enumerate}
 
-These guidelines do not include a possible fifth stage of \textbf{Extension}. Here you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to \emph{replication}.
+These guidelines do not include a possible fifth stage of \textbf{extension}. Here you may extend the current paper by including new methodologies or data. If you where to extend the same methodology and research question into a different sample, that would bring you closer to a \emph{replication}.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{stages} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification}\label{fig:stages-intro}
+\includegraphics[width=1\linewidth]{stages} \caption{Four Stages of a Reproduction Attempt}\label{fig:stages-intro}
 \end{figure}
 
 \label{tab:stages-intro}Relative Level of Effort by Type of exercise
@@ -276,6 +276,12 @@ In \emph{Stage 3: \protect\hyperlink{improvements}{Improvement}}, you will try t
 
 In \emph{Stage 4: \protect\hyperlink{robust}{Robustness Checks}}, you will assess different analytical choices and test possible variations. Use \textbf{Survey 3} to record your work at this stage.
 
+ADD EXPLANATION OF HOW UNIT OF ANALYSIS VARIES ACROSS STAGES
+
+\begin{figure}
+\includegraphics[width=1\linewidth]{unit-of-analysis} \caption{Relevant unit of analysis at each stage}\label{fig:stages-unit}
+\end{figure}
+
 \hypertarget{reproduction-strategies}{%
 \section*{Reproduction Strategies}\label{reproduction-strategies}}
 \addcontentsline{toc}{section}{Reproduction Strategies}
@@ -321,7 +327,7 @@ At this point of the exercise, you are \emph{only validating the availability} o
 
 In case you need to contact the authors, make sure to \emph{allocate sufficient time for this step} (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exercise is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
 
-Review the decision tree (Figure \#) below for a more detailed overview of this process. Remember, \emph{if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database} before moving on to another candidate paper. Once you have obtained the reproduction package, the \emph{candidate paper} becomes your \emph{declared paper} and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
+Review the decision tree (Figure \ref{fig:candidate-paper-dec-tree}) below for a more detailed overview of this process. Remember, \emph{if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database} before moving on to another candidate paper. Once you have obtained the reproduction package, the \emph{candidate paper} becomes your \emph{declared paper} and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
 \hypertarget{check-acre}{%
 \subsection{Candidate paper entries in the ACRE Database}\label{check-acre}}
@@ -332,19 +338,18 @@ If the ACRE database contains previous reproduction attempts of the paper, you w
 \textbf{Box 1:} Summary Report Card for ACRE Paper Entry\\
 \textbf{Title:} Sample Title\\
 \textbf{Authors:} Jane Doe \& John Doe\\
-\textbf{Original Reproduction Package Available:} URL/No {[}What does this mean? Add some context{]}.
+\textbf{Original Reproduction Package Available:} Yes (link)/No.
 {[}If ``No''{]} \textbf{Contacted Authors?:} Yes/No\\
 {[}If ``Yes(contacted)''{]} \textbf{Type of Response:} Categories (6).\\
 \textbf{Additional Reproduction Packages:} Number (eg., 2)\\
-\textbf{Authors Available for Further Questions for ACRE Reproductions:} Yes/No/Unknown\\
-\textbf{Open for reproductions:} Yes/No {[}Same as above: what does this mean? Add more context{]}.
+\textbf{Authors Available for Further Questions for ACRE Reproductions:} Yes/No/Unknown
 \end{quote}
 
 If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.
 
-View Decision Tree To Select Paper
-
-\includegraphics{candidate-to-declared-paper.png}
+\begin{figure}
+\includegraphics[width=9.57in]{candidate-to-declared-paper} \caption{Decision tree to move from candidate to declared paper}\label{fig:candidate-paper-dec-tree}
+\end{figure}
 
 \hypertarget{scoping-your-declared-paper}{%
 \section{Scoping your declared paper}\label{scoping-your-declared-paper}}
@@ -655,8 +660,8 @@ As you gain an understanding of each code script, you will likely find more inpu
 
 Using the information collected above, you can trace your output-to-be-reproduced to its primary sources. Email the standardized spreadsheets from above (sections \ref{desc-sourc}, \ref{desc-analy} and \ref{desc-scripts}) to the ACRE Diagram Builder at \href{mailto:acre@berkeley.edu}{\nolinkurl{acre@berkeley.edu}}. You should receive an email within 24 hours with a reproduction diagram tree that represents the information available on the workflow behind a specific output.
 
-\hypertarget{complete-workflow-information}{%
-\subsection{Complete workflow information}\label{complete-workflow-information}}
+\hypertarget{complete-tree}{%
+\subsection{Complete workflow information}\label{complete-tree}}
 
 If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
@@ -1693,11 +1698,13 @@ You will be asked to provide this information in the Assessment and Improvement 
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
 
-Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by conducting new \textbf{robustness checks}, or changes in computational choices, both in data analysis and data cleaning, and their subsequent effects on the estimates of interest. The universe of robustness checks can be very large (potentially infinite!). Your focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set.
+Once you have assessed and improved the computational reproducibility of a paper, you can assess the quality of different analytical choices by conducting new \textbf{robustness checks}, or changes in computational choices, both in data analysis and data cleaning, and reporting their subsequent effects on the estimates of interest. The universe of robustness checks can be very large (potentially infinite!). Your focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set.
 
-The addition of new robustness checks will depend on the paper's current level of reproducibility. For example, it won't be possible to perform additional robustness checks for claims supported by display items reproducible at levels 0-1 because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in the \emph{Scoping Stage} since the display items are not computationally reproducible from analysis data (CRA). It is possible to conduct additional robustness checks to validate core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions and data manipulations. When checking the robustness to a new variable definition, you will also be able to test how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
+The addition of new robustness checks will depend on the paper's current level of reproducibility. For example, it won't be possible to perform additional robustness checks for claims supported by display items reproducible at levels 0-1 because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 2-4, but not using the specific estimates declared in the \emph{Scoping Stage} since the display items are not computationally reproducible from analysis data (CRA). It is possible to conduct additional robustness checks to validate core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions and data manipulations.
 
-Robustness begins at the claim level (see our diagram representing a paper's components (\ref{fig:diagram})). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors do not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the example tree discussed in the \emph{Assessment} stage, we can obtain the following, removing the data files for simplicity. This simplified tree provides a list of potential files in which you can test different reasonable specifications:
+The size of reasonable robustness checks grows exponentialy as higher levels of computational reproducibility are achieved. For example, when checking the robustness to a new variable definition, you will also be able to test the combination of how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
+
+Robustness begins at the claim level (see our diagram representing a paper's components (\ref{fig:stages-unit})). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors do not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the \protect\hyperlink{complete-tree}{example tree} discussed in the \emph{Assessment} stage, we can obtain the following, removing the data files for simplicity. This simplified tree provides a list of potential files in which you can test different reasonable specifications:
 
 \begin{verbatim}
     table1.tex (contains preferred specification of a given claim)

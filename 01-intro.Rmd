@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 ```{r setup-intro, echo = FALSE, warning=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
@@ -112,11 +117,11 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 4.    [**Robustness checks**](#robust), where you will assess the quality of selected analytical choices.  
 
 
-These guidelines do not include a possible fifth stage of **Extension**. Here you may extend the current paper by including new methodologies or data. This step brings the reproduction exercise a step closer to *replication*.
+These guidelines do not include a possible fifth stage of **extension**. Here you may extend the current paper by including new methodologies or data. If you where to extend the same methodology and research question into a different sample, that would bring you closer to a *replication*.
 
 
-```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification"}
-knitr::include_graphics("stages.png") 
+```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four Stages of a Reproduction Attempt"}
+knitr::include_graphics("stages.svg") 
 
 stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
                             Scope    = c("10%", "5%", "5%"),
@@ -143,6 +148,14 @@ In *Stage 2: [Assessment](#assessment)*, you will inspect the paper's reproducti
 In *Stage 3: [Improvement](#improvements)*, you will try to improve the reproducibility of the selected outputs by adding missing files, documentation, and report any potential changes in the level of reproducibility. Use **Survey 2** to record your work at Stages 2 and 3 (you will receive access instructions for Survey 2 when you submit Survey 1).
 
 In *Stage 4: [Robustness Checks](#robust)*, you will assess different analytical choices and test possible variations. Use **Survey 3** to record your work at this stage.
+
+
+ADD EXPLANATION OF HOW UNIT OF ANALYSIS VARIES ACROSS STAGES
+
+```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage", eval=TRUE}
+knitr::include_graphics("unit-of-analysis.png") 
+```
+
 
 ## Reproduction Strategies {-}
 

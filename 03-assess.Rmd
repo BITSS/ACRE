@@ -105,11 +105,10 @@ Using the information collected above, you can trace your output-to-be-reproduce
 <!--
 Upload the standardized table you build to the describe the code above into the [ACRE workflow diagram builder](ADD LINK).
 -->
-### Complete workflow information
+### Complete workflow information {#complete-tree}
 
 If you were able to identify all the relevant components in the previous section, the ACRE Diagram Builder will produce a tree diagram that looks similar to the one below.
 
-<!-- Emma: add a label to this figure below -->  
 
         table1.tex
             |___[code] analysis.R

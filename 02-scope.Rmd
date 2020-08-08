@@ -23,7 +23,7 @@ At this point of the exercise, you are *only validating the availability* of (at
 
 In case you need to contact the authors, make sure to *allocate sufficient time for this step* (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exercise is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).
 
-Review the decision tree (Figure #) below for a more detailed overview of this process. Remember, *if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database* before moving on to another candidate paper. Once you have obtained the reproduction package, the *candidate paper* becomes your *declared paper* and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
+Review the decision tree (Figure \@ref(fig:candidate-paper-dec-tree)) below for a more detailed overview of this process. Remember, *if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database* before moving on to another candidate paper. Once you have obtained the reproduction package, the *candidate paper* becomes your *declared paper* and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.
 
 ### Candidate paper entries in the ACRE Database {#check-acre}
 
@@ -32,20 +32,20 @@ If the ACRE database contains previous reproduction attempts of the paper, you w
 >**Box 1:** Summary Report Card for ACRE Paper Entry     
 > **Title:**  Sample Title   
 > **Authors:**  Jane Doe & John Doe  
-> **Original Reproduction Package Available:** URL/No [What does this mean? Add some context].
+> **Original Reproduction Package Available:** Yes (link)/No.
 > [If "No"] **Contacted Authors?:** Yes/No  
 > [If "Yes(contacted)"] **Type of Response:** Categories (6).  
 > **Additional Reproduction Packages:** Number (eg., 2)   
 > **Authors Available for Further Questions for ACRE Reproductions:** Yes/No/Unknown   
-> **Open for reproductions:** Yes/No  [Same as above: what does this mean? Add more context].
 
 If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the ACRE database following the example above.
-<!-- (Emma: add title and solve bug with svg) -->
-<details><summary>View Decision Tree To Select Paper </summary>
 
-```{r candidate-paper-dec-tree, eval=FALSE, echo=FALSE}
-#JOEL: help to get this to run within the code chunk
+
+```{r candidate-paper-dec-tree, eval=TRUE, echo=FALSE, fig.cap="Decision tree to move from candidate to declared paper"}
+#Bug1: help to get this to run within the code chunk
+#Bug2: cannot call .svg and get pdf (latex) to run
 #
+if (FALSE) {
 mermaid("
 graph TD
 	A0[Select Candidate Paper] --> A[Check ACRE]
@@ -68,14 +68,12 @@ graph TD
 
   R -->A0
 ")  
+}
 # https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiXG5ncmFwaCBURFxuXHRBMFtTZWxlY3QgQ2FuZGlkYXRlIFBhcGVyXSAtLT4gQVtDaGVjayBBQ1JFXVxuICBBIC0tPiB8Tm8gcGFwZXIgZW50cnl8QjFbUmVwcm9kdWN0aW9uIFBhY2thZ2UgUlAgP11cbiAgQjEgLS0-IHxZZXN8RjFbRGVjbGFyZSAmIFJlYWRdXG4gIEIxIC0tPiB8Tm98QzFbQ29udGFjdCBBdXRob3JzP11cbiAgQzEgLS0-IHxZZXN8RDFbRm91bmQgUlA_XVxuICBDMSAtLT4gfE5vfFJbQnJpZWYgUmVjb3JkXVxuICBEMSAtLT4gfFllc3xGMVxuICBEMSAtLT4gfE5vfEUxW0J1aWxkIFJQP11cbiAgRTEgLS0-IHxZZXN8RjFbRGVjbGFyZSAmIFJlYWRdXG4gIEUxIC0tPiB8Tm98UlxuXG4gIEEgLS0-IHxQYXBlciBlbnRyeXxCMltTdGF0dXMgb24gQUNSRV1cbiAgQjIgLS0-IHxSUCBleGlzdHN8RjFcbiAgQjIgLS0-IHxObyBSUC4gTm8gQ29udGFjdCB0byBBdXRob3JzfEMxXG4gIEIyIC0tPiB8Tm8gUlAuIEF1dGhvcnMgY29udGFjdGVkfEQyW0ZvbGxvdyB1cD9dXG4gIEQyIC0tPiB8WWVzfEMxXG4gIEQyIC0tPiB8Tm98UlxuXG4gIFIgLS0-QTAiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ
 
-
+knitr::include_graphics("candidate-to-declared-paper.png") 
 ```
 
-![](candidate-to-declared-paper.png)
-
-</details>
 
 <!-- Emma there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 
