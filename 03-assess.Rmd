@@ -136,7 +136,7 @@ If you were able to identify all the relevant components in the previous section
                                             |___[code] clean_raw_4.py
                                                 |___raw_4.dta
 
-This diagram, built with the information you provided, is already an important contribution to understanding the necessary components required to reproduce a specific output. It summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package.  
+This diagram, built with the information you provided, is already an important contribution to understanding the necessary components required to reproduce a specific output. It summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.   
 
 ### Incomplete workflow information
 
@@ -218,7 +218,7 @@ adding_rows_to_code %>%
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
-For more examples of diagrams connecting final outputs to initial raw data, [see here](#additional-diagrams).  
+For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-diagrams).  
 
 ### Unused Data Sources
 

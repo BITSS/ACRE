@@ -1,5 +1,5 @@
 --- 
-title: "Guidelines for Verification of <br> Computational Reproducibility in Economics"
+title: "Guidelines for Accelerating <br> Computational Reproducibility in Economics"
 subtitle:  |
   [![BITSS logo](BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
