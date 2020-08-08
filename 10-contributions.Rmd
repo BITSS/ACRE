@@ -6,7 +6,7 @@ output:
 
 # Contributions  
 
-## Contributing feedback on these guidelines 
+## Contributing feedback on these guidelines {#contrib-guide}
 The ACRE project welcomes feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the “edit” icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you’ll be able to suggest changes directly to the text. Please submit your suggestions using the "create a new branch and start a pull request" option and provide a summary of the changes you've proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to "push" them to the guidelines document or not. For more general feedback, please contact [ACRE@berkeley.edu](mailto:ACRE@berkeley.edu).
 
 Major contributions to these guidelines will be acknowledged below. The ACRE project employs the Contributor Roles Taxonomy ([CRediT](https://casrai.org/credit/)). Major contributions are defined as any pushed revisions to the guideline language or source code beyond corrections of spelling and grammar.

@@ -218,7 +218,7 @@ adding_rows_to_code %>%
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
-For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-diagrams).  
+For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-trees).  
 
 ### Unused Data Sources
 
