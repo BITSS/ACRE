@@ -14,14 +14,14 @@ Major contributions to these guidelines will be acknowledged below. The ACRE pro
 ## List of Contributors: Guidelines content and source code:
 *(in alphabetical order)*
 
- - Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)  
- - Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)  
- - Joel Ferguson – Writing (original draft), Writing (reviewing and editing)  
- - Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)  
- - Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)  
- - Edward Miguel – Conceptualization, Funding acquisition, Supervision  
- - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)  
- - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision  
+ - Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+ - Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)
+ - Joel Ferguson – Writing (original draft), Writing (reviewing and editing)
+ - Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
+ - Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+ - Edward Miguel – Conceptualization, Funding acquisition, Supervision
+ - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)
+ - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision
 
 The individuals below have contributed to the [ACRE GitHub repository](https://github.com/BITSS/ACRE):
 
@@ -37,8 +37,11 @@ gh_contributors <- readr::read_csv("contributors.csv", col_types = list())
 cat(str_c(gh_contributors$desc, collapse = ", "))
 ```
 
-# Acknowledgments  
+## Suggested citation format
+- When citing reproductions accessed on the ACRE platform: Reproducer Last name, Reproducer First name, First Last, and First Last. Year. “Reproduction of [Title of original paper].” *ACRE Platform*. doi: [URL].
+- When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guidelines for Verification of
+Computational Reproducibility in Economics.” https://bitss.github.io/ACRE/.
+
+## Acknowledgments  
 
 Support for the development of these guidelines was provided by [Arnold Ventures](https://www.arnoldventures.org/).
-
-
