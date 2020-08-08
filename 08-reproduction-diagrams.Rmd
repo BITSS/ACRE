@@ -6,8 +6,8 @@
 JOEL: PLease fill-in. 
 -->
 
-### Complete
-Below is an example of the hypothetical output of the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the replication package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
+### Complete reproduction package
+Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
 
           table 1
             └───[code] formatting_table1.R
@@ -24,8 +24,8 @@ Below is an example of the hypothetical output of the ACRE Diagram builder for a
 
 
 
-### Raw data and analytic data, but cleaning code is missing.
-Below is an example of the output from the ACRE Diagram Builder for a hypothetical display item that is missing some of the code needed to generate it from the raw data. In this case, we have assumed there are missing code scripts that at some point take in `survey_01raw.csv` and `admin_01raw.csv` and eventually output `analysis_data01.csv` and `analysis_data02.csv`, though this requires the reproducer's discretion.
+### Raw data and analytic data are available, but cleaning code is missing.
+Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. In this case, we have assumed there are missing code scripts that at some point take in `survey_01raw.csv` and `admin_01raw.csv`, and eventually output `analysis_data01.csv` and `analysis_data02.csv`, though this requires the reproducer's discretion.
 
           table 1
             └───[code] formatting_table1.R
@@ -40,9 +40,9 @@ Below is an example of the output from the ACRE Diagram Builder for a hypothetic
                            └───[code] MISSING FILE(S)
                               └───[data] admin_01raw.csv  
 
-### Possible Missing Code to produce a display item. (Reproduction attempt from an anonymous student conducted as part of the Graduate Development Economics course, UC Berkeley)
+### Possibly missing code for producing a display item. (This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course.)
 
-It's likely that this excerpt from the reproduction diagram shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. `cps2018.dta` and `cps_march2017.dta` are included as inputs in the reproduction kit, but never used to make a display item. That is, there is no piece of code that is listed as using them as inputs. Likewise, `PublicSalary.dta` is listed as a final output, meaning it too is not used to make a display item since it is not listed as an input for any code script. Perhaps `Paper2_PoExitDataset.dta` is made by a missing code script that takes `PublicSalary.dta`, `cps2018.dta`, and `cps_march2017.dta` as inputs? It may be the case that the only way to find out for sure is to contact the author(s) of the study, in which case, such a diagram can be used to help the author(s) identify any missing files.
+This reproduction diagram fragment likely shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. `cps2018.dta` and `cps_march2017.dta` are included as inputs in the reproduction kit, but never used to make a display item, i.e., there is no piece of code that is listed as using them as inputs. Likewise, `PublicSalary.dta` is listed as a final output, meaning it, too, is not used to make a display item since it is not listed as an input for any code script. Perhaps `Paper2_PoExitDataset.dta` is made by a missing code script that takes `PublicSalary.dta`, `cps2018.dta`, and `cps_march2017.dta` as inputs? It may be the case that the only way to find out for sure is to contact the study author(s), in which case, such a diagram can be used to help them identify any missing files.
 
         PublicSalary.dta
         |___MakeData2.do
@@ -70,9 +70,9 @@ It's likely that this excerpt from the reproduction diagram shows a missing piec
         cps2018.dta
         cps_march2017.dta  
 
-### Long, complicated tree. (Reproduction attempt from an anonymous student conducted as part of the Graduate Development Economics course, UC Berkeley)
+### Long, complicated tree. (This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course.)
 
-This Diagram shows that the production of a given display item may be very complicated, highlighting the helpfulness of the ACRE Diagram Builder as a visualization tool. In reproducing such a complicated display item it can be useful to have such a diagram in order to determine, for example, the order in which code scripts should be run, what files might depend on a faulty code script, or which files are necessary to keep if the goal is to only produce the specific display item.
+This diagram shows that the production of a given display item may be very complicated, highlighting the usefulness of the ACRE Diagram Builder as a visualization tool. In reproducing such a complicated display item, it can be useful to have such a diagram to determine, for example, the order in which code scripts should be run, what files might depend on a faulty code script, or which files are necessary to keep if the goal is to only produce the specific display item.
 
 ```{style="max-height: 300px;"} 
         results_days.dta
