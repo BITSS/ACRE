@@ -38,9 +38,10 @@ cat(str_c(gh_contributors$desc, collapse = ", "))
 ```
 
 ## Suggested citation format
-- When citing reproductions accessed on the ACRE platform: Reproducer Last name, Reproducer First name, First Last, and First Last. Year. “Reproduction of [Title of original paper].” *ACRE Platform*. doi: [URL].
+These follow the Chicago style citation format. Brackets [ ] indicate where you'll need to input more specific information.
+- When citing reproductions accessed on the ACRE platform: [Reproducer Last name], [Reproducer First name], [First Last], and [First Last]. [Year]. “Reproduction of [Title of original paper].” *ACRE Platform*. doi: [doi]. [DOI or link to original paper]. 
 - When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guidelines for Verification of
-Computational Reproducibility in Economics.” https://bitss.github.io/ACRE/.
+Computational Reproducibility in Economics.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.
 
 ## Acknowledgments  
 
