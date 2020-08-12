@@ -120,7 +120,7 @@ This reproduction exercise is divided into four stages, corresponding to the fir
 These guidelines do not include a possible fifth stage of **extension**. Here you may extend the current paper by including new methodologies or data. If you where to extend the same methodology and research question into a different sample, that would bring you closer to a *replication*.
 
 
-```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four Stages of a Reproduction Attempt"}
+```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four stages of a reproduction attempt"}
 knitr::include_graphics("stages.svg") 
 
 stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
@@ -152,7 +152,7 @@ In *Stage 4: [Robustness Checks](#robust)*, you will assess different analytical
 
 ADD EXPLANATION OF HOW UNIT OF ANALYSIS VARIES ACROSS STAGES
 
-```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage", eval=TRUE}
+```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage of a reproduction attempt", eval=TRUE}
 knitr::include_graphics("unit-of-analysis.png") 
 ```
 

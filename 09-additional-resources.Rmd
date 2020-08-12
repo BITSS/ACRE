@@ -3,7 +3,8 @@
 
 
 ## Reproducible workflows:  
-Below is a summary from Chapter 11 of @christensen2019transparent.
+
+Below is a summary from Chapter 11 of @christensen2019transparent. If there is a book/chapter that you find particularly helpful for, please write a brief summary and submit a [contribution](#contrib-guide). 
 
 **Folder organization**
 
@@ -35,14 +36,11 @@ Version control software is used to keep a record of changes to project files. A
 - A brief explanation of Git: Users add changed files to the staging area, then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
 
 
-## Links
+## Links to resources, organizations and people for reproducibile work
 
-<!--TODO: Add and classify-->
+Below we point to an ever growing list of resouces, organizations and specific researcher doing empirical work with a strong orientation towards reproducibility. The list are alphabetical order and [contributions](#contrib-guide) are welcome! 
 
-- [Project TIER](https://www.projecttier.org/tier-protocol/)   
-- [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
-- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).   
-- World Bank [DIME's Wiki for transparent and reproducible research](https://dimewiki.worldbank.org/wiki/Main_Page).
+### Resources
 - Dynamic documents in [R](https://rmarkdown.rstudio.com/gallery.html), [Python](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#economics-and-finance) and [Stata](https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata%20Markdown.pdf)  
 - Git resources:   
   - [Jenny Bryan's book](https://happygitwithr.com) and [video](https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/)  
@@ -52,5 +50,48 @@ Version control software is used to keep a record of changes to project files. A
   - [Combining GitHub and Dropbox](https://github.com/kbjarkefur/GitHubDropBox)    
   - [Atlassian intro to Git](https://www.atlassian.com/git/tutorials)
   - [Software Carpentry tutorial from the command line](https://swcarpentry.github.io/git-novice/)
+  
+- [IDB's cheatsheet for transparency, reproducibility and ethics](http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383)   
+- [Lars Vilhuber LDI's Wiki for Reproducibility](https://github.com/labordynamicsinstitute/replicability-training/wiki). Particularly [this section](https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication).  
 - [Open Science Framework (OSF)](https://osf.io)
+- [Project TIER](https://www.projecttier.org/tier-protocol/)   
 - [R for Stata users](https://github.com/hblackburn/R4Econ/blob/master/Resources.md)  
+- World Bank [DIME's Wiki for transparent and reproducible research](https://dimewiki.worldbank.org/wiki/Main_Page).
+
+### Organizations
+
+- [Congressional Budget Office](https://github.com/US-CBO)
+- [Gentzkow & Shapiro Lab](https://github.com/gslab-econ)
+- [LOST](https://lost-stats.github.io/)
+- [Opportunity Lab](https://github.com/Opportunitylab)
+- [Policy Simulation Library](https://github.com/PSLmodels)
+- [Urban Institute](https://github.com/UrbanInstitute)
+
+
+### People
+
+(by last name)
+
+- [Luiza Andrade](https://github.com/luizaandrade)
+- [Alvaro Carril](https://github.com/acarril)
+- [Lachlan Deer](https://github.com/lachlandeer) 
+- [Rebekah Din](https://github.com/rebekahanne)
+- [Richard Evans](https://github.com/rickecon)
+- [Andrew Heiss](https://github.com/andrewheiss)
+- [John Horton](https://github.com/johnjosephhorton)
+- [Nick Huntingon](https://github.com/NickCH-K) 
+- [Matt Jensen](https://github.com/MattHJensen)
+- [Max Kasy](https://github.com/maxkasy)
+- [Cora Kingdon](https://github.com/ckingdon95)
+- [Grant McDermott](https://github.com/grantmcdermott)
+- [Tyler Ransom](https://github.com/tyleransom)
+- [Lisa Rennels](https://github.com/lrennels)
+- [Ed Rubin](https://github.com/edrubin)
+- [Michael Stepner](https://github.com/michaelstepner)
+- [Shoshana Vasserman](https://github.com/shoshievass)  
+- [Lars Vilhuber](https://github.com/larsvilhuber)
+
+
+
+
+[1]: Non-exhaustive list of people and organizations doing amazing reproducible work on github (other than us!)
