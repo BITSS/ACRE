@@ -79,7 +79,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-08-13}
+\date{2020-08-14}
 
 \begin{document}
 \maketitle
@@ -1696,19 +1696,19 @@ You will be asked to provide this information in the Assessment and Improvement 
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
 
-Once you have assessed and improved the computational reproducibility of the display items for a claim within a paper, you can assess the robustness of these results by changing some computational choices and reporting their subsequent effects on the estimates of interest. This \textbf{robustness checks} can be both in data analysis and data cleaning. The universe of robustness checks can be very large (potentially infinite!). In these guidelines we will distinguish between reasonable and feasible robustness checks.
+Once you have assessed and improved the computational reproducibility of the display items for a claim within a paper, you can assess the robustness of these results by modifying some analytic choices and reporting their subsequent effects on the estimates of interest, i.e.~conducting \textbf{robustness checks}. The universe of robustness checks can be very large (potentially infinite!) and they can pertain both data analysis and data cleaning. In these guidelines, we will distinguish between \textbf{reasonable} and \textbf{feasible} robustness checks.
 
-The set of \textbf{reasonable robustness checks} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) is defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of \textbf{feasible robustness checks} is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the reasonable set of specifications.
+\textbf{Reasonable robustness checks} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) are defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of \textbf{feasible robustness checks} is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the reasonable set of specifications.
 
 \begin{figure}
 \includegraphics[width=0.5\linewidth]{robustness_lvl1} \includegraphics[width=0.5\linewidth]{robustness_lvl2_4} \includegraphics[width=0.5\linewidth]{robustness_lvl5-9} \includegraphics[width=0.5\linewidth]{robustness_lvl10} \caption{Universe of robustness tests and its elements}\label{fig:robusts}
 \end{figure}
 
-The size of the feasible set of robustness checks, and the likelihood that it contains reasonable and paper specifications, will depend on the current level of reproducibility of the results supporting a claim. This is illustrated in Figure \ref{fig:robusts}. At levels 1-2 it won't be possible to perform additional robustness checks because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 3-4, but not using the specific estimates declared in the \emph{Scoping Stage} since the display items are not computationally reproducible from analysis data (CRA). It is possible to conduct additional robustness checks to validate core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions and an alternative core analytical choice.
+The size of the feasible set of robustness checks, and the likelihood that it contains reasonable and paper specifications, will depend on the current level of reproducibility of the results supporting a claim, particularly in terms of availability of data and code. This is illustrated in Figure \ref{fig:robusts}. At levels 1-2, it won't be possible to perform additional robustness checks because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 3-4, but not using the specific estimates declared in the \emph{Scoping Stage} since the display items are not computationally reproducible from analysis data (lacking CRA). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions and an alternative core analytical choice.
 
 The size of feasible robustness checks grows exponentially as higher levels of computational reproducibility are achieved. For example, when checking the robustness to a new variable definition, you will also be able to test the combination of how the main estimate changes under an alternative variable definition \emph{and} an alternative core analytical choice.
 
-Robustness is assessed at the claim level (see our diagram representing a paper's components \ref{fig:stages-unit}). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors do not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the \protect\hyperlink{complete-tree}{example tree} discussed in the \emph{Assessment} stage, we can obtain the following, removing the data files for simplicity. This simplified tree provides a list of potential files in which you can test different specifications:
+Robustness is assessed at the claim level (see our diagram representing a paper's components \ref{fig:stages-unit}). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the \protect\hyperlink{complete-tree}{example tree} discussed in the \emph{Assessment} stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:
 
 \begin{verbatim}
     table1.tex (contains preferred specification of a given claim)
@@ -1725,14 +1725,14 @@ Robustness is assessed at the claim level (see our diagram representing a paper'
                                         
 \end{verbatim}
 
-Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks (2) justifying and testing reasonable specifications. Both contributions should be recorded on the ACRE platform referring to files in a specific reproduction package.
+Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks and (2) justifying and testing reasonable specifications. Both contributions should be recorded on the ACRE Platform and refer to specific files in the reproduction package.
 
 \hypertarget{feasible-robustness-checks-increasing-the-number-of-feasible-specifications}{%
 \section{Feasible robustness checks: increasing the number of feasible specifications}\label{feasible-robustness-checks-increasing-the-number-of-feasible-specifications}}
 
-Increasing the number of feasible robustness checks requires that the reproducer identifies the specific line(s) in the code scripts that execute an analytical choice. An advantage of this type of contribution is that you need not have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper and also building on top of the work of others. The disadvantage is that you are not expected to test alternative specifications.
+Increasing the number of feasible robustness checks requires that you, as the reproducer identify the specific line(s) in the code scripts that execute an analytical choice. An advantage of this type of contribution is that you don't need to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper, and also building on top of the work of others. The disadvantage is that you are not expected to test alternative specifications.
 
-Analytical choices can include those behind data cleaning and data analysis, below are some proposed types of for each category.
+Analytical choices can include those behind data cleaning and data analysis. Below are some proposed types for each category.
 
 \textbf{Analytical choices in data cleaning code}
 
@@ -1743,7 +1743,7 @@ Analytical choices can include those behind data cleaning and data analysis, bel
 \item
   Data sub-setting
 \item
-  Data reshaping (merge, append, long/gather, wide/spread)
+  Data re-shaping (merge, append, long/gather, wide/spread)
 \item
   Others (specify as ``processing - other'')
 \end{itemize}
@@ -1770,14 +1770,14 @@ Analytical choices can include those behind data cleaning and data analysis, bel
   Other (specify as ``methods - other'')
 \end{itemize}
 
-To record a specific analytical choice in the ACRE platform please follow this steps:
+To record a specific analytical choice in the ACRE platform, please follow these steps:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Review a specific code file (eg \texttt{clean\_merged\_1\_2.do}) and find an analytical choice (eg \texttt{regress\ y\ x\ if\ gender\ ==\ 1}).
+  Review a specific code file (e.g. \texttt{clean\_merged\_1\_2.do}) and identify an analytical choice (e.g. \texttt{regress\ y\ x\ if\ gender\ ==\ 1}).
 \item
-  Record the file name, line number, reproduction package (original or name of revised version), choice type and choice value. For the \texttt{source} field, type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} each time the same analytical choice is applied thereafter (for example, if an analytic choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103}). For each analytical choice recorded, add the specific choice used in the paper, and describe what alternatives could have been used. The resulting database should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
+  Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the \texttt{source} field, type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{file\_name-line\ number} each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{code\_01.do-L103}). For each analytical choice recorded, add the specific choice used in the paper, and describe what alternatives could have been used. The resulting database should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
 \end{enumerate}
 
 \begin{longtable}[]{@{}lllllll@{}}
@@ -1865,9 +1865,9 @@ original\strut
 \hypertarget{reasonable-robustness-check-justifying-and-testing.}{%
 \section{Reasonable robustness check: justifying and testing.}\label{reasonable-robustness-check-justifying-and-testing.}}
 
-Justifying and testing a specific analytical choice requires that the reproducer identifies a feasible analytical choice, conducts a variation on it, and justify its reasonableness. The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper's topic and the methods, making it less feasible for undergraduate students or graduates with only a surface-level interest in the paper.
+Justifying and testing a specific analytical choice requires that the reproducer identifies a feasible analytical choice, conducts a variation on it, and justifies its reasonableness. The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper's topic and the methods, making it less feasible for undergraduate students or graduates with only a surface-level interest in the paper.
 
-When performing a specific robustness test, follow these steps:
+When performing a specific robustness test {[}should this be ``robustness check'' instead?{]}, follow these steps:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1876,71 +1876,71 @@ When performing a specific robustness test, follow these steps:
 \item
   Propose a specific variation to this analytical choice.
 \item
-  Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample?).
+  Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample?). {[}the Hispanic example seems a bit off here. Provide more context or remove ethnic identifier{]}
 \item
   Discuss how this variation could affect the validity of the results (e.g., likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).
 \item
   Confirm that test is not redundant with other tests in the paper or robustness exercise.
 \item
-  Report the results from the robustness check (new estimate, standard error, and units).
+  Report the results from the robustness check (new estimate, standard error, and units){[}is what's in the brackets the suggested reporting format for this -- if so, be explicit about it{]}.
 \end{enumerate}
 
 \hypertarget{concluding-the-reproduction}{%
 \chapter{Concluding the Reproduction}\label{concluding-the-reproduction}}
 
-Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that at least one display item has been assessed.
+Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that \textbf{at least one display item has been assessed}.
 
-Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit submit however, you will not be able to further modify your reproduction attempt. If you wish to modify your reproduction attempt after submission, you will have to record a new reproduction attempt on the ACRE platform and link to the previously completed reproduction attempt.
+Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit ``Submit'', however, you will not be able to modify your reproduction attempt any further. If you wish to modify your reproduction attempt after submission, you will have to record \emph{a new reproduction attempt} on the ACRE platform and link to the previously completed reproduction attempt.
 
 \hypertarget{outputs}{%
 \section{Outputs}\label{outputs}}
 
-By the end of a reproduction attempt you will have created 3 different types of output:
+By the end of a reproduction attempt you will have created 3 different types of outputs:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Revised reproduction package.} You are asked to submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include:\ldots{} . You should submit a revised reproduction package any time that you perform any type of \protect\hyperlink{improvements}{improvement} to the original reproduction package. This revised reproduction package is expected to be self contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?), or it contains data that you don't have permissions to share, you will be asked to remove the specific files and add a reference to the original reproduction package.\\
-  Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Has a digital object identifier (DOI). Dataverse, OSF, Zenodo, Figshare (?), ICPSR (?) will generate a DOI associated with your repository. This is a stable, citable link that will allow others to find your work.\\
-  \item
-    It is titled in the following way: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer}
-  \item
-    If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previous revised reproduction package), and the relative file location of the missing files (e.g. \texttt{/data/raw/large\_file.csv}).
-  \end{itemize}
-\item
-  \textbf{Reproduction report(s).} At the end of each stage, the ACRE platform will give you the option to generate a standardized report. Additionally once you finalize and submit your reproduction attempt ACRE will automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (eg. reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be part problem set 2). Each report will contain the following information:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{Scoping:} descriptive statistics on number of claims identified and on the subset to be assessed. Summary of claims and associated specifications.
-  \item
-    \emph{Assessment:} Summary of display items assessed and connection with claims.
-  \item
-    \emph{Improvement:} Descriptions of improvement realized and of improvements suggested for future reproduction attempts. Summary of change in reproducibility score (if any).
-  \item
-    \emph{Robustness:} Summary of all the analytical choices identified, plus description of the results of robustness test to reasonable new specification if any.\\
-  \item
-    \emph{Final reproduction report:} include everything, plus final comments, and it cannot be edited after submission.
-  \end{itemize}
-\item
-  \textbf{Your data.} You will be able to export a csv file containing all your responses in the ACRE platform.
+  \textbf{Revised reproduction package} -- Submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include: \href{https://dataverse.org/}{Dataverse}, {[}openICPSR{]} (\url{https://www.openicpsr.org/openicpsr/}), \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and other. You should submit a revised reproduction package any time that you perform any type of \protect\hyperlink{improvements}{improvement} to the original reproduction package. This revised reproduction package is expected to be self-contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?){[}A: how is this determined, it sounds arbitrary?{]}, or it contains data that you don't have permissions to share, remove the specific files from your reproduction package and add a reference to the original reproduction package {[}A: what does making a reference mean and look like in this context? I suggest providing an example of how to do that.{]}.
 \end{enumerate}
 
-\hypertarget{possible-anonymity-and-data-sharing}{%
-\section{Possible anonymity and data sharing}\label{possible-anonymity-and-data-sharing}}
+Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:\\
+- Has a digital object identifier (DOI). All of the trusted repositories referenced above generate a DOIs. This is a stable, citable link that will allow others to find your work.\\
+- It is titled following this convention: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer\ -\ year\ when\ the\ reproduction\ was\ completed}
+- If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. \texttt{/data/raw/large\_file.csv}).
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Reproduction report(s)} At the end of each stage, the ACRE platform will give you the option to generate a report which summarizes your work completed as part of that stage. Once you've finalized and submitted your reproduction attempt, ACRE will automatically also generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (e.g.~reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be a part of problem set 2). Each report will contain the following information:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Scoping:} basic information about the paper, descriptive statistics on the number of claims identified and on the subset that was assessed, and a summary of the claims and associated specifications.
+  \item
+    \emph{Assessment:} a summary of the display items assessed and their connections with the claims.
+  \item
+    \emph{Improvement:} descriptions of improvements implemented and of improvements suggested for future reproduction attempts, and an updated reproducibility score, if any.
+  \item
+    \emph{Robustness:} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.\\
+  \item
+    \emph{Final reproduction report:} includes everything, plus final comments, and it cannot be edited after submission.
+  \end{itemize}
+\item
+  \textbf{Your data.} You will be able to export a .csv file containing all of your responses recorded as part of your reproduction attempt.
+\end{enumerate}
+
+\hypertarget{anonymity-and-data-sharing}{%
+\section{Anonymity and data sharing}\label{anonymity-and-data-sharing}}
 
 \begin{itemize}
 \item
-  Anonymity: if reproducers are concerned about a possible retaliation from the original authors, it is possible to request that your reproduction attempt to remain anonymous with the provision for a predetermined period of time. During this period your reproduction attempt
+  Anonymity: It is possible to choose that your reproduction attempt is posted anonymously for up to one year after it was submitted. During this. During this period your reproduction attempt will be visible to other users of the platform, but your identity will not be revealed.
 \item
-  How are we going to use your data: descriptive statistics on reproducibility. Published on the website and likely publication after. Your data will also be released as part of a reproduction-attempt level data set for anybody to research on.
+  Using the data from your reproduction attempt: The ACRE platform will aggregate descriptive statistics from all reproductions attempts recorded on the platform to produce metrics of reproducibility across economic sub-disciplines, journals, and bodies of literature.
 \end{itemize}
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
@@ -5332,14 +5332,10 @@ The individuals below have contributed to the \href{https://github.com/BITSS/ACR
 \hypertarget{suggested-citation-format}{%
 \section{Suggested citation format}\label{suggested-citation-format}}
 
-\begin{itemize}
-\tightlist
-\item
-  When citing reproductions accessed on the ACRE platform: Reproducer Last name, Reproducer First name, First Last, and First Last. Year. ``Reproduction of {[}Title of original paper{]}.'' \emph{ACRE Platform}. doi: {[}URL{]}.
-\item
-  When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. ``Guidelines for Verification of
-  Computational Reproducibility in Economics.'' \url{https://bitss.github.io/ACRE/}.
-\end{itemize}
+These follow the Chicago style citation format. Brackets {[} {]} indicate where you'll need to input more specific information.
+- When citing reproductions accessed on the ACRE platform: {[}Reproducer Last name{]}, {[}Reproducer First name{]}, {[}First Last{]}, and {[}First Last{]}. {[}Year{]}. ``Reproduction of {[}Title of original paper{]}.'' \emph{ACRE Platform}. doi: {[}doi{]}. {[}DOI or link to original paper{]}.
+- When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. ``Guidelines for Verification of
+Computational Reproducibility in Economics.'' {[}Date accessed (Day, Month, Year){]}. \url{https://bitss.github.io/ACRE/}.
 
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments}\label{acknowledgments}}
