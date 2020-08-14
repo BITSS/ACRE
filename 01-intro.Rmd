@@ -25,6 +25,8 @@ knitr::include_url("https://www.youtube.com/embed/Xv1t8An2gPo")
 
 [View slides used for the presentation "How to Teach Reproducibility in Classwork"](https://bitss.github.io/WEAI2020_slides/)
 
+<!-- add clarebout principle and discuss effect on a more inclusive scientific community
+-->
 
 ## Beyond binary judgments {-}
 
@@ -149,8 +151,9 @@ In *Stage 3: [Improvement](#improvements)*, you will try to improve the reproduc
 
 In *Stage 4: [Robustness Checks](#robust)*, you will assess different analytical choices and test possible variations. Use **Survey 3** to record your work at this stage.
 
-
+<!--
 ADD EXPLANATION OF HOW UNIT OF ANALYSIS VARIES ACROSS STAGES
+-->
 
 ```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage of a reproduction attempt", eval=TRUE}
 knitr::include_graphics("unit-of-analysis.png") 
