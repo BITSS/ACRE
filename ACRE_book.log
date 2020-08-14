@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.8)  13 AUG 2020 13:30
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.8.8)  14 AUG 2020 10:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,15 +1255,36 @@ lmr/m/n/10 53
 
 ]
 Chapter 5.
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 1910--1912
 
+Underfull \hbox (badness 2343) in paragraph at lines 1904--1905
+[]\TU/lmr/bx/n/10 Revised reproduction package \TU/lmr/m/n/10 – Submit your rev
+ised version
+ []
+
+
+Underfull \hbox (badness 4531) in paragraph at lines 1904--1905
+\TU/lmr/m/n/10 amples of trusted repositories include: []Dataverse[], [openICPS
+R]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1904--1905
+\TU/lmr/m/n/10 ([]$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][] [
+] [][][][][][][][][][]$[]), []Figshare[], []Dryad[], []Zenodo[],
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1911
+\TU/lmtt/m/n/10 - title of the paper - last name of reproducer - year when the
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 1928--1930
 
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [56] [57] [58
 
@@ -8688,17 +8709,29 @@ Chapter 9.
 ] [138]
 Chapter 10.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5358--5360
+Underfull \hbox (badness 10000) in paragraph at lines 5354--5356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5365--5367
+Underfull \hbox (badness 10000) in paragraph at lines 5361--5363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5367--5368
+Underfull \hbox (badness 10000) in paragraph at lines 5363--5364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5368--5370
+
+ []
+
+[139
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 5370--5372
 
  []
 
@@ -8707,40 +8740,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 5372--5374
 
  []
 
-[139
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 5374--5376
+Underfull \hbox (badness 10000) in paragraph at lines 5382--5384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5376--5378
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5386--5388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5388--5390
+Underfull \hbox (badness 10000) in paragraph at lines 5384--5386
 
  []
 
 [140]
-Underfull \hbox (badness 10000) in paragraph at lines 5406--5408
+Underfull \hbox (badness 10000) in paragraph at lines 5402--5404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5408--5410
+Underfull \hbox (badness 10000) in paragraph at lines 5404--5406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5419--5421
+Underfull \hbox (badness 10000) in paragraph at lines 5415--5417
 
  []
 
@@ -8748,35 +8769,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 5419--5421
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [141]
+Underfull \hbox (badness 10000) in paragraph at lines 5419--5421
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 5423--5425
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 5427--5429
-
- []
-
 (./ACRE_book.bbl [142])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5436.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5432.
 [143
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5436.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5432.
 (./ACRE_book.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5436.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5436.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 5432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5432.
 
 Package rerunfilecheck Info: File `ACRE_book.out' has not changed.
-(rerunfilecheck)             Checksum: B226336FD9D6649C9CB3042DA7EAFF47;8764.
+(rerunfilecheck)             Checksum: 8233D0B57BB26EE6299808193EED77BE;8716.
  ) 
 Here is how much of TeX's memory you used:
  18062 strings out of 481691
- 327760 string characters out of 5932656
- 924245 words of memory out of 5000000
+ 327751 string characters out of 5932656
+ 924236 words of memory out of 5000000
  34884 multiletter control sequences out of 15000+600000
  541595 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 58i,8n,118p,1081b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,8n,118p,1220b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on ACRE_book.pdf (143 pages).

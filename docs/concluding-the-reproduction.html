@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-08-13" />
+<meta name="date" content="2020-08-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,7 +123,7 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>5</b> Concluding the Reproduction</a><ul>
 <li class="chapter" data-level="5.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#outputs"><i class="fa fa-check"></i><b>5.1</b> Outputs</a></li>
-<li class="chapter" data-level="5.2" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#possible-anonymity-and-data-sharing"><i class="fa fa-check"></i><b>5.2</b> Possible anonymity and data sharing</a></li>
+<li class="chapter" data-level="5.2" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#anonymity-and-data-sharing"><i class="fa fa-check"></i><b>5.2</b> Anonymity and data sharing</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><i class="fa fa-check"></i><b>6</b> Guidance for a Constructive Exchange Between Reproducers and Original Authors</a><ul>
 <li class="chapter" data-level="6.1" data-path="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"><a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>6.1</b> For Reproducers Contacting the Authors of the Original Study</a><ul>
@@ -193,37 +193,36 @@
             <section class="normal" id="section-">
 <div id="concluding-the-reproduction" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Concluding the Reproduction</h1>
-<p>Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that at least one display item has been assessed.</p>
-<p>Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit submit however, you will not be able to further modify your reproduction attempt. If you wish to modify your reproduction attempt after submission, you will have to record a new reproduction attempt on the ACRE platform and link to the previously completed reproduction attempt.</p>
+<p>Once you have completed each of the reproduction stages for all your claims of interest, you will be ready to submit your work. The minimal requirement to have a completed reproduction attempt is that <strong>at least one display item has been assessed</strong>.</p>
+<p>Before submitting a reproduction attempt, you will be able to modify your answers to any entry in the ACRE platform. After you hit “Submit”, however, you will not be able to modify your reproduction attempt any further. If you wish to modify your reproduction attempt after submission, you will have to record <em>a new reproduction attempt</em> on the ACRE platform and link to the previously completed reproduction attempt.</p>
 <div id="outputs" class="section level2">
 <h2><span class="header-section-number">5.1</span> Outputs</h2>
-<p>By the end of a reproduction attempt you will have created 3 different types of output:</p>
+<p>By the end of a reproduction attempt you will have created 3 different types of outputs:</p>
 <ol style="list-style-type: decimal">
-<li><strong>Revised reproduction package.</strong> You are asked to submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include:… . You should submit a revised reproduction package any time that you perform any type of <a href="improvements.html#improvements">improvement</a> to the original reproduction package. This revised reproduction package is expected to be self contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?), or it contains data that you don’t have permissions to share, you will be asked to remove the specific files and add a reference to the original reproduction package.<br />
-Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:
+<li><strong>Revised reproduction package</strong> – Submit your revised version of the original reproduction package into a trusted repository. Examples of trusted repositories include: <a href="https://dataverse.org/">Dataverse</a>, [openICPSR] (<a href="https://www.openicpsr.org/openicpsr/" class="uri">https://www.openicpsr.org/openicpsr/</a>), <a href="https://figshare.com">Figshare</a>, <a href="https://datadryad.org/stash">Dryad</a>, <a href="https://about.zenodo.org/">Zenodo</a>, <a href="osf.io/">Open Science Framework</a> and other. You should submit a revised reproduction package any time that you perform any type of <a href="improvements.html#improvements">improvement</a> to the original reproduction package. This revised reproduction package is expected to be self-contained, as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?)[A: how is this determined, it sounds arbitrary?], or it contains data that you don’t have permissions to share, remove the specific files from your reproduction package and add a reference to the original reproduction package [A: what does making a reference mean and look like in this context? I suggest providing an example of how to do that.].</li>
+</ol>
+<p>Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:<br />
+- Has a digital object identifier (DOI). All of the trusted repositories referenced above generate a DOIs. This is a stable, citable link that will allow others to find your work.<br />
+- It is titled following this convention: <code>revised reproduction package for - title of the paper - last name of reproducer - year when the reproduction was completed</code>
+- If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. <code>/data/raw/large_file.csv</code>).</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Reproduction report(s)</strong> At the end of each stage, the ACRE platform will give you the option to generate a report which summarizes your work completed as part of that stage. Once you’ve finalized and submitted your reproduction attempt, ACRE will automatically also generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (e.g. reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be a part of problem set 2). Each report will contain the following information:
 <ul>
-<li>Has a digital object identifier (DOI). Dataverse, OSF, Zenodo, Figshare (?), ICPSR (?) will generate a DOI associated with your repository. This is a stable, citable link that will allow others to find your work.<br />
+<li><em>Scoping:</em> basic information about the paper, descriptive statistics on the number of claims identified and on the subset that was assessed, and a summary of the claims and associated specifications.</li>
+<li><em>Assessment:</em> a summary of the display items assessed and their connections with the claims.</li>
+<li><em>Improvement:</em> descriptions of improvements implemented and of improvements suggested for future reproduction attempts, and an updated reproducibility score, if any.</li>
+<li><em>Robustness:</em> summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.<br />
 </li>
-<li>It is titled in the following way: <code>revised reproduction package for - title of the paper - last name of reproducer</code></li>
-<li>If it is not self-contained, please indicate the DOI of the last reproduction package used for the reproduction (the original or a previous revised reproduction package), and the relative file location of the missing files (e.g. <code>/data/raw/large_file.csv</code>).</li>
+<li><em>Final reproduction report:</em> includes everything, plus final comments, and it cannot be edited after submission.</li>
 </ul></li>
-<li><strong>Reproduction report(s).</strong> At the end of each stage, the ACRE platform will give you the option to generate a standardized report. Additionally once you finalize and submit your reproduction attempt ACRE will automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are performing this reproduction as part of a class or thesis your instructor/advisor should have defined the structure of those reports (eg. reports of stages 1 and 2 could be part of problems set 1, and reports 3 and 4 could be part problem set 2). Each report will contain the following information:
-<ul>
-<li><em>Scoping:</em> descriptive statistics on number of claims identified and on the subset to be assessed. Summary of claims and associated specifications.</li>
-<li><em>Assessment:</em> Summary of display items assessed and connection with claims.</li>
-<li><em>Improvement:</em> Descriptions of improvement realized and of improvements suggested for future reproduction attempts. Summary of change in reproducibility score (if any).</li>
-<li><em>Robustness:</em> Summary of all the analytical choices identified, plus description of the results of robustness test to reasonable new specification if any.<br />
-</li>
-<li><em>Final reproduction report:</em> include everything, plus final comments, and it cannot be edited after submission.</li>
-</ul></li>
-<li><strong>Your data.</strong> You will be able to export a csv file containing all your responses in the ACRE platform.</li>
+<li><strong>Your data.</strong> You will be able to export a .csv file containing all of your responses recorded as part of your reproduction attempt.</li>
 </ol>
 </div>
-<div id="possible-anonymity-and-data-sharing" class="section level2">
-<h2><span class="header-section-number">5.2</span> Possible anonymity and data sharing</h2>
+<div id="anonymity-and-data-sharing" class="section level2">
+<h2><span class="header-section-number">5.2</span> Anonymity and data sharing</h2>
 <ul>
-<li><p>Anonymity: if reproducers are concerned about a possible retaliation from the original authors, it is possible to request that your reproduction attempt to remain anonymous with the provision for a predetermined period of time. During this period your reproduction attempt</p></li>
-<li><p>How are we going to use your data: descriptive statistics on reproducibility. Published on the website and likely publication after. Your data will also be released as part of a reproduction-attempt level data set for anybody to research on.</p></li>
+<li><p>Anonymity: It is possible to choose that your reproduction attempt is posted anonymously for up to one year after it was submitted. During this. During this period your reproduction attempt will be visible to other users of the platform, but your identity will not be revealed.</p></li>
+<li><p>Using the data from your reproduction attempt: The ACRE platform will aggregate descriptive statistics from all reproductions attempts recorded on the platform to produce metrics of reproducibility across economic sub-disciplines, journals, and bodies of literature.</p></li>
 </ul>
 
 </div>
