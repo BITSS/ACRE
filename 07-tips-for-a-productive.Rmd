@@ -174,7 +174,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >
 >Though I understand that you are unable to share the raw data, there may be alternative steps you can take that would help me improve the reproducibility of your paper. These include:  
 >
->   1. Sharing the analytic version of the data (the version of the dataset that was used in the final version of your paper);  
+>   1. Sharing the analytic version of the data (the version of the dataset that was used for analysis in the final version of your paper);  
 >   2. Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the costs and the duration of the process. Find examples of data availability statements for proprietary or restricted-access data [here](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html); and  
 >   3. Providing access to all data and materials for which the constraints do not apply.  
 >  
