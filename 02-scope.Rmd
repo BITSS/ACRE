@@ -115,7 +115,12 @@ After reading the paper, you might wonder why the authors did not conduct a spec
 
 These are the elements you will need for the Scoping stage. **You now have all the elements necessary to complete [Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv).**
 
------
+
+## Setup your own revised reproduction package.  
+
+As part of the scoping stage, you have now identified the reproduction package of the original authors. In addition to these materials, we recommend that you create your own copy and called it a **revised reproduction package**. As you work through the next stages (assessment, improvement, and robustness) it is likely that you will modify some of the contents of the reproduction package. Keeping a record of those changes will help you as reproducers (eg. to document your assessments, or to communicate with original authors) and will likely help future reproducers allowing them to build on top of any contribution that they have created. 
+
+Please deposit the starting copy of your revised reproduction package (i.e. just the copy of the original reproduction package) in a trusted repository. Examples of trusted repositories include: [Dataverse](https://dataverse.org/), [openICPSR](https://www.openicpsr.org/openicpsr/), [Figshare](https://figshare.com), [Dryad](https://datadryad.org/stash), [Zenodo](https://about.zenodo.org/), [Open Science Framework](osf.io/) and others. We encourage reproducers to use version control software (Git) during their reproductions, and suggest they submit the entire repository (or link it to their GitHub repository).
 
 ## Identify your relevant timeline.  
 
