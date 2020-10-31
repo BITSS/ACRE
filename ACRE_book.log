@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.22)  20 OCT 2020 14:53
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.9.22)  22 OCT 2020 10:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1540,9 +1540,6 @@ NGE BETWEEN REPRODUCERS AND ORIGINAL AUTHORS
  []
 
 [68]
-Underfull \vbox (badness 3354) has occurred while \output is active []
-
-
 Overfull \hbox (71.88234pt too wide) has occurred while \output is active
 \TU/lmr/m/sl/10 6.2.  FOR ORIGINAL AUTHORS RESPONDING TO REQUESTS FROM REPRODUC
 ERS \TU/lmr/m/n/10 69
