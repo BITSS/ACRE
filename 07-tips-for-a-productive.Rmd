@@ -1,4 +1,4 @@
-# Guidance for a Constructive Exchange Between Reproducers and Original Authors
+#: Guidance for a Constructive Exchange Between Reproducers and Original Authors
 
 The purpose of this chapter is to facilitate constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese ([2019](https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf)) articulate two important steps reproducers can take to ensure their interactions with original authors are constructive. We provide a summary below and encourage you to follow this guidance. Remember the **golden rule of reproductions** (and replications): *treat others and their work, as you would like others to treat you and your work!*
 
