@@ -12,7 +12,7 @@ The purpose of this chapter is to facilitate constructive and respectful communi
 
 **2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you would have done for your own work.**  
    
-   a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see [Broockman, Kalla and Aronow, 2015](https://osf.io/qy2se/)). [FH: last sentence seems broken] 
+   a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g. see [Broockman, Kalla and Aronow, 2015](https://doi.org/10.31222/osf.io/qy2se)).
    b. Talk about *the study, not the author*, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.  
    c. Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.   
    d. For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.   
@@ -20,7 +20,7 @@ The purpose of this chapter is to facilitate constructive and respectful communi
    
 To help put these recommendations into practice, we provide template language for common scenarios that reproducers and authors may encounter in their interactions.
    
-While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to contact us if you need more guidance or would like to provide feedback on these materials (acre@berkeley.edu).  
+While we hope that you find these useful, note that they are *only recommendations*, and you are welcome to modify them based on the context and needs of your specific project. Feel free to [contact us](mailto:acre@berkeley.edu) if you need more guidance or would like to provide feedback on these materials.  
 
 
 ## For Reproducers Contacting the Authors of the Original Study
@@ -29,13 +29,13 @@ Consider the following *before* you contact the original author:
 
 1. Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start. A few things to consider:  
    - A *Readme* file, if available, would be a good place to start. All papers published in AEA journals after July 2019 should have such documentation.  
-   - Check whether there are any restrictions to accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
+   - Check whether there are any restrictions on accessing the data or code and whether there are instructions on how to access these files for the purpose of reproduction.
 
 2. If a reproduction package is not readily available in the location where the article is published (e.g., the journal website), check the authors’ websites, Dataverse profiles, the [ICPSR Publications Related Archive](https://www.icpsr.umich.edu/icpsrweb/), and other relevant archives and/or data repositories.
 
 3. If steps 1 and 2 don’t work, contact the corresponding author (copying the co-authors, if any), consolidating your requests into as few emails as possible. In your email, make sure to include the following details:  
    - Basic information about the paper being reproduced (include title, version, date, and a DOI link (or just a URL));   
-   - Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded in the ACRE reproducibility database; 
+   - Context for the reproduction (as part of a class exercise, thesis, etc.) and a notice that the outcome will be recorded on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/)(SSRP); 
    - Items from the reproduction package that are missing, as well as locations where you had (unsuccessfully) searched for them;  
    - Use plan: Will the materials be used exclusively for this project? Ask for permission to share the data publicly.  
    - Right to consultation and results: Will you share the outcome of the reproduction exercise with the original authors?    
@@ -43,13 +43,13 @@ Consider the following *before* you contact the original author:
 
 4. Follow up if you don’t get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email. 
 
-5. Record the outcome of your interaction with the original author in the ACRE database. You can qualify the outcome as one of the following:
+5. Record the outcome of your interaction with the original author on the SSRP. You can qualify the outcome as one of the following:
    - A *complete* reproduction package was provided
    - An *incomplete* reproduction package was provided. You can also select one of the following reasons:  
       - Data is of sensitive, confidential, or proprietary character and cannot be shared;
       - Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
-   - Author *refused* to share the reproduction package
-   - Author *did not respond* (including after a reminder was sent) within 4 weeks after the initial request.
+   - The author *refused* to share the reproduction package
+   - The author *did not respond* (including after a reminder was sent) within 4 weeks after the initial request.
 
 ### Contacting the original author(s) when there is no reproduction package
 
@@ -64,9 +64,9 @@ Consider the following *before* you contact the original author:
 >
 >I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context for why you want to reproduce this particular paper using neutral language (e.g., "This is a seminal paper in my field"), avoiding any statements that would put the respondent on the defensive]`. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your website.
 >
->I will record the result of my reproduction attempt on the Advancing Computational Reproducibility in Economics (ACRE) platform, which is an open-source repository to systematically source, collect and present the results of verifications of computational reproducibility of published work in economics. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+>I will record the result of my reproduction attempt on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP), which is an open-source repository to systematically source, collect and present the results of verifications of computational reproducibility of published work in economics. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 >
->In addition to your response above, would you be available to respond future (non-repetitive) inquieries from me or other reproducers conducting an ACRE excercise? Though your cooperation with mine and/or future request would be extremely helpful, please note that you are *not required to comply*.
+>In addition to your response above, would you be available to respond to future (non-repetitive) inquiries from me or other SSRP users? Though your cooperation with mine and/or future request would be extremely helpful, please note that you are *not required to comply*.
 
 >Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
 >
@@ -88,7 +88,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >
 > To help me reproduce the paper in full, I hope that you can share the following items: [`list items missing from reproduction package, preferably bulleted if more than one (e.g., raw/analytic data, code, protocols for conducting the experiment, etc.)`]. I have already searched `[locations where you searched for items, with links provided]`, but I was unable to locate the items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
 >
->Note that I will record the outcome of my reproduction on the Accelerating Computational Reproducibility in Economics (ACRE) [platform](https://www.bitss.org/ecosystem/acre/), an online catalog of reproduction projects in economics. ACRE is hosted by the [Berkeley Initiative for Transparency in the Social Sciences (BITSS)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you, and whether you are interested in providing a response.
+>Note that I will record the outcome of my reproduction on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/)(SSRP), an online catalog of reproduction projects in economics. SSRP is hosted by the [Berkeley Initiative for Transparency in the Social Sciences)](https://www.bitss.org/). Let me know if you would like me to share the outcome of my exercise with you, and whether you are interested in providing a response.
 >
 >Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
 >
@@ -117,9 +117,9 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >`[Reproducer]`  
 
 
-**1: An example of well described issues:**
+**1: An example of well-described issues:**
 
->Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:     
+>Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce OUTPUT X:     
 
          OUTPUT X
             └───[code] formatting_table1.R
@@ -133,15 +133,15 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
                               └───[data] admin_01raw.csv* 
->I have marked with an asterix (*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+>I have marked with an asterisk (*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 >
->I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. **Doing this will ensure that you will not be asked twice for the same missing file.**
+>I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/). **Doing this will ensure that you will not be asked twice for the same missing file.**
 
 
 
 **2. An example of poorly described issues:** 
 
->Your paper does not reproduce. I have tried for several hours now, and can’t get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are a basic principle of open science, so I am confident that you will do the right thing.
+>Your paper does not reproduce. I have tried for several hours now, and can’t get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are basic principles of open science, so I am confident that you will do the right thing.
 
 ### Response when the original author has refused to share due to *undisclosed reasons*   
 
@@ -154,7 +154,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 >Dear Dr. `[Last Name of Corresponding Author]`,
 >
->Thank you for considering my request. I will try to reproduce the paper using the available materials, and will record the missing items accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output). 
+>Thank you for considering my request. I will try to reproduce the paper using the available materials and will record the missing items accordingly on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP). l will also post my assessment of the reproducibility of the paper in its current form based on the [SSRP reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output). 
 >
 >Let me know if you have any questions.
 >
@@ -178,7 +178,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 >   2. Providing a public description of the steps other researchers can follow to request access to the raw data or materials, including an estimate of the costs and the duration of the process. Find examples of data availability statements for proprietary or restricted-access data [here](https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html); and  
 >   3. Providing access to all data and materials for which the constraints do not apply.  
 >  
-> Based on my assessment, your paper would currently rank at `[level X]` on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output), however *this score can be easily improved*. Being able to provide analytic data would elevate the reproducibility of your paper to `[level Y]`. Providing public instructions on how other parties can access the data would further elevate its reproducibility to `[level Z]`.
+> Based on my assessment, your paper would currently rank at `[level X]` on the [SSRP reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output), however, *this score can be easily improved*. Being able to provide analytic data would elevate the reproducibility of your paper to `[level Y]`. Providing public instructions on how other parties can access the data would further elevate its reproducibility to `[level Z]`.
 >
 >I would be happy to help if you are interested in taking any of the steps I outlined above. Let me know if that would be helpful.
 >
@@ -190,7 +190,7 @@ I am a `[graduate student/postdoc/other position]` at `[Institution]`, and I’m
 
 ### Contacting the original author to share the results of your reproduction exercise
 
-*Note*: Reporting the results of reproductions is probably the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
+*Note*: Reporting the results of reproductions can be the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
 
 Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands here: *reproduce the work of others as you would like for others to reproduce yours*, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
 
@@ -208,11 +208,11 @@ Regardless of the outcome of the reproduction exercise, the guidance from the in
 >
 > - Briefly describe which parts of the paper you tried to reproduce (e.g. a specific estimate, a table, etc.).   
 > - Within the scope of your reproduction, describe exactly which items you managed to reproduce.  
-> - Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes or failures, and *always talk about the work -- not the author!*  
+> - Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce the item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes, or failures, and *always talk about the work -- not the author!*  
 > - Use sensitive language when presenting discrepancies, e.g. “Unfortunately, I found X, which differs from the Y result in the original paper...”. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!   
 > - Describe how you tried to improve, the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g. file organization or code commenting), try to explain why you think they are an upgrade over the original work. If you didn’t make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.]`  
 >
->I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the ACRE platform.  
+>I look forward to your questions, comments, and suggestions on what I laid out above. As discussed previously, I will record the outcomes of my exercise, along with the improvements, on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/).  
 >
 >Best regards,  
 >`[Reproducer]`
@@ -220,7 +220,7 @@ Regardless of the outcome of the reproduction exercise, the guidance from the in
 
 ### Responding to hostile responses from original authors
 
-*Note:* Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment. Find guidance at the end of this chapter on how to deal with instances of bullying, harassment, or discimination.
+*Note:* Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts and can range anywhere from dismissive comments to bullying, discrimination, and harassment. Find guidance at the end of this chapter on how to deal with instances of bullying, harassment, or discrimination.
 
 #### Dismissive comments
 
@@ -233,7 +233,7 @@ In cases of dismissive comments, the best course of action may be to simply than
 
 >Dear Dr. `[Last Name of Corresponding Author]`,
 >
->Thank you for your response. I will work to reproduce using the available materials, and will record my results accordingly on the ACRE platform. l will also post my assessment of the reproducibility of the paper in its current form based on the [ACRE reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output).  
+>Thank you for your response. I will work to reproduce using the available materials and will record my results accordingly on the [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/). l will also post my assessment of the reproducibility of the paper in its current form based on the [SSRP reproducibility scale](https://bitss.github.io/ACRE/assessment.html#levels-of-computational-reproducibility-for-a-specific-output).  
 >  
 > Let me know if you have any questions.
 >
