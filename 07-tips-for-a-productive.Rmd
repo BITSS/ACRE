@@ -244,28 +244,28 @@ In cases of dismissive comments, the best course of action may be to simply than
   
 ## For Original Authors Responding to Requests from Reproducers  
 
-This section contains communications guidance for authors of papers involved in reproduction attempts on the Social Science Reproduction Platform. We present our guidance in the form of template language for various scenarios in which authors may find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of this chapter still applies: “treat others and their work, as you would like others to treat you and your work!” We hope that these resources will facilitate a more efficient and constructive exchange between the parties involved. [Let us know](mailto:acre@berkeley.edu) if you need guidance for other scenarios!
+This section contains guidance for authors of papers involved in reproduction attempts on the Social Science Reproduction Platform. We present language that may be helpful for various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of [this chapter](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) still applies: “treat others and their work, as you would like others to treat you and your work!” We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. [Let us know](emailto:acre@berkeley.edu) if you need guidance in other scenarios!
 
 ### Responding to a repeated request which has been addressed in an earlier interaction 
 
 >Dear [Reproducer],
 >
->Thank you for your interest in my work. Note that I have been contacted about this issue by another SSRP reproducer before and provided a response which I suspect >may be already recorded on the SSRP. I enclose my original response below for your reference and you may find further guidance in the readme file in the reproduction >package.
+>Thank you for your interest in my work. Note that I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect >may be already recorded on the SSRP. I enclose my original response below for your reference and you may find further guidance in the readme file in the reproduction >package.
 >
->If there are no prior records of these issues on the SSRP, please record the enclosed response [and materials]. That would also help avoid the duplication of effort >of other reproducers who may be interested in reproducing this work.
->
+>If there are no prior records of these issues on the SSRP, please record the enclosed response [and materials]. This will also help avoid the duplication of effort >on the part of others who may be interested in reproducing this work.
 >Good luck with the remainder of your project and thank you in advance for your cooperation!
 >
 >Best regards,
-[Author]
+>[Author]
+
 
 ### Acknowledging that the author no longer has access to certain part(s) of the reproduction package 
 
 >Dear [Reproducer],
 >
->Thank you for reviewing my work closely. I wish I could be of more help, but, unfortunately, I no longer have access to the requested materials due to `[briefly describe the circumstances that prevent you from providing the materials]`. 
+>Thank you for reviewing my work closely. I wish I could be of more help, but, unfortunately, I no longer have access to the >requested materials due to `[briefly describe the circumstances that prevent you from providing the materials]`. 
 >
->Whereas I recognize that the current standards in the discipline suggest that work should be reproducible using materials that are readily available for this >purpose, note that this paper was written at a time when different standards of reproducibility were mandated. Please feel free to evaluate the paper as is and >propose any improvements wherever possible.
+>While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that >are readily available for this >purpose, note that this paper was written at a time when different standards of reproducibility >were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
 >
 >I look forward to working with you to address this and improve the overall reproducibility of the paper.
 >
@@ -276,7 +276,7 @@ This section contains communications guidance for authors of papers involved in 
 
 >Dear [Reproducer],
 >
->Thank you for your interest in my work. The data/materials/program that you reference are not publicly accessible for the time being because they are embargoed until `[embargo period]`. 
+>Thank you for your interest in my work. The data/materials/program that you reference are not publicly accessible for the time >being because they are embargoed until `[embargo period]`. 
 >
 >`[Depending on the restrictions that apply to the reproduction package, consider alternatives to sharing the reproduction materials in full. These include:
 > 1.Sharing the analytic version of the data (the version of the dataset that was used for analysis in the final version of your paper); 
@@ -293,7 +293,7 @@ This section contains communications guidance for authors of papers involved in 
 >
 >Thank you for your interest in my work and I would be happy to assist you and other reproducers to assess and improve the reproducibility of this paper.
 >
->To help me provide you with concrete guidance on this issue, I’d appreciate it if you could provide a more specific description of the items that you need from me. >You can find helpful information and resources in Chapter 6 of the ACRE Guide and specifically [here](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#asking-for-additional-guidance-when-some-materials-have-been-shared) `[based on the context, you may need to point the reproducer to a >different scenario and/or provide further information]`.
+>To help me provide you with concrete guidance on this issue, I’d appreciate it if you could provide a more specific description >of the items that you need from me. You can find helpful information and resources in Chapter 6 of the ACRE Guide and >specifically [here](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#asking-for-additional-guidance-when-some-materials-have-been-shared) `[based on the context, you may need to point >the reproducer to a >different scenario and/or provide further information]`.
 >
 >Feel free to contact me if you have any further questions. Thank you for your cooperation.
 >
