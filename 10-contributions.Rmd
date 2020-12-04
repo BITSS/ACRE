@@ -7,9 +7,9 @@ output:
 # Contributions  
 
 ## Contributing feedback on these guidelines {#contrib-guide}
-The ACRE project welcomes feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the “edit” icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you’ll be able to suggest changes directly to the text. Please submit your suggestions using the "create a new branch and start a pull request" option and provide a summary of the changes you've proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to "push" them to the guidelines document or not. For more general feedback, please contact [ACRE@berkeley.edu](mailto:ACRE@berkeley.edu).
+We welcome feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the “edit” icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you’ll be able to suggest changes directly to the text. Please submit your suggestions using the "create a new branch and start a pull request" option and provide a summary of the changes you've proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to "push" them to this Guide document or not. For more general feedback, please contact [ACRE@berkeley.edu](mailto:ACRE@berkeley.edu).
 
-Major contributions to these guidelines will be acknowledged below. The ACRE project employs the Contributor Roles Taxonomy ([CRediT](https://casrai.org/credit/)). Major contributions are defined as any pushed revisions to the guideline language or source code beyond corrections of spelling and grammar.
+Major contributions to this Guide will be acknowledged below. This project employs the Contributor Roles Taxonomy ([CRediT](https://casrai.org/credit/)). Major contributions are defined as any pushed revisions to the Guide language or source code beyond corrections of spelling and grammar.
 
 ## List of Contributors: Guidelines content and source code:
 *(in alphabetical order)*
@@ -39,10 +39,9 @@ cat(str_c(gh_contributors$desc, collapse = ", "))
 
 ## Suggested citation format
 These follow the Chicago style citation format. Brackets [ ] indicate where you'll need to input more specific information.
-- When citing reproductions accessed on the ACRE platform: [Reproducer Last name], [Reproducer First name], [First Last], and [First Last]. [Year]. “Reproduction of [Title of original paper].” *ACRE Platform*. doi: [doi]. [DOI or link to original paper]. 
-- When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guidelines for Verification of
-Computational Reproducibility in Economics.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.
+- When citing reproductions accessed on the Social Science Reproduction Platform: [Reproducer Last name], [Reproducer First name], [First Last], and [First Last]. [Year]. “Reproduction of [Title of original paper].” *Social Science Reproduction Platform*. doi: [doi]. [DOI or link to original paper]. 
+- When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guide for Advancing Computational Reproducibility in the Social Sciences.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.
 
 ## Acknowledgments  
 
-Support for the development of these guidelines was provided by [Arnold Ventures](https://www.arnoldventures.org/).
+Support for the development of this Guide was provided by [Arnold Ventures](https://www.arnoldventures.org/).
