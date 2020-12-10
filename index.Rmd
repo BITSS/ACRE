@@ -1,5 +1,5 @@
 --- 
-title: "Guide for Accelerating <br> Computational Reproducibility in Economics"
+title: "Guide for Accelerating <br> Computational Reproducibility in the Social Sciences"
 subtitle:  |
   [![BITSS logo](BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
