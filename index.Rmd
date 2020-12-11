@@ -43,7 +43,7 @@ output:
   [See a full list of contributors](#contributions)
 </p>  
 
-A beta version of the **Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing in the spring. 
+A beta version of the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing in the spring. 
 
 
 ```{r out.width = '100%', echo=FALSE}
