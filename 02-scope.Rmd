@@ -83,6 +83,8 @@ Once you have identified your declared paper, get familiarized with it and choos
 
 ### Read and summarize the paper {#read-sum}
 
+<!-- add subsection on claims, structure and focus-->
+
 Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and demonstrate your understanding of the paper (for yourself and others like your instructor or advisor).
 
 When reading or summarizing the paper, try to answer the following questions:  
