@@ -1,5 +1,5 @@
 --- 
-title: "Guide for Accelerating <br> Computational Reproducibility in Economics"
+title: "Guide for Accelerating <br> Computational Reproducibility in the Social Sciences"
 subtitle:  |
   [![BITSS logo](BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
@@ -43,8 +43,7 @@ output:
   [See a full list of contributors](#contributions)
 </p>  
 
-A beta version of the platform will be online by the end of 2020. 
-[**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta in the spring. 
+A beta version of the **Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing in the spring. 
 
 
 ```{r out.width = '100%', echo=FALSE}
