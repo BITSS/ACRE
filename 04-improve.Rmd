@@ -4,24 +4,14 @@ library(knitr)
 library(kableExtra)
 ```
 # Improvements   
-After assessing the paper's reproduction package, you can start proposing ways to improve its reproducibility. Considering improvements is an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+
+As you assess the paper' reproducibility, , you can start proposing ways to improve its reproducibility.This improvements can be specific to a display item or at the paper level. Improvements can be either implemented or in the form of specific suggestion for future reproducers to implement. Considering improvements is an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
 
 As with the *Assessment* stage, we recommend that you first focus on one specific display item (e.g., “Table 1”). After making improvements to this first item, you will have a much easier time translating those improvements to other items.   
 
-##  Paper-level improvements {#paper-level}
-
-There are at least  six additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section (1).   
-
-1. Set up the reproduction package using version control software, such as Git.
-2. Improve documentation by adding comments to the code.
-3. Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).
-4. If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write it using an open source statistical software (e.g., R, Python, or Julia).
-5. Re-organize the reproduction package into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order, with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).  
-6. Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
-
-
 ## Display item improvements {#di-imp}
-Record these improvements in the "Display item improvements" section (2).
+
+As part of your assessment of specific display items, you will identify potential issues with the original reproduction package (for any score lower than level 10). In addition to identifying these gaps, you are encouraged to implement specific improvements. In this section we suggest steps on how to add missing materials (data or code), or debug analysis or cleaning code. Record these improvements in the "Display item improvements" section.
 
 ### Adding raw data: missing files or metadata {#rd}
 
@@ -86,5 +76,17 @@ improvements %>%
     knitr::kable(caption = "Level-specific quality improvements: add data/code, debug code")
 ```
 
-### Reporting improvements  
-You will be asked to provide this information in the Assessment and Improvement Survey.   
+##  Paper-level improvements {#paper-level}
+
+<!-- future task: provide more guidance on each of the items below -->
+
+There are at least  six additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section.   
+
+1. Set up the reproduction package using version control software, such as Git.
+2. Improve documentation by adding comments to the code.
+3. Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).
+4. If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using an open source statistical software (e.g., R, Python, or Julia).
+5. Re-organize the reproduction package into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order, with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).  
+6. Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).
+
+
