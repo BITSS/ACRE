@@ -24,7 +24,6 @@ Below is an example of output from the ACRE Diagram builder for a display item t
                               └───[data] admin_01raw.csv  
 
 
-
 ### Incomplete reproduction tree
 
 #### Raw data and analytic data are available, but cleaning code is missing.
@@ -58,6 +57,34 @@ Reproducers are asked to speculate on where the missing files might go, and henc
                         └───[data] analysis_data02.csv
                            └───[code] MISSING FILE(S)
                               └───[data] admin_01raw.csv  
+
+### Unused Data Sources
+
+It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
+
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+
+        Unused data sources:
+        raw_1.dta
+        raw_2.dta
+        raw_3.dta
+        raw_4.dta
+
+        Unused analysis data:
+        cleaned_1.dta
+        cleaned_2.dta
+        cleaned_3.dta
+        cleaned_4.dta
+        merged_1_2.dta
+        merged_3_4.dta
+        cleaned_1_2.dta
+        cleaned_3_4.dta
+
+In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
+
+
 
 ## Examples from real reproduction attempts
 

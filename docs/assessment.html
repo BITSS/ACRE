@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-12-10" />
+<meta name="date" content="2020-12-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,6 +120,7 @@
 <li class="chapter" data-level="4" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>4</b> Checking for Robustness</a><ul>
 <li class="chapter" data-level="4.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>4.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>4.2</b> Reasonable robustness check: justifying and testing.</a></li>
+<li class="chapter" data-level="4.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>4.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>5</b> Concluding the Reproduction</a><ul>
 <li class="chapter" data-level="5.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#outputs"><i class="fa fa-check"></i><b>5.1</b> Outputs</a></li>
@@ -194,24 +195,31 @@
             <section class="normal" id="section-">
 <div id="assessment" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Assessment</h1>
-<p>In this stage, you will review and describe in detail the available reproduction materials, and assess levels of computational reproducibility for the selected outputs, as well as for the overall paper. This stage is designed to record as much of the learning process behind a reproduction as possible to facilitate incremental improvements, and allow future reproducers to pick up easily where others have left off.</p>
-<p>First, you will provide a detailed description of the reproduction package. Second, you will connect the outputs you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each output, and report on paper-level dimensions of reproducibility.</p>
-<p>In the <em>Scoping</em> stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will identify all outputs that contain those estimates. You will also decide if you are interested in assessing the reproducibility of that entire output (e.g., “Table 1”), or will assess only a pre-specified estimates (e.g., “rows 3 and 4 of Table 1”). Additionally, you can include other outputs of interest.</p>
-<p><strong>Use <em>Survey 2</em> to record your work as part of this step.</strong></p>
-<p><em>Tip:</em> We recommend that you first focus on one specific output (e.g., “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.</p>
+<p>In this stage, you will review and describe in detail the available reproduction materials, and assess levels of computational reproducibility for the selected display items, as well as for the overall paper. This stage is designed to record as much of the learning process behind a reproduction as possible to facilitate incremental improvements, and allow future reproducers to pick up easily where others have left off.</p>
+<p>In the <em>Scoping</em> stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will identify all the display items that contain those estimates. You will also decide if you are interested in assessing the reproducibility of that entire display item (e.g., “Table 1”), or will assess only a pre-specified estimates (e.g., “rows 3 and 4 of Table 1”). Additionally, you can include other display items of interest.</p>
+<p>In the first section of this stage, you will provide a detailed description of the entire reproduction package. Second, you will connect the display items you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each display item, and report on paper-level dimensions of reproducibility.</p>
+<!--
+*Tip:* We recommend that you first focus on one specific output (e.g., “Table 1”). After completing the assessment for this output, you will have a much easier time translating improvements to other outputs.
+-->
 <div id="describe-inputs" class="section level2">
 <h2><span class="header-section-number">2.1</span> Describe the inputs.</h2>
-<p>This section explains how to list <em>all</em> input materials found or referred to in the reproduction package. First, you will identify data sources and connect them with their raw data files (when available). Second, you will locate and provide a brief description of the analytic data files. Finally, you will locate, inspect, and describe the analytic code used in the paper.</p>
+<p>This section explains how to list the input materials found or referred to in the reproduction package. At this point it is hard to identify the materials that correspond to your selected claims and display items, so we recommend to list <em>all</em> the files in the reproduction packages. However if there are too many files and this step becomes intractable, you can focus on the materials required to reproduce a specific display item (this can be done by reviewing the code scripts in the <a href="assessment.html#desc-analy">section</a> below).</p>
+<p>First, you will identify data sources and connect them with their raw data files (when available). Second, you will locate and provide a brief description of the analytic data files. Finally, you will locate, inspect, and describe the analytic code used in the paper.</p>
 <p>The following terms will be used in this section:</p>
 <ul>
-<li><p><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).</p></li>
-<li><p><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</p></li>
+<li><strong>Raw data</strong> – Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are <em>still considered raw</em>. All other modifications to raw data make it <em>processed</em>.<br />
+</li>
+<li><strong>Analysis/Analytic data</strong> – Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).<br />
+</li>
+<li><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).<br />
+</li>
+<li><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</li>
 </ul>
 <div id="desc-sourc" class="section level3">
 <h3><span class="header-section-number">2.1.1</span> Describe the data sources and raw data.</h3>
-<p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.</p>
+<p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or in the appendix, you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper. Each row represents a unique data source</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
-<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.</p>
+<p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package. Whenever a data source contains multiple files, enter them on the same cell, separated by semicolon (<code>;</code>).</p>
 Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:<br />
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -256,19 +264,18 @@ data/
 </tr>
 <tr>
 <td style="text-align:left;">
-“DHS 2010 - 2013”
+“Provincial Administration Reports”
 </td>
 <td style="text-align:left;">
 4
 </td>
 <td style="text-align:left;">
-nicaraguaDHS_2010.csv; boliviaDHS2010.csv; nicaraguaDHS_2011.csv; nicaraguaDHS_2012.csv; boliviaDHS_2012.csv; nicaraguaDHS_2013.csv; boliviaDHS_2013.csv
+coast_simplepoint2.csv; rivers_simplepoint2.csv; RAIL dummies.dta;railways_Dissolve_Simplify_point2.csv
 </td>
 <td style="text-align:left;">
-boliviaDHS_2011.csv
 </td>
 <td style="text-align:left;">
-rawdata/DHS/
+Data/maps/
 </td>
 </tr>
 <tr>
