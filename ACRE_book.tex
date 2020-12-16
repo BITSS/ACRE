@@ -199,10 +199,6 @@ Assessments of reproducibility can easily gravitate towards binary judgments tha
 
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
-\begin{verbatim}
-## Warning: package 'DiagrammeR' was built under R version 3.6.3
-\end{verbatim}
-
 \begin{figure}
 \includegraphics[width=1\linewidth]{paper-claims} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification }\label{fig:diagram}
 \end{figure}
@@ -283,7 +279,7 @@ The various uses of reproduction makes the number of potential reproduction stra
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}. EDIT
+TEST EDIT The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}. EDIT
 
 The main difference between a candidate and a declared paper is the availability of a reproduction package. A \textbf{reproduction package} is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper's author for it (find guidance on this in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 5}) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.
 
@@ -794,23 +790,23 @@ The following figure summarizes the different levels of computational reproducib
 \hline
 L1: No materials & -- & -- & -- & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L2: Only code & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & -- & -- & --\\
+L2: Only code & ✔ & ✔ & -- & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L3: Partial analysis data \& code & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & -- & --\\
+L3: Partial analysis data \& code & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L4: All analysis data \& code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & --\\
+L4: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & --\\
 \hline
-L5: Reproducible from analysis & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & --\\
+L5: Reproducible from analysis & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
 \hline
-L6: Some cleaning code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & --\\
+L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
 \hline
-L7: All cleaning code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & --\\
+L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
 \hline
-L8: Some raw data & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & --\\
+L8: Some raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
 \hline
-L9: All raw data & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & --\\
+L9: All raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
-L10: Reproducible from raw data & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714>\\
+L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
 \multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
 \multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
@@ -872,23 +868,23 @@ A large portion of published research in economics uses confidential or propriet
 \hline
 L1: No materials & -- & -- & -- & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L2: Only code & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & -- & -- & --\\
+L2: Only code & ✔ & ✔ & -- & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L3: Partial analysis data \& code & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & -- & --\\
+L3: Partial analysis data \& code & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & -- & --\\
 \hline
-L4*: All analysis data \& code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & -- & --\\
+L4*: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- & --\\
 \hline
-L5*: Proof of third party CRA & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & -- & --\\
+L5*: Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
 \hline
-L6: Some cleaning code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & -- & --\\
+L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
 \hline
-L7: All cleaning code & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & -- & --\\
+L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
 \hline
-L8*: Some instr. for raw data & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & -- & --\\
+L8*: Some instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
 \hline
-L9*: All instr. for raw data & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & --\\
+L9*: All instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
-L10*: Proof of third party CRR & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714> & <U+2714>\\
+L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
 \multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
 \multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
@@ -1091,10 +1087,8 @@ Once you have assessed and improved the computational reproducibility of the dis
 \textbf{Reasonable robustness checks} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) are defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of \textbf{feasible robustness checks} is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the reasonable set of specifications.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{robustness_lvl1} \caption{Universe of robustness tests and its elements}\label{fig:robusts}
+\includegraphics[width=0.5\linewidth]{robustness_lvl1} \includegraphics[width=0.5\linewidth]{robustness_lvl2_4} \includegraphics[width=0.5\linewidth]{robustness_lvl5-9} \includegraphics[width=0.5\linewidth]{robustness_lvl10} \caption{Universe of robustness tests and its elements}\label{fig:robusts}
 \end{figure}
-
-\includegraphics[width=0.5\linewidth]{robustness_lvl2_4} \includegraphics[width=0.5\linewidth]{robustness_lvl5-9} \includegraphics[width=0.5\linewidth]{robustness_lvl10}
 
 The size of the feasible set of robustness checks, and the likelihood that it contains reasonable and paper specifications, will depend on the current level of reproducibility of the results supporting a claim, particularly in terms of availability of data and code. This is illustrated in Figure \ref{fig:robusts}. At levels 1-2, it won't be possible to perform additional robustness checks because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 3-4, but not using the specific estimates declared in the \emph{Scoping Stage} since the display items are not computationally reproducible from analysis data (lacking CRA). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions and an alternative core analytical choice.
 
