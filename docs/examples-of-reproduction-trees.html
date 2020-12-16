@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Examples of Reproduction Trees | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Examples of Reproduction Trees | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
@@ -50,7 +50,9 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -200,7 +202,7 @@
 <div id="complete-reproduction-tree" class="section level3">
 <h3><span class="header-section-number">7.1.1</span> Complete reproduction tree</h3>
 <p>Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.</p>
-<pre><code>      table 1
+<pre><code>   table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -218,7 +220,7 @@
 <div id="raw-data-and-analytic-data-are-available-but-cleaning-code-is-missing." class="section level4">
 <h4><span class="header-section-number">7.1.2.1</span> Raw data and analytic data are available, but cleaning code is missing.</h4>
 <p>Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.</p>
-<pre><code>      table 1
+<pre><code>   table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -231,7 +233,7 @@
        - survey_01raw.csv
        - admin_01raw.csv  </code></pre>
 <p>Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in <code>survey_01raw.csv</code> and <code>admin_01raw.csv</code>, and eventually output <code>analysis_data01.csv</code> and <code>analysis_data02.csv</code>, though this requires the reproducer’s discretion.</p>
-<pre><code>      table 1
+<pre><code>   table 1
         └───[code] formatting_table1.R
             ├───output1_part1.txt  
             |   └───[code] output_table1.do           
@@ -248,7 +250,7 @@
 <div id="unused-data-sources" class="section level3">
 <h3><span class="header-section-number">7.1.3</span> Unused Data Sources</h3>
 <p>It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:</p>
-<pre><code>    table1.tex
+<pre><code> table1.tex
         |___[code] analysis.R
             |___analysis_data.dta
 
@@ -275,7 +277,7 @@
 <div id="possibly-missing-code-for-producing-a-display-item." class="section level3">
 <h3><span class="header-section-number">7.2.1</span> Possibly missing code for producing a display item<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</h3>
 <p>This reproduction diagram fragment likely shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. <code>cps2018.dta</code> and <code>cps_march2017.dta</code> are included as inputs in the reproduction kit, but never used to make a display item, i.e., there is no piece of code that is listed as using them as inputs. Likewise, <code>PublicSalary.dta</code> is listed as a final output, meaning it, too, is not used to make a display item since it is not listed as an input for any code script. Perhaps <code>Paper2_PoExitDataset.dta</code> is made by a missing code script that takes <code>PublicSalary.dta</code>, <code>cps2018.dta</code>, and <code>cps_march2017.dta</code> as inputs? It may be the case that the only way to find out for sure is to contact the study author(s), in which case, such a diagram can be used to help them identify any missing files.</p>
-<pre><code>    PublicSalary.dta
+<pre><code> PublicSalary.dta
     |___MakeData2.do
         |___Paper2_ProviderDataset.dta
         |___Paper2_SSPDataset_wIRT_final.dta
@@ -2968,8 +2970,8 @@
 <div class="footnotes">
 <hr />
 <ol start="2">
-<li id="fn2"><p>This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course<a href="examples-of-reproduction-trees.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course<a href="examples-of-reproduction-trees.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course<a href="examples-of-reproduction-trees.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course<a href="examples-of-reproduction-trees.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Improvements | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in economics." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Improvements | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
@@ -50,7 +50,9 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -200,7 +202,7 @@
 <p>As part of your assessment of specific display items, you will identify potential issues with the original reproduction package (for any score lower than level 10). In addition to identifying these gaps, you are encouraged to implement specific improvements. In this section we suggest steps on how to add missing materials (data or code), or debug analysis or cleaning code. Record these improvements in the “Display item improvements” section.</p>
 <div id="rd" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Adding raw data: missing files or metadata</h3>
-<p>Reproduction packages often do not include all original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data or information about them, follow these steps:</p>
+<p>Reproduction packages often do not TEST EDIT include all original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the missing file. During the <a href="assessment.html#assessment">Assessment</a> stage, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>known_missing</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, record it as “Some/All” in the <code>known_missing</code> field of the for each specific data source.<br />
 </li>
@@ -254,13 +256,14 @@
 <h3><span class="header-section-number">3.1.5</span> Debugging analysis code</h3>
 <p>Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:</p>
 <ul>
-<li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.<br />
-</li>
+<li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
+<ul>
 <li><em>Performance improvement:</em> Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results).<br />
 </li>
 <li><em>Environment set up:</em> Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.<br />
 </li>
 <li><em>Correcting errors:</em> A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the ACRE procedure to report coding errors.</li>
+</ul></li>
 </ul>
 </div>
 <div id="debugging-cleaning-code" class="section level3">
