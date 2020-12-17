@@ -15,7 +15,7 @@ As part of your assessment of specific display items, you will identify potentia
 
 ### Adding raw data: missing files or metadata {#rd}
 
-Reproduction packages often do not TEST EDIT include all original [raw datasets](#describe-inputs). To obtain any missing raw data or information about them, follow these steps:
+Reproduction packages often do not include all original [raw datasets](#describe-inputs). To obtain any missing raw data or information about them, follow these steps:
 
 1. Identify the missing file. During the [Assessment](#assessment) stage, you identified all data sources from the paper's body and appendices (column `data_source` in [this standarized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1)). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the `known_missing` field of the [same spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) as above. If not, record it as “Some/All" in the `known_missing` field of the for each specific data source.      
 2. Verify whether this file (or files) can be easily obtained from the web.   

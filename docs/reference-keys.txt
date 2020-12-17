@@ -85,3 +85,6 @@ acknowledgments
 definitions
 concepts-in-reproducibility
 concepts-in-the-acre-exercise-and-the-platform
+test-the-robustness-of-results
+tab:adding-rows-extra
+example-of-completing-reproduction-tree

@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2020-12-15" />
+<meta name="date" content="2020-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,9 +50,7 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -120,6 +118,7 @@
 <li class="chapter" data-level="4" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>4</b> Checking for Robustness</a><ul>
 <li class="chapter" data-level="4.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>4.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="4.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>4.2</b> Reasonable robustness check: justifying and testing.</a></li>
+<li class="chapter" data-level="4.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>4.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>5</b> Concluding the Reproduction</a><ul>
 <li class="chapter" data-level="5.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#outputs"><i class="fa fa-check"></i><b>5.1</b> Outputs</a></li>
@@ -152,6 +151,7 @@
 <li class="chapter" data-level="7.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#examples-from-real-reproduction-attempts"><i class="fa fa-check"></i><b>7.2</b> Examples from real reproduction attempts</a><ul>
 <li class="chapter" data-level="7.2.1" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#possibly-missing-code-for-producing-a-display-item."><i class="fa fa-check"></i><b>7.2.1</b> Possibly missing code for producing a display item.</a></li>
 <li class="chapter" data-level="7.2.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#long-complicated-tree."><i class="fa fa-check"></i><b>7.2.2</b> Long, complicated tree.</a></li>
+<li class="chapter" data-level="7.2.3" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#example-of-completing-reproduction-tree"><i class="fa fa-check"></i><b>7.2.3</b> Example of completing reproduction tree</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="tips-and-resources-for-reproducible-workflow.html"><a href="tips-and-resources-for-reproducible-workflow.html"><i class="fa fa-check"></i><b>8</b> Tips and Resources for Reproducible Workflow</a><ul>
@@ -221,6 +221,7 @@
 <p>If you cannot find the files or file name corresponding to a specific data source, enter “missing” in the filename column.</p>
 Record this information in this <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">standardized spreadsheet</a> (download it or make a copy for yourself), using the following structure:<br />
 
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:raw-data-information">Table 2.1: </span>Raw data information
@@ -237,10 +238,10 @@ page
 data_files
 </th>
 <th style="text-align:left;">
-known_missing
+directory
 </th>
 <th style="text-align:left;">
-directory
+known_missing
 </th>
 </tr>
 </thead>
@@ -256,9 +257,9 @@ A1
 cepr_march_2018.dta
 </td>
 <td style="text-align:left;">
+data/
 </td>
 <td style="text-align:left;">
-data/
 </td>
 </tr>
 <tr>
@@ -266,15 +267,15 @@ data/
 “Provincial Administration Reports”
 </td>
 <td style="text-align:left;">
-4
+A4
 </td>
 <td style="text-align:left;">
-coast_simplepoint2.csv; rivers_simplepoint2.csv; RAIL dummies.dta;railways_Dissolve_Simplify_point2.csv
-</td>
-<td style="text-align:left;">
+coast_simplepoint2.csv; rivers_simplepoint2.csv; RAIL_dummies.dta; railways_Dissolve_Simplify_point2.csv
 </td>
 <td style="text-align:left;">
 Data/maps/
+</td>
+<td style="text-align:left;">
 </td>
 </tr>
 <tr>
@@ -288,9 +289,9 @@ Data/maps/
 Not available
 </td>
 <td style="text-align:left;">
+data/to_clean/
 </td>
 <td style="text-align:left;">
-data/to_clean/
 </td>
 </tr>
 <tr>
@@ -312,6 +313,7 @@ data/to_clean/
 </tr>
 </tbody>
 </table>
+</div>
 <p><strong>Note:</strong> lists of files in the data_files and known_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.</p>
 </div>
 <div id="desc-analy" class="section level3">
@@ -319,6 +321,7 @@ data/to_clean/
 <p>List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&amp;range=A1">standardized spreadsheet</a>.</p>
 <p>As you progress through the exercise, add to the spreadsheet a one-line description of each file’s main content (for example: <code>all_waves.csv</code> has the simple description <code>data for region-level analysis</code>). This may be difficult in an initial review, but will become easier as you go along.</p>
 <p>The resulting report will have the following structure:</p>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:analysis-data-information">Table 2.2: </span>Analysis data information
@@ -372,6 +375,7 @@ data for region-level analysis
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 <div id="desc-scripts" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Describe the code scripts.</h3>
@@ -479,88 +483,57 @@ cleaning
 <h3><span class="header-section-number">2.2.1</span> Complete workflow information</h3>
 <p>If you were able to identify all the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.</p>
 <pre><code> table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-                |___[code] final_merge.do
-                    |___cleaned_1_2.dta
-                    |   |___[code] clean_merged_1_2.do
-                    |       |___merged_1_2.dta
-                    |           |___[code] merge_1_2.do
-                    |               |___cleaned_1.dta
-                    |               |   |___[code] clean_raw_1.py
-                    |               |       |___raw_1.dta
-                    |               |___cleaned_2.dta
-                    |                   |___[code] clean_raw_2.py
-                    |                       |___raw_2.dta
-                    |___cleaned_3_4.dta
-                        |___[code] clean_merged_3_4.do
-                            |___merged_3_4.dta
-                                |___[code] merge_3_4.do
-                                    |___cleaned_3.dta
-                                    |   |___[code] clean_raw_3.py
-                                    |       |___raw_3.dta
-                                    |___cleaned_4.dta
-                                        |___[code] clean_raw_4.py
-                                            |___raw_4.dta</code></pre>
+        └──[code] analysis.R
+            └──analysis_data.dta
+                └──[code] final_merge.do
+                    └──cleaned_1_2.dta
+                    |   └──[code] clean_merged_1_2.do
+                    |       └──merged_1_2.dta
+                    |           └──[code] merge_1_2.do
+                    |               └──cleaned_1.dta
+                    |               |   └──[code] clean_raw_1.py
+                    |               |       └──raw_1.dta
+                    |               └──cleaned_2.dta
+                    |                   └──[code] clean_raw_2.py
+                    |                       └──raw_2.dta
+                    └──cleaned_3_4.dta
+                        └──[code] clean_merged_3_4.do
+                            └──merged_3_4.dta
+                                └──[code] merge_3_4.do
+                                    └──cleaned_3.dta
+                                    |   └──[code] clean_raw_3.py
+                                    |       └──raw_3.dta
+                                    └──cleaned_4.dta
+                                        └──[code] clean_raw_4.py
+                                            └──raw_4.dta</code></pre>
 <p>This diagram, built with the information you provided, is an important contribution to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.</p>
 </div>
 <div id="incomplete-workflow-information" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> Incomplete workflow information</h3>
-<p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. For example, if the files <code>merge_1_2.do</code>, <code>merge_3_4.do</code>, and <code>final_merge.do</code> are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:</p>
-<pre><code> cleaned_3.dta
-        |___[code] clean_raw_3.py
-            |___raw_3.dta
-
-    table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-
-    cleaned_3_4.dta
-        |___[code] clean_merged_3_4.do
-            |___merged_3_4.dta
-
-    cleaned_1.dta
-        |___[code] clean_raw_1.py
-            |___raw_1.dta
-
-    cleaned_2.dta
-        |___[code] clean_raw_2.py
-            |___raw_2.dta
-
-    cleaned_4.dta
-        |___[code] clean_raw_4.py
-            |___raw_4.dta
-
-    cleaned_1_2.dta
-        |___[code] clean_merged_1_2.do
-            |___merged_1_2.dta
-    Unused data sources: None.</code></pre>
+<p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram.</p>
+<p>For example, let’s start from a simpler complet tree like the following:</p>
+<p>table1.tex
+└── analysis.R
+└── analysis_data.dta
+└── final_merge.do
+└── cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
+<p>For this case, if the the file <code>final_merge.do</code> is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:</p>
+<p>table1.tex
+└── analysis.R
+└── analysis_data.dta</p>
+<p>cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
 <p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<pre><code> table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
-                |___MISSSING CODE FILE(S) #3
-                    |___cleaned_3_4.dta
-                    |       |___[code] clean_merged_3_4.do
-                    |           |___merged_3_4.dta
-                    |               |___MISSSING CODE FILE(S) #2
-                    |                   |___cleaned_3.dta
-                    |                   |       |___[code] clean_raw_3.py
-                    |                   |           |___raw_3.dta    
-                    |                   |___cleaned_4.dta
-                    |                           |___[code] clean_raw_4.py
-                    |                               |___raw_4.dta
-                    |___cleaned_1_2.dta
-                            |___[code] clean_merged_1_2.do
-                                |___merged_1_2.dta
-                                    |___MISSSING CODE FILE(S) #1
-                                        |___cleaned_1.dta
-                                        |       |___[code] clean_raw_1.py
-                                        |           |___raw_1.dta
-                                        |   
-                                        |___cleaned_2.dta
-                                                |___[code] clean_raw_2.py
-                                                    |___raw_2.dta</code></pre>
+<p>table1.tex
+└── analysis.R
+└── cleaned_1_2.dta
+└── MISSSING_CODE_FILE_1
+└── cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
@@ -611,56 +584,16 @@ primary_type
 </tr>
 <tr>
 <td style="text-align:left;">
-missing_file1
+MISSSING_CODE_FILE_1
 </td>
 <td style="text-align:left;">
 unknown
 </td>
 <td style="text-align:left;">
-cleaned_1.dta, cleaned_2.dta
+cleaned_1_2.dta
 </td>
 <td style="text-align:left;">
-merged_1_2.dta
-</td>
-<td style="text-align:left;">
-missing code
-</td>
-<td style="text-align:left;">
-unknown
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-missing_file2
-</td>
-<td style="text-align:left;">
-unknown
-</td>
-<td style="text-align:left;">
-cleaned_3.dta, cleaned_4.dta
-</td>
-<td style="text-align:left;">
-merged_3_4.dta
-</td>
-<td style="text-align:left;">
-missing code
-</td>
-<td style="text-align:left;">
-unknown
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-missing_file3
-</td>
-<td style="text-align:left;">
-unknown
-</td>
-<td style="text-align:left;">
-merged_3_4.dta, merged_1_2.dta
-</td>
-<td style="text-align:left;">
-analysis_data.dta
+cleaned_1_2.dta
 </td>
 <td style="text-align:left;">
 missing code
@@ -707,50 +640,50 @@ unknown
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<table style="NAborder-bottom: 0;">
+<table>
 <caption>
 <span id="tab:levels-of-computational-reproducibility">Table 2.5: </span>Levels of Computational Reproducibility<br />
 (P denotes “partial”, C denotes “complete”)
 </caption>
 <thead>
 <tr>
-<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+<th style="border-bottom:hidden" colspan="1">
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Availability of materials, and reproducibility
 </div>
 </th>
 </tr>
 <tr>
-<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+<th style="border-bottom:hidden" colspan="1">
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Code
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Data
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRA
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Cleaning Code
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Raw Data
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRR
 </div>
@@ -1143,12 +1076,12 @@ L10: Reproducible from raw data
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; " colspan="100%">
+<td style="padding: 0; border: 0;" colspan="100%">
 <sup>a</sup> <strong>Computationally Reproducible from Analytic data (CRA):</strong> The output can be reproduced with minimal effort starting from the <em>analytic</em> datasets.
 </td>
 </tr>
 <tr>
-<td style="padding: 0; " colspan="100%">
+<td style="padding: 0; border: 0;" colspan="100%">
 <sup>b</sup> <strong>Computationally Reproducible from Raw data (CRR):</strong> The output can be reproduced with minimal effort from the <em>raw</em> datasets.
 </td>
 </tr>
@@ -1160,7 +1093,7 @@ L10: Reproducible from raw data
 <p>A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and what is generally referred to as <em>administrative data</em>. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.</p>
 <ul>
 <li><p><strong>Levels 1 and 2</strong> can be applied as described above.</p></li>
-<li><p><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all, of the following information:</p>
+<li><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all, of the following information:
 <ol style="list-style-type: lower-alpha">
 <li><em>Contact information</em>, including name of the organization(s) that provides access to the data and contact information of at least one individual.</li>
 <li><em>Terms of use</em>, including licenses and eligibility criteria for accessing the data, if any.</li>
@@ -1174,50 +1107,50 @@ L10: Reproducible from raw data
 <li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met, and instructions for accessing the <strong><em>raw data</em></strong> are complete.</p></li>
 <li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p></li>
 </ul>
-<table style="NAborder-bottom: 0;">
+<table>
 <caption>
 <span id="tab:levels-of-computational-reproducibility-adjusted">Table 2.6: </span>Levels of Computational Reproducibility with Proprietary/Confidential Data<br />
 (P denotes “partial”, C denotes “complete”)
 </caption>
 <thead>
 <tr>
-<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+<th style="border-bottom:hidden" colspan="1">
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Availability of materials, and reproducibility
 </div>
 </th>
 </tr>
 <tr>
-<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+<th style="border-bottom:hidden" colspan="1">
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Code
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Instr. Analysis Data
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRA
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Cleaning Code
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Instr. Raw Data
 </div>
 </th>
-<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRR
 </div>
@@ -1610,12 +1543,12 @@ L10*: Proof of third party CRR
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; " colspan="100%">
+<td style="padding: 0; border: 0;" colspan="100%">
 <sup>a</sup> <strong>Computationally Reproducible from Analytic data (CRA):</strong> The output can be reproduced with minimal effort starting from the <em>analytic</em> datasets.
 </td>
 </tr>
 <tr>
-<td style="padding: 0; " colspan="100%">
+<td style="padding: 0; border: 0;" colspan="100%">
 <sup>b</sup> <strong>Computationally Reproducible from Raw data (CRR):</strong> The output can be reproduced with minimal effort from the <em>raw</em> datasets.
 </td>
 </tr>
@@ -1647,7 +1580,7 @@ L10*: Proof of third party CRR
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>a relative location takes the form of <code>folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>a relative location takes the form of <code>folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
             </section>
