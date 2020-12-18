@@ -5,7 +5,9 @@ library(kableExtra)
 ```
 # Improvements   
 
-As you assess the paper' reproducibility, , you can start proposing ways to improve its reproducibility.This improvements can be specific to a display item or at the paper level. Improvements can be either implemented or in the form of specific suggestion for future reproducers to implement. Considering improvements is an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+As you assess the paper' reproducibility, you can start proposing ways to improve its reproducibility.This improvements can be specific to a display item or at the paper level. Improvements can be either implemented or in the form of specific suggestion for future reproducers to implement. Considering improvements is an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+
+Part of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request, and if not, on how to approach them in order to have a constructive exchange.  
 
 As with the *Assessment* stage, we recommend that you first focus on one specific display item (e.g., “Table 1”). After making improvements to this first item, you will have a much easier time translating those improvements to other items.   
 
