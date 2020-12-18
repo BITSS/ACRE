@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Guidelines for Computational Reproducibility in Economics</a></li>
+        <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]

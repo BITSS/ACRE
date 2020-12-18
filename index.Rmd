@@ -13,7 +13,7 @@ link-citations: yes
 github-repo: BITSS/ACRE
 heading_anchors: true
 site: bookdown::bookdown_site
-description: "Materials to support the reproduction of published research in economics."
+description: "Materials to support the reproduction of published research in social sciences"
 output:
   bookdown::html_document2: default
   bookdown::word_document2:
