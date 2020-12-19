@@ -1,6 +1,5 @@
 fig:diagram
 fig:stages-intro
-tab:stages-intro
 fig:stages-unit
 fig:candidate-paper-dec-tree
 tab:raw-data-information
@@ -12,14 +11,14 @@ tab:levels-of-computational-reproducibility-adjusted
 tab:improvements-spreadsheet
 fig:robusts
 tab:adding-rows-extra
-scoping
+selecting-a-paper
 declare
 check-acre
-scoping-your-declared-paper
+identify-your-relevant-timeline.
+scoping
 read-sum
 declare-estimates
 setup-your-own-revised-reproduction-package.
-identify-your-relevant-timeline.
 assessment
 describe-inputs
 desc-sourc
@@ -87,4 +86,3 @@ acknowledgments
 definitions
 concepts-in-reproducibility
 concepts-in-the-acre-exercise-and-the-platform
-test-the-robustness-of-results

@@ -48,13 +48,14 @@ A beta version of the [**Social Science Reproduction Platform**](https://www.soc
 
 ```{r out.width = '100%', echo=FALSE}
 # url
-knitr::include_graphics("stages.png") 
+knitr::include_graphics("stages.svg") 
 ```
 
 
 <table>
    <thead>
       <tr>
+         <th>[(0) <br> Select](#scoping) </th>
          <th>[(1) <br> Scoping](#scoping) </th>
          <th>[(2) <br> Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>
@@ -65,32 +66,37 @@ knitr::include_graphics("stages.png")
       <tr>
          <td></td>
          <td></td>
+         <td></td>
          <td>[Display-item-level](#di-imp)</td>
          <td>[Paper-level](#paper-level)</td>
       </tr>
       <tr>
          <td>&#9744; Select paper</td>
+         <td>[&#9744;  Read paper](#read-summ)</td>
          <td>[&#9744; Describe inputs](#describe-inputs)</td>
          <td>[&#9744; + Raw data](#rd)</td>
          <td>[&#9744; + Version control](#paper-level)</td>
          <td>[&#9744; Analytical choices](#id-analy)</td>
       </tr>
       <tr>
-         <td>[&#9744; Check ACRE](#check-acre)</td>
+         <td>[&#9744; Search materials](#check-acre)</td>
+         <td>[&#9744; Identify claims](#declare-estimates)</td>
          <td>[&#9744; Reproduction diagrams](#diagram)</td>
          <td>[&#9744; + Analysis data](#ad)</td>
          <td>[&#9744; + Documentation](#paper-level)</td>
          <td>[&#9744; Type of choice](#id-type)</td>
       </tr>
       <tr>
-         <td>&#9744; [Declare paper](#declare)</td>
+         <td>[&#9744; Check SSRP](#check-acre)</td>
+         <td>[&#9744; Declare estimates](#declare-estimates)</td>
          <td>[&#9744; Reproduction score](#score)</td>
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>
          <td>[&#9744; Choice value](#id-val)</td>
       </tr>
       <tr>
-         <td>[&#9744;  Read paper](#read-summ)</td>
+         <td>[&#9744;  Declare/Discard paper](#read-summ)</td>
+         <td></td>
          <td></td>
          <td>[&#9744; + Cleaning code](#cc)</td>
          <td>[&#9744; + File structure](#paper-level)</td>
@@ -98,6 +104,7 @@ knitr::include_graphics("stages.png")
       </tr>
       <tr>
          <td>[&#9744; Declare estimates](#declare-estimates)</td>
+         <td></td>
          <td></td>
          <td>[&#9744; Debug analysis code](#dac)</td>
          <td></td>
@@ -107,14 +114,10 @@ knitr::include_graphics("stages.png")
       <tr>
          <td></td>
          <td></td>
+         <td></td>
          <td>[&#9744; Debug cleaning code](#dcc)</td>
          <td></td>
          <td></td>
-      </tr>
-      <tr>
-         <td>[Record results in Survey 1](https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv)</td>
-         <td colspan=3>[Record results in Survey 2](https://berkeley.qualtrics.com/jfe/form/SV_2gd9Y3XVtjLpZL7)</td>
-         <td>[Record results in Survey 3](ADD LINK)</td>
       </tr>
    </tbody>
 </table>

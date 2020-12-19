@@ -1,0 +1,47 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+
+# Contributions  
+
+## Contributing feedback on these guidelines {#contrib-guide}
+We welcome feedback from participants and the wider social science community. If you wish to provide feedback on specific chapters or sections, click the “edit” icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you’ll be able to suggest changes directly to the text. Please submit your suggestions using the "create a new branch and start a pull request" option and provide a summary of the changes you've proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to "push" them to this Guide document or not. For more general feedback, please contact [ACRE@berkeley.edu](mailto:ACRE@berkeley.edu).
+
+Major contributions to this Guide will be acknowledged below. This project employs the Contributor Roles Taxonomy ([CRediT](https://casrai.org/credit/)). Major contributions are defined as any pushed revisions to the Guide language or source code beyond corrections of spelling and grammar.
+
+## List of Contributors: Guidelines content and source code:
+*(in alphabetical order)*
+
+ - Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+ - Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)
+ - Joel Ferguson – Writing (original draft), Writing (reviewing and editing)
+ - Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)
+ - Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)
+ - Edward Miguel – Conceptualization, Funding acquisition, Supervision
+ - Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)
+ - Lars Vilhuber – Conceptualization, Funding acquisition, Supervision
+
+The individuals below have contributed to the [ACRE GitHub repository](https://github.com/BITSS/ACRE):
+
+```{r github-contributors, echo=FALSE, results="asis", message=FALSE}
+# adapted from Hadley Wickham's scripts to credit contributors to R for Data Science
+## contributors.R (https://github.com/hadley/r4ds/blob/master/contributors.R)
+## index.Rmd (https://github.com/hadley/r4ds/blob/master/index.rmd)
+## R for Data Science license: https://creativecommons.org/licenses/by-nc-nd/3.0/us/
+
+library(tidyverse)
+gh_contributors <- readr::read_csv("contributors.csv", col_types = list())
+
+cat(str_c(gh_contributors$desc, collapse = ", "))
+```
+
+## Suggested citation format
+These follow the Chicago style citation format. Brackets [ ] indicate where you'll need to input more specific information.
+- When citing reproductions accessed on the Social Science Reproduction Platform: [Reproducer Last name], [Reproducer First name], [First Last], and [First Last]. [Year]. “Reproduction of [Title of original paper].” *Social Science Reproduction Platform*. doi: [doi]. [DOI or link to original paper]. 
+- When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guide for Advancing Computational Reproducibility in the Social Sciences.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.
+
+## Acknowledgments  
+
+Support for the development of this Guide was provided by [Arnold Ventures](https://www.arnoldventures.org/).

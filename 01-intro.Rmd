@@ -11,21 +11,22 @@ library(kableExtra)
 
 # Introduction {-#intro}
 
-In 2019, the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the [*American Journal of Political Science*](https://ajps.org/ajps-verification-policy/). In addition to the requirements laid out in such policies, [specific recommendations](https://social-science-data-editors.github.io/guidance/) were produced by data editors of social science journals to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of *computational reproducibility* in the social sciences range from somewhat low to  alarmingly low [@galiani2018make; @chang2015economics; @kingi2018reproducibility].
+*Computational reproducibilty* is defined as the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis [@national2019reproducibility]. In 2019, the [American Economic Association](https://www.aeaweb.org/journals/policies/data-code/) updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the [*American Journal of Political Science*](https://ajps.org/ajps-verification-policy/). In addition to the requirements laid out in such policies, [specific recommendations](https://social-science-data-editors.github.io/guidance/) were produced by data editors of social science journals to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to  alarmingly low [@galiani2018make; @chang2015economics; @kingi2018reproducibility].
 
 *Replication*, or the process by which a study’s hypotheses and findings are re-examined using different data or different methods (or both) [@King95] is an essential part of the scientific process that allows science to be “self-correcting.” *Computational reproducibility*, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a necessary condition for replication. Computational reproducibility is assessed through the process of *reproduction*. At the center of this process is the *reproducer* (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the *original author* (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process.
 
-This Guide is meant to be used in conjunction with the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/)(SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is principally intended for reproductions of published research in economics, it may be used in other social science disciplines, and we welcome contributions that aim to "translate" any of its parts to other social science disciplines (learn how you can contribute [here](https://bitss.github.io/ACRE/contributions.html)). The purpose of this document is to provide a common approach, terminology, and standards for conducting reproductions. The goal of reproductions, in general, is to assess and improve the computational reproducibility of published research in a way that facilitates further robustness checks, extensions, collaborations, and replication.
+This Guide is meant to be used in conjunction with the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is principally intended for reproductions of published research in economics, it may be used in other social science disciplines, and we welcome contributions that aim to "translate" any of its parts to other social science disciplines (learn how you can contribute [here](https://bitss.github.io/ACRE/contributions.html)). The purpose of this document is to provide a common approach, terminology, and standards for conducting reproductions. The goal of reproductions, in general, is to assess and improve the computational reproducibility of published research in a way that promotes a better understanding of research and facilitates additional robustness checks, extensions, collaborations, and replications.
 
 This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics [(ACRE)](https://www.bitss.org/ecosystem/acre/) project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences [(BITSS)](https://bitss.org)—an initiative of the Center for Effective Global Action [(CEGA)](https://cega.berkeley.edu/)—and Dr. Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
 
-```{r weai-presentation, out.width = '100%', echo=FALSE, fig.cap= "BITSS Project Scientist Fernando Hoces de la Guardia provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.", eval=FALSE}
+```{r weai-presentation, out.width = '80%', echo=FALSE, fig.cap= "BITSS Project Scientist Fernando Hoces provides an overview of the ACRE project and the process of conducting a reproduction as part of a webinar hosted at the 95th WEAI virtual conference Jun 27, 2020.", eval=FALSE}
 knitr::include_url("https://www.youtube.com/embed/Xv1t8An2gPo")
 ```
 
 [View slides used for the presentation "How to Teach Reproducibility in Classwork"](https://bitss.github.io/WEAI2020_slides/)
 
-<!-- add clarebout principle and discuss effect on a more inclusive scientific community
+<!-- 
+add clarebout principle and discuss effect on a more inclusive scientific community
 -->
 
 ## Beyond binary judgments {-}
@@ -111,34 +112,27 @@ Note that the highest level of reproducibility, which requires complete reproduc
 
 ## Stages of the exercise {-}
 
-This reproduction exercise is divided into four stages, corresponding to the first four chapters of these guidelines, with a fifth optional stage:   
+A reproduction attempt is divided into five stages, corresponding to the first five chapters of these guide:   
 
-1. [**Scoping**](#scoping), where you (the reproducer) will define the scope of the exercise by declaring a paper and the specific output(s) on which you will focus for the remainder of the exercise;  
-2.    [**Assessment**](#assessment), where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected outputs; 
+0.    [**Paper selection**](#select), where you (the reproducer) will select a candiate paper and verify the availability of a reproduction package. Depending on availability, you will declare the paper and start the excercise, or select a new candidate paper (after leaving a short record);  
+1.    [**Scoping**](#scoping), where you will define the scope of the exercise recording which claims, display items, and specifications you will focus for the remainder of the exercise;  
+2.    [**Assessment**](#assessment), where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected display items; 
 3.    [**Improvement**](#improvements), where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;  
-4.    [**Robustness checks**](#robust), where you will assess the quality of selected analytical choices.  
+4.    [**Robustness checks**](#robust), where you will identify feasible robustness checks and/or assess the reasonableness of specific variations in analytical choices.  
 
 
 These guidelines do not include a possible fifth stage of **extension**. Here you may extend the current paper by including new methodologies or data. If you where to extend the same methodology and research question into a different sample, that would bring you closer to a *replication*.
 
 
+
 ```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four stages of a reproduction attempt"}
 knitr::include_graphics("stages.svg") 
+``` 
 
-stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
-                            Scope    = c("10%", "5%", "5%"),
-                            Assess   = c("35%", "25%", "20%"),
-                            Improve  = c("25%", "40%", "50%"),
-                            Robust   = c("30%", "30%", "25%") )
-
-stages_info %>%
-    knitr::kable(caption = "Relative Level of Effort by Type of exercise") %>%
-    kable_styling(full_width = TRUE)
-```
+This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility. The only stage that should go first, and may not be edited further once finished, is the scoping stage, as it defines the scope of the exercise.
 
 
-Table \@ref(tab:stages-intro) depicts suggested levels of effort for each stage of the exercise depending on the context in which you are performing a reproduction. This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility.
-
+<!--
 ## Recording the results of the exercise {-}
 
 You will be asked to record the results of your reproduction as you progress through each stage. 
@@ -150,14 +144,19 @@ In *Stage 2: [Assessment](#assessment)*, you will inspect the paper's reproducti
 In *Stage 3: [Improvement](#improvements)*, you will try to improve the reproducibility of the selected outputs by adding missing files, documentation, and report any potential changes in the level of reproducibility. Use **Survey 2** to record your work at Stages 2 and 3 (you will receive access instructions for Survey 2 when you submit Survey 1).
 
 In *Stage 4: [Robustness Checks](#robust)*, you will assess different analytical choices and test possible variations. Use **Survey 3** to record your work at this stage.
+-->
 
 <!--
 ADD EXPLANATION OF HOW UNIT OF ANALYSIS VARIES ACROSS STAGES
 -->
 
+This guide, and the SSRP platform, will change the key unit of analysis as you progress through each stage. As Figure \@ref(fig:stages-unit) shows, the scoping stage will be centered around the key scientific claims selected for reproduction. Once those have been identified, the next two stages will guide you on how to assess and improve the reproducibility of the display items supporting those claims. In the final stage the unit of analysis is once again at the claim level. 
+
+
 ```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage of a reproduction attempt", eval=TRUE}
 knitr::include_graphics("unit-of-analysis.png") 
 ```
+
 
 
 ## Reproduction Strategies {-}
