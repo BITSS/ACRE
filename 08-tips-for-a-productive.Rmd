@@ -243,7 +243,7 @@ In cases of dismissive comments, the best course of action may be to simply than
 
 
   
-## For original authors Rrsponding to requests from reproducers
+## For original authors responding to requests from reproducers
 
 This section contains guidance for authors of papers involved in reproductions on the Social Science Reproduction Platform. We present language that may be helpful for various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of [this chapter](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) always applies: “Treat others and their work as you would like others to treat you and your work!” We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. [Let us know](emailto:acre@berkeley.edu) if you need guidance in other scenarios!
 

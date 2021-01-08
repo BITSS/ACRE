@@ -16,12 +16,12 @@ Before submitting the reproduction, make sure that your revised reproduction pac
      - If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. `/data/raw/large_file.csv`).
      
   
-**2. Reproduction report(s)** -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be  part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information: 
-     - ***Scoping Report:*** basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications. 
-     - ***Assessment Reoprt:*** a summary of the display items assessed and their connections with the claims.
-     - ***Improvement Report:*** descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.
-     - ***Robustness Report:*** summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.      
-     - ***Final reproduction report:*** includes everything, plus final comments, and it cannot be edited after submission. 
+**2. Reproduction report(s)** -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be  part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:   
+     - ***Scoping Report:*** basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.   
+     - ***Assessment Reoprt:*** a summary of the display items assessed and their connections with the claims.  
+     - ***Improvement Report:*** descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.  
+     - ***Robustness Report:*** summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.        
+     - ***Final reproduction report:*** includes everything, plus final comments, and it cannot be edited after submission.   
   
   
 **3. Your data** -- You will be able to export a .csv file containing all of your responses recorded as part of your reproduction attempt. 

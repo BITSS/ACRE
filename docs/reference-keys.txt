@@ -8,7 +8,6 @@ tab:code-files-information
 tab:adding-rows
 tab:levels-of-computational-reproducibility
 tab:levels-of-computational-reproducibility-adjusted
-tab:improvements-spreadsheet
 fig:robusts
 tab:adding-rows-extra
 selecting-a-paper
@@ -38,7 +37,6 @@ ac
 cc
 dac
 debugging-cleaning-code
-reporting-results
 paper-level
 robust
 feasible-robustness-checks-increasing-the-number-of-feasible-specifications
@@ -56,7 +54,7 @@ response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-
 contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise
 responding-to-hostile-responses-from-original-authors
 dismissive-comments
-for-original-authors-rrsponding-to-requests-from-reproducers
+for-original-authors-responding-to-requests-from-reproducers
 responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction
 acknowledging-that-the-author-no-longer-has-access-to-certain-parts-of-the-reproduction-package
 acknowledging-that-some-material-is-still-embargoed-for-future-research
@@ -72,12 +70,6 @@ examples-from-real-reproduction-attempts
 possibly-missing-code-for-producing-a-display-item.
 long-complicated-tree.
 example-of-completing-reproduction-tree
-tips-and-resources-for-reproducible-workflow
-reproducible-workflows
-links-to-resources-organizations-and-people-for-reproducibile-work
-resources
-organizations
-people
 contributions
 contrib-guide
 list-of-contributors-guidelines-content-and-source-code

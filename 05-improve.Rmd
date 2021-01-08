@@ -63,7 +63,7 @@ Whenever code is available in the reproduction package, you should be able to de
 
 Follow the same steps that you did to debug the analysis code, but report them separately.  
 
-
+<!--
 ### Reporting results    
 
 Track all the different types of improvements you make and record in [this standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A3) with the following structure:   
@@ -77,6 +77,8 @@ improvements <- data.frame(output_name = c("table 1", "table 1", "table 1", "fig
 improvements %>%
     knitr::kable(caption = "Level-specific quality improvements: add data/code, debug code")
 ```
+
+-->
 
 ##  Paper-level improvements {#paper-level}
 

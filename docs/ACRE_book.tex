@@ -93,7 +93,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2020-12-19}
+\date{2021-01-07}
 
 \begin{document}
 \maketitle
@@ -608,33 +608,40 @@ In many cases, some of the components of the workflow will not be easily identif
 
 For example, let's start from a simpler complet tree like the following:
 
+\begin{verbatim}
 table1.tex
-└── analysis.R
-└── analysis\_data.dta
-└── final\_merge.do
-└── cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+      └── analysis.R
+          └── analysis_data.dta
+              └── final_merge.do
+                  └── cleaned_1_2.dta
+                     └── clean_merged_1_2.do
+                         └── merged_1_2.dta
+                  
+\end{verbatim}
 
 For this case, if the the file \texttt{final\_merge.do} is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:
 
+\begin{verbatim}
 table1.tex
-└── analysis.R
-└── analysis\_data.dta
-
-cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+      └── analysis.R
+          └── analysis_data.dta
+    
+    cleaned_1_2.dta
+      └── clean_merged_1_2.do
+          └── merged_1_2.dta
+\end{verbatim}
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
+\begin{verbatim}
 table1.tex
-└── analysis.R
-└── cleaned\_1\_2.dta
-└── MISSSING\_CODE\_FILE\_1
-└── cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+      └── analysis.R
+          └── cleaned_1_2.dta
+              └── MISSSING_CODE_FILE_1
+                  └── cleaned_1_2.dta
+                     └── clean_merged_1_2.do
+                         └── merged_1_2.dta
+\end{verbatim}
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 
@@ -970,36 +977,6 @@ Whenever code is available in the reproduction package, you should be able to de
 
 Follow the same steps that you did to debug the analysis code, but report them separately.
 
-\hypertarget{reporting-results}{%
-\subsection{Reporting results}\label{reporting-results}}
-
-Track all the different types of improvements you make and record in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A3}{this standardized spreadsheet} with the following structure:
-
-\begin{table}
-
-\caption{\label{tab:improvements-spreadsheet}Level-specific quality improvements: add data/code, debug code}
-\centering
-\begin{tabular}[t]{l|l|l|l}
-\hline
-output\_name & imprv & description\_of\_added\_files & lvl\\
-\hline
-table 1 & +AD & ADD EXAMPLES & 5\\
-\hline
-table 1 & +RD & ADD EXAMPLES & 5\\
-\hline
-table 1 & DCC & ADD EXAMPLES & 5\\
-\hline
-figure 1 & +CC &  & 6\\
-\hline
-figure 1 & DAC &  & 6\\
-\hline
-inline 1 & DAC &  & 8\\
-\hline
-... & ... & ... & ...\\
-\hline
-\end{tabular}
-\end{table}
-
 \hypertarget{paper-level}{%
 \section{Paper-level improvements}\label{paper-level}}
 
@@ -1241,10 +1218,10 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 - Is titled following this convention: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer\ -\ year\ when\ the\ reproduction\ was\ completed}
 - If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. \texttt{/data/raw/large\_file.csv}).
 
-\textbf{2. Reproduction report(s)} -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:
-- \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.
-- \textbf{\emph{Assessment Reoprt:}} a summary of the display items assessed and their connections with the claims.
-- \textbf{\emph{Improvement Report:}} descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.
+\textbf{2. Reproduction report(s)} -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:\\
+- \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.\\
+- \textbf{\emph{Assessment Reoprt:}} a summary of the display items assessed and their connections with the claims.\\
+- \textbf{\emph{Improvement Report:}} descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.\\
 - \textbf{\emph{Robustness Report:}} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.\\
 - \textbf{\emph{Final reproduction report:}} includes everything, plus final comments, and it cannot be edited after submission.
 
@@ -1614,8 +1591,8 @@ Best regards,\\
 \texttt{{[}Reproducer{]}}
 \end{quote}
 
-\hypertarget{for-original-authors-rrsponding-to-requests-from-reproducers}{%
-\section{For original authors Rrsponding to requests from reproducers}\label{for-original-authors-rrsponding-to-requests-from-reproducers}}
+\hypertarget{for-original-authors-responding-to-requests-from-reproducers}{%
+\section{For original authors responding to requests from reproducers}\label{for-original-authors-responding-to-requests-from-reproducers}}
 
 This section contains guidance for authors of papers involved in reproductions on the Social Science Reproduction Platform. We present language that may be helpful for various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{this chapter} always applies: ``Treat others and their work as you would like others to treat you and your work!'' We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. \href{emailto:acre@berkeley.edu}{Let us know} if you need guidance in other scenarios!
 
@@ -4609,184 +4586,6 @@ missing\_file3 & unknown & merged\_3\_4.dta, merged\_1\_2.dta & analysis\_data.d
 \end{tabu}
 \end{table}
 
-\hypertarget{tips-and-resources-for-reproducible-workflow}{%
-\chapter{Tips and Resources for Reproducible Workflow}\label{tips-and-resources-for-reproducible-workflow}}
-
-\hypertarget{reproducible-workflows}{%
-\section{Reproducible workflows:}\label{reproducible-workflows}}
-
-Below is a summary from Chapter 11 of \citet{christensen2019transparent}. If there is a book/chapter that you find particularly helpful for, please write a brief summary and submit a \protect\hyperlink{contrib-guide}{contribution}.
-
-\textbf{Folder organization}
-
-Basic file organization is a critical component of a reproducible workflow. The following structure is recommended, but can be adapted to accommodate different reproducers or types of research. The name of the master folder should be easy to read and meaningful to all collaborators on the the project.
-
-\begin{itemize}
-\tightlist
-\item
-  Create a master folder with a descriptive name for the project. It should contain:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Separate folders for programming script files, raw data, edited data, output, and final paper or article text
-  \item
-    A README file: description of contents of each folder, as well as installation and operating instructions for reproducers
-  \end{itemize}
-\item
-  Keep raw data intact: Any edits or datasets generated using raw data should be stored in a ``data'' folder separate from the ``raw data'' folder.
-\item
-  When naming a directory or file, stick to lowercase letters with underscores (instead of spaces) to avoid cross-operating-system issues.
-\end{itemize}
-
-\textbf{Efficient and readable programming}
-
-The core of programming for reproducibility is to write code wherever possible. Writing scripts leaves a record of any changes to data, which allows other researchers to reproduce work exactly. It is also helpful to leave comments in your code to explain the reasoning for changes or any gaps left if using point-and-click methods is necessary.
-
-\begin{itemize}
-\tightlist
-\item
-  Leave a record of any changes to the data: Write code in the programming environment, instead of modifying data by hand in a spreadsheet or relying on point-and-click options.
-\item
-  Include comments in code to explain changes, and save intermediate datasets used in analysis.
-\item
-  Give variables names that will be informative to reproducers.
-\item
-  Use relative directory paths, not absolute paths, so the work can be more easily reproduced from different computers.
-\end{itemize}
-
-\textbf{Version control}
-
-Version control software is used to keep a record of changes to project files. Although it is possible to manually track changes in a central research log or as notes in individual script files, many social scientists recognize the benefits of a distributed version control system. Because each collaborator is able to have a local copy of the project's entire work history, these systems are particularly suited to collaborative projects. Below are methods to manually track changes and a brief explanation of Git, a popular distributed version control system.
-
-\begin{itemize}
-\tightlist
-\item
-  Maintain a written record of work.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    In a central research log: Log activities in a single central file as often as work on the project is being done (keep track of ``which team member writes what code, produces what output, edits which files, and when'').
-  \item
-    In individual script files: Record ``who edited which part of which file when, and why.''
-  \item
-    With a version control system, such as Git: Git records changes made to files, by whom, and when.
-  \end{itemize}
-\item
-  A brief explanation of Git: Users add changed files to the staging area, then commit those changes to the project folder, or repository. Git keeps the filename and records the new version of each file from the staging area.
-\end{itemize}
-
-\hypertarget{links-to-resources-organizations-and-people-for-reproducibile-work}{%
-\section{Links to resources, organizations and people for reproducibile work}\label{links-to-resources-organizations-and-people-for-reproducibile-work}}
-
-Below we point to an ever growing list of resouces, organizations and specific researcher doing empirical work with a strong orientation towards reproducibility. The list are alphabetical order and \protect\hyperlink{contrib-guide}{contributions} are welcome!
-
-\hypertarget{resources}{%
-\subsection{Resources}\label{resources}}
-
-\begin{itemize}
-\tightlist
-\item
-  Dynamic documents in \href{https://rmarkdown.rstudio.com/gallery.html}{R}, \href{https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks\#economics-and-finance}{Python} and \href{https://github.com/BITSS/CEGA2019/blob/master/03-extra_dynamic_docs/02b-Stata-markdown/Stata\%20Markdown.pdf}{Stata}\\
-\item
-  Git resources:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \href{https://happygitwithr.com}{Jenny Bryan's book} and \href{https://www.rstudio.com/resources/videos/happy-git-and-gihub-for-the-user-tutorial/}{video}\\
-  \item
-    \href{https://lab.github.com/}{Github learning lab}
-  \item
-    \href{https://www.udacity.com/course/how-to-use-git-and-github--ud775}{Udacity's intro}\\
-  \item
-    \href{https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV}{Git for poets}\\
-  \item
-    \href{https://github.com/kbjarkefur/GitHubDropBox}{Combining GitHub and Dropbox}\\
-  \item
-    \href{https://www.atlassian.com/git/tutorials}{Atlassian intro to Git}
-  \item
-    \href{https://swcarpentry.github.io/git-novice/}{Software Carpentry tutorial from the command line}
-  \end{itemize}
-\item
-  \href{http://idbdocs.iadb.org/wsdocs/getdocument.aspx?docnum=EZSHARE-1350314980-383}{IDB's cheatsheet for transparency, reproducibility and ethics}\\
-\item
-  \href{https://github.com/labordynamicsinstitute/replicability-training/wiki}{Lars Vilhuber LDI's Wiki for Reproducibility}. Particularly \href{https://github.com/labordynamicsinstitute/replicability-training/wiki/Prepare_and_run_replication}{this section}.\\
-\item
-  \href{https://osf.io}{Open Science Framework (OSF)}
-\item
-  \href{https://www.projecttier.org/tier-protocol/}{Project TIER}\\
-\item
-  \href{https://github.com/hblackburn/R4Econ/blob/master/Resources.md}{R for Stata users}\\
-\item
-  World Bank \href{https://dimewiki.worldbank.org/wiki/Main_Page}{DIME's Wiki for transparent and reproducible research}.
-\end{itemize}
-
-\hypertarget{organizations}{%
-\subsection{Organizations}\label{organizations}}
-
-\begin{itemize}
-\tightlist
-\item
-  \href{https://github.com/US-CBO}{Congressional Budget Office}
-\item
-  \href{https://github.com/gslab-econ}{Gentzkow \& Shapiro Lab}
-\item
-  \href{https://lost-stats.github.io/}{LOST}
-\item
-  \href{https://github.com/Opportunitylab}{Opportunity Lab}
-\item
-  \href{https://github.com/PSLmodels}{Policy Simulation Library}
-\item
-  \href{https://github.com/UrbanInstitute}{Urban Institute}
-\end{itemize}
-
-\hypertarget{people}{%
-\subsection{People}\label{people}}
-
-(by last name)
-
-\begin{itemize}
-\tightlist
-\item
-  \href{https://github.com/luizaandrade}{Luiza Andrade}
-\item
-  \href{https://github.com/acarril}{Alvaro Carril}
-\item
-  \href{https://github.com/lachlandeer}{Lachlan Deer}
-\item
-  \href{https://github.com/rebekahanne}{Rebekah Din}
-\item
-  \href{https://github.com/rickecon}{Richard Evans}
-\item
-  \href{https://github.com/andrewheiss}{Andrew Heiss}
-\item
-  \href{https://github.com/johnjosephhorton}{John Horton}
-\item
-  \href{https://github.com/NickCH-K}{Nick Huntingon}
-\item
-  \href{https://github.com/MattHJensen}{Matt Jensen}
-\item
-  \href{https://github.com/maxkasy}{Max Kasy}
-\item
-  \href{https://github.com/ckingdon95}{Cora Kingdon}
-\item
-  \href{https://github.com/grantmcdermott}{Grant McDermott}
-\item
-  \href{https://github.com/tyleransom}{Tyler Ransom}
-\item
-  \href{https://github.com/lrennels}{Lisa Rennels}
-\item
-  \href{https://github.com/edrubin}{Ed Rubin}
-\item
-  \href{https://github.com/michaelstepner}{Michael Stepner}
-\item
-  \href{https://github.com/shoshievass}{Shoshana Vasserman}\\
-\item
-  \href{https://github.com/larsvilhuber}{Lars Vilhuber}
-\end{itemize}
-
 \hypertarget{contributions}{%
 \chapter{Contributions}\label{contributions}}
 
@@ -4849,7 +4648,7 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).\\
 \item
-  \textbf{Claim (concept)} -- A major hypothesis in a paper, whose results are presented in one or more \textbf{display items}. {[}ALEKS/FERNANDO{]}
+  \textbf{Claim (concept)} -- A major hypothesis in a paper, whose results are presented in one or more \textbf{display items}.
 
   \begin{itemize}
   \tightlist
@@ -4859,7 +4658,7 @@ Support for the development of this Guide was provided by \href{https://www.arno
     \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
   \end{itemize}
 \item
-  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}. {[}ALEKS/FERNANDO{]}
+  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}. 
 \item
   \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
 \item
@@ -4891,9 +4690,9 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
 \item
-  \textbf{Reasonable specification} -- {[}ALEKS/FERNANDO{]}
+  \textbf{Reasonable specification} -- 
 \item
-  \textbf{Specification} -- {[}ALEKS/FERNANDO{]}
+  \textbf{Specification} -- 
 \item
   \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.\\
 \item
@@ -4916,11 +4715,11 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Declared paper} -- The paper that the reproducer analyzes throughout the exercise.
 \item
-  \textbf{Display item} -- A display item is a figure or table that presents results described in the paper. Each display item contains several \textbf{specifications}. {[}ALEKS/FERNANDO{]}\\
+  \textbf{Display item} -- A display item is a figure or table that presents results described in the paper. Each display item contains several \textbf{specifications}. \\
 \item
   \textbf{Reproduction tree/ diagram} -- A diagram generated by the ACRE Diagram Builder which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 \item
-  \textbf{Revised reproduction package} -- {[}ALEKS/FERNANDO{]}
+  \textbf{Revised reproduction package} -- 
 \end{itemize}
 
 \bibliography{book.bib,packages.bib}
