@@ -43,7 +43,7 @@ output:
   [See a full list of contributors](#contributions)
 </p>  
 
-A beta version of the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing in the spring. 
+A beta version of the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing. 
 
 
 ```{r out.width = '100%', echo=FALSE}
@@ -81,7 +81,7 @@ knitr::include_graphics("stages.svg")
       <tr>
          <td>[&#9744; Search materials](#check-acre)</td>
          <td>[&#9744; Identify claims](#declare-estimates)</td>
-         <td>[&#9744; Reproduction diagrams](#diagram)</td>
+         <td>[&#9744; Build reproduction diagrams](#diagram)</td>
          <td>[&#9744; + Analysis data](#ad)</td>
          <td>[&#9744; + Documentation](#paper-level)</td>
          <td>[&#9744; Type of choice](#id-type)</td>
@@ -89,7 +89,7 @@ knitr::include_graphics("stages.svg")
       <tr>
          <td>[&#9744; Check SSRP](#check-acre)</td>
          <td>[&#9744; Declare estimates](#declare-estimates)</td>
-         <td>[&#9744; Reproduction score](#score)</td>
+         <td>[&#9744; Assign a reproducibility score](#score)</td>
          <td>[&#9744; + Analysis code](#ac)</td>
          <td>[&#9744; + Dynamic document](#paper-level)</td>
          <td>[&#9744; Choice value](#id-val)</td>
