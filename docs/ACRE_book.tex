@@ -93,7 +93,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
 \author{ACRE Team}
-\date{2021-01-07}
+\date{2021-01-29}
 
 \begin{document}
 \maketitle
@@ -108,7 +108,7 @@
 
 \protect\hyperlink{contributions}{See a full list of contributors}
 
-A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} is now available! \href{https://forms.gle/yZivWcwijCzEhrBU6}{\textbf{Sign up here}} if you would like to be part of our beta testing in the spring.
+A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} is now available! \href{https://forms.gle/yZivWcwijCzEhrBU6}{\textbf{Sign up here}} if you would like to be part of our beta testing.
 
 \includegraphics[width=1\linewidth]{stages}
 
@@ -142,7 +142,7 @@ A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{
 
 \protect\hyperlink{declare-estimates}{☐ Identify claims}
 
-\protect\hyperlink{diagram}{☐ Reproduction diagrams}
+\protect\hyperlink{diagram}{☐ Build reproduction diagrams}
 
 \protect\hyperlink{ad}{☐ + Analysis data}
 
@@ -154,7 +154,7 @@ A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{
 
 \protect\hyperlink{declare-estimates}{☐ Declare estimates}
 
-\protect\hyperlink{score}{☐ Reproduction score}
+\protect\hyperlink{score}{☐ Assign a reproducibility score}
 
 \protect\hyperlink{ac}{☐ + Analysis code}
 
@@ -182,13 +182,13 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 I
 \chapter*{Introduction}\label{intro}}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\emph{Computational reproducibilty} is defined as the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, \href{https://social-science-data-editors.github.io/guidance/}{specific recommendations} were produced by data editors of social science journals to facilitate compliance. This change in policy is expected to improve the computational reproducibility of all published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
+\emph{Computational reproducibilty} is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed \href{https://social-science-data-editors.github.io/guidance/}{recommendations and resources} to facilitate compliance. This goal of such policy changes is to improve the computational reproducibility of \emph{all} published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
-\emph{Replication}, or the process by which a study's hypotheses and findings are re-examined using different data or different methods (or both) \citep{King95} is an essential part of the scientific process that allows science to be ``self-correcting.'' \emph{Computational reproducibility}, or the ability to reproduce the results, tables, and other figures of a paper using the available data, code, and materials, is a necessary condition for replication. Computational reproducibility is assessed through the process of \emph{reproduction}. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process.
+This Guide includes a common approach, terminology, and standards for conducting \emph{reproductions}, or attempts to assess and improve the computational reproducibility of published work**. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process. Reproductions should be distinguished from \emph{replications}, where replicators re-examine a study's hypotheses using \emph{different data} or \emph{different methods} (or both) \citep{King95}. We find that reproducibility is necessary for replicability, though both allow science to be ``self-correcting.''
 
-This Guide is meant to be used in conjunction with the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is principally intended for reproductions of published research in economics, it may be used in other social science disciplines, and we welcome contributions that aim to ``translate'' any of its parts to other social science disciplines (learn how you can contribute \href{https://bitss.github.io/ACRE/contributions.html}{here}). The purpose of this document is to provide a common approach, terminology, and standards for conducting reproductions. The goal of reproductions, in general, is to assess and improve the computational reproducibility of published research in a way that promotes a better understanding of research and facilitates additional robustness checks, extensions, collaborations, and replications.
+We recommend using this Guide in conjunction with the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is primarily intended for reproductions in economics, it may be used in other social science disciplines, and we welcome contributions that aim to ``translate'' any of its parts to other social science disciplines (learn how you can contribute \href{https://bitss.github.io/ACRE/contributions.html}{here}). Find definitions of fundamental concepts in reproducibility and the process of conducting reproductions in the \href{https://bitss.github.io/ACRE/definitions.html}{``Glossary'' chapter}.
 
-This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and Dr.~Lars Vilhuber, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
+This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and \href{https://www.vilhuber.com/lars/}{Dr.~Lars Vilhuber}, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
 
 \href{https://bitss.github.io/WEAI2020_slides/}{View slides used for the presentation ``How to Teach Reproducibility in Classwork''}
 
@@ -196,7 +196,7 @@ This Guide and the SSRP were developed as part of the Accelerating Computational
 \section*{Beyond binary judgments}\label{beyond-binary-judgments}}
 \addcontentsline{toc}{section}{Beyond binary judgments}
 
-Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper ``reproducible'' or ``non-reproducible.'' These guidelines suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.
+Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper as ``(ir-)reproducible''. We suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.
 
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
@@ -204,53 +204,51 @@ First, a paper may contain several scientific claims (or major hypotheses) that 
 \includegraphics[width=1\linewidth]{paper-claims} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification }\label{fig:diagram}
 \end{figure}
 
-Second, for any given specification there are several levels of reproducibility, ranging from the absence of any materials to complete reproducibility starting from raw data. And even for a specific claim-specification, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir)reproducible.
+Second, for any given specification, there are several reproducibility levels, ranging from the absence of any materials to complete reproducibility starting from raw data. Moreover, even for a specific claim-specification combination, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir-)reproducible.
 
-Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding to achieve and should not be expected of all published research --- especially before 2019. Instead, this level can serve as an aspiration for the field of economics at large as it seeks to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
+Note that the highest level of reproducibility, which requires complete reproducibility starting from raw data, is very demanding and should not be expected of all published research --- especially before 2019. Instead, this level can serve as an aspiration for social science research, as we look to improve the reproducibility of research and facilitate the transmission of knowledge throughout the scientific community.
 
-\hypertarget{stages-of-the-exercise}{%
-\section*{Stages of the exercise}\label{stages-of-the-exercise}}
-\addcontentsline{toc}{section}{Stages of the exercise}
+\hypertarget{reproduction-stages}{%
+\section*{Reproduction stages}\label{reproduction-stages}}
+\addcontentsline{toc}{section}{Reproduction stages}
 
-A reproduction attempt is divided into five stages, corresponding to the first five chapters of these guide:
+Reproductions can be divided into five stages, corresponding to the first five chapters of this guide:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \setcounter{enumi}{-1}
 \tightlist
 \item
-  \protect\hyperlink{select}{\textbf{Paper selection}}, where you (the reproducer) will select a candiate paper and verify the availability of a reproduction package. Depending on availability, you will declare the paper and start the excercise, or select a new candidate paper (after leaving a short record);\\
+  \protect\hyperlink{select}{\textbf{Paper selection}}, where you will select a \emph{candidate} paper and try to locate its \emph{reproduction package}. If a reproduction package is available, you will \emph{declare} the paper and start the reproduction, or select a new candidate paper (after leaving a record on the SSRP);\\
 \item
-  \protect\hyperlink{scoping}{\textbf{Scoping}}, where you will define the scope of the exercise recording which claims, display items, and specifications you will focus for the remainder of the exercise;\\
+  \protect\hyperlink{scoping}{\textbf{Scoping}}, where you will define the scope of the exercise by recording the claims, display items, and specifications you will focus on in the remainder of the reproduction;\\
 \item
-  \protect\hyperlink{assessment}{\textbf{Assessment}}, where you will review and describe in detail the available reproduction package, and assess the current level of computational reproducibility of the selected display items;
+  \protect\hyperlink{assessment}{\textbf{Assessment}}, where you will review and describe in detail the available reproduction package and assess the current level of computational reproducibility of the selected display items;
 \item
   \protect\hyperlink{improvements}{\textbf{Improvement}}, where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;\\
 \item
-  \protect\hyperlink{robust}{\textbf{Robustness checks}}, where you will identify feasible robustness checks and/or assess the reasonableness of specific variations in analytical choices.
+  \protect\hyperlink{robust}{\textbf{Robustness}}, where you will identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.
 \end{enumerate}
 
-These guidelines do not include a possible fifth stage of \textbf{extension}. Here you may extend the current paper by including new methodologies or data. If you where to extend the same methodology and research question into a different sample, that would bring you closer to a \emph{replication}.
+This Guide does not include a possible fifth stage of \textbf{extension}, where you may extend the current paper by including new methodologies or data, which would bring the exercise closer to \emph{replication}.
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{stages} \caption{Four stages of a reproduction attempt}\label{fig:stages-intro}
 \end{figure}
 
-This process need not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing a paper's level of reproducibility. The only stage that should go first, and may not be edited further once finished, is the scoping stage, as it defines the scope of the exercise.
+The order of the stages may not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the paper's reproducibility level. The only stage that should go first, and cannot be edited once finished, is the Scoping stage.
 
-This guide, and the SSRP platform, will change the key unit of analysis as you progress through each stage. As Figure \ref{fig:stages-unit} shows, the scoping stage will be centered around the key scientific claims selected for reproduction. Once those have been identified, the next two stages will guide you on how to assess and improve the reproducibility of the display items supporting those claims. In the final stage the unit of analysis is once again at the claim level.
+Different stages in the reproduction process correspond to different units of analysis (see Figure \ref{fig:stages-unit} for an overview). E.g., the Scoping stage will focus on scientific \emph{claims} selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.
 
 \begin{figure}
 \includegraphics[width=1\linewidth]{unit-of-analysis} \caption{Relevant unit of analysis at each stage of a reproduction attempt}\label{fig:stages-unit}
 \end{figure}
 
 \hypertarget{reproduction-strategies}{%
-\section*{Reproduction Strategies}\label{reproduction-strategies}}
-\addcontentsline{toc}{section}{Reproduction Strategies}
+\section*{Reproduction strategies}\label{reproduction-strategies}}
+\addcontentsline{toc}{section}{Reproduction strategies}
 
-Generally, a reproduction will begin with a thorough reading of the study being reproduced. However, subsequent steps may follow from a \emph{reproduction strategy}. For example, a reproduction may closely follow the order of the steps outlined above. This might entail the reproducer first choosing a set of results whose production they are interested in assessing or understanding, completely reproducing these results to the extent possible, and then making modifications to the reproduction package. Another potential strategy could be for the reproducer to develop potential robustness checks or extensions while reading the study, which would lead to the definition of a set of results to be assessed via reproduction. Yet another reproduction strategy may be for the reproducer to seek out a paper that uses a particular dataset to which they have access or an interest in using, reproducing the results that use that dataset as an input, then probing the robustness of the results to various data cleaning decisions.
-
-The various uses of reproduction makes the number of potential reproduction strategies quite large. In choosing or designing a reproduction strategy, it is helpful to clearly identify the goal of the reproduction. In all of the examples laid out in the paragraph above, the order in which the steps of the reproduction exercise are taken is at least partially determined by what the reproducer hopes to get from the exercise. The structure provided in these guidelines, together with a clear reproduction goal, can facilitate the implementation of an efficient reproduction strategy.
+In most cases, you will begin a reproduction with a thorough reading of your paper of interest. However, the sequence of the steps you take in the remainder of the reproduction may follow various \emph{reproduction strategies}. The most obvious strategy would be to follow the order of the steps as outlined above. You may also first choose one of the paper's many claims and then focus on assessing and improving the reproduction package accordingly. Using an alternative strategy, you might identify potential robustness checks or extensions while reading the paper and then focus only on the results associated with that robustness check. In another strategy, you may identify a paper that uses a particular dataset in which you are interested and then only reproduce or conduct robustness checks for the results associated with that dataset. The various uses of reproduction make the number of potential reproduction strategies potentially infinite, so it helps identify the goal of the reproduction from the start.
 
 \hypertarget{selecting-a-paper}{%
 \chapter{Selecting a paper}\label{selecting-a-paper}}
