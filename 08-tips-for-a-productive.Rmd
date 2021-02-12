@@ -74,7 +74,24 @@ Consider the following *before* you contact the original author:
 >
 >Best regards,  
 >`[Reproducer]`
-  
+ 
+#### Follow-up if the author only provides the appendix
+ 
+If the original author asks you to reproduce the results using the appendix, you are not obligated to undertake that effort. Should you choose to do so, you can send a follow-up email as follows.
+
+> Dear `[Title (e.g., "Dr.") Last name of Corresponding Author]`,
+>
+> Thank you for your response.
+> 
+> Our group's goal is to improve computational reproducibility using original data and code. Your appendix was very helpful and I have attempted to use it to reproduce your results.`[Describe initial efforts to reproduce the results.]`.
+> 
+> I was hoping for either source code or guidance so on a few points of confusion. `[List out any unclear steps, data sources, or otherwise missing components.]`.
+> 
+> We very much appreciate your time. Once completed, the reproduction package will be publicly available so you can use it as a reference if and when another reproducer comes with a similar request. Please let me know if you have any questions.
+>
+>Best regards,  
+>`[Reproducer]`
+ 
 ### Contacting the original author(s) to request specific missing items of a reproduction package
 
 **Template email:**  
