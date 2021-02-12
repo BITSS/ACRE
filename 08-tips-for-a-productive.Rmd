@@ -106,15 +106,15 @@ Consider the following *before* you contact the original author:
 
 >**Subject:** Clarification for reproduction materials for `[“Title of the paper”]`  
 
->Dear `[Title (e.g., "Dr.") Last name of Corresponding Author]`,
+> Dear `[Title (e.g., "Dr.") Last name of Corresponding Author]`,
 >
->Thank you for sharing your materials. They have been immensely helpful for my work.
+> Thank you for your assistance so far. The materials have been very helpful in reproducing your results; my progress so far is promising.
 >
->Unfortunately, I ran into a few issues as I delved into the reproduction, and I think your guidance would be helpful in resolving them. `[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data or code are missing. Refer to examples 1 and 2 below for more details]`.  
->  
->Thank you in advance for your help.
->  
->Best regards,  
+> To help me complete the reproduction, I was hoping for either materials or guidance on clarifying a few issues. [`list points of clarification, preferably bulleted if more than one (e.g., rounding protocol, data source, computation method, etc.)`]
+>
+> Once completed, the reproduction package will be publicly available so you can use it as a reference if and when another reproducer comes with a similar request. Let me know if you have any questions. Please also feel free to contact my supervisor/instructor `[Name (email)]` for further details on this exercise. Thank you in advance for your time.
+>
+> Best regards,  
 >`[Reproducer]`  
 
 
