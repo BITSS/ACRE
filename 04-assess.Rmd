@@ -5,6 +5,8 @@ library(knitr)
 library(kableExtra)
 temp_eval <- TRUE
 ```
+# Assessment
+
 In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
 
 In the *Scoping* stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., "Table 1") or only specific estimates found in display items (e.g., "rows 3 and 4 of Table 1"). You can also include additional display items of interest.
