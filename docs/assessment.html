@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-02-13" />
+<meta name="date" content="2021-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,7 +50,11 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -84,12 +88,12 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a><ul>
 <li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1</b> Read and summarize the paper</a></li>
-<li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>2.2</b> Record scope of the exercise</a></li>
-<li class="chapter" data-level="2.3" data-path="scoping.html"><a href="scoping.html#setup-your-own-revised-reproduction-package."><i class="fa fa-check"></i><b>2.3</b> Setup your own revised reproduction package.</a></li>
+<li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#record-a-revised-reproduction-package"><i class="fa fa-check"></i><b>2.2</b> Record a revised reproduction package</a></li>
+<li class="chapter" data-level="2.3" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>2.3</b> Record scope of the exercise</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>3</b> Assessment</a><ul>
-<li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe the inputs.</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#desc-sourc"><i class="fa fa-check"></i><b>3.1.1</b> Describe the data sources and raw data.</a></li>
+<li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe the inputs</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#desc-sourc"><i class="fa fa-check"></i><b>3.1.1</b> Describe the data sources and raw data</a></li>
 <li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#desc-analy"><i class="fa fa-check"></i><b>3.1.2</b> Describe the analytic data sets.</a></li>
 <li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#desc-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts.</a></li>
 </ul></li>
@@ -110,12 +114,14 @@
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a><ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>5.2</b> Reasonable robustness check: justifying and testing.</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a><ul>
 <li class="chapter" data-level="6.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#outputs"><i class="fa fa-check"></i><b>6.1</b> Outputs</a></li>
@@ -184,27 +190,27 @@
             <section class="normal" id="section-">
 <div id="assessment" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Assessment</h1>
-<p>In this stage, you will review and describe in detail the available reproduction materials, and assess levels of computational reproducibility for selected display items, as well as practices that increase the reproducibility of the overall paper. This stage is designed to record as much of the learning process behind a reproduction as possible to facilitate incremental improvements, and allow future reproducers to pick up easily where others have left off.</p>
-<p>In the <em>Scoping</em> stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will decide if you are interested in assessing the reproducibility of that entire display item (e.g., “Table 1”), or will assess only a pre-specified estimates (e.g., “rows 3 and 4 of Table 1”). Additionally, you can include other display items of interest.</p>
-<p>The goal of this stage is to have an assessment of the current stage of the reproduction package, before you suggest any improvements. By the end of this section you will have a very specific description of the current stage of the reproduction package. With this you can try to improve its level of reproducibility and, potentially, approach the authors with specific questions to obtain missing materials or fix possible issues.</p>
-<p>In the first section of this stage, you will provide a detailed description of the entire reproduction package. Second, you will connect the display items you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each display item, and report on paper-level dimensions of reproducibility.</p>
-<p><em>Tip:</em> We recommend that you first focus on one specific display item (e.g., “Table 1”). After completing the assessment for this display item, you will have a much easier time assessing others.</p>
+<p>In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.</p>
+<p>In the <em>Scoping</em> stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., “Table 1”) or only specific estimates found in display items (e.g., “rows 3 and 4 of Table 1”). You can also include additional display items of interest.</p>
+<p>The Assessment stage aims to analyze the reproduction package’s current reproducibility—before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package’s current reproducibility that you can use to implement improvements, potentially with the paper’s original authors’ help.</p>
+<p>On the SSRP, you will first provide a detailed description of the reproduction package. You will then connect the display items you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item’s reproducibility and record various paper-level dimensions of reproducibility.</p>
+<p><em>Tip:</em> We recommend that you first focus on just one display item (e.g., “Table 1”). After completing the assessment for this display item, you will have a much easier time assessing others.</p>
 <div id="describe-inputs" class="section level2">
-<h2><span class="header-section-number">3.1</span> Describe the inputs.</h2>
-<p>This section explains how to list the input materials found or referred to in the reproduction package. At this point it is hard to identify the materials that correspond to your selected claims and display items, so we recommend to list <em>all</em> the files in the reproduction packages. However if there are too many files and this step becomes intractable, you can focus on the materials required to reproduce a specific display item (this can be done by reviewing the code scripts in the <a href="assessment.html#desc-analy">section</a> below).</p>
-<p>First, you will identify data sources and connect them with their raw data files (when available). Second, you will locate and provide a brief description of the analytic data files. Finally, you will locate, inspect, and describe the analytic code used in the paper.</p>
-<p>The following terms will be used in this section:</p>
+<h2><span class="header-section-number">3.1</span> Describe the inputs</h2>
+<p>This section explains how to record the <em>input</em> materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing <em>all</em> files in the reproduction packages. However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the <a href="assessment.html#desc-analy">section</a> below for reference).</p>
+<p>In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3.</p>
+<p>The following concepts may be helpful as you work in the Assessment stage:</p>
 <ul>
 <li><strong>Raw data</strong> – Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are <em>still considered raw</em>. All other modifications to raw data make it <em>processed</em>.<br />
 </li>
-<li><strong>Analysis/Analytic data</strong> – Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).<br />
+<li><strong>Analysis/Analytic data</strong> – Data used as the final input in a workflow to produce a statistic displayed in the paper (including appendices).<br />
 </li>
-<li><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).<br />
+<li><strong>Cleaning code:</strong> A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the data structure (from long to wide, or vice versa).<br />
 </li>
-<li><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</li>
+<li><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</li>
 </ul>
 <div id="desc-sourc" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Describe the data sources and raw data.</h3>
+<h3><span class="header-section-number">3.1.1</span> Describe the data sources and raw data</h3>
 <p>In the paper you chose, find references to all <em>data sources</em> used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or in the appendix, you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper. Each row represents a unique data source</p>
 <p>Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., “our information on regional minimum wages comes from the Bureau of Labor Statistics.” This should be recorded as “regional minimum wages from the Bureau of Labor Statistics”).</p>
 <p>Next, look at the reproduction package and map the <em>data sources</em> mentioned in the paper to the <em>data files</em> in the available materials. Record their folder locations relative to the main reproduction folder<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package. Whenever a data source contains multiple files, enter them on the same cell, separated by semicolon (<code>;</code>).</p>
@@ -632,50 +638,50 @@ unknown
 <li><p><strong>Level 10 (L10):</strong> All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR). Note that Level 10 is aspirational and may be very difficult to attain for most research published today.</p></li>
 </ul>
 <p>The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (<code>✔</code>) or can be made to move up one level of reproducibility (-).</p>
-<table>
+<table style="NAborder-bottom: 0;">
 <caption>
 <span id="tab:levels-of-computational-reproducibility">Table 3.5: </span>Levels of Computational Reproducibility<br />
 (P denotes “partial”, C denotes “complete”)
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Availability of materials, and reproducibility
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Code
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Data
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRA
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Cleaning Code
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Raw Data
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRR
 </div>
@@ -755,10 +761,10 @@ L1: No materials
 L2: Only code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -790,13 +796,13 @@ L2: Only code
 L3: Partial analysis data &amp; code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -825,16 +831,16 @@ L3: Partial analysis data &amp; code
 L4: All analysis data &amp; code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -860,19 +866,19 @@ L4: All analysis data &amp; code
 L5: Reproducible from analysis
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 –
@@ -895,22 +901,22 @@ L5: Reproducible from analysis
 L6: Some cleaning code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -930,25 +936,25 @@ L6: Some cleaning code
 L7: All cleaning code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -965,28 +971,28 @@ L7: All cleaning code
 L8: Some raw data
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1000,31 +1006,31 @@ L8: Some raw data
 L9: All raw data
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1035,45 +1041,45 @@ L9: All raw data
 L10: Reproducible from raw data
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 </tr>
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border: 0;" colspan="100%">
+<td style="padding: 0; " colspan="100%">
 <sup>a</sup> <strong>Computationally Reproducible from Analytic data (CRA):</strong> The output can be reproduced with minimal effort starting from the <em>analytic</em> datasets.
 </td>
 </tr>
 <tr>
-<td style="padding: 0; border: 0;" colspan="100%">
+<td style="padding: 0; " colspan="100%">
 <sup>b</sup> <strong>Computationally Reproducible from Raw data (CRR):</strong> The output can be reproduced with minimal effort from the <em>raw</em> datasets.
 </td>
 </tr>
@@ -1085,7 +1091,7 @@ L10: Reproducible from raw data
 <p>A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and what is generally referred to as <em>administrative data</em>. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.</p>
 <ul>
 <li><p><strong>Levels 1 and 2</strong> can be applied as described above.</p></li>
-<li><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all, of the following information:
+<li><p><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions on how to access the <strong><em>analysis data</em></strong> are available. This means that the authors have provided some, but not all, of the following information:</p>
 <ol style="list-style-type: lower-alpha">
 <li><em>Contact information</em>, including name of the organization(s) that provides access to the data and contact information of at least one individual.</li>
 <li><em>Terms of use</em>, including licenses and eligibility criteria for accessing the data, if any.</li>
@@ -1099,50 +1105,50 @@ L10: Reproducible from raw data
 <li><p><strong>Adjusted Level 9 (L9*):</strong> All requirements for Level 8* are met, and instructions for accessing the <strong><em>raw data</em></strong> are complete.</p></li>
 <li><p><strong>Adjusted Level 10 (L10*):</strong> All requirements for Level 9* are met, and a certification that the output can be reproduced from the raw data is provided.</p></li>
 </ul>
-<table>
+<table style="NAborder-bottom: 0;">
 <caption>
 <span id="tab:levels-of-computational-reproducibility-adjusted">Table 3.6: </span>Levels of Computational Reproducibility with Proprietary/Confidential Data<br />
 (P denotes “partial”, C denotes “complete”)
 </caption>
 <thead>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="10">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Availability of materials, and reproducibility
 </div>
 </th>
 </tr>
 <tr>
-<th style="border-bottom:hidden" colspan="1">
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Analysis Code
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Instr. Analysis Data
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRA
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Cleaning Code
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 Instr. Raw Data
 </div>
 </th>
-<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
 <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 CRR
 </div>
@@ -1222,10 +1228,10 @@ L1: No materials
 L2: Only code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1257,13 +1263,13 @@ L2: Only code
 L3: Partial analysis data &amp; code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1292,16 +1298,16 @@ L3: Partial analysis data &amp; code
 L4*: All analysis data &amp; code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1327,19 +1333,19 @@ L4*: All analysis data &amp; code
 L5*: Proof of third party CRA
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;border-bottom: 1px solid">
 –
@@ -1362,22 +1368,22 @@ L5*: Proof of third party CRA
 L6: Some cleaning code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1397,25 +1403,25 @@ L6: Some cleaning code
 L7: All cleaning code
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1432,28 +1438,28 @@ L7: All cleaning code
 L8*: Some instr. for raw data
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1467,31 +1473,31 @@ L8*: Some instr. for raw data
 L9*: All instr. for raw data
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
 –
@@ -1502,45 +1508,45 @@ L9*: All instr. for raw data
 L10*: Proof of third party CRR
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 <td style="text-align:left;">
-✔
+&lt;U+2714&gt;
 </td>
 </tr>
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border: 0;" colspan="100%">
+<td style="padding: 0; " colspan="100%">
 <sup>a</sup> <strong>Computationally Reproducible from Analytic data (CRA):</strong> The output can be reproduced with minimal effort starting from the <em>analytic</em> datasets.
 </td>
 </tr>
 <tr>
-<td style="padding: 0; border: 0;" colspan="100%">
+<td style="padding: 0; " colspan="100%">
 <sup>b</sup> <strong>Computationally Reproducible from Raw data (CRR):</strong> The output can be reproduced with minimal effort from the <em>raw</em> datasets.
 </td>
 </tr>
@@ -1572,7 +1578,7 @@ L10*: Proof of third party CRR
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>a relative location takes the form of <code>folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>a relative location takes the form of <code>folder_in_rep_materials/sub_folder/file.txt</code>, in contrast to an absolute location that takes the form of <code>/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt</code><a href="assessment.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
