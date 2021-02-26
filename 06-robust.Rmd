@@ -47,6 +47,7 @@ The size of feasible robustness checks grows exponentially as higher levels of c
 
 Robustness is assessed at the claim level (see our diagram representing a paper's components \@ref(fig:stages-unit)). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the [example tree](#complete-tree) discussed in the *Assessment* stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different  specifications: 
 
+```
         table1.tex (contains preferred specification of a given claim)
             |___[code] analysis.R
                     |___[code] final_merge.do
@@ -58,7 +59,8 @@ Robustness is assessed at the claim level (see our diagram representing a paper'
                                     |___[code] merge_3_4.do
                                             |___[code] clean_raw_3.py
                                             |___[code] clean_raw_4.py
-                                            
+```
+
 Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts, and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and refer to specific files in the reproduction package.
 
 ## Feasible robustness checks: increasing the number of feasible specifications
