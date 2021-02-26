@@ -16,6 +16,7 @@ A reproduction tree is complete when it is possible to connect its output (a giv
 ### Complete reproduction tree
 Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
 
+```{}
           table 1
             └───[code] formatting_table1.R
                 ├───output1_part1.txt  
@@ -28,7 +29,7 @@ Below is an example of output from the ACRE Diagram builder for a display item t
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
                               └───[data] admin_01raw.csv  
-
+```
 
 ### Incomplete reproduction tree
 
