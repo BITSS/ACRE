@@ -16,9 +16,8 @@ check-acre
 identify-your-relevant-timeline.
 scoping
 read-sum
+record-a-revised-reproduction-package
 declare-estimates
-setup-your-own-revised-reproduction-package.
-assessment
 describe-inputs
 desc-sourc
 desc-analy

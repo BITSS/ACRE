@@ -1,43 +1,58 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[]{book}
+\documentclass[
+]{book}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
+\usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
+  \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
+\else % if luatex or xetex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\usepackage{hyperref}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={Guide for Accelerating   Computational Reproducibility in the Social Sciences},
-            pdfauthor={ACRE Team},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+  pdftitle={Guide for Accelerating   Computational Reproducibility in the Social Sciences},
+  pdfauthor={ACRE Team},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
-\usepackage{graphicx,grffile}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -46,32 +61,15 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-% set default figure placement to htbp
+% Set default figure placement to htbp
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -86,14 +84,22 @@
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 \usepackage{xcolor}
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Guide for Accelerating Computational Reproducibility in the Social Sciences}
-\providecommand{\subtitle}[1]{}
-\subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}\\}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-02-13}
+\date{2021-02-25}
 
 \begin{document}
 \maketitle
@@ -316,11 +322,11 @@ Before you begin working on the four main stages of the reproduction exercise (S
 
 Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledging that less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
-2 weeks (\textasciitilde{}10 days)
+2 weeks (\textasciitilde10 days)
 
-1 month (\textasciitilde{}20 days)
+1 month (\textasciitilde20 days)
 
-1 semester (\textasciitilde{}100 days)
+1 semester (\textasciitilde100 days)
 
 analysis data
 
@@ -375,107 +381,87 @@ Robustness
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-The goal of this stage is to help you define the scope of your reproduction by identifying key scientific claims and the specific display items on which you will focus.
+At this stage, you will define the \emph{scope of the reproduction} by identifying the \emph{scientific claims} and related \emph{display items} that you will analyze in the remainder of the reproduction. For this exercise, we define a claim as a single major finding in a paper (usually featured in the abstract) and the details of the methods and results that support this finding. A claim is usually not equivalent to a single hypothesis or an entire paper, though there may be exceptions. A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
 
-Once you have identified your declared paper, get familiarized with it and choose the specific display items on which you will focus for the remainder of the exercise.
+\textbf{Note:} once you progress past the Scoping stage on the SSRP, you will no longer be able to edit your responses in the Scoping stage, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
 \hypertarget{read-sum}{%
 \section{Read and summarize the paper}\label{read-sum}}
 
-Depending on how much time you have, we recommend that you write a short (1-2 page) summary of the paper. This will help remind you of the key elements to focus on for the reproduction, and demonstrate your understanding of the paper (for yourself and others like your instructor or advisor).
+Depending on your reproduction's timeline, we recommend that you write a short (\textless1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:
+How many scientific claims can you identify in the paper?
+Would you classify the claims as causal, descriptive (e.g., estimating a population's descriptive statistic), or something else?
+What is the population that is the focus of the paper as a whole?
+What is the population for which the estimates apply?
+What are the primary data sources used in the paper?
+How many display items are there in the paper (tables, figures, and inline results)?
+What is the primary statistical or econometric method used to examine each claim?
+What is the author's preferred specification (or yours, if the authors' is unclear)?
+What are some possible robustness checks for the preferred specification?
+Draft the summary in a plain text editor and paste the text in the form.
 
-When reading or summarizing the paper, try to answer the following questions:
+\hypertarget{record-a-revised-reproduction-package}{%
+\section{Record a revised reproduction package}\label{record-a-revised-reproduction-package}}
 
-\begin{itemize}
-\tightlist
-\item
-  Would you classify the paper's scientific claims as mainly focused on estimating a causal relationship, estimating/predicting a descriptive statistic of a population, or something else?
-\item
-  How many scientific claims (descriptive or causal) are investigated in the paper?
-\item
-  What is the population for which the estimates apply?
-\item
-  What is the population that is the focus of the paper as a whole?
-\item
-  What are the main data sources used in the paper?
-\item
-  How many display items are there in the paper (tables, figures, and inline results)?\\
-\item
-  What is the main statistical or econometric method used to examine each claim?
-\item
-  What is the author's preferred specification (or yours, if the authors are not clear)?
-\item
-  What are some robustness checks for the preferred specification?
-\end{itemize}
+At the previous stage, you recorded the original reproduction package made available by the paper's authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole.
+You can start by downloading the reproduction package (or forking, if on GitHub) and uploading a copy titled ``Revised reproduction package for {[}Paper Title{]}'' to a trusted repository. Examples of trusted repositories include \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage you to use version control software (e.g., Git) during your reproductions.
+
+As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you (e.g., document your assessments or communicate with the original authors), and it will likely also allow future reproducers to build on top of your work.
 
 \hypertarget{declare-estimates}{%
 \section{Record scope of the exercise}\label{declare-estimates}}
 
-By now you should have a fairly good understanding of the paper's content. You do not, however, need to have spent any time reviewing the reproduction package in detail.
+By now, you should have a reasonably good understanding of the paper. You do not, however, need to spend any time reviewing the reproduction package in detail.
 
-At this point, you should clearly specify which part of the paper will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure \ref{fig:diagram}. If you plan to scope more than one claim, \emph{we strongly recommend starting with just one} and recording your results. You can then initiate another record in ACRE later for the second (or third, fourth, etc.) claim to reproduce using the materials and knowledge you developed in the first exercise. You can, however, reproduce more than one claim if you are already familiar with the paper.
+At this point, you should specify the parts of the paper that will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure \ref{fig:diagram}. Given the complexity of the SSRP approach, unless you are very familiar with the paper, we recommend starting with just one claim before moving onto second or third as part of a later reproduction.
 
-In the Assessment stage, the reproduction will be centered around the display item(s) that contain the specification you indicate at this point.
+\hypertarget{declare-a-specific-estimates-to-reproduce}{%
+\subsubsection*{Declare a specific estimate(s) to reproduce}\label{declare-a-specific-estimates-to-reproduce}}
+\addcontentsline{toc}{subsubsection}{Declare a specific estimate(s) to reproduce}
 
-\hypertarget{declare-specific-main-estimates-to-reproduce.}{%
-\subsubsection*{Declare specific main estimates to reproduce.}\label{declare-specific-main-estimates-to-reproduce.}}
-\addcontentsline{toc}{subsubsection}{Declare specific main estimates to reproduce.}
+Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and table row and column). If the authors did not explicitly choose a precise preferred estimate, you can choose one yourself. In addition to the preferred estimate, you can reproduce up to five estimates that correspond to the preferred estimate's alternative specifications.
 
-Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and table row and column). If the authors did not explicitly chose a particular estimate, you will be asked to select one. In addition to the preferred estimate, reproduce up to five estimates that correspond to alternative specifications of the preferred estimate.
-
-\hypertarget{declare-possible-robustness-checks-for-main-estimates-optional.}{%
-\subsubsection*{Declare possible robustness checks for main estimates (optional).}\label{declare-possible-robustness-checks-for-main-estimates-optional.}}
-\addcontentsline{toc}{subsubsection}{Declare possible robustness checks for main estimates (optional).}
+\hypertarget{declare-possible-robustness-checks-for-main-estimates-optional}{%
+\subsubsection*{Declare possible robustness checks for main estimates (optional)}\label{declare-possible-robustness-checks-for-main-estimates-optional}}
+\addcontentsline{toc}{subsubsection}{Declare possible robustness checks for main estimates (optional)}
 
 After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage.
 
-These are the elements you will need for the Scoping stage. \textbf{You now have all the elements necessary to complete \href{https://berkeley.qualtrics.com/jfe/form/SV_2bO83uJvU9ZiTXv}{Survey 1}.}
+In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
 
-\hypertarget{setup-your-own-revised-reproduction-package.}{%
-\section{Setup your own revised reproduction package.}\label{setup-your-own-revised-reproduction-package.}}
+In the \emph{Scoping} stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., ``Table 1'') or only specific estimates found in display items (e.g., ``rows 3 and 4 of Table 1''). You can also include additional display items of interest.
 
-As part of the scoping stage, you have now identified the reproduction package of the original authors. In addition to these materials, we recommend that you create your own copy and called it a \textbf{revised reproduction package}. As you work through the next stages (assessment, improvement, and robustness) it is likely that you will modify some of the contents of the reproduction package. Keeping a record of those changes will help you as reproducers (eg. to document your assessments, or to communicate with original authors) and will likely help future reproducers allowing them to build on top of any contribution that they have created.
+The Assessment stage aims to analyze the reproduction package's current reproducibility---before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package's current reproducibility that you can use to implement improvements, potentially with the paper's original authors' help.
 
-Please deposit the starting copy of your revised reproduction package (i.e.~just the copy of the original reproduction package) in a trusted repository. Examples of trusted repositories include: \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage reproducers to use version control software (Git) during their reproductions, and suggest they submit the entire repository (or link it to their GitHub repository).
+On the SSRP, you will first provide a detailed description of the reproduction package. You will then connect the display items you've chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item's reproducibility and record various paper-level dimensions of reproducibility.
 
-\hypertarget{assessment}{%
-\chapter{Assessment}\label{assessment}}
-
-In this stage, you will review and describe in detail the available reproduction materials, and assess levels of computational reproducibility for selected display items, as well as practices that increase the reproducibility of the overall paper. This stage is designed to record as much of the learning process behind a reproduction as possible to facilitate incremental improvements, and allow future reproducers to pick up easily where others have left off.
-
-In the \emph{Scoping} stage, you declared a paper, identified the specific claims you will reproduce, and recorded the main estimates that support the claims. In this stage, you will decide if you are interested in assessing the reproducibility of that entire display item (e.g., ``Table 1''), or will assess only a pre-specified estimates (e.g., ``rows 3 and 4 of Table 1''). Additionally, you can include other display items of interest.
-
-The goal of this stage is to have an assessment of the current stage of the reproduction package, before you suggest any improvements. By the end of this section you will have a very specific description of the current stage of the reproduction package. With this you can try to improve its level of reproducibility and, potentially, approach the authors with specific questions to obtain missing materials or fix possible issues.
-
-In the first section of this stage, you will provide a detailed description of the entire reproduction package. Second, you will connect the display items you've chosen to reproduce with their corresponding inputs. With these elements in place, you can score the level of reproducibility of each display item, and report on paper-level dimensions of reproducibility.
-
-\emph{Tip:} We recommend that you first focus on one specific display item (e.g., ``Table 1''). After completing the assessment for this display item, you will have a much easier time assessing others.
+\emph{Tip:} We recommend that you first focus on just one display item (e.g., ``Table 1''). After completing the assessment for this display item, you will have a much easier time assessing others.
 
 \hypertarget{describe-inputs}{%
-\section{Describe the inputs.}\label{describe-inputs}}
+\section{Describe the inputs}\label{describe-inputs}}
 
-This section explains how to list the input materials found or referred to in the reproduction package. At this point it is hard to identify the materials that correspond to your selected claims and display items, so we recommend to list \emph{all} the files in the reproduction packages. However if there are too many files and this step becomes intractable, you can focus on the materials required to reproduce a specific display item (this can be done by reviewing the code scripts in the \protect\hyperlink{desc-analy}{section} below).
+This section explains how to record the \emph{input} materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing \emph{all} files in the reproduction packages. However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the \protect\hyperlink{desc-analy}{section} below for reference).
 
-First, you will identify data sources and connect them with their raw data files (when available). Second, you will locate and provide a brief description of the analytic data files. Finally, you will locate, inspect, and describe the analytic code used in the paper.
+In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3.
 
-The following terms will be used in this section:
+The following concepts may be helpful as you work in the Assessment stage:
 
 \begin{itemize}
 \tightlist
 \item
   \textbf{Raw data} -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.\\
 \item
-  \textbf{Analysis/Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).\\
+  \textbf{Analysis/Analytic data} -- Data used as the final input in a workflow to produce a statistic displayed in the paper (including appendices).\\
 \item
-  \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).\\
+  \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the data structure (from long to wide, or vice versa).\\
 \item
-  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 \end{itemize}
 
 \hypertarget{desc-sourc}{%
-\subsection{Describe the data sources and raw data.}\label{desc-sourc}}
+\subsection{Describe the data sources and raw data}\label{desc-sourc}}
 
-In the paper you chose, find references to all \emph{data sources} used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or in the appendix, you see text like ``\ldots{}for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all the data sources mentioned in the paper. Each row represents a unique data source
+In the paper you chose, find references to all \emph{data sources} used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or in the appendix, you see text like ``\ldots for earnings in 2018 we use the Current Population Survey\ldots{}'', the data source is ``Current Population Survey 2018''. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as ``A1''. Do this for all the data sources mentioned in the paper. Each row represents a unique data source
 
 Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., ``our information on regional minimum wages comes from the Bureau of Labor Statistics.'' This should be recorded as ``regional minimum wages from the Bureau of Labor Statistics'').
 
@@ -570,32 +556,30 @@ If the reproduction package does not organize the code around display items, you
 
 If you were able to identify all the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
 
-\begin{verbatim}
 table1.tex
-        └──[code] analysis.R
-            └──analysis_data.dta
-                └──[code] final_merge.do
-                    └──cleaned_1_2.dta
-                    |   └──[code] clean_merged_1_2.do
-                    |       └──merged_1_2.dta
-                    |           └──[code] merge_1_2.do
-                    |               └──cleaned_1.dta
-                    |               |   └──[code] clean_raw_1.py
-                    |               |       └──raw_1.dta
-                    |               └──cleaned_2.dta
-                    |                   └──[code] clean_raw_2.py
-                    |                       └──raw_2.dta
-                    └──cleaned_3_4.dta
-                        └──[code] clean_merged_3_4.do
-                            └──merged_3_4.dta
-                                └──[code] merge_3_4.do
-                                    └──cleaned_3.dta
-                                    |   └──[code] clean_raw_3.py
-                                    |       └──raw_3.dta
-                                    └──cleaned_4.dta
-                                        └──[code] clean_raw_4.py
-                                            └──raw_4.dta
-\end{verbatim}
+└──{[}code{]} analysis.R
+└──analysis\_data.dta
+└──{[}code{]} final\_merge.do
+└──cleaned\_1\_2.dta
+\textbar{} └──{[}code{]} clean\_merged\_1\_2.do
+\textbar{} └──merged\_1\_2.dta
+\textbar{} └──{[}code{]} merge\_1\_2.do
+\textbar{} └──cleaned\_1.dta
+\textbar{} \textbar{} └──{[}code{]} clean\_raw\_1.py
+\textbar{} \textbar{} └──raw\_1.dta
+\textbar{} └──cleaned\_2.dta
+\textbar{} └──{[}code{]} clean\_raw\_2.py
+\textbar{} └──raw\_2.dta
+└──cleaned\_3\_4.dta
+└──{[}code{]} clean\_merged\_3\_4.do
+└──merged\_3\_4.dta
+└──{[}code{]} merge\_3\_4.do
+└──cleaned\_3.dta
+\textbar{} └──{[}code{]} clean\_raw\_3.py
+\textbar{} └──raw\_3.dta
+└──cleaned\_4.dta
+└──{[}code{]} clean\_raw\_4.py
+└──raw\_4.dta
 
 This diagram, built with the information you provided, is an important contribution to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.
 
@@ -606,40 +590,33 @@ In many cases, some of the components of the workflow will not be easily identif
 
 For example, let's start from a simpler complet tree like the following:
 
-\begin{verbatim}
 table1.tex
-      └── analysis.R
-          └── analysis_data.dta
-              └── final_merge.do
-                  └── cleaned_1_2.dta
-                     └── clean_merged_1_2.do
-                         └── merged_1_2.dta
-                  
-\end{verbatim}
+└── analysis.R
+└── analysis\_data.dta
+└── final\_merge.do
+└── cleaned\_1\_2.dta
+└── clean\_merged\_1\_2.do
+└── merged\_1\_2.dta
 
 For this case, if the the file \texttt{final\_merge.do} is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:
 
-\begin{verbatim}
 table1.tex
-      └── analysis.R
-          └── analysis_data.dta
-    
-    cleaned_1_2.dta
-      └── clean_merged_1_2.do
-          └── merged_1_2.dta
-\end{verbatim}
+└── analysis.R
+└── analysis\_data.dta
+
+cleaned\_1\_2.dta
+└── clean\_merged\_1\_2.do
+└── merged\_1\_2.dta
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
-\begin{verbatim}
 table1.tex
-      └── analysis.R
-          └── cleaned_1_2.dta
-              └── MISSSING_CODE_FILE_1
-                  └── cleaned_1_2.dta
-                     └── clean_merged_1_2.do
-                         └── merged_1_2.dta
-\end{verbatim}
+└── analysis.R
+└── cleaned\_1\_2.dta
+└── MISSSING\_CODE\_FILE\_1
+└── cleaned\_1\_2.dta
+└── clean\_merged\_1\_2.do
+└── merged\_1\_2.dta
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 
@@ -1014,20 +991,17 @@ The size of feasible robustness checks grows exponentially as higher levels of c
 
 Robustness is assessed at the claim level (see our diagram representing a paper's components \ref{fig:stages-unit}). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the \protect\hyperlink{complete-tree}{example tree} discussed in the \emph{Assessment} stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:
 
-\begin{verbatim}
 table1.tex (contains preferred specification of a given claim)
-        |___[code] analysis.R
-                |___[code] final_merge.do
-                        |___[code] clean_merged_1_2.do
-                        |       |___[code] merge_1_2.do
-                        |               |___[code] clean_raw_1.py
-                        |               |___[code] clean_raw_2.py
-                        |___[code] clean_merged_3_4.do
-                                |___[code] merge_3_4.do
-                                        |___[code] clean_raw_3.py
-                                        |___[code] clean_raw_4.py
-                                        
-\end{verbatim}
+\textbar{}\textbf{\emph{{[}code{]} analysis.R
+\textbar{}}}{[}code{]} final\_merge.do
+\textbar{}\textbf{\emph{{[}code{]} clean\_merged\_1\_2.do
+\textbar{} \textbar{}}}{[}code{]} merge\_1\_2.do
+\textbar{} \textbar{}\textbf{\emph{{[}code{]} clean\_raw\_1.py
+\textbar{} \textbar{}}}{[}code{]} clean\_raw\_2.py
+\textbar{}\textbf{\emph{{[}code{]} clean\_merged\_3\_4.do
+\textbar{}}}{[}code{]} merge\_3\_4.do
+\textbar{}\textbf{\emph{{[}code{]} clean\_raw\_3.py
+\textbar{}}}{[}code{]} clean\_raw\_4.py
 
 Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts, and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and refer to specific files in the reproduction package.
 
@@ -1087,88 +1061,88 @@ To record a specific analytical choice in the ACRE platform, please follow these
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Review a specific code file (e.g. \texttt{clean\_merged\_1\_2.do}) and identify an analytical choice (e.g. \texttt{regress\ y\ x\ if\ gender\ ==\ 1}).
+  Review a specific code file (e.g.~\texttt{clean\_merged\_1\_2.do}) and identify an analytical choice (e.g.~\texttt{regress\ y\ x\ if\ gender\ ==\ 1}).
 \item
   Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the \texttt{source} field, type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{line\ number} each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{103}). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database should have the \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{following structure}:
 \end{enumerate}
 
 \begin{longtable}[]{@{}lllllll@{}}
 \toprule
-\begin{minipage}[b]{0.05\columnwidth}\raggedright
+\begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
 entry\_id\strut
-\end{minipage} & \begin{minipage}[b]{0.07\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 file\_name\strut
-\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 line\_number\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 choice\_type\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
 choice\_value\strut
-\end{minipage} & \begin{minipage}[b]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
 choice\_range\strut
-\end{minipage} & \begin{minipage}[b]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 Source\strut
 \end{minipage}\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.05\columnwidth}\raggedright
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
 1\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 code\_01.do\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 73\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 data sub-setting\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
 males\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
 males, female,\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 original\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.05\columnwidth}\raggedright
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
 2\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 code\_01.do\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 122\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 variable definition\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
 income = wages + capital gains\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
 wages, capital gains, gifts\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 ``code\_01.do-L103''\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.05\columnwidth}\raggedright
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
 3\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 code\_05.R\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 143\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 controls\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
 age, income, education\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
 age, income, education, region\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 original\strut
 \end{minipage}\tabularnewline
-\begin{minipage}[t]{0.05\columnwidth}\raggedright
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.07\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.18\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
 \ldots{}\strut
-\end{minipage} & \begin{minipage}[t]{0.12\columnwidth}\raggedright
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
 \ldots{}\strut
 \end{minipage}\tabularnewline
 \bottomrule
@@ -1214,7 +1188,7 @@ A completed reproduction will consist of three different types of outputs:
 Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:\\
 - Has a digital object identifier (DOI). All of the trusted repositories referenced above generate DOIs. This is a stable, citable link that will allow others to easily find your work.
 - Is titled following this convention: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer\ -\ year\ when\ the\ reproduction\ was\ completed}
-- If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. \texttt{/data/raw/large\_file.csv}).
+- If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g.~\texttt{/data/raw/large\_file.csv}).
 
 \textbf{2. Reproduction report(s)} -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:\\
 - \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.\\
@@ -1455,26 +1429,21 @@ Best regards,\\
 Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce OUTPUT X:
 \end{quote}
 
-\begin{verbatim}
- OUTPUT X
-        └───[code] formatting_table1.R
-            ├───output1_part1.txt  
-            |   └───[code] output_table1.do           
-            |       └───[data] analysis_data01.csv
-            |          └───[code] data_cleaning01.R*
-            |             └───[data] UNKNOWN
-            └───output1_part2.txt  
-                └───[code] output_table2.do           
-                    └───[data] analysis_data02.csv
-                       └───[code] data_cleaning02.R
-                          └───[data] admin_01raw.csv* 
-\end{verbatim}
-
-\begin{quote}
-I have marked with an asterisk (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
-
-I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
-\end{quote}
+OUTPUT X
+└───{[}code{]} formatting\_table1.R
+├───output1\_part1.txt\\
+\textbar{} └───{[}code{]} output\_table1.do\\
+\textbar{} └───{[}data{]} analysis\_data01.csv
+\textbar{} └───{[}code{]} data\_cleaning01.R\emph{
+\textbar{} └───{[}data{]} UNKNOWN
+└───output1\_part2.txt\\
+└───{[}code{]} output\_table2.do\\
+└───{[}data{]} analysis\_data02.csv
+└───{[}code{]} data\_cleaning02.R
+└───{[}data{]} admin\_01raw.csv}
+\textgreater I have marked with an asterisk (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+\textgreater{}
+\textgreater I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
 
 \textbf{2. An example of poorly described issues:}
 
@@ -1620,9 +1589,9 @@ This section contains guidance for authors of papers involved in reproductions o
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for your interest in my work. Note that I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect \textgreater{}may be already recorded on the SSRP. I'm copying my original response below for your reference. You may find further guidance in the readme file in the reproduction \textgreater{}package.
+Thank you for your interest in my work. Note that I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect \textgreater may be already recorded on the SSRP. I'm copying my original response below for your reference. You may find further guidance in the readme file in the reproduction \textgreater package.
 
-If there are no prior records of these issues on the SSRP, please record the enclosed response {[}and materials{]}. This will also help avoid the duplication of effort \textgreater{}on the part of others who may be interested in reproducing this work.
+If there are no prior records of these issues on the SSRP, please record the enclosed response {[}and materials{]}. This will also help avoid the duplication of effort \textgreater on the part of others who may be interested in reproducing this work.
 Good luck with the remainder of your project and thank you in advance for your cooperation!
 
 Best regards,
@@ -1635,9 +1604,9 @@ Best regards,
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for reviewing my work closely. I wish I could be of more help, but unfortunately I no longer have access to the \textgreater{}requested materials due to \texttt{{[}briefly\ describe\ the\ circumstances\ that\ prevent\ you\ from\ providing\ the\ materials{]}}.
+Thank you for reviewing my work closely. I wish I could be of more help, but unfortunately I no longer have access to the \textgreater requested materials due to \texttt{{[}briefly\ describe\ the\ circumstances\ that\ prevent\ you\ from\ providing\ the\ materials{]}}.
 
-While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that \textgreater{}are readily available for this \textgreater{}purpose, note that this paper was written at a time when different standards of reproducibility \textgreater{}were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
+While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that \textgreater are readily available for this \textgreater purpose, note that this paper was written at a time when different standards of reproducibility \textgreater were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
 
 I look forward to working with you to address this and improve the overall reproducibility of the paper.
 
@@ -1651,7 +1620,7 @@ Best regards,
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for your interest in my work. The data/materials/program that you reference are not publicly accessible for the time \textgreater{}being because they are embargoed until \texttt{{[}embargo\ period{]}}.
+Thank you for your interest in my work. The data/materials/program that you reference are not publicly accessible for the time \textgreater being because they are embargoed until \texttt{{[}embargo\ period{]}}.
 
 \texttt{{[}Depending\ on\ the\ restrictions\ that\ apply\ to\ the\ reproduction\ package,\ consider\ alternatives\ to\ sharing\ the\ reproduction\ materials\ in\ full.\ These\ include:\ 1.Sharing\ the\ analytic\ version\ of\ the\ data\ (the\ version\ of\ the\ dataset\ that\ was\ used\ for\ analysis\ in\ the\ final\ version\ of\ your\ paper);\ \ 2.\ Providing\ a\ public\ description\ of\ the\ steps\ other\ researchers\ can\ follow\ to\ request\ access\ to\ the\ raw\ data\ or\ materials,\ including\ an\ estimate\ of\ the\ costs\ and\ the\ duration\ of\ the\ process.\ Find\ examples\ of\ data\ availability\ statements\ for\ proprietary\ or\ restricted-access\ data\ {[}here{]}(https://social-science-data-editors.github.io/guidance/Requested\_information\_dcas.html);\ and\ 3.\ Providing\ access\ to\ all\ data\ and\ materials\ for\ which\ the\ constraints\ do\ not\ apply.{]}}
 
@@ -1669,7 +1638,7 @@ Dear {[}Reproducer{]},
 
 Thank you for your interest in my work. I would be happy to assist you and other reproducers to assess and improve the reproducibility of this paper.
 
-To help me give more concrete guidance on this issue, I'd appreciate if you could provide a more specific description \textgreater{}of the items that you need from me. You can find helpful information and resources in Chapter 6 of the Guide, \textgreater{}specifically \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#asking-for-additional-guidance-when-some-materials-have-been-shared}{here} \texttt{{[}based\ on\ the\ context,\ you\ may\ need\ to\ point\ \textgreater{}the\ reproducer\ to\ a\ \textgreater{}different\ scenario\ and/or\ provide\ further\ information{]}}.
+To help me give more concrete guidance on this issue, I'd appreciate if you could provide a more specific description \textgreater of the items that you need from me. You can find helpful information and resources in Chapter 6 of the Guide, \textgreater specifically \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#asking-for-additional-guidance-when-some-materials-have-been-shared}{here} \texttt{{[}based\ on\ the\ context,\ you\ may\ need\ to\ point\ \textgreater{}the\ reproducer\ to\ a\ \textgreater{}different\ scenario\ and/or\ provide\ further\ information{]}}.
 
 Feel free to contact me if you have any further questions. Thank you for your cooperation.
 
@@ -1733,20 +1702,18 @@ A reproduction tree is complete when it is possible to connect its output (a giv
 
 Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
 
-\begin{verbatim}
-  table 1
-        └───[code] formatting_table1.R
-            ├───output1_part1.txt  
-            |   └───[code] output_table1.do           
-            |       └───[data] analysis_data01.csv
-            |          └───[code] data_cleaning01.R
-            |             └───[data] survey_01raw.csv
-            └───output1_part2.txt  
-                └───[code] output_table2.do           
-                    └───[data] analysis_data02.csv
-                       └───[code] data_cleaning02.R
-                          └───[data] admin_01raw.csv  
-\end{verbatim}
+table 1
+└───{[}code{]} formatting\_table1.R
+├───output1\_part1.txt\\
+\textbar{} └───{[}code{]} output\_table1.do\\
+\textbar{} └───{[}data{]} analysis\_data01.csv
+\textbar{} └───{[}code{]} data\_cleaning01.R
+\textbar{} └───{[}data{]} survey\_01raw.csv
+└───output1\_part2.txt\\
+└───{[}code{]} output\_table2.do\\
+└───{[}data{]} analysis\_data02.csv
+└───{[}code{]} data\_cleaning02.R
+└───{[}data{]} admin\_01raw.csv
 
 \hypertarget{incomplete-reproduction-tree}{%
 \subsection{Incomplete reproduction tree}\label{incomplete-reproduction-tree}}
@@ -1756,64 +1723,58 @@ Below is an example of output from the ACRE Diagram builder for a display item t
 
 Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.
 
-\begin{verbatim}
-  table 1
-        └───[code] formatting_table1.R
-            ├───output1_part1.txt  
-            |   └───[code] output_table1.do           
-            |       └───[data] analysis_data01.csv
-            └───output1_part2.txt  
-                └───[code] output_table2.do           
-                    └───[data] analysis_data02.csv
+table 1
+└───{[}code{]} formatting\_table1.R
+├───output1\_part1.txt\\
+\textbar{} └───{[}code{]} output\_table1.do\\
+\textbar{} └───{[}data{]} analysis\_data01.csv
+└───output1\_part2.txt\\
+└───{[}code{]} output\_table2.do\\
+└───{[}data{]} analysis\_data02.csv
 
-       Unused files: 
-       - survey_01raw.csv
-       - admin_01raw.csv  
-\end{verbatim}
+Unused files:
+- survey\_01raw.csv
+- admin\_01raw.csv
 
 Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in \texttt{survey\_01raw.csv} and \texttt{admin\_01raw.csv}, and eventually output \texttt{analysis\_data01.csv} and \texttt{analysis\_data02.csv}, though this requires the reproducer's discretion.
 
-\begin{verbatim}
-  table 1
-        └───[code] formatting_table1.R
-            ├───output1_part1.txt  
-            |   └───[code] output_table1.do           
-            |       └───[data] analysis_data01.csv
-            |          └───[code] MISSING FILE(S)
-            |             └───[data] survey_01raw.csv
-            └───output1_part2.txt  
-                └───[code] output_table2.do           
-                    └───[data] analysis_data02.csv
-                       └───[code] MISSING FILE(S)
-                          └───[data] admin_01raw.csv  
-\end{verbatim}
+table 1
+└───{[}code{]} formatting\_table1.R
+├───output1\_part1.txt\\
+\textbar{} └───{[}code{]} output\_table1.do\\
+\textbar{} └───{[}data{]} analysis\_data01.csv
+\textbar{} └───{[}code{]} MISSING FILE(S)
+\textbar{} └───{[}data{]} survey\_01raw.csv
+└───output1\_part2.txt\\
+└───{[}code{]} output\_table2.do\\
+└───{[}data{]} analysis\_data02.csv
+└───{[}code{]} MISSING FILE(S)
+└───{[}data{]} admin\_01raw.csv
 
 \hypertarget{unused-data-sources}{%
 \subsection{Unused Data Sources}\label{unused-data-sources}}
 
 It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
 
-\begin{verbatim}
 table1.tex
-        |___[code] analysis.R
-            |___analysis_data.dta
+\textbar\_\textbf{{[}code{]} analysis.R
+\textbar{}}\_analysis\_data.dta
 
-    Unused data sources:
-    raw_1.dta
-    raw_2.dta
-    raw_3.dta
-    raw_4.dta
+Unused data sources:
+raw\_1.dta
+raw\_2.dta
+raw\_3.dta
+raw\_4.dta
 
-    Unused analysis data:
-    cleaned_1.dta
-    cleaned_2.dta
-    cleaned_3.dta
-    cleaned_4.dta
-    merged_1_2.dta
-    merged_3_4.dta
-    cleaned_1_2.dta
-    cleaned_3_4.dta
-\end{verbatim}
+Unused analysis data:
+cleaned\_1.dta
+cleaned\_2.dta
+cleaned\_3.dta
+cleaned\_4.dta
+merged\_1\_2.dta
+merged\_3\_4.dta
+cleaned\_1\_2.dta
+cleaned\_3\_4.dta
 
 In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
 
@@ -1825,33 +1786,31 @@ In this case, there are many data files that were listed in the raw data and ana
 
 This reproduction diagram fragment likely shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. \texttt{cps2018.dta} and \texttt{cps\_march2017.dta} are included as inputs in the reproduction kit, but never used to make a display item, i.e., there is no piece of code that is listed as using them as inputs. Likewise, \texttt{PublicSalary.dta} is listed as a final output, meaning it, too, is not used to make a display item since it is not listed as an input for any code script. Perhaps \texttt{Paper2\_PoExitDataset.dta} is made by a missing code script that takes \texttt{PublicSalary.dta}, \texttt{cps2018.dta}, and \texttt{cps\_march2017.dta} as inputs? It may be the case that the only way to find out for sure is to contact the study author(s), in which case, such a diagram can be used to help them identify any missing files.
 
-\begin{verbatim}
 PublicSalary.dta
-    |___MakeData2.do
-        |___Paper2_ProviderDataset.dta
-        |___Paper2_SSPDataset_wIRT_final.dta
-        |___PublicFacilitySurvey_clean.dta
+\textbar\_\textbf{MakeData2.do
+\textbar{}}\_Paper2\_ProviderDataset.dta
+\textbar\_\_\_Paper2\_SSPDataset\_wIRT\_final.dta
+\textbar\_\_\_PublicFacilitySurvey\_clean.dta
 
-    Table1.xml
-    |___Table1.do
-        |___ProviderData.dta
-        |   |___MakeData4.do
-        |       |___Paper2_PoExitDataset.dta
-        |       |___Paper2_ProviderDataset.dta
-        |       |___Paper2_SSPDataset_wIRT_final.dta
-        |___VillageDataset.dta
-        |   |___MakeData8.do
-        |       |___Paper2_HouseholdDataset1.dta
-        |       |___Paper2_VillageDataset.dta
-        |___HouseholdDataset.dta
-            |___MakeData8.do
-                |___Paper2_HouseholdDataset1.dta
-                |___Paper2_VillageDataset.dta
+Table1.xml
+\textbar\_\textbf{Table1.do
+\textbar{}}\_ProviderData.dta
+\textbar{} \textbar\_\_\_MakeData4.do
+\textbar{} \textbar\_\_\_Paper2\_PoExitDataset.dta
+\textbar{} \textbar\_\_\_Paper2\_ProviderDataset.dta
+\textbar{} \textbar\_\_\_Paper2\_SSPDataset\_wIRT\_final.dta
+\textbar\_\_\_VillageDataset.dta
+\textbar{} \textbar\_\_\_MakeData8.do
+\textbar{} \textbar\_\_\_Paper2\_HouseholdDataset1.dta
+\textbar{} \textbar\_\_\_Paper2\_VillageDataset.dta
+\textbar\_\_\_HouseholdDataset.dta
+\textbar\_\_\_MakeData8.do
+\textbar\_\_\_Paper2\_HouseholdDataset1.dta
+\textbar\_\_\_Paper2\_VillageDataset.dta
 
-    Unusued data sources:
-    cps2018.dta
-    cps_march2017.dta  
-\end{verbatim}
+Unusued data sources:
+cps2018.dta
+cps\_march2017.dta
 
 \hypertarget{long-complicated-tree.}{%
 \subsection[Long, complicated tree.]{\texorpdfstring{Long, complicated tree\footnote{This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course}.}{Long, complicated tree.}}\label{long-complicated-tree.}}
@@ -4522,66 +4481,62 @@ This diagram shows that the production of a given display item may be very compl
 
 In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here we present a more complex example that the one presented in the Asessement chaprer. The Diagram Builder will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
 
-\begin{verbatim}
-cleaned_3.dta
-        └──[code] clean_raw_3.py
-            └──raw_3.dta
+cleaned\_3.dta
+└──{[}code{]} clean\_raw\_3.py
+└──raw\_3.dta
 
-    table1.tex
-        └──[code] analysis.R
-            └──analysis_data.dta
+table1.tex
+└──{[}code{]} analysis.R
+└──analysis\_data.dta
 
-    cleaned_3_4.dta
-        └──[code] clean_merged_3_4.do
-            └──merged_3_4.dta
+cleaned\_3\_4.dta
+└──{[}code{]} clean\_merged\_3\_4.do
+└──merged\_3\_4.dta
 
-    cleaned_1.dta
-        └──[code] clean_raw_1.py
-            └──raw_1.dta
+cleaned\_1.dta
+└──{[}code{]} clean\_raw\_1.py
+└──raw\_1.dta
 
-    cleaned_2.dta
-        └──[code] clean_raw_2.py
-            └──raw_2.dta
+cleaned\_2.dta
+└──{[}code{]} clean\_raw\_2.py
+└──raw\_2.dta
 
-    cleaned_4.dta
-        └──[code] clean_raw_4.py
-            └──raw_4.dta
+cleaned\_4.dta
+└──{[}code{]} clean\_raw\_4.py
+└──raw\_4.dta
 
-    cleaned_1_2.dta
-        └──[code] clean_merged_1_2.do
-            └──merged_1_2.dta
-    Unused data sources: None.
-\end{verbatim}
+cleaned\_1\_2.dta
+└──{[}code{]} clean\_merged\_1\_2.do
+└──merged\_1\_2.dta
+Unused data sources: None.
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
-\begin{verbatim}
 table1.tex
-        └──[code] analysis.R
-            └──analysis_data.dta
-                └──MISSSING_CODE_FILE_3
-                    └──cleaned_3_4.dta
-                    |       └──[code] clean_merged_3_4.do
-                    |           └──merged_3_4.dta
-                    |               └──MISSSING_CODE_FILE_2
-                    |                   └──cleaned_3.dta
-                    |                   |       └──[code] clean_raw_3.py
-                    |                   |           └──raw_3.dta    
-                    |                   └──cleaned_4.dta
-                    |                           └──[code] clean_raw_4.py
-                    |                               └──raw_4.dta
-                    └──cleaned_1_2.dta
-                            └──[code] clean_merged_1_2.do
-                                └──merged_1_2.dta
-                                    └──MISSSING_CODE_FILE_1
-                                        └──cleaned_1.dta
-                                        |       └──[code] clean_raw_1.py
-                                        |           └──raw_1.dta
-                                        |   
-                                        └──cleaned_2.dta
-                                                └──[code] clean_raw_2.py
-                                                    └──raw_2.dta
-\end{verbatim}
+└──{[}code{]} analysis.R
+└──analysis\_data.dta
+└──MISSSING\_CODE\_FILE\_3
+└──cleaned\_3\_4.dta
+\textbar{} └──{[}code{]} clean\_merged\_3\_4.do
+\textbar{} └──merged\_3\_4.dta
+\textbar{} └──MISSSING\_CODE\_FILE\_2
+\textbar{} └──cleaned\_3.dta
+\textbar{} \textbar{} └──{[}code{]} clean\_raw\_3.py
+\textbar{} \textbar{} └──raw\_3.dta\\
+\textbar{} └──cleaned\_4.dta
+\textbar{} └──{[}code{]} clean\_raw\_4.py
+\textbar{} └──raw\_4.dta
+└──cleaned\_1\_2.dta
+└──{[}code{]} clean\_merged\_1\_2.do
+└──merged\_1\_2.dta
+└──MISSSING\_CODE\_FILE\_1
+└──cleaned\_1.dta
+\textbar{} └──{[}code{]} clean\_raw\_1.py
+\textbar{} └──raw\_1.dta
+\textbar{}\\
+└──cleaned\_2.dta
+└──{[}code{]} clean\_raw\_2.py
+└──raw\_2.dta
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 
@@ -4646,7 +4601,7 @@ The individuals below have contributed to the \href{https://github.com/BITSS/ACR
 \hypertarget{suggested-citation-format}{%
 \section{Suggested citation format}\label{suggested-citation-format}}
 
-These follow the Chicago style citation format. Brackets \protect\hyperlink{section}{} indicate where you'll need to input more specific information.
+These follow the Chicago style citation format. Brackets {[} {]} indicate where you'll need to input more specific information.
 - When citing reproductions accessed on the Social Science Reproduction Platform: {[}Reproducer Last name{]}, {[}Reproducer First name{]}, {[}First Last{]}, and {[}First Last{]}. {[}Year{]}. ``Reproduction of {[}Title of original paper{]}.'' \emph{Social Science Reproduction Platform}. doi: {[}doi{]}. {[}DOI or link to original paper{]}.
 - When citing these Guidelines: Berkeley Initiative for Transparency in the Social Sciences. 2020. ``Guide for Advancing Computational Reproducibility in the Social Sciences.'' {[}Date accessed (Day, Month, Year){]}. \url{https://bitss.github.io/ACRE/}.
 
@@ -4676,7 +4631,7 @@ Support for the development of this Guide was provided by \href{https://www.arno
     \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
   \end{itemize}
 \item
-  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}. 
+  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
 \item
   \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
 \item
@@ -4708,9 +4663,9 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
 \item
-  \textbf{Reasonable specification} -- 
+  \textbf{Reasonable specification} --
 \item
-  \textbf{Specification} -- 
+  \textbf{Specification} --
 \item
   \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.\\
 \item
@@ -4737,9 +4692,9 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Reproduction tree/ diagram} -- A diagram generated by the ACRE Diagram Builder which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 \item
-  \textbf{Revised reproduction package} -- 
+  \textbf{Revised reproduction package} --
 \end{itemize}
 
-\bibliography{book.bib,packages.bib}
+  \bibliography{book.bib,packages.bib}
 
 \end{document}
