@@ -47,6 +47,7 @@ anonymity-and-data-sharing
 guidance-for-a-constructive-exchange-between-reproducers-and-original-authors
 for-reproducers-contacting-the-authors-of-the-original-study
 contacting-the-original-authors-when-there-is-no-reproduction-package
+follow-up-if-the-author-only-provides-the-appendix
 contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package
 asking-for-additional-guidance-when-some-materials-have-been-shared
 response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons
