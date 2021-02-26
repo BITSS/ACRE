@@ -10,6 +10,7 @@ A completed reproduction will consist of three different types of outputs:
 
 **1. Revised reproduction package** -- Deposit your revised version of the original reproduction package in a trusted repository, such as [Dataverse](https://dataverse.org/), [openICPSR](https://www.openicpsr.org/openicpsr/), [Figshare](https://figshare.com), [Dryad](https://datadryad.org/stash), [Zenodo](https://about.zenodo.org/), or the [Open Science Framework](osf.io/). You should submit a revised reproduction package any time that you perform any type of [improvement](#improvements) to the original reproduction package. This revised reproduction package is expected to be self-contained as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?)[A: how is this determined, it sounds arbitrary?], or it contains data that you don’t have permission to share, remove the specific files from your reproduction package and add a reference to the original reproduction package [A: what does making a reference mean and look like in this context? I suggest providing an example of how to do that.].  
 
+
 Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:
 
 - Has a digital object identifier (DOI). All of the trusted repositories referenced above generate DOIs. This is a stable, citable link that will allow others to easily find your work.
