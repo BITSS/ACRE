@@ -4,19 +4,17 @@ This chapter contains guidance for constructive and respectful communication bet
 
 
 **1. Carefully and transparently plan your study.**  
-   
-   a. Clearly state that you are conducting a reproduction of their original work.   
-   b. Explain why you have chosen this study. 
-   c. Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.  
+a. Clearly state that you are conducting a reproduction of their original work.   
+b. Explain why you have chosen this study. 
+c. Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.  
 
 
 **2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you might do for your own work.**  
-   
-   a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g., see [Broockman, Kalla and Aronow, 2015](https://doi.org/10.31222/osf.io/qy2se)).
-   b. Talk about *the study, not the author*, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.  
-   c. Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.   
-   d. For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.   
-   e. Remember, *the goal is not to criticize previous work or hunt for errors, but to move the literature forward!*  
+a. Avoid binary judgments and statements like “failed to reproduce.” Clearly state which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g., see [Broockman, Kalla and Aronow, 2015](https://doi.org/10.31222/osf.io/qy2se)).
+b. Talk about *the study, not the author*, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.  
+c. Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.   
+d. For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.   
+e. Remember, *the goal is not to criticize previous work or hunt for errors, but to move the literature forward!*  
    
 To help you put these recommendations into practice, we've developed template language for common scenarios that reproducers and authors may encounter in their interactions.
    
