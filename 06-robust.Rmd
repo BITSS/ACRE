@@ -69,21 +69,21 @@ Analytical choices can include those behind data cleaning and data analysis. Bel
 
 **Analytical choices in data cleaning code**
 
-  - Variable definition
-  - Data sub-setting
-  - Data re-shaping (merge, append, long/gather, wide/spread)
-  - Others (specify as "processing - other")
+- Variable definition
+- Data sub-setting
+- Data re-shaping (merge, append, long/gather, wide/spread)
+- Others (specify as "processing - other")
   
 **Analytical choices in analysis code** 
 
-   - Regression function (link function)
-   - Key parameters (tuning, tolerance parameters, etc.)
-   - Controls
-   - Adjustment of standard errors
-   - Choice of weights
-   - Treatment of missing values
-   - Imputations
-   - Other (specify as "methods - other")
+- Regression function (link function)
+- Key parameters (tuning, tolerance parameters, etc.)
+- Controls
+- Adjustment of standard errors
+- Choice of weights
+- Treatment of missing values
+- Imputations
+- Other (specify as "methods - other")
 
 To record a specific analytical choice in the ACRE platform, please follow these steps:  
 
