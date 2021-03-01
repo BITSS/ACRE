@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-02-25" />
+<meta name="date" content="2021-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -213,17 +213,17 @@ Figure 4.1: Universe of robustness tests and its elements
 <p>The size of the feasible set of robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results supporting a claim. This is illustrated in Figure <a href="robust.html#fig:robusts">4.1</a>. At levels 1-2, it won’t be possible to perform additional robustness checks because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 3-4, but not using the specific estimates declared in the <em>Scoping Stage</em> since the display items are not computationally reproducible from analysis data (lacking CRA). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions other types of analytical choices.</p>
 <p>The size of feasible robustness checks grows exponentially as higher levels of computational reproducibility are achieved. For example, when checking the robustness to a new variable definition, you will also be able to test the combination of how the main estimate changes under an alternative variable definition <em>and</em> an alternative variable definitions.</p>
 <p>Robustness is assessed at the claim level (see our diagram representing a paper’s components <a href="intro.html#fig:stages-unit">0.3</a>). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="scoping.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
-<p>table1.tex (contains preferred specification of a given claim)
-|<strong><em>[code] analysis.R
-|</em></strong>[code] final_merge.do
-|<strong><em>[code] clean_merged_1_2.do
-| |</em></strong>[code] merge_1_2.do
-| |<strong><em>[code] clean_raw_1.py
-| |</em></strong>[code] clean_raw_2.py
-|<strong><em>[code] clean_merged_3_4.do
-|</em></strong>[code] merge_3_4.do
-|<strong><em>[code] clean_raw_3.py
-|</em></strong>[code] clean_raw_4.py</p>
+<pre><code>        table1.tex (contains preferred specification of a given claim)
+            |___[code] analysis.R
+                    |___[code] final_merge.do
+                            |___[code] clean_merged_1_2.do
+                            |       |___[code] merge_1_2.do
+                            |               |___[code] clean_raw_1.py
+                            |               |___[code] clean_raw_2.py
+                            |___[code] clean_merged_3_4.do
+                                    |___[code] merge_3_4.do
+                                            |___[code] clean_raw_3.py
+                                            |___[code] clean_raw_4.py</code></pre>
 <p>Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts, and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and refer to specific files in the reproduction package.</p>
 <div id="feasible-robustness-checks-increasing-the-number-of-feasible-specifications" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Feasible robustness checks: increasing the number of feasible specifications</h2>
@@ -231,17 +231,14 @@ Figure 4.1: Universe of robustness tests and its elements
 <p>Analytical choices can include those behind data cleaning and data analysis. Below are some proposed types for each category.</p>
 <p><strong>Analytical choices in data cleaning code</strong></p>
 <ul>
-<li>Variable definition
-<ul>
+<li>Variable definition</li>
 <li>Data sub-setting</li>
 <li>Data re-shaping (merge, append, long/gather, wide/spread)</li>
 <li>Others (specify as “processing - other”)</li>
-</ul></li>
 </ul>
 <p><strong>Analytical choices in analysis code</strong></p>
 <ul>
-<li>Regression function (link function)
-<ul>
+<li>Regression function (link function)</li>
 <li>Key parameters (tuning, tolerance parameters, etc.)</li>
 <li>Controls</li>
 <li>Adjustment of standard errors</li>
@@ -249,7 +246,6 @@ Figure 4.1: Universe of robustness tests and its elements
 <li>Treatment of missing values</li>
 <li>Imputations</li>
 <li>Other (specify as “methods - other”)</li>
-</ul></li>
 </ul>
 <p>To record a specific analytical choice in the ACRE platform, please follow these steps:</p>
 <ol style="list-style-type: decimal">

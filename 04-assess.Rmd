@@ -5,6 +5,9 @@ library(knitr)
 library(kableExtra)
 temp_eval <- TRUE
 ```
+
+# Assessment
+
 In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
 
 In the *Scoping* stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., "Table 1") or only specific estimates found in display items (e.g., "rows 3 and 4 of Table 1"). You can also include additional display items of interest.
@@ -109,32 +112,32 @@ If the reproduction package does not organize the code around display items, you
 
 If you were able to identify all the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
 
-
-        table1.tex
-            └──[code] analysis.R
-                └──analysis_data.dta
-                    └──[code] final_merge.do
-                        └──cleaned_1_2.dta
-                        |   └──[code] clean_merged_1_2.do
-                        |       └──merged_1_2.dta
-                        |           └──[code] merge_1_2.do
-                        |               └──cleaned_1.dta
-                        |               |   └──[code] clean_raw_1.py
-                        |               |       └──raw_1.dta
-                        |               └──cleaned_2.dta
-                        |                   └──[code] clean_raw_2.py
-                        |                       └──raw_2.dta
-                        └──cleaned_3_4.dta
-                            └──[code] clean_merged_3_4.do
-                                └──merged_3_4.dta
-                                    └──[code] merge_3_4.do
-                                        └──cleaned_3.dta
-                                        |   └──[code] clean_raw_3.py
-                                        |       └──raw_3.dta
-                                        └──cleaned_4.dta
-                                            └──[code] clean_raw_4.py
-                                                └──raw_4.dta
-
+```
+  table1.tex
+      └──[code] analysis.R
+          └──analysis_data.dta
+              └──[code] final_merge.do
+                  └──cleaned_1_2.dta
+                  |   └──[code] clean_merged_1_2.do
+                  |       └──merged_1_2.dta
+                  |           └──[code] merge_1_2.do
+                  |               └──cleaned_1.dta
+                  |               |   └──[code] clean_raw_1.py
+                  |               |       └──raw_1.dta
+                  |               └──cleaned_2.dta
+                  |                   └──[code] clean_raw_2.py
+                  |                       └──raw_2.dta
+                  └──cleaned_3_4.dta
+                      └──[code] clean_merged_3_4.do
+                          └──merged_3_4.dta
+                              └──[code] merge_3_4.do
+                                  └──cleaned_3.dta
+                                  |   └──[code] clean_raw_3.py
+                                  |       └──raw_3.dta
+                                  └──cleaned_4.dta
+                                      └──[code] clean_raw_4.py
+                                          └──raw_4.dta
+```
 
 This diagram, built with the information you provided, is an important contribution to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.   
 
