@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-02-26" />
+<meta name="date" content="2021-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,7 +121,6 @@
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
-<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 </ul></li>
@@ -129,7 +128,6 @@
 <ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>5.2</b> Reasonable robustness check: justifying and testing.</a></li>
-<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
 <ul>
@@ -525,30 +523,28 @@ cleaning
 <h3><span class="header-section-number">3.2.2</span> Incomplete workflow information</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram.</p>
 <p>For example, let’s start from a simpler complet tree like the following:</p>
-<pre><code>    table1.tex
-      └── analysis.R
-          └── analysis_data.dta
-              └── final_merge.do
-                  └── cleaned_1_2.dta
-                     └── clean_merged_1_2.do
-                         └── merged_1_2.dta
-                  </code></pre>
+<p>table1.tex
+└── analysis.R
+└── analysis_data.dta
+└── final_merge.do
+└── cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
 <p>For this case, if the the file <code>final_merge.do</code> is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:</p>
-<pre><code>    table1.tex
-      └── analysis.R
-          └── analysis_data.dta
-    
-    cleaned_1_2.dta
-      └── clean_merged_1_2.do
-          └── merged_1_2.dta</code></pre>
+<p>table1.tex
+└── analysis.R
+└── analysis_data.dta</p>
+<p>cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
 <p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<pre><code>    table1.tex
-      └── analysis.R
-          └── cleaned_1_2.dta
-              └── MISSSING_CODE_FILE_1
-                  └── cleaned_1_2.dta
-                     └── clean_merged_1_2.do
-                         └── merged_1_2.dta</code></pre>
+<p>table1.tex
+└── analysis.R
+└── cleaned_1_2.dta
+└── MISSSING_CODE_FILE_1
+└── cleaned_1_2.dta
+└── clean_merged_1_2.do
+└── merged_1_2.dta</p>
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>

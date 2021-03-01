@@ -18,6 +18,7 @@ scoping
 read-sum
 record-a-revised-reproduction-package
 declare-estimates
+assessment
 describe-inputs
 desc-sourc
 desc-analy
@@ -78,6 +79,3 @@ acknowledgments
 definitions
 concepts-in-reproducibility
 concepts-in-the-acre-exercise-and-the-platform
-reporting-results
-test-the-robustness-of-results
-assessment
