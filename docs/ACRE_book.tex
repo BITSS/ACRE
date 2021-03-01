@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-02-25}
+\date{2021-02-26}
 
 \begin{document}
 \maketitle
@@ -556,30 +556,32 @@ If the reproduction package does not organize the code around display items, you
 
 If you were able to identify all the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
 
-table1.tex
-└──{[}code{]} analysis.R
-└──analysis\_data.dta
-└──{[}code{]} final\_merge.do
-└──cleaned\_1\_2.dta
-\textbar{} └──{[}code{]} clean\_merged\_1\_2.do
-\textbar{} └──merged\_1\_2.dta
-\textbar{} └──{[}code{]} merge\_1\_2.do
-\textbar{} └──cleaned\_1.dta
-\textbar{} \textbar{} └──{[}code{]} clean\_raw\_1.py
-\textbar{} \textbar{} └──raw\_1.dta
-\textbar{} └──cleaned\_2.dta
-\textbar{} └──{[}code{]} clean\_raw\_2.py
-\textbar{} └──raw\_2.dta
-└──cleaned\_3\_4.dta
-└──{[}code{]} clean\_merged\_3\_4.do
-└──merged\_3\_4.dta
-└──{[}code{]} merge\_3\_4.do
-└──cleaned\_3.dta
-\textbar{} └──{[}code{]} clean\_raw\_3.py
-\textbar{} └──raw\_3.dta
-└──cleaned\_4.dta
-└──{[}code{]} clean\_raw\_4.py
-└──raw\_4.dta
+\begin{verbatim}
+  table1.tex
+      └──[code] analysis.R
+          └──analysis_data.dta
+              └──[code] final_merge.do
+                  └──cleaned_1_2.dta
+                  |   └──[code] clean_merged_1_2.do
+                  |       └──merged_1_2.dta
+                  |           └──[code] merge_1_2.do
+                  |               └──cleaned_1.dta
+                  |               |   └──[code] clean_raw_1.py
+                  |               |       └──raw_1.dta
+                  |               └──cleaned_2.dta
+                  |                   └──[code] clean_raw_2.py
+                  |                       └──raw_2.dta
+                  └──cleaned_3_4.dta
+                      └──[code] clean_merged_3_4.do
+                          └──merged_3_4.dta
+                              └──[code] merge_3_4.do
+                                  └──cleaned_3.dta
+                                  |   └──[code] clean_raw_3.py
+                                  |       └──raw_3.dta
+                                  └──cleaned_4.dta
+                                      └──[code] clean_raw_4.py
+                                          └──raw_4.dta
+\end{verbatim}
 
 This diagram, built with the information you provided, is an important contribution to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.
 
@@ -934,17 +936,13 @@ Whenever code is available in the reproduction package, you should be able to de
 \begin{itemize}
 \tightlist
 \item
-  \emph{Code cleaning:} Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \emph{Performance improvement:} Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results).\\
-  \item
-    \emph{Environment set up:} Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.\\
-  \item
-    \emph{Correcting errors:} A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the ACRE procedure to report coding errors.
-  \end{itemize}
+  \emph{Code cleaning:} Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.\\
+\item
+  \emph{Performance improvement:} Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results).\\
+\item
+  \emph{Environment set up:} Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.\\
+\item
+  \emph{Correcting errors:} A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the ACRE procedure to report coding errors.
 \end{itemize}
 
 \hypertarget{debugging-cleaning-code}{%
@@ -991,17 +989,19 @@ The size of feasible robustness checks grows exponentially as higher levels of c
 
 Robustness is assessed at the claim level (see our diagram representing a paper's components \ref{fig:stages-unit}). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the \protect\hyperlink{complete-tree}{example tree} discussed in the \emph{Assessment} stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:
 
-table1.tex (contains preferred specification of a given claim)
-\textbar{}\textbf{\emph{{[}code{]} analysis.R
-\textbar{}}}{[}code{]} final\_merge.do
-\textbar{}\textbf{\emph{{[}code{]} clean\_merged\_1\_2.do
-\textbar{} \textbar{}}}{[}code{]} merge\_1\_2.do
-\textbar{} \textbar{}\textbf{\emph{{[}code{]} clean\_raw\_1.py
-\textbar{} \textbar{}}}{[}code{]} clean\_raw\_2.py
-\textbar{}\textbf{\emph{{[}code{]} clean\_merged\_3\_4.do
-\textbar{}}}{[}code{]} merge\_3\_4.do
-\textbar{}\textbf{\emph{{[}code{]} clean\_raw\_3.py
-\textbar{}}}{[}code{]} clean\_raw\_4.py
+\begin{verbatim}
+        table1.tex (contains preferred specification of a given claim)
+            |___[code] analysis.R
+                    |___[code] final_merge.do
+                            |___[code] clean_merged_1_2.do
+                            |       |___[code] merge_1_2.do
+                            |               |___[code] clean_raw_1.py
+                            |               |___[code] clean_raw_2.py
+                            |___[code] clean_merged_3_4.do
+                                    |___[code] merge_3_4.do
+                                            |___[code] clean_raw_3.py
+                                            |___[code] clean_raw_4.py
+\end{verbatim}
 
 Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts, and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and refer to specific files in the reproduction package.
 
@@ -1018,16 +1018,12 @@ Analytical choices can include those behind data cleaning and data analysis. Bel
 \tightlist
 \item
   Variable definition
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Data sub-setting
-  \item
-    Data re-shaping (merge, append, long/gather, wide/spread)
-  \item
-    Others (specify as ``processing - other'')
-  \end{itemize}
+\item
+  Data sub-setting
+\item
+  Data re-shaping (merge, append, long/gather, wide/spread)
+\item
+  Others (specify as ``processing - other'')
 \end{itemize}
 
 \textbf{Analytical choices in analysis code}
@@ -1036,24 +1032,20 @@ Analytical choices can include those behind data cleaning and data analysis. Bel
 \tightlist
 \item
   Regression function (link function)
-
-  \begin{itemize}
-  \tightlist
-  \item
-    Key parameters (tuning, tolerance parameters, etc.)
-  \item
-    Controls
-  \item
-    Adjustment of standard errors
-  \item
-    Choice of weights
-  \item
-    Treatment of missing values
-  \item
-    Imputations
-  \item
-    Other (specify as ``methods - other'')
-  \end{itemize}
+\item
+  Key parameters (tuning, tolerance parameters, etc.)
+\item
+  Controls
+\item
+  Adjustment of standard errors
+\item
+  Choice of weights
+\item
+  Treatment of missing values
+\item
+  Imputations
+\item
+  Other (specify as ``methods - other'')
 \end{itemize}
 
 To record a specific analytical choice in the ACRE platform, please follow these steps:
@@ -1194,7 +1186,7 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 - \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.\\
 - \textbf{\emph{Assessment Reoprt:}} a summary of the display items assessed and their connections with the claims.\\
 - \textbf{\emph{Improvement Report:}} descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.\\
-- \textbf{\emph{Robustness Report:}} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.\\
+- \textbf{\emph{Robustness Report:}} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.
 - \textbf{\emph{Final reproduction report:}} includes everything, plus final comments, and it cannot be edited after submission.
 
 \textbf{3. Your data} -- You will be able to export a .csv file containing all of your responses recorded as part of your reproduction attempt.
@@ -1214,47 +1206,17 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 
 This chapter contains guidance for constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure that their interactions with original authors are constructive. We summarize and build on this approach below and encourage you to follow this guidance. Remember the \textbf{golden rule of reproductions} (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
-\textbf{1. Carefully and transparently plan your study.}
+\textbf{1. Carefully and transparently plan your study.}\\
+a. Clearly state that you are conducting a reproduction of their original work.\\
+b. Explain why you have chosen this study.
+c.~Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
 
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  Clearly state that you are conducting a reproduction of their original work.
-
-  \begin{enumerate}
-  \def\labelenumii{\alph{enumii}.}
-  \setcounter{enumii}{1}
-  \tightlist
-  \item
-    Explain why you have chosen this study.
-  \item
-    Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
-  \end{enumerate}
-\end{enumerate}
-
-\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you might do for your own work.}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\tightlist
-\item
-  Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).
-
-  \begin{enumerate}
-  \def\labelenumii{\alph{enumii}.}
-  \setcounter{enumii}{1}
-  \tightlist
-  \item
-    Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
-  \item
-    Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
-  \item
-    For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
-  \item
-    Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
-  \end{enumerate}
-\end{enumerate}
+\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you might do for your own work.}\\
+a. Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).
+b. Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
+c.~Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
+d.~For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
+e. Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
 
 To help you put these recommendations into practice, we've developed template language for common scenarios that reproducers and authors may encounter in their interactions.
 
@@ -1702,18 +1664,20 @@ A reproduction tree is complete when it is possible to connect its output (a giv
 
 Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
 
-table 1
-└───{[}code{]} formatting\_table1.R
-├───output1\_part1.txt\\
-\textbar{} └───{[}code{]} output\_table1.do\\
-\textbar{} └───{[}data{]} analysis\_data01.csv
-\textbar{} └───{[}code{]} data\_cleaning01.R
-\textbar{} └───{[}data{]} survey\_01raw.csv
-└───output1\_part2.txt\\
-└───{[}code{]} output\_table2.do\\
-└───{[}data{]} analysis\_data02.csv
-└───{[}code{]} data\_cleaning02.R
-└───{[}data{]} admin\_01raw.csv
+\begin{verbatim}
+          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] data_cleaning01.R
+                |             └───[data] survey_01raw.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] data_cleaning02.R
+                              └───[data] admin_01raw.csv  
+\end{verbatim}
 
 \hypertarget{incomplete-reproduction-tree}{%
 \subsection{Incomplete reproduction tree}\label{incomplete-reproduction-tree}}
@@ -1723,58 +1687,64 @@ table 1
 
 Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.
 
-table 1
-└───{[}code{]} formatting\_table1.R
-├───output1\_part1.txt\\
-\textbar{} └───{[}code{]} output\_table1.do\\
-\textbar{} └───{[}data{]} analysis\_data01.csv
-└───output1\_part2.txt\\
-└───{[}code{]} output\_table2.do\\
-└───{[}data{]} analysis\_data02.csv
+\begin{verbatim}
+          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
 
-Unused files:
-- survey\_01raw.csv
-- admin\_01raw.csv
+           Unused files: 
+           - survey_01raw.csv
+           - admin_01raw.csv  
+\end{verbatim}
 
 Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in \texttt{survey\_01raw.csv} and \texttt{admin\_01raw.csv}, and eventually output \texttt{analysis\_data01.csv} and \texttt{analysis\_data02.csv}, though this requires the reproducer's discretion.
 
-table 1
-└───{[}code{]} formatting\_table1.R
-├───output1\_part1.txt\\
-\textbar{} └───{[}code{]} output\_table1.do\\
-\textbar{} └───{[}data{]} analysis\_data01.csv
-\textbar{} └───{[}code{]} MISSING FILE(S)
-\textbar{} └───{[}data{]} survey\_01raw.csv
-└───output1\_part2.txt\\
-└───{[}code{]} output\_table2.do\\
-└───{[}data{]} analysis\_data02.csv
-└───{[}code{]} MISSING FILE(S)
-└───{[}data{]} admin\_01raw.csv
+\begin{verbatim}
+          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] MISSING FILE(S)
+                |             └───[data] survey_01raw.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] MISSING FILE(S)
+                              └───[data] admin_01raw.csv  
+\end{verbatim}
 
 \hypertarget{unused-data-sources}{%
 \subsection{Unused Data Sources}\label{unused-data-sources}}
 
 It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
 
-table1.tex
-\textbar\_\textbf{{[}code{]} analysis.R
-\textbar{}}\_analysis\_data.dta
+\begin{verbatim}
+        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
 
-Unused data sources:
-raw\_1.dta
-raw\_2.dta
-raw\_3.dta
-raw\_4.dta
+        Unused data sources:
+        raw_1.dta
+        raw_2.dta
+        raw_3.dta
+        raw_4.dta
 
-Unused analysis data:
-cleaned\_1.dta
-cleaned\_2.dta
-cleaned\_3.dta
-cleaned\_4.dta
-merged\_1\_2.dta
-merged\_3\_4.dta
-cleaned\_1\_2.dta
-cleaned\_3\_4.dta
+        Unused analysis data:
+        cleaned_1.dta
+        cleaned_2.dta
+        cleaned_3.dta
+        cleaned_4.dta
+        merged_1_2.dta
+        merged_3_4.dta
+        cleaned_1_2.dta
+        cleaned_3_4.dta
+\end{verbatim}
 
 In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
 
@@ -1786,31 +1756,33 @@ In this case, there are many data files that were listed in the raw data and ana
 
 This reproduction diagram fragment likely shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. \texttt{cps2018.dta} and \texttt{cps\_march2017.dta} are included as inputs in the reproduction kit, but never used to make a display item, i.e., there is no piece of code that is listed as using them as inputs. Likewise, \texttt{PublicSalary.dta} is listed as a final output, meaning it, too, is not used to make a display item since it is not listed as an input for any code script. Perhaps \texttt{Paper2\_PoExitDataset.dta} is made by a missing code script that takes \texttt{PublicSalary.dta}, \texttt{cps2018.dta}, and \texttt{cps\_march2017.dta} as inputs? It may be the case that the only way to find out for sure is to contact the study author(s), in which case, such a diagram can be used to help them identify any missing files.
 
-PublicSalary.dta
-\textbar\_\textbf{MakeData2.do
-\textbar{}}\_Paper2\_ProviderDataset.dta
-\textbar\_\_\_Paper2\_SSPDataset\_wIRT\_final.dta
-\textbar\_\_\_PublicFacilitySurvey\_clean.dta
+\begin{verbatim}
+        PublicSalary.dta
+        |___MakeData2.do
+            |___Paper2_ProviderDataset.dta
+            |___Paper2_SSPDataset_wIRT_final.dta
+            |___PublicFacilitySurvey_clean.dta
 
-Table1.xml
-\textbar\_\textbf{Table1.do
-\textbar{}}\_ProviderData.dta
-\textbar{} \textbar\_\_\_MakeData4.do
-\textbar{} \textbar\_\_\_Paper2\_PoExitDataset.dta
-\textbar{} \textbar\_\_\_Paper2\_ProviderDataset.dta
-\textbar{} \textbar\_\_\_Paper2\_SSPDataset\_wIRT\_final.dta
-\textbar\_\_\_VillageDataset.dta
-\textbar{} \textbar\_\_\_MakeData8.do
-\textbar{} \textbar\_\_\_Paper2\_HouseholdDataset1.dta
-\textbar{} \textbar\_\_\_Paper2\_VillageDataset.dta
-\textbar\_\_\_HouseholdDataset.dta
-\textbar\_\_\_MakeData8.do
-\textbar\_\_\_Paper2\_HouseholdDataset1.dta
-\textbar\_\_\_Paper2\_VillageDataset.dta
+        Table1.xml
+        |___Table1.do
+            |___ProviderData.dta
+            |   |___MakeData4.do
+            |       |___Paper2_PoExitDataset.dta
+            |       |___Paper2_ProviderDataset.dta
+            |       |___Paper2_SSPDataset_wIRT_final.dta
+            |___VillageDataset.dta
+            |   |___MakeData8.do
+            |       |___Paper2_HouseholdDataset1.dta
+            |       |___Paper2_VillageDataset.dta
+            |___HouseholdDataset.dta
+                |___MakeData8.do
+                    |___Paper2_HouseholdDataset1.dta
+                    |___Paper2_VillageDataset.dta
 
-Unusued data sources:
-cps2018.dta
-cps\_march2017.dta
+        Unusued data sources:
+        cps2018.dta
+        cps_march2017.dta  
+\end{verbatim}
 
 \hypertarget{long-complicated-tree.}{%
 \subsection[Long, complicated tree.]{\texorpdfstring{Long, complicated tree\footnote{This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course}.}{Long, complicated tree.}}\label{long-complicated-tree.}}
@@ -4481,62 +4453,66 @@ This diagram shows that the production of a given display item may be very compl
 
 In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here we present a more complex example that the one presented in the Asessement chaprer. The Diagram Builder will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
 
-cleaned\_3.dta
-└──{[}code{]} clean\_raw\_3.py
-└──raw\_3.dta
+\begin{verbatim}
+        cleaned_3.dta
+            └──[code] clean_raw_3.py
+                └──raw_3.dta
 
-table1.tex
-└──{[}code{]} analysis.R
-└──analysis\_data.dta
+        table1.tex
+            └──[code] analysis.R
+                └──analysis_data.dta
 
-cleaned\_3\_4.dta
-└──{[}code{]} clean\_merged\_3\_4.do
-└──merged\_3\_4.dta
+        cleaned_3_4.dta
+            └──[code] clean_merged_3_4.do
+                └──merged_3_4.dta
 
-cleaned\_1.dta
-└──{[}code{]} clean\_raw\_1.py
-└──raw\_1.dta
+        cleaned_1.dta
+            └──[code] clean_raw_1.py
+                └──raw_1.dta
 
-cleaned\_2.dta
-└──{[}code{]} clean\_raw\_2.py
-└──raw\_2.dta
+        cleaned_2.dta
+            └──[code] clean_raw_2.py
+                └──raw_2.dta
 
-cleaned\_4.dta
-└──{[}code{]} clean\_raw\_4.py
-└──raw\_4.dta
+        cleaned_4.dta
+            └──[code] clean_raw_4.py
+                └──raw_4.dta
 
-cleaned\_1\_2.dta
-└──{[}code{]} clean\_merged\_1\_2.do
-└──merged\_1\_2.dta
-Unused data sources: None.
+        cleaned_1_2.dta
+            └──[code] clean_merged_1_2.do
+                └──merged_1_2.dta
+        Unused data sources: None.
+\end{verbatim}
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
-table1.tex
-└──{[}code{]} analysis.R
-└──analysis\_data.dta
-└──MISSSING\_CODE\_FILE\_3
-└──cleaned\_3\_4.dta
-\textbar{} └──{[}code{]} clean\_merged\_3\_4.do
-\textbar{} └──merged\_3\_4.dta
-\textbar{} └──MISSSING\_CODE\_FILE\_2
-\textbar{} └──cleaned\_3.dta
-\textbar{} \textbar{} └──{[}code{]} clean\_raw\_3.py
-\textbar{} \textbar{} └──raw\_3.dta\\
-\textbar{} └──cleaned\_4.dta
-\textbar{} └──{[}code{]} clean\_raw\_4.py
-\textbar{} └──raw\_4.dta
-└──cleaned\_1\_2.dta
-└──{[}code{]} clean\_merged\_1\_2.do
-└──merged\_1\_2.dta
-└──MISSSING\_CODE\_FILE\_1
-└──cleaned\_1.dta
-\textbar{} └──{[}code{]} clean\_raw\_1.py
-\textbar{} └──raw\_1.dta
-\textbar{}\\
-└──cleaned\_2.dta
-└──{[}code{]} clean\_raw\_2.py
-└──raw\_2.dta
+\begin{verbatim}
+        table1.tex
+            └──[code] analysis.R
+                └──analysis_data.dta
+                    └──MISSSING_CODE_FILE_3
+                        └──cleaned_3_4.dta
+                        |       └──[code] clean_merged_3_4.do
+                        |           └──merged_3_4.dta
+                        |               └──MISSSING_CODE_FILE_2
+                        |                   └──cleaned_3.dta
+                        |                   |       └──[code] clean_raw_3.py
+                        |                   |           └──raw_3.dta    
+                        |                   └──cleaned_4.dta
+                        |                           └──[code] clean_raw_4.py
+                        |                               └──raw_4.dta
+                        └──cleaned_1_2.dta
+                                └──[code] clean_merged_1_2.do
+                                    └──merged_1_2.dta
+                                        └──MISSSING_CODE_FILE_1
+                                            └──cleaned_1.dta
+                                            |       └──[code] clean_raw_1.py
+                                            |           └──raw_1.dta
+                                            |   
+                                            └──cleaned_2.dta
+                                                    └──[code] clean_raw_2.py
+                                                        └──raw_2.dta
+\end{verbatim}
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 

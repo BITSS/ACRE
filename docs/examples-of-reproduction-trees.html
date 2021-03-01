@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-02-25" />
+<meta name="date" content="2021-02-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -209,70 +209,73 @@
 <div id="complete-reproduction-tree" class="section level3" number="7.1.1">
 <h3><span class="header-section-number">7.1.1</span> Complete reproduction tree</h3>
 <p>Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.</p>
-<p>table 1
-└───[code] formatting_table1.R
-├───output1_part1.txt<br />
-| └───[code] output_table1.do<br />
-| └───[data] analysis_data01.csv
-| └───[code] data_cleaning01.R
-| └───[data] survey_01raw.csv
-└───output1_part2.txt<br />
-└───[code] output_table2.do<br />
-└───[data] analysis_data02.csv
-└───[code] data_cleaning02.R
-└───[data] admin_01raw.csv</p>
+<pre><code>          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] data_cleaning01.R
+                |             └───[data] survey_01raw.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] data_cleaning02.R
+                              └───[data] admin_01raw.csv  </code></pre>
 </div>
 <div id="incomplete-reproduction-tree" class="section level3" number="7.1.2">
 <h3><span class="header-section-number">7.1.2</span> Incomplete reproduction tree</h3>
 <div id="raw-data-and-analytic-data-are-available-but-cleaning-code-is-missing." class="section level4" number="7.1.2.1">
 <h4><span class="header-section-number">7.1.2.1</span> Raw data and analytic data are available, but cleaning code is missing.</h4>
 <p>Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.</p>
-<p>table 1
-└───[code] formatting_table1.R
-├───output1_part1.txt<br />
-| └───[code] output_table1.do<br />
-| └───[data] analysis_data01.csv
-└───output1_part2.txt<br />
-└───[code] output_table2.do<br />
-└───[data] analysis_data02.csv</p>
-<p>Unused files:
-- survey_01raw.csv
-- admin_01raw.csv</p>
+<pre><code>          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+
+           Unused files: 
+           - survey_01raw.csv
+           - admin_01raw.csv  </code></pre>
 <p>Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in <code>survey_01raw.csv</code> and <code>admin_01raw.csv</code>, and eventually output <code>analysis_data01.csv</code> and <code>analysis_data02.csv</code>, though this requires the reproducer’s discretion.</p>
-<p>table 1
-└───[code] formatting_table1.R
-├───output1_part1.txt<br />
-| └───[code] output_table1.do<br />
-| └───[data] analysis_data01.csv
-| └───[code] MISSING FILE(S)
-| └───[data] survey_01raw.csv
-└───output1_part2.txt<br />
-└───[code] output_table2.do<br />
-└───[data] analysis_data02.csv
-└───[code] MISSING FILE(S)
-└───[data] admin_01raw.csv</p>
+<pre><code>          table 1
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] MISSING FILE(S)
+                |             └───[data] survey_01raw.csv
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] MISSING FILE(S)
+                              └───[data] admin_01raw.csv  </code></pre>
 </div>
 </div>
 <div id="unused-data-sources" class="section level3" number="7.1.3">
 <h3><span class="header-section-number">7.1.3</span> Unused Data Sources</h3>
 <p>It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:</p>
-<p>table1.tex
-|_<strong>[code] analysis.R
-|</strong>_analysis_data.dta</p>
-<p>Unused data sources:
-raw_1.dta
-raw_2.dta
-raw_3.dta
-raw_4.dta</p>
-<p>Unused analysis data:
-cleaned_1.dta
-cleaned_2.dta
-cleaned_3.dta
-cleaned_4.dta
-merged_1_2.dta
-merged_3_4.dta
-cleaned_1_2.dta
-cleaned_3_4.dta</p>
+<pre><code>        table1.tex
+            |___[code] analysis.R
+                |___analysis_data.dta
+
+        Unused data sources:
+        raw_1.dta
+        raw_2.dta
+        raw_3.dta
+        raw_4.dta
+
+        Unused analysis data:
+        cleaned_1.dta
+        cleaned_2.dta
+        cleaned_3.dta
+        cleaned_4.dta
+        merged_1_2.dta
+        merged_3_4.dta
+        cleaned_1_2.dta
+        cleaned_3_4.dta</code></pre>
 <p>In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.</p>
 </div>
 </div>
@@ -281,29 +284,31 @@ cleaned_3_4.dta</p>
 <div id="possibly-missing-code-for-producing-a-display-item." class="section level3" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Possibly missing code for producing a display item<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</h3>
 <p>This reproduction diagram fragment likely shows a missing piece of code. In a complete reproduction package there are no unused files and all final outputs are display items. <code>cps2018.dta</code> and <code>cps_march2017.dta</code> are included as inputs in the reproduction kit, but never used to make a display item, i.e., there is no piece of code that is listed as using them as inputs. Likewise, <code>PublicSalary.dta</code> is listed as a final output, meaning it, too, is not used to make a display item since it is not listed as an input for any code script. Perhaps <code>Paper2_PoExitDataset.dta</code> is made by a missing code script that takes <code>PublicSalary.dta</code>, <code>cps2018.dta</code>, and <code>cps_march2017.dta</code> as inputs? It may be the case that the only way to find out for sure is to contact the study author(s), in which case, such a diagram can be used to help them identify any missing files.</p>
-<p>PublicSalary.dta
-|_<strong>MakeData2.do
-|</strong>_Paper2_ProviderDataset.dta
-|___Paper2_SSPDataset_wIRT_final.dta
-|___PublicFacilitySurvey_clean.dta</p>
-<p>Table1.xml
-|_<strong>Table1.do
-|</strong>_ProviderData.dta
-| |___MakeData4.do
-| |___Paper2_PoExitDataset.dta
-| |___Paper2_ProviderDataset.dta
-| |___Paper2_SSPDataset_wIRT_final.dta
-|___VillageDataset.dta
-| |___MakeData8.do
-| |___Paper2_HouseholdDataset1.dta
-| |___Paper2_VillageDataset.dta
-|___HouseholdDataset.dta
-|___MakeData8.do
-|___Paper2_HouseholdDataset1.dta
-|___Paper2_VillageDataset.dta</p>
-<p>Unusued data sources:
-cps2018.dta
-cps_march2017.dta</p>
+<pre><code>        PublicSalary.dta
+        |___MakeData2.do
+            |___Paper2_ProviderDataset.dta
+            |___Paper2_SSPDataset_wIRT_final.dta
+            |___PublicFacilitySurvey_clean.dta
+
+        Table1.xml
+        |___Table1.do
+            |___ProviderData.dta
+            |   |___MakeData4.do
+            |       |___Paper2_PoExitDataset.dta
+            |       |___Paper2_ProviderDataset.dta
+            |       |___Paper2_SSPDataset_wIRT_final.dta
+            |___VillageDataset.dta
+            |   |___MakeData8.do
+            |       |___Paper2_HouseholdDataset1.dta
+            |       |___Paper2_VillageDataset.dta
+            |___HouseholdDataset.dta
+                |___MakeData8.do
+                    |___Paper2_HouseholdDataset1.dta
+                    |___Paper2_VillageDataset.dta
+
+        Unusued data sources:
+        cps2018.dta
+        cps_march2017.dta  </code></pre>
 </div>
 <div id="long-complicated-tree." class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Long, complicated tree<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</h3>
@@ -2969,54 +2974,60 @@ cps_march2017.dta</p>
 <div id="example-of-completing-reproduction-tree" class="section level3" number="7.2.3">
 <h3><span class="header-section-number">7.2.3</span> Example of completing reproduction tree</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here we present a more complex example that the one presented in the Asessement chaprer. The Diagram Builder will return a partial reproduction tree diagram. For example, if the files <code>merge_1_2.do</code>, <code>merge_3_4.do</code>, and <code>final_merge.do</code> are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:</p>
-<p>cleaned_3.dta
-└──[code] clean_raw_3.py
-└──raw_3.dta</p>
-<p>table1.tex
-└──[code] analysis.R
-└──analysis_data.dta</p>
-<p>cleaned_3_4.dta
-└──[code] clean_merged_3_4.do
-└──merged_3_4.dta</p>
-<p>cleaned_1.dta
-└──[code] clean_raw_1.py
-└──raw_1.dta</p>
-<p>cleaned_2.dta
-└──[code] clean_raw_2.py
-└──raw_2.dta</p>
-<p>cleaned_4.dta
-└──[code] clean_raw_4.py
-└──raw_4.dta</p>
-<p>cleaned_1_2.dta
-└──[code] clean_merged_1_2.do
-└──merged_1_2.dta
-Unused data sources: None.</p>
+<pre><code>        cleaned_3.dta
+            └──[code] clean_raw_3.py
+                └──raw_3.dta
+
+        table1.tex
+            └──[code] analysis.R
+                └──analysis_data.dta
+
+        cleaned_3_4.dta
+            └──[code] clean_merged_3_4.do
+                └──merged_3_4.dta
+
+        cleaned_1.dta
+            └──[code] clean_raw_1.py
+                └──raw_1.dta
+
+        cleaned_2.dta
+            └──[code] clean_raw_2.py
+                └──raw_2.dta
+
+        cleaned_4.dta
+            └──[code] clean_raw_4.py
+                └──raw_4.dta
+
+        cleaned_1_2.dta
+            └──[code] clean_merged_1_2.do
+                └──merged_1_2.dta
+        Unused data sources: None.</code></pre>
 <p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<p>table1.tex
-└──[code] analysis.R
-└──analysis_data.dta
-└──MISSSING_CODE_FILE_3
-└──cleaned_3_4.dta
-| └──[code] clean_merged_3_4.do
-| └──merged_3_4.dta
-| └──MISSSING_CODE_FILE_2
-| └──cleaned_3.dta
-| | └──[code] clean_raw_3.py
-| | └──raw_3.dta<br />
-| └──cleaned_4.dta
-| └──[code] clean_raw_4.py
-| └──raw_4.dta
-└──cleaned_1_2.dta
-└──[code] clean_merged_1_2.do
-└──merged_1_2.dta
-└──MISSSING_CODE_FILE_1
-└──cleaned_1.dta
-| └──[code] clean_raw_1.py
-| └──raw_1.dta
-|<br />
-└──cleaned_2.dta
-└──[code] clean_raw_2.py
-└──raw_2.dta</p>
+<pre><code>        table1.tex
+            └──[code] analysis.R
+                └──analysis_data.dta
+                    └──MISSSING_CODE_FILE_3
+                        └──cleaned_3_4.dta
+                        |       └──[code] clean_merged_3_4.do
+                        |           └──merged_3_4.dta
+                        |               └──MISSSING_CODE_FILE_2
+                        |                   └──cleaned_3.dta
+                        |                   |       └──[code] clean_raw_3.py
+                        |                   |           └──raw_3.dta    
+                        |                   └──cleaned_4.dta
+                        |                           └──[code] clean_raw_4.py
+                        |                               └──raw_4.dta
+                        └──cleaned_1_2.dta
+                                └──[code] clean_merged_1_2.do
+                                    └──merged_1_2.dta
+                                        └──MISSSING_CODE_FILE_1
+                                            └──cleaned_1.dta
+                                            |       └──[code] clean_raw_1.py
+                                            |           └──raw_1.dta
+                                            |   
+                                            └──cleaned_2.dta
+                                                    └──[code] clean_raw_2.py
+                                                        └──raw_2.dta</code></pre>
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>

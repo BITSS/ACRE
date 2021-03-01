@@ -8,17 +8,18 @@ At this stage, you will define the *scope of the reproduction* by identifying th
 
 <!-- add subsection on claims, structure and focus-->
 
-Depending on your reproduction's timeline, we recommend that you write a short (<1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:
-How many scientific claims can you identify in the paper?
-Would you classify the claims as causal, descriptive (e.g., estimating a population's descriptive statistic), or something else?
-What is the population that is the focus of the paper as a whole?
-What is the population for which the estimates apply?
-What are the primary data sources used in the paper?
-How many display items are there in the paper (tables, figures, and inline results)?
-What is the primary statistical or econometric method used to examine each claim?
-What is the author's preferred specification (or yours, if the authors' is unclear)?
-What are some possible robustness checks for the preferred specification?
-Draft the summary in a plain text editor and paste the text in the form.
+Depending on your reproduction's timeline, we recommend that you write a short (<1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:  
+
+- How many scientific claims can you identify in the paper? 
+- Would you classify the claims as causal, descriptive (e.g., estimating a population's descriptive statistic), or something else?  
+- What is the population that is the focus of the paper as a whole?  
+- What is the population for which the estimates apply?  
+- What are the primary data sources used in the paper?  
+- How many display items are there in the paper (tables, figures, and inline results)?  
+- What is the primary statistical or econometric method used to examine each claim?  
+- What is the author's preferred specification (or yours, if the authors' is unclear)?  
+- What are some possible robustness checks for the preferred specification?  
+- Draft the summary in a plain text editor and paste the text in the form.  
 
 ## Record a revised reproduction package  
 
