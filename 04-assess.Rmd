@@ -147,6 +147,7 @@ In many cases, some of the components of the workflow will not be easily identif
 
 For example, let's start from a simpler complet tree like the following: 
 
+```
         table1.tex
           └── analysis.R
               └── analysis_data.dta
@@ -154,11 +155,11 @@ For example, let's start from a simpler complet tree like the following:
                       └── cleaned_1_2.dta
                          └── clean_merged_1_2.do
                              └── merged_1_2.dta
-                      
+```
 
 For this case, if the the file `final_merge.do` is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:
 
-
+```
         table1.tex
           └── analysis.R
               └── analysis_data.dta
@@ -166,9 +167,11 @@ For this case, if the the file `final_merge.do` is missing from the previous dia
         cleaned_1_2.dta
           └── clean_merged_1_2.do
               └── merged_1_2.dta
+```
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a "candidate" tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
+```
         table1.tex
           └── analysis.R
               └── cleaned_1_2.dta
@@ -176,8 +179,10 @@ In this case, you can still manually combine this partial information with your 
                       └── cleaned_1_2.dta
                          └── clean_merged_1_2.do
                              └── merged_1_2.dta
+```
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+
 ```{r adding-rows, echo = FALSE, eval=temp_eval}
 adding_rows_to_code <- data.frame(file_name = c("...", "MISSSING_CODE_FILE_1"),
                                   location = c("...", "unknown"),
@@ -190,7 +195,6 @@ adding_rows_to_code %>%
     knitr::kable(caption = "Adding rows to code spreadsheet") %>%
     kable_styling(full_width = TRUE)
 ```
-
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
 
