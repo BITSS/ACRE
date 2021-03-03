@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-03-01}
+\date{2021-03-02}
 
 \begin{document}
 \maketitle
@@ -118,7 +118,7 @@ A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{
 
 \includegraphics[width=1\linewidth]{stages}
 
-\protect\hyperlink{scoping}{(0) Select}
+\protect\hyperlink{select}{(0) Select}
 
 \protect\hyperlink{scoping}{(1) Scoping}
 
@@ -256,8 +256,8 @@ Different stages in the reproduction process correspond to different units of an
 
 In most cases, you will begin a reproduction with a thorough reading of your paper of interest. However, the sequence of the steps you take in the remainder of the reproduction may follow various \emph{reproduction strategies}. The most obvious strategy would be to follow the order of the steps as outlined above. You may also first choose one of the paper's many claims and then focus on assessing and improving the reproduction package accordingly. Using an alternative strategy, you might identify potential robustness checks or extensions while reading the paper and then focus only on the results associated with that robustness check. In another strategy, you may identify a paper that uses a particular dataset in which you are interested and then only reproduce or conduct robustness checks for the results associated with that dataset. The various uses of reproduction make the number of potential reproduction strategies potentially infinite, so it helps identify the goal of the reproduction from the start.
 
-\hypertarget{selecting-a-paper}{%
-\chapter{Selecting a paper}\label{selecting-a-paper}}
+\hypertarget{select}{%
+\chapter{Selecting a paper}\label{select}}
 
 The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}.
 
@@ -381,7 +381,17 @@ Robustness
 \hypertarget{scoping}{%
 \chapter{Scoping}\label{scoping}}
 
-At this stage, you will define the \emph{scope of the reproduction} by identifying the \emph{scientific claims} and related \emph{display items} that you will analyze in the remainder of the reproduction. For this exercise, we define a claim as a single major finding in a paper (usually featured in the abstract) and the details of the methods and results that support this finding. A claim is usually not equivalent to a single hypothesis or an entire paper, though there may be exceptions. A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
+At this stage, you will define the \emph{scope of the reproduction} by identifying the \emph{scientific claims} and related \emph{display items} that you will analyze in the remainder of the reproduction. For this exercise, we follow the a comparable definition of a claim as used in the SCORE project, a related initiative aimed at predicting replicability and reproducibility of research:
+
+\begin{quote}
+``A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim {[}may not be{]} equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the {[}results of the paper{]}''.
+
+-- \href{https://replicats.research.unimelb.edu.au/\#tab301}{Replicats Project} (part of SCORE)
+\end{quote}
+
+A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
+
+When recording the scoping section in the SSRP plataform, you will be asked to count all the claims in a paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: ``The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)'' or ``The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)''. Make sure to use the same units of measurement for all of the scientific claims that you will analyze as part of the entire exercise.
 
 \textbf{Note:} once you progress past the Scoping stage on the SSRP, you will no longer be able to edit your responses in the Scoping stage, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
@@ -403,16 +413,16 @@ Depending on your reproduction's timeline, we recommend that you write a short (
 \item
   What are the primary data sources used in the paper?\\
 \item
-  How many display items are there in the paper (tables, figures, and inline results)?\\
-\item
   What is the primary statistical or econometric method used to examine each claim?\\
 \item
   What is the author's preferred specification (or yours, if the authors' is unclear)?\\
 \item
   What are some possible robustness checks for the preferred specification?\\
 \item
-  Draft the summary in a plain text editor and paste the text in the form.
+  How many display items are there in the paper (tables, figures, and inline results)?
 \end{itemize}
+
+Draft the summary in a plain text editor and paste the text in the form.
 
 \hypertarget{record-a-revised-reproduction-package}{%
 \section{Record a revised reproduction package}\label{record-a-revised-reproduction-package}}
@@ -439,7 +449,7 @@ Identify a scientific claim and its corresponding preferred specification, and r
 \subsubsection*{Declare possible robustness checks for main estimates (optional)}\label{declare-possible-robustness-checks-for-main-estimates-optional}}
 \addcontentsline{toc}{subsubsection}{Declare possible robustness checks for main estimates (optional)}
 
-After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage.
+After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are optional and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be asked to describe in more detail which changes in the reproduction code are you actually modifying.
 
 \hypertarget{assessment}{%
 \chapter{Assessment}\label{assessment}}

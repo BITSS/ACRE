@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Concluding the Reproduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
+  <title>Chapter 1 Selecting a paper | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Concluding the Reproduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  <meta property="og:title" content="Chapter 1 Selecting a paper | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Concluding the Reproduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  <meta name="twitter:title" content="Chapter 1 Selecting a paper | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in social sciences" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="robust.html"/>
-<link rel="next" href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html"/>
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="scoping.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -203,32 +203,166 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="concluding-the-reproduction" class="section level1" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Concluding the Reproduction</h1>
-<p>Once you have completed each of the reproduction stages for all of your claims of interest, you will be ready to submit your work. For a reproduction to be considered complete and ready for submission, you must have <strong>assessed at least one display item.</strong></p>
-<p>Before submitting a reproduction, you will be able to modify your answers to any entry in the ACRE platform. After you hit “Submit,” however, you will not be able to modify your reproduction attempt any further. If you wish to modify your reproduction after submitting it, you will have to record <em>a new reproduction attempt</em> on the platform and link to the previously completed reproduction.</p>
-<div id="outputs" class="section level2" number="6.1">
-<h2><span class="header-section-number">6.1</span> Outputs</h2>
-<p>A completed reproduction will consist of three different types of outputs:</p>
-<p><strong>1. Revised reproduction package</strong> – Deposit your revised version of the original reproduction package in a trusted repository, such as <a href="https://dataverse.org/">Dataverse</a>, <a href="https://www.openicpsr.org/openicpsr/">openICPSR</a>, <a href="https://figshare.com">Figshare</a>, <a href="https://datadryad.org/stash">Dryad</a>, <a href="https://about.zenodo.org/">Zenodo</a>, or the <a href="osf.io/">Open Science Framework</a>. You should submit a revised reproduction package any time that you perform any type of <a href="improvements.html#improvements">improvement</a> to the original reproduction package. This revised reproduction package is expected to be self-contained as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?)[A: how is this determined, it sounds arbitrary?], or it contains data that you don’t have permission to share, remove the specific files from your reproduction package and add a reference to the original reproduction package [A: what does making a reference mean and look like in this context? I suggest providing an example of how to do that.].</p>
-<p>Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:<br />
-- Has a digital object identifier (DOI). All of the trusted repositories referenced above generate DOIs. This is a stable, citable link that will allow others to easily find your work.
-- Is titled following this convention: <code>revised reproduction package for - title of the paper - last name of reproducer - year when the reproduction was completed</code>
-- If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g. <code>/data/raw/large_file.csv</code>).</p>
-<p><strong>2. Reproduction report(s)</strong> – At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you’ve submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:<br />
-- <strong><em>Scoping Report:</em></strong> basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.<br />
-- <strong><em>Assessment Reoprt:</em></strong> a summary of the display items assessed and their connections with the claims.<br />
-- <strong><em>Improvement Report:</em></strong> descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.<br />
-- <strong><em>Robustness Report:</em></strong> summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.
-- <strong><em>Final reproduction report:</em></strong> includes everything, plus final comments, and it cannot be edited after submission.</p>
-<p><strong>3. Your data</strong> – You will be able to export a .csv file containing all of your responses recorded as part of your reproduction attempt.</p>
+<div id="select" class="section level1" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Selecting a paper</h1>
+<p>The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as <strong>candidate papers</strong>) before moving forward with your <strong>declared paper</strong>.</p>
+<p>The main difference between a candidate and a declared paper is the availability of a reproduction package. A <strong>reproduction package</strong> is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper’s author for it (find guidance on this in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 5</a>) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.</p>
+<p>To avoid duplicating the efforts of others who may be interested in reproducing one of your candidate papers, <strong>we ask that you record your candidate papers in the SSRP database</strong> (currently under development).</p>
+<p>Note that in this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise.</p>
+<div id="declare" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> From candidate to declared paper</h2>
+<p>At this point of the exercise, you are <em>only validating the availability</em> of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean that you have found your declared paper).</p>
+<ol style="list-style-type: decimal">
+<li>Check whether previous reproduction attempts have been recorded in the SSRP Database for the paper (more on the SSRP Database in the next section).</li>
+<li>Check the journal or publisher’s website, looking for materials named “Data and Materials,” “Supplemental Materials,” “Reproduction/Replication Package/Materials,” etc.<br />
+</li>
+<li>Look for links in the paper (review the footnotes and appendices).<br />
+</li>
+<li>Review the personal websites of the paper’s author(s).</li>
+<li>Contact the author(s) to request the reproduction package using <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">this</a> email template. In this and future interactions with authors, we encourage you to follow our guidance outlined in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html#contacting-the-original-authors-when-there-is-no-reproduction-package">Chapter 5</a>.</li>
+<li>Deposit the reproduction package in a trusted repository (e.g., <a href="https://dataverse.org/">Dataverse</a>, <a href="https://www.openicpsr.org/openicpsr/">Open ICPSR</a>, <a href="https://zenodo.org/">Zenodo</a>, or the <a href="https://osf.io/">Open Science Framework</a>) under the name <code>Original reproduction package for - Title of the paper</code>. You will be asked to provide the URL of the repository in Survey 1.</li>
+</ol>
+<p>In case you need to contact the authors, make sure to <em>allocate sufficient time for this step</em> (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exercise is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).</p>
+<p>Review the decision tree (Figure <a href="select.html#fig:candidate-paper-dec-tree">1.1</a>) below for a more detailed overview of this process. Remember, <em>if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the ACRE database</em> before moving on to another candidate paper. Once you have obtained the reproduction package, the <em>candidate paper</em> becomes your <em>declared paper</em> and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
+<div id="check-acre" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Candidate paper entries in the SSRP Database</h3>
+<p>If the SSRP database contains previous reproduction attempts of the paper, you will see a report card with the following information:</p>
+<blockquote>
+<p><strong>Box 1:</strong> Summary Report Card for ACRE Paper Entry<br />
+<strong>Title:</strong> Sample Title<br />
+<strong>Authors:</strong> Jane Doe &amp; John Doe<br />
+<strong>Original Reproduction Package Available:</strong> Yes (link)/No.
+[If “No”] <strong>Contacted Authors?:</strong> Yes/No<br />
+[If “Yes(contacted)”] <strong>Type of Response:</strong> Categories (6).<br />
+<strong>Additional Reproduction Packages:</strong> Number (eg., 2)<br />
+<strong>Authors Available for Further Questions for ACRE Reproductions:</strong> Yes/No/Unknown</p>
+</blockquote>
+<p>If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the SSRP database following the example above.</p>
+<div class="figure"><span id="fig:candidate-paper-dec-tree"></span>
+<img src="candidate-to-declared-paper.png" alt="Decision tree to move from candidate to declared paper" width="80%" />
+<p class="caption">
+Figure 1.1: Decision tree to move from candidate to declared paper
+</p>
 </div>
-<div id="anonymity-and-data-sharing" class="section level2" number="6.2">
-<h2><span class="header-section-number">6.2</span> Anonymity and data sharing</h2>
-<ul>
-<li><p>Anonymity: You may choose to post your reproduction anonymously for up to one year after submitting it. During this embargo period, unidentifiable data from your reproduction (i.e., numerical and categorical form responses) will be visible to other platform users, but your identity and indentifiable data (i.e., text form responses) will not be revealed.</p></li>
-<li><p>Using the data from your reproduction: The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature.</p></li>
-</ul>
+<!-- Bug: there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
+</div>
+</div>
+<div id="identify-your-relevant-timeline." class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Identify your relevant timeline.</h2>
+<p>Before you begin working on the four main stages of the reproduction exercise (Scoping, Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).</p>
+<p>Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities, and acknowledging that less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<tr>
+<th class="tg-0pky">
+</th>
+<th class="tg-c3ow" colspan="2">
+2 weeks <br> (~10 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 month <br> (~20 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 semester <br> (~100 days)
+</th>
+</tr>
+<tr>
+<td class="tg-0pky">
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Scoping
+</td>
+<td class="tg-c3ow" colspan="2">
+10% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (5 days)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Assessment
+</td>
+<td class="tg-c3ow" colspan="2">
+35%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+<td class="tg-c3ow" colspan="2">
+15%
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Improvement
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+0%
+</td>
+<td class="tg-c3ow" colspan="2">
+40%
+</td>
+<td class="tg-c3ow">
+20%
+</td>
+<td class="tg-c3ow">
+30%
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Robustness
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+5%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+</tr>
+</table>
 
 </div>
 </div>
@@ -237,8 +371,8 @@
           </div>
         </div>
       </div>
-<a href="robust.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="scoping.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -269,7 +403,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/BITSS/ACRE/edit/master/07-concluding-repro.Rmd",
+"link": "https://github.com/BITSS/ACRE/edit/master/02-select.Rmd",
 "text": "Edit"
 },
 "history": {

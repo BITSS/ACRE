@@ -55,7 +55,7 @@ knitr::include_graphics("stages.svg")
 <table>
    <thead>
       <tr>
-         <th>[(0) <br> Select](#scoping) </th>
+         <th>[(0) <br> Select](#select) </th>
          <th>[(1) <br> Scoping](#scoping) </th>
          <th>[(2) <br> Assessment](#assessment)</th>
          <th colspan=2>[(3) <br> Improvement](#improvements)</th>

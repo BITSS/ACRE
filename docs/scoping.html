@@ -24,14 +24,14 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-03-01" />
+<meta name="date" content="2021-03-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="selecting-a-paper.html"/>
+<link rel="prev" href="select.html"/>
 <link rel="next" href="assessment.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -78,13 +78,13 @@
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#reproduction-stages"><i class="fa fa-check"></i>Reproduction stages</a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#reproduction-strategies"><i class="fa fa-check"></i>Reproduction strategies</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="selecting-a-paper.html"><a href="selecting-a-paper.html"><i class="fa fa-check"></i><b>1</b> Selecting a paper</a>
+<li class="chapter" data-level="1" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>1</b> Selecting a paper</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="selecting-a-paper.html"><a href="selecting-a-paper.html#declare"><i class="fa fa-check"></i><b>1.1</b> From candidate to declared paper</a>
+<li class="chapter" data-level="1.1" data-path="select.html"><a href="select.html#declare"><i class="fa fa-check"></i><b>1.1</b> From candidate to declared paper</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="selecting-a-paper.html"><a href="selecting-a-paper.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP Database</a></li>
+<li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP Database</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="selecting-a-paper.html"><a href="selecting-a-paper.html#identify-your-relevant-timeline."><i class="fa fa-check"></i><b>1.2</b> Identify your relevant timeline.</a></li>
+<li class="chapter" data-level="1.2" data-path="select.html"><a href="select.html#identify-your-relevant-timeline."><i class="fa fa-check"></i><b>1.2</b> Identify your relevant timeline.</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a>
 <ul>
@@ -205,11 +205,16 @@
             <section class="normal" id="section-">
 <div id="scoping" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Scoping</h1>
-<p>At this stage, you will define the <em>scope of the reproduction</em> by identifying the <em>scientific claims</em> and related <em>display items</em> that you will analyze in the remainder of the reproduction. For this exercise, we define a claim as a single major finding in a paper (usually featured in the abstract) and the details of the methods and results that support this finding. A claim is usually not equivalent to a single hypothesis or an entire paper, though there may be exceptions. A <em>display item</em> is a figure or table that presents the results described in the paper. Each display item contains several <em>specifications</em>.</p>
+<p>At this stage, you will define the <em>scope of the reproduction</em> by identifying the <em>scientific claims</em> and related <em>display items</em> that you will analyze in the remainder of the reproduction. For this exercise, we follow the a comparable definition of a claim as used in the SCORE project, a related initiative aimed at predicting replicability and reproducibility of research:</p>
+<blockquote>
+<p>“A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim [may not be] equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the [results of the paper].”</p>
+<p>– <cite><a href="https://replicats.research.unimelb.edu.au/#tab301">Replicats Project</a> (part of SCORE)</cite></p>
+</blockquote>
+<p>A <em>display item</em> is a figure or table that presents the results described in the paper. Each display item contains several <em>specifications</em>.</p>
+<p>When recording the scoping section in the SSRP plataform, you will be asked to count all the claims in a paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: “The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)” or “The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors).” Make sure to use the same units of measurement for all of the scientific claims that you will analyze as part of the entire exercise.</p>
 <p><strong>Note:</strong> once you progress past the Scoping stage on the SSRP, you will no longer be able to edit your responses in the Scoping stage, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.</p>
 <div id="read-sum" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Read and summarize the paper</h2>
-<!-- add subsection on claims, structure and focus-->
 <p>Depending on your reproduction’s timeline, we recommend that you write a short (&lt;1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:</p>
 <ul>
 <li>How many scientific claims can you identify in the paper?</li>
@@ -221,16 +226,15 @@
 </li>
 <li>What are the primary data sources used in the paper?<br />
 </li>
-<li>How many display items are there in the paper (tables, figures, and inline results)?<br />
-</li>
 <li>What is the primary statistical or econometric method used to examine each claim?<br />
 </li>
 <li>What is the author’s preferred specification (or yours, if the authors’ is unclear)?<br />
 </li>
 <li>What are some possible robustness checks for the preferred specification?<br />
 </li>
-<li>Draft the summary in a plain text editor and paste the text in the form.</li>
+<li>How many display items are there in the paper (tables, figures, and inline results)?</li>
 </ul>
+<p>Draft the summary in a plain text editor and paste the text in the form.</p>
 </div>
 <div id="record-a-revised-reproduction-package" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Record a revised reproduction package</h2>
@@ -248,7 +252,7 @@ You can start by downloading the reproduction package (or forking, if on GitHub)
 </div>
 <div id="declare-possible-robustness-checks-for-main-estimates-optional" class="section level4 unnumbered">
 <h4>Declare possible robustness checks for main estimates (optional)</h4>
-<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em> and <em>using the same data</em> (e.g., by including or excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to conduct before starting the Assessment stage.</p>
+<p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em> and <em>using the same data</em> (e.g., by including or excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are optional and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be asked to describe in more detail which changes in the reproduction code are you actually modifying.</p>
 
 </div>
 </div>
@@ -258,7 +262,7 @@ You can start by downloading the reproduction package (or forking, if on GitHub)
           </div>
         </div>
       </div>
-<a href="selecting-a-paper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="select.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="assessment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

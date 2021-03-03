@@ -1,12 +1,20 @@
 # Scoping
 
-At this stage, you will define the *scope of the reproduction* by identifying the *scientific claims* and related *display items* that you will analyze in the remainder of the reproduction. For this exercise, we define a claim as a single major finding in a paper (usually featured in the abstract) and the details of the methods and results that support this finding. A claim is usually not equivalent to a single hypothesis or an entire paper, though there may be exceptions. A *display item* is a figure or table that presents the results described in the paper. Each display item contains several *specifications*. 
+At this stage, you will define the *scope of the reproduction* by identifying the *scientific claims* and related *display items* that you will analyze in the remainder of the reproduction. For this exercise, we follow the a comparable definition of a claim as used in the SCORE project, a related initiative aimed at predicting replicability and reproducibility of research:  
+
+>"A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim [may not be] equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the [results of the paper]".
+>
+> -- <cite>[Replicats Project](https://replicats.research.unimelb.edu.au/#tab301) (part of SCORE)</cite>
+
+A *display item* is a figure or table that presents the results described in the paper. Each display item contains several *specifications*. 
+
+When recording the scoping section in the SSRP plataform, you will be asked to count all the claims in a paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: "The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)" or "The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)". Make sure to use the same units of measurement for all of the scientific claims that you will analyze as part of the entire exercise.
 
 **Note:** once you progress past the Scoping stage on the SSRP, you will no longer be able to edit your responses in the Scoping stage, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
+
 ## Read and summarize the paper {#read-sum}
 
-<!-- add subsection on claims, structure and focus-->
 
 Depending on your reproduction's timeline, we recommend that you write a short (<1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:  
 
@@ -15,11 +23,12 @@ Depending on your reproduction's timeline, we recommend that you write a short (
 - What is the population that is the focus of the paper as a whole?  
 - What is the population for which the estimates apply?  
 - What are the primary data sources used in the paper?  
-- How many display items are there in the paper (tables, figures, and inline results)?  
 - What is the primary statistical or econometric method used to examine each claim?  
 - What is the author's preferred specification (or yours, if the authors' is unclear)?  
-- What are some possible robustness checks for the preferred specification?  
-- Draft the summary in a plain text editor and paste the text in the form.  
+- What are some possible robustness checks for the preferred specification?    
+- How many display items are there in the paper (tables, figures, and inline results)?  
+
+Draft the summary in a plain text editor and paste the text in the form.  
 
 ## Record a revised reproduction package  
 
@@ -38,5 +47,5 @@ At this point, you should specify the parts of the paper that will be the main f
 
 Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table #, and table row and column). If the authors did not explicitly choose a precise preferred estimate, you can choose one yourself.  In addition to the preferred estimate, you can reproduce up to five estimates that correspond to the preferred estimate's alternative specifications.
 
-#### Declare possible robustness checks for main estimates (optional) {-}  
-After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done *within the same methodology* and *using the same data* (e.g., by including or excluding a subset of the data like "high-school dropouts" or "women"), please specify a robustness test that you would like to conduct before starting the Assessment stage.  
+#### Declare possible robustness checks for main estimates (optional) {-}    
+After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done *within the same methodology* and *using the same data* (e.g., by including or excluding a subset of the data like "high-school dropouts" or "women"), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are optional and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be asked to describe in more detail which changes in the reproduction code are you actually modifying. 
