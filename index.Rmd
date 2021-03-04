@@ -79,7 +79,7 @@ knitr::include_graphics("stages.svg")
          <td>[&#9744; Analytical choices](#id-analy)</td>
       </tr>
       <tr>
-         <td>[&#9744; Search materials](#check-acre)</td>
+         <td>[&#9744; Search materials](#declaree)</td>
          <td>[&#9744; Identify claims](#declare-estimates)</td>
          <td>[&#9744; Build reproduction diagrams](#diagram)</td>
          <td>[&#9744; + Analysis data](#ad)</td>
@@ -95,7 +95,7 @@ knitr::include_graphics("stages.svg")
          <td>[&#9744; Choice value](#id-val)</td>
       </tr>
       <tr>
-         <td>[&#9744;  Declare/Discard paper](#read-summ)</td>
+         <td>&#9744;  Declare/Discard paper</td>
          <td></td>
          <td></td>
          <td>[&#9744; + Cleaning code](#cc)</td>
@@ -103,7 +103,7 @@ knitr::include_graphics("stages.svg")
          <td>[&#9744; Justify and test alternatives](#test-rob)</td>
       </tr>
       <tr>
-         <td>[&#9744; Declare estimates](#declare-estimates)</td>
+         <td></td>
          <td></td>
          <td></td>
          <td>[&#9744; Debug analysis code](#dac)</td>

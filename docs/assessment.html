@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-03-02" />
+<meta name="date" content="2021-03-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -121,6 +121,7 @@
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 </ul></li>
@@ -128,6 +129,7 @@
 <ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>5.2</b> Reasonable robustness check: justifying and testing.</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
 <ul>
@@ -205,14 +207,14 @@
             <section class="normal" id="section-">
 <div id="assessment" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Assessment</h1>
-<p>In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.</p>
+<p>In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to the display items associated with your selected claims. You will also review reproducibility practices for the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.</p>
 <p>In the <em>Scoping</em> stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., “Table 1”) or only specific estimates found in display items (e.g., “rows 3 and 4 of Table 1”). You can also include additional display items of interest.</p>
 <p>The Assessment stage aims to analyze the reproduction package’s current reproducibility—before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package’s current reproducibility that you can use to implement improvements, potentially with the paper’s original authors’ help.</p>
-<p>On the SSRP, you will first provide a detailed description of the reproduction package. You will then connect the display items you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item’s reproducibility and record various paper-level dimensions of reproducibility.</p>
+<p>On the SSRP, you will first provide a detailed description of available inputs in the reproduction package. You will then connect the display items you’ve chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item’s reproducibility and record various paper-level dimensions of reproducibility.</p>
 <p><em>Tip:</em> We recommend that you first focus on just one display item (e.g., “Table 1”). After completing the assessment for this display item, you will have a much easier time assessing others.</p>
 <div id="describe-inputs" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Describe the inputs</h2>
-<p>This section explains how to record the <em>input</em> materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing <em>all</em> files in the reproduction packages. However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the <a href="assessment.html#desc-analy">section</a> below for reference).</p>
+<p>This section explains how to record the <em>input</em> materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing <em>all</em> files in the reproduction packages (tip: using the command line go to the directory of the reproduction package, and type <code>file */*</code> on a Mac and <code>dir /s /b /o:gn</code> on Windows and it will print out all the files in that folder). However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the <a href="assessment.html#desc-analy">section</a> below for reference).</p>
 <p>In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3.</p>
 <p>The following concepts may be helpful as you work in the Assessment stage:</p>
 <ul>
@@ -523,28 +525,29 @@ cleaning
 <h3><span class="header-section-number">3.2.2</span> Incomplete workflow information</h3>
 <p>In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram.</p>
 <p>For example, let’s start from a simpler complet tree like the following:</p>
-<p>table1.tex
-└── analysis.R
-└── analysis_data.dta
-└── final_merge.do
-└── cleaned_1_2.dta
-└── clean_merged_1_2.do
-└── merged_1_2.dta</p>
+<pre><code>        table1.tex
+          └── analysis.R
+              └── analysis_data.dta
+                  └── final_merge.do
+                      └── cleaned_1_2.dta
+                         └── clean_merged_1_2.do
+                             └── merged_1_2.dta</code></pre>
 <p>For this case, if the the file <code>final_merge.do</code> is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:</p>
-<p>table1.tex
-└── analysis.R
-└── analysis_data.dta</p>
-<p>cleaned_1_2.dta
-└── clean_merged_1_2.do
-└── merged_1_2.dta</p>
+<pre><code>        table1.tex
+          └── analysis.R
+              └── analysis_data.dta
+        
+        cleaned_1_2.dta
+          └── clean_merged_1_2.do
+              └── merged_1_2.dta</code></pre>
 <p>In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a “candidate” tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:</p>
-<p>table1.tex
-└── analysis.R
-└── cleaned_1_2.dta
-└── MISSSING_CODE_FILE_1
-└── cleaned_1_2.dta
-└── clean_merged_1_2.do
-└── merged_1_2.dta</p>
+<pre><code>        table1.tex
+          └── analysis.R
+              └── cleaned_1_2.dta
+                  └── MISSSING_CODE_FILE_1
+                      └── cleaned_1_2.dta
+                         └── clean_merged_1_2.do
+                             └── merged_1_2.dta</code></pre>
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
