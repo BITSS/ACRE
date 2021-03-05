@@ -67,6 +67,7 @@ complete-reproduction-tree
 incomplete-reproduction-tree
 raw-data-and-analytic-data-are-available-but-cleaning-code-is-missing.
 unused-data-sources
+final-outputs-is-not-a-display-item
 examples-from-real-reproduction-attempts
 possibly-missing-code-for-producing-a-display-item.
 long-complicated-tree.
@@ -79,6 +80,3 @@ acknowledgments
 definitions
 concepts-in-reproducibility
 concepts-in-the-acre-exercise-and-the-platform
-reporting-results
-test-the-robustness-of-results
-final-outputs-is-not-a-display-item

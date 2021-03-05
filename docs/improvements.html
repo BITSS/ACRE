@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-03-02" />
+<meta name="date" content="2021-03-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,7 +100,7 @@
 <li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#desc-analy"><i class="fa fa-check"></i><b>3.1.2</b> Describe the analytic data sets.</a></li>
 <li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#desc-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts.</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect display items to all its inputs</a>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect display items to all its inputs usign the ReproducibiliTREE</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="assessment.html"><a href="assessment.html#complete-tree"><i class="fa fa-check"></i><b>3.2.1</b> Complete workflow information</a></li>
 <li class="chapter" data-level="3.2.2" data-path="assessment.html"><a href="assessment.html#incomplete-workflow-information"><i class="fa fa-check"></i><b>3.2.2</b> Incomplete workflow information</a></li>
@@ -161,7 +161,8 @@
 <ul>
 <li class="chapter" data-level="8.1.1" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#complete-reproduction-tree"><i class="fa fa-check"></i><b>8.1.1</b> Complete reproduction tree</a></li>
 <li class="chapter" data-level="8.1.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#incomplete-reproduction-tree"><i class="fa fa-check"></i><b>8.1.2</b> Incomplete reproduction tree</a></li>
-<li class="chapter" data-level="8.1.3" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#unused-data-sources"><i class="fa fa-check"></i><b>8.1.3</b> Unused Data Sources</a></li>
+<li class="chapter" data-level="8.1.3" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#unused-data-sources"><i class="fa fa-check"></i><b>8.1.3</b> Unused data sources</a></li>
+<li class="chapter" data-level="8.1.4" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#final-outputs-is-not-a-display-item"><i class="fa fa-check"></i><b>8.1.4</b> Final outputs is not a display item</a></li>
 </ul></li>
 <li class="chapter" data-level="8.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#examples-from-real-reproduction-attempts"><i class="fa fa-check"></i><b>8.2</b> Examples from real reproduction attempts</a>
 <ul>
@@ -205,8 +206,8 @@
             <section class="normal" id="section-">
 <div id="improvements" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Improvements</h1>
-<p>As you assess the paper’ reproducibility, you can start proposing ways to improve its reproducibility.This improvements can be specific to a display item or at the paper level. Improvements can be either implemented or in the form of specific suggestion for future reproducers to implement. Considering improvements is an opportunity to gain a deeper understanding of the paper’s methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.</p>
-<p>Part of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request, and if not, on how to approach them in order to have a constructive exchange.</p>
+<p>As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The SSRP also allows you to record improvements that you’ve already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper’s methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.</p>
+<p>Some of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request and, if not, how to approach them in order to have a constructive exchange.</p>
 <p>As with the <em>Assessment</em> stage, we recommend that you first focus on one specific display item (e.g., “Table 1”). After making improvements to this first item, you will have a much easier time translating those improvements to other items.</p>
 <div id="di-imp" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Display item improvements</h2>
@@ -215,18 +216,18 @@
 <h3><span class="header-section-number">4.1.1</span> Adding raw data: missing files or metadata</h3>
 <p>Reproduction packages often do not include all original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li>Identify the missing file. During the <a href="assessment.html#assessment">Assessment</a> stage, you identified all data sources from the paper’s body and appendices (column <code>data_source</code> in <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">this standarized spreadsheet</a>). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the <code>known_missing</code> field of the <a href="https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&amp;range=A1">same spreadsheet</a> as above. If not, record it as “Some/All” in the <code>known_missing</code> field of the for each specific data source.<br />
+<li>Identify the missing file. During the <a href="assessment.html#assessment">Assessment</a> stage, you identified all data sources from the paper’s body and appendices (Assessment step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as “Some/All” in the <code>known_missing</code> field of the for each specific data source.<br />
 </li>
 <li>Verify whether this file (or files) can be easily obtained from the web.
 <ul>
-<li>2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">tips for communication</a> for more guidance.<br />
+<li>2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">chapter 7</a> for more guidance.<br />
 </li>
 <li>2.2 - If no: proceed to step 3.<br />
 </li>
 </ul></li>
-<li>Use the SSRP to verify whether there previous reproducers have contacted the authors regarding this paper and the specific missing files.<br />
+<li>Use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files.<br />
 </li>
-<li>Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">tips for communication</a> for sample language on how to approach the authors for this specific scenario.<br />
+<li>Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">chapter 7</a> for sample language on how to approach the authors for this specific scenario.<br />
 </li>
 <li>If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data.</li>
 </ol>
@@ -239,7 +240,7 @@
 </li>
 <li>Verify that the data cannot be obtained by running the data cleaning code over the raw data.<br />
 </li>
-<li><a href="ADD%20LINK">Use the SSRP</a> to verify if previous attempts have been made to contact the authors about this data.<br />
+<li>Use the SSRP to verify if previous attempts have been made to contact the authors about this data.<br />
 </li>
 <li><a href="#tips-for-communication">Contact the authors</a> and request the specific data set.</li>
 </ol>
@@ -252,7 +253,7 @@
 </li>
 <li>Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the <a href="assessment.html#diagram">reproduction diagram</a>.<br />
 </li>
-<li><a href="ADD%20LINK">Use the ACRE database</a> to verify if previous attempts have been made to contact the authors about this issue.<br />
+<li>Use the SSRP to verify if previous attempts have been made to contact the authors about this issue.<br />
 </li>
 <li><a href="#tips-for-communication">Contact the authors</a> and request the specific code files.<br />
 </li>
@@ -261,7 +262,7 @@
 </div>
 <div id="cc" class="section level3" number="4.1.4">
 <h3><span class="header-section-number">4.1.4</span> Adding missing data cleaning code</h3>
-<p><a href="assessment.html#describe-inputs">Data cleaning (processing) code</a> might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).</p>
+<p><a href="assessment.html#describe-inputs">Data cleaning (processing) code</a> might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (steps 1-5 above).</p>
 </div>
 <div id="dac" class="section level3" number="4.1.5">
 <h3><span class="header-section-number">4.1.5</span> Debugging analysis code</h3>
@@ -278,7 +279,7 @@
 </div>
 <div id="debugging-cleaning-code" class="section level3" number="4.1.6">
 <h3><span class="header-section-number">4.1.6</span> Debugging cleaning code</h3>
-<p>Follow the same steps that you did to debug the analysis code, but report them separately.</p>
+<p>Follow the same steps that you did to debug the analysis code (above), but report them separately.</p>
 <!--
 ### Reporting results    
 

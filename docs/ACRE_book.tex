@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-03-02}
+\date{2021-03-04}
 
 \begin{document}
 \maketitle
@@ -144,7 +144,7 @@ A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{
 
 \protect\hyperlink{id-analy}{☐ Analytical choices}
 
-\protect\hyperlink{check-acre}{☐ Search materials}
+\protect\hyperlink{declaree}{☐ Search materials}
 
 \protect\hyperlink{declare-estimates}{☐ Identify claims}
 
@@ -168,15 +168,13 @@ A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{
 
 \protect\hyperlink{id-val}{☐ Choice value}
 
-\protect\hyperlink{read-summ}{☐ Declare/Discard paper}
+☐ Declare/Discard paper
 
 \protect\hyperlink{cc}{☐ + Cleaning code}
 
 \protect\hyperlink{paper-level}{☐ + File structure}
 
 \protect\hyperlink{test-rob}{☐ Justify and test alternatives}
-
-\protect\hyperlink{declare-estimates}{☐ Declare estimates}
 
 \protect\hyperlink{dac}{☐ Debug analysis code}
 
@@ -386,14 +384,14 @@ At this stage, you will define the \emph{scope of the reproduction} by identifyi
 \begin{quote}
 ``A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim {[}may not be{]} equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the {[}results of the paper{]}''.
 
--- \href{https://replicats.research.unimelb.edu.au/\#tab301}{Replicats Project} (part of SCORE)
+-- \href{https://replicats.research.unimelb.edu.au/\#tab301}{RepliCATS Project} (not dated)
 \end{quote}
 
 A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
 
-When recording the scoping section in the SSRP plataform, you will be asked to count all the claims in a paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: ``The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)'' or ``The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)''. Make sure to use the same units of measurement for all of the scientific claims that you will analyze as part of the entire exercise.
+When recording the Scoping section on the SSRP plataform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: ``The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)'' or ``The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)''. Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.
 
-\textbf{Note:} once you progress past the Scoping stage on the SSRP, you will no longer be able to edit your responses in the Scoping stage, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
+\textbf{Note:} Once you progress past the Scoping stage on the SSRP, \emph{you will no longer be able to edit your responses in the Scoping stage}, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
 \hypertarget{read-sum}{%
 \section{Read and summarize the paper}\label{read-sum}}
@@ -428,14 +426,14 @@ Draft the summary in a plain text editor and paste the text in the form.
 \section{Record a revised reproduction package}\label{record-a-revised-reproduction-package}}
 
 At the previous stage, you recorded the original reproduction package made available by the paper's authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole.
-You can start by downloading the reproduction package (or forking, if on GitHub) and uploading a copy titled ``Revised reproduction package for {[}Paper Title{]}'' to a trusted repository. Examples of trusted repositories include \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage you to use version control software (e.g., Git) during your reproductions.
+You can start by downloading the reproduction package (or \emph{forking}, if on GitHub) and uploading a copy titled ``Revised reproduction package for {[}Paper Citation, e.g.~Smith et al.~(2019){]}'' to a trusted repository. Examples of trusted repositories include \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage you to also use version control software (e.g., Git) during your reproduction.
 
-As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you (e.g., document your assessments or communicate with the original authors), and it will likely also allow future reproducers to build on top of your work.
+As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work.
 
 \hypertarget{declare-estimates}{%
 \section{Record scope of the exercise}\label{declare-estimates}}
 
-By now, you should have a reasonably good understanding of the paper. You do not, however, need to spend any time reviewing the reproduction package in detail.
+By now, you probably have a reasonably good understanding of the paper. You do not, however, need to spend any time reviewing the reproduction package in detail.
 
 At this point, you should specify the parts of the paper that will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure \ref{fig:diagram}. Given the complexity of the SSRP approach, unless you are very familiar with the paper, we recommend starting with just one claim before moving onto second or third as part of a later reproduction.
 
@@ -443,33 +441,31 @@ At this point, you should specify the parts of the paper that will be the main f
 \subsubsection*{Declare a specific estimate(s) to reproduce}\label{declare-a-specific-estimates-to-reproduce}}
 \addcontentsline{toc}{subsubsection}{Declare a specific estimate(s) to reproduce}
 
-Identify a scientific claim and its corresponding preferred specification, and record its magnitude, standard error, and location in the paper (page, table \#, and table row and column). If the authors did not explicitly choose a precise preferred estimate, you can choose one yourself. In addition to the preferred estimate, you can reproduce up to five estimates that correspond to the preferred estimate's alternative specifications.
+Identify a scientific claim and its corresponding preferred specification and record its magnitude, standard error, and location in the paper (page, table \#, and table row and column). If the authors did not explicitly choose a precise preferred estimate, you can choose one yourself. In addition to the preferred estimate, you can reproduce up to five estimates that correspond to the preferred estimate's alternative specifications.
 
 \hypertarget{declare-possible-robustness-checks-for-main-estimates-optional}{%
 \subsubsection*{Declare possible robustness checks for main estimates (optional)}\label{declare-possible-robustness-checks-for-main-estimates-optional}}
 \addcontentsline{toc}{subsubsection}{Declare possible robustness checks for main estimates (optional)}
 
-After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are optional and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be asked to describe in more detail which changes in the reproduction code are you actually modifying.
+After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done \emph{within the same methodology} and \emph{using the same data} (e.g., by including or excluding a subset of the data like ``high-school dropouts'' or ``women''), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are \emph{optional} and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be able to describe in greater detail how you have modified the reproduction code.
 
 \hypertarget{assessment}{%
 \chapter{Assessment}\label{assessment}}
 
-In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to your selected display items and the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
+In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to the display items associated with your selected claims. You will also review reproducibility practices for the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
 
-In the \emph{Scoping} stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., ``Table 1'') or only specific estimates found in display items (e.g., ``rows 3 and 4 of Table 1''). You can also include additional display items of interest.
+In the previous two stages, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., ``Table 1'') or only specific estimates found in display items (e.g., ``rows 3 and 4 of Table 1''). You can also include additional display items of interest.
 
 The Assessment stage aims to analyze the reproduction package's current reproducibility---before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package's current reproducibility that you can use to implement improvements, potentially with the paper's original authors' help.
 
-On the SSRP, you will first provide a detailed description of the reproduction package. You will then connect the display items you've chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item's reproducibility and record various paper-level dimensions of reproducibility.
+On the SSRP, you will first provide a detailed description of available inputs in the reproduction package. You will then connect the display items you've chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item's reproducibility and record various paper-level dimensions of reproducibility.
 
 \emph{Tip:} We recommend that you first focus on just one display item (e.g., ``Table 1''). After completing the assessment for this display item, you will have a much easier time assessing others.
 
 \hypertarget{describe-inputs}{%
 \section{Describe the inputs}\label{describe-inputs}}
 
-This section explains how to record the \emph{input} materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing \emph{all} files in the reproduction packages. However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the \protect\hyperlink{desc-analy}{section} below for reference).
-
-In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3.
+This section explains how to record the \emph{input} materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing \emph{all} files in the reproduction packages (tip: using the command line go to the directory of the reproduction package, and type \texttt{file\ */*} on a Mac and \texttt{dir\ /s\ /b\ /o:gn} on Windows and it will print out all the files in that folder). However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item.
 
 The following concepts may be helpful as you work in the Assessment stage:
 
@@ -482,8 +478,10 @@ The following concepts may be helpful as you work in the Assessment stage:
 \item
   \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the data structure (from long to wide, or vice versa).\\
 \item
-  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to generate some type of estimate to be presented in the paper (including the appendix). Examples of computations that lead to such estimates are: running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 \end{itemize}
+
+In section ``Describe input'' on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files and then record script files in Table.
 
 \hypertarget{desc-sourc}{%
 \subsection{Describe the data sources and raw data}\label{desc-sourc}}
@@ -496,28 +494,28 @@ Next, look at the reproduction package and map the \emph{data sources} mentioned
 
 If you cannot find the files or file name corresponding to a specific data source, enter ``missing'' in the filename column.
 
-Record this information in this \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} (download it or make a copy for yourself), using the following structure:\\
+Finally, verify if the data sources \href{https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html}{are cited} in the paper and if the identified data files are available in the reproduction package. Record all this information in the SSRP using the following structure:
 
 \begin{table}
 
 \caption{\label{tab:raw-data-information}Raw data information}
 \centering
-\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
 \hline
-data\_source & page & data\_files & directory & known\_missing\\
+data\_source & page & data\_files & directory & known\_missing & provided & cited\\
 \hline
-"Current Population Survey 2018" & A1 & cepr\_march\_2018.dta & data/ & \\
+"Current Population Survey 2018" & A1 & cepr\_march\_2018.dta & data/ &  & TRUE & FALSE\\
 \hline
-"Provincial Administration Reports" & A4 & coast\_simplepoint2.csv; rivers\_simplepoint2.csv; RAIL\_dummies.dta; railways\_Dissolve\_Simplify\_point2.csv & Data/maps/ & \\
+"Provincial Administration Reports" & A4 & coast\_simplepoint2.csv; rivers\_simplepoint2.csv; RAIL\_dummies.dta; railways\_Dissolve\_Simplify\_point2.csv & Data/maps/ &  & TRUE & FALSE\\
 \hline
-"2017 SAT scores" & 4 & Not available & data/to\_clean/ & \\
+"2017 SAT scores" & 4 & Not available & data/to\_clean/ &  & FALSE & TRUE\\
 \hline
-... & ... & ... & ... & ...\\
+... & ... & ... & ... & ... & ... & ...\\
 \hline
 \end{tabu}
 \end{table}
 
-\textbf{Note:} lists of files in the data\_files and known\_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.
+\textbf{Note:} lists of files in the data\_files and known\_missing columns should have entries separated by a semi-colon (\texttt{;}) to for the spreadsheet to be compatible with the ReproducibiliTREE.
 
 \hypertarget{desc-analy}{%
 \subsection{Describe the analytic data sets.}\label{desc-analy}}
@@ -548,7 +546,7 @@ all\_waves.csv & final\_data/v1\_april/ & data for region-level analysis\\
 \hypertarget{desc-scripts}{%
 \subsection{Describe the code scripts.}\label{desc-scripts}}
 
-List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). For each code file, record all inputs together and separate each item with ``;''. Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). For each code file, record all outputs together and separate each item with ``;''. Provide a one-line description of what each code file does. Record all of this information in the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}, using the following structure:
+List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., \texttt{load}, \texttt{read}, \texttt{source}, \texttt{run}, \texttt{do} ). For each code file, record all inputs together and separate each item with a semin-colon (\texttt{;}). Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., \texttt{save}, \texttt{write}, \texttt{export}). For each code file, record all outputs together and separate each item with ``;''. Provide a one-line description of what each code file does. Record all of this information in the SSRP using the following structure:
 
 \begin{table}
 
@@ -567,16 +565,16 @@ data\_cleaning02.R & code/cleaning & admin\_01raw.csv & analysis\_data02.csv & r
 \end{tabu}
 \end{table}
 
-As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=1617799822\&range=A1}{standardized spreadsheet}. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
+As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update forms in the ``Describe input'' sections of the Assessment stage of the SSRP. Once finished with the reproduction exercise, classify each code file as \emph{analysis} or \emph{cleaning}. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
 
-\textbf{Note:} If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ACRE Diagram Builder.
+\textbf{Note:} If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ReproducibiliTREE.
 
 \hypertarget{diagram}{%
-\section{Connect display items to all its inputs}\label{diagram}}
+\section{Connect display items to all its inputs usign the ReproducibiliTREE}\label{diagram}}
 
-Using the information collected above, you can trace your display items to their primary sources. Upload the standardized spreadsheets from above (sections \ref{desc-sourc}, \ref{desc-analy} and \ref{desc-scripts}) to your reproduction at the \href{https://www.socialsciencereproduction.org}{SSRP} and use the Diagram Builder. This will generate a reproduction diagram tree that represents the information available on the workflow behind a specific display item.
+Using the information collected above, you can trace your display items to their primary sources. Upload the standardized spreadsheets from above (sections \ref{desc-sourc}, \ref{desc-analy} and \ref{desc-scripts}) to your reproduction at the \href{https://www.socialsciencereproduction.org}{SSRP} and use the \emph{ReproducibiliTREE}. This will generate a reproduction diagram tree that represents the information available on the workflow behind a specific display item.
 
-If the reproduction package does not organize the code around display items, you will be asked to identify all the outputs that contain the results used in a specific display item.
+If the reproduction package does not organize the code around display items, you will be asked to identify all the outputs that contain the results used in a specific display item. One way to do this is by adding new line to the code scripts form (\ref{desc-scripts}) that takes as inputs the final outputs of the reproduction package (e.g., \texttt{results1.log;\ results2.txt}) and produces output the desired display item. Given that this file does not exist, you can called it \texttt{placeholder\_table1}.
 
 \hypertarget{complete-tree}{%
 \subsection{Complete workflow information}\label{complete-tree}}
@@ -619,33 +617,39 @@ In many cases, some of the components of the workflow will not be easily identif
 
 For example, let's start from a simpler complet tree like the following:
 
-table1.tex
-└── analysis.R
-└── analysis\_data.dta
-└── final\_merge.do
-└── cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+\begin{verbatim}
+  table1.tex
+    └── analysis.R
+        └── analysis_data.dta
+            └── final_merge.do
+                └── cleaned_1_2.dta
+                   └── clean_merged_1_2.do
+                       └── merged_1_2.dta
+\end{verbatim}
 
 For this case, if the the file \texttt{final\_merge.do} is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:
 
-table1.tex
-└── analysis.R
-└── analysis\_data.dta
-
-cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+\begin{verbatim}
+  table1.tex
+    └── analysis.R
+        └── analysis_data.dta
+  
+  cleaned_1_2.dta
+    └── clean_merged_1_2.do
+        └── merged_1_2.dta
+\end{verbatim}
 
 In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a ``candidate'' tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
 
-table1.tex
-└── analysis.R
-└── cleaned\_1\_2.dta
-└── MISSSING\_CODE\_FILE\_1
-└── cleaned\_1\_2.dta
-└── clean\_merged\_1\_2.do
-└── merged\_1\_2.dta
+\begin{verbatim}
+  table1.tex
+    └── analysis.R
+        └── cleaned_1_2.dta
+            └── MISSSING_CODE_FILE_1
+                └── cleaned_1_2.dta
+                   └── clean_merged_1_2.do
+                       └── merged_1_2.dta
+\end{verbatim}
 
 To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
 
@@ -671,7 +675,7 @@ For more examples of diagrams connecting final outputs to initial raw data, \pro
 \hypertarget{score}{%
 \section{Assign a reproducibility score.}\label{score}}
 
-Once you have identified all possible inputs and have a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility.
+Once you have identified all possible inputs and have a clear understanding of the connection between the outputs and inputs, you can start to assess the level of reproducibility of specific display items.
 
 Take note of the following concepts in this section:
 
@@ -873,9 +877,9 @@ Please continue to the \protect\hyperlink{improvements}{next section} where you 
 \hypertarget{improvements}{%
 \chapter{Improvements}\label{improvements}}
 
-As you assess the paper' reproducibility, you can start proposing ways to improve its reproducibility.This improvements can be specific to a display item or at the paper level. Improvements can be either implemented or in the form of specific suggestion for future reproducers to implement. Considering improvements is an opportunity to gain a deeper understanding of the paper's methods, findings, and overall contribution. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The SSRP also allows you to record improvements that you've already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper's methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
 
-Part of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request, and if not, on how to approach them in order to have a constructive exchange.
+Some of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request and, if not, how to approach them in order to have a constructive exchange.
 
 As with the \emph{Assessment} stage, we recommend that you first focus on one specific display item (e.g., ``Table 1''). After making improvements to this first item, you will have a much easier time translating those improvements to other items.
 
@@ -893,21 +897,21 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Identify the missing file. During the \protect\hyperlink{assessment}{Assessment} stage, you identified all data sources from the paper's body and appendices (column \texttt{data\_source} in \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{this standarized spreadsheet}). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in the \texttt{known\_missing} field of the \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{same spreadsheet} as above. If not, record it as ``Some/All'' in the \texttt{known\_missing} field of the for each specific data source.\\
+  Identify the missing file. During the \protect\hyperlink{assessment}{Assessment} stage, you identified all data sources from the paper's body and appendices (Assessment step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as ``Some/All'' in the \texttt{known\_missing} field of the for each specific data source.\\
 \item
   Verify whether this file (or files) can be easily obtained from the web.
 
   \begin{itemize}
   \tightlist
   \item
-    2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{tips for communication} for more guidance.\\
+    2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{chapter 7} for more guidance.\\
   \item
     2.2 - If no: proceed to step 3.\\
   \end{itemize}
 \item
-  Use the SSRP to verify whether there previous reproducers have contacted the authors regarding this paper and the specific missing files.\\
+  Use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files.\\
 \item
-  Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{tips for communication} for sample language on how to approach the authors for this specific scenario.\\
+  Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{chapter 7} for sample language on how to approach the authors for this specific scenario.\\
 \item
   If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data.
 \end{enumerate}
@@ -925,7 +929,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \item
   Verify that the data cannot be obtained by running the data cleaning code over the raw data.\\
 \item
-  \href{ADD\%20LINK}{Use the SSRP} to verify if previous attempts have been made to contact the authors about this data.\\
+  Use the SSRP to verify if previous attempts have been made to contact the authors about this data.\\
 \item
   \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific data set.
 \end{enumerate}
@@ -943,7 +947,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \item
   Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the \protect\hyperlink{diagram}{reproduction diagram}.\\
 \item
-  \href{ADD\%20LINK}{Use the ACRE database} to verify if previous attempts have been made to contact the authors about this issue.\\
+  Use the SSRP to verify if previous attempts have been made to contact the authors about this issue.\\
 \item
   \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific code files.\\
 \item
@@ -953,7 +957,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \hypertarget{cc}{%
 \subsection{Adding missing data cleaning code}\label{cc}}
 
-\protect\hyperlink{describe-inputs}{Data cleaning (processing) code} might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (1-5).
+\protect\hyperlink{describe-inputs}{Data cleaning (processing) code} might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (steps 1-5 above).
 
 \hypertarget{dac}{%
 \subsection{Debugging analysis code}\label{dac}}
@@ -975,7 +979,7 @@ Whenever code is available in the reproduction package, you should be able to de
 \hypertarget{debugging-cleaning-code}{%
 \subsection{Debugging cleaning code}\label{debugging-cleaning-code}}
 
-Follow the same steps that you did to debug the analysis code, but report them separately.
+Follow the same steps that you did to debug the analysis code (above), but report them separately.
 
 \hypertarget{paper-level}{%
 \section{Paper-level improvements}\label{paper-level}}
@@ -1747,7 +1751,7 @@ Reproducers are asked to speculate on where the missing files might go, and henc
 \end{verbatim}
 
 \hypertarget{unused-data-sources}{%
-\subsection{Unused Data Sources}\label{unused-data-sources}}
+\subsection{Unused data sources}\label{unused-data-sources}}
 
 It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
 
@@ -1774,6 +1778,9 @@ It is possible that not all data included in a replication package are actually 
 \end{verbatim}
 
 In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
+
+\hypertarget{final-outputs-is-not-a-display-item}{%
+\subsection{Final outputs is not a display item}\label{final-outputs-is-not-a-display-item}}
 
 \hypertarget{examples-from-real-reproduction-attempts}{%
 \section{Examples from real reproduction attempts}\label{examples-from-real-reproduction-attempts}}
@@ -4693,7 +4700,7 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Display item} -- A display item is a figure or table that presents results described in the paper. Each display item contains several \textbf{specifications}. \\
 \item
-  \textbf{Reproduction tree/ diagram} -- A diagram generated by the ACRE Diagram Builder which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
+  \textbf{Reproduction tree/ diagram} -- A diagram generated by the ReproducibiliTREE which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 \item
   \textbf{Revised reproduction package} --
 \end{itemize}
