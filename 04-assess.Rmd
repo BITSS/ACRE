@@ -8,11 +8,11 @@ temp_eval <- TRUE
 
 # Assessment
 
-In the Assessment stage, you will describe the available reproduction materials and assign a reproducibility score to the display items associated with your selected claims. You will also review reproducibility practices for the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
+In the *Assessment* stage, you will describe the available reproduction materials and assign a reproducibility score to the display items associated with your selected claims. You will also review reproducibility practices for the overall paper. This stage records rich information about each reproduction to allow future reproducers to pick up easily where others have left off.
 
 In the *Scoping* stage, you declared a paper and identified claims and their associated estimates (found in display items) that you intend to analyze in the remainder of your reproduction. In this stage, you will get to decide whether you are interested in assessing the reproducibility of entire display items (e.g., "Table 1") or only specific estimates found in display items (e.g., "rows 3 and 4 of Table 1"). You can also include additional display items of interest.
 
-The Assessment stage aims to analyze the reproduction package's current reproducibility—before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package's current reproducibility that you can use to implement improvements, potentially with the paper's original authors' help.
+The Assessment stage aims to analyze the reproduction package's *current* reproducibility—before you suggest any improvements. By the end of this section, you will have created a very detailed description of the reproduction package's current reproducibility that you can use to implement improvements, potentially with the paper's original authors' help.
 
 On the SSRP, you will first provide a detailed description of available inputs in the reproduction package. You will then connect the display items you've chosen to reproduce with their corresponding inputs. With these elements in place, you can assign a score of each display item's reproducibility and record various paper-level dimensions of reproducibility.
 
@@ -20,28 +20,30 @@ On the SSRP, you will first provide a detailed description of available inputs i
 
 ## Describe the inputs {#describe-inputs}
 
-This section explains how to record the *input* materials found or referenced in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing *all* files in the reproduction packages (tip: using the command line go to the directory of the reproduction package, and type `file */*` on a Mac and `dir /s /b /o:gn` on Windows and it will print out all the files in that folder). However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the [section](#desc-analy) below for reference). 
+This section explains how to record the *input* materials found (or referenced) in the reproduction package. At this point, it may be challenging to precisely identify the materials that correspond to your selected claims and display items, so we recommend listing *all* files in the reproduction packages (*tip*: using the command line, go to the directory of the reproduction package, and type `file */*` on a Mac or `dir /s /b /o:gn` on Windows to obtain a printout of all files within a folder). However, if the reproduction package is too extensive to record in its entirety, you can focus only on the materials required to reproduce a specific display item (review the code scripts in the [section](#desc-analy) below for reference). 
 
-In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3.
+In Table 1.1. on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files in Table 1.2 and then record script files in Table 1.3. Note that you can record your work directly on the SSRP or download the table templates, fill them out on your local drive, and then upload them to the platform. Please separate multiple items within the same cell with semicolons (`;`).
 
-The following concepts may be helpful as you work in the Assessment stage:
+The following concepts may be helpful as you work in the Assessment stage (also see the ACRe glossary [here](https://bitss.github.io/ACRE/definitions.html)):
 
- - **Raw data** -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are *still considered raw*. All other modifications to raw data make it *processed*.    
- - **Analysis/Analytic data** -- Data used as the final input in a workflow to produce a statistic displayed in the paper (including appendices).    
- -	**Cleaning code:** A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the data structure (from long to wide, or vice versa).    
- -	**Analysis code:** A script associated primarily with analysis. Most of its content is dedicated to running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
+ - **Raw data** — Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are *still considered raw*. All other modifications to raw data make it *processed*.    
+ - **Analysis/Analytic data** — Data used as the final input in a workflow to produce a statistic displayed in the paper (including appendices).    
+ -	**Cleaning code** — A script associated primarily with data cleaning. Most of its content is dedicated to deleting variables or observations, merging data sets, removing outliers, or reshaping the data structure (from long to wide, or vice versa).    
+ -	**Analysis code:** — A script associated primarily with analysis. Most of its content is dedicated to running regressions, running hypothesis tests, computing standard errors, and imputing missing values.
 
 ### Describe the data sources and raw data {#desc-sourc}
 
-In the paper you chose, find references to all *data sources* used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or in the appendix, you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper. Each row represents a unique data source   
+In the paper you chose, find references to all *data sources* used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper, or the appendix, you see text like “(...) for earnings in 2018 we use the Current Population Survey”, the data source is “2018 Current Population Survey ”. If the first reference to this data source is found on page 1 of the appendix, you should record its location as “A1”. Do this for all data sources mentioned in the paper. Each row represents a unique data source. 
 
-Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., "our information on regional minimum wages comes from the Bureau of Labor Statistics." This should be recorded as "regional minimum wages from the Bureau of Labor Statistics").
+Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples). In contrast, others may be less clear, e.g., "our information on regional minimum wages comes from the Bureau of Labor Statistics." You should record such data source as "regional minimum wages from the Bureau of Labor Statistics."
 
-Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package. Whenever a data source contains multiple files, enter them on the same cell, separated by semicolon (`;`).
+Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *Data Files* in the reproduction package. In the *Location* column, record their folder locations relative to the main reproduction folder^[a relative location takes the form of `folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you also review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any missing files from the reproduction package. Whenever a data source contains multiple files, enter them in the same cell, separated by semicolon (`;`).
 
-If you cannot find the files or file name corresponding to a specific data source, enter "missing" in the filename column. 
+If you cannot find the files or file name corresponding to a specific data source, type "Missing" in the *Notes* column.
 
-Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
+Check the *Provided* column if the data source was included in the original reproduction package. Check the *Cited* column if the data source was explicitly cited in the paper.
+
+this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
 ```{r raw-data-information, echo = FALSE, eval=temp_eval}
 raw_data_info <- data.frame(data_source = c('"Current Population Survey 2018"', '"Provincial Administration Reports"', '"2017 SAT scores"', "..."),
                             page = c("A1", "A4", "4", "..."),
@@ -55,16 +57,15 @@ raw_data_info %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 
+### Describe the analytic data {#desc-analy}
 
-**Note:** lists of files in the data_files and known_missing columns should have entries separated by a semi-colon to for the spreadsheet to be compatible with the ACRE Diagram Builder.
+First, identify all analytic data files in the reproduction package and record their names in the *Analytic Data* column in Table 1.2. You will recognize analytic data files based on the documentation, their location folder, or if a code file produces them.
 
-### Describe the analytic data sets. {#desc-analy}
+Second, record each analytic data file's location relative to the main folder of the reproduction package in the *Location* column.
 
-List all the analytic files you can find in the reproduction package, and identify their locations relative to the main reproduction folder. Record this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1299317837&range=A1).
+Finally, provide a one-line description of each file in the *Description* column (e.g., all_waves.csv can be "data for region-level analysis"). This will become easier as you progress through the reproduction, and you can always return to this table later on and add or modify your descriptions.
 
-As you progress through the exercise, add to the spreadsheet a one-line description of each file's main content (for example: `all_waves.csv` has the simple description `data for region-level analysis`). This may be difficult in an initial review, but will become easier as you go along.
-
-The resulting report will have the following structure:  
+The resulting table may look like this:  
 
 ```{r analysis-data-information, echo = FALSE, eval=temp_eval}
 analysis_data_info <- data.frame(analysis_data = c("final_data.csv", "all_waves.csv", "..."),
@@ -77,10 +78,15 @@ analysis_data_info %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 
+### Describe the code scripts{#desc-scripts}
 
-### Describe the code scripts.{#desc-scripts}
+First, identify all code files in the reproduction package and record their names in the *File Name* column and record their locations relative to the main folder in the *Location* column.
 
-List all code files that you found in the reproduction package and identify their locations relative to the master reproduction folder. Review the beginning and end of each code file and identify the inputs required to successfully run the file. Inputs may include data sets or other code scripts that are typically found at the beginning of the script (e.g., `load`, `read`, `source`, `run`, `do` ). For each code file, record all inputs together and separate each item with ";". Outputs may include other datasets, figures, or plain text files that are typically at the end of a script (e.g., `save`, `write`, `export`). For each code file, record all outputs together and separate each item with ";". Provide a one-line description of what each code file does. Record all of this information in the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1), using the following structure:
+Then, review the beginning and end of each code file to identify the inputs required to successfully run the file and the outputs it produces. Inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g., 'load', 'read', 'source', 'run', 'do'). Outputs are other data sets, or plain text files typically found at the end of a script (e.g., 'save, write, export). Record those in the *Inputs* and *Outputs* columns. 
+
+Finally, provide a brief description of the code's function in the *Description* column and classify its function as analysis or cleaning and/or construction in the *Primary Type* column.
+
+Note that sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., "results1.log", "results2.csv") that will require manual copying and pasting to reproduce the desired display item (e.g. "Table 1"). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: "results1.log; results2.csv", Outputs: "Table 1").
 
 ```{r code-files-information, echo = FALSE, eval=temp_eval}
 code_files_info <- data.frame(file_name = c("output_table1.do", "data_cleaning02.R", "..."),
@@ -96,21 +102,15 @@ code_files_info %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 
+**Note:** If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
 
+## Connect display items to their inputs {#diagram}
 
-As you gain an understanding of each code script, you will likely find more inputs and outputs -- we encourage you to update the [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=1617799822&range=A1). Once finished with the reproduction exercise, classify each code file as *analysis* or *cleaning*. We recognize that this may involve subjective judgment, so we suggest that you conduct this classification based on each script's main role.
-
-**Note:** If a code script takes multiple inputs and/or produces multiple outputs they should be listed as semicolon separated lists in order to be compatible with the ACRE Diagram Builder.
-
-## Connect display items to all its inputs {#diagram}
-
-Using the information collected above, you can trace your display items to their primary sources. Upload the standardized spreadsheets from above (sections \@ref(desc-sourc), \@ref(desc-analy) and \@ref(desc-scripts)) to your reproduction at the [SSRP](https://www.socialsciencereproduction.org) and use the Diagram Builder. This will generate a reproduction diagram tree that represents the information available on the workflow behind a specific display item.
-
-If the reproduction package does not organize the code around display items, you will be asked to identify all the outputs that contain the results used in a specific display item. 
+Using the information above, the SSRP will build a diagram that can help you visually trace your display items to the code and data files that produce them. If the reproduction package does not organize the code around display items, you can identify all of the outputs that contain the results used in a specific display item. 
 
 ### Complete workflow information {#complete-tree}
 
-If you were able to identify all the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
+If you were able to identify all of the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
 
 ```
   table1.tex
@@ -139,14 +139,13 @@ If you were able to identify all the relevant components in the previous section
                                           └──raw_4.dta
 ```
 
-This diagram, built with the information you provided, is an important contribution to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to point out specific files you need. Formulating your request this way makes it easier for authors to respond and demonstrates that you have a good understanding of the reproduction package. You can also add this diagram into a new version of the readme file in your revised reproduction package.   
+This diagram, built with the information you provided, contributes to understanding the necessary components required to reproduce a specific display item. It also summarizes key information to allow for more constructive exchanges with original authors or other reproducers. For example, when contacting the authors for guidance, you can use the diagram to ask for specific files. Formulating your request this way makes it easier for authors to respond and demonstrates that you understand the reproduction package. You can also add this diagram to the readme of your revised reproduction package.   
 
 ### Incomplete workflow information
 
-In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here the Diagram Builder will return a partial reproduction tree diagram. 
+In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the SSRP Diagram Builder will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.
 
-For example, let's start from a simpler complet tree like the following: 
-
+For example, here's a simple complete reproduction tree: 
 
 ```
         table1.tex
@@ -158,7 +157,7 @@ For example, let's start from a simpler complet tree like the following:
                              └── merged_1_2.dta
 ```                      
 
-For this case, if the the file `final_merge.do` is missing from the previous diagram, the SSRP Diagram Builder will produce the following diagram:
+For this case, if the the file `final_merge.do` is missing, the SSRP Diagram Builder will produce the following reproduction tree:
 
 ```
         table1.tex
@@ -170,7 +169,7 @@ For this case, if the the file `final_merge.do` is missing from the previous dia
               └── merged_1_2.dta
 ```
 
-In this case, you can still manually combine this partial information with your knowledge from the paper and own judgement to produce a "candidate" tree diagram (which might lead to different reproducers recreating different diagrams). This may look like the following:
+You can still manually combine this partial information with your knowledge from the paper and own (subjective) judgement to produce a "candidate" reproduction tree. This may look like the following:
 
 ```
         table1.tex
@@ -182,7 +181,7 @@ In this case, you can still manually combine this partial information with your 
                              └── merged_1_2.dta
 ```
 
-To leave a record of the reconstructed diagrams, you will have to amend the input spreadsheets using placeholders for the missing components. In the example above, you should add the following entries to the code description spreadsheet:
+If you notice that the reproduction tree is fragmented where it shouldn't be, you may need to amend Table 1.3 above with placeholders. In the example above, that can look like this:
 ```{r adding-rows, echo = FALSE, eval=temp_eval}
 adding_rows_to_code <- data.frame(file_name = c("...", "MISSSING_CODE_FILE_1"),
                                   location = c("...", "unknown"),
@@ -197,54 +196,51 @@ adding_rows_to_code %>%
 ```
 
 
-As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific outputs. Reproducers can compare reconstructed trees and/or contact original authors with highly specific inquiries.
-
-For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-trees).  
+As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-trees).  
 
 
 ## Assign a reproducibility score. {#score}
+Once you have identified all possible inputs and have a clear understanding of the connection between the display items and their inputs, you can assign reproducibility scores to individual display items.
 
-Once you have identified all possible inputs and have a clear understanding of the connection between the outputs and inputs, you can start to assess the output-specific level of reproducibility.
+The following concepts may be helpful in this section:     
 
-Take note of the following concepts in this section:     
+ - **Computationally Reproducible from Analytic data (CRA)** — The output can be reproduced with minimal effort starting from the *analytic* datasets.
 
- - **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.
+ - **Computationally Reproducible from Raw data (CRR)** — The output can be reproduced with minimal effort from the *raw* datasets.
 
- - **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.
-
- - **Minimal effort:** One hour or less is required to run the code, not including computing time.
+ - **Standard of *minimal effort*** — One hour or less is required to run the code, not including computing time.
 
 ### Levels of Computational Reproducibility for a Specific Output  
 
-Each level of computational reproducibility is defined by the availability of data and materials, and whether or not the available materials faithfully reproduce the output of interest. The description of each level also includes possible improvements that can help advance the reproducibility of the output to a higher level. You will learn in more detail about the possible improvements.
+Each level of computational reproducibility is defined by the availability of data and materials, and whether the available materials faithfully reproduce the display item of interest. The description of each level also includes possible improvements that can help advance the display item's reproducibility. You will learn in more detail about the possible improvements at the [*Improvement* stage](https://bitss.github.io/ACRE/improvements.html).
 
-Note that the assessment is made *at the output level* -- a paper can be highly reproducible for its main results, but suffer from low reproducibility for other outputs. The assessment includes a 10-point scale, where 1 represents that, under current circumstances, reproducers cannot access any reproduction package, while 10 represents access to all the materials and being able to reproduce the target outcome from the raw data.
+Note that the assessment is made *at the level of individual display items*—a paper can be highly reproducible for its main results, but its other display items may not be as reproducible. The assessment includes a 10-point scale, where 1 represents that, under the current circumstances, reproducers cannot access any reproduction package. At level 10, the reproducer can access all of the necessary materials to faithfully reproduce the target display item from the raw data.
 
  - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
 
- You will have detected papers that are reproducible at Level 1 as part of the Scoping stage (unsuccessful candidate papers). Make sure to take record them in Survey 1.
+ You may have detected papers without any reproduction materials at the *Paper Selection* stage, where you should have recorded them as unsuccessful candidate papers.
 
  - **Level 2 (L2):** Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
 
- - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are not. Possible improvements include: completing analysis data and/or code, adding raw data (+RD), and adding analysis code (+AC).  
+ - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data (+RD), and adding analysis code (+AC).  
 
- - **Level 4 (L4):** All analytic data sets and analysis code are available, but code does not run or produces results different than those in the paper (not CRA). Possible improvements include: debugging the analysis code (DAC) or obtaining raw data (+RD).      
+ - **Level 4 (L4):** All analytic data sets and analysis code are available, but the code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements include: debugging the analysis code (DAC) or obtaining raw data (+RD).      
 
- - **Level 5 (L5):** Analytic data sets and analysis code are available. They produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data sets.
+ - **Level 5 (L5):** Analytic data sets and analysis code are available and they produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data (+RD).
 
-This is the highest level that most published research papers can attain currently. Computational reproducibility *from raw data* is required for papers that are reproducible at Level 6 and above.
+**Note:** This is the highest level that most published research papers can attain currently. Computational reproducibility *from raw data* is required for papers that are reproducible at Level 6 and above.
 
- - **Level 6 (L6):** Cleaning code is partially available, but raw data is not. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).   
+ - **Level 6 (L6):** Cleaning code is partially available, but raw data is missing. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).   
 
- - **Level 7 (L7):** Cleaning code is available and complete, but raw data is not. Possible improvements include: adding raw data (+RD).  
+ - **Level 7 (L7):** Cleaning code is available and complete, but raw data are missing. Possible improvements: adding raw data (+RD).  
 
- - **Level 8 (L8):** Cleaning code is available and complete, and raw data is partially available. Possible improvements include: adding raw data (+RD).
+ - **Level 8 (L8):** Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data (+RD).
 
- - **Level 9 (L9):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code does not run or produces different results that those presented in the paper (not CRR). Possible improvements include: debugging the cleaning code (DCC).  
+ - **Level 9 (L9):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code (DCC). 
 
- - **Level 10 (L10):** All the materials are available and produce the same results as presented in the paper with minimal effort, starting from the analytic data (yes CRA) or the raw data (yes CRR).  Note that Level 10 is aspirational and may be very difficult to attain for most research published today.
+ **Level 10 (L10):** All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR).  *Note that Level 10 is aspirational and may be unattainable for most research published today.*
 
-The following figure summarizes the different levels of computational reproducibility (for any given output). For each level, there will be improvements that have been made (`✔`) or can be made to move up one level of reproducibility (-).
+The following figure summarizes the different levels of computational reproducibility (for any given display item). For each level, there are reproducibility components and practices that are present (`✔`) or can be implemented to advance the level of reproducibility (-).
 
 ```{r levels-of-computational-reproducibility, echo = FALSE, eval=temp_eval}
 lcr_levels <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4: All analysis data & code","L5: Reproducible from analysis", "L6: Some cleaning code","L7: All cleaning code", "L8: Some raw data", "L9: All raw data", "L10: Reproducible from raw data"))
@@ -272,32 +268,31 @@ kable(assign_lcr_score,
                          "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
 ```
 
-
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
 
 #### Adjusting Levels To Account for Confidential/Proprietary Data {-}
 
-A large portion of published research in economics uses confidential or proprietary data, most often government data from tax records or service provision and what is generally referred to as *administrative data*. Since administrative and proprietary data are rarely publicly accessible, some of the reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when reproducibility cannot be verified based on publicly available materials, the reproduction materials should demonstrate that a competent and unbiased third party (not involved in the original research team) has been able to reproduce the results.
+Much of published research in the social sciences uses confidential or proprietary data (e.g. government data from tax records or service provision), generally referred to as *administrative data*. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a competent and unbiased third party (not involved in the paper's production) faithfully reproduced the results.
 
  - **Levels 1 and 2** can be applied as described above.
 
- - **Adjusted Level 3 (L3\*):** All analysis code is provided, but only partial instructions on how to access the ***analysis data*** are available. This means that the authors have provided some, but not all, of the following information:
-    a. *Contact information*, including name of the organization(s) that provides access to the data and contact information of at least one individual.
+ - **Adjusted Level 3 (L3\*):** All analysis code is provided, but only partial instructions to access the *analysis data* are available. This means that the original authors have provided some, but not all, of the following information:
+    a. *Contact information*, including name of the organization(s) that provides access to at least one individual's data and contact information.
     b. *Terms of use*, including licenses and eligibility criteria for accessing the data, if any.
-    c. *Information on data files (meta-data)*, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a description dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data)
-    d. *Estimated costs for access*, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access the data.  
+    c. *Information on data files (meta-data)*, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data).
+    d. *Estimated costs for access*, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access it.  
 
  - **Adjusted Level 4 (L4\*):** All analysis code is provided, and complete and detailed instructions on how to access the *analysis data* are available.
 
- - **Adjusted Level 5 (L5\*):** All requirements for Level 4\* are met, and the authors provide a certification that the output can be reproduced from the analysis data (CRA) by a third party. Examples include a signed letter by a disinterested reproducer or an official reproducibility certificate from a certification agency for data and code (e.g., see [cascad](https://www.cascad.tech/)).
+ - **Adjusted Level 5 (L5\*):** All requirements for Level 4\* are met, and the authors provide a certification that a third party was able to reproduce  the display item (or the paper as a whole) from the analysis data (CRA). Such certification may include a signed letter by a disinterested reproducer or a certificate from a certification agency for data and code (e.g., see [CASCaD](https://www.cascad.tech/)).
 
  - **Levels 6 and 7** can be applied as described above.
 
- - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, but instructions for accessing the ***raw data*** are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
+ - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, but instructions for accessing the *raw data* are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
 
- - **Adjusted Level 9 (L9\*):**  All requirements for Level 8\* are met, and instructions for accessing the ***raw data*** are complete.
+ - **Adjusted Level 9 (L9\*):**  All requirements for Level 8\* are met, and instructions for accessing the *raw data* are complete.
 
- - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification that the output can be reproduced from the raw data is provided.
+ - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification is provided that the display item can be reproduced from the raw data (CRA).
 
 ```{r levels-of-computational-reproducibility-adjusted, echo = FALSE, eval=temp_eval}
 lcr_levels_adjusted <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4*: All analysis data & code","L5*: Proof of third party CRA", "L6: Some cleaning code","L7: All cleaning code", "L8*: Some instr. for raw data", "L9*: All instr. for raw data", "L10*: Proof of third party CRR"))
@@ -316,19 +311,7 @@ kable(assign_lcr_adjusted,
                          "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
 ```
 
+### Reproducibility dimensions at the paper-level   
+There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the [*Improvements*'(https://bitss.github.io/ACRE/improvements.html) stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices. 
 
-### Reproducibility dimensions at the paper level   
-
-In addition to the output-specific assessment and improvement of computational reproducibility, several practices can facilitate reproducibility at the level of the overall paper. You can read about such practices in greater detail in the next chapter, dedicated to Stage 3: *Improvements*. In this  Assessment section, you should only verify whether the original reproduction package made use of any of the following:
-
-- Master script that runs all steps
-- Readme file
-- Standardized file organization       
-- Version control
-- Open source (statistical) software  
-- Dynamic document        
-- Computing capsule (e.g. CodeOcean, Binder, etc.)     
-
-Congratulations! You have now completed the *Assessment* stage of this exercise. You have provided a concrete building block of knowledge to improve understanding of the state of reproducibility in Economics.
-
-Please continue to the [next section](#improvements) where you can help improve it!
+**Note:** The Assessment stage is the minimum requirement to submit your reproduction. To gain a better understanding of the paper and to help improve the reproducibility of social science research, however, we encourage you to also complete the *Improvements* and *Robustness* stages.
