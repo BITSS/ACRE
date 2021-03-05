@@ -127,7 +127,7 @@
 <li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
-<li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#reasonable-robustness-check-justifying-and-testing."><i class="fa fa-check"></i><b>5.2</b> Reasonable robustness check: justifying and testing.</a></li>
+<li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#justifying-and-testing-reasonable-robustness-checks"><i class="fa fa-check"></i><b>5.2</b> Justifying and testing reasonable robustness checks</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
 <ul>
@@ -206,17 +206,17 @@
             <section class="normal" id="section-">
 <div id="robust" class="section level1" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Checking for Robustness</h1>
-<p>Once you have assessed, and potentially improved, the computational reproducibility of the display items for a claim within a paper, you can assess the robustness of these results by modifying some analytic choices and reporting their subsequent effects on the estimates of interest, i.e. conducting <strong>robustness checks</strong>. The universe of robustness checks can be very large (potentially infinite!) and they can pertain to both data analysis and data cleaning. In these guidelines, we will distinguish between <strong>reasonable</strong> and <strong>feasible</strong> robustness checks.</p>
-<p><strong>Reasonable robustness checks</strong> (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">Simonsohn et. al., 2018</a>) are defined as (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of <strong>feasible robustness checks</strong> is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the reasonable set of specifications.</p>
+<p>Once you have assessed and potentially improved the computational reproducibility of the display items for a claim within a paper, you can determine these results’ robustness by modifying some analytic choices and reporting their subsequent effects on the estimates of interest, i.e., conducting <em>robustness checks</em>. The universe of robustness checks can be very large (potentially infinite!) and pertain to data analysis and data cleaning. The SSRP distinguishes between <em>reasonable</em> and <em>feasible</em> robustness checks.</p>
+<p><strong>Reasonable robustness checks</strong> (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">Simonsohn et. al., 2018</a>) are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of <strong>feasible robustness checks</strong> is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.</p>
 <div class="figure"><span id="fig:robusts"></span>
 <img src="robustness_lvl1.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl2_4.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl5-9.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl10.png" alt="Universe of robustness tests and its elements" width="50%" />
 <p class="caption">
 Figure 5.1: Universe of robustness tests and its elements
 </p>
 </div>
-<p>The size of the feasible set of robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results supporting a claim. This is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At levels 1-2, it won’t be possible to perform additional robustness checks because there is no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at levels 3-4, but not using the specific estimates declared in the <em>Scoping Stage</em> since the display items are not computationally reproducible from analysis data (lacking CRA). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at level 5. Finally, claims associated with display items reproducible at level 6 or higher allow for robustness checks that involve variable definitions other types of analytical choices.</p>
-<p>The size of feasible robustness checks grows exponentially as higher levels of computational reproducibility are achieved. For example, when checking the robustness to a new variable definition, you will also be able to test the combination of how the main estimate changes under an alternative variable definition <em>and</em> an alternative variable definitions.</p>
-<p>Robustness is assessed at the claim level (see our diagram representing a paper’s components <a href="intro.html#fig:stages-unit">0.3</a>). For a given claim, there will be several specifications presented, one of which will be identified by the authors (or yourself if the authors did not identify one) as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="assessment.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
+<p>The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At Levels 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in <em>Scoping</em> (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve variable definitions and other types of analytical choices.</p>
+<p>The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions <em>and</em> changes in the main estimate under an alternative variable definition.</p>
+<p>Robustness is assessed at the claim level (see the diagram with a typical paper’s components <a href="intro.html#fig:stages-unit">0.3</a>). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="assessment.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
 <pre><code>        table1.tex (contains preferred specification of a given claim)
             |___[code] analysis.R
                     |___[code] final_merge.do
@@ -228,10 +228,10 @@ Figure 5.1: Universe of robustness tests and its elements
                                     |___[code] merge_3_4.do
                                             |___[code] clean_raw_3.py
                                             |___[code] clean_raw_4.py</code></pre>
-<p>Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts, and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and refer to specific files in the reproduction package.</p>
+<p>Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and be linked to specific files in the reproduction package.</p>
 <div id="feasible-robustness-checks-increasing-the-number-of-feasible-specifications" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Feasible robustness checks: increasing the number of feasible specifications</h2>
-<p>Increasing the number of feasible robustness checks requires that you, as the reproducer identify the specific line(s) in the code scripts that execute an analytical choice. An advantage of this type of contribution is that you don’t need to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieving a broader understanding of the paper, and also building on top of the work of others. The disadvantage is that you are not expected to test and justify the reasonableness of an alternative specifications.</p>
+<p>Increasing the number of feasible robustness checks requires identifying the specific line(s) in the code scripts that execute an analytical choice. An advantage of this type of contribution is that you don’t need to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieve a broader understanding of the paper, and build on top of others’ work. The disadvantage is that you are not expected to test and justify the reasonableness of alternative specifications.</p>
 <p>Analytical choices can include those behind data cleaning and data analysis. Below are some proposed types for each category.</p>
 <p><strong>Analytical choices in data cleaning code</strong></p>
 <ul>
@@ -243,7 +243,7 @@ Figure 5.1: Universe of robustness tests and its elements
 <p><strong>Analytical choices in analysis code</strong></p>
 <ul>
 <li>Regression function (link function)</li>
-<li>Key parameters (tuning, tolerance parameters, etc.)</li>
+<li>Key parameters (tuning, tolerance parameters, and others)</li>
 <li>Controls</li>
 <li>Adjustment of standard errors</li>
 <li>Choice of weights</li>
@@ -251,10 +251,10 @@ Figure 5.1: Universe of robustness tests and its elements
 <li>Imputations</li>
 <li>Other (specify as “methods - other”)</li>
 </ul>
-<p>To record a specific analytical choice in the ACRE platform, please follow these steps:</p>
+<p>To record a specific analytical choice on the SSRP, please follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Review a specific code file (e.g. <code>clean_merged_1_2.do</code>) and identify an analytical choice (e.g. <code>regress y x if gender == 1</code>).</p></li>
-<li><p>Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code> and <code>103</code>). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database should have the <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">following structure</a>:</p></li>
+<li><p>Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code> and <code>103</code>). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
 </ol>
 <table>
 <colgroup>
@@ -317,17 +317,17 @@ Figure 5.1: Universe of robustness tests and its elements
 </tbody>
 </table>
 </div>
-<div id="reasonable-robustness-check-justifying-and-testing." class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Reasonable robustness check: justifying and testing.</h2>
-<p>Justifying and testing a specific analytical choice requires that the reproducer identifies a feasible analytical choice, conducts a variation on it, and justifies its reasonableness. The advantage of this approach is that it allows for an in-depth inspection of a specific section of the paper. The main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper’s topic and the methods, making it less feasible for undergraduate students or graduates with only a surface-level interest in the paper and limited time.</p>
+<div id="justifying-and-testing-reasonable-robustness-checks" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Justifying and testing reasonable robustness checks</h2>
+<p>Justifying and testing a specific analytical choice involves identifying a feasible analytical choice, conducting a variation on it, and justifying its reasonableness. This approach’s advantage is that it allows for an in-depth inspection of a specific section of the paper. Its main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper’s topic and the methods. That may mean that undergraduate students or graduate students with only a surface-level interest in the paper (or limited time) may find it challenging to conduct this part of the reproduction.</p>
 <p>When performing a specific robustness check, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Search the database of feasible robustness checks (discussed above) and record the identifier(s) corresponding to the analytical choice to test (<code>entry_id</code>). If there is no entry corresponding for the specific lines, create one yourself.</p></li>
+<li><p>Eventually, you will be able to search the SSRP database of feasible robustness checks (discussed above) and record the identifier(s) corresponding to the analytical choice(s) of interest (<code>entry_id</code>), but you can skip this for now. You can create an Entry ID by simply numbering the feasible specifications in the order as you record them.</p></li>
 <li><p>Propose a specific variation to this analytical choice.</p></li>
-<li><p>Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample when assessing the impact of a large wave of new inmigrants?).</p></li>
-<li><p>Discuss how this variation could affect the validity of the results (e.g., likely effects on omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).</p></li>
-<li><p>Confirm that test is not redundant with other tests in the paper or robustness exercise.</p></li>
-<li><p>Report the results from the robustness check (new estimate, standard error, and units)[is what’s in the brackets the suggested reporting format for this – if so, be explicit about it].</p></li>
+<li><p>Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample when assessing the impact of a large wave of new immigrants?).</p></li>
+<li><p>Discuss how this variation could affect the validity of the results (e.g., likely effects on the omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).</p></li>
+<li><p>Confirm that test is not redundant with other tests in the paper or the robustness exercise.</p></li>
+<li><p>Report the result of the robustness check (new estimate, standard error, and units).</p></li>
 </ol>
 <!--
 ## Test the robustness of results  

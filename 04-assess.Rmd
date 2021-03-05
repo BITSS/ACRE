@@ -326,6 +326,6 @@ kable(assign_lcr_adjusted,
 ```
 
 ### Reproducibility dimensions at the paper-level   
-There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the [*Improvements*'(https://bitss.github.io/ACRE/improvements.html) stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices.
+There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the [*Improvements*](https://bitss.github.io/ACRE/improvements.html) stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices.
 
 **Note:** The Assessment stage is the minimum requirement to submit your reproduction. To gain a better understanding of the paper and to help improve the reproducibility of social science research, however, we encourage you to also complete the *Improvements* and *Robustness* stages.
