@@ -69,7 +69,7 @@ Reproducers are asked to speculate on where the missing files might go, and henc
                               └───[data] admin_01raw.csv  
 ```
 
-### Unused Data Sources
+### Unused data sources
 
 It is possible that not all data included in a replication package are actually used in code scripts in the reproduction package. This would be the case if, for example, the raw data and analysis data are included, but not the script that generates the analysis data. As a concrete example, consider what the original diagram above would look like if the only code included in the reproduction package were analysis.R:
 
@@ -98,6 +98,9 @@ It is possible that not all data included in a replication package are actually 
 In this case, there are many data files that were listed in the raw data and analytic data spreadsheets that are not used by any code script in the replication package.
 
 
+### Final outputs is not a display item  
+
+<!-- TODO -->
 
 ## Examples from real reproduction attempts
 
