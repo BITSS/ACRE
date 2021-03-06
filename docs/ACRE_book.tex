@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-03-05}
+\date{2021-03-06}
 
 \begin{document}
 \maketitle
@@ -492,11 +492,7 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 
 Next, look at the reproduction package and map the \emph{data sources} mentioned in the paper to the \emph{Data Files} in the reproduction package. In the \emph{Location} column, record their folder locations relative to the main reproduction folder\footnote{a relative location takes the form of \texttt{folder\_in\_rep\_materials/sub\_folder/file.txt}, in contrast to an absolute location that takes the form of \texttt{/username/documents/projects/repros/folder\_in\_rep\_materials/sub\_folder/file.txt}}. In addition to looking at the existing data files, we recommend that you also review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any missing files from the reproduction package. Whenever a data source contains multiple files, enter them in the same cell, separated by semicolon (\texttt{;}).
 
-If you cannot find the files or file name corresponding to a specific data source, type ``Missing'' in the \emph{Notes} column.
-
-Check the \emph{Provided} column if the data source was included in the original reproduction package. Check the \emph{Cited} column if the data source was explicitly cited in the paper.
-
-this \href{https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit\#gid=0\&range=A1}{standardized spreadsheet} (download it or make a copy for yourself), using the following structure:\\
+If you cannot find the files or file name corresponding to a specific data source, type ``Missing'' in the \emph{Notes} column. Check the \emph{Provided} column if the data source was included in the original reproduction package. Check the \emph{Cited} column if the data source was explicitly cited in the paper. Record your work using the following structure:
 
 \begin{table}
 
@@ -554,7 +550,7 @@ Then, review the beginning and end of each code file to identify the inputs requ
 
 Finally, provide a brief description of the code's function in the \emph{Description} column and classify its function as analysis or cleaning and/or construction in the \emph{Primary Type} column.
 
-For each code file, record all outputs together and separate each item with ``;''. Record all of this information in the SSRP using the following structure:
+For each code file, record all outputs together and separate each item with (\texttt{;}). Record all of this information in the SSRP using the following structure:
 
 \begin{table}
 
@@ -573,14 +569,16 @@ data\_cleaning02.R & code/cleaning & admin\_01raw.csv & analysis\_data02.csv & r
 \end{tabu}
 \end{table}
 
-\hypertarget{common-issues-that-might-when-creating-a-reproduction-tree}{%
-\subsubsection{Common issues that might when creating a reproduction tree:}\label{common-issues-that-might-when-creating-a-reproduction-tree}}
+\hypertarget{common-issues-that-might-occur-when-creating-a-reproduction-tree}{%
+\subsubsection{Common issues that might occur when creating a reproduction tree:}\label{common-issues-that-might-occur-when-creating-a-reproduction-tree}}
 
 \begin{itemize}
 \item
   If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
 \item
   Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., ``results1.log'', ``results2.csv'') that will require manual copying and pasting to reproduce the desired display item (e.g.~``Table 1''). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: ``results1.log; results2.csv'', Outputs: ``Table 1'').
+\item
+  Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., \texttt{data\_location1\_year1,\ data\_location2\_year1,\ data\_location1\_year2,\ ...}). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., \texttt{data\_locationX\_yearY}).
 \end{itemize}
 
 \hypertarget{diagram}{%
@@ -680,7 +678,8 @@ MISSSING\_CODE\_FILE\_1 & unknown & cleaned\_1\_2.dta & cleaned\_1\_2.dta & miss
 \end{tabu}
 \end{table}
 
-As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{examples-of-reproduction-trees}{see here}.
+As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{examples-of-reproduction-trees}{see here}.\\
+UPDATE LEVElS
 
 \hypertarget{score}{%
 \section{Assign a reproducibility score.}\label{score}}
@@ -708,36 +707,36 @@ Note that the assessment is made \emph{at the level of individual display items}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Level 1 (L1):} No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
+  \textbf{Level 1 (L1):} No data or code are available. Possible improvements include adding: raw data, analysis data, cleaning code, and analysis code.
 \end{itemize}
 
 You may have detected papers without any reproduction materials at the \emph{Paper Selection} stage, where you should have recorded them as unsuccessful candidate papers.
 
 \begin{itemize}
 \item
-  \textbf{Level 2 (L2):} Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
+  \textbf{Level 2 (L2):} Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data and analysis data.
 \item
-  \textbf{Level 3 (L3):} Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data (+RD), and adding analysis code (+AC).
+  \textbf{Level 3 (L3):} Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data, and adding analysis code.
 \item
-  \textbf{Level 4 (L4):} All analytic data sets and analysis code are available, but the code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements include: debugging the analysis code (DAC) or obtaining raw data (+RD).
+  \textbf{Level 4 (L4):} All analytic data sets and analysis code are available, but the code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements include: debugging the analysis code or obtaining raw data.
 \item
-  \textbf{Level 5 (L5):} Analytic data sets and analysis code are available and they produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data (+RD).
+  \textbf{Level 5 (L5):} Analytic data sets and analysis code are available and they produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data.
 \end{itemize}
 
 \textbf{Note:} This is the highest level that most published research papers can attain currently. Computational reproducibility \emph{from raw data} is required for papers that are reproducible at Level 6 and above.
 
 \begin{itemize}
 \item
-  \textbf{Level 6 (L6):} Cleaning code is partially available, but raw data is missing. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).
+  \textbf{Level 6 (L6):} Cleaning code scripts are available (partial or complete), but raw data is missing. Possible improvements include: adding raw data.
 \item
-  \textbf{Level 7 (L7):} Cleaning code is available and complete, but raw data are missing. Possible improvements: adding raw data (+RD).
+  \textbf{Level 7 (L7):} Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data.
 \item
-  \textbf{Level 8 (L8):} Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data (+RD).
+  \textbf{Level 8 (L8):} All the materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR) or the analysis code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements: debugging the cleaning or analysis code.
 \item
-  \textbf{Level 9 (L9):} All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code (DCC).
+  \textbf{Level 9 (L9):} All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code.
+\item
+  \textbf{Level 10 (L10):} All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR). \emph{Note that Level 10 is aspirational and may be unattainable for most research published today.}
 \end{itemize}
-
-\textbf{Level 10 (L10):} All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR). \emph{Note that Level 10 is aspirational and may be unattainable for most research published today.}
 
 The following figure summarizes the different levels of computational reproducibility (for any given display item). For each level, there are reproducibility components and practices that are present (\texttt{✔}) or can be implemented to advance the level of reproducibility (-).
 
@@ -764,13 +763,13 @@ L4: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- &
 \hline
 L5: Reproducible from analysis & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
 \hline
-L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
+L6: All cleaning code & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & -- & -- & --\\
 \hline
-L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
+L7: Some raw data & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & ✔ & -- & --\\
 \hline
-L8: Some raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
+L8: All raw data & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
-L9: All raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
+L9: All raw data + CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
 L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
@@ -810,13 +809,15 @@ Much of published research in the social sciences uses confidential or proprieta
 \item
   \textbf{Adjusted Level 5 (L5*):} All requirements for Level 4* are met, and the authors provide a certification that a third party was able to reproduce the display item (or the paper as a whole) from the analysis data (CRA). Such certification may include a signed letter by a disinterested reproducer or a certificate from a certification agency for data and code (e.g., see \href{https://www.cascad.tech/}{CASCaD}).
 \item
-  \textbf{Levels 6 and 7} can be applied as described above.
+  \textbf{Levels 6} can be applied as described above.
 \item
-  \textbf{Adjusted Level 8 (L8*):} All requirements for Level 7* are met, but instructions for accessing the \emph{raw data} are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
+  \textbf{Adjusted Level 7 (7*):} All requirements for Level 6* are met, but instructions for accessing the \emph{raw data} are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
 \item
-  \textbf{Adjusted Level 9 (L9*):} All requirements for Level 8* are met, and instructions for accessing the \emph{raw data} are complete.
+  \textbf{Adjusted Level 8 (L8*):} All requirements for Level 7* are met, and instructions for accessing the \emph{raw data} are complete.
 \item
-  \textbf{Adjusted Level 10 (L10*):} All requirements for Level 9* are met, and a certification is provided that the display item can be reproduced from the raw data (CRA).
+  \textbf{Adjusted Level 9 (L9*):} All requirements for Level 8* are met, and a certification is provided that the display item can be reproduced from the ananlysis data (CRA).
+\item
+  \textbf{Adjusted Level 10 (L10*):} All requirements for Level 9* are met, and a certification is provided that the display item can be reproduced from the raw data (CRR).
 \end{itemize}
 
 \begin{table}
@@ -842,13 +843,13 @@ L4*: All analysis data \& code & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & -- 
 \hline
 L5*: Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & -- & --\\
 \hline
-L6: Some cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & -- & --\\
+L6: All cleaning code & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & -- & -- & --\\
 \hline
-L7: All cleaning code & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & -- & --\\
+L7*: Some instr. for raw data & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & ✔ & -- & --\\
 \hline
-L8*: Some instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -- & --\\
+L8*: All instr. for raw data & ✔ & ✔ & ✔ & ✔ & -- & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
-L9*: All instr. for raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
+L9*: L8* + Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & --\\
 \hline
 L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
@@ -860,7 +861,7 @@ L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ &
 \hypertarget{reproducibility-dimensions-at-the-paper-level}{%
 \subsection{Reproducibility dimensions at the paper-level}\label{reproducibility-dimensions-at-the-paper-level}}
 
-There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the {[}\emph{Improvements}'(\url{https://bitss.github.io/ACRE/improvements.html}) stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices.
+There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the \href{https://bitss.github.io/ACRE/improvements.html}{\emph{Improvements}} stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices.
 
 \textbf{Note:} The Assessment stage is the minimum requirement to submit your reproduction. To gain a better understanding of the paper and to help improve the reproducibility of social science research, however, we encourage you to also complete the \emph{Improvements} and \emph{Robustness} stages.
 

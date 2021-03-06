@@ -42,11 +42,8 @@ Data sources also vary by unit of analysis, with some sources matching the same 
 
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *Data Files* in the reproduction package. In the *Location* column, record their folder locations relative to the main reproduction folder^[a relative location takes the form of `folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `/username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you also review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any missing files from the reproduction package. Whenever a data source contains multiple files, enter them in the same cell, separated by semicolon (`;`).
 
-If you cannot find the files or file name corresponding to a specific data source, type "Missing" in the *Notes* column.
+If you cannot find the files or file name corresponding to a specific data source, type "Missing" in the *Notes* column. Check the *Provided* column if the data source was included in the original reproduction package. Check the *Cited* column if the data source was explicitly cited in the paper. Record your work using the following structure:    
 
-Check the *Provided* column if the data source was included in the original reproduction package. Check the *Cited* column if the data source was explicitly cited in the paper.
-
-this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
 ```{r raw-data-information, echo = FALSE, eval=temp_eval}
 raw_data_info <- data.frame(data_source = c('"Current Population Survey 2018"', '"Provincial Administration Reports"', '"2017 SAT scores"', "..."),
                             page = c("A1", "A4", "4", "..."),
@@ -91,7 +88,7 @@ Then, review the beginning and end of each code file to identify the inputs requ
 
 Finally, provide a brief description of the code's function in the *Description* column and classify its function as analysis or cleaning and/or construction in the *Primary Type* column.
 
-For each code file, record all outputs together and separate each item with ";". Record all of this information in the SSRP using the following structure:
+For each code file, record all outputs together and separate each item with (`;`). Record all of this information in the SSRP using the following structure:
 
 ```{r code-files-information, echo = FALSE, eval=temp_eval}
 code_files_info <- data.frame(file_name = c("output_table1.do", "data_cleaning02.R", "..."),
@@ -108,12 +105,13 @@ code_files_info %>%
 ```
 
 
-#### Common issues that might when creating a reproduction tree:
+#### Common issues that might occur when creating a reproduction tree:
 
  - If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.  
 
  - Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., "results1.log", "results2.csv") that will require manual copying and pasting to reproduce the desired display item (e.g. "Table 1"). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: "results1.log; results2.csv", Outputs: "Table 1").
 
+- Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., `data_location1_year1, data_location2_year1, data_location1_year2, ...`). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., `data_locationX_yearY`). 
 
 
 ## Connect display items to all its inputs usign the ReproducibiliTREE {#diagram}
@@ -209,7 +207,7 @@ adding_rows_to_code %>%
 
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-trees).  
-
+UPDATE LEVElS
 
 ## Assign a reproducibility score. {#score}
 Once you have identified all possible inputs and have a clear understanding of the connection between the display items and their inputs, you can assign reproducibility scores to individual display items.
@@ -230,57 +228,91 @@ Each level of computational reproducibility is defined by the availability of da
 
 Note that the assessment is made *at the level of individual display items*—a paper can be highly reproducible for its main results, but its other display items may not be as reproducible. The assessment includes a 10-point scale, where 1 represents that, under the current circumstances, reproducers cannot access any reproduction package. At level 10, the reproducer can access all of the necessary materials to faithfully reproduce the target display item from the raw data.
 
- - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data (+AD), analysis data (+RD), cleaning code (+CC), and analysis code (+AC).
+ - **Level 1 (L1):** No data or code are available. Possible improvements include adding: raw data, analysis data, cleaning code, and analysis code.
 
  You may have detected papers without any reproduction materials at the *Paper Selection* stage, where you should have recorded them as unsuccessful candidate papers.
 
- - **Level 2 (L2):** Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data (+AD) and analysis data (+RD).
+ - **Level 2 (L2):** Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data and analysis data.
 
- - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data (+RD), and adding analysis code (+AC).  
+ - **Level 3 (L3):** Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data, and adding analysis code.  
 
- - **Level 4 (L4):** All analytic data sets and analysis code are available, but the code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements include: debugging the analysis code (DAC) or obtaining raw data (+RD).      
+ - **Level 4 (L4):** All analytic data sets and analysis code are available, but the code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements include: debugging the analysis code or obtaining raw data.      
 
- - **Level 5 (L5):** Analytic data sets and analysis code are available and they produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data (+RD).
+ - **Level 5 (L5):** Analytic data sets and analysis code are available and they produce the same results as presented in the paper (CRA). The reproducibility package may be improved by obtaining the original raw data.
 
 **Note:** This is the highest level that most published research papers can attain currently. Computational reproducibility *from raw data* is required for papers that are reproducible at Level 6 and above.
 
- - **Level 6 (L6):** Cleaning code is partially available, but raw data is missing. Possible improvements include: completing cleaning code (+CC) and/or raw data (+RD).   
+ - **Level 6 (L6):** Cleaning code scripts are available (partial or complete), but raw data is missing. Possible improvements include: adding raw data.   
 
- - **Level 7 (L7):** Cleaning code is available and complete, but raw data are missing. Possible improvements: adding raw data (+RD).  
+ - **Level 7 (L7):** Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data.
 
- - **Level 8 (L8):** Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data (+RD).
+ - **Level 8 (L8):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR) or the analysis code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements: debugging the cleaning or analysis code.
 
- - **Level 9 (L9):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code (DCC).
+ - **Level 9 (L9):**  All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code.
 
- **Level 10 (L10):** All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR).  *Note that Level 10 is aspirational and may be unattainable for most research published today.*
+
+ - **Level 10 (L10):** All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR).  *Note that Level 10 is aspirational and may be unattainable for most research published today.*
 
 The following figure summarizes the different levels of computational reproducibility (for any given display item). For each level, there are reproducibility components and practices that are present (`✔`) or can be implemented to advance the level of reproducibility (-).
 
+
+
 ```{r levels-of-computational-reproducibility, echo = FALSE, eval=temp_eval}
-lcr_levels <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4: All analysis data & code","L5: Reproducible from analysis", "L6: Some cleaning code","L7: All cleaning code", "L8: Some raw data", "L9: All raw data", "L10: Reproducible from raw data"))
-availability <- data.frame(col1 = c("--",rep("✔", 9)),
-                         col2 = c("--",rep("✔", 9)),
-                         col3 = c("--", "--", rep("✔", 8)),
-                         col4 = c("--", "--", "--", rep("✔", 7)),
-                         col5 = c(rep("--", 4), rep("✔", 6)),
-                         col6 = c(rep("--", 5), rep("✔", 5)),
-                         col7 = c(rep("--", 6), rep("✔", 4)),
-                         col8 = c(rep("--", 7), "✔", "✔", "✔"),
-                         col9 = c(rep("--", 8), "✔", "✔"),
-                         col10 = c(rep("--", 9),"✔"))
+lcr_levels <-
+  data.frame(
+    levels = c(
+      "L1: No materials",
+      "L2: Only code",
+      "L3: Partial analysis data & code",
+      "L4: All analysis data & code",
+      "L5: Reproducible from analysis",
+      "L6: All cleaning code",
+      "L7: Some raw data",
+      "L8: All raw data",
+      "L9: All raw data + CRA",
+      "L10: Reproducible from raw data"
+    )
+  )
+availability <- data.frame(
+  col1 = c("--", rep("✔", 9)),
+  col2 = c("--", rep("✔", 9)),
+  col3 = c("--", "--", rep("✔", 8)),
+  col4 = c("--", "--", "--", rep("✔", 7)),
+  col5 = c(rep("--", 4), "✔", rep("--", 3), rep("✔", 2)),
+  col6 = c(rep("--", 5), rep("✔", 5)),
+  col7 = c(rep("--", 5), rep("✔", 5)),
+  col8 = c(rep("--", 6), "✔", "✔", "✔", "✔"),
+  col9 = c(rep("--", 7), "✔", "✔", "✔"),
+  col10 = c(rep("--", 9), "✔")
+)
 assign_lcr_score <- cbind(lcr_levels, availability)
 
 kable(assign_lcr_score,
-      col.names = c(" ", rep(c("P", "C","P", "C", " "), 2)),
+      col.names = c(" ", rep(c("P", "C", "P", "C", " "), 2)),
       caption = 'Levels of Computational Reproducibility \\\n (P denotes "partial", C denotes "complete")') %>%
-    add_header_above(c(" ","Analysis Code" = 2, "Analysis Data" = 2,
-                       "CRA", "Cleaning Code" = 2, "Raw Data" = 2, "CRR")) %>%
-    add_header_above(c(" ","Availability of materials, and reproducibility" = 10)) %>%
-        #add horizontal line to separate sections
-    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
-    footnote(alphabet = c("**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
-                         "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
+  add_header_above(
+    c(
+      " ",
+      "Analysis Code" = 2,
+      "Analysis Data" = 2,
+      "CRA",
+      "Cleaning Code" = 2,
+      "Raw Data" = 2,
+      "CRR"
+    )
+  ) %>%
+  add_header_above(c(" ", "Availability of materials, and reproducibility" = 10)) %>%
+  #add horizontal line to separate sections
+  row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
+  footnote(
+    alphabet = c(
+      "**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
+      "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."
+    )
+  )
 ```
+
+
 
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
 
@@ -300,29 +332,58 @@ Much of published research in the social sciences uses confidential or proprieta
 
  - **Adjusted Level 5 (L5\*):** All requirements for Level 4\* are met, and the authors provide a certification that a third party was able to reproduce  the display item (or the paper as a whole) from the analysis data (CRA). Such certification may include a signed letter by a disinterested reproducer or a certificate from a certification agency for data and code (e.g., see [CASCaD](https://www.cascad.tech/)).
 
- - **Levels 6 and 7** can be applied as described above.
+ - **Levels 6** can be applied as described above.
 
- - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, but instructions for accessing the *raw data* are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
+ - **Adjusted Level 7 (7\*):** All requirements for Level 6\* are met, but instructions for accessing the *raw data* are incomplete. Use the instructions described in Level 3 above to assess the instructions' completeness.
 
- - **Adjusted Level 9 (L9\*):**  All requirements for Level 8\* are met, and instructions for accessing the *raw data* are complete.
+ - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, and instructions for accessing the *raw data* are complete.
 
- - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification is provided that the display item can be reproduced from the raw data (CRA).
+ - **Adjusted Level 9 (L9\*):** All requirements for Level 8\* are met, and a certification is provided that the display item can be reproduced from the ananlysis data (CRA).
+ 
+ - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification is provided that the display item can be reproduced from the raw data (CRR).
 
 ```{r levels-of-computational-reproducibility-adjusted, echo = FALSE, eval=temp_eval}
-lcr_levels_adjusted <- data.frame(levels = c("L1: No materials", "L2: Only code","L3: Partial analysis data & code", "L4*: All analysis data & code","L5*: Proof of third party CRA", "L6: Some cleaning code","L7: All cleaning code", "L8*: Some instr. for raw data", "L9*: All instr. for raw data", "L10*: Proof of third party CRR"))
+lcr_levels_adjusted <-
+  data.frame(
+    levels = c(
+      "L1: No materials",
+      "L2: Only code",
+      "L3: Partial analysis data & code",
+      "L4*: All analysis data & code",
+      "L5*: Proof of third party CRA",
+      "L6: All cleaning code",
+      "L7*: Some instr. for raw data",
+      "L8*: All instr. for raw data",
+      "L9*: L8* + Proof of third party CRA", 
+      "L10*: Proof of third party CRR"
+    )
+  )
 #using same content as the last table
 assign_lcr_adjusted <- cbind(lcr_levels_adjusted, availability)
 
 kable(assign_lcr_adjusted,
-      col.names = c(" ", rep(c("P", "C","P", "C", " "), 2)),
+      col.names = c(" ", rep(c("P", "C", "P", "C", " "), 2)),
       caption = 'Levels of Computational Reproducibility with Proprietary/Confidential Data \\\n (P denotes "partial", C denotes "complete")') %>%
-    add_header_above(c(" ","Analysis Code" = 2, "Instr. Analysis Data" = 2,
-                       "CRA", "Cleaning Code" = 2, "Instr. Raw Data" = 2, "CRR")) %>%
-    add_header_above(c(" ","Availability of materials, and reproducibility" = 10)) %>%
-        #add horizontal line to separate sections
-    row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
-    footnote(alphabet = c("**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
-                         "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."))
+  add_header_above(
+    c(
+      " ",
+      "Analysis Code" = 2,
+      "Instr. Analysis Data" = 2,
+      "CRA",
+      "Cleaning Code" = 2,
+      "Instr. Raw Data" = 2,
+      "CRR"
+    )
+  ) %>%
+  add_header_above(c(" ", "Availability of materials, and reproducibility" = 10)) %>%
+  #add horizontal line to separate sections
+  row_spec(c(1, 5), extra_css = "border-bottom: 1px solid") %>%
+  footnote(
+    alphabet = c(
+      "**Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.",
+      "**Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets."
+    )
+  )
 ```
 
 ### Reproducibility dimensions at the paper-level   

@@ -23,7 +23,7 @@ describe-inputs
 desc-sourc
 desc-analy
 desc-scripts
-common-issues-that-might-when-creating-a-reproduction-tree
+common-issues-that-might-occur-when-creating-a-reproduction-tree
 diagram
 complete-tree
 incomplete-workflow-information
