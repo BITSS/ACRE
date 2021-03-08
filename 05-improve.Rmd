@@ -5,7 +5,7 @@ library(kableExtra)
 ```
 # Improvements   
 
-As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The SSRP also allows you to record improvements that you've already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper's methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+NEW WORD. As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The SSRP also allows you to record improvements that you've already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper's methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
 
 Some of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request and, if not, how to approach them in order to have a constructive exchange.  
 
