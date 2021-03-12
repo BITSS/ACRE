@@ -19,13 +19,13 @@ As part of your assessment of specific display items, you will identify potentia
 
 Reproduction packages often do not include all original [raw datasets](#describe-inputs). To obtain any missing raw data or information about them, follow these steps:
 
-1. Identify the missing file. During the [Assessment](#assessment) stage, you identified all data sources from the paper's body and appendices (Assessment step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as “Some/All" in the `known_missing` field of the for each specific data source.      
+1. Identify the missing file. During the [Assessment](#assessment) stage, you identified all data sources from the paper's body and appendices ([Assessment](https://www.socialsciencereproduction.org/reproductions/6f421270-24a1-4540-af26-a91a3eb76d1d/assessment?step=0) step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as “Some/All" in the `known_missing` field of the for each specific data source.      
 2. Verify whether this file (or files) can be easily obtained from the web.   
       - 2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See [chapter 7](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) for more guidance.   
       - 2.2 - If no: proceed to step 3.   
-3. Use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files.  
+3. Eventually you will be able to use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files. For now, skip to the next step. 
 4. Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See [chapter 7](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) for sample language on how to approach the authors for this specific scenario.  
-5. If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data.
+5. If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data (e.g., access fees, how much time it might take between requesting and receiving access, etc.).
 
 ### Adding missing analytic data files {#ad}
 
@@ -33,7 +33,7 @@ Reproduction packages often do not include all original [raw datasets](#describe
 
 1. Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (e.g., `analysis_data_03.csv`).   
 2. Verify that the data cannot be obtained by running the data cleaning code over the raw data.    
-3. Use the SSRP to verify if previous attempts have been made to contact the authors about this data.    
+3. Eventually you will be able to use the SSRP to verify if previous attempts have been made to contact the authors about this data. For now, skip to the next step.    
 4. [Contact the authors](#tips-for-communication) and request the specific data set.
 
 ### Adding missing analysis code {#ac}
@@ -41,7 +41,7 @@ Reproduction packages often do not include all original [raw datasets](#describe
 
 1. Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to...” or “We estimate this regression using a bandwidth of...”).  
 2. Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the [reproduction diagram](#diagram).   
-3. Use the SSRP to verify if previous attempts have been made to contact the authors about this issue.     
+3. Eventually you will be able to use the SSRP to verify if previous attempts have been made to contact the authors about this issue. For now, skip to the next step.
 4. [Contact the authors](#tips-for-communication) and request the specific code files.     
 5. If step #4 does not work, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.   
 
