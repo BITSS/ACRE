@@ -6,7 +6,7 @@ This chapter contains guidance for constructive and respectful communication bet
 **1. Carefully and transparently plan your study.**  
 a. Clearly state that you are conducting a reproduction of their original work.   
 b. Explain why you have chosen this study. 
-c. Explain how "far" your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.  
+c. Explain how "far" your results must deviate from the original work before claiming that the study could not be reproduced.  Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.  
 
 
 **2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.**  
@@ -27,7 +27,7 @@ Consider the following *before* you contact the original author:
 
 2. Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this [Data and Code Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) to determine whether you have everything before you start. A few things to consider:  
    - A *Readme* file, if available, would be a good place to start.  
-   - Check whether there are any restrictions on accessing the data or code and whether there are instructions on how to access these files for the purpose of reproduction.
+   - Check whether there are any restrictions on accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
 
 3. If a reproduction package is not readily available in the location where the article is published (e.g., the journal website), check the authors' websites, Dataverse profiles, or other relevant archives and/or data repositories like the [ICPSR Publications Related Archive](https://www.icpsr.umich.edu/icpsrweb/).
 
@@ -327,7 +327,7 @@ The American Economic Association and other economic societies have strict polic
   
 Here are a some steps you can take if you believe you have experienced bullying, discrimination or harassment: 
 
-  - ** file a complaint with the [AEA Ombudsperson](https://www.aeaweb.org/about-aea/aea-ombudsperson).** Any AEA member can file a complaint. (You can also join the AEA solely for the purpose of filing a report.) The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process [here](https://www.aeaweb.org/about-aea/aea-ombudsperson/faq).
+  - ** file a complaint with the [AEA Ombudsperson](https://www.aeaweb.org/about-aea/aea-ombudsperson).** Any AEA member can file a complaint. You can also join the AEA solely for the purpose of filing a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process [here](https://www.aeaweb.org/about-aea/aea-ombudsperson/faq).
   - ** file a report with your institution's office for the prevention of harassment & discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include "Office for the Prevention of Harassment and Discrimination" (in institutions that are part of the University of California system), "Office of Equity and Title IX", etc.
   - **Contact your institution's Ombudsperson/Ombuds Office.** If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers offer a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case. 
   - **Access mental health services at your institution.** While no amount of bullying, discrimination, or harassment is acceptable or the fault of the victim, these unfortunately still occur and can take a toll on victims' mental health. Many universities offer short-term Counseling & Psychological Services (CAPS) for academic, career, and personal issues.
