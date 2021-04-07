@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-03-06}
+\date{2021-04-07}
 
 \begin{document}
 \maketitle
@@ -427,6 +427,12 @@ Draft the summary in a plain text editor and paste the text in the form.
 
 At the previous stage, you recorded the original reproduction package made available by the paper's authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole.
 You can start by downloading the reproduction package (or \emph{forking}, if on GitHub) and uploading a copy titled ``Revised reproduction package for {[}Paper Citation, e.g.~Smith et al.~(2019){]}'' to a trusted repository. Examples of trusted repositories include \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage you to also use version control software (e.g., Git) during your reproduction.
+
+Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following:
+- Separate your reproduction package in two: (1) data and (2) code and documentation.\\
+- Post the second one in a trusted repository.\\
+- For the data reproduction package identify all the files that are different\\
+from the original reproduction package and upload only those. For example, suppose the original repro package has \texttt{data/raw\_data1.csv}, and \texttt{data/clean\_data/data\_set1.dta}. If you modify only the file \texttt{data\_set1.dta}, then upload a revised reproduction package that has the same folder structure but only the files that differ: \texttt{data/clean\_data/data\_set1.dta}. If you want to make it even more clear you could add a readme file describing the modified files.
 
 As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work.
 
@@ -888,23 +894,23 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Identify the missing file. During the \protect\hyperlink{assessment}{Assessment} stage, you identified all data sources from the paper's body and appendices (Assessment step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as ``Some/All'' in the \texttt{known\_missing} field of the for each specific data source.\\
+  Identify the missing file. During the \protect\hyperlink{assessment}{Assessment} stage, you identified all data sources from the paper's body and appendices (\href{https://www.socialsciencereproduction.org/reproductions/6f421270-24a1-4540-af26-a91a3eb76d1d/assessment?step=0}{Assessment} step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as ``Some/All'' in the \texttt{known\_missing} field of the for each specific data source.\\
 \item
   Verify whether this file (or files) can be easily obtained from the web.
 
   \begin{itemize}
   \tightlist
   \item
-    2.1 - If yes: obtain the missing files and add them to the reproduction package. Make sure to obtain permission from the original author to publicly share this data. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{chapter 7} for more guidance.\\
+    2.1 - If yes: obtain the missing files and add them to your revised reproduction package. Make sure to obtain permission from the owners of this data source to publicly share this data. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{chapter 7} for more guidance.\\
   \item
     2.2 - If no: proceed to step 3.\\
   \end{itemize}
 \item
-  Use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files.\\
+  Eventually you will be able to use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files. For now, skip to the next step.
 \item
   Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{chapter 7} for sample language on how to approach the authors for this specific scenario.\\
 \item
-  If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions for future researchers to follow, including contact information and possible costs of obtaining the raw data.
+  If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions on how to access these data. for future researchers to follow, including contact information and possible costs of obtaining the raw data (e.g., access fees, how much time it might take between requesting and receiving access, etc.).
 \end{enumerate}
 
 \hypertarget{ad}{%
@@ -920,7 +926,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \item
   Verify that the data cannot be obtained by running the data cleaning code over the raw data.\\
 \item
-  Use the SSRP to verify if previous attempts have been made to contact the authors about this data.\\
+  Eventually you will be able to use the SSRP to verify if previous attempts have been made to contact the authors about this data. For now, skip to the next step.\\
 \item
   \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific data set.
 \end{enumerate}
@@ -938,7 +944,7 @@ Reproduction packages often do not include all original \protect\hyperlink{descr
 \item
   Identify the code file and the approximate line in the script where the analysis can be carried out. If you cannot find the relevant code file, identify its location relative to the main folder using the the steps in the \protect\hyperlink{diagram}{reproduction diagram}.\\
 \item
-  Use the SSRP to verify if previous attempts have been made to contact the authors about this issue.\\
+  Eventually you will be able to use the SSRP to verify if previous attempts have been made to contact the authors about this issue. For now, skip to the next step.
 \item
   \protect\hyperlink{tips-for-communication}{Contact the authors} and request the specific code files.\\
 \item
@@ -971,6 +977,12 @@ Whenever code is available in the reproduction package, you should be able to de
 \subsection{Debugging cleaning code}\label{debugging-cleaning-code}}
 
 Follow the same steps that you did to debug the analysis code (above), but report them separately.
+
+\hypertarget{information-on-how-to-access-confidentialpropietary-data}{%
+\subsubsection{Information on how to access confidential/propietary data}\label{information-on-how-to-access-confidentialpropietary-data}}
+
+If the original authors cannot provide the raw or analytical data due to legal or ethical reasons, they can still provide information on how to access such data.
+HERE
 
 \hypertarget{paper-level}{%
 \section{Paper-level improvements}\label{paper-level}}
@@ -1199,10 +1211,17 @@ A completed reproduction will consist of three different types of outputs:
 
 \textbf{1. Revised reproduction package} -- Deposit your revised version of the original reproduction package in a trusted repository, such as \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, or the \href{osf.io/}{Open Science Framework}. You should submit a revised reproduction package any time that you perform any type of \protect\hyperlink{improvements}{improvement} to the original reproduction package. This revised reproduction package is expected to be self-contained as it might be used by future reproducers for assessment and improvement. If your new reproduction package is larger than 2Gb (?){[}A: how is this determined, it sounds arbitrary?{]}, or it contains data that you don't have permission to share, remove the specific files from your reproduction package and add a reference to the original reproduction package {[}A: what does making a reference mean and look like in this context? I suggest providing an example of how to do that.{]}.
 
-Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:\\
-- Has a digital object identifier (DOI). All of the trusted repositories referenced above generate DOIs. This is a stable, citable link that will allow others to easily find your work.
-- Is titled following this convention: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer\ -\ year\ when\ the\ reproduction\ was\ completed}
-- If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g.~\texttt{/data/raw/large\_file.csv}).
+Before submitting the reproduction, make sure that your revised reproduction package fulfills the following requirements:
+
+\begin{itemize}
+\tightlist
+\item
+  Has a digital object identifier (DOI). All of the trusted repositories referenced above generate DOIs. This is a stable, citable link that will allow others to easily find your work.
+\item
+  Is titled following this convention: \texttt{revised\ reproduction\ package\ for\ -\ title\ of\ the\ paper\ -\ last\ name\ of\ reproducer\ -\ year\ when\ the\ reproduction\ was\ completed}
+\item
+  If it is not self-contained, indicate the DOI of the last reproduction package used for the reproduction (the original or a previously revised reproduction package), and the relative file location of the missing files (e.g.~\texttt{/data/raw/large\_file.csv}).
+\end{itemize}
 
 \textbf{2. Reproduction report(s)} -- At the end of each stage, the Social Science Reproduction Platform will give you the option to generate a report summarizing your work for that stage. Once you've submitted your final reproduction, the platform will also automatically generate a final report with its own DOI (different from the DOI used for the revised reproduction package). If you are conducting this reproduction as part of a supervised course or project, your instructor or advisor should have defined the structure of those reports (e.g., Stage 1 and 2 reports may be part of problem set 1, and Stage 3 and 4 reports may be a part of problem set 2). Each report will contain the following information:\\
 - \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.\\
@@ -1218,9 +1237,9 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 
 \begin{itemize}
 \item
-  Anonymity: You may choose to post your reproduction anonymously for up to one year after submitting it. During this embargo period, unidentifiable data from your reproduction (i.e., numerical and categorical form responses) will be visible to other platform users, but your identity and indentifiable data (i.e., text form responses) will not be revealed.
+  Anonymity: You may choose to post your reproduction anonymously for a period of time (TBD) after submitting it. During this embargo period, unidentifiable data from your reproduction (i.e., numerical and categorical form responses) will be visible to other platform users, but your identity and identifiable data (i.e., text form responses) will not be revealed.
 \item
-  Using the data from your reproduction: The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature.
+  Using the data from your reproduction: The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student who is using the SSRP as part of a course, results from your work will still be integrated into these descriptive statistics. However, we will separately display statistics for all reproductions and those not conducted anonymously or as part of a course.
 \end{itemize}
 
 \hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
@@ -1233,16 +1252,14 @@ a. Clearly state that you are conducting a reproduction of their original work.\
 b. Explain why you have chosen this study.
 c.~Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
 
-\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper just like you might do for your own work.}\\
-a. Avoid binary judgments and statements like ``failed to reproduce.'' Clearly state which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).
+\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.}\\
+a. Avoid binary judgments and statements like ``failed to reproduce.'' State clearly which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).
 b. Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
 c.~Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
 d.~For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
 e. Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
 
-To help you put these recommendations into practice, we've developed template language for common scenarios that reproducers and authors may encounter in their interactions.
-
-While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on the context and needs of your specific project. Feel free to \href{mailto:acre@berkeley.edu}{contact us} if you need more guidance or would like to provide feedback on these materials.
+To help you put these recommendations into practice, we developed template language for common scenarios that reproducers and authors may encounter in their interactions. While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on your project's context and needs. Feel free to \href{mailto:acre@berkeley.edu}{contact us} if you need more guidance or would like to provide feedback on these materials.
 
 \hypertarget{for-reproducers-contacting-the-authors-of-the-original-study}{%
 \section{For reproducers contacting the authors of the original study}\label{for-reproducers-contacting-the-authors-of-the-original-study}}
@@ -1252,12 +1269,14 @@ Consider the following \emph{before} you contact the original author:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
+  Eventually, you will be able to search the SSRP for reproduction materials or records of past interactions with the authors of a given paper, but you can skip this step for now.
+\item
   Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start. A few things to consider:
 
   \begin{itemize}
   \tightlist
   \item
-    A \emph{Readme} file, if available, would be a good place to start. For economics, all papers published in AEA journals after July 2019 should have such documentation.\\
+    A \emph{Readme} file, if available, would be a good place to start.\\
   \item
     Check whether there are any restrictions on accessing the data or code, and whether there are instructions on how to access these files for the purpose of reproduction.
   \end{itemize}
@@ -1269,7 +1288,7 @@ Consider the following \emph{before} you contact the original author:
   \begin{itemize}
   \tightlist
   \item
-    Basic information about the paper being reproduced (include title, version, date, and a DOI (or just a URL));\\
+    Basic information about the paper to reproduce (include title, version, date, and a DOI (or just a URL));\\
   \item
     Context for the reproduction (as part of a class exercise, thesis, personal project, etc.) and a note that the outcome will be recorded on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}(SSRP);
   \item
@@ -1284,7 +1303,7 @@ Consider the following \emph{before} you contact the original author:
 \item
   Follow up if you don't get a response within two weeks (or whatever deadline you set), and include any details or clarifications that were left out in your first email.
 \item
-  Record the outcome of your interaction with the original author on the SSRP. You can qualify the outcome as one of the following:
+  Record the outcome of your interaction with the original author at the \emph{Select a Paper} stage on the SSRP. You can qualify the outcome as one of the following:
 
   \begin{itemize}
   \tightlist
@@ -1303,7 +1322,7 @@ Consider the following \emph{before} you contact the original author:
   \item
     The author \emph{declined} to share the reproduction package
   \item
-    The author \emph{did not respond} (including after a reminder was sent) within 4 weeks after the initial request.
+    The author \emph{did not respond} (including after a reminder was sent) within four weeks after the initial request.
   \end{itemize}
 \end{enumerate}
 
@@ -1313,7 +1332,7 @@ Consider the following \emph{before} you contact the original author:
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Reproduction package for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Reproduction package for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1343,13 +1362,11 @@ If the original author asks you to reproduce the results using the appendix, you
 \begin{quote}
 Dear \texttt{{[}Title\ (e.g.,\ "Dr.")\ Last\ name\ of\ Corresponding\ Author{]}},
 
-Thank you for your response.
+Thank you for your response. Our group's goal is to improve computational reproducibility using original data and code. Your appendix was very helpful, and I have attempted to use it to reproduce your results.\texttt{{[}Describe\ initial\ efforts\ to\ reproduce\ the\ results.{]}}.
 
-Our group's goal is to improve computational reproducibility using original data and code. Your appendix was very helpful and I have attempted to use it to reproduce your results.\texttt{{[}Describe\ initial\ efforts\ to\ reproduce\ the\ results.{]}}.
+To help me advance with the reproduction, I hope you can share the source code and provide guidance on the following. \texttt{{[}List\ out\ any\ unclear\ steps,\ data\ sources,\ or\ otherwise\ missing\ components.{]}}.
 
-I was hoping for either source code or guidance so on a few points of confusion. \texttt{{[}List\ out\ any\ unclear\ steps,\ data\ sources,\ or\ otherwise\ missing\ components.{]}}.
-
-We very much appreciate your time. Once completed, the reproduction package will be publicly available so you can use it as a reference if and when another reproducer comes with a similar request. Please let me know if you have any questions.
+Thank you in advance for your time. Once completed, I aim to make the reproduction package publicly available so you can use it as a reference in future requests. Please let me know if you have any questions.
 
 Best regards,\\
 \texttt{{[}Reproducer{]}}
@@ -1361,7 +1378,7 @@ Best regards,\\
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Reproduction materials for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1369,11 +1386,11 @@ Dear \texttt{{[}Title\ (e.g.,\ "Dr.")\ Last\ name\ of\ Corresponding\ Author{]}}
 
 I am contacting you regarding reproduction materials for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
 
-I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working to reproduce this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
+I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working on reproducing this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
 
-To help me reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (e.g.,\ raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, but I was unable to locate the items. You can be assured that I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if there are any legal or ethical restrictions that apply to any of the reproduction materials so that I can take that into consideration during this exercise.
+To help me reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (e.g.,\ raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, but I could not locate the items. I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if any legal or ethical restrictions apply to any of the reproduction materials to consider during this exercise.
 
-Note that I will record the outcome of my reproduction on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}(SSRP), an open-source repository for the results of verifications of computational reproducibility of published work in the social sciences. SSRP is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences)}. Let me know if you would like me to share the outcome of my reproduction with you, and whether you might be interested in providing a response.
+Note that I will record the outcome of my reproduction on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}(SSRP), an open-source repository for the results of verifications of computational reproducibility of published work in the social sciences. The SSRP was developed by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences)}. Let me know if you would like me to share the outcome of my reproduction with you, and whether you are interested in providing a response.
 
 Since I am required to complete this project by \texttt{{[}date{]}}, I would appreciate your response by \texttt{{[}deadline{]}}.
 
@@ -1386,12 +1403,12 @@ Best regards,\\
 \hypertarget{asking-for-additional-guidance-when-some-materials-have-been-shared}{%
 \subsection{Asking for additional guidance when some materials have been shared}\label{asking-for-additional-guidance-when-some-materials-have-been-shared}}
 
-\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still run into challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or to share missing materials. As in the previous scenario described above, demonstrate that you've made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
+\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still face challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or to share missing materials. As in the previous scenario described above, demonstrate that you've made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
 
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Clarification for reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Clarification for reproduction materials for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1410,24 +1427,24 @@ Best regards,\\
 \textbf{1: An example of well-described issues:}
 
 \begin{quote}
-Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce OUTPUT X:
+Specifically, I am attempting to reproduce Display Item X (e.g., table 1, figure 3). I found that the following components are required to reproduce Display Item X:
 \end{quote}
 
-OUTPUT X
+Display Item X
 └───{[}code{]} formatting\_table1.R
-├───output1\_part1.txt\\
+├───display\_itemx\_part1.txt\\
 \textbar{} └───{[}code{]} output\_table1.do\\
 \textbar{} └───{[}data{]} analysis\_data01.csv
 \textbar{} └───{[}code{]} data\_cleaning01.R\emph{
 \textbar{} └───{[}data{]} UNKNOWN
-└───output1\_part2.txt\\
+└───display\_itemx\_part2.txt\\
 └───{[}code{]} output\_table2.do\\
 └───{[}data{]} analysis\_data02.csv
 └───{[}code{]} data\_cleaning02.R
 └───{[}data{]} admin\_01raw.csv}
-\textgreater I have marked with an asterisk (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+\textgreater I have marked with an asterisk (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 \textgreater{}
-\textgreater I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}. \textbf{Doing this will ensure that you will not be asked twice for the same missing file.}
+\textgreater I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}. \textbf{Doing this will ensure that you will not be asked more than once for the same missing file.}o
 
 \textbf{2. An example of poorly described issues:}
 
@@ -1436,14 +1453,14 @@ Your paper does not reproduce. I have tried for several hours now, and can't get
 \end{quote}
 
 \hypertarget{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}{%
-\subsection{\texorpdfstring{Response when the original author has declined to share due to \emph{undisclosed reasons}}{Response when the original author has declined to share due to undisclosed reasons}}\label{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}}
+\subsection{\texorpdfstring{response when the original author has declined to share due to \emph{undisclosed reasons}}{response when the original author has declined to share due to undisclosed reasons}}\label{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}}
 
 \emph{Note:} You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Re: Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Re: Reproduction materials for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1458,12 +1475,12 @@ Best regards,\\
 \end{quote}
 
 \hypertarget{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}{%
-\subsection{Response when the original author has declined to share due to legal or ethical restrictions of the data}\label{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}}
+\subsection{response when the original author has declined to share due to legal or ethical restrictions of the data}\label{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}}
 
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Re: Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Re: Reproduction materials for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1497,14 +1514,14 @@ Best regards,\\
 \hypertarget{contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise}{%
 \subsection{Contacting the original author to share the results of your reproduction exercise}\label{contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise}}
 
-\emph{Note}: Reporting the results of reproductions can be the most contentious part of the process, particularly in instances where the reproducer is not able to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
+\emph{Note}: Reporting the results of reproductions can be the most contentious part of the process, particularly when the reproducer is unable to fully reproduce the paper or finds significant deviations from the original work. However, if the reproduction can correctly identify the sources of such deviations, it may be viewed as an improved version of the original work.
 
 Regardless of the outcome of the reproduction exercise, the guidance from the introduction of this chapter still stands: \emph{reproduce the work of others as you would like for others to reproduce yours}, and make sure that is reflected in how you discuss any discrepancies between your and the original work.
 
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Reproducibility Assessment of \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Reproducibility Assessment of \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1522,9 +1539,9 @@ The results of each step of my reproduction include i) Assessment, ii) Improveme
 \item
   Within the scope of your reproduction, describe exactly which items you were able to reproduce.\\
 \item
-  Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce each item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes, or failures, and \emph{always talk about the work -- not the author!}\\
+  Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce each item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes, or failures, and \emph{always talk about the work---not the author!}\\
 \item
-  Use sensitive language when presenting discrepancies, e.g., ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them -- that way you will proactively address potential criticism!\\
+  Use sensitive language when presenting discrepancies, e.g., ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them---that way, you will proactively address potential criticism!\\
 \item
   Describe how you tried to improve the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g., file organization or code commenting), try to explain why you think they are an improvement over the original work. If you didn't make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.{]}`
 \end{itemize}
@@ -1548,7 +1565,7 @@ In cases of dismissive comments, the best course of action may be to simply than
 \textbf{Template email:}
 
 \begin{quote}
-\textbf{Subject:} Re: Reproduction materials for \texttt{{[}“Title\ of\ the\ paper”{]}}
+\textbf{Subject:} Re: Reproduction materials for \texttt{{[}"Title\ of\ the\ paper"{]}}
 \end{quote}
 
 \begin{quote}
@@ -1565,7 +1582,7 @@ Best regards,\\
 \hypertarget{for-original-authors-responding-to-requests-from-reproducers}{%
 \section{For original authors responding to requests from reproducers}\label{for-original-authors-responding-to-requests-from-reproducers}}
 
-This section contains guidance for authors of papers involved in reproductions on the Social Science Reproduction Platform. We present language that may be helpful for various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{this chapter} always applies: ``Treat others and their work as you would like others to treat you and your work!'' We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. \href{emailto:acre@berkeley.edu}{Let us know} if you need guidance in other scenarios!
+This section contains guidance for authors of papers involved in reproductions on the Social Science Reproduction Platform. We present language that may help various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{this chapter} always applies: ``Treat others and their work as you would like others to treat you and your work!'' We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. \href{emailto:acre@berkeley.edu}{Let us know} if you need guidance in other scenarios!
 
 \hypertarget{responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction}{%
 \subsection{Responding to a repeated request that has been addressed in an earlier interaction}\label{responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction}}
@@ -1573,9 +1590,10 @@ This section contains guidance for authors of papers involved in reproductions o
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for your interest in my work. Note that I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect \textgreater may be already recorded on the SSRP. I'm copying my original response below for your reference. You may find further guidance in the readme file in the reproduction \textgreater package.
+Thank you for your interest in my work. I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect may be already recorded on the SSRP. I'm copying my original response below for your reference. You may find further guidance in the readme file in the reproduction package.
 
 If there are no prior records of these issues on the SSRP, please record the enclosed response {[}and materials{]}. This will also help avoid the duplication of effort \textgreater on the part of others who may be interested in reproducing this work.
+
 Good luck with the remainder of your project and thank you in advance for your cooperation!
 
 Best regards,
@@ -1590,7 +1608,7 @@ Dear {[}Reproducer{]},
 
 Thank you for reviewing my work closely. I wish I could be of more help, but unfortunately I no longer have access to the \textgreater requested materials due to \texttt{{[}briefly\ describe\ the\ circumstances\ that\ prevent\ you\ from\ providing\ the\ materials{]}}.
 
-While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that \textgreater are readily available for this \textgreater purpose, note that this paper was written at a time when different standards of reproducibility \textgreater were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
+While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that are readily available for this purpose note that this paper was written when different standards of reproducibility \textgreater were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
 
 I look forward to working with you to address this and improve the overall reproducibility of the paper.
 
@@ -1656,14 +1674,14 @@ Here are a some steps you can take if you believe you have experienced bullying,
 \begin{itemize}
 \tightlist
 \item
-  \textbf{File a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.} Any AEA member can file a complaint. (You can also join the AEA solely for the purpose of filing a report.) The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
+  ** file a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.** Any AEA member can file a complaint. You can also join the AEA solely for the purpose of filing a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California system), ``Office of Equity and Title IX'', etc.
+    ** file a report with your institution's office for the prevention of harassment \& discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California system), ``Office of Equity and Title IX'', etc.
   \item
-    \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers are a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
+    \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers offer a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
   \item
     \textbf{Access mental health services at your institution.} While no amount of bullying, discrimination, or harassment is acceptable or the fault of the victim, these unfortunately still occur and can take a toll on victims' mental health. Many universities offer short-term Counseling \& Psychological Services (CAPS) for academic, career, and personal issues.
   \item
@@ -4615,64 +4633,63 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \chapter{Definitions}\label{definitions}}
 
 \hypertarget{concepts-in-reproducibility}{%
-\section{Concepts in reproducibility}\label{concepts-in-reproducibility}}
+\section{Concepts in Reproducibility}\label{concepts-in-reproducibility}}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Analytic data} -- Data used as the final input in a workflow in order to produce a statistic displayed in the paper (including appendices).\\
+  \textbf{Analytic data:} Data used as the final input in a workflow to produce a statistic (display item) in the paper (including appendices).\\
 \item
-  \textbf{Claim (concept)} -- A major hypothesis in a paper, whose results are presented in one or more \textbf{display items}.
+  \textbf{(Research) claim:} According to a definiton provided by the \href{https://replicats.research.unimelb.edu.au/\#tab301}{repliCATS project}, a research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A paper can include more than one claim. Claims are usually described in the paper's abstract; however, sometimes, the claim described in the abstract does not match the claim that is tested in the paper.
+  In the SSRP framework, different claims in a paper may be tested using different methodologies, and their results may be presented in one or more display items, such as tables and figures (\href{https://bitss.github.io/ACRE/intro.html\#fig:diagram}{figure 0.1} illustrates this idea). There are several types of claims, including:
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Causal claim} -- An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. Example: ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
+    \textbf{Causal claim:}An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. E.g., ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
   \item
-    \textbf{Descriptive/predictive claim} -- A paper with such kind of a claim estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. Example: ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
+    \textbf{Descriptive/predictive claim:} An assertion that estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. E.g., ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
+    \textbf{Coding error:} A coding error may occur when a section of the code executes a procedure that contradicts the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females.
   \end{itemize}
 \item
-  \textbf{Coding error} -- A coding error will occur when a section of the code, of the reproduction package, executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (paper or comments of the code). For example an error happens if the paper specify that the analysis is perform on the population of males, but the code restricts the analysis to females only. Please follow the \href{ADD\%20LINK}{ACRE procedure to report coding errors}.
+  \textbf{Data availability statement:} A description, normally included in the paper or the appendix, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availability statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
 \item
-  \textbf{Data availability statement} -- A description, normally included in the paper, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availaibility statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
+  \textbf{Data citation:}The practice of referencing a dataset, rather than just the paper in which a dataset was used. Data citations help other researchers find data and reward data sharing. Find further guidance on data citations \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
 \item
-  \textbf{Data citation} -- The practice of citing a dataset, rather than just the paper in which a dataset was used. This helps other researchers find data, and rewards researchers who share data. Find guidance on data citation \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
+  \textbf{Data sharing:} Making the data used in an analysis available to others, ideally through a trusted repository (see below).
 \item
-  \textbf{Data sharing} -- Making the data used in an analysis widely available to others, ideally through a trusted public repository/archive.\\
+  \textbf{Disclosure:} In addition to publicly declaring all potential conflicts of interest, researchers should provide rich details on the methods used for testing a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in the appendix or supplementary material.
 \item
-  \textbf{Disclosure} -- In addition to publicly declaring all potential conflicts of interest, researchers should detail all the ways in which they test a hypothesis, e.g., by including the outcomes of all regression specifications tested. This can be presented in appendices or supplementary material if room is limited in the body of the text.
+  \textbf{Digital Object Identifier (DOI):} A DOI is a string of numbers, letters, and symbols used to permanently identify digital scientific contributions, such as articles, datasets, software, and others (also see \href{https://www.doi.org/}{DOI.org}). Once linked to a contribution, DOIs are permanent and are thus helpful to include in references.
 \item
-  \textbf{Intermediate data} -- Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data should not contain direct identifiers.
+  \textbf{Intermediate data:} Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data don't contain direct identifiers.
 \item
-  \textbf{Literate programming} -- Writing code to be read and easily understood by a human. This best practice can make a researcher's code more easily reproducible.
+  \textbf{Literate programming:} The practice of writing and commenting code such that it can be read and understood by a human.
 \item
-  \textbf{Pre-specification} -- The act of detailing the method of analysis before actually beginning data analysis.
+  \textbf{Pre-specification (or pre-registration):} The act of detailing, ahead of time, the statistical analyses that will be conducted for a given research project. Expected outcomes, control variables, and regression specifications are all written in as much detail as possible. This serves to make research confirmatory in nature.
+  Researchers commonly record such details in a hypothesis or trial registry, usually while also providing a pre-analysis plan.
 \item
-  \textbf{Processed data} -- Raw data that have gone through any transformation other than the removal of PII.\\
+  \textbf{Processed data:} Raw data that have gone through any transformation other than removing personally identifiable information (PII).\\
 \item
-  \textbf{Raw data} -- Unmodified data files obtained by the authors from the sources cited in the paper. Data from which personally identifiable information (PII) has been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.\\
+  \textbf{Raw data:} Unmodified data files obtained by the authors from the sources cited in the paper. Data from which PII have been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.\\
 \item
-  \textbf{(Trial) registry} -- A database of registered studies or trials, for example the AEA RCT Registry or clinicaltrials.gov. Some of the largest registries only accept randomized trials, hence the frequent discussion of `trial registries. \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status. Registrations are time-stamped.
+  \textbf{(Trial) registry} -- A public database of registered studies or trials, e.g.~The \href{https://www.socialscienceregistry.org/}{American Economic Association's registry for randomized controlled trials}, \href{https://osf.io/prereg/}{the Open Science Framework registries}, or \href{https://www.clinicaltrials.gov/}{ClinicalTrials.gov}. Some of the largest registries only accept randomized trials, hence the frequent discussion of ``trial registries.'' \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status (see also ``Pre-specification'' above). Registrations are time-stamped.
 \item
-  \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to check if the published results are obtained. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
+  \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists, and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to obtain the published results. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
 \item
-  \textbf{Reproducibility} -- A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
+  \textbf{Reproducibility:} A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
 \item
-  \textbf{Reproduction package} -- A collection of all the materials associated with the reproduction of a paper. A reproduction package may contain data, code and documentation. When the materials are provided in the original publication they will be labeled as `original reproduction package', when they provided by a previous reproducer they will be referred as `reproducer X's reproduction package'. At this point you are only assessing the existence of one (or more) reproduction packages, you will not be assessing the quality of its content at this stage.
+  \textbf{Reproduction package:} A collection of all the materials necessary to reproduce a specific display item or an entire paper. A reproduction package may contain data, code, and other documentation. When the materials are provided in the original publication, they should be labeled as ``original reproduction package''; when a reproducer provides them, they should be referred to as ``Reproducer X's reproduction package.''\\
 \item
-  \textbf{Researcher degrees of freedom} -- The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching, covariate adjustment, or selective reporting.
+  \textbf{Researcher degrees of freedom:}The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching (also referred to as ``p-hacking''), covariate adjustment, selective reporting, or hypothesizing after the results are known (HARKing).
 \item
-  \textbf{Robustness check:} -- Any possible change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. In the context of ACRE, the focus should be on the set of \textbf{reasonable specifications} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}), defined as (1) sensible tests of the research question, (2) expected to be statistically valid, and (3) not redundant with other specifications in the dataset.
+  \textbf{Robustness check:} An change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The SSRP distinguishes between \emph{reasonable specifications} and \emph{feasible specifications}. Reasonable robustness checks (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of feasible robustness checks is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.
 \item
-  \textbf{Reasonable specification} --
+  \textbf{Specification searching:} Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, resulting in false positives, thus impeding reproducibility.\\
 \item
-  \textbf{Specification} --
+  \textbf{Trusted digital repository:} An online repository whose mission is to provide ``reliable, long-term access to managed digital resources to its customers, now and in the future.''(see \href{https://www.oclc.org/research/archive/projects/trustedrep.html}{OCLC (2002)}). Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.\\
 \item
-  \textbf{Specification searching} -- Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, can result in false positives, and thus impede replicability.\\
-\item
-  \textbf{Trusted digital repository} -- An online platform where data can be stored such that it is not easily manipulated, and will be available into the foreseeable future. Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.\\
-\item
-  \textbf{Version control} -- The act of tracking every change made to a computer file. This is quite useful for empirical researchers who may edit their programming code often.
+  \textbf{Version control} -- The act of tracking every change made to a computer file. Version control is useful for empirical researchers who may edit their programming code often.
 \end{itemize}
 
 \hypertarget{concepts-in-the-acre-exercise-and-the-platform}{%
@@ -4681,19 +4698,17 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Analysis code} -- A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.\\
+  \textbf{Analysis code:} A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.\\
 \item
-  \textbf{Candidate paper} -- A paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
+  \textbf{Candidate paper:} A paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more \href{https://bitss.github.io/ACRE/scoping.html\#from-candidate-to-declared-paper}{here}.
 \item
-  \textbf{Cleaning code} -- A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).\\
+  \textbf{Cleaning code:} A script associated primarily with data cleaning. Most of its content is dedicated to actions like deleting variables or observations, merging data sets, removing outliers, or reshaping the structure of the data (from long to wide, or vice versa).\\
 \item
-  \textbf{Declared paper} -- The paper that the reproducer analyzes throughout the exercise.
+  \textbf{Declared paper:}The paper that the reproducer analyzes throughout the exercise.
 \item
-  \textbf{Display item} -- A display item is a figure or table that presents results described in the paper. Each display item contains several \textbf{specifications}. \\
+  \textbf{Display item:}A display item is a figure or table that presents the results associated with a given research claim found in a research paper.
 \item
-  \textbf{Reproduction tree/ diagram} -- A diagram generated by the ReproducibiliTREE which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
-\item
-  \textbf{Revised reproduction package} --
+  \textbf{Reproduction tree (or reproduction diagram):} A diagram generated at the Scoping stage on the SSRP, which links display items with the code and data files that are required to reproduce them. The tree is meant to represent the entire computational workflow behind a result from the paper. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 \end{itemize}
 
   \bibliography{book.bib,packages.bib}

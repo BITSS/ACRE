@@ -35,7 +35,15 @@ Draft the summary in a plain text editor and paste the text in the form.
 At the previous stage, you recorded the original reproduction package made available by the paper's authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole. 
 You can start by downloading the reproduction package (or *forking*, if on GitHub) and uploading a copy titled "Revised reproduction package for [Paper Citation, e.g. Smith et al. (2019)]" to a trusted repository. Examples of trusted repositories include [Dataverse](https://dataverse.org/), [openICPSR](https://www.openicpsr.org/openicpsr/), [Figshare](https://figshare.com), [Dryad](https://datadryad.org/stash), [Zenodo](https://about.zenodo.org/), [Open Science Framework](osf.io/) and others. We encourage you to also use version control software (e.g., Git) during your reproduction.
 
+Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following: 
+- Separate your reproduction package in two: (1) data and (2) code and documentation.   
+- Post the second one in a trusted repository.   
+- For the data reproduction package identify all the files that are different  
+from the original reproduction package and upload only those. For example, suppose the original repro package has `data/raw_data1.csv`, and `data/clean_data/data_set1.dta`. If you modify only the file `data_set1.dta`, then upload a revised reproduction package that has the same folder structure but only the files that differ: `data/clean_data/data_set1.dta`. If you want to make it even more clear you could add a readme file describing the modified files. 
+
+
 As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work.
+
 
 ## Record scope of the exercise {#declare-estimates}
 
