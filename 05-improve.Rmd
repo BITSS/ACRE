@@ -81,9 +81,9 @@ improvements %>%
 -->
 
 
-#### Information on how to access confidential/propietary data
-If the original authors cannot provide the raw or analytical data due to legal or ethical reasons, they can still provide information on how to access such data. 
-HERE 
+### Adding information on how to access confidential/propietary data
+
+If the original authors cannot provide the raw or analytical data due to legal or ethical reasons, they can still provide information on how to access such data. The [American Economic Association](https://www.aeaweb.org/journals/data/data-code-policy#statement) requires original authors to provide Data Availability Statements (DAS) for such data sources. Use [this form](sample-DAS.md) ([.pdf](sample-DAS.pdf), [.html](sample-DAS.html) ) to assess the existence and completeness of any DAS.  
 
 
 ##  Paper-level improvements {#paper-level}
