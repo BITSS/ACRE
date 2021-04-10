@@ -986,24 +986,19 @@ If the original authors cannot provide the raw or analytical data due to legal o
 \hypertarget{paper-level}{%
 \section{Paper-level improvements}\label{paper-level}}
 
-There are at least six additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the ``Paper-level improvements'' section.
+There are at least seven additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the ``Paper-level improvements'' section.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Set up the reproduction package using version control software, such as Git.
-\item
-  Improve documentation by adding comments to the code.
-\item
-  Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).
-\item
-  If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using an open source statistical software (e.g., R, Python, or Julia).
-\item
-  Re-organize the reproduction package into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order, with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.\\
-\item
-  Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
-\end{enumerate}
+\textbf{File documentation and organization: }\\
+1 - Set up the reproduction package using version control software, such as Git.\\
+2 - Improve documentation by adding comments to the code.\\
+3 - Re-organize the reproduction package into a set of folders and sub-folders that follow \href{https://www.projecttier.org/tier-protocol/specifications/\#overview-of-the-documentation}{standardized best practices}, and add a master script that executes all the code in order, with no further modifications. \href{https://github.com/AEADataEditor/replication-template}{See AEA's reproduction template}.
+
+\textbf{Computation:}\\
+4 - Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).\\
+5 - If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using an open source statistical software (e.g., R, Python, or Julia).\\
+6 - Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
+
+Reproducers are welcome to suggest new paper-level improvements by editing this guide directly (edit button above) or submitting feedback to \href{mailto:acre+feedback@berkeley.edu}{\nolinkurl{acre+feedback@berkeley.edu}}.
 
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
