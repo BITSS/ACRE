@@ -83,17 +83,16 @@ improvements %>%
 
 -->
 
+### Adding information on how to access confidential/proprietary data
 
-### Adding information on how to access confidential/propietary data
-
-If the original authors cannot provide the raw or analytical data due to legal or ethical reasons, they can still provide information on how to access such data. The [American Economic Association](https://www.aeaweb.org/journals/data/data-code-policy#statement) requires original authors to provide Data Availability Statements (DAS) for such data sources. Use [this form](sample-DAS.md) ([.pdf](sample-DAS.pdf), [.html](sample-DAS.html) ) to assess the existence and completeness of any DAS.  
+If the original authors are unable to share the raw or analytical data due to legal or ethical reasons, the reproduction package can still be improved by including information on how to access such data. The American Economic Association [requires](https://www.aeaweb.org/journals/data/data-code-policy#statement) original authors to provide data availability statements (DAS) for such data sources. Use [this form](sample-DAS.md) ([.pdf](sample-DAS.pdf), [.html](sample-DAS.html) ) to assess the completeness of any DAS.  
 
 
 ##  Paper-level improvements {#paper-level}
 
 <!-- future task: provide more guidance on each of the items below -->
 
-There are at least seven additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section.   
+There are several measures you can take to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section.  
 
 **File documentation and organization: **  
 1 - Set up the reproduction package using version control software, such as Git.  
@@ -102,9 +101,7 @@ There are at least seven additional improvements you can make to improve a paper
 
 **Computation:**   
 4 - Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).  
-5 - If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using an open source statistical software (e.g., R, Python, or Julia).  
+5 - If the code was written using proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using open-source statistical software (e.g., R, Python, or Julia).  
 6 - Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).  
 
-Reproducers are welcome to suggest new paper-level improvements by editing this guide directly (edit button above) or submitting feedback to <acre+feedback@berkeley.edu>.
-  
-
+Please suggest other paper-level improvements by editing this guide (use the "edit" button above) or contacting <acre+feedback@berkeley.edu>.
