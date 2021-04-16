@@ -38,7 +38,7 @@ ac
 cc
 dac
 debugging-cleaning-code
-adding-information-on-how-to-access-confidentialpropietary-data
+adding-information-on-how-to-access-confidentialproprietary-data
 paper-level
 robust
 feasible-robustness-checks-increasing-the-number-of-feasible-specifications
@@ -46,7 +46,7 @@ justifying-and-testing-reasonable-robustness-checks
 concluding-the-reproduction
 outputs
 anonymity-and-data-sharing
-guidance-for-a-constructive-exchange-between-reproducers-and-original-authors
+guidance-for-constructive-communication-between-reproducers-and-original-authors
 for-reproducers-contacting-the-authors-of-the-original-study
 contacting-the-original-authors-when-there-is-no-reproduction-package
 follow-up-if-the-author-only-provides-the-appendix

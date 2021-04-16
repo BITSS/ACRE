@@ -99,7 +99,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-04-09}
+\date{2021-04-15}
 
 \begin{document}
 \maketitle
@@ -186,11 +186,11 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 I
 \chapter*{Introduction}\label{intro}}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\emph{Computational reproducibilty} is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed \href{https://social-science-data-editors.github.io/guidance/}{recommendations and resources} to facilitate compliance. This goal of such policy changes is to improve the computational reproducibility of \emph{all} published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
+\emph{Computational reproducibility} is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed \href{https://social-science-data-editors.github.io/guidance/}{recommendations and resources} to facilitate compliance. This goal of such policy changes is to improve the computational reproducibility of \emph{all} published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
-This Guide includes a common approach, terminology, and standards for conducting \emph{reproductions}, or attempts to assess and improve the computational reproducibility of published work**. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process. Reproductions should be distinguished from \emph{replications}, where replicators re-examine a study's hypotheses using \emph{different data} or \emph{different methods} (or both) \citep{King95}. We find that reproducibility is necessary for replicability, though both allow science to be ``self-correcting.''
+This Guide includes a common approach, terminology, and standards for conducting \emph{reproductions}, or attempts to assess and improve the computational reproducibility of published work. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process. Reproductions should be distinguished from \emph{replications}, where replicators re-examine a study's hypotheses using \emph{different data} or \emph{different methods} (or both) \citep{King95}. We find that reproducibility is necessary for replicability, though both allow science to be ``self-correcting.''
 
-We recommend using this Guide in conjunction with the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is primarily intended for reproductions in economics, it may be used in other social science disciplines, and we welcome contributions that aim to ``translate'' any of its parts to other social science disciplines (learn how you can contribute \href{https://bitss.github.io/ACRE/contributions.html}{here}). Find definitions of fundamental concepts in reproducibility and the process of conducting reproductions in the \href{https://bitss.github.io/ACRE/definitions.html}{``Glossary'' chapter}.
+We recommend using this Guide in conjunction with the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is primarily intended for reproductions in economics, it may be used in other social science disciplines, and we welcome contributions that aim to ``translate'' any of its parts to other social science disciplines (learn how you can contribute \href{https://bitss.github.io/ACRE/contributions.html}{here}). Find definitions of fundamental concepts in reproducibility and the process of conducting reproductions in the \href{https://bitss.github.io/ACRE/definitions.html}{Glossary} chapter.
 
 This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics \href{https://www.bitss.org/ecosystem/acre/}{(ACRE)} project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences \href{https://bitss.org}{(BITSS)}---an initiative of the Center for Effective Global Action \href{https://cega.berkeley.edu/}{(CEGA)}---and \href{https://www.vilhuber.com/lars/}{Dr.~Lars Vilhuber}, Data Editor for the journals of the American Economic Association (AEA). This project is supported by the Laura and John Arnold Foundation.
 
@@ -384,7 +384,7 @@ At this stage, you will define the \emph{scope of the reproduction} by identifyi
 \begin{quote}
 ``A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim {[}may not be{]} equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the {[}results of the paper{]}''.
 
--- \href{https://replicats.research.unimelb.edu.au/\#tab301}{RepliCATS Project} (not dated)
+-- \href{https://replicats.research.unimelb.edu.au/\#tab301}{RepliCATS Project}
 \end{quote}
 
 A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
@@ -684,8 +684,7 @@ MISSSING\_CODE\_FILE\_1 & unknown & cleaned\_1\_2.dta & cleaned\_1\_2.dta & miss
 \end{tabu}
 \end{table}
 
-As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{examples-of-reproduction-trees}{see here}.\\
-UPDATE LEVElS
+As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{examples-of-reproduction-trees}{see here}.
 
 \hypertarget{score}{%
 \section{Assign a reproducibility score.}\label{score}}
@@ -821,7 +820,7 @@ Much of published research in the social sciences uses confidential or proprieta
 \item
   \textbf{Adjusted Level 8 (L8*):} All requirements for Level 7* are met, and instructions for accessing the \emph{raw data} are complete.
 \item
-  \textbf{Adjusted Level 9 (L9*):} All requirements for Level 8* are met, and a certification is provided that the display item can be reproduced from the ananlysis data (CRA).
+  \textbf{Adjusted Level 9 (L9*):} All requirements for Level 8* are met, and a certification is provided that the display item can be reproduced from the analysis data (CRA).
 \item
   \textbf{Adjusted Level 10 (L10*):} All requirements for Level 9* are met, and a certification is provided that the display item can be reproduced from the raw data (CRR).
 \end{itemize}
@@ -970,7 +969,7 @@ Whenever code is available in the reproduction package, you should be able to de
 \item
   \emph{Environment set up:} Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.\\
 \item
-  \emph{Correcting errors:} A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the ACRE procedure to report coding errors.
+  \emph{Correcting errors:} A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only.
 \end{itemize}
 
 \hypertarget{debugging-cleaning-code}{%
@@ -978,15 +977,15 @@ Whenever code is available in the reproduction package, you should be able to de
 
 Follow the same steps that you did to debug the analysis code (above), but report them separately.
 
-\hypertarget{adding-information-on-how-to-access-confidentialpropietary-data}{%
-\subsection{Adding information on how to access confidential/propietary data}\label{adding-information-on-how-to-access-confidentialpropietary-data}}
+\hypertarget{adding-information-on-how-to-access-confidentialproprietary-data}{%
+\subsection{Adding information on how to access confidential/proprietary data}\label{adding-information-on-how-to-access-confidentialproprietary-data}}
 
-If the original authors cannot provide the raw or analytical data due to legal or ethical reasons, they can still provide information on how to access such data. The \href{https://www.aeaweb.org/journals/data/data-code-policy\#statement}{American Economic Association} requires original authors to provide Data Availability Statements (DAS) for such data sources. Use \href{sample-DAS.md}{this form} (\href{sample-DAS.pdf}{.pdf}, \href{sample-DAS.html}{.html} ) to assess the existence and completeness of any DAS.
+If the original authors are unable to share the raw or analytical data due to legal or ethical reasons, the reproduction package can still be improved by including information on how to access such data. The American Economic Association \href{https://www.aeaweb.org/journals/data/data-code-policy\#statement}{requires} original authors to provide data availability statements (DAS) for such data sources. Use \href{sample-DAS.html}{this form} (\href{sample-DAS.pdf}{.pdf}, \href{sample-DAS.md}{.md} ) to assess the completeness of any DAS.
 
 \hypertarget{paper-level}{%
 \section{Paper-level improvements}\label{paper-level}}
 
-There are at least seven additional improvements you can make to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the ``Paper-level improvements'' section.
+There are several measures you can take to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the ``Paper-level improvements'' section.
 
 \textbf{File documentation and organization: }\\
 1 - Set up the reproduction package using version control software, such as Git.\\
@@ -995,10 +994,10 @@ There are at least seven additional improvements you can make to improve a paper
 
 \textbf{Computation:}\\
 4 - Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).\\
-5 - If the code was written using a proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using an open source statistical software (e.g., R, Python, or Julia).\\
+5 - If the code was written using proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using open-source statistical software (e.g., R, Python, or Julia).\\
 6 - Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see \href{https://mybinder.org/}{Binder} and \href{https://codeocean.com/}{Code Ocean}.
 
-Reproducers are welcome to suggest new paper-level improvements by editing this guide directly (edit button above) or submitting feedback to \href{mailto:acre+feedback@berkeley.edu}{\nolinkurl{acre+feedback@berkeley.edu}}.
+Please suggest other paper-level improvements by editing this guide (use the ``edit'' button above) or contacting \href{mailto:acre+feedback@berkeley.edu}{\nolinkurl{acre+feedback@berkeley.edu}}.
 
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
@@ -1236,8 +1235,8 @@ Before submitting the reproduction, make sure that your revised reproduction pac
   Using the data from your reproduction: The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student who is using the SSRP as part of a course, results from your work will still be integrated into these descriptive statistics. However, we will separately display statistics for all reproductions and those not conducted anonymously or as part of a course.
 \end{itemize}
 
-\hypertarget{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}{%
-\chapter{Guidance for a Constructive Exchange Between Reproducers and Original Authors}\label{guidance-for-a-constructive-exchange-between-reproducers-and-original-authors}}
+\hypertarget{guidance-for-constructive-communication-between-reproducers-and-original-authors}{%
+\chapter{Guidance for Constructive Communication Between Reproducers and Original Authors}\label{guidance-for-constructive-communication-between-reproducers-and-original-authors}}
 
 This chapter contains guidance for constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure that their interactions with original authors are constructive. We summarize and build on this approach below and encourage you to follow this guidance. Remember the \textbf{golden rule of reproductions} (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
