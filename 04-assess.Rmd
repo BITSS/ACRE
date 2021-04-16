@@ -207,7 +207,6 @@ adding_rows_to_code %>%
 
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, [see here](#examples-of-reproduction-trees).  
-UPDATE LEVElS
 
 ## Assign a reproducibility score. {#score}
 Once you have identified all possible inputs and have a clear understanding of the connection between the display items and their inputs, you can assign reproducibility scores to individual display items.
@@ -338,7 +337,7 @@ Much of published research in the social sciences uses confidential or proprieta
 
  - **Adjusted Level 8 (L8\*):** All requirements for Level 7\* are met, and instructions for accessing the *raw data* are complete.
 
- - **Adjusted Level 9 (L9\*):** All requirements for Level 8\* are met, and a certification is provided that the display item can be reproduced from the ananlysis data (CRA).
+ - **Adjusted Level 9 (L9\*):** All requirements for Level 8\* are met, and a certification is provided that the display item can be reproduced from the analysis data (CRA).
  
  - **Adjusted Level 10 (L10\*):** All requirements for Level 9\* are met, and a certification is provided that the display item can be reproduced from the raw data (CRR).
 
