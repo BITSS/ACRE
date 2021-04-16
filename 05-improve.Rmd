@@ -56,8 +56,11 @@ Whenever code is available in the reproduction package, you should be able to de
 - *Code cleaning:* Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.  
 - *Performance improvement:* Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results).    
 - *Environment set up:* Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.    
-- *Correcting errors:* A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. Please follow the ACRE procedure to report coding errors.  
+- *Correcting errors:* A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. 
+<!--FUTURE FEATURE:
 
+Please follow the ACRE procedure to report coding errors.  
+-->
 
 ### Debugging cleaning code 
 

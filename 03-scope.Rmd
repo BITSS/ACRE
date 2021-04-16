@@ -4,7 +4,7 @@ At this stage, you will define the *scope of the reproduction* by identifying th
 
 >"A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim [may not be] equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the [results of the paper]".
 >
-> -- <cite>[RepliCATS Project](https://replicats.research.unimelb.edu.au/#tab301) (not dated)</cite>
+> -- <cite>[RepliCATS Project](https://replicats.research.unimelb.edu.au/#tab301) </cite>
 
 A *display item* is a figure or table that presents the results described in the paper. Each display item contains several *specifications*. 
 
