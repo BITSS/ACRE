@@ -85,7 +85,7 @@ improvements %>%
 
 ### Adding information on how to access confidential/proprietary data
 
-If the original authors are unable to share the raw or analytical data due to legal or ethical reasons, the reproduction package can still be improved by including information on how to access such data. The American Economic Association [requires](https://www.aeaweb.org/journals/data/data-code-policy#statement) original authors to provide data availability statements (DAS) for such data sources. Use [this form](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](sample-DAS.md) ) to assess the completeness of any DAS.  
+If the original authors are unable to share the raw or analytical data due to legal or ethical reasons, the reproduction package can still be improved by including information on how to access such data. The American Economic Association [requires](https://www.aeaweb.org/journals/data/data-code-policy#statement) original authors to provide data availability statements (DAS) for such data sources. Use [this form](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](https://github.com/BITSS/ACRE/blob/master/sample-DAS.md) ) to assess the completeness of any DAS.  
 
 
 ##  Paper-level improvements {#paper-level}
