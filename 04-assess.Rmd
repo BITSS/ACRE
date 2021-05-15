@@ -107,9 +107,9 @@ code_files_info %>%
 
 #### Common issues that might occur when creating a reproduction tree:
 
- - If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.  
+ - If you notice that some files iterate between each other (e.g., `file1.do` calls `data1.csv` to generate `data2.csv`, and `file2.R` calls `data2.csv` to generate `data1.csv`), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.  
 
- - Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., "results1.log", "results2.csv") that will require manual copying and pasting to reproduce the desired display item (e.g. "Table 1"). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: "results1.log; results2.csv", Outputs: "Table 1").
+ - Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., `results1.log`, `results2.csv`) that will require manual copying and pasting to reproduce the desired display item (e.g. `Table 1`). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: `results1.log; results2.csv`, Outputs: `Table 1`).
 
 - Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., `data_location1_year1, data_location2_year1, data_location1_year2, ...`). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., `data_locationX_yearY`). 
 
@@ -123,7 +123,7 @@ Using the information above, the SSRP will build a diagram that can help you vis
 
 ### Complete workflow information {#complete-tree}
 
-If you were able to identify all of the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
+If you were able to identify all of the relevant components in the previous section, the ReproducibiliTREE will produce a tree diagram that looks similar to the one below.
 
 ```
   table1.tex
@@ -156,7 +156,7 @@ This diagram, built with the information you provided, contributes to understand
 
 ### Incomplete workflow information
 
-In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the SSRP Diagram Builder will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.
+In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the ReproducibiliTREE will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.
 
 For example, here's a simple complete reproduction tree:
 
@@ -170,7 +170,7 @@ For example, here's a simple complete reproduction tree:
                        └── merged_1_2.dta
 ```                      
 
-For this case, if the the file `final_merge.do` is missing, the SSRP Diagram Builder will produce the following reproduction tree:
+For this case, if the the file `final_merge.do` is missing, the ReproducibiliTREE will produce the following reproduction tree:
 
 ```
   table1.tex
@@ -317,6 +317,9 @@ kable(assign_lcr_score,
 
 
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the "Edit" button above (top left corner if you are reading this document in your browser).
+
+**Note:** The levels suggested here are to be used in the Assessment stage and, optionally, for the Improvement stage. *These levels are not meant to be used in the Robustness stage*. 
+
 
 #### Adjusting Levels To Account for Confidential/Proprietary Data {-}
 

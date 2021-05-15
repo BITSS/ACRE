@@ -138,7 +138,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-05-14}
+\date{2021-05-15}
 
 \begin{document}
 \maketitle
@@ -619,11 +619,13 @@ data\_cleaning02.R & code/cleaning & admin\_01raw.csv & analysis\_data02.csv & r
 
 \begin{itemize}
 \item
-  If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
+  If you notice that some files iterate between each other (e.g., \texttt{file1.do} calls \texttt{data1.csv} to generate \texttt{data2.csv}, and \texttt{file2.R} calls \texttt{data2.csv} to generate \texttt{data1.csv}), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
 \item
-  Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., ``results1.log'', ``results2.csv'') that will require manual copying and pasting to reproduce the desired display item (e.g.~``Table 1''). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: ``results1.log; results2.csv'', Outputs: ``Table 1'').
+  Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., \texttt{results1.log}, \texttt{results2.csv}) that will require manual copying and pasting to reproduce the desired display item (e.g.~\texttt{Table\ 1}). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: \texttt{results1.log;\ results2.csv}, Outputs: \texttt{Table\ 1}).
 \item
   Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., \texttt{data\_location1\_year1,\ data\_location2\_year1,\ data\_location1\_year2,\ ...}). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., \texttt{data\_locationX\_yearY}).
+\item
+  If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (\texttt{;}), that way the tree will separate each file into a separate input.
 \end{itemize}
 
 \hypertarget{diagram}{%
@@ -634,7 +636,7 @@ Using the information above, the SSRP will build a diagram that can help you vis
 \hypertarget{complete-tree}{%
 \subsection{Complete workflow information}\label{complete-tree}}
 
-If you were able to identify all of the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.
+If you were able to identify all of the relevant components in the previous section, the ReproducibiliTREE will produce a tree diagram that looks similar to the one below.
 
 \begin{verbatim}
   table1.tex
@@ -668,7 +670,7 @@ This diagram, built with the information you provided, contributes to understand
 \hypertarget{incomplete-workflow-information}{%
 \subsection{Incomplete workflow information}\label{incomplete-workflow-information}}
 
-In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the SSRP Diagram Builder will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.
+In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the ReproducibiliTREE will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.
 
 For example, here's a simple complete reproduction tree:
 
@@ -682,7 +684,7 @@ For example, here's a simple complete reproduction tree:
                        └── merged_1_2.dta
 \end{verbatim}
 
-For this case, if the the file \texttt{final\_merge.do} is missing, the SSRP Diagram Builder will produce the following reproduction tree:
+For this case, if the the file \texttt{final\_merge.do} is missing, the ReproducibiliTREE will produce the following reproduction tree:
 
 \begin{verbatim}
   table1.tex
@@ -823,6 +825,8 @@ L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ 
 \end{table}
 
 You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the ``Edit'' button above (top left corner if you are reading this document in your browser).
+
+\textbf{Note:} The levels suggested here are to be used in the Assessment stage and, optionally, for the Improvement stage. \emph{These levels are not meant to be used in the Robustness stage}.
 
 \hypertarget{adjusting-levels-to-account-for-confidentialproprietary-data}{%
 \subsubsection*{Adjusting Levels To Account for Confidential/Proprietary Data}\label{adjusting-levels-to-account-for-confidentialproprietary-data}}
@@ -1199,19 +1203,15 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 \begin{itemize}
 \tightlist
 \item
-  \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{\emph{Assessment Report:}} a summary of the display items assessed and their connections with the claims.\\
-  \item
-    \textbf{\emph{Improvement Report:}} descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.\\
-  \item
-    \textbf{\emph{Robustness Report:}} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.\\
-  \item
-    \textbf{Final reproduction report:}* includes everything, plus final comments, and it cannot be edited after submission.
-  \end{itemize}
+  \textbf{\emph{Scoping Report:}} basic information about the paper, descriptive statistics about the number of claims identified and the subset that was assessed, and a summary of the claims and associated specifications.\\
+\item
+  \textbf{\emph{Assessment Report:}} a summary of the display items assessed and their connections with the claims.\\
+\item
+  \textbf{\emph{Improvement Report:}} descriptions of improvements implemented and of improvements suggested for future reproductions, and an updated reproducibility score, if any.\\
+\item
+  \textbf{\emph{Robustness Report:}} summary of all of the analytical choices identified, and a description of the results of robustness tests to reasonable new specifications, if any.\\
+\item
+  \textbf{Final reproduction report:}* includes everything, plus final comments, and it cannot be edited after submission.
 \end{itemize}
 
 \textbf{3. Your data} -- You will be able to export several .csv files containing all of your table-form responses recorded as part of your reproduction attempt.
@@ -1238,17 +1238,35 @@ The Social Science Reproduction Platform will aggregate descriptive statistics f
 
 This chapter contains guidance for constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure that their interactions with original authors are constructive. We summarize and build on this approach below and encourage you to follow this guidance. Remember the \textbf{golden rule of reproductions} (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
-\textbf{1. Carefully and transparently plan your study.}\\
-a. Clearly state that you are conducting a reproduction of their original work.\\
-b. Explain why you have chosen this study.
-c.~Explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
+\textbf{1. Carefully and transparently plan your study.}
 
-\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.}\\
-a. Avoid binary judgments and statements like ``failed to reproduce.'' State clearly which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).
-b. Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
-c.~Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
-d.~For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
-e. Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Clearly state that you are conducting a reproduction of their original work.\\
+\item
+  Explain why you have chosen this study.
+\item
+  If you are not able to reproduce the results explain how ``far'' your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.
+\end{enumerate}
+
+\textbf{2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Avoid binary judgments and statements like ``failed to reproduce.'' State clearly which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).\\
+\item
+  Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
+\item
+  Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
+\item
+  For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.\\
+\item
+  Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
+\end{enumerate}
 
 To help you put these recommendations into practice, we developed template language for common scenarios that reproducers and authors may encounter in their interactions. While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on your project's context and needs. Feel free to \href{mailto:acre@berkeley.edu}{contact us} if you need more guidance or would like to provide feedback on these materials.
 
@@ -1690,7 +1708,7 @@ Here are a some steps you can take if you believe you have experienced bullying,
 \hypertarget{examples-of-reproduction-trees}{%
 \chapter{Examples of Reproduction Trees}\label{examples-of-reproduction-trees}}
 
-A diagram generated by the ACRE Diagram Builder which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
+A diagram generated by the \protect\hyperlink{diagram}{ReproducibiliTREE} which represents all the available data and code on behind a specific display item. The tree is meant to represent the entire computational workflow behind a result from the paper. It allows reproducers to trace a display item to its primary sources. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 
 A reproduction tree is complete when it is possible to connect its output (a given display item) with all of its inputs down to the raw data. A reproduction is incomplete when it is not possible to connect all the inputs to the resulting display item. Paraphrasing the author Leo Tolstoy, \emph{complete workflows are all alike; every incomplete computational workflow is incomplete in its own way}. This chapter presents a few examples of reproduction trees, focusing particularly on the many possible ways in which a tree could be incomplete. If you have a reproduction tree that contains an instructive example please \protect\hyperlink{contrib-guide}{contribute} to this chapter (via a pull request or emailing your reproduction tree to \href{mailto:ACRE@berkeley.edu}{\nolinkurl{ACRE@berkeley.edu}}.)
 
@@ -1700,7 +1718,7 @@ A reproduction tree is complete when it is possible to connect its output (a giv
 \hypertarget{complete-reproduction-tree}{%
 \subsection{Complete reproduction tree}\label{complete-reproduction-tree}}
 
-Below is an example of output from the ACRE Diagram builder for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
+Below is an example of output from the \protect\hyperlink{diagram}{ReproducibiliTREE} for a display item that can be fully constructed using the files contained in the reproduction package. The diagram displays files as outputs and inputs to code scripts all the way down to the raw data.
 
 \begin{verbatim}
           table 1
@@ -1723,7 +1741,7 @@ Below is an example of output from the ACRE Diagram builder for a display item t
 \hypertarget{raw-data-and-analytic-data-are-available-but-cleaning-code-is-missing.}{%
 \subsubsection{Raw data and analytic data are available, but cleaning code is missing.}\label{raw-data-and-analytic-data-are-available-but-cleaning-code-is-missing.}}
 
-Below is an example of output from the ACRE Diagram Builder for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.
+Below is an example of output from the \protect\hyperlink{diagram}{ReproducibiliTREE} for a display item that is missing some of the code needed to generate it from the raw data. There are two reasons to suspect that this workflow is incomplete: (i) there is no clear data cleaning step (only analysis that generates output and formatting), and (ii) there are unused files that are likely to be raw data. None of these reasons can confirm unequivocally that the tree is incomplete, but a reproducer familiar with the paper and its data sources could use the tree to certify its (in)completeness and request missing files.
 
 \begin{verbatim}
           table 1
@@ -1828,7 +1846,7 @@ This reproduction diagram fragment likely shows a missing piece of code. In a co
 \hypertarget{long-complicated-tree.}{%
 \subsection[Long, complicated tree.]{\texorpdfstring{Long, complicated tree\footnote{This is from a reproduction attempt conducted as part of a UC Berkeley Development Economics course}.}{Long, complicated tree.}}\label{long-complicated-tree.}}
 
-This diagram shows that the production of a given display item may be very complicated, highlighting the usefulness of the ACRE Diagram Builder as a visualization tool. In reproducing such a complicated display item, it can be useful to have such a diagram to determine, for example, the order in which code scripts should be run, what files might depend on a faulty code script, or which files are necessary to keep if the goal is to only produce the specific display item.
+This diagram shows that the production of a given display item may be very complicated, highlighting the usefulness of the \protect\hyperlink{diagram}{ReproducibiliTREE} as a visualization tool. In reproducing such a complicated display item, it can be useful to have such a diagram to determine, for example, the order in which code scripts should be run, what files might depend on a faulty code script, or which files are necessary to keep if the goal is to only produce the specific display item.
 
 \begin{verbatim}
         results_days.dta
@@ -4492,7 +4510,7 @@ This diagram shows that the production of a given display item may be very compl
 \hypertarget{example-of-completing-reproduction-tree}{%
 \subsection{Example of completing reproduction tree}\label{example-of-completing-reproduction-tree}}
 
-In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here we present a more complex example that the one presented in the Asessement chaprer. The Diagram Builder will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the ACRE Diagram Builder will produce the following diagram:
+In many cases, some of the components of the workflow will not be easily identifiable (or missing) in the reproduction package. Here we present a more complex example that the one presented in the Asessement chaprer. The \protect\hyperlink{diagram}{ReproducibiliTREE} will return a partial reproduction tree diagram. For example, if the files \texttt{merge\_1\_2.do}, \texttt{merge\_3\_4.do}, and \texttt{final\_merge.do} are missing from the previous diagram, the \protect\hyperlink{diagram}{ReproducibiliTREE} will produce the following diagram:
 
 \begin{verbatim}
         cleaned_3.dta

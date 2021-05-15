@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-05-14" />
+<meta name="date" content="2021-05-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -582,9 +582,10 @@ cleaning
 <div id="common-issues-that-might-occur-when-creating-a-reproduction-tree" class="section level4" number="3.1.3.1">
 <h4><span class="header-section-number">3.1.3.1</span> Common issues that might occur when creating a reproduction tree:</h4>
 <ul>
-<li><p>If you notice that some files iterate between each other (e.g., file1.do calls data1.csv to generate data2.csv, and file2.R calls data2.csv to generate data1.csv), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.</p></li>
-<li><p>Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., “results1.log,” “results2.csv”) that will require manual copying and pasting to reproduce the desired display item (e.g. “Table 1”). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: “results1.log; results2.csv,” Outputs: “Table 1”).</p></li>
+<li><p>If you notice that some files iterate between each other (e.g., <code>file1.do</code> calls <code>data1.csv</code> to generate <code>data2.csv</code>, and <code>file2.R</code> calls <code>data2.csv</code> to generate <code>data1.csv</code>), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.</p></li>
+<li><p>Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., <code>results1.log</code>, <code>results2.csv</code>) that will require manual copying and pasting to reproduce the desired display item (e.g. <code>Table 1</code>). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: <code>results1.log; results2.csv</code>, Outputs: <code>Table 1</code>).</p></li>
 <li><p>Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., <code>data_location1_year1, data_location2_year1, data_location1_year2, ...</code>). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., <code>data_locationX_yearY</code>).</p></li>
+<li><p>If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (<code>;</code>), that way the tree will separate each file into a separate input.</p></li>
 </ul>
 </div>
 </div>
@@ -594,7 +595,7 @@ cleaning
 <p>Using the information above, the SSRP will build a diagram that can help you visually trace your display items to the code and data files that produce them. If the reproduction package does not organize the code around display items, you can identify all of the outputs that contain the results used in a specific display item.</p>
 <div id="complete-tree" class="section level3" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Complete workflow information</h3>
-<p>If you were able to identify all of the relevant components in the previous section, the SSRP Diagram Builder will produce a tree diagram that looks similar to the one below.</p>
+<p>If you were able to identify all of the relevant components in the previous section, the ReproducibiliTREE will produce a tree diagram that looks similar to the one below.</p>
 <pre><code>  table1.tex
       └──[code] analysis.R
           └──analysis_data.dta
@@ -623,7 +624,7 @@ cleaning
 </div>
 <div id="incomplete-workflow-information" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Incomplete workflow information</h3>
-<p>In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the SSRP Diagram Builder will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.</p>
+<p>In some cases, some of the workflow components may not be easily identifiable in the reproduction package (or might be missing). Here the ReproducibiliTREE will return a fagmented reproduction tree diagram. See below how you can work around such cases, but even if the reproduction tree is fragmented, you can still go on to the next step of the reproduction.</p>
 <p>For example, here’s a simple complete reproduction tree:</p>
 <pre><code>  table1.tex
     └── analysis.R
@@ -632,7 +633,7 @@ cleaning
                 └── cleaned_1_2.dta
                    └── clean_merged_1_2.do
                        └── merged_1_2.dta</code></pre>
-<p>For this case, if the the file <code>final_merge.do</code> is missing, the SSRP Diagram Builder will produce the following reproduction tree:</p>
+<p>For this case, if the the file <code>final_merge.do</code> is missing, the ReproducibiliTREE will produce the following reproduction tree:</p>
 <pre><code>  table1.tex
     └── analysis.R
         └── analysis_data.dta
@@ -1201,6 +1202,7 @@ L10: Reproducible from raw data
 </tfoot>
 </table>
 <p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the “Edit” button above (top left corner if you are reading this document in your browser).</p>
+<p><strong>Note:</strong> The levels suggested here are to be used in the Assessment stage and, optionally, for the Improvement stage. <em>These levels are not meant to be used in the Robustness stage</em>.</p>
 <div id="adjusting-levels-to-account-for-confidentialproprietary-data" class="section level4 unnumbered">
 <h4>Adjusting Levels To Account for Confidential/Proprietary Data</h4>
 <p>Much of published research in the social sciences uses confidential or proprietary data (e.g. government data from tax records or service provision), generally referred to as <em>administrative data</em>. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a competent and unbiased third party (not involved in the paper’s production) faithfully reproduced the results.</p>
