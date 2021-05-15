@@ -114,6 +114,9 @@ code_files_info %>%
 - Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., `data_location1_year1, data_location2_year1, data_location1_year2, ...`). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., `data_locationX_yearY`). 
 
 
+- If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon  (`;`), that way the tree will separate each file into a separate input.
+
+
 ## Connect display items to all its inputs usign the ReproducibiliTREE {#diagram}
 
 Using the information above, the SSRP will build a diagram that can help you visually trace your display items to the code and data files that produce them. If the reproduction package does not organize the code around display items, you can identify all of the outputs that contain the results used in a specific display item.
