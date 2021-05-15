@@ -51,7 +51,6 @@
 
 
 
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 <style type="text/css">
@@ -185,7 +184,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
-<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
+<li class="chapter" data-level="4.1.8" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.8</b> Adding information on how to access confidential/proprietary data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 </ul></li>
@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#justifying-and-testing-reasonable-robustness-checks"><i class="fa fa-check"></i><b>5.2</b> Justifying and testing reasonable robustness checks</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
 <ul>
@@ -272,16 +273,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="guidance-for-constructive-communication-between-reproducers-and-original-authors" class="section level1" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Guidance for Constructive Communication Between Reproducers and Original Authors</h1>
 <p>This chapter contains guidance for constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (<a href="https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf">2019</a>) articulate two important steps reproducers can take to ensure that their interactions with original authors are constructive. We summarize and build on this approach below and encourage you to follow this guidance. Remember the <strong>golden rule of reproductions</strong> (and replications): <em>treat others and their work, as you would like others to treat you and your work!</em></p>
-<p><strong>1. Carefully and transparently plan your study.</strong><br />
-a. Clearly state that you are conducting a reproduction of their original work.<br />
-b. Explain why you have chosen this study.
-c. Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.</p>
-<p><strong>2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.</strong><br />
-a. Avoid binary judgments and statements like “failed to reproduce.” State clearly which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g., see <a href="https://doi.org/10.31222/osf.io/qy2se">Broockman, Kalla and Aronow, 2015</a>).
-b. Talk about <em>the study, not the author</em>, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.<br />
-c. Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.<br />
-d. For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.<br />
-e. Remember, <em>the goal is not to criticize previous work or hunt for errors, but to move the literature forward!</em></p>
+<p><strong>1. Carefully and transparently plan your study.</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Clearly state that you are conducting a reproduction of their original work.<br />
+</li>
+<li>Explain why you have chosen this study.<br />
+</li>
+<li>Explain how “far” your results must deviate from the original work before claiming that the study could not be reproduced. Engage deeply with the substantive literature to ensure that your interpretation of differences between the original and reproduction is thorough and acceptable to other authors in the field.</li>
+</ol>
+<p><strong>2. Use professional and sensitive language. Discuss potential discrepancies between your work and the original paper, just like you might do for your own work.</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Avoid binary judgments and statements like “failed to reproduce.” State clearly which results reproduced and which did not (e.g., “we successfully reproduced X, but failed to reproduce Y”) unless you uncover apparent scientific misconduct (e.g., see <a href="https://doi.org/10.31222/osf.io/qy2se">Broockman, Kalla and Aronow, 2015</a>).<br />
+</li>
+<li>Talk about <em>the study, not the author</em>, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.<br />
+</li>
+<li>Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.<br />
+</li>
+<li>For papers published five or more years ago, be mindful that norms for reproducibility have evolved since then.<br />
+</li>
+<li>Remember, <em>the goal is not to criticize previous work or hunt for errors, but to move the literature forward!</em></li>
+</ol>
 <p>To help you put these recommendations into practice, we developed template language for common scenarios that reproducers and authors may encounter in their interactions. While we hope that you find these useful, note that they are <em>only recommendations</em>, and you are welcome to modify them based on your project’s context and needs. Feel free to <a href="mailto:acre@berkeley.edu">contact us</a> if you need more guidance or would like to provide feedback on these materials.</p>
 <div id="for-reproducers-contacting-the-authors-of-the-original-study" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> For reproducers contacting the authors of the original study</h2>
@@ -388,18 +399,18 @@ e. Remember, <em>the goal is not to criticize previous work or hunt for errors, 
 <blockquote>
 <p>Specifically, I am attempting to reproduce Display Item X (e.g., table 1, figure 3). I found that the following components are required to reproduce Display Item X:</p>
 </blockquote>
-<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="in">         Display Item X</span></span>
-<span id="cb6-2"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="in">            └───[code] formatting_table1.R</span></span>
-<span id="cb6-3"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">                ├───display_itemx_part1.txt  </span></span>
-<span id="cb6-4"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="in">                |   └───[code] output_table1.do           </span></span>
-<span id="cb6-5"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">                |       └───[data] analysis_data01.csv</span></span>
-<span id="cb6-6"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="in">                |          └───[code] data_cleaning01.R*</span></span>
-<span id="cb6-7"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="in">                |             └───[data] UNKNOWN</span></span>
-<span id="cb6-8"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="in">                └───display_itemx_part2.txt  </span></span>
-<span id="cb6-9"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="in">                    └───[code] output_table2.do           </span></span>
-<span id="cb6-10"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="in">                        └───[data] analysis_data02.csv</span></span>
-<span id="cb6-11"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="in">                           └───[code] data_cleaning02.R</span></span>
-<span id="cb6-12"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="in">                              └───[data] admin_01raw.csv* </span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">         Display Item X</span></span>
+<span id="cb1-2"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">            └───[code] formatting_table1.R</span></span>
+<span id="cb1-3"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">                ├───display_itemx_part1.txt  </span></span>
+<span id="cb1-4"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">                |   └───[code] output_table1.do           </span></span>
+<span id="cb1-5"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="in">                |       └───[data] analysis_data01.csv</span></span>
+<span id="cb1-6"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">                |          └───[code] data_cleaning01.R*</span></span>
+<span id="cb1-7"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="in">                |             └───[data] UNKNOWN</span></span>
+<span id="cb1-8"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="in">                └───display_itemx_part2.txt  </span></span>
+<span id="cb1-9"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">                    └───[code] output_table2.do           </span></span>
+<span id="cb1-10"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="in">                        └───[data] analysis_data02.csv</span></span>
+<span id="cb1-11"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="in">                           └───[code] data_cleaning02.R</span></span>
+<span id="cb1-12"><a href="guidance-for-constructive-communication-between-reproducers-and-original-authors.html#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="in">                              └───[data] admin_01raw.csv* </span></span></code></pre></div>
 <blockquote>
 <p>I have marked with an asterisk (*) the items that I could not find in the reproduction materials: <strong>data_cleaning01.R</strong> and <strong>admin_01raw.csv</strong>. After accessing these files, I will also identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.</p>
 <p>I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the <a href="https://www.socialsciencereproduction.org/">Social Science Reproduction Platform</a>. <strong>Doing this will ensure that you will not be asked more than once for the same missing file.</strong>o</p>
@@ -549,22 +560,18 @@ e. Remember, <em>the goal is not to criticize previous work or hunt for errors, 
 <h2><span class="header-section-number">7.3</span> Harassment and/or discrimination</h2>
 <p>The American Economic Association and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the <a href="https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination">AEA Policy on Harassment and Discrimination</a> has listed as unacceptable and could emerge in a hostile exchange regarding a reproduction:</p>
 <ul>
-<li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)
-<ul>
+<li>Intentionally intimidating, threatening, harassing, or abusive actions or remarks (both spoken and in other media)</li>
 <li>Prejudicial actions or comments that undermine the principles of equal opportunity, fair treatment, or free academic exchange</li>
 <li>Deliberate intimidation, stalking, or following</li>
 <li>Real or implied threat of physical harm.</li>
-</ul></li>
 </ul>
 <p>Here are a some steps you can take if you believe you have experienced bullying, discrimination or harassment:</p>
 <ul>
-<li>** file a complaint with the <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson">AEA Ombudsperson</a>.** Any AEA member can file a complaint. You can also join the AEA solely for the purpose of filing a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson/faq">here</a>.
-<ul>
+<li>** file a complaint with the <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson">AEA Ombudsperson</a>.** Any AEA member can file a complaint. You can also join the AEA solely for the purpose of filing a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process <a href="https://www.aeaweb.org/about-aea/aea-ombudsperson/faq">here</a>.</li>
 <li>** file a report with your institution’s office for the prevention of harassment &amp; discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include “Office for the Prevention of Harassment and Discrimination” (in institutions that are part of the University of California system), “Office of Equity and Title IX,” etc.</li>
 <li><strong>Contact your institution’s Ombudsperson/Ombuds Office.</strong> If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers offer a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.</li>
 <li><strong>Access mental health services at your institution.</strong> While no amount of bullying, discrimination, or harassment is acceptable or the fault of the victim, these unfortunately still occur and can take a toll on victims’ mental health. Many universities offer short-term Counseling &amp; Psychological Services (CAPS) for academic, career, and personal issues.</li>
 <li><strong>Ask for support from your academic supervisor.</strong> If you are unsure on how to proceed, consult your academic supervisor on whether continuing the reproduction is appropriate.</li>
-</ul></li>
 </ul>
 
 </div>
