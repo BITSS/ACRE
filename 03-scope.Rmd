@@ -6,9 +6,17 @@ At this stage, you will define the *scope of the reproduction* by identifying th
 >
 > -- <cite>[RepliCATS Project](https://replicats.research.unimelb.edu.au/#tab301) </cite>
 
+
+In the SSRP framework, different claims in a paper may be tested using different methodologies, and their results may be presented in one or more display items, such as tables and figures ([figure 0.1](https://bitss.github.io/ACRE/intro.html#fig:diagram) illustrates this idea). There are several types of claims, including:  
+
+- **Causal claim:** An assertion that invokes causal relationships between variables. A paper may estimate the effect of *X* on *Y* for population *P*, using method *F*. E.g., "This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach."    
+
+- **Descriptive/predictive claim:** An assertion that estimates the value of *Y* (estimated or predicted) for population *P* under dimensions *X* using method *M*. E.g., "Drawing on a unique Swiss data set (population *P*) and exploiting systematic anomalies in countries' portfolio investment positions (method *M*), I find that around 8% of the global financial wealth of households is held in tax havens (value of *Y*)."  
+    
+
 A *display item* is a figure or table that presents the results described in the paper. Each display item contains several *specifications*. 
 
-When recording the Scoping section on the SSRP plataform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: "The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)" or "The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)". Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.
+When recording the Scoping section on the SSRP platform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: "The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)" or "The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)". Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.
 
 **Note:** Once you progress past the Scoping stage on the SSRP, *you will no longer be able to edit your responses in the Scoping stage*, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
@@ -35,11 +43,11 @@ Draft the summary in a plain text editor and paste the text in the form.
 At the previous stage, you recorded the original reproduction package made available by the paper's authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole. 
 You can start by downloading the reproduction package (or *forking*, if on GitHub) and uploading a copy titled "Revised reproduction package for [Paper Citation, e.g. Smith et al. (2019)]" to a trusted repository. Examples of trusted repositories include [Dataverse](https://dataverse.org/), [openICPSR](https://www.openicpsr.org/openicpsr/), [Figshare](https://figshare.com), [Dryad](https://datadryad.org/stash), [Zenodo](https://about.zenodo.org/), [Open Science Framework](osf.io/) and others. We encourage you to also use version control software (e.g., Git) during your reproduction.
 
-Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following: 
-- Separate your reproduction package in two: (1) data and (2) code and documentation.   
-- Post the second one in a trusted repository.   
-- For the data reproduction package identify all the files that are different  
-from the original reproduction package and upload only those. For example, suppose the original repro package has `data/raw_data1.csv`, and `data/clean_data/data_set1.dta`. If you modify only the file `data_set1.dta`, then upload a revised reproduction package that has the same folder structure but only the files that differ: `data/clean_data/data_set1.dta`. If you want to make it even more clear you could add a readme file describing the modified files. 
+Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following:   
+
+- Separate your reproduction package in two: (1) data and (2) code and documentation.    
+- Post the second one in a trusted repository.     
+- For the data reproduction package identify all the files that are different from the original reproduction package and upload only those. For example, suppose the original repro package has `data/raw_data1.csv`, and `data/clean_data/data_set1.dta`. If you modify only the file `data_set1.dta`, then upload a revised reproduction package that has the same folder structure but only the files that differ: `data/clean_data/data_set1.dta`. If you want to make it even more clear you could add a readme file describing the modified files. 
 
 
 As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work.

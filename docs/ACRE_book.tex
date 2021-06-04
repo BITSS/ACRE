@@ -138,7 +138,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-05-15}
+\date{2021-06-04}
 
 \begin{document}
 \maketitle
@@ -339,7 +339,7 @@ If the SSRP database contains previous reproduction attempts of the paper, you w
 \textbf{Box 1:} Summary Report Card for ACRE Paper Entry\\
 \textbf{Title:} Sample Title\\
 \textbf{Authors:} Jane Doe \& John Doe\\
-\textbf{Original Reproduction Package Available:} Yes (link)/No.
+\textbf{Original Reproduction Package Available:} Yes (link)/No.\\
 {[}If ``No''{]} \textbf{Contacted Authors?:} Yes/No\\
 {[}If ``Yes(contacted)''{]} \textbf{Type of Response:} Categories (6).\\
 \textbf{Additional Reproduction Packages:} Number (eg., 2)\\
@@ -352,8 +352,8 @@ If after taking steps 1-5 above (or for some other reason) you are unable to loc
 \includegraphics[width=0.8\linewidth]{candidate-to-declared-paper} \caption{Decision tree to move from candidate to declared paper}\label{fig:candidate-paper-dec-tree}
 \end{figure}
 
-\hypertarget{identify-your-relevant-timeline.}{%
-\section{Identify your relevant timeline.}\label{identify-your-relevant-timeline.}}
+\hypertarget{identify-timeline}{%
+\section{Identify your relevant timeline.}\label{identify-timeline}}
 
 Before you begin working on the four main stages of the reproduction exercise (Scoping, Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).
 
@@ -426,9 +426,18 @@ At this stage, you will define the \emph{scope of the reproduction} by identifyi
 -- \href{https://replicats.research.unimelb.edu.au/\#tab301}{RepliCATS Project}
 \end{quote}
 
+In the SSRP framework, different claims in a paper may be tested using different methodologies, and their results may be presented in one or more display items, such as tables and figures (\href{https://bitss.github.io/ACRE/intro.html\#fig:diagram}{figure 0.1} illustrates this idea). There are several types of claims, including:
+
+\begin{itemize}
+\item
+  \textbf{Causal claim:} An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. E.g., ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''
+\item
+  \textbf{Descriptive/predictive claim:} An assertion that estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. E.g., ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''
+\end{itemize}
+
 A \emph{display item} is a figure or table that presents the results described in the paper. Each display item contains several \emph{specifications}.
 
-When recording the Scoping section on the SSRP plataform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: ``The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)'' or ``The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)''. Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.
+When recording the Scoping section on the SSRP platform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summary as follows: ``The paper tested the effect of X on Y for population P, using method F. The main results show an effect of magnitude E (specify units and standard errors)'' or ``The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)''. Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.
 
 \textbf{Note:} Once you progress past the Scoping stage on the SSRP, \emph{you will no longer be able to edit your responses in the Scoping stage}, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.
 
@@ -468,10 +477,16 @@ At the previous stage, you recorded the original reproduction package made avail
 You can start by downloading the reproduction package (or \emph{forking}, if on GitHub) and uploading a copy titled ``Revised reproduction package for {[}Paper Citation, e.g.~Smith et al.~(2019){]}'' to a trusted repository. Examples of trusted repositories include \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{openICPSR}, \href{https://figshare.com}{Figshare}, \href{https://datadryad.org/stash}{Dryad}, \href{https://about.zenodo.org/}{Zenodo}, \href{osf.io/}{Open Science Framework} and others. We encourage you to also use version control software (e.g., Git) during your reproduction.
 
 Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following:
-- Separate your reproduction package in two: (1) data and (2) code and documentation.\\
-- Post the second one in a trusted repository.\\
-- For the data reproduction package identify all the files that are different\\
-from the original reproduction package and upload only those. For example, suppose the original repro package has \texttt{data/raw\_data1.csv}, and \texttt{data/clean\_data/data\_set1.dta}. If you modify only the file \texttt{data\_set1.dta}, then upload a revised reproduction package that has the same folder structure but only the files that differ: \texttt{data/clean\_data/data\_set1.dta}. If you want to make it even more clear you could add a readme file describing the modified files.
+
+\begin{itemize}
+\tightlist
+\item
+  Separate your reproduction package in two: (1) data and (2) code and documentation.\\
+\item
+  Post the second one in a trusted repository.\\
+\item
+  For the data reproduction package identify all the files that are different from the original reproduction package and upload only those. For example, suppose the original repro package has \texttt{data/raw\_data1.csv}, and \texttt{data/clean\_data/data\_set1.dta}. If you modify only the file \texttt{data\_set1.dta}, then upload a revised reproduction package that has the same folder structure but only the files that differ: \texttt{data/clean\_data/data\_set1.dta}. If you want to make it even more clear you could add a readme file describing the modified files.
+\end{itemize}
 
 As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work.
 
@@ -1044,6 +1059,11 @@ There are several measures you can take to improve a paper's overall reproducibi
 
 Please suggest other paper-level improvements by editing this guide (use the ``edit'' button above) or contacting \href{mailto:acre+feedback@berkeley.edu}{\nolinkurl{acre+feedback@berkeley.edu}}.
 
+\hypertarget{doc-impr}{%
+\section{Documenting the improvements}\label{doc-impr}}
+
+{[}UNDER CONSTRUCTION{]}
+
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}
 
@@ -1233,8 +1253,124 @@ You may choose to post your reproduction anonymously for a period of time (TBD) 
 
 The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student who is using the SSRP as part of a course, results from your work will still be integrated into these descriptive statistics. However, we will separately display statistics for all reproductions and those not conducted anonymously or as part of a course.
 
-\hypertarget{guidance-for-constructive-communication-between-reproducers-and-original-authors}{%
-\chapter{Guidance for Constructive Communication Between Reproducers and Original Authors}\label{guidance-for-constructive-communication-between-reproducers-and-original-authors}}
+\hypertarget{guidance-for-instructors-seeking-to-supervise-reproduction-excercises}{%
+\chapter{Guidance for Instructors Seeking to Supervise Reproduction Excercises}\label{guidance-for-instructors-seeking-to-supervise-reproduction-excercises}}
+
+{[}UNDER REVIEW{]}
+
+We expect that a large fraction of users of this guide and of the SSRP will be students conducting reproductions as part of some type of academic assignment. This chapter identifies possible types of assignments, suggests timeliness and how to grade a reproduction report, and guides instructors on how to deal the scenario where students would like to remain anonymous, but still share their revised reproduction package.
+
+\hypertarget{possible-use-cases-for-instructors}{%
+\section{Possible use cases for instructors}\label{possible-use-cases-for-instructors}}
+
+\textbf{Graduate course/Independent Study}\\
+It is common for a second year/advanced course of a masters or PhD to ask students to the reproduction of a paper to gain familiarity with methods and applications. For this type of exercise the pool of possible papers should correspond to a sub-field (e.g., ``Labor Economics''), and a even narrower selection might be curated by the instructor of the course. The length of this exercise can vary from a couple of weeks, to a semester-long exercise. Depending on this length, the instructor may ask students to review in detail the raw data (semester long exercise) or just focus on examining the analysis data and the main results (couple of weeks exercise). See section \protect\hyperlink{indentify-timeline}{1.2} for a suggested distribution of effort across different lengths of assignments.
+
+Also, at the graduate level it is expected that students will spend significant time at the robustness stage. Before beginning the excercise, instructors are advice to clearly communicate if they are seeking for students to focus on expanding the set of feasible robustness checks by identifying analytical choices (see Chapter 5) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
+
+\textbf{Undergraduate thesis}\\
+Students can use the platform to carry out a detailed reproduction as part of undergraduate thesis (see example \href{https://osf.io/3e6ps/}{here}). This project could last anywhere from a few months to an entire year. At the undergraduate level, students should be able to demonstrate understanding of the paper by identifying its main claims, and conducting a detailed assessment of the reproducibility behind most of them. They should not be expected to completely understand the details of the methodology, but they should be able to demonstrate a high level understanding by identifying the conditions under which the paper's estimate are valid. An important part of the exercise could be dedicated to improving the current level of reproducibility of a section of a paper. Examples within reach of an undergraduate thesis include: finding and cleaning the raw data, translating the code scripts into a different programming language (ideally open source), using dynamic documents, etc. The exercise could be broken into a proposal stage, where the student scopes and assess a paper, and an execution stage, where the student carries out improvements and conducts some new robustness checks.
+
+This type of exercise can be an excellent learning experience for students that are curoios about a career in research. And could generate a tangible outcome that students can later cite when applying to graduate school.
+
+\textbf{Undergraduate course}\\
+A third possible format for supervised reproductions can take place in undergraduate studies. In this setting the main goal should be for the student to verify that the reproductions packages ``runs'' and if not, up to which point. Here undergrads can be expected to understand at a high level the claims of the paper, and attempt to find the estimates that support those claims in the reproduction package. Undergraduate students can also contribute by inspecting the code scripts and identifying potential lines of code where analytical choices (increasing the feasible set of robustness checks). This exercise would give students some exposure to what is under the hood the research papers that are later on presented in their textbooks.
+
+\hypertarget{paper-selection-and-semester-timeline}{%
+\section{Paper selection and semester timeline}\label{paper-selection-and-semester-timeline}}
+
+When setting up a reproduction excercise, Instructors should have one important timeline consideration. Whenever a chosen paper does not have a reproduction package (or has important components missing), the reproducer could try contacting the original authors to obtain the missing materials (see \protect\hyperlink{comunications}{Chapter 8}). In this scenario, reproducers should have at least a couple of weeks to hear back from the authors. In this scenario we recomend that instructors assing this excercise at the beggining of the semester, requiring completion of the paper selection stage early in the academic cycle. This way repoducers will have the opportunity to add missing materials or move onto another paper in case of an unsuccessful response from the authors.
+
+\hypertarget{grading-examples}{%
+\section{Grading Examples}\label{grading-examples}}
+
+Once students have completed a reproduction in the Social Science Reproduction Platform (SSRP), they will be able to generate a View-only version of their exercise. This report can be used by instructors to grade their work and provide feedback. Here we provide an example fo how to grade a reproduction exercise as used in previous classes.
+
+The final score, set here on a 0-100 scale, depends on the score of several sub-components. Each on 0-100 scale:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Submission:} full credit if student submits a non-empty reproduction in time.\\
+\item
+  \textbf{All key fields:} full credit if non of the most important fields are missing. Important field include, but are not limited to: paper information, reproduction package links, claims summary, claims estimates table, inputs description, display item assessments (particularly subjective scale section), paper-level assessments.\\
+\item
+  \textbf{Paper summary:} full credit if the student submits a short summary of the paper. See \protect\hyperlink{read-sum}{this section} for recommendation on what to focus the summary on.
+\item
+  \textbf{Claims:} the student presents an accurate and clear summary of the claims to be assessed in one or two sentences (\protect\hyperlink{scoping}{see Chapter 2}). To properly score this section, the instructor needs to have previous knowledge of the paper.\\
+\item
+  \textbf{Assessment:} there are two possible contributions the student can make to obtain full credit:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The student assesses multiple claims. Additional credit per additional assessment could be assigned at a decreasing rate (e.g., 50\% of the credit for the second assessment, 30\% for the third and 20\% for the fourth).\\
+  \item
+    The student conducts a highly thorough assessment of a claim. This can be done by clearly identifying all the inputs (data sources, analysis data and code scripts) and providing a detailed documentation of the reproduction attempt (e.g., how long did it took, where did it break, what are the specific missing pieces).\\
+  \end{itemize}
+\item
+  \textbf{Improvement:} similar to the assessment scoring, the student can obtain full credit through two types of contributions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The student provides multiple types of improvements with a similar credit structure as for multiple assessments.
+  \item
+    The student conducts a highly thorough improvement of a claim. This doing any of the improvements describe in \protect\hyperlink{improvements}{Improvements} chapter. A key requirement is that the student clearly documents this improvements (see \protect\hyperlink{doc-impr}{this section} for suggestions on how to do this)
+  \end{itemize}
+\item
+  \textbf{Future suggestions:} in addition to the specific improvements carried out by the student, credit can be assigned for specific suggestions that the student may leave for future reproducers. Full credit should be assigned when the recommendations are concrete and demonstrate that the student performed an in-depth review of the code and data.
+\item
+  \textbf{Revise reproduction package:} full credit if the student posts a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided in the reproduction. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commit history.\\
+\item
+  \textbf{Robustness:} similar to assessment and improvement, here the student could obtain full credit from two type of strategies (or a combinations of them):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The student identifies a large number of original analytical choices in the code files. The definition of ``large'' should be left to the Instructor, but here we suggest at least 20 original analytical choices (see \protect\hyperlink{robust}{this section} for a distinction between original and non-original analytical choice).
+  \item
+    The student conducts a robustness test by modifying one o more of the analytical choices identified in the paper. Full credit is assign for a clear discussion of the results and their reasonableness.
+  \end{itemize}
+\end{itemize}
+
+\begin{longtable}[]{@{}lcc@{}}
+\toprule
+& Score (example) & Weights (suggested) \\
+\midrule
+\endhead
+Submitted & 100 & 40\% \\
+All important fields & 80 & 10\% \\
+Summary & 100 & 5\% \\
+Clear claims & 90 & 5\% \\
+Assessment & 100 & 10\% \\
+Improvements & 50 & 10\% \\
+Revise reproduction package & 100 & 5\% \\
+Specific suggestions for improvements & 0 & 5\% \\
+Robustness & 100 & 10\% \\
+Final Score & 87.5 & \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{supporting-annonymous-reproduction-within-a-course}{%
+\section{Supporting Annonymous Reproduction Within a Course}\label{supporting-annonymous-reproduction-within-a-course}}
+
+When conducting a reproduction as part of a class exercise, it may be the case that some student could prefer to remain anonymous when posting their work on to the SSRP. The platform allows for this option when it comes to filling in the different forms associated with each stage. It does not however, provide a way for reproducers to post revised reproduction packages in an anonymous way (all trusted repositories require an identifiable posting user). In this scenario, we advice instructors to create a generic repository for the classroom (e.g.~``Reproductions for Econ 270 - Fall 2021'') and deposit each anonymous reproduction in a self contain folder within this repository.
+
+For example if a class has two students who choose the anonymous option, they should share (privately) their revised reproduction package with their instructor and she will post using the following structure:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  Reproductions for }\CommentTok{[}\OtherTok{Course Name, Semester}\CommentTok{]}
+\NormalTok{    └── Revised reproduction package for Smith et al. (2019)}
+\NormalTok{    └── Revised reproduction package for Perez et al. (2019)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Note:} when making a revised reproduction package anonymous it is advised that instructors and student avoid using version control software. Even if the current materials are correctly de-identified, the entire version history may still contain identifiers.
+
+\hypertarget{comunications}{%
+\chapter{Guidance for Constructive Communication Between Reproducers and Original Authors}\label{comunications}}
 
 This chapter contains guidance for constructive and respectful communication between reproducers and original authors. Exchanges that contain charged or adversarial language can damage professional relationships and hamper scientific progress. Janz and Freese (\href{https://www.mzes.uni-mannheim.de/openscience/wp-content/uploads/2019/01/Janz-Freese_-Good-and-Bad-Replications-1.pdf}{2019}) articulate two important steps reproducers can take to ensure that their interactions with original authors are constructive. We summarize and build on this approach below and encourage you to follow this guidance. Remember the \textbf{golden rule of reproductions} (and replications): \emph{treat others and their work, as you would like others to treat you and your work!}
 
@@ -4652,25 +4788,21 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \section{Concepts in Reproducibility}\label{concepts-in-reproducibility}}
 
 \begin{itemize}
-\tightlist
 \item
   \textbf{Analytic data:} Data used as the final input in a workflow to produce a statistic (display item) in the paper (including appendices).\\
 \item
   \textbf{(Research) claim:} According to a definiton provided by the \href{https://replicats.research.unimelb.edu.au/\#tab301}{repliCATS project}, a research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A paper can include more than one claim. Claims are usually described in the paper's abstract; however, sometimes, the claim described in the abstract does not match the claim that is tested in the paper.
   In the SSRP framework, different claims in a paper may be tested using different methodologies, and their results may be presented in one or more display items, such as tables and figures (\href{https://bitss.github.io/ACRE/intro.html\#fig:diagram}{figure 0.1} illustrates this idea). There are several types of claims, including:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \textbf{Causal claim:}An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. E.g., ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
-  \item
-    \textbf{Descriptive/predictive claim:} An assertion that estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. E.g., ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''\\
-    \textbf{Coding error:} A coding error may occur when a section of the code executes a procedure that contradicts the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females.
-  \end{itemize}
+\item
+  \textbf{Causal claim:} An assertion that invokes causal relationships between variables. A paper may estimate the effect of \emph{X} on \emph{Y} for population \emph{P}, using method \emph{F}. E.g., ``This paper investigates the impact of bicycle provision on secondary school enrollment among young women in Bihar/India, using a Difference in Difference approach.''\\
+\item
+  \textbf{Descriptive/predictive claim:} An assertion that estimates the value of \emph{Y} (estimated or predicted) for population \emph{P} under dimensions \emph{X} using method \emph{M}. E.g., ``Drawing on a unique Swiss data set (population \emph{P}) and exploiting systematic anomalies in countries' portfolio investment positions (method \emph{M}), I find that around 8\% of the global financial wealth of households is held in tax havens (value of \emph{Y}).''
+\item
+  \textbf{Coding error:} A coding error may occur when a section of the code executes a procedure that contradicts the intended procedure expressed in the documentation (paper or comments of the code). For example, an error happens if the paper specifies that the analysis is performed on the population of males, but the code restricts the analysis to females.
 \item
   \textbf{Data availability statement:} A description, normally included in the paper or the appendix, of the terms of use for data used in the paper, as well as the procedure to obtain the data (especially important for restricted-access data). Data availability statements expand on and complement data citations. Find guidance on data availability statements for reproducibility \href{https://social-science-data-editors.github.io/guidance/Requested_information_dcas.html\#what-are-data-and-code-availability-statements-dcas}{here}.\\
 \item
-  \textbf{Data citation:}The practice of referencing a dataset, rather than just the paper in which a dataset was used. Data citations help other researchers find data and reward data sharing. Find further guidance on data citations \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
+  \textbf{Data citation:} The practice of referencing a dataset, rather than just the paper in which a dataset was used. Data citations help other researchers find data and reward data sharing. Find further guidance on data citations \href{https://social-science-data-editors.github.io/guidance/Data_citation_guidance.html}{here}.\\
 \item
   \textbf{Data sharing:} Making the data used in an analysis available to others, ideally through a trusted repository (see below).
 \item

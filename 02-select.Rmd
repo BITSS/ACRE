@@ -30,11 +30,11 @@ If the SSRP database contains previous reproduction attempts of the paper, you w
 >**Box 1:** Summary Report Card for ACRE Paper Entry     
 > **Title:**  Sample Title   
 > **Authors:**  Jane Doe & John Doe  
-> **Original Reproduction Package Available:** Yes (link)/No.
-> [If "No"] **Contacted Authors?:** Yes/No  
-> [If "Yes(contacted)"] **Type of Response:** Categories (6).  
-> **Additional Reproduction Packages:** Number (eg., 2)   
-> **Authors Available for Further Questions for ACRE Reproductions:** Yes/No/Unknown   
+> **Original Reproduction Package Available:** Yes (link)/No.  
+> [If "No"] **Contacted Authors?:** Yes/No   
+> [If "Yes(contacted)"] **Type of Response:** Categories (6).   
+> **Additional Reproduction Packages:** Number (eg., 2)     
+> **Authors Available for Further Questions for ACRE Reproductions:** Yes/No/Unknown     
 
 If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the SSRP database following the example above.
 
@@ -77,7 +77,7 @@ knitr::include_graphics("candidate-to-declared-paper.png")
 <!-- Bug: there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 
 
-## Identify your relevant timeline.  
+## Identify your relevant timeline. {#identify-timeline}  
 
 Before you begin working on the four main stages of the reproduction exercise (Scoping, Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).
 

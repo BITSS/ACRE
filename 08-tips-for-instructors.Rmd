@@ -1,0 +1,80 @@
+# Guidance for Instructors Seeking to Supervise Reproduction Excercises
+[UNDER REVIEW]
+
+We expect that a large fraction of users of this guide and of the SSRP will be students conducting reproductions as part of some type of academic assignment. This chapter identifies possible types of assignments, suggests timeliness and how to grade a reproduction report, and guides instructors on how to deal the scenario where students would like to remain anonymous, but still share their revised reproduction package. 
+
+
+## Possible use cases for instructors  
+
+**Graduate course/Independent Study**  
+It is common for a second year/advanced course of a masters or PhD to ask students to the reproduction of a paper to gain familiarity with methods and applications. For this type of exercise the pool of possible papers should correspond to a sub-field (e.g., "Labor Economics"), and a even narrower selection might be curated by the instructor of the course. The length of this exercise can vary from a couple of weeks, to a semester-long exercise. Depending on this length, the instructor may ask students to review in detail the raw data (semester long exercise) or just focus on examining the analysis data and the main results (couple of weeks exercise). See section [1.2](#indentify-timeline) for a suggested distribution of effort across different lengths of assignments.
+
+Also, at the graduate level it is expected that students will spend significant time at the robustness stage. Before beginning the excercise, instructors are advice to clearly communicate if they are seeking for students to focus on expanding the set of feasible robustness checks by identifying analytical choices (see Chapter 5) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
+
+**Undergraduate thesis**  
+Students can use the platform to carry out a detailed reproduction as part of undergraduate thesis (see example [here](https://osf.io/3e6ps/)). This project could last anywhere from a few months to an entire year. At the undergraduate level, students should be able to demonstrate understanding of the paper by identifying its main claims, and conducting a detailed assessment of the reproducibility behind most of them. They should not be expected to completely understand the details of the methodology, but they should be able to demonstrate a high level understanding by identifying the conditions under which the paper's estimate are valid. An important part of the exercise could be dedicated to improving the current level of reproducibility of a section of a paper. Examples within reach of an undergraduate thesis include: finding and cleaning the raw data, translating the code scripts into a different programming language (ideally open source), using dynamic documents, etc. The exercise could be broken into a proposal stage, where the student scopes and assess a paper, and an execution stage, where the student carries out improvements and conducts some new robustness checks.  
+
+This type of exercise can be an excellent learning experience for students that are curoios about a career in research. And could generate a tangible outcome that students can later cite when applying to graduate school. 
+
+**Undergraduate course**  
+A third possible format for supervised reproductions can take place in undergraduate studies. In this setting the main goal should be for the student to verify that the reproductions packages "runs" and if not, up to which point. Here undergrads can be expected to understand at a high level the claims of the paper, and attempt to find the estimates that support those claims in the reproduction package. Undergraduate students can also contribute by inspecting the code scripts and identifying potential lines of code where analytical choices (increasing the feasible set of robustness checks). This exercise would give students some exposure to what is under the hood the research papers that are later on presented in their textbooks. 
+
+
+## Paper selection and semester timeline
+
+When setting up a reproduction excercise, Instructors should have one important timeline consideration. Whenever a chosen paper does not have a reproduction package (or has important components missing), the reproducer could try contacting the original authors to obtain the missing materials (see [Chapter 8](#comunications)). In this scenario, reproducers should have at least a couple of weeks to hear back from the authors. In this scenario we recomend that instructors assing this excercise at the beggining of the semester, requiring completion of the paper selection stage early in the academic cycle. This way repoducers will have the opportunity to add missing materials or move onto another paper in case of an unsuccessful response from the authors. 
+
+
+## Grading Examples 
+
+Once students have completed a reproduction in the Social Science Reproduction Platform (SSRP), they will be able to generate a View-only version of their exercise. This report can be used by instructors to grade their work and provide feedback. Here we provide an example fo how to grade a reproduction exercise as used in previous classes. 
+
+The final score, set here on a 0-100 scale, depends on the score of several sub-components. Each on 0-100 scale: 
+
+ - **Submission:** full credit if student submits a non-empty reproduction in time.    
+ - **All key fields:** full credit if non of the most important fields are missing. Important field include, but are not limited to: paper information, reproduction package links, claims summary, claims estimates table, inputs description, display item assessments (particularly subjective scale section), paper-level assessments.  
+ - **Paper summary:** full credit if the student submits a short summary of the paper. See [this section](#read-sum) for recommendation on what to focus the summary on. 
+ - **Claims:** the student presents an accurate and clear summary of the claims to be assessed in one or two sentences ([see Chapter 2](#scoping)). To properly score this section, the instructor needs to have previous knowledge of the paper.  
+ - **Assessment:** there are two possible contributions the student can make to obtain full credit:    
+    - The student assesses multiple claims. Additional credit per additional assessment could be assigned at a decreasing rate (e.g., 50% of the credit for the second assessment, 30% for the third and 20% for the fourth).    
+    - The student conducts a highly thorough assessment of a claim. This can be done by clearly identifying all the inputs (data sources, analysis data and code scripts) and providing a detailed documentation of the reproduction attempt (e.g., how long did it took, where did it break, what are the specific missing pieces).   
+ - **Improvement:** similar to the assessment scoring, the student can obtain full credit through two types of contributions:
+    - The student provides multiple types of improvements with a similar credit structure as for multiple assessments. 
+    - The student conducts a highly thorough improvement of a claim. This doing any of the improvements describe in [Improvements](#improvements) chapter. A key requirement is that the student clearly documents this improvements (see [this section](#doc-impr) for suggestions on how to do this) 
+- **Future suggestions:** in addition to the specific improvements carried out by the student, credit can be assigned for specific suggestions that the student may leave for future reproducers. Full credit should be assigned when the recommendations are concrete and demonstrate that the student performed an in-depth review of the code and data. 
+- **Revise reproduction package:** full credit if the student posts a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided in the reproduction. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commit history.   
+- **Robustness:** similar to assessment and improvement, here the student could obtain full credit from two type of strategies (or a combinations of them): 
+   - The student identifies a large number of original analytical choices in the code files. The definition of "large" should be left to the Instructor, but here we suggest at least 20 original analytical choices (see [this section](#robust) for a distinction between original and non-original analytical choice).
+   - The student conducts a robustness test by modifying one o more of the analytical choices identified in the paper. Full credit is assign for a clear discussion of the results and their reasonableness. 
+
+
+
+
+|                                       | Score <br>  (example) | Weights <br>  (suggested)  |
+|---------------------------------------|:---------:|:-----------:|
+| Submitted                             |  100      |   40%       |
+| All important fields                  |  80       |   10%       |
+| Summary                               |  100      |    5%       |
+| Clear claims                          |  90       |    5%       |
+| Assessment                            |  100      |   10%       |
+| Improvements                          |  50       |   10%       |
+| Revise reproduction package           |  100      |    5%       |
+| Specific suggestions for improvements |  0        |    5%       |
+| Robustness                            |  100      |   10%       |
+| Final Score                           |  87.5     |             |  
+
+
+
+## Supporting Annonymous Reproduction Within a Course
+
+When conducting a reproduction as part of a class exercise, it may be the case that some student could prefer to remain anonymous when posting their work on to the SSRP. The platform allows for this option when it comes to filling in the different forms associated with each stage. It does not however, provide a way for reproducers to post revised reproduction packages in an anonymous way (all trusted repositories require an identifiable posting user). In this scenario, we advice instructors to create a generic repository for the classroom (e.g. "Reproductions for Econ 270 - Fall 2021") and deposit each anonymous reproduction in a self contain folder within this repository. 
+
+For example if a class has two students who choose the anonymous option, they should share (privately) their revised reproduction package with their instructor and she will post using the following structure: 
+
+```md
+  Reproductions for [Course Name, Semester]
+    └── Revised reproduction package for Smith et al. (2019)
+    └── Revised reproduction package for Perez et al. (2019)
+```
+
+**Note:** when making a revised reproduction package anonymous it is advised that instructors and student avoid using version control software. Even if the current materials are correctly de-identified, the entire version history may still contain identifiers. 
