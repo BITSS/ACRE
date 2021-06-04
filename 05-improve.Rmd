@@ -107,3 +107,9 @@ There are several measures you can take to improve a paper's overall reproducibi
 6 - Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).  
 
 Please suggest other paper-level improvements by editing this guide (use the "edit" button above) or contacting <acre+feedback@berkeley.edu>.
+
+
+## Documenting the improvements {#doc-impr} 
+
+[UNDER CONSTRUCTION]
+

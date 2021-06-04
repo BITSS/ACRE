@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Guidance for Instructors Seeking to Supervise Reproduction Excercises | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
+  <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Guidance for Instructors Seeking to Supervise Reproduction Excercises | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
+  <meta name="github-repo" content="BITSS/ACRE" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Guidance for Instructors Seeking to Supervise Reproduction Excercises | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  
+  <meta name="twitter:description" content="Materials to support the reproduction of published research in social sciences" />
+  
+
+<meta name="author" content="ACRE Team" />
+
+
+<meta name="date" content="2021-06-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="concluding-the-reproduction.html"/>
+<link rel="next" href="comunications.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#reproduction-stages"><i class="fa fa-check"></i>Reproduction stages</a></li>
+<li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#reproduction-strategies"><i class="fa fa-check"></i>Reproduction strategies</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="select.html"><a href="select.html"><i class="fa fa-check"></i><b>1</b> Selecting a paper</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="select.html"><a href="select.html#declare"><i class="fa fa-check"></i><b>1.1</b> From candidate to declared paper</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP Database</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.2</b> Identify your relevant timeline.</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="scoping.html"><a href="scoping.html#read-sum"><i class="fa fa-check"></i><b>2.1</b> Read and summarize the paper</a></li>
+<li class="chapter" data-level="2.2" data-path="scoping.html"><a href="scoping.html#record-a-revised-reproduction-package"><i class="fa fa-check"></i><b>2.2</b> Record a revised reproduction package</a></li>
+<li class="chapter" data-level="2.3" data-path="scoping.html"><a href="scoping.html#declare-estimates"><i class="fa fa-check"></i><b>2.3</b> Record scope of the exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="assessment.html"><a href="assessment.html"><i class="fa fa-check"></i><b>3</b> Assessment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="assessment.html"><a href="assessment.html#describe-inputs"><i class="fa fa-check"></i><b>3.1</b> Describe the inputs</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="assessment.html"><a href="assessment.html#desc-sourc"><i class="fa fa-check"></i><b>3.1.1</b> Describe the data sources and raw data</a></li>
+<li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#desc-analy"><i class="fa fa-check"></i><b>3.1.2</b> Describe the analytic data</a></li>
+<li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#desc-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect display items to all its inputs usign the ReproducibiliTREE</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="assessment.html"><a href="assessment.html#complete-tree"><i class="fa fa-check"></i><b>3.2.1</b> Complete workflow information</a></li>
+<li class="chapter" data-level="3.2.2" data-path="assessment.html"><a href="assessment.html#incomplete-workflow-information"><i class="fa fa-check"></i><b>3.2.2</b> Incomplete workflow information</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score.</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
+<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper-level</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>4</b> Improvements</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="improvements.html"><a href="improvements.html#di-imp"><i class="fa fa-check"></i><b>4.1</b> Display item improvements</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="improvements.html"><a href="improvements.html#rd"><i class="fa fa-check"></i><b>4.1.1</b> Adding raw data: missing files or metadata</a></li>
+<li class="chapter" data-level="4.1.2" data-path="improvements.html"><a href="improvements.html#ad"><i class="fa fa-check"></i><b>4.1.2</b> Adding missing analytic data files</a></li>
+<li class="chapter" data-level="4.1.3" data-path="improvements.html"><a href="improvements.html#ac"><i class="fa fa-check"></i><b>4.1.3</b> Adding missing analysis code</a></li>
+<li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
+<li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
+<li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
+<li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
+<li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#justifying-and-testing-reasonable-robustness-checks"><i class="fa fa-check"></i><b>5.2</b> Justifying and testing reasonable robustness checks</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#outputs"><i class="fa fa-check"></i><b>6.1</b> Outputs</a></li>
+<li class="chapter" data-level="6.2" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html#visibility-and-data-use"><i class="fa fa-check"></i><b>6.2</b> Visibility and data use</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><i class="fa fa-check"></i><b>7</b> Guidance for Instructors Seeking to Supervise Reproduction Excercises</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#possible-use-cases-for-instructors"><i class="fa fa-check"></i><b>7.1</b> Possible use cases for instructors</a></li>
+<li class="chapter" data-level="7.2" data-path="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#paper-selection-and-semester-timeline"><i class="fa fa-check"></i><b>7.2</b> Paper selection and semester timeline</a></li>
+<li class="chapter" data-level="7.3" data-path="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#grading-examples"><i class="fa fa-check"></i><b>7.3</b> Grading Examples</a></li>
+<li class="chapter" data-level="7.4" data-path="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#supporting-annonymous-reproduction-within-a-course"><i class="fa fa-check"></i><b>7.4</b> Supporting Annonymous Reproduction Within a Course</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="comunications.html"><a href="comunications.html"><i class="fa fa-check"></i><b>8</b> Guidance for Constructive Communication Between Reproducers and Original Authors</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="comunications.html"><a href="comunications.html#for-reproducers-contacting-the-authors-of-the-original-study"><i class="fa fa-check"></i><b>8.1</b> For reproducers contacting the authors of the original study</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="comunications.html"><a href="comunications.html#contacting-the-original-authors-when-there-is-no-reproduction-package"><i class="fa fa-check"></i><b>8.1.1</b> Contacting the original author(s) when there is no reproduction package</a></li>
+<li class="chapter" data-level="8.1.2" data-path="comunications.html"><a href="comunications.html#contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package"><i class="fa fa-check"></i><b>8.1.2</b> Contacting the original author(s) to request specific missing items of a reproduction package</a></li>
+<li class="chapter" data-level="8.1.3" data-path="comunications.html"><a href="comunications.html#asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>8.1.3</b> Asking for additional guidance when some materials have been shared</a></li>
+<li class="chapter" data-level="8.1.4" data-path="comunications.html"><a href="comunications.html#response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>8.1.4</b> response when the original author has declined to share due to <em>undisclosed reasons</em></a></li>
+<li class="chapter" data-level="8.1.5" data-path="comunications.html"><a href="comunications.html#response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>8.1.5</b> response when the original author has declined to share due to legal or ethical restrictions of the data</a></li>
+<li class="chapter" data-level="8.1.6" data-path="comunications.html"><a href="comunications.html#contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>8.1.6</b> Contacting the original author to share the results of your reproduction exercise</a></li>
+<li class="chapter" data-level="8.1.7" data-path="comunications.html"><a href="comunications.html#responding-to-hostile-responses-from-original-authors"><i class="fa fa-check"></i><b>8.1.7</b> Responding to hostile responses from original authors</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="comunications.html"><a href="comunications.html#for-original-authors-responding-to-requests-from-reproducers"><i class="fa fa-check"></i><b>8.2</b> For original authors responding to requests from reproducers</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="comunications.html"><a href="comunications.html#responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction"><i class="fa fa-check"></i><b>8.2.1</b> Responding to a repeated request that has been addressed in an earlier interaction</a></li>
+<li class="chapter" data-level="8.2.2" data-path="comunications.html"><a href="comunications.html#acknowledging-that-the-author-no-longer-has-access-to-certain-parts-of-the-reproduction-package"><i class="fa fa-check"></i><b>8.2.2</b> Acknowledging that the author no longer has access to certain part(s) of the reproduction package</a></li>
+<li class="chapter" data-level="8.2.3" data-path="comunications.html"><a href="comunications.html#acknowledging-that-some-material-is-still-embargoed-for-future-research"><i class="fa fa-check"></i><b>8.2.3</b> Acknowledging that some material is still embargoed for future research</a></li>
+<li class="chapter" data-level="8.2.4" data-path="comunications.html"><a href="comunications.html#responding-to-incompleteunclear-requests"><i class="fa fa-check"></i><b>8.2.4</b> Responding to incomplete/unclear requests</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="comunications.html"><a href="comunications.html#harassment-andor-discrimination"><i class="fa fa-check"></i><b>8.3</b> Harassment and/or discrimination</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html"><i class="fa fa-check"></i><b>9</b> Examples of Reproduction Trees</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#stylized-examples"><i class="fa fa-check"></i><b>9.1</b> Stylized examples</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#complete-reproduction-tree"><i class="fa fa-check"></i><b>9.1.1</b> Complete reproduction tree</a></li>
+<li class="chapter" data-level="9.1.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#incomplete-reproduction-tree"><i class="fa fa-check"></i><b>9.1.2</b> Incomplete reproduction tree</a></li>
+<li class="chapter" data-level="9.1.3" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#unused-data-sources"><i class="fa fa-check"></i><b>9.1.3</b> Unused data sources</a></li>
+<li class="chapter" data-level="9.1.4" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#final-outputs-is-not-a-display-item"><i class="fa fa-check"></i><b>9.1.4</b> Final outputs is not a display item</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#examples-from-real-reproduction-attempts"><i class="fa fa-check"></i><b>9.2</b> Examples from real reproduction attempts</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#possibly-missing-code-for-producing-a-display-item."><i class="fa fa-check"></i><b>9.2.1</b> Possibly missing code for producing a display item.</a></li>
+<li class="chapter" data-level="9.2.2" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#long-complicated-tree."><i class="fa fa-check"></i><b>9.2.2</b> Long, complicated tree.</a></li>
+<li class="chapter" data-level="9.2.3" data-path="examples-of-reproduction-trees.html"><a href="examples-of-reproduction-trees.html#example-of-completing-reproduction-tree"><i class="fa fa-check"></i><b>9.2.3</b> Example of completing reproduction tree</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>10</b> Contributions</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="contributions.html"><a href="contributions.html#contrib-guide"><i class="fa fa-check"></i><b>10.1</b> Contributing feedback on these guidelines</a></li>
+<li class="chapter" data-level="10.2" data-path="contributions.html"><a href="contributions.html#list-of-contributors-guidelines-content-and-source-code"><i class="fa fa-check"></i><b>10.2</b> List of Contributors: Guidelines content and source code:</a></li>
+<li class="chapter" data-level="10.3" data-path="contributions.html"><a href="contributions.html#suggested-citation-format"><i class="fa fa-check"></i><b>10.3</b> Suggested citation format</a></li>
+<li class="chapter" data-level="10.4" data-path="contributions.html"><a href="contributions.html#acknowledgments"><i class="fa fa-check"></i><b>10.4</b> Acknowledgments</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>11</b> Definitions</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="definitions.html"><a href="definitions.html#concepts-in-reproducibility"><i class="fa fa-check"></i><b>11.1</b> Concepts in Reproducibility</a></li>
+<li class="chapter" data-level="11.2" data-path="definitions.html"><a href="definitions.html#concepts-in-the-acre-exercise-and-the-platform"><i class="fa fa-check"></i><b>11.2</b> Concepts in the ACRE exercise and the platform</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Guide for Accelerating <br> Computational Reproducibility in the Social Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="guidance-for-instructors-seeking-to-supervise-reproduction-excercises" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Guidance for Instructors Seeking to Supervise Reproduction Excercises</h1>
+<p>[UNDER REVIEW]</p>
+<p>We expect that a large fraction of users of this guide and of the SSRP will be students conducting reproductions as part of some type of academic assignment. This chapter identifies possible types of assignments, suggests timeliness and how to grade a reproduction report, and guides instructors on how to deal the scenario where students would like to remain anonymous, but still share their revised reproduction package.</p>
+<div id="possible-use-cases-for-instructors" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Possible use cases for instructors</h2>
+<p><strong>Graduate course/Independent Study</strong><br />
+It is common for a second year/advanced course of a masters or PhD to ask students to the reproduction of a paper to gain familiarity with methods and applications. For this type of exercise the pool of possible papers should correspond to a sub-field (e.g., “Labor Economics”), and a even narrower selection might be curated by the instructor of the course. The length of this exercise can vary from a couple of weeks, to a semester-long exercise. Depending on this length, the instructor may ask students to review in detail the raw data (semester long exercise) or just focus on examining the analysis data and the main results (couple of weeks exercise). See section <a href="#indentify-timeline">1.2</a> for a suggested distribution of effort across different lengths of assignments.</p>
+<p>Also, at the graduate level it is expected that students will spend significant time at the robustness stage. Before beginning the excercise, instructors are advice to clearly communicate if they are seeking for students to focus on expanding the set of feasible robustness checks by identifying analytical choices (see Chapter 5) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).</p>
+<p><strong>Undergraduate thesis</strong><br />
+Students can use the platform to carry out a detailed reproduction as part of undergraduate thesis (see example <a href="https://osf.io/3e6ps/">here</a>). This project could last anywhere from a few months to an entire year. At the undergraduate level, students should be able to demonstrate understanding of the paper by identifying its main claims, and conducting a detailed assessment of the reproducibility behind most of them. They should not be expected to completely understand the details of the methodology, but they should be able to demonstrate a high level understanding by identifying the conditions under which the paper’s estimate are valid. An important part of the exercise could be dedicated to improving the current level of reproducibility of a section of a paper. Examples within reach of an undergraduate thesis include: finding and cleaning the raw data, translating the code scripts into a different programming language (ideally open source), using dynamic documents, etc. The exercise could be broken into a proposal stage, where the student scopes and assess a paper, and an execution stage, where the student carries out improvements and conducts some new robustness checks.</p>
+<p>This type of exercise can be an excellent learning experience for students that are curoios about a career in research. And could generate a tangible outcome that students can later cite when applying to graduate school.</p>
+<p><strong>Undergraduate course</strong><br />
+A third possible format for supervised reproductions can take place in undergraduate studies. In this setting the main goal should be for the student to verify that the reproductions packages “runs” and if not, up to which point. Here undergrads can be expected to understand at a high level the claims of the paper, and attempt to find the estimates that support those claims in the reproduction package. Undergraduate students can also contribute by inspecting the code scripts and identifying potential lines of code where analytical choices (increasing the feasible set of robustness checks). This exercise would give students some exposure to what is under the hood the research papers that are later on presented in their textbooks.</p>
+</div>
+<div id="paper-selection-and-semester-timeline" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Paper selection and semester timeline</h2>
+<p>When setting up a reproduction excercise, Instructors should have one important timeline consideration. Whenever a chosen paper does not have a reproduction package (or has important components missing), the reproducer could try contacting the original authors to obtain the missing materials (see <a href="comunications.html#comunications">Chapter 8</a>). In this scenario, reproducers should have at least a couple of weeks to hear back from the authors. In this scenario we recomend that instructors assing this excercise at the beggining of the semester, requiring completion of the paper selection stage early in the academic cycle. This way repoducers will have the opportunity to add missing materials or move onto another paper in case of an unsuccessful response from the authors.</p>
+</div>
+<div id="grading-examples" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Grading Examples</h2>
+<p>Once students have completed a reproduction in the Social Science Reproduction Platform (SSRP), they will be able to generate a View-only version of their exercise. This report can be used by instructors to grade their work and provide feedback. Here we provide an example fo how to grade a reproduction exercise as used in previous classes.</p>
+<p>The final score, set here on a 0-100 scale, depends on the score of several sub-components. Each on 0-100 scale:</p>
+<ul>
+<li><strong>Submission:</strong> full credit if student submits a non-empty reproduction in time.<br />
+</li>
+<li><strong>All key fields:</strong> full credit if non of the most important fields are missing. Important field include, but are not limited to: paper information, reproduction package links, claims summary, claims estimates table, inputs description, display item assessments (particularly subjective scale section), paper-level assessments.<br />
+</li>
+<li><strong>Paper summary:</strong> full credit if the student submits a short summary of the paper. See <a href="scoping.html#read-sum">this section</a> for recommendation on what to focus the summary on.</li>
+<li><strong>Claims:</strong> the student presents an accurate and clear summary of the claims to be assessed in one or two sentences (<a href="scoping.html#scoping">see Chapter 2</a>). To properly score this section, the instructor needs to have previous knowledge of the paper.<br />
+</li>
+<li><strong>Assessment:</strong> there are two possible contributions the student can make to obtain full credit:
+<ul>
+<li>The student assesses multiple claims. Additional credit per additional assessment could be assigned at a decreasing rate (e.g., 50% of the credit for the second assessment, 30% for the third and 20% for the fourth).<br />
+</li>
+<li>The student conducts a highly thorough assessment of a claim. This can be done by clearly identifying all the inputs (data sources, analysis data and code scripts) and providing a detailed documentation of the reproduction attempt (e.g., how long did it took, where did it break, what are the specific missing pieces).<br />
+</li>
+</ul></li>
+<li><strong>Improvement:</strong> similar to the assessment scoring, the student can obtain full credit through two types of contributions:
+<ul>
+<li>The student provides multiple types of improvements with a similar credit structure as for multiple assessments.</li>
+<li>The student conducts a highly thorough improvement of a claim. This doing any of the improvements describe in <a href="improvements.html#improvements">Improvements</a> chapter. A key requirement is that the student clearly documents this improvements (see <a href="improvements.html#doc-impr">this section</a> for suggestions on how to do this)</li>
+</ul></li>
+<li><strong>Future suggestions:</strong> in addition to the specific improvements carried out by the student, credit can be assigned for specific suggestions that the student may leave for future reproducers. Full credit should be assigned when the recommendations are concrete and demonstrate that the student performed an in-depth review of the code and data.</li>
+<li><strong>Revise reproduction package:</strong> full credit if the student posts a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided in the reproduction. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commit history.<br />
+</li>
+<li><strong>Robustness:</strong> similar to assessment and improvement, here the student could obtain full credit from two type of strategies (or a combinations of them):
+<ul>
+<li>The student identifies a large number of original analytical choices in the code files. The definition of “large” should be left to the Instructor, but here we suggest at least 20 original analytical choices (see <a href="robust.html#robust">this section</a> for a distinction between original and non-original analytical choice).</li>
+<li>The student conducts a robustness test by modifying one o more of the analytical choices identified in the paper. Full credit is assign for a clear discussion of the results and their reasonableness.</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Score <br> (example)</th>
+<th align="center">Weights <br> (suggested)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Submitted</td>
+<td align="center">100</td>
+<td align="center">40%</td>
+</tr>
+<tr class="even">
+<td>All important fields</td>
+<td align="center">80</td>
+<td align="center">10%</td>
+</tr>
+<tr class="odd">
+<td>Summary</td>
+<td align="center">100</td>
+<td align="center">5%</td>
+</tr>
+<tr class="even">
+<td>Clear claims</td>
+<td align="center">90</td>
+<td align="center">5%</td>
+</tr>
+<tr class="odd">
+<td>Assessment</td>
+<td align="center">100</td>
+<td align="center">10%</td>
+</tr>
+<tr class="even">
+<td>Improvements</td>
+<td align="center">50</td>
+<td align="center">10%</td>
+</tr>
+<tr class="odd">
+<td>Revise reproduction package</td>
+<td align="center">100</td>
+<td align="center">5%</td>
+</tr>
+<tr class="even">
+<td>Specific suggestions for improvements</td>
+<td align="center">0</td>
+<td align="center">5%</td>
+</tr>
+<tr class="odd">
+<td>Robustness</td>
+<td align="center">100</td>
+<td align="center">10%</td>
+</tr>
+<tr class="even">
+<td>Final Score</td>
+<td align="center">87.5</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="supporting-annonymous-reproduction-within-a-course" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Supporting Annonymous Reproduction Within a Course</h2>
+<p>When conducting a reproduction as part of a class exercise, it may be the case that some student could prefer to remain anonymous when posting their work on to the SSRP. The platform allows for this option when it comes to filling in the different forms associated with each stage. It does not however, provide a way for reproducers to post revised reproduction packages in an anonymous way (all trusted repositories require an identifiable posting user). In this scenario, we advice instructors to create a generic repository for the classroom (e.g. “Reproductions for Econ 270 - Fall 2021”) and deposit each anonymous reproduction in a self contain folder within this repository.</p>
+<p>For example if a class has two students who choose the anonymous option, they should share (privately) their revised reproduction package with their instructor and she will post using the following structure:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#cb6-1" aria-hidden="true" tabindex="-1"></a>  Reproductions for <span class="co">[</span><span class="ot">Course Name, Semester</span><span class="co">]</span></span>
+<span id="cb6-2"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#cb6-2" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Smith et al. (2019)</span>
+<span id="cb6-3"><a href="guidance-for-instructors-seeking-to-supervise-reproduction-excercises.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Perez et al. (2019)</span></code></pre></div>
+<p><strong>Note:</strong> when making a revised reproduction package anonymous it is advised that instructors and student avoid using version control software. Even if the current materials are correctly de-identified, the entire version history may still contain identifiers.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="concluding-the-reproduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="comunications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/BITSS/ACRE/edit/master/08-tips-for-instructors.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
