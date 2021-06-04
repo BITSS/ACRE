@@ -29,15 +29,15 @@ Before submitting the reproduction, make sure that your revised reproduction pac
 
 ## Visibility and data use 
 
-You may choose to post your reproduction anonymously for a period of time (TBD) after submitting it. During this embargo period, unidentifiable data from your reproduction (i.e., numerical and categorical form responses) will be visible to other platform users, but your identity and identifiable data (i.e., text form responses) will not be revealed. When submitting your reproduction the platform will ask you to choose among three options of visibility: 
-    
+Before submitting your reproduction, we ask that you select one of three privacy models that determine what parts of your reproduction will be visible to other SSRP users upon publishing. We recommend using the *public, identified* model, which allows other users to see the entirety of your reproduction and credits you directly as its author. However, you may choose to publish your reproduction *anonymously* under either the *class anonymous* or *temporary anonymous* models, where other SSRP users can access unidentifiable data from your reproduction (e.g., numerical and categorical responses), but not your identity and identifiable data (free-form narrative answers such as notes, descriptions, summaries, and explanations). Please refer to the [Terms of Use](https://www.socialsciencereproduction.org/terms-of-use) to learn more about each privacy model; however, here they are in a nutshell: 
+   
   1. **Public, identified:** this is the default privacy setting. You are listed as the reproduction's author, and other users can see the entire reproduction.
 
   2. **Class anonymous:** allows you to conceal your identity and free-form narrative answers (notes, descriptions, summaries, explanations) indefinitely if you conducted the reproduction as part of a class, project, or some other assignment for credit at the university/post-secondary level. Other users can see basic class identifiers (course name, year, institution university, instructor's name, and email address) and categorical responses.
 
   3. **Temporary anonymous:** allows you to embargo your identity and free-form narrative answers for up to 4 years after submitting. Requires an annually recurring opt-out to maintain the embargo. At the expiration of the embargo period or if you fail to opt-out, privacy settings are updated to "public, identified".
 
-The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student who is using the SSRP as part of a course, results from your work will still be integrated into these descriptive statistics. However, we will separately display statistics for all reproductions and those not conducted anonymously or as part of a course.
+The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student using the SSRP as part of a course, your work may still be integrated into these descriptive statistics.
 
 
 
