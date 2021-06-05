@@ -109,7 +109,15 @@ There are several measures you can take to improve a paper's overall reproducibi
 Please suggest other paper-level improvements by editing this guide (use the "edit" button above) or contacting <acre+feedback@berkeley.edu>.
 
 
-## Documenting the improvements {#doc-impr} 
+## Documenting the improvements using version control {#doc-impr} 
 
-[UNDER CONSTRUCTION]
+When reporting your improvements in the SSRP, we suggest using version control software (git) to track the differences between the original reproduction package and your proposed improvements. One possible approach could be the following:
 
+ 1. Create an empty repository for your revised reproduction package. 
+ 2. Deposit the original reproduction package in this repository, then commit this changes using the name "depositing original reproduction package".    
+ 3. In order to clearly show where are your improvements relative to the original reproduction package you then can takes one of the following strategies:  
+ 3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or  
+ 3b. Commit as often as you want, but provide the identifiers (tags) of the two commits: one for to mark the reproduction package *before* you initiate a specific change (e.g., adding missing analytic data), and a second commit with the reproduction package that contains the final version of this specific improvement. With this two identifiers, readers of your reproduction will be able to easily compare (make `diffs` in git) to see exactly what was added and/or deleted.   
+ 4. Refer to the this specific commits (their tags) when describing a specific improvement in the SSRP.    
+ 
+ 

@@ -1060,9 +1060,24 @@ There are several measures you can take to improve a paper's overall reproducibi
 Please suggest other paper-level improvements by editing this guide (use the ``edit'' button above) or contacting \href{mailto:acre+feedback@berkeley.edu}{\nolinkurl{acre+feedback@berkeley.edu}}.
 
 \hypertarget{doc-impr}{%
-\section{Documenting the improvements}\label{doc-impr}}
+\section{Documenting the improvements using version control}\label{doc-impr}}
 
-{[}UNDER CONSTRUCTION{]}
+When reporting your improvements in the SSRP, we suggest using version control software (git) to track the differences between the original reproduction package and your proposed improvements. One possible approach could be the following:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create an empty repository for your revised reproduction package.
+\item
+  Deposit the original reproduction package in this repository, then commit this changes using the name ``depositing original reproduction package''.\\
+\item
+  In order to clearly show where are your improvements relative to the original reproduction package you then can takes one of the following strategies:\\
+  3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or\\
+  3b. Commit as often as you want, but provide the identifiers (tags) of the two commits: one for to mark the reproduction package \emph{before} you initiate a specific change (e.g., adding missing analytic data), and a second commit with the reproduction package that contains the final version of this specific improvement. With this two identifiers, readers of your reproduction will be able to easily compare (make \texttt{diffs} in git) to see exactly what was added and/or deleted.\\
+\item
+  Refer to the this specific commits (their tags) when describing a specific improvement in the SSRP.
+\end{enumerate}
 
 \hypertarget{robust}{%
 \chapter{Checking for Robustness}\label{robust}}

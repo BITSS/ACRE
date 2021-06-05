@@ -188,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
-<li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements</a></li>
+<li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements using version control</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="robust.html"><a href="robust.html"><i class="fa fa-check"></i><b>5</b> Checking for Robustness</a>
 <ul>
@@ -439,8 +439,18 @@ Track all the different types of improvements you make and record in [this stand
 <p>Please suggest other paper-level improvements by editing this guide (use the “edit” button above) or contacting <a href="mailto:acre+feedback@berkeley.edu" class="email">acre+feedback@berkeley.edu</a>.</p>
 </div>
 <div id="doc-impr" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Documenting the improvements</h2>
-<p>[UNDER CONSTRUCTION]</p>
+<h2><span class="header-section-number">4.3</span> Documenting the improvements using version control</h2>
+<p>When reporting your improvements in the SSRP, we suggest using version control software (git) to track the differences between the original reproduction package and your proposed improvements. One possible approach could be the following:</p>
+<ol style="list-style-type: decimal">
+<li>Create an empty repository for your revised reproduction package.</li>
+<li>Deposit the original reproduction package in this repository, then commit this changes using the name “depositing original reproduction package.”<br />
+</li>
+<li>In order to clearly show where are your improvements relative to the original reproduction package you then can takes one of the following strategies:<br />
+3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or<br />
+3b. Commit as often as you want, but provide the identifiers (tags) of the two commits: one for to mark the reproduction package <em>before</em> you initiate a specific change (e.g., adding missing analytic data), and a second commit with the reproduction package that contains the final version of this specific improvement. With this two identifiers, readers of your reproduction will be able to easily compare (make <code>diffs</code> in git) to see exactly what was added and/or deleted.<br />
+</li>
+<li>Refer to the this specific commits (their tags) when describing a specific improvement in the SSRP.</li>
+</ol>
 
 </div>
 </div>
