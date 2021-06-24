@@ -77,7 +77,7 @@ knitr::include_graphics("candidate-to-declared-paper.png")
 <!-- Bug: there is a bug that breaks this itemization below when building the book (it works fine when knighting single doc). Please think of a solution-->
 
 
-## Identify your relevant timeline. {#identify-timeline}  
+## Identifying the relevant timeline {#identify-timeline}  
 
 Before you begin working on the four main stages of the reproduction exercise (Scoping, Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a longer class project that may take a month to complete or a semester-long project (an undergraduate thesis, for example).
 
