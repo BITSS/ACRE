@@ -84,7 +84,7 @@ analysis_data_info %>%
 
 First, identify all code files in the reproduction package and record their names in the *File Name* column and record their locations relative to the main folder in the *Location* column.
 
-Then, review the beginning and end of each code file to identify the inputs required to successfully run the file and the outputs it produces. Inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g., 'load', 'read', 'source', 'run', 'do'). Outputs are other data sets, or plain text files typically found at the end of a script (e.g., 'save, write, export). Record those in the *Inputs* and *Outputs* columns.
+Then, review the beginning and end of each code file to identify the inputs required to successfully run the file and the outputs it produces. Inputs are data sets or other code scripts that are typically found at the beginning of the script (e.g., 'load', 'read', 'source', 'run', 'do'). Outputs are other data sets, or plain text files typically found at the end of a script (e.g., 'save, write, export). Record those in the *Inputs* and *Outputs* columns. 
 
 Finally, provide a brief description of the code's function in the *Description* column and classify its function as analysis or cleaning and/or construction in the *Primary Type* column.
 
