@@ -79,7 +79,7 @@ analysis_data_info %>%
     kable_styling(full_width = TRUE) %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
-
+ 
 ### Describe the code scripts{#desc-scripts}
 
 First, identify all code files in the reproduction package and record their names in the *File Name* column and record their locations relative to the main folder in the *Location* column.
