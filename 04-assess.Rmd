@@ -80,6 +80,8 @@ analysis_data_info %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 
+*Note on data citations*: Assessment of whether or not a data source has been cited should take into account the general guidelines for what is considered a complete data citation. In-text citations, mention of the source location (e.g. url to source location), description of the source or the data alone are examples of incomplete data citations. Please refer to the [Guidance on Data Citations by Social Science Data Editors](https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html#generic-guidance) for a comprehensive overview and more reference material on data citation standards for the social sciences. 
+
 ### Describe the code scripts{#desc-scripts}
 
 First, identify all code files in the reproduction package and record their names in the *File Name* column and record their locations relative to the main folder in the *Location* column.
