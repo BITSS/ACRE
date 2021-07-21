@@ -33,6 +33,7 @@ The following concepts may be helpful as you work in the Assessment stage (also 
 
 In section "Describe input" on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files and then record script files in Table.
 
+*Tip:* For large volume of data sources, we recommend downloading the empty table as a CSV file, recording the information in the downloaded file, and uploading the final version of the document to populate the table.
 
 ### Describe the data sources and raw data {#desc-sourc}
 
