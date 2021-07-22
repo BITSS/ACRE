@@ -1,53 +1,129 @@
-# Guidance for Instructors Seeking to Supervise Reproduction Excercises
+# Guidance for Instructors Supervising Reproduction Assignments
 
-We expect that a significant fraction of users of this Guide and the SSRP will be students conducting reproductions as part of some type of academic assignment. This chapter identifies possible types of assignments, suggests timeliness and grading strategies, and guides instructors in managing instances where the students would like to remain anonymous but still share their work on the SSRP. 
+The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:
+- Assessing and improving the reproducibility of published work
+- Applying good coding and data management practices
+- Recording reproduction results and improvements on the SSRP
+- Engaging in constructive exchanges with authors
+- Developing a deep understanding of common methods and computational techniques 
+- Creating real, citable scientific contributions.
 
-## Possible use cases for instructors  
+In the process, students can reference the ACRe Guide as a step-by-step protocol for conducting reproductions and use the SSRP to record and share their work, and instructors can use it as a guide for supervising these assignments. Examples of completed reproductions are available [here](https://www.socialsciencereproduction.org/reproductions/search?query=).
 
-**Graduate-level assignment**  
-Advanced masters- or PhD-level courses often feature class assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In such instances, instructors can recommend students to choose papers from specific sub-fields (e.g., labor economics), journals or curate a list of possible papers. The length of such assignments can vary from a couple of weeks to a semester-long. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data and focusing on the main results. For longer timelines such as semester-long assignments, students can be instructed to reproduce entire papers starting from the raw data. See section [1.2](https://bitss.github.io/ACRE/select.html#identify-timeline) for a suggested distribution of effort across different lengths of assignments.
+Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):
+1. *[Paper selection](https://bitss.github.io/ACRE/select.html#select)*, where students select a paper and try to locate its reproduction package;
+2. *[Scoping](https://bitss.github.io/ACRE/scoping.html#scoping)*, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;
+3. *[Assessment](https://bitss.github.io/ACRE/assessment.html#assessment)*, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;
+4. *[Improvement](https://bitss.github.io/ACRE/improvements.html#improvements)*, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and
+5. *[Robustness](https://bitss.github.io/ACRE/robust.html#robust)*, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.
 
-Graduate students should expect to spend a significant time at the *Robustness* stage. Therefore, before beginning the assignment, we advise instructors to clearly communicate if they are seeking for students to focus on expanding the set of feasible robustness checks by identifying analytical choices (see Chapter 5) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
+This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.
 
-**Undergraduate thesis**  
-Students can use the platform to carry out a detailed reproduction as part of an undergraduate thesis (see an example [here](https://osf.io/3e6ps/)). This project could last anywhere from a few months to an entire year. At the undergraduate level, students should demonstrate an understanding of the paper by identifying its main claims and conducting a detailed assessment of the reproducibility of their associated display items. They should not be expected to have a thorough understanding of the methodology, but they should be able to demonstrate a high-level understanding by identifying the conditions under which the paper's estimates are valid. In addition, students should dedicate part of the exercise to improving the reproducibility of one or more display items. 
+*Get started by [signing up for a free SSRP account](https://www.socialsciencereproduction.org/users/sign_in) and reviewing this chapter to find tips based on your use case below.*
 
-Depending on the scope of the paper, examples within reach of an undergraduate thesis include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, etc. We recommend breaking down the assignment into a proposal stage, where the student scopes and assesses a paper, and an execution stage, where the student carries out improvements and conducts some new robustness checks.  
+## Common use cases  
 
-This type of assignment allows students to gain direct research experience and potentially make a meaningful contribution to the field.
+### Graduate-level assignment 
+*(Estimated duration: 2 weeks to one semester)*
 
-**Undergraduate course**  
-A third possible format for supervised reproductions can take place in undergraduate studies. In this setting the main goal should be for the student to verify that the reproductions packages "runs" and if not, up to which point. Here undergrads can be expected to understand at a high level the claims of the paper, and attempt to find the estimates that support those claims in the reproduction package. Undergraduate students can also contribute by inspecting the code scripts and identifying potential lines of code where analytical choices (increasing the feasible set of robustness checks). This exercise would give students some exposure to what is under the hood the research papers that are later on presented in their textbooks. 
+Advanced master’s or PhD-level courses often feature assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In these courses, instructors can recommend students choose papers from specific sub-fields (e.g., labor economics) or journals, or curate a list of possible papers.
 
+The length of such assignments can vary from a couple of weeks to a semester. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data, focusing on just the main results. For longer timelines, such as semester-long assignments, students might reproduce entire papers from raw data. See section 7.2 below for a suggested distribution of effort across different lengths of assignments.
 
-## Paper selection and semester timeline
+Graduate students should expect to spend a significant time at the *Robustness* stage. Therefore, before beginning the assignment, we recommend that students focus either on expanding the set of feasible robustness checks (see [Chapter 5](https://bitss.github.io/ACRE/robust.html)) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
 
-When setting up a reproduction excercise, Instructors should have one important timeline consideration. Whenever a chosen paper does not have a reproduction package (or has important components missing), the reproducer could try contacting the original authors to obtain the missing materials (see [Chapter 8](#comunications)). In this scenario, reproducers should have at least a couple of weeks to hear back from the authors. In this scenario we recomend that instructors assing this excercise at the beggining of the semester, requiring completion of the paper selection stage early in the academic cycle. This way repoducers will have the opportunity to add missing materials or move onto another paper in case of an unsuccessful response from the authors. 
+### Undergraduate thesis 
+*(Estimated duration: 2 months to 1 year)*
 
+Students can use the platform to carry out detailed reproductions as part of an undergraduate thesis (see an example [here](https://osf.io/3e6ps/)). This type of assignment allows students to gain direct research experience while making meaningful contributions to the field.
 
-## Grading Examples 
+Depending on the paper’s scope and the assignment’s learning objectives, such projects could last anywhere from a couple of months to an entire year. Students should demonstrate an understanding of the paper by identifying its main claim(s) at the *Scoping* stage and conducting a detailed assessment of the reproducibility of their associated display items at the Assessment stage. At the *Improvement* stage, students should try to improve the reproducibility of at least one display item. Depending on the scope of the paper, examples within reach of an undergraduate thesis might include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, or making other improvements suggested by the instructor. Finally, at the *Robustness* stage, students should be able to demonstrate a high-level understanding of the conditions under which the paper’s estimates are valid.
 
-Once students have completed a reproduction in the Social Science Reproduction Platform (SSRP), they will be able to generate a View-only version of their exercise. This report can be used by instructors to grade their work and provide feedback. Here we provide an example fo how to grade a reproduction exercise as used in previous classes. 
+We recommend breaking down the assignment into a “proposal” stage, where students scope and assess their papers, and an “execution” stage, where students carry out improvements and robustness checks.
 
-The final score, set here on a 0-100 scale, depends on the score of several sub-components. Each on 0-100 scale: 
+### Undergraduate course 
+*(Estimated duration: 1 month to one semester)*
 
- - **Submission:** full credit if student submits a non-empty reproduction in time.    
- - **All key fields:** full credit if non of the most important fields are missing. Important field include, but are not limited to: paper information, reproduction package links, claims summary, claims estimates table, inputs description, display item assessments (particularly subjective scale section), paper-level assessments.  
- - **Paper summary:** full credit if the student submits a short summary of the paper. See [this section](#read-sum) for recommendation on what to focus the summary on. 
- - **Claims:** the student presents an accurate and clear summary of the claims to be assessed in one or two sentences ([see Chapter 2](#scoping)). To properly score this section, the instructor needs to have previous knowledge of the paper.  
- - **Assessment:** there are two possible contributions the student can make to obtain full credit:    
-    - The student assesses multiple claims. Additional credit per additional assessment could be assigned at a decreasing rate (e.g., 50% of the credit for the second assessment, 30% for the third and 20% for the fourth).    
-    - The student conducts a highly thorough assessment of a claim. This can be done by clearly identifying all the inputs (data sources, analysis data and code scripts) and providing a detailed documentation of the reproduction attempt (e.g., how long did it took, where did it break, what are the specific missing pieces).   
- - **Improvement:** similar to the assessment scoring, the student can obtain full credit through two types of contributions:
-    - The student provides multiple types of improvements with a similar credit structure as for multiple assessments. 
-    - The student conducts a highly thorough improvement of a claim. This doing any of the improvements describe in [Improvements](#improvements) chapter. A key requirement is that the student clearly documents this improvements (see [this section](#doc-impr) for suggestions on how to do this) 
-- **Future suggestions:** in addition to the specific improvements carried out by the student, credit can be assigned for specific suggestions that the student may leave for future reproducers. Full credit should be assigned when the recommendations are concrete and demonstrate that the student performed an in-depth review of the code and data. 
-- **Revise reproduction package:** full credit if the student posts a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided in the reproduction. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commit history.   
-- **Robustness:** similar to assessment and improvement, here the student could obtain full credit from two type of strategies (or a combinations of them): 
-   - The student identifies a large number of original analytical choices in the code files. The definition of "large" should be left to the Instructor, but here we suggest at least 20 original analytical choices (see [this section](#robust) for a distinction between original and non-original analytical choice).
-   - The student conducts a robustness test by modifying one o more of the analytical choices identified in the paper. Full credit is assign for a clear discussion of the results and their reasonableness. 
+Students in undergraduate courses should primarily focus on verifying whether reproductions packages “run” and recording the outcome on the SSRP. At the *Scoping* stage, undergraduate students can demonstrate a high-level understanding of the paper’s main claims. Students can identify the code and files necessary to reproduce their select display items at the *Assessment* stage and try to actually run the code. Finally, at the *Robustness* stage students can inspect the code scripts and identify potential lines of code with analytical choices, increasing the feasible set of robustness checks.
 
 
+## Paper selection and assignment timelines
+
+The SSRP allows for flexibility in selecting papers and determining the scope of reproduction assignments in terms of the number of claims, display items, or even the required reproduction stages (at minimum, a complete reproduction requires filling in *Scoping* and *Assessment*). For example, instructors can **curate a list of target papers** or **allow students to choose** from a distinct body of literature or a specific journal. For either strategy, a good starting point is first to reference the [SSRP database of papers and reproductions](https://www.socialsciencereproduction.org/reproductions/search), which allows users to search through submitted reproductions. This can help detect potential "no-go" papers for which other users were unable to find any reproduction materials (labeled as "abandoned papers"), though users are by no means barred from attempting to reproduce such cases. If instructors are unable to curate a list of papers with readily available reproduction packages, we recommend allocating at least 3 additional weeks to try to locate the missing reproduction materials, potentially by contacting the original authors (see [this chapter](https://bitss.github.io/ACRE/comunications.html#comunications) for guidance on constructive exchanges with original authors).
+ 
+To curate a list of target papers in *economics*, instructors can consult recently published articles in the journals of the [American Economic Association](https://www.aeaweb.org/journals) (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy) that took effect that year. In *political science*, target papers can be found in the *[American Journal of Political Science](https://ajps.org/ajps-verification-policy/)*, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the [Transparency and Openness Promotion (TOP) Factor](https://www.cos.io/initiatives/top-guidelines) (see scores [here](https://topfactor.org/)), maintained by the Center for Open Science.
+ 
+To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The *Scoping* and *Assessment* stages will take approximately the same amount of time across timelines, but will depend on the students’ prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.
+
+**Table 1: Workload distribution across reproduction stages across different timelines**
+<table class="tg">
+<tbody>
+<tr>
+<th class="tg-0pky">&nbsp;</th>
+<th class="tg-c3ow" colspan="2">2 weeks <br />(~10 days)</th>
+<th class="tg-c3ow" colspan="2">1 month <br />(~20 days)</th>
+<th class="tg-c3ow" colspan="2">1 semester <br />(~100 days)</th>
+</tr>
+<tr>
+<td class="tg-0pky">&nbsp;</td>
+<td class="tg-0pky">analysis data</td>
+<td class="tg-0pky">raw data</td>
+<td class="tg-0pky">analysis data</td>
+<td class="tg-0pky">raw data</td>
+<td class="tg-0pky">analysis data</td>
+<td class="tg-0pky">raw data</td>
+</tr>
+<tr>
+<td class="tg-0pky">Scoping</td>
+<td class="tg-c3ow" colspan="2">10% (1 day)</td>
+<td class="tg-c3ow" colspan="2">5% (1 day)</td>
+<td class="tg-c3ow" colspan="2">5% (5 days)</td>
+</tr>
+<tr>
+<td class="tg-0pky">Assessment</td>
+<td class="tg-c3ow" colspan="2">35%</td>
+<td class="tg-c3ow" colspan="2">25%</td>
+<td class="tg-c3ow" colspan="2">15%</td>
+</tr>
+<tr>
+<td class="tg-0pky">Improvement</td>
+<td class="tg-c3ow">25%</td>
+<td class="tg-c3ow">0%</td>
+<td class="tg-c3ow" colspan="2">40%</td>
+<td class="tg-c3ow">25%</td>
+<td class="tg-c3ow">35%</td>
+</tr>
+<tr>
+<td class="tg-0pky">Robustness</td>
+<td class="tg-c3ow">25%</td>
+<td class="tg-c3ow">5%</td>
+<td class="tg-c3ow" colspan="2">30%</td>
+<td class="tg-c3ow" colspan="2">25%</td>
+</tr>
+</tbody>
+</table>
+
+
+## Grading strategy 
+
+Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students’ work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don’t contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.
+
+We suggest the following grading categories:
+* **Submission:** Full credit for timely submitted, non-blank submissions.
+* **All key fields:** Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.
+* **Paper summary:** Full credit for submitting a short summary of the paper that answers [these questions](https://bitss.github.io/ACRE/scoping.html#read-sum).
+* **Claims:** Full credit for presenting an accurate and clear summary of the paper’s main claims (see guidance [here](https://bitss.github.io/ACRE/scoping.html#scoping)). To properly score this section, the instructor needs to have previous knowledge of the paper.
+* **Assessment:** There are two kinds of contributions students can make to obtain full credit:
+  + Assess *multiple claims*. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in “All key fields” give 50% of the credit for assessing a second claim, 30% for a third, and 20% for a fourth).
+  + Conduct a *thorough assessment of a single claim*. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).
+* **Improvement:** Students can obtain full credit through two types of contributions:
+  + Implement improvements of reproducibility of *multiple claims* with a similar credit structure as for the assessment of multiple claims (see point above).
+  + Implement *thorough improvements of a single claim*. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see [this section](https://bitss.github.io/ACRE/improvements.html#doc-impr) for suggestions on how to do this).
+* **Future suggestions for improvement:** Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.
+* **Revised reproduction package:** Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.
+* **Robustness:** Students can obtain full credit for one of two  strategies (or a combination of them):
+  + Identify a large number of original analytical choices in the code files. The definition of “large” is up to the Instructor, but we suggest at least 20 original analytical choices (see [this section](https://bitss.github.io/ACRE/robust.html#robust) for a distinction between original and non-original analytical choices).
+  + Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.
 
 
 |                                       | Score <br>  (example) | Weights <br>  (suggested)  |
@@ -64,12 +140,13 @@ The final score, set here on a 0-100 scale, depends on the score of several sub-
 | Final Score                           |  87.5     |             |  
 
 
+## Facilitating *class anonymous* reproductions
 
-## Supporting Annonymous Reproduction Within a Course
+The SSRP allows users to select from three distinct privacy models when submitting their work, including *public-identified*, *temporary anonymous*, and *class anonymous* (explained in more detail [here](https://bitss.github.io/ACRE/concluding-the-reproduction.html#visibility-and-data-use)). This section includes specific guidance for instructors facilitating reproductions that will be published using the *class anonymous* privacy model, which allows users to conceal their identities and free-form narrative answers (e.g., notes, descriptions, summaries, explanations) indefinitely. Instead, reproductions published under the class anonymous model contain only categorical responses and basic class identifiers, including course name, year, institution, instructor’s name, and instructor’s email address.
 
-When conducting a reproduction as part of a class exercise, it may be the case that some student could prefer to remain anonymous when posting their work on to the SSRP. The platform allows for this option when it comes to filling in the different forms associated with each stage. It does not however, provide a way for reproducers to post revised reproduction packages in an anonymous way (all trusted repositories require an identifiable posting user). In this scenario, we advice instructors to create a generic repository for the classroom (e.g. "Reproductions for Econ 270 - Fall 2021") and deposit each anonymous reproduction in a self contain folder within this repository. 
+Reproducers looking to publish under the *class anonymous* model will be unable to maintain their anonymity if they share their revised reproduction packages as part of their reproductions. This is because trusted data repositories and GitHub require users to create accounts in order to post their content and keep records of updates. We advise instructors to create generic repositories for their class (e.g., “Reproductions for Econ 270 - Fall 2021”) and deposit each anonymous reproduction in self-contained folders.
 
-For example if a class has two students who choose the anonymous option, they should share (privately) their revised reproduction package with their instructor and she will post using the following structure: 
+For example, suppose a class has two students who choose the anonymous option. In that case, they should share (privately) their revised reproduction package with their instructor, and the instructor should post them using the following structure: 
 
 ```md
   Reproductions for [Course Name, Semester]
@@ -77,4 +154,4 @@ For example if a class has two students who choose the anonymous option, they sh
     └── Revised reproduction package for Perez et al. (2019)
 ```
 
-**Note:** when making a revised reproduction package anonymous it is advised that instructors and student avoid using version control software. Even if the current materials are correctly de-identified, the entire version history may still contain identifiers. 
+**Note:** When anonymizing revised reproduction packages, we advise that instructors and students avoid using version control software. Even if the current materials are correctly de-identified, the version history may still contain identifiers, such as GitHub usernames.
