@@ -1,7 +1,7 @@
 --- 
 title: "Guide for Accelerating <br> Computational Reproducibility in the Social Sciences"
 subtitle:  |
-  [![BITSS logo](BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
+  [![BITSS logo](images/BITSS_logo_horizontal.png){style="display: block; margin-left: auto;
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
 author: "ACRE Team"
 date: "`r Sys.Date()`"
