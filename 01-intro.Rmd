@@ -38,7 +38,7 @@ First, a paper may contain several scientific claims (or major hypotheses) that 
 ```{r diagram, eval=TRUE, echo=FALSE,out.width = '100%', fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification "}
 library(DiagrammeR)
 
-knitr::include_graphics("paper-claims.png") 
+knitr::include_graphics("images/paper-claims.png") 
 
 if (FALSE) {
 grViz("
