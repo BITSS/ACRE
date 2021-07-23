@@ -38,7 +38,7 @@ First, a paper may contain several scientific claims (or major hypotheses) that 
 ```{r diagram, eval=TRUE, echo=FALSE,out.width = '100%', fig.cap="One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification "}
 library(DiagrammeR)
 
-knitr::include_graphics("paper-claims.png") 
+knitr::include_graphics("images/paper-claims.png") 
 
 if (FALSE) {
 grViz("
@@ -124,7 +124,7 @@ This Guide does not include a possible fifth stage of **extension**, where you m
 
 
 ```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four stages of a reproduction attempt"}
-knitr::include_graphics("stages.svg") 
+knitr::include_graphics("images/stages.svg") 
 ``` 
 
 The order of the stages may not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the paper's reproducibility level. The only stage that should go first, and cannot be edited once finished, is the Scoping stage.
@@ -132,7 +132,7 @@ The order of the stages may not be chronologically linear. For example, you may 
 Different stages in the reproduction process correspond to different units of analysis (see Figure \@ref(fig:stages-unit) for an overview). E.g., the Scoping stage will focus on scientific *claims* selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.
 
 ```{r stages-unit, out.width = '100%', echo=FALSE, fig.cap="Relevant unit of analysis at each stage of a reproduction attempt", eval=TRUE}
-knitr::include_graphics("unit-of-analysis.png") 
+knitr::include_graphics("images/unit-of-analysis.png") 
 ```
 
 
