@@ -138,7 +138,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-06-24}
+\date{2021-07-22}
 
 \begin{document}
 \maketitle
@@ -298,7 +298,7 @@ In most cases, you will begin a reproduction with a thorough reading of your pap
 
 The goal of this stage is to help you define the scope of your exercise by declaring a paper and the specific output(s) on which you will focus. You might first consider multiple papers without analyzing them more closely (we refer to these as \textbf{candidate papers}) before moving forward with your \textbf{declared paper}.
 
-The main difference between a candidate and a declared paper is the availability of a reproduction package. A \textbf{reproduction package} is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper's author for it (find guidance on this in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 5}) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.
+The main difference between a candidate and a declared paper is the availability of a reproduction package. A \textbf{reproduction package} is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper's author for it (find guidance on this in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{Chapter 7}) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.
 
 To avoid duplicating the efforts of others who may be interested in reproducing one of your candidate papers, \textbf{we ask that you record your candidate papers in the SSRP database} (currently under development).
 
@@ -321,7 +321,7 @@ At this point of the exercise, you are \emph{only validating the availability} o
 \item
   Review the personal websites of the paper's author(s).
 \item
-  Contact the author(s) to request the reproduction package using \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{this} email template. In this and future interactions with authors, we encourage you to follow our guidance outlined in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{Chapter 5}.
+  Contact the author(s) to request the reproduction package using \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{this} email template. In this and future interactions with authors, we encourage you to follow our guidance outlined in \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#contacting-the-original-authors-when-there-is-no-reproduction-package}{Chapter 7}.
 \item
   Deposit the reproduction package in a trusted repository (e.g., \href{https://dataverse.org/}{Dataverse}, \href{https://www.openicpsr.org/openicpsr/}{Open ICPSR}, \href{https://zenodo.org/}{Zenodo}, or the \href{https://osf.io/}{Open Science Framework}) under the name \texttt{Original\ reproduction\ package\ for\ -\ Title\ of\ the\ paper}. You will be asked to provide the URL of the repository in Survey 1.
 \end{enumerate}
@@ -543,6 +543,8 @@ The following concepts may be helpful as you work in the Assessment stage (also 
 
 In section ``Describe input'' on the SSRP, you can record data sources and connect them with their raw data files (if available). You can then locate and provide a brief description of the analytic data files and then record script files in Table.
 
+\emph{Tip:} For large volume of data sources, we recommend downloading the empty table as a CSV file, recording the information in the downloaded file, and uploading the final version of the document to populate the table.
+
 \hypertarget{desc-sourc}{%
 \subsection{Describe the data sources and raw data}\label{desc-sourc}}
 
@@ -600,6 +602,8 @@ all\_waves.csv & final\_data/v1\_april/ & data for region-level analysis\\
 \hline
 \end{tabu}
 \end{table}
+
+\emph{Note on data citations}: Assessment of whether or not a data source has been cited should take into account the general guidelines for what is considered a complete data citation. In-text citations, mention of the source location (e.g.~url to source location), description of the source or the data alone are examples of incomplete data citations. Please refer to the \href{https://social-science-data-editors.github.io/guidance/addtl-data-citation-guidance.html\#generic-guidance}{Guidance on Data Citations by Social Science Data Editors} for a comprehensive overview and more reference material on data citation standards for the social sciences.
 
 \hypertarget{desc-scripts}{%
 \subsection{Describe the code scripts}\label{desc-scripts}}
@@ -1268,86 +1272,154 @@ Before submitting your reproduction, we ask that you select one of three privacy
 
 The Social Science Reproduction Platform will aggregate descriptive statistics from all submitted reproductions recorded to produce reproducibility metrics across disciplines, sub-disciplines, journals, and topical bodies of literature. If you choose to remain anonymous and are not a student using the SSRP as part of a course, your work may still be integrated into these descriptive statistics.
 
-\hypertarget{guidance-for-instructors-seeking-to-supervise-reproduction-excercises}{%
-\chapter{Guidance for Instructors Seeking to Supervise Reproduction Excercises}\label{guidance-for-instructors-seeking-to-supervise-reproduction-excercises}}
+\hypertarget{guidance-for-instructors-supervising-reproduction-assignments}{%
+\chapter{Guidance for Instructors Supervising Reproduction Assignments}\label{guidance-for-instructors-supervising-reproduction-assignments}}
 
-We expect that a significant fraction of users of this Guide and the SSRP will be students conducting reproductions as part of some type of academic assignment. This chapter identifies possible types of assignments, suggests timeliness and grading strategies, and guides instructors in managing instances where the students would like to remain anonymous but still share their work on the SSRP.
+The \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform} (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the ``ACRe Guide'') to facilitate reproduction assignments (sometimes called ``replications'') in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:
+- Assessing and improving the reproducibility of published work
+- Applying good coding and data management practices
+- Recording reproduction results and improvements on the SSRP
+- Engaging in constructive exchanges with authors
+- Developing a deep understanding of common methods and computational techniques
+- Creating real, citable scientific contributions.
 
-\hypertarget{possible-use-cases-for-instructors}{%
-\section{Possible use cases for instructors}\label{possible-use-cases-for-instructors}}
+In the process, students can reference the ACRe Guide as a step-by-step protocol for conducting reproductions and use the SSRP to record and share their work, and instructors can use it as a guide for supervising these assignments. Examples of completed reproductions are available \href{https://www.socialsciencereproduction.org/reproductions/search?query=}{here}.
 
-\textbf{Graduate-level assignment}\\
-Advanced masters- or PhD-level courses often feature class assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In such instances, instructors can recommend students to choose papers from specific sub-fields (e.g., labor economics), journals or curate a list of possible papers. The length of such assignments can vary from a couple of weeks to a semester-long. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data and focusing on the main results. For longer timelines such as semester-long assignments, students can be instructed to reproduce entire papers starting from the raw data. See section \protect\hyperlink{indentify-timeline}{1.2} for a suggested distribution of effort across different lengths of assignments.
+Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):
+1. \emph{\href{https://bitss.github.io/ACRE/select.html\#select}{Paper selection}}, where students select a paper and try to locate its reproduction package;
+2. \emph{\href{https://bitss.github.io/ACRE/scoping.html\#scoping}{Scoping}}, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;
+3. \emph{\href{https://bitss.github.io/ACRE/assessment.html\#assessment}{Assessment}}, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;
+4. \emph{\href{https://bitss.github.io/ACRE/improvements.html\#improvements}{Improvement}}, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and
+5. \emph{\href{https://bitss.github.io/ACRE/robust.html\#robust}{Robustness}}, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.
 
-Graduate students should expect to spend a significant time at the \emph{Robustness} stage. Therefore, before beginning the assignment, we advise instructors to clearly communicate if they are seeking for students to focus on expanding the set of feasible robustness checks by identifying analytical choices (see Chapter 5) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
+This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.
 
-\textbf{Undergraduate thesis}\\
-Students can use the platform to carry out a detailed reproduction as part of an undergraduate thesis (see an example \href{https://osf.io/3e6ps/}{here}). This project could last anywhere from a few months to an entire year. At the undergraduate level, students should demonstrate an understanding of the paper by identifying its main claims and conducting a detailed assessment of the reproducibility of their associated display items. They should not be expected to have a thorough understanding of the methodology, but they should be able to demonstrate a high-level understanding by identifying the conditions under which the paper's estimates are valid. In addition, students should dedicate part of the exercise to improving the reproducibility of one or more display items.
+\emph{Get started by \href{https://www.socialsciencereproduction.org/users/sign_in}{signing up for a free SSRP account} and reviewing this chapter to find tips based on your use case below.}
 
-Depending on the scope of the paper, examples within reach of an undergraduate thesis include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, etc. We recommend breaking down the assignment into a proposal stage, where the student scopes and assesses a paper, and an execution stage, where the student carries out improvements and conducts some new robustness checks.
+\hypertarget{common-use-cases}{%
+\section{Common use cases}\label{common-use-cases}}
 
-This type of assignment allows students to gain direct research experience and potentially make a meaningful contribution to the field.
+\hypertarget{graduate-level-assignment}{%
+\subsection{Graduate-level assignment}\label{graduate-level-assignment}}
 
-\textbf{Undergraduate course}\\
-A third possible format for supervised reproductions can take place in undergraduate studies. In this setting the main goal should be for the student to verify that the reproductions packages ``runs'' and if not, up to which point. Here undergrads can be expected to understand at a high level the claims of the paper, and attempt to find the estimates that support those claims in the reproduction package. Undergraduate students can also contribute by inspecting the code scripts and identifying potential lines of code where analytical choices (increasing the feasible set of robustness checks). This exercise would give students some exposure to what is under the hood the research papers that are later on presented in their textbooks.
+\emph{(Estimated duration: 2 weeks to one semester)}
 
-\hypertarget{paper-selection-and-semester-timeline}{%
-\section{Paper selection and semester timeline}\label{paper-selection-and-semester-timeline}}
+Advanced master's or PhD-level courses often feature assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In these courses, instructors can recommend students choose papers from specific sub-fields (e.g., labor economics) or journals, or curate a list of possible papers.
 
-When setting up a reproduction excercise, Instructors should have one important timeline consideration. Whenever a chosen paper does not have a reproduction package (or has important components missing), the reproducer could try contacting the original authors to obtain the missing materials (see \protect\hyperlink{comunications}{Chapter 8}). In this scenario, reproducers should have at least a couple of weeks to hear back from the authors. In this scenario we recomend that instructors assing this excercise at the beggining of the semester, requiring completion of the paper selection stage early in the academic cycle. This way repoducers will have the opportunity to add missing materials or move onto another paper in case of an unsuccessful response from the authors.
+The length of such assignments can vary from a couple of weeks to a semester. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data, focusing on just the main results. For longer timelines, such as semester-long assignments, students might reproduce entire papers from raw data. See section 7.2 below for a suggested distribution of effort across different lengths of assignments.
 
-\hypertarget{grading-examples}{%
-\section{Grading Examples}\label{grading-examples}}
+Graduate students should expect to spend a significant time at the \emph{Robustness} stage. Therefore, before beginning the assignment, we recommend that students focus either on expanding the set of feasible robustness checks (see \href{https://bitss.github.io/ACRE/robust.html}{Chapter 5}) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).
 
-Once students have completed a reproduction in the Social Science Reproduction Platform (SSRP), they will be able to generate a View-only version of their exercise. This report can be used by instructors to grade their work and provide feedback. Here we provide an example fo how to grade a reproduction exercise as used in previous classes.
+\hypertarget{undergraduate-thesis}{%
+\subsection{Undergraduate thesis}\label{undergraduate-thesis}}
 
-The final score, set here on a 0-100 scale, depends on the score of several sub-components. Each on 0-100 scale:
+\emph{(Estimated duration: 2 months to 1 year)}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Submission:} full credit if student submits a non-empty reproduction in time.\\
-\item
-  \textbf{All key fields:} full credit if non of the most important fields are missing. Important field include, but are not limited to: paper information, reproduction package links, claims summary, claims estimates table, inputs description, display item assessments (particularly subjective scale section), paper-level assessments.\\
-\item
-  \textbf{Paper summary:} full credit if the student submits a short summary of the paper. See \protect\hyperlink{read-sum}{this section} for recommendation on what to focus the summary on.
-\item
-  \textbf{Claims:} the student presents an accurate and clear summary of the claims to be assessed in one or two sentences (\protect\hyperlink{scoping}{see Chapter 2}). To properly score this section, the instructor needs to have previous knowledge of the paper.\\
-\item
-  \textbf{Assessment:} there are two possible contributions the student can make to obtain full credit:
+Students can use the platform to carry out detailed reproductions as part of an undergraduate thesis (see an example \href{https://osf.io/3e6ps/}{here}). This type of assignment allows students to gain direct research experience while making meaningful contributions to the field.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    The student assesses multiple claims. Additional credit per additional assessment could be assigned at a decreasing rate (e.g., 50\% of the credit for the second assessment, 30\% for the third and 20\% for the fourth).\\
-  \item
-    The student conducts a highly thorough assessment of a claim. This can be done by clearly identifying all the inputs (data sources, analysis data and code scripts) and providing a detailed documentation of the reproduction attempt (e.g., how long did it took, where did it break, what are the specific missing pieces).\\
-  \end{itemize}
-\item
-  \textbf{Improvement:} similar to the assessment scoring, the student can obtain full credit through two types of contributions:
+Depending on the paper's scope and the assignment's learning objectives, such projects could last anywhere from a couple of months to an entire year. Students should demonstrate an understanding of the paper by identifying its main claim(s) at the \emph{Scoping} stage and conducting a detailed assessment of the reproducibility of their associated display items at the Assessment stage. At the \emph{Improvement} stage, students should try to improve the reproducibility of at least one display item. Depending on the scope of the paper, examples within reach of an undergraduate thesis might include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, or making other improvements suggested by the instructor. Finally, at the \emph{Robustness} stage, students should be able to demonstrate a high-level understanding of the conditions under which the paper's estimates are valid.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    The student provides multiple types of improvements with a similar credit structure as for multiple assessments.
-  \item
-    The student conducts a highly thorough improvement of a claim. This doing any of the improvements describe in \protect\hyperlink{improvements}{Improvements} chapter. A key requirement is that the student clearly documents this improvements (see \protect\hyperlink{doc-impr}{this section} for suggestions on how to do this)
-  \end{itemize}
-\item
-  \textbf{Future suggestions:} in addition to the specific improvements carried out by the student, credit can be assigned for specific suggestions that the student may leave for future reproducers. Full credit should be assigned when the recommendations are concrete and demonstrate that the student performed an in-depth review of the code and data.
-\item
-  \textbf{Revise reproduction package:} full credit if the student posts a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided in the reproduction. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commit history.\\
-\item
-  \textbf{Robustness:} similar to assessment and improvement, here the student could obtain full credit from two type of strategies (or a combinations of them):
+We recommend breaking down the assignment into a ``proposal'' stage, where students scope and assess their papers, and an ``execution'' stage, where students carry out improvements and robustness checks.
 
-  \begin{itemize}
-  \tightlist
-  \item
-    The student identifies a large number of original analytical choices in the code files. The definition of ``large'' should be left to the Instructor, but here we suggest at least 20 original analytical choices (see \protect\hyperlink{robust}{this section} for a distinction between original and non-original analytical choice).
-  \item
-    The student conducts a robustness test by modifying one o more of the analytical choices identified in the paper. Full credit is assign for a clear discussion of the results and their reasonableness.
-  \end{itemize}
-\end{itemize}
+\hypertarget{undergraduate-course}{%
+\subsection{Undergraduate course}\label{undergraduate-course}}
+
+\emph{(Estimated duration: 1 month to one semester)}
+
+Students in undergraduate courses should primarily focus on verifying whether reproductions packages ``run'' and recording the outcome on the SSRP. At the \emph{Scoping} stage, undergraduate students can demonstrate a high-level understanding of the paper's main claims. Students can identify the code and files necessary to reproduce their select display items at the \emph{Assessment} stage and try to actually run the code. Finally, at the \emph{Robustness} stage students can inspect the code scripts and identify potential lines of code with analytical choices, increasing the feasible set of robustness checks.
+
+\hypertarget{paper-selection-and-assignment-timelines}{%
+\section{Paper selection and assignment timelines}\label{paper-selection-and-assignment-timelines}}
+
+The SSRP allows for flexibility in selecting papers and determining the scope of reproduction assignments in terms of the number of claims, display items, or even the required reproduction stages (at minimum, a complete reproduction requires filling in \emph{Scoping} and \emph{Assessment}). For example, instructors can \textbf{curate a list of target papers} or \textbf{allow students to choose} from a distinct body of literature or a specific journal. For either strategy, a good starting point is first to reference the \href{https://www.socialsciencereproduction.org/reproductions/search}{SSRP database of papers and reproductions}, which allows users to search through submitted reproductions. This can help detect potential ``no-go'' papers for which other users were unable to find any reproduction materials (labeled as ``abandoned papers''), though users are by no means barred from attempting to reproduce such cases. If instructors are unable to curate a list of papers with readily available reproduction packages, we recommend allocating at least 3 additional weeks to try to locate the missing reproduction materials, potentially by contacting the original authors (see \href{https://bitss.github.io/ACRE/comunications.html\#comunications}{this chapter} for guidance on constructive exchanges with original authors).
+
+To curate a list of target papers in \emph{economics}, instructors can consult recently published articles in the journals of the \href{https://www.aeaweb.org/journals}{American Economic Association} (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the \href{https://www.aeaweb.org/journals/data/data-code-policy}{AEA Data and Code Availability Policy} that took effect that year. In \emph{political science}, target papers can be found in the \emph{\href{https://ajps.org/ajps-verification-policy/}{American Journal of Political Science}}, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the \href{https://www.cos.io/initiatives/top-guidelines}{Transparency and Openness Promotion (TOP) Factor} (see scores \href{https://topfactor.org/}{here}), maintained by the Center for Open Science.
+
+To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The \emph{Scoping} and \emph{Assessment} stages will take approximately the same amount of time across timelines, but will depend on the students' prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.
+
+\textbf{Table 1: Workload distribution across reproduction stages across different timelines}
+
+~
+
+2 weeks (\textasciitilde10 days)
+
+1 month (\textasciitilde20 days)
+
+1 semester (\textasciitilde100 days)
+
+~
+
+analysis data
+
+raw data
+
+analysis data
+
+raw data
+
+analysis data
+
+raw data
+
+Scoping
+
+10\% (1 day)
+
+5\% (1 day)
+
+5\% (5 days)
+
+Assessment
+
+35\%
+
+25\%
+
+15\%
+
+Improvement
+
+25\%
+
+0\%
+
+40\%
+
+25\%
+
+35\%
+
+Robustness
+
+25\%
+
+5\%
+
+30\%
+
+25\%
+
+\hypertarget{grading-strategy}{%
+\section{Grading strategy}\label{grading-strategy}}
+
+Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students' work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don't contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.
+
+We suggest the following grading categories:
+* \textbf{Submission:} Full credit for timely submitted, non-blank submissions.
+* \textbf{All key fields:} Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.
+* \textbf{Paper summary:} Full credit for submitting a short summary of the paper that answers \href{https://bitss.github.io/ACRE/scoping.html\#read-sum}{these questions}.
+* \textbf{Claims:} Full credit for presenting an accurate and clear summary of the paper's main claims (see guidance \href{https://bitss.github.io/ACRE/scoping.html\#scoping}{here}). To properly score this section, the instructor needs to have previous knowledge of the paper.
+* \textbf{Assessment:} There are two kinds of contributions students can make to obtain full credit:
++ Assess \emph{multiple claims}. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in ``All key fields'' give 50\% of the credit for assessing a second claim, 30\% for a third, and 20\% for a fourth).
++ Conduct a \emph{thorough assessment of a single claim}. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).
+* \textbf{Improvement:} Students can obtain full credit through two types of contributions:
++ Implement improvements of reproducibility of \emph{multiple claims} with a similar credit structure as for the assessment of multiple claims (see point above).
++ Implement \emph{thorough improvements of a single claim}. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see \href{https://bitss.github.io/ACRE/improvements.html\#doc-impr}{this section} for suggestions on how to do this).
+* \textbf{Future suggestions for improvement:} Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.
+* \textbf{Revised reproduction package:} Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.
+* \textbf{Robustness:} Students can obtain full credit for one of two strategies (or a combination of them):
++ Identify a large number of original analytical choices in the code files. The definition of ``large'' is up to the Instructor, but we suggest at least 20 original analytical choices (see \href{https://bitss.github.io/ACRE/robust.html\#robust}{this section} for a distinction between original and non-original analytical choices).
++ Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
@@ -1367,12 +1439,14 @@ Final Score & 87.5 & \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{supporting-annonymous-reproduction-within-a-course}{%
-\section{Supporting Annonymous Reproduction Within a Course}\label{supporting-annonymous-reproduction-within-a-course}}
+\hypertarget{facilitating-class-anonymous-reproductions}{%
+\section{\texorpdfstring{Facilitating \emph{class anonymous} reproductions}{Facilitating class anonymous reproductions}}\label{facilitating-class-anonymous-reproductions}}
 
-When conducting a reproduction as part of a class exercise, it may be the case that some student could prefer to remain anonymous when posting their work on to the SSRP. The platform allows for this option when it comes to filling in the different forms associated with each stage. It does not however, provide a way for reproducers to post revised reproduction packages in an anonymous way (all trusted repositories require an identifiable posting user). In this scenario, we advice instructors to create a generic repository for the classroom (e.g.~``Reproductions for Econ 270 - Fall 2021'') and deposit each anonymous reproduction in a self contain folder within this repository.
+The SSRP allows users to select from three distinct privacy models when submitting their work, including \emph{public-identified}, \emph{temporary anonymous}, and \emph{class anonymous} (explained in more detail \href{https://bitss.github.io/ACRE/concluding-the-reproduction.html\#visibility-and-data-use}{here}). This section includes specific guidance for instructors facilitating reproductions that will be published using the \emph{class anonymous} privacy model, which allows users to conceal their identities and free-form narrative answers (e.g., notes, descriptions, summaries, explanations) indefinitely. Instead, reproductions published under the class anonymous model contain only categorical responses and basic class identifiers, including course name, year, institution, instructor's name, and instructor's email address.
 
-For example if a class has two students who choose the anonymous option, they should share (privately) their revised reproduction package with their instructor and she will post using the following structure:
+Reproducers looking to publish under the \emph{class anonymous} model will be unable to maintain their anonymity if they share their revised reproduction packages as part of their reproductions. This is because trusted data repositories and GitHub require users to create accounts in order to post their content and keep records of updates. We advise instructors to create generic repositories for their class (e.g., ``Reproductions for Econ 270 - Fall 2021'') and deposit each anonymous reproduction in self-contained folders.
+
+For example, suppose a class has two students who choose the anonymous option. In that case, they should share (privately) their revised reproduction package with their instructor, and the instructor should post them using the following structure:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1382,7 +1456,7 @@ For example if a class has two students who choose the anonymous option, they sh
 \end{Highlighting}
 \end{Shaded}
 
-\textbf{Note:} when making a revised reproduction package anonymous it is advised that instructors and student avoid using version control software. Even if the current materials are correctly de-identified, the entire version history may still contain identifiers.
+\textbf{Note:} When anonymizing revised reproduction packages, we advise that instructors and students avoid using version control software. Even if the current materials are correctly de-identified, the version history may still contain identifiers, such as GitHub usernames.
 
 \hypertarget{comunications}{%
 \chapter{Guidance for Constructive Communication Between Reproducers and Original Authors}\label{comunications}}
@@ -1408,9 +1482,9 @@ This chapter contains guidance for constructive and respectful communication bet
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  Avoid binary judgments and statements like ``failed to reproduce.'' State clearly which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).\\
+  Avoid binary judgments and statements like ``failed to reproduce.'' Instead, state clearly which results reproduced and which did not (e.g., ``we successfully reproduced X, but failed to reproduce Y'') unless you uncover apparent scientific misconduct (e.g., see \href{https://doi.org/10.31222/osf.io/qy2se}{Broockman, Kalla and Aronow, 2015}).\\
 \item
-  Talk about \emph{the study, not the author}, to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
+  Talk about \emph{the study, not the author} to avoid making it personal. Make clear what the positive contribution of the original article is. Consider sending a copy of your reproduction report to the original authors.\\
 \item
   Discuss what your reproduction contributes to the literature, and refrain from claiming to give the final answer to the question.\\
 \item
@@ -1419,19 +1493,19 @@ This chapter contains guidance for constructive and respectful communication bet
   Remember, \emph{the goal is not to criticize previous work or hunt for errors, but to move the literature forward!}
 \end{enumerate}
 
-To help you put these recommendations into practice, we developed template language for common scenarios that reproducers and authors may encounter in their interactions. While we hope that you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on your project's context and needs. Feel free to \href{mailto:acre@berkeley.edu}{contact us} if you need more guidance or would like to provide feedback on these materials.
+To help you put these recommendations into practice, we developed template language for common scenarios that reproducers and authors may encounter in their interactions. While we hope you find these useful, note that they are \emph{only recommendations}, and you are welcome to modify them based on your project's context and needs. Feel free to \href{mailto:acre@berkeley.edu}{contact us} if you need more guidance or would like to provide feedback on these materials.
 
 \hypertarget{for-reproducers-contacting-the-authors-of-the-original-study}{%
 \section{For reproducers contacting the authors of the original study}\label{for-reproducers-contacting-the-authors-of-the-original-study}}
 
-Consider the following \emph{before} you contact the original author:
+Consider the following \emph{before} you contact the original authors:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Eventually, you will be able to search the SSRP for reproduction materials or records of past interactions with the authors of a given paper, but you can skip this step for now.
+  Search the SSRP for reproduction materials or records of past interactions with the authors of a given paper. For each reproduction, consult the ``Author inquiries'' column to see whether authors have indicated whether they are available for further inquiries.
 \item
-  Carefully read all footnotes, appendices, tables, captions, etc. to learn if, how, and where reproduction materials are provided. Follow this \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start. A few things to consider:
+  Carefully read all footnotes, appendices, tables, captions, etc., to learn if, how, and where reproduction materials are provided. Follow this \href{https://social-science-data-editors.github.io/guidance/Verification_guidance.html}{Data and Code Guidance} to determine whether you have everything before you start. A few things to consider:
 
   \begin{itemize}
   \tightlist
@@ -1468,7 +1542,7 @@ Consider the following \emph{before} you contact the original author:
   \begin{itemize}
   \tightlist
   \item
-    A \emph{complete} reproduction package was provided
+    A \emph{complete} reproduction package was provided;
   \item
     An \emph{incomplete} reproduction package was provided. You can also select one of the following reasons:
 
@@ -1480,7 +1554,7 @@ Consider the following \emph{before} you contact the original author:
       Data is of sensitive, confidential, or proprietary character, but access instructions were provided.
     \end{itemize}
   \item
-    The author \emph{declined} to share the reproduction package
+    The author \emph{declined} to share the reproduction package; or
   \item
     The author \emph{did not respond} (including after a reminder was sent) within four weeks after the initial request.
   \end{itemize}
@@ -1502,7 +1576,7 @@ I am contacting you to request a reproduction package for your paper titled \tex
 
 I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because \texttt{{[}add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse \texttt{{[}or\ other\ data\ and\ code\ repositories{]}}, or your website.
 
-I will record the result of my reproduction attempt on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform} (SSRP), an open-source repository for the results of verifications of computational reproducibility of published work in the social sciences. SSRP is hosted by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences)}. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to any of the reproduction materials so that I can take that into consideration during this exercise.
+I will record the result of my reproduction attempt on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform} (SSRP), an open-source platform for systematically conducting and recording reproductions. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to any of the reproduction materials so that I can take that into consideration during this exercise.
 
 In addition to your response above, would you be available to respond to future (non-repetitive) inquiries from me or other SSRP users? Though your cooperation with my and/or future requests would be extremely helpful, please note that you are \emph{not required to respond}.
 
@@ -1515,18 +1589,18 @@ Best regards,\\
 \end{quote}
 
 \hypertarget{follow-up-if-the-author-only-provides-the-appendix}{%
-\subsubsection{Follow-up if the author only provides the appendix}\label{follow-up-if-the-author-only-provides-the-appendix}}
+\subsection{Follow-up if the author only provides the appendix}\label{follow-up-if-the-author-only-provides-the-appendix}}
 
-If the original author asks you to reproduce the results using the appendix, you are not obligated to undertake that effort. Should you choose to do so, you can send a follow-up email as follows.
+If the original author asks you to reproduce the results using the appendix, you are not obligated to undertake that effort. Should you choose to do so, you can send a follow-up email as follows:
 
 \begin{quote}
 Dear \texttt{{[}Title\ (e.g.,\ "Dr.")\ Last\ name\ of\ Corresponding\ Author{]}},
 
-Thank you for your response. Our group's goal is to improve computational reproducibility using original data and code. Your appendix was very helpful, and I have attempted to use it to reproduce your results.\texttt{{[}Describe\ initial\ efforts\ to\ reproduce\ the\ results.{]}}.
+Thank you for your response. The purpose of my reproduction is to assess and improve computational reproducibility using the original data and code. Your appendix was very helpful, and I have attempted to use it to reproduce your results.\texttt{{[}Describe\ initial\ efforts\ to\ reproduce\ the\ results.{]}}.
 
-To help me advance with the reproduction, I hope you can share the source code and provide guidance on the following. \texttt{{[}List\ out\ any\ unclear\ steps,\ data\ sources,\ or\ otherwise\ missing\ components.{]}}.
+To help me advance with the reproduction, I hope you can share the source code and provide guidance on the following: \texttt{{[}List\ out\ any\ unclear\ steps,\ data\ sources,\ or\ otherwise\ missing\ components.\ Use\ bullet\ points\ if\ more\ than\ two{]}}.
 
-Thank you in advance for your time. Once completed, I aim to make the reproduction package publicly available so you can use it as a reference in future requests. Please let me know if you have any questions.
+Thank you in advance for your help! Once completed, I will make the reproduction package publicly available to be used in future SSRP reproductions. Please let me know if you have any questions.
 
 Best regards,\\
 \texttt{{[}Reproducer{]}}
@@ -1544,13 +1618,13 @@ Best regards,\\
 \begin{quote}
 Dear \texttt{{[}Title\ (e.g.,\ "Dr.")\ Last\ name\ of\ Corresponding\ Author{]}},
 
-I am contacting you regarding reproduction materials for your paper titled \texttt{{[}Title{]}} which was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
+I am contacting you regarding reproduction materials for your paper titled \texttt{{[}Title{]}} was published in \texttt{{[}Journal{]}} in \texttt{{[}year{]}} (vol \texttt{{[}volume{]}}, no. \texttt{{[}no.{]}}), \texttt{{[}link{]}}.
 
-I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working on reproducing this paper as part of a class exercise. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
+I am a \texttt{{[}graduate\ student/postdoc/other\ position{]}} at \texttt{{[}Institution{]}}, and I'm working on reproducing this paper as part of a class assignment. \texttt{{[}Add\ context\ for\ why\ you\ want\ to\ reproduce\ this\ particular\ paper\ using\ neutral\ language\ (e.g.,\ "This\ is\ a\ seminal\ paper\ in\ my\ field"),\ avoiding\ any\ statements\ that\ would\ put\ the\ respondent\ on\ the\ defensive{]}}.
 
-To help me reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (e.g.,\ raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, but I could not locate the items. I will not share any of the materials without your permission, and I will use them exclusively for the purpose of this exercise. Let me know if any legal or ethical restrictions apply to any of the reproduction materials to consider during this exercise.
+To help me reproduce the paper in full, I hope that you can share the following items: {[}\texttt{list\ items\ missing\ from\ reproduction\ package,\ preferably\ bulleted\ if\ more\ than\ one\ (e.g.,\ raw/analytic\ data,\ code,\ protocols\ for\ conducting\ the\ experiment,\ etc.)}{]}. I have already searched \texttt{{[}locations\ where\ you\ searched\ for\ items,\ with\ links\ provided{]}}, but I could not locate the items. Unless you tell me otherwise, I will make the reproduction package publicly available to be used in future reproductions. Let me know if any legal or ethical restrictions apply to any of the reproduction materials to consider during this exercise.
 
-Note that I will record the outcome of my reproduction on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}(SSRP), an open-source repository for the results of verifications of computational reproducibility of published work in the social sciences. The SSRP was developed by the \href{https://www.bitss.org/}{Berkeley Initiative for Transparency in the Social Sciences)}. Let me know if you would like me to share the outcome of my reproduction with you, and whether you are interested in providing a response.
+Note that I will record the outcome of my reproduction on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}(SSRP), an open-source platform for systematically conducting and recording reproductions. Let me know if you would like me to share the outcome of my reproduction with you, and whether you are interested in providing a response.
 
 Since I am required to complete this project by \texttt{{[}date{]}}, I would appreciate your response by \texttt{{[}deadline{]}}.
 
@@ -1563,7 +1637,7 @@ Best regards,\\
 \hypertarget{asking-for-additional-guidance-when-some-materials-have-been-shared}{%
 \subsection{Asking for additional guidance when some materials have been shared}\label{asking-for-additional-guidance-when-some-materials-have-been-shared}}
 
-\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still face challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or to share missing materials. As in the previous scenario described above, demonstrate that you've made an honest effort to reproduce the work using the available resources and try to consolidate your requests into as few emails as possible.
+\emph{Note:} Even when a corresponding author has shared a reproduction package, you may still face challenges in interpreting or executing the materials. That shouldn't discourage you from asking the corresponding author to provide clarifications or to share the missing materials. As in the previous scenario described above, demonstrate that you've made an honest effort to reproduce the work using the available resources and try to consolidate your requests in as few emails as possible.
 
 \textbf{Template email:}
 
@@ -1574,9 +1648,9 @@ Best regards,\\
 \begin{quote}
 Dear \texttt{{[}Title\ (e.g.,\ "Dr.")\ Last\ name\ of\ Corresponding\ Author{]}},
 
-Thank you for sharing your materials. They have been immensely helpful for my work.
+Thank you for sharing your materials. They have been immensely helpful.
 
-Unfortunately, I ran into a few issues as I delved into the reproduction, and I think your guidance would be helpful in resolving them. \texttt{{[}Describe\ the\ issues\ and\ how\ you\ have\ tried\ to\ resolve\ them.\ Describe\ whatever\ files\ or\ parts\ of\ the\ data\ or\ code\ are\ missing.\ Refer\ to\ examples\ 1\ and\ 2\ below\ for\ more\ details{]}}.
+Unfortunately, I ran into a few issues as I delved into the reproduction, and I think your guidance would be helpful to resolve them. \texttt{{[}Describe\ the\ issues\ and\ how\ you\ have\ tried\ to\ resolve\ them.\ Describe\ whatever\ files\ or\ parts\ of\ the\ data\ or\ code\ are\ missing.\ Refer\ to\ examples\ 1\ and\ 2\ below\ for\ more\ details{]}}.
 
 Thank you in advance for your help.
 
@@ -1584,7 +1658,7 @@ Best regards,\\
 \texttt{{[}Reproducer{]}}
 \end{quote}
 
-\textbf{1: An example of well-described issues:}
+\textbf{1: An example of a well-described issues:}
 
 \begin{quote}
 Specifically, I am attempting to reproduce Display Item X (e.g., table 1, figure 3). I found that the following components are required to reproduce Display Item X:
@@ -1608,19 +1682,19 @@ Specifically, I am attempting to reproduce Display Item X (e.g., table 1, figure
 \end{Shaded}
 
 \begin{quote}
-I have marked with an asterisk (*) the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+I have marked with an asterisk the items that I could not find in the reproduction materials: \textbf{data\_cleaning01.R} and \textbf{admin\_01raw.csv}. After accessing these files, I will also identify the name of the raw data set required to obtain output1\_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
 
-I understand that this request will require some work for you, but I want to assure you that I will add these missing files to the reproduction package for your paper on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}. \textbf{Doing this will ensure that you will not be asked more than once for the same missing file.}o
+I understand that this request will require some work for you; I will publish the materials on the \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform}, which should help avoid repeated requests in the future.
 \end{quote}
 
-\textbf{2. An example of poorly described issues:}
+\textbf{2. An example of a poorly-described issue:}
 
 \begin{quote}
 Your paper does not reproduce. I have tried for several hours now, and can't get the DO files to run. Could you please share all the missing reproduction materials? Data and code sharing are basic principles of open science, so I am confident that you will do the right thing.
 \end{quote}
 
 \hypertarget{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}{%
-\subsection{\texorpdfstring{response when the original author has declined to share due to \emph{undisclosed reasons}}{response when the original author has declined to share due to undisclosed reasons}}\label{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}}
+\subsection{\texorpdfstring{Response when the original author has declined to share due to \emph{undisclosed reasons}}{Response when the original author has declined to share due to undisclosed reasons}}\label{response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons}}
 
 \emph{Note:} You can also use this template if a corresponding author has not submitted a response after two or more follow-up emails.
 
@@ -1642,7 +1716,7 @@ Best regards,\\
 \end{quote}
 
 \hypertarget{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}{%
-\subsection{response when the original author has declined to share due to legal or ethical restrictions of the data}\label{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}}
+\subsection{Response when the original author has declined to share due to legal or ethical restrictions of the data}\label{response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data}}
 
 \textbf{Template email:}
 
@@ -1708,7 +1782,7 @@ The results of each step of my reproduction include i) Assessment, ii) Improveme
 \item
   Discuss the differences you observed between the results of your reproduction and the original work, and demonstrate that you did your due diligence in trying to reproduce each item. Remember that it is more constructive to discuss discrepancies, differences or deviations, rather than errors, mistakes, or failures, and \emph{always talk about the work---not the author!}\\
 \item
-  Use sensitive language when presenting discrepancies, e.g., ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be cognizant of any potential limitations of your work, and explain how you have tried to address them---that way, you will proactively address potential criticism!\\
+  Use sensitive language when presenting discrepancies, e.g., ``Unfortunately, I found X, which differs from the Y result in the original paper\ldots{}''. Be mindful of any potential limitations of your work, and explain how you have tried to address them---that way, you will proactively address potential criticism!\\
 \item
   Describe how you tried to improve the reproducibility of the paper. If some of the improvements are based on discretionary judgment (e.g., file organization or code commenting), try to explain why you think they are an improvement over the original work. If you didn't make improvements, point out some concrete steps that the author(s) can take to improve the reproducibility of the section you reproduced.{]}`
 \end{itemize}
@@ -1722,12 +1796,12 @@ Best regards,\\
 \hypertarget{responding-to-hostile-responses-from-original-authors}{%
 \subsection{Responding to hostile responses from original authors}\label{responding-to-hostile-responses-from-original-authors}}
 
-\emph{Note:} Planning your study carefully and transparently, and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts, and can range anywhere from dismissive comments to bullying, discrimination, and harassment. Find guidance at the end of this chapter on how to deal with instances of bullying, harassment, or discrimination.
+\emph{Note:} Planning your study carefully and transparently and using professional and sensitive language are the best ways to ensure that the interaction will be beneficial to both you and the original author. However, unpleasant interactions may happen despite your best efforts and can range anywhere from dismissive comments to bullying, discrimination, and harassment. Find guidance at the end of this chapter on how to deal with instances of bullying, harassment, or discrimination.
 
 \hypertarget{dismissive-comments}{%
 \subsubsection{Dismissive comments}\label{dismissive-comments}}
 
-In cases of dismissive comments, the best course of action may be to simply thank the author for their response and continue with the exercise.
+In cases of dismissive comments, the best course of action may be to simply thank the author for their response and continue with the reproduction.
 
 \textbf{Template email:}
 
@@ -1749,7 +1823,7 @@ Best regards,\\
 \hypertarget{for-original-authors-responding-to-requests-from-reproducers}{%
 \section{For original authors responding to requests from reproducers}\label{for-original-authors-responding-to-requests-from-reproducers}}
 
-This section contains guidance for authors of papers involved in reproductions on the Social Science Reproduction Platform. We present language that may help various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place in a distinct context and may carry its own unique challenges, the guiding principle of \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{this chapter} always applies: ``Treat others and their work as you would like others to treat you and your work!'' We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. \href{emailto:acre@berkeley.edu}{Let us know} if you need guidance in other scenarios!
+This section contains guidance for authors whose work is involved in reproductions on the Social Science Reproduction Platform. We present language that may help various scenarios in which authors find themselves when interacting with reproducers. Though every interaction between authors and reproducers takes place is distinct and may carry its unique challenges, the guiding principle of \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html}{this chapter} always applies: ``Treat others and their work as you would like others to treat you and your work!'' We hope that these resources will facilitate more efficient and constructive exchanges between the parties involved. \href{emailto:acre@berkeley.edu}{Let us know} if you need guidance in other scenarios!
 
 \hypertarget{responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction}{%
 \subsection{Responding to a repeated request that has been addressed in an earlier interaction}\label{responding-to-a-repeated-request-that-has-been-addressed-in-an-earlier-interaction}}
@@ -1759,7 +1833,7 @@ Dear {[}Reproducer{]},
 
 Thank you for your interest in my work. I have been contacted about this issue by another SSRP reproducer before and provided a response, which I suspect may be already recorded on the SSRP. I'm copying my original response below for your reference. You may find further guidance in the readme file in the reproduction package.
 
-If there are no prior records of these issues on the SSRP, please record the enclosed response {[}and materials{]}. This will also help avoid the duplication of effort \textgreater on the part of others who may be interested in reproducing this work.
+If there are no prior records of these issues on the SSRP, please record the enclosed response {[}and materials{]}. This will also help avoid the duplication of effort on the part of others who may be interested in reproducing this work.
 
 Good luck with the remainder of your project and thank you in advance for your cooperation!
 
@@ -1773,9 +1847,9 @@ Best regards,
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for reviewing my work closely. I wish I could be of more help, but unfortunately I no longer have access to the \textgreater requested materials due to \texttt{{[}briefly\ describe\ the\ circumstances\ that\ prevent\ you\ from\ providing\ the\ materials{]}}.
+Thank you for reviewing my work closely. I wish I could be of more help, but unfortunately I no longer have access to the requested materials due to \texttt{{[}briefly\ describe\ the\ circumstances\ that\ prevent\ you\ from\ providing\ the\ materials{]}}.
 
-While I recognize that the current standards in the discipline suggest that work should be reproducible using materials that are readily available for this purpose note that this paper was written when different standards of reproducibility \textgreater were mandated. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
+While I recognize that the current standards in the discipline have moved towards computational reproducibility, note that this paper was written when different standards applied. Please feel free to evaluate the paper as is and propose any improvements wherever possible.
 
 I look forward to working with you to address this and improve the overall reproducibility of the paper.
 
@@ -1789,11 +1863,11 @@ Best regards,
 \begin{quote}
 Dear {[}Reproducer{]},
 
-Thank you for your interest in my work. The data/materials/program that you reference are not publicly accessible for the time \textgreater being because they are embargoed until \texttt{{[}embargo\ period{]}}.
+Thank you for your interest in my work. The data/materials/program that you reference are currently not publicly available because they are embargoed until \texttt{{[}embargo\ period{]}}.
 
-\texttt{{[}Depending\ on\ the\ restrictions\ that\ apply\ to\ the\ reproduction\ package,\ consider\ alternatives\ to\ sharing\ the\ reproduction\ materials\ in\ full.\ These\ include:\ 1.Sharing\ the\ analytic\ version\ of\ the\ data\ (the\ version\ of\ the\ dataset\ that\ was\ used\ for\ analysis\ in\ the\ final\ version\ of\ your\ paper);\ \ 2.\ Providing\ a\ public\ description\ of\ the\ steps\ other\ researchers\ can\ follow\ to\ request\ access\ to\ the\ raw\ data\ or\ materials,\ including\ an\ estimate\ of\ the\ costs\ and\ the\ duration\ of\ the\ process.\ Find\ examples\ of\ data\ availability\ statements\ for\ proprietary\ or\ restricted-access\ data\ {[}here{]}(https://social-science-data-editors.github.io/guidance/Requested\_information\_dcas.html);\ and\ 3.\ Providing\ access\ to\ all\ data\ and\ materials\ for\ which\ the\ constraints\ do\ not\ apply.{]}}
+\texttt{{[}Depending\ on\ the\ restrictions\ that\ apply\ to\ the\ reproduction\ package,\ consider\ alternatives\ to\ sharing\ the\ reproduction\ materials\ in\ full.\ These\ include:\ 1.Sharing\ the\ analytic\ version\ of\ the\ data\ (the\ version\ of\ the\ dataset\ that\ was\ used\ for\ analysis\ in\ the\ final\ version\ of\ your\ paper);\ \ 2.\ Providing\ a\ public\ description\ of\ the\ steps\ that\ other\ researchers\ can\ follow\ to\ request\ access\ to\ the\ raw\ data\ or\ materials,\ including\ an\ estimate\ of\ the\ costs\ and\ the\ duration\ of\ the\ process.\ Find\ examples\ of\ data\ availability\ statements\ for\ proprietary\ or\ restricted-access\ data\ {[}here{]}(https://social-science-data-editors.github.io/guidance/Requested\_information\_dcas.html);\ and\ 3.\ Providing\ access\ to\ all\ data\ and\ materials\ for\ which\ the\ constraints\ do\ not\ apply.{]}}
 
-I hope you find this helpful for reproducing the paper. Please feel free to contact me if you have any further questions.
+I hope you find this helpful. Please feel free to contact me if you have any further questions.
 
 Best regards,
 {[}Author{]}
@@ -1807,7 +1881,7 @@ Dear {[}Reproducer{]},
 
 Thank you for your interest in my work. I would be happy to assist you and other reproducers to assess and improve the reproducibility of this paper.
 
-To help me give more concrete guidance on this issue, I'd appreciate if you could provide a more specific description \textgreater of the items that you need from me. You can find helpful information and resources in Chapter 6 of the Guide, \textgreater specifically \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#asking-for-additional-guidance-when-some-materials-have-been-shared}{here} \texttt{{[}based\ on\ the\ context,\ you\ may\ need\ to\ point\ \textgreater{}the\ reproducer\ to\ a\ \textgreater{}different\ scenario\ and/or\ provide\ further\ information{]}}.
+To help me give more concrete guidance, I'd appreciate if you could provide a more specific description \textgreater of the items that you need from me. You can find helpful information and resources in Chapter 6 of the Guide, \textgreater specifically \href{https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html\#asking-for-additional-guidance-when-some-materials-have-been-shared}{here} \texttt{{[}based\ on\ the\ context,\ you\ may\ need\ to\ point\ \textgreater{}the\ reproducer\ to\ a\ \textgreater{}different\ scenario\ and/or\ provide\ further\ information{]}}.
 
 Feel free to contact me if you have any further questions. Thank you for your cooperation.
 
@@ -1818,7 +1892,7 @@ Best regards,
 \hypertarget{harassment-andor-discrimination}{%
 \section{Harassment and/or discrimination}\label{harassment-andor-discrimination}}
 
-The American Economic Association and other economic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the \href{https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination}{AEA Policy on Harassment and Discrimination} has listed as unacceptable and could emerge in a hostile exchange regarding a reproduction:
+The American Economic Association (AEA) and other academic societies have strict policies against harassment and discrimination. Here are some of the behaviors that the \href{https://www.aeaweb.org/about-aea/aea-policy-harassment-discrimination}{AEA Policy on Harassment and Discrimination} has listed as unacceptable and could emerge in a hostile exchange regarding a reproduction:
 
 \begin{itemize}
 \tightlist
@@ -1841,12 +1915,12 @@ Here are a some steps you can take if you believe you have experienced bullying,
 \begin{itemize}
 \tightlist
 \item
-  ** file a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.** Any AEA member can file a complaint. You can also join the AEA solely for the purpose of filing a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
+  \textbf{File a complaint with the \href{https://www.aeaweb.org/about-aea/aea-ombudsperson}{AEA Ombudsperson}.} Any AEA member can file a complaint. You can also join the AEA solely to file a report. The person about whom you are making the complaint need not be an AEA member. A non-AEA member can also file a report if the act of harassment or discrimination was committed by an AEA member or in the context of an AEA-sponsored activity. Learn more about the process \href{https://www.aeaweb.org/about-aea/aea-ombudsperson/faq}{here}.
 
   \begin{itemize}
   \tightlist
   \item
-    ** file a report with your institution's office for the prevention of harassment \& discrimination.** US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment on the basis of race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California system), ``Office of Equity and Title IX'', etc.
+    \textbf{File a report with your institution's office for the prevention of harassment \& discrimination.} US-based institutions have internal mechanisms that allow students and faculty to seek support in cases of discrimination and harassment based on race, color, national origin, gender, age, or sexual orientation/identity, including allegations of sexual harassment and sexual violence. Formal titles of this office vary across institutions, but common names include ``Office for the Prevention of Harassment and Discrimination'' (in institutions that are part of the University of California system), ``Office of Equity and Title IX,'' etc.
   \item
     \textbf{Contact your institution's Ombudsperson/Ombuds Office.} If you believe that you have experienced academic bullying or other forms of disrespectful behavior that fall outside the scope of harassment and/or discrimination as described above, you should know that university ombuds officers offer a confidential, impartial resource to discuss your concerns and learn about potential next steps available in your case.
   \item

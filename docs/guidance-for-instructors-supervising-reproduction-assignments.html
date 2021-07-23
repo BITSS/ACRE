@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Contributions | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
+  <title>Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Contributions | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  <meta property="og:title" content="Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Contributions | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
+  <meta name="twitter:title" content="Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   
   <meta name="twitter:description" content="Materials to support the reproduction of published research in social sciences" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="examples-of-reproduction-trees.html"/>
-<link rel="next" href="definitions.html"/>
+<link rel="prev" href="concluding-the-reproduction.html"/>
+<link rel="next" href="comunications.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -283,39 +283,249 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="contributions" class="section level1" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Contributions</h1>
-<div id="contrib-guide" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Contributing feedback on this Guide</h2>
-<p>We welcome feedback and direct contributions from all readers in all parts and aspects of the ACRe Guide. If you wish to provide feedback on specific chapters or sections, click the “edit” icon at the top of this page (this will prompt you to sign into or create a GitHub account), after which you’ll be able to suggest changes directly into the text. Please submit your suggestions using the “create a new branch and start a pull request” option and provide a summary of the changes you’ve proposed in the description of the pull request. The ACRE project team will review all suggested changes and decide whether to “push” them to this Guide document or not.</p>
-<p>To report issues or provide feedback on the Social Science Reproduction Platform, please submit to the <a href="https://forum.socialsciencereproduction.org/c/help/8">Help category</a> in the SSPP Forum or contact <a href="mailto:ACRE@berkeley.edu">ACRE@berkeley.edu</a>.</p>
-<p>Major contributions to this Guide will be acknowledged below according to the Contributor Roles Taxonomy (<a href="https://casrai.org/credit/">CRediT</a>). Major contributions are defined as any pushed revisions to the Guide language or source code beyond corrections of spelling and grammar.</p>
+<div id="guidance-for-instructors-supervising-reproduction-assignments" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Guidance for Instructors Supervising Reproduction Assignments</h1>
+<p>The <a href="https://www.socialsciencereproduction.org/">Social Science Reproduction Platform</a> (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:
+- Assessing and improving the reproducibility of published work
+- Applying good coding and data management practices
+- Recording reproduction results and improvements on the SSRP
+- Engaging in constructive exchanges with authors
+- Developing a deep understanding of common methods and computational techniques
+- Creating real, citable scientific contributions.</p>
+<p>In the process, students can reference the ACRe Guide as a step-by-step protocol for conducting reproductions and use the SSRP to record and share their work, and instructors can use it as a guide for supervising these assignments. Examples of completed reproductions are available <a href="https://www.socialsciencereproduction.org/reproductions/search?query=">here</a>.</p>
+<p>Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):
+1. <em><a href="https://bitss.github.io/ACRE/select.html#select">Paper selection</a></em>, where students select a paper and try to locate its reproduction package;
+2. <em><a href="https://bitss.github.io/ACRE/scoping.html#scoping">Scoping</a></em>, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;
+3. <em><a href="https://bitss.github.io/ACRE/assessment.html#assessment">Assessment</a></em>, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;
+4. <em><a href="https://bitss.github.io/ACRE/improvements.html#improvements">Improvement</a></em>, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and
+5. <em><a href="https://bitss.github.io/ACRE/robust.html#robust">Robustness</a></em>, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.</p>
+<p>This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.</p>
+<p><em>Get started by <a href="https://www.socialsciencereproduction.org/users/sign_in">signing up for a free SSRP account</a> and reviewing this chapter to find tips based on your use case below.</em></p>
+<div id="common-use-cases" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Common use cases</h2>
+<div id="graduate-level-assignment" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Graduate-level assignment</h3>
+<p><em>(Estimated duration: 2 weeks to one semester)</em></p>
+<p>Advanced master’s or PhD-level courses often feature assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In these courses, instructors can recommend students choose papers from specific sub-fields (e.g., labor economics) or journals, or curate a list of possible papers.</p>
+<p>The length of such assignments can vary from a couple of weeks to a semester. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data, focusing on just the main results. For longer timelines, such as semester-long assignments, students might reproduce entire papers from raw data. See section 7.2 below for a suggested distribution of effort across different lengths of assignments.</p>
+<p>Graduate students should expect to spend a significant time at the <em>Robustness</em> stage. Therefore, before beginning the assignment, we recommend that students focus either on expanding the set of feasible robustness checks (see <a href="https://bitss.github.io/ACRE/robust.html">Chapter 5</a>) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).</p>
 </div>
-<div id="list-of-contributors-guidelines-content-and-source-code" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> List of Contributors: Guidelines content and source code:</h2>
-<p><em>(in alphabetical order)</em></p>
-<ul>
-<li>Aleksandar Bogdanoski – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)</li>
-<li>Carson Christiano – Funding acquisition, Project administration, Writing (reviewing and editing)</li>
-<li>Joel Ferguson – Writing (original draft), Writing (reviewing and editing)</li>
-<li>Fernando Hoces de la Guardia – Conceptualization, Funding acquisition, Writing (original draft), Writing (reviewing and editing)</li>
-<li>Katherine Hoeberling – Funding acquisition, Project administration, Writing (original draft), Writing (reviewing and editing)</li>
-<li>Edward Miguel – Conceptualization, Funding acquisition, Supervision</li>
-<li>Emma Ng – Visualization, Writing (original draft), Writing (reviewing and editing)</li>
-<li>Lars Vilhuber – Conceptualization, Funding acquisition, Supervision</li>
-</ul>
-<p>The individuals below have contributed to the <a href="https://github.com/BITSS/ACRE">ACRE GitHub repository</a>:</p>
-<p><a href="https://github.com/abogdanoski">@abogdanoski</a>, <a href="https://github.com/albertchae">@albertchae</a>, Emma Ng (<a href="https://github.com/em-ng21">@em-ng21</a>), Fernando Hoces de la Guardia (<a href="https://github.com/fhoces">@fhoces</a>), Joel Ferguson (<a href="https://github.com/joelferg">@joelferg</a>), Katie Hoeberling (<a href="https://github.com/khoeberling">@khoeberling</a>), Michael Weiss (<a href="https://github.com/mweiss">@mweiss</a>)</p>
+<div id="undergraduate-thesis" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Undergraduate thesis</h3>
+<p><em>(Estimated duration: 2 months to 1 year)</em></p>
+<p>Students can use the platform to carry out detailed reproductions as part of an undergraduate thesis (see an example <a href="https://osf.io/3e6ps/">here</a>). This type of assignment allows students to gain direct research experience while making meaningful contributions to the field.</p>
+<p>Depending on the paper’s scope and the assignment’s learning objectives, such projects could last anywhere from a couple of months to an entire year. Students should demonstrate an understanding of the paper by identifying its main claim(s) at the <em>Scoping</em> stage and conducting a detailed assessment of the reproducibility of their associated display items at the Assessment stage. At the <em>Improvement</em> stage, students should try to improve the reproducibility of at least one display item. Depending on the scope of the paper, examples within reach of an undergraduate thesis might include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, or making other improvements suggested by the instructor. Finally, at the <em>Robustness</em> stage, students should be able to demonstrate a high-level understanding of the conditions under which the paper’s estimates are valid.</p>
+<p>We recommend breaking down the assignment into a “proposal” stage, where students scope and assess their papers, and an “execution” stage, where students carry out improvements and robustness checks.</p>
 </div>
-<div id="suggested-citation-format" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Suggested citation format</h2>
-<p>These follow the Chicago style citation format. Brackets [ ] indicate where you’ll need to input more specific information.
-- When citing the ACRe Guide: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guide for Advancing Computational Reproducibility in the Social Sciences.” [Date accessed (Day, Month, Year)]. <a href="https://bitss.github.io/ACRE/" class="uri">https://bitss.github.io/ACRE/</a>.
-- - When citing reproductions accessed on the Social Science Reproduction Platform: [Reproducer Last name], [Reproducer First name], [Last, First], and [Last, First]. [Year]. “Reproduction of [Title of original paper].” <em>Social Science Reproduction Platform</em>. doi: [doi]. [DOI or link to original paper].</p>
+<div id="undergraduate-course" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Undergraduate course</h3>
+<p><em>(Estimated duration: 1 month to one semester)</em></p>
+<p>Students in undergraduate courses should primarily focus on verifying whether reproductions packages “run” and recording the outcome on the SSRP. At the <em>Scoping</em> stage, undergraduate students can demonstrate a high-level understanding of the paper’s main claims. Students can identify the code and files necessary to reproduce their select display items at the <em>Assessment</em> stage and try to actually run the code. Finally, at the <em>Robustness</em> stage students can inspect the code scripts and identify potential lines of code with analytical choices, increasing the feasible set of robustness checks.</p>
 </div>
-<div id="acknowledgments" class="section level2" number="10.4">
-<h2><span class="header-section-number">10.4</span> Acknowledgments</h2>
-<p>Support for the development of this Guide was provided by <a href="https://www.arnoldventures.org/">Arnold Ventures</a>.</p>
+</div>
+<div id="paper-selection-and-assignment-timelines" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Paper selection and assignment timelines</h2>
+<p>The SSRP allows for flexibility in selecting papers and determining the scope of reproduction assignments in terms of the number of claims, display items, or even the required reproduction stages (at minimum, a complete reproduction requires filling in <em>Scoping</em> and <em>Assessment</em>). For example, instructors can <strong>curate a list of target papers</strong> or <strong>allow students to choose</strong> from a distinct body of literature or a specific journal. For either strategy, a good starting point is first to reference the <a href="https://www.socialsciencereproduction.org/reproductions/search">SSRP database of papers and reproductions</a>, which allows users to search through submitted reproductions. This can help detect potential “no-go” papers for which other users were unable to find any reproduction materials (labeled as “abandoned papers”), though users are by no means barred from attempting to reproduce such cases. If instructors are unable to curate a list of papers with readily available reproduction packages, we recommend allocating at least 3 additional weeks to try to locate the missing reproduction materials, potentially by contacting the original authors (see <a href="https://bitss.github.io/ACRE/comunications.html#comunications">this chapter</a> for guidance on constructive exchanges with original authors).</p>
+<p>To curate a list of target papers in <em>economics</em>, instructors can consult recently published articles in the journals of the <a href="https://www.aeaweb.org/journals">American Economic Association</a> (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> that took effect that year. In <em>political science</em>, target papers can be found in the <em><a href="https://ajps.org/ajps-verification-policy/">American Journal of Political Science</a></em>, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the <a href="https://www.cos.io/initiatives/top-guidelines">Transparency and Openness Promotion (TOP) Factor</a> (see scores <a href="https://topfactor.org/">here</a>), maintained by the Center for Open Science.</p>
+<p>To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The <em>Scoping</em> and <em>Assessment</em> stages will take approximately the same amount of time across timelines, but will depend on the students’ prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.</p>
+<strong>Table 1: Workload distribution across reproduction stages across different timelines</strong>
+<table class="tg">
+<tbody>
+<tr>
+<th class="tg-0pky">
+ 
+</th>
+<th class="tg-c3ow" colspan="2">
+2 weeks <br />(~10 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 month <br />(~20 days)
+</th>
+<th class="tg-c3ow" colspan="2">
+1 semester <br />(~100 days)
+</th>
+</tr>
+<tr>
+<td class="tg-0pky">
+ 
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+<td class="tg-0pky">
+analysis data
+</td>
+<td class="tg-0pky">
+raw data
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Scoping
+</td>
+<td class="tg-c3ow" colspan="2">
+10% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (1 day)
+</td>
+<td class="tg-c3ow" colspan="2">
+5% (5 days)
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Assessment
+</td>
+<td class="tg-c3ow" colspan="2">
+35%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+<td class="tg-c3ow" colspan="2">
+15%
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Improvement
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+0%
+</td>
+<td class="tg-c3ow" colspan="2">
+40%
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+35%
+</td>
+</tr>
+<tr>
+<td class="tg-0pky">
+Robustness
+</td>
+<td class="tg-c3ow">
+25%
+</td>
+<td class="tg-c3ow">
+5%
+</td>
+<td class="tg-c3ow" colspan="2">
+30%
+</td>
+<td class="tg-c3ow" colspan="2">
+25%
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="grading-strategy" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Grading strategy</h2>
+<p>Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students’ work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don’t contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.</p>
+<p>We suggest the following grading categories:
+* <strong>Submission:</strong> Full credit for timely submitted, non-blank submissions.
+* <strong>All key fields:</strong> Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.
+* <strong>Paper summary:</strong> Full credit for submitting a short summary of the paper that answers <a href="https://bitss.github.io/ACRE/scoping.html#read-sum">these questions</a>.
+* <strong>Claims:</strong> Full credit for presenting an accurate and clear summary of the paper’s main claims (see guidance <a href="https://bitss.github.io/ACRE/scoping.html#scoping">here</a>). To properly score this section, the instructor needs to have previous knowledge of the paper.
+* <strong>Assessment:</strong> There are two kinds of contributions students can make to obtain full credit:
++ Assess <em>multiple claims</em>. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in “All key fields” give 50% of the credit for assessing a second claim, 30% for a third, and 20% for a fourth).
++ Conduct a <em>thorough assessment of a single claim</em>. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).
+* <strong>Improvement:</strong> Students can obtain full credit through two types of contributions:
++ Implement improvements of reproducibility of <em>multiple claims</em> with a similar credit structure as for the assessment of multiple claims (see point above).
++ Implement <em>thorough improvements of a single claim</em>. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see <a href="https://bitss.github.io/ACRE/improvements.html#doc-impr">this section</a> for suggestions on how to do this).
+* <strong>Future suggestions for improvement:</strong> Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.
+* <strong>Revised reproduction package:</strong> Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.
+* <strong>Robustness:</strong> Students can obtain full credit for one of two strategies (or a combination of them):
++ Identify a large number of original analytical choices in the code files. The definition of “large” is up to the Instructor, but we suggest at least 20 original analytical choices (see <a href="https://bitss.github.io/ACRE/robust.html#robust">this section</a> for a distinction between original and non-original analytical choices).
++ Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="center">Score <br> (example)</th>
+<th align="center">Weights <br> (suggested)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Submitted</td>
+<td align="center">100</td>
+<td align="center">40%</td>
+</tr>
+<tr class="even">
+<td>All important fields</td>
+<td align="center">80</td>
+<td align="center">10%</td>
+</tr>
+<tr class="odd">
+<td>Summary</td>
+<td align="center">100</td>
+<td align="center">5%</td>
+</tr>
+<tr class="even">
+<td>Clear claims</td>
+<td align="center">90</td>
+<td align="center">5%</td>
+</tr>
+<tr class="odd">
+<td>Assessment</td>
+<td align="center">100</td>
+<td align="center">10%</td>
+</tr>
+<tr class="even">
+<td>Improvements</td>
+<td align="center">50</td>
+<td align="center">10%</td>
+</tr>
+<tr class="odd">
+<td>Revise reproduction package</td>
+<td align="center">100</td>
+<td align="center">5%</td>
+</tr>
+<tr class="even">
+<td>Specific suggestions for improvements</td>
+<td align="center">0</td>
+<td align="center">5%</td>
+</tr>
+<tr class="odd">
+<td>Robustness</td>
+<td align="center">100</td>
+<td align="center">10%</td>
+</tr>
+<tr class="even">
+<td>Final Score</td>
+<td align="center">87.5</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="facilitating-class-anonymous-reproductions" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Facilitating <em>class anonymous</em> reproductions</h2>
+<p>The SSRP allows users to select from three distinct privacy models when submitting their work, including <em>public-identified</em>, <em>temporary anonymous</em>, and <em>class anonymous</em> (explained in more detail <a href="https://bitss.github.io/ACRE/concluding-the-reproduction.html#visibility-and-data-use">here</a>). This section includes specific guidance for instructors facilitating reproductions that will be published using the <em>class anonymous</em> privacy model, which allows users to conceal their identities and free-form narrative answers (e.g., notes, descriptions, summaries, explanations) indefinitely. Instead, reproductions published under the class anonymous model contain only categorical responses and basic class identifiers, including course name, year, institution, instructor’s name, and instructor’s email address.</p>
+<p>Reproducers looking to publish under the <em>class anonymous</em> model will be unable to maintain their anonymity if they share their revised reproduction packages as part of their reproductions. This is because trusted data repositories and GitHub require users to create accounts in order to post their content and keep records of updates. We advise instructors to create generic repositories for their class (e.g., “Reproductions for Econ 270 - Fall 2021”) and deposit each anonymous reproduction in self-contained folders.</p>
+<p>For example, suppose a class has two students who choose the anonymous option. In that case, they should share (privately) their revised reproduction package with their instructor, and the instructor should post them using the following structure:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-1" aria-hidden="true" tabindex="-1"></a>  Reproductions for <span class="co">[</span><span class="ot">Course Name, Semester</span><span class="co">]</span></span>
+<span id="cb6-2"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-2" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Smith et al. (2019)</span>
+<span id="cb6-3"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Perez et al. (2019)</span></code></pre></div>
+<p><strong>Note:</strong> When anonymizing revised reproduction packages, we advise that instructors and students avoid using version control software. Even if the current materials are correctly de-identified, the version history may still contain identifiers, such as GitHub usernames.</p>
 
 </div>
 </div>
@@ -324,8 +534,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="examples-of-reproduction-trees.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="definitions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="concluding-the-reproduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="comunications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -356,7 +566,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/BITSS/ACRE/edit/master/12-contributions.Rmd",
+"link": "https://github.com/BITSS/ACRE/edit/master/08-tips-for-instructors.Rmd",
 "text": "Edit"
 },
 "history": {
