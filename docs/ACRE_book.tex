@@ -226,7 +226,7 @@ This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 I
 \chapter*{Introduction}\label{intro}}
 \addcontentsline{toc}{chapter}{Introduction}
 
-\emph{Computational reproducibility} is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed \href{https://social-science-data-editors.github.io/guidance/}{recommendations and resources} to facilitate compliance. This goal of such policy changes is to improve the computational reproducibility of \emph{all} published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
+\emph{Computational reproducibility} is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis \citep{national2019reproducibility}. In 2019, the \href{https://www.aeaweb.org/journals/policies/data-code/}{American Economic Association} updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the \href{https://ajps.org/ajps-verification-policy/}{\emph{American Journal of Political Science}}. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed \href{https://social-science-data-editors.github.io/guidance/}{recommendations and resources} to facilitate compliance. The goal of such policy changes is to improve the computational reproducibility of \emph{all} published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low \citep{galiani2018make, chang2015economics, kingi2018reproducibility}.
 
 This Guide includes a common approach, terminology, and standards for conducting \emph{reproductions}, or attempts to assess and improve the computational reproducibility of published work. At the center of this process is the \emph{reproducer} (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the \emph{original author} (whom we refer to as ``the author'') in cases where additional guidance and materials are needed to execute the process. Reproductions should be distinguished from \emph{replications}, where replicators re-examine a study's hypotheses using \emph{different data} or \emph{different methods} (or both) \citep{King95}. We find that reproducibility is necessary for replicability, though both allow science to be ``self-correcting.''
 
@@ -1340,20 +1340,30 @@ The Social Science Reproduction Platform will aggregate descriptive statistics f
 \chapter{Guidance for Instructors Supervising Reproduction Assignments}\label{guidance-for-instructors-supervising-reproduction-assignments}}
 
 The \href{https://www.socialsciencereproduction.org/}{Social Science Reproduction Platform} (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the ``ACRe Guide'') to facilitate reproduction assignments (sometimes called ``replications'') in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:
-- Assessing and improving the reproducibility of published work
-- Applying good coding and data management practices
-- Recording reproduction results and improvements on the SSRP
-- Engaging in constructive exchanges with authors
-- Developing a deep understanding of common methods and computational techniques
-- Creating real, citable scientific contributions.
+
+\begin{itemize}
+\tightlist
+\item
+  Assessing and improving the reproducibility of published work\\
+\item
+  Applying good coding and data management practices\\
+\item
+  Recording reproduction results and improvements on the SSRP\\
+\item
+  Engaging in constructive exchanges with authors\\
+\item
+  Developing a deep understanding of common methods and computational techniques\\
+\item
+  Creating real, citable scientific contributions.
+\end{itemize}
 
 In the process, students can reference the ACRe Guide as a step-by-step protocol for conducting reproductions and use the SSRP to record and share their work, and instructors can use it as a guide for supervising these assignments. Examples of completed reproductions are available \href{https://www.socialsciencereproduction.org/reproductions/search?query=}{here}.
 
-Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):
-1. \emph{\href{https://bitss.github.io/ACRE/select.html\#select}{Paper selection}}, where students select a paper and try to locate its reproduction package;
-2. \emph{\href{https://bitss.github.io/ACRE/scoping.html\#scoping}{Scoping}}, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;
-3. \emph{\href{https://bitss.github.io/ACRE/assessment.html\#assessment}{Assessment}}, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;
-4. \emph{\href{https://bitss.github.io/ACRE/improvements.html\#improvements}{Improvement}}, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and
+Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):\\
+1. \emph{\href{https://bitss.github.io/ACRE/select.html\#select}{Paper selection}}, where students select a paper and try to locate its reproduction package;\\
+2. \emph{\href{https://bitss.github.io/ACRE/scoping.html\#scoping}{Scoping}}, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;\\
+3. \emph{\href{https://bitss.github.io/ACRE/assessment.html\#assessment}{Assessment}}, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;\\
+4. \emph{\href{https://bitss.github.io/ACRE/improvements.html\#improvements}{Improvement}}, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and\\
 5. \emph{\href{https://bitss.github.io/ACRE/robust.html\#robust}{Robustness}}, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.
 
 This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.
@@ -1403,15 +1413,11 @@ To plan the distribution of effort across different reproduction stages, we reco
 
 \textbf{Table 1: Workload distribution across reproduction stages across different timelines}
 
-~
-
 2 weeks (\textasciitilde10 days)
 
 1 month (\textasciitilde20 days)
 
 1 semester (\textasciitilde100 days)
-
-~
 
 analysis data
 
@@ -1449,9 +1455,9 @@ Improvement
 
 40\%
 
-25\%
+30\%
 
-35\%
+20\%
 
 Robustness
 
@@ -1461,7 +1467,7 @@ Robustness
 
 30\%
 
-25\%
+30\%
 
 \hypertarget{grading-strategy}{%
 \section{Grading strategy}\label{grading-strategy}}
@@ -1469,21 +1475,52 @@ Robustness
 Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students' work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don't contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.
 
 We suggest the following grading categories:
-* \textbf{Submission:} Full credit for timely submitted, non-blank submissions.
-* \textbf{All key fields:} Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.
-* \textbf{Paper summary:} Full credit for submitting a short summary of the paper that answers \href{https://bitss.github.io/ACRE/scoping.html\#read-sum}{these questions}.
-* \textbf{Claims:} Full credit for presenting an accurate and clear summary of the paper's main claims (see guidance \href{https://bitss.github.io/ACRE/scoping.html\#scoping}{here}). To properly score this section, the instructor needs to have previous knowledge of the paper.
-* \textbf{Assessment:} There are two kinds of contributions students can make to obtain full credit:
-+ Assess \emph{multiple claims}. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in ``All key fields'' give 50\% of the credit for assessing a second claim, 30\% for a third, and 20\% for a fourth).
-+ Conduct a \emph{thorough assessment of a single claim}. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).
-* \textbf{Improvement:} Students can obtain full credit through two types of contributions:
-+ Implement improvements of reproducibility of \emph{multiple claims} with a similar credit structure as for the assessment of multiple claims (see point above).
-+ Implement \emph{thorough improvements of a single claim}. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see \href{https://bitss.github.io/ACRE/improvements.html\#doc-impr}{this section} for suggestions on how to do this).
-* \textbf{Future suggestions for improvement:} Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.
-* \textbf{Revised reproduction package:} Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.
-* \textbf{Robustness:} Students can obtain full credit for one of two strategies (or a combination of them):
-+ Identify a large number of original analytical choices in the code files. The definition of ``large'' is up to the Instructor, but we suggest at least 20 original analytical choices (see \href{https://bitss.github.io/ACRE/robust.html\#robust}{this section} for a distinction between original and non-original analytical choices).
-+ Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Submission:} Full credit for timely submitted, non-blank submissions.\\
+\item
+  \textbf{All key fields:} Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.\\
+\item
+  \textbf{Paper summary:} Full credit for submitting a short summary of the paper that answers \href{https://bitss.github.io/ACRE/scoping.html\#read-sum}{these questions}.\\
+\item
+  \textbf{Claims:} Full credit for presenting an accurate and clear summary of the paper's main claims (see guidance \href{https://bitss.github.io/ACRE/scoping.html\#scoping}{here}). To properly score this section, the instructor needs to have previous knowledge of the paper.\\
+\item
+  \textbf{Assessment:} There are two kinds of contributions students can make to obtain full credit:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Assess \emph{multiple claims}. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in ``All key fields'' give 50\% of the credit for assessing a second claim, 30\% for a third, and 20\% for a fourth).\\
+  \item
+    Conduct a \emph{thorough assessment of a single claim}. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).\\
+  \end{itemize}
+\item
+  \textbf{Improvement:} Students can obtain full credit through two types of contributions:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Implement improvements of reproducibility of \emph{multiple claims} with a similar credit structure as for the assessment of multiple claims (see point above).\\
+  \item
+    Implement \emph{thorough improvements of a single claim}. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see \href{https://bitss.github.io/ACRE/improvements.html\#doc-impr}{this section} for suggestions on how to do this).\\
+  \end{itemize}
+\item
+  \textbf{Future suggestions for improvement:} Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.\\
+\item
+  \textbf{Revised reproduction package:} Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.\\
+\item
+  \textbf{Robustness:} Students can obtain full credit for one of two strategies (or a combination of them):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Identify a large number of original analytical choices in the code files. The definition of ``large'' is up to the Instructor, but we suggest at least 20 original analytical choices (see \href{https://bitss.github.io/ACRE/robust.html\#robust}{this section} for a distinction between original and non-original analytical choices).\\
+  \item
+    Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.
+  \end{itemize}
+\end{itemize}
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
@@ -2012,16 +2049,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
                 |          └───[code] data_cleaning01.R
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
-                              └───[data] admin_01raw.csv  
+                              └───[data] admin_01raw.csv
 \end{verbatim}
 
 \hypertarget{incomplete-reproduction-tree}{%
@@ -2035,16 +2072,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
 
-           Unused files: 
+           Unused files:
            - survey_01raw.csv
-           - admin_01raw.csv  
+           - admin_01raw.csv
 \end{verbatim}
 
 Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in \texttt{survey\_01raw.csv} and \texttt{admin\_01raw.csv}, and eventually output \texttt{analysis\_data01.csv} and \texttt{analysis\_data02.csv}, though this requires the reproducer's discretion.
@@ -2052,16 +2089,16 @@ Reproducers are asked to speculate on where the missing files might go, and henc
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
                 |          └───[code] MISSING FILE(S)
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
                            └───[code] MISSING FILE(S)
-                              └───[data] admin_01raw.csv  
+                              └───[data] admin_01raw.csv
 \end{verbatim}
 
 \hypertarget{unused-data-sources}{%
@@ -2129,7 +2166,7 @@ This reproduction diagram fragment likely shows a missing piece of code. In a co
 
         Unusued data sources:
         cps2018.dta
-        cps_march2017.dta  
+        cps_march2017.dta
 \end{verbatim}
 
 \hypertarget{long-complicated-tree.}{%
@@ -4845,7 +4882,7 @@ In this case, you can still manually combine this partial information with your 
                         |               └──MISSSING_CODE_FILE_2
                         |                   └──cleaned_3.dta
                         |                   |       └──[code] clean_raw_3.py
-                        |                   |           └──raw_3.dta    
+                        |                   |           └──raw_3.dta
                         |                   └──cleaned_4.dta
                         |                           └──[code] clean_raw_4.py
                         |                               └──raw_4.dta
@@ -4856,7 +4893,7 @@ In this case, you can still manually combine this partial information with your 
                                             └──cleaned_1.dta
                                             |       └──[code] clean_raw_1.py
                                             |           └──raw_1.dta
-                                            |   
+                                            |
                                             └──cleaned_2.dta
                                                     └──[code] clean_raw_2.py
                                                         └──raw_2.dta

@@ -1,20 +1,21 @@
 # Guidance for Instructors Supervising Reproduction Assignments
 
-The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:
-- Assessing and improving the reproducibility of published work
-- Applying good coding and data management practices
-- Recording reproduction results and improvements on the SSRP
-- Engaging in constructive exchanges with authors
-- Developing a deep understanding of common methods and computational techniques 
-- Creating real, citable scientific contributions.
+The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:  
+
+- Assessing and improving the reproducibility of published work  
+- Applying good coding and data management practices  
+- Recording reproduction results and improvements on the SSRP  
+- Engaging in constructive exchanges with authors  
+- Developing a deep understanding of common methods and computational techniques   
+- Creating real, citable scientific contributions.  
 
 In the process, students can reference the ACRe Guide as a step-by-step protocol for conducting reproductions and use the SSRP to record and share their work, and instructors can use it as a guide for supervising these assignments. Examples of completed reproductions are available [here](https://www.socialsciencereproduction.org/reproductions/search?query=).
 
-Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):
-1. *[Paper selection](https://bitss.github.io/ACRE/select.html#select)*, where students select a paper and try to locate its reproduction package;
-2. *[Scoping](https://bitss.github.io/ACRE/scoping.html#scoping)*, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;
-3. *[Assessment](https://bitss.github.io/ACRE/assessment.html#assessment)*, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;
-4. *[Improvement](https://bitss.github.io/ACRE/improvements.html#improvements)*, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and
+Reproductions typically include five distinct stages (elaborated on at length in the chapters of this Guide):  
+1. *[Paper selection](https://bitss.github.io/ACRE/select.html#select)*, where students select a paper and try to locate its reproduction package;  
+2. *[Scoping](https://bitss.github.io/ACRE/scoping.html#scoping)*, where students define the scope of the reproduction by recording the claims, display items, and specifications to focus on;  
+3. *[Assessment](https://bitss.github.io/ACRE/assessment.html#assessment)*, where students review and describe in detail the reproduction package, if available, and assess the current level of computational reproducibility of the selected display items;  
+4. *[Improvement](https://bitss.github.io/ACRE/improvements.html#improvements)*, where students modify the content and/or the organization of the reproduction package to improve its reproducibility; and  
 5. *[Robustness](https://bitss.github.io/ACRE/robust.html#robust)*, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.
 
 This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.
@@ -55,75 +56,93 @@ To curate a list of target papers in *economics*, instructors can consult recent
  
 To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The *Scoping* and *Assessment* stages will take approximately the same amount of time across timelines, but will depend on the students’ prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.
 
+```{r stages-dis1, out.width = '100%', echo=FALSE, eval=FALSE}
+# Ask a URAP TO REPRODUCE HTML TABLE BELOW USING KABLE
+stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
+                            Scope    = c("10%", "5%", "5%"),
+                            Assess   = c("35%", "25%", "20%"),
+                            Improve  = c("25%", "40%", "50%"),
+                            Robust   = c("30%", "30%", "25%") )
+stages_info %>%
+    knitr::kable(caption = "Suggested Relative Level of Effort by Type of exercise") %>%
+    kable_styling(full_width = TRUE)
+```
 **Table 1: Workload distribution across reproduction stages across different timelines**
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 <table class="tg">
-<tbody>
-<tr>
-<th class="tg-0pky">&nbsp;</th>
-<th class="tg-c3ow" colspan="2">2 weeks <br />(~10 days)</th>
-<th class="tg-c3ow" colspan="2">1 month <br />(~20 days)</th>
-<th class="tg-c3ow" colspan="2">1 semester <br />(~100 days)</th>
-</tr>
-<tr>
-<td class="tg-0pky">&nbsp;</td>
-<td class="tg-0pky">analysis data</td>
-<td class="tg-0pky">raw data</td>
-<td class="tg-0pky">analysis data</td>
-<td class="tg-0pky">raw data</td>
-<td class="tg-0pky">analysis data</td>
-<td class="tg-0pky">raw data</td>
-</tr>
-<tr>
-<td class="tg-0pky">Scoping</td>
-<td class="tg-c3ow" colspan="2">10% (1 day)</td>
-<td class="tg-c3ow" colspan="2">5% (1 day)</td>
-<td class="tg-c3ow" colspan="2">5% (5 days)</td>
-</tr>
-<tr>
-<td class="tg-0pky">Assessment</td>
-<td class="tg-c3ow" colspan="2">35%</td>
-<td class="tg-c3ow" colspan="2">25%</td>
-<td class="tg-c3ow" colspan="2">15%</td>
-</tr>
-<tr>
-<td class="tg-0pky">Improvement</td>
-<td class="tg-c3ow">25%</td>
-<td class="tg-c3ow">0%</td>
-<td class="tg-c3ow" colspan="2">40%</td>
-<td class="tg-c3ow">25%</td>
-<td class="tg-c3ow">35%</td>
-</tr>
-<tr>
-<td class="tg-0pky">Robustness</td>
-<td class="tg-c3ow">25%</td>
-<td class="tg-c3ow">5%</td>
-<td class="tg-c3ow" colspan="2">30%</td>
-<td class="tg-c3ow" colspan="2">25%</td>
-</tr>
-</tbody>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-c3ow" colspan="2">2 weeks <br> (~10 days)</th>
+    <th class="tg-c3ow" colspan="2">1 month <br> (~20 days)</th>
+    <th class="tg-c3ow" colspan="2">1 semester <br> (~100 days)</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+    <td class="tg-0pky">analysis data</td>
+    <td class="tg-0pky">raw data</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Scoping</td>
+    <td class="tg-c3ow" colspan="2">10% (1 day)</td>
+    <td class="tg-c3ow" colspan="2">5% (1 day)</td>
+    <td class="tg-c3ow" colspan="2">5% (5 days)</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Assessment</td>
+    <td class="tg-c3ow" colspan="2">35%</td>
+    <td class="tg-c3ow" colspan="2">25%</td>
+    <td class="tg-c3ow" colspan="2">15%</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Improvement</td>
+    <td class="tg-c3ow">25%</td>
+    <td class="tg-c3ow">0%</td>
+    <td class="tg-c3ow" colspan="2">40%</td>
+    <td class="tg-c3ow">30%</td>
+    <td class="tg-c3ow">20%</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Robustness</td>
+    <td class="tg-c3ow">25%</td>
+    <td class="tg-c3ow">5%</td>
+    <td class="tg-c3ow" colspan="2">30%</td>
+    <td class="tg-c3ow" colspan="2">30%</td>
+  </tr>
 </table>
-
-
 ## Grading strategy 
 
 Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students’ work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don’t contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.
 
-We suggest the following grading categories:
-* **Submission:** Full credit for timely submitted, non-blank submissions.
-* **All key fields:** Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.
-* **Paper summary:** Full credit for submitting a short summary of the paper that answers [these questions](https://bitss.github.io/ACRE/scoping.html#read-sum).
-* **Claims:** Full credit for presenting an accurate and clear summary of the paper’s main claims (see guidance [here](https://bitss.github.io/ACRE/scoping.html#scoping)). To properly score this section, the instructor needs to have previous knowledge of the paper.
-* **Assessment:** There are two kinds of contributions students can make to obtain full credit:
-  + Assess *multiple claims*. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in “All key fields” give 50% of the credit for assessing a second claim, 30% for a third, and 20% for a fourth).
-  + Conduct a *thorough assessment of a single claim*. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).
-* **Improvement:** Students can obtain full credit through two types of contributions:
-  + Implement improvements of reproducibility of *multiple claims* with a similar credit structure as for the assessment of multiple claims (see point above).
-  + Implement *thorough improvements of a single claim*. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see [this section](https://bitss.github.io/ACRE/improvements.html#doc-impr) for suggestions on how to do this).
-* **Future suggestions for improvement:** Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.
-* **Revised reproduction package:** Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.
-* **Robustness:** Students can obtain full credit for one of two  strategies (or a combination of them):
-  + Identify a large number of original analytical choices in the code files. The definition of “large” is up to the Instructor, but we suggest at least 20 original analytical choices (see [this section](https://bitss.github.io/ACRE/robust.html#robust) for a distinction between original and non-original analytical choices).
-  + Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.
+We suggest the following grading categories:  
+
+* **Submission:** Full credit for timely submitted, non-blank submissions.  
+* **All key fields:** Full credit for filling out details such as paper information, reproduction package links, claims summary for at least one claim, table with claims estimates, inputs description, display item assessments (particularly the subjective assessment section), and assessment of paper-level reproducibility.  
+* **Paper summary:** Full credit for submitting a short summary of the paper that answers [these questions](https://bitss.github.io/ACRE/scoping.html#read-sum).  
+* **Claims:** Full credit for presenting an accurate and clear summary of the paper’s main claims (see guidance [here](https://bitss.github.io/ACRE/scoping.html#scoping)). To properly score this section, the instructor needs to have previous knowledge of the paper.  
+* **Assessment:** There are two kinds of contributions students can make to obtain full credit:  
+  + Assess *multiple claims*. Additional credit per each assessment could be assigned at a decreasing rate (e.g., in addition to the first assessment scored in “All key fields” give 50% of the credit for assessing a second claim, 30% for a third, and 20% for a fourth).  
+  + Conduct a *thorough assessment of a single claim*. This can be done by clearly identifying all of the inputs (data sources, analysis data, and code scripts) and providing detailed documentation of the reproduction attempt (e.g., duration of execution, errors detected, specific missing files, details about the required computational environment).  
+* **Improvement:** Students can obtain full credit through two types of contributions:  
+  + Implement improvements of reproducibility of *multiple claims* with a similar credit structure as for the assessment of multiple claims (see point above).  
+  + Implement *thorough improvements of a single claim*. The Improvements chapter describes several types of possible improvements. A key requirement is that students clearly document their improvements (see [this section](https://bitss.github.io/ACRE/improvements.html#doc-impr) for suggestions on how to do this).  
+* **Future suggestions for improvement:** Instructors can also assign credit for specific suggestions for improvements recorded for future reproducers to attempt. Full credit should be assigned when the recommendations are concrete, feasible, and demonstrate that the student performed an in-depth review of the code and data.  
+* **Revised reproduction package:** Full credit for students who post a revised reproduction package in a trusted repository. Instructors can verify its existence by clicking on the link provided on the reproduction summary page. If the student used version control software as part of the revised reproduction package, the instructor can easily verify the modifications relative to the original reproduction package by checking the commits history.  
+* **Robustness:** Students can obtain full credit for one of two  strategies (or a combination of them):  
+  + Identify a large number of original analytical choices in the code files. The definition of “large” is up to the Instructor, but we suggest at least 20 original analytical choices (see [this section](https://bitss.github.io/ACRE/robust.html#robust) for a distinction between original and non-original analytical choices).  
+  + Conduct a robustness test by modifying one or more analytical choices identified in the paper. Full credit is assigned for a clear and accurate discussion of the results and their reasonableness.  
 
 
 |                                       | Score <br>  (example) | Weights <br>  (suggested)  |
