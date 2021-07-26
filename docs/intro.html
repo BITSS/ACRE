@@ -6,20 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Introduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Introduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
-  
+
+
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Introduction | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
-  
+
   <meta name="twitter:description" content="Materials to support the reproduction of published research in social sciences" />
-  
+
 
 <meta name="author" content="ACRE Team" />
 
@@ -29,11 +29,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
+
+
 <link rel="prev" href="index.html"/>
 <link rel="next" href="select.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,14 +51,16 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -117,6 +119,29 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -290,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We recommend using this Guide in conjunction with the <a href="https://www.socialsciencereproduction.org/"><strong>Social Science Reproduction Platform</strong></a> (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is primarily intended for reproductions in economics, it may be used in other social science disciplines, and we welcome contributions that aim to “translate” any of its parts to other social science disciplines (learn how you can contribute <a href="https://bitss.github.io/ACRE/contributions.html">here</a>). Find definitions of fundamental concepts in reproducibility and the process of conducting reproductions in the <a href="https://bitss.github.io/ACRE/definitions.html">Glossary</a> chapter.</p>
 <p>This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences <a href="https://bitss.org">(BITSS)</a>—an initiative of the Center for Effective Global Action <a href="https://cega.berkeley.edu/">(CEGA)</a>—and <a href="https://www.vilhuber.com/lars/">Dr. Lars Vilhuber</a>, Data Editor for the journals of the American Economic Association (AEA). This project is supported by <a href="https://www.arnoldventures.org/">Arnold Ventures</a>.</p>
 <p><a href="https://bitss.github.io/WEAI2020_slides/">View slides used for the presentation “How to Teach Reproducibility in Classwork”</a></p>
-<!-- 
+<!--
 add clarebout principle and discuss effect on a more inclusive scientific community
 -->
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
@@ -298,7 +323,7 @@ add clarebout principle and discuss effect on a more inclusive scientific commun
 <p>Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper as “(ir-)reproducible.” We suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.</p>
 <p>First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
-<img src="paper-claims.png" alt="One paper has multiple components to reproduce. &lt;br&gt; DI: Display Item, S: Specification " width="100%" />
+<img src="images/paper-claims.png" alt="One paper has multiple components to reproduce. &lt;br&gt; DI: Display Item, S: Specification " width="100%" />
 <p class="caption">
 Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification
 </p>
@@ -329,7 +354,7 @@ Figure 0.2: Four stages of a reproduction attempt
 <p>The order of the stages may not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the paper’s reproducibility level. The only stage that should go first, and cannot be edited once finished, is the Scoping stage.</p>
 <p>Different stages in the reproduction process correspond to different units of analysis (see Figure <a href="intro.html#fig:stages-unit">0.3</a> for an overview). E.g., the Scoping stage will focus on scientific <em>claims</em> selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.</p>
 <div class="figure"><span id="fig:stages-unit"></span>
-<img src="unit-of-analysis.png" alt="Relevant unit of analysis at each stage of a reproduction attempt" width="100%" />
+<img src="images/unit-of-analysis.png" alt="Relevant unit of analysis at each stage of a reproduction attempt" width="100%" />
 <p class="caption">
 Figure 0.3: Relevant unit of analysis at each stage of a reproduction attempt
 </p>
@@ -339,6 +364,24 @@ Figure 0.3: Relevant unit of analysis at each stage of a reproduction attempt
 <h2>Reproduction strategies</h2>
 <p>In most cases, you will begin a reproduction with a thorough reading of your paper of interest. However, the sequence of the steps you take in the remainder of the reproduction may follow various <em>reproduction strategies</em>. The most obvious strategy would be to follow the order of the steps as outlined above. You may also first choose one of the paper’s many claims and then focus on assessing and improving the reproduction package accordingly. Using an alternative strategy, you might identify potential robustness checks or extensions while reading the paper and then focus only on the results associated with that robustness check. In another strategy, you may identify a paper that uses a particular dataset in which you are interested and then only reproduce or conduct robustness checks for the results associated with that dataset. The various uses of reproduction make the number of potential reproduction strategies potentially infinite, so it helps identify the goal of the reproduction from the start.</p>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-chang2015economics" class="csl-entry">
+Chang, Andrew, and Phillip Li. 2015. <span>“Is Economics Research Replicable? Sixty Published Papers from Thirteen Journals Say’usually Not’.”</span> <em>Available at SSRN 2669564</em>.
+</div>
+<div id="ref-galiani2018make" class="csl-entry">
+Galiani, S, P Gertler, and M Romero. 2018. <span>“How to Make Replication the Norm.”</span> <em>Nature</em> 554 (7693): 417–19.
+</div>
+<div id="ref-King95" class="csl-entry">
+King, Gary. 1995. <span>“Replication, Replication.”</span> <em>PS: Political Science and Politics</em> 28: 444–52.
+</div>
+<div id="ref-kingi2018reproducibility" class="csl-entry">
+Kingi, Hautahi, Lars Vilhuber, Sylverie Herbert, and Flavio Stanchi. 2018. <span>“The Reproducibility of Economics Research: A Case Study.”</span> In. Presented at the BITSS Annual Meeting 2018; available at the Open Science ….
+</div>
+<div id="ref-national2019reproducibility" class="csl-entry">
+National Academies of Sciences. 2019. <em>Reproducibility and Replicability in Science</em>. National Academies Press. <a href="https://pubmed.ncbi.nlm.nih.gov/31596559/">https://pubmed.ncbi.nlm.nih.gov/31596559/</a>.
 </div>
 </div>
             </section>
@@ -370,6 +413,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

@@ -4,13 +4,14 @@
 %
 \documentclass[
 ]{book}
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
+\usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -81,7 +82,7 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -136,7 +137,7 @@
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{\href{https://www.bitss.org/}{\includegraphics{BITSS_logo_horizontal.png}}}
+\subtitle{\href{https://www.bitss.org/}{\includegraphics{images/BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
 \date{2021-07-23}
 
@@ -244,7 +245,7 @@ Assessments of reproducibility can easily gravitate towards binary judgments tha
 First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure \ref{fig:diagram} illustrates this idea.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{paper-claims} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification }\label{fig:diagram}
+\includegraphics[width=1\linewidth]{images/paper-claims} \caption{One paper has multiple components to reproduce. <br> DI: Display Item, S: Specification }\label{fig:diagram}
 \end{figure}
 
 Second, for any given specification, there are several reproducibility levels, ranging from the absence of any materials to complete reproducibility starting from raw data. Moreover, even for a specific claim-specification combination, distinguishing the appropriate level can be far more constructive than simply labeling it as (ir-)reproducible.
@@ -284,7 +285,7 @@ The order of the stages may not be chronologically linear. For example, you may 
 Different stages in the reproduction process correspond to different units of analysis (see Figure \ref{fig:stages-unit} for an overview). E.g., the Scoping stage will focus on scientific \emph{claims} selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{unit-of-analysis} \caption{Relevant unit of analysis at each stage of a reproduction attempt}\label{fig:stages-unit}
+\includegraphics[width=1\linewidth]{images/unit-of-analysis} \caption{Relevant unit of analysis at each stage of a reproduction attempt}\label{fig:stages-unit}
 \end{figure}
 
 \hypertarget{reproduction-strategies}{%
@@ -349,7 +350,7 @@ If the SSRP database contains previous reproduction attempts of the paper, you w
 If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the SSRP database following the example above.
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{candidate-to-declared-paper} \caption{Decision tree to move from candidate to declared paper}\label{fig:candidate-paper-dec-tree}
+\includegraphics[width=0.8\linewidth]{images/candidate-to-declared-paper} \caption{Decision tree to move from candidate to declared paper}\label{fig:candidate-paper-dec-tree}
 \end{figure}
 
 \hypertarget{identify-timeline}{%
@@ -838,8 +839,8 @@ L9: All raw data + CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -
 \hline
 L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
-\multicolumn{11}{l}{\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
-\multicolumn{11}{l}{\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
 \end{tabular}
 \end{table}
 
@@ -920,8 +921,8 @@ L9*: L8* + Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & 
 \hline
 L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
-\multicolumn{11}{l}{\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
-\multicolumn{11}{l}{\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
 \end{tabular}
 \end{table}
 
@@ -1091,7 +1092,7 @@ Once you have assessed and potentially improved the computational reproducibilit
 \textbf{Reasonable robustness checks} (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of \textbf{feasible robustness checks} is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{robustness_lvl1} \includegraphics[width=0.5\linewidth]{robustness_lvl2_4} \includegraphics[width=0.5\linewidth]{robustness_lvl5-9} \includegraphics[width=0.5\linewidth]{robustness_lvl10} \caption{Universe of robustness tests and its elements}\label{fig:robusts}
+\includegraphics[width=0.5\linewidth]{images/robustness_lvl1} \includegraphics[width=0.5\linewidth]{images/robustness_lvl2_4} \includegraphics[width=0.5\linewidth]{images/robustness_lvl5-9} \includegraphics[width=0.5\linewidth]{images/robustness_lvl10} \caption{Universe of robustness tests and its elements}\label{fig:robusts}
 \end{figure}
 
 The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure \ref{fig:robusts}. At Levels 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in \emph{Scoping} (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve variable definitions and other types of analytical choices.
@@ -1169,22 +1170,85 @@ To record a specific analytical choice on the SSRP, please follow these steps:
   Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the \texttt{source} field, type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{line\ number} each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{103}). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{like this}:
 \end{enumerate}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.06}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.09}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.09}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.15}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.23}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.22}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.15}}@{}}
+\begin{longtable}[]{@{}lllllll@{}}
 \toprule
-entry\_id & file\_name & line\_number & choice\_type & choice\_value & choice\_range & Source \\
+\begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+entry\_id\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+file\_name\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+line\_number\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+choice\_type\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+choice\_value\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+choice\_range\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+Source\strut
+\end{minipage}\tabularnewline
 \midrule
 \endhead
-1 & code\_01.do & 73 & data sub-setting & males & males, female, & original \\
-2 & code\_01.do & 122 & variable definition & income = wages + capital gains & wages, capital gains, gifts & ``code\_01.do-L103'' \\
-3 & code\_05.R & 143 & controls & age, income, education & age, income, education, region & original \\
-\ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} \\
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_01.do\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+73\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+data sub-setting\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+males\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+males, female,\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+original\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_01.do\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+122\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+variable definition\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+income = wages + capital gains\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+wages, capital gains, gifts\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+``code\_01.do-L103''\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_05.R\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+143\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+controls\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+age, income, education\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+age, income, education, region\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+original\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+\ldots{}\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1460,19 +1524,19 @@ We suggest the following grading categories:
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-& Score (example) & Weights (suggested) \\
+& Score (example) & Weights (suggested)\tabularnewline
 \midrule
 \endhead
-Submitted & 100 & 40\% \\
-All important fields & 80 & 10\% \\
-Summary & 100 & 5\% \\
-Clear claims & 90 & 5\% \\
-Assessment & 100 & 10\% \\
-Improvements & 50 & 10\% \\
-Revise reproduction package & 100 & 5\% \\
-Specific suggestions for improvements & 0 & 5\% \\
-Robustness & 100 & 10\% \\
-Final Score & 87.5 & \\
+Submitted & 100 & 40\%\tabularnewline
+All important fields & 80 & 10\%\tabularnewline
+Summary & 100 & 5\%\tabularnewline
+Clear claims & 90 & 5\%\tabularnewline
+Assessment & 100 & 10\%\tabularnewline
+Improvements & 50 & 10\%\tabularnewline
+Revise reproduction package & 100 & 5\%\tabularnewline
+Specific suggestions for improvements & 0 & 5\%\tabularnewline
+Robustness & 100 & 10\%\tabularnewline
+Final Score & 87.5 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1985,16 +2049,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
                 |          └───[code] data_cleaning01.R
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
-                              └───[data] admin_01raw.csv  
+                              └───[data] admin_01raw.csv
 \end{verbatim}
 
 \hypertarget{incomplete-reproduction-tree}{%
@@ -2008,16 +2072,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
 
-           Unused files: 
+           Unused files:
            - survey_01raw.csv
-           - admin_01raw.csv  
+           - admin_01raw.csv
 \end{verbatim}
 
 Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in \texttt{survey\_01raw.csv} and \texttt{admin\_01raw.csv}, and eventually output \texttt{analysis\_data01.csv} and \texttt{analysis\_data02.csv}, though this requires the reproducer's discretion.
@@ -2025,16 +2089,16 @@ Reproducers are asked to speculate on where the missing files might go, and henc
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt  
-                |   └───[code] output_table1.do           
+                ├───output1_part1.txt
+                |   └───[code] output_table1.do
                 |       └───[data] analysis_data01.csv
                 |          └───[code] MISSING FILE(S)
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt  
-                    └───[code] output_table2.do           
+                └───output1_part2.txt
+                    └───[code] output_table2.do
                         └───[data] analysis_data02.csv
                            └───[code] MISSING FILE(S)
-                              └───[data] admin_01raw.csv  
+                              └───[data] admin_01raw.csv
 \end{verbatim}
 
 \hypertarget{unused-data-sources}{%
@@ -2102,7 +2166,7 @@ This reproduction diagram fragment likely shows a missing piece of code. In a co
 
         Unusued data sources:
         cps2018.dta
-        cps_march2017.dta  
+        cps_march2017.dta
 \end{verbatim}
 
 \hypertarget{long-complicated-tree.}{%
@@ -4818,7 +4882,7 @@ In this case, you can still manually combine this partial information with your 
                         |               └──MISSSING_CODE_FILE_2
                         |                   └──cleaned_3.dta
                         |                   |       └──[code] clean_raw_3.py
-                        |                   |           └──raw_3.dta    
+                        |                   |           └──raw_3.dta
                         |                   └──cleaned_4.dta
                         |                           └──[code] clean_raw_4.py
                         |                               └──raw_4.dta
@@ -4829,7 +4893,7 @@ In this case, you can still manually combine this partial information with your 
                                             └──cleaned_1.dta
                                             |       └──[code] clean_raw_1.py
                                             |           └──raw_1.dta
-                                            |   
+                                            |
                                             └──cleaned_2.dta
                                                     └──[code] clean_raw_2.py
                                                         └──raw_2.dta
