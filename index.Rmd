@@ -48,8 +48,7 @@ A beta version of the [**Social Science Reproduction Platform**](https://www.soc
 
 ```{r out.width = '100%', echo=FALSE}
 # url
-# BUG: cannot build book to PDF if svg is in images folder
-knitr::include_graphics("stages.svg") 
+knitr::include_graphics("images/stages.svg") 
 ```
 
 

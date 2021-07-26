@@ -139,7 +139,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{images/BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-07-23}
+\date{2021-07-26}
 
 \begin{document}
 \maketitle
@@ -156,7 +156,7 @@
 
 A beta version of the \href{https://www.socialsciencereproduction.org/}{\textbf{Social Science Reproduction Platform}} is now available! \href{https://forms.gle/yZivWcwijCzEhrBU6}{\textbf{Sign up here}} if you would like to be part of our beta testing.
 
-\includegraphics[width=1\linewidth]{stages}
+\includegraphics[width=1\linewidth]{images/stages}
 
 \protect\hyperlink{select}{(0) Select}
 
@@ -277,7 +277,7 @@ Reproductions can be divided into five stages, corresponding to the first five c
 This Guide does not include a possible fifth stage of \textbf{extension}, where you may extend the current paper by including new methodologies or data, which would bring the exercise closer to \emph{replication}.
 
 \begin{figure}
-\includegraphics[width=1\linewidth]{stages} \caption{Four stages of a reproduction attempt}\label{fig:stages-intro}
+\includegraphics[width=1\linewidth]{images/stages} \caption{Four stages of a reproduction attempt}\label{fig:stages-intro}
 \end{figure}
 
 The order of the stages may not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the paper's reproducibility level. The only stage that should go first, and cannot be edited once finished, is the Scoping stage.
@@ -2049,16 +2049,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt
-                |   └───[code] output_table1.do
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
                 |       └───[data] analysis_data01.csv
                 |          └───[code] data_cleaning01.R
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt
-                    └───[code] output_table2.do
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
                         └───[data] analysis_data02.csv
                            └───[code] data_cleaning02.R
-                              └───[data] admin_01raw.csv
+                              └───[data] admin_01raw.csv  
 \end{verbatim}
 
 \hypertarget{incomplete-reproduction-tree}{%
@@ -2072,16 +2072,16 @@ Below is an example of output from the \protect\hyperlink{diagram}{Reproducibili
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt
-                |   └───[code] output_table1.do
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
                 |       └───[data] analysis_data01.csv
-                └───output1_part2.txt
-                    └───[code] output_table2.do
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
                         └───[data] analysis_data02.csv
 
-           Unused files:
+           Unused files: 
            - survey_01raw.csv
-           - admin_01raw.csv
+           - admin_01raw.csv  
 \end{verbatim}
 
 Reproducers are asked to speculate on where the missing files might go, and hence propose how a complete tree might look like (where possible). For this example, we have assumed there are missing code scripts that at some point take in \texttt{survey\_01raw.csv} and \texttt{admin\_01raw.csv}, and eventually output \texttt{analysis\_data01.csv} and \texttt{analysis\_data02.csv}, though this requires the reproducer's discretion.
@@ -2089,16 +2089,16 @@ Reproducers are asked to speculate on where the missing files might go, and henc
 \begin{verbatim}
           table 1
             └───[code] formatting_table1.R
-                ├───output1_part1.txt
-                |   └───[code] output_table1.do
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
                 |       └───[data] analysis_data01.csv
                 |          └───[code] MISSING FILE(S)
                 |             └───[data] survey_01raw.csv
-                └───output1_part2.txt
-                    └───[code] output_table2.do
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
                         └───[data] analysis_data02.csv
                            └───[code] MISSING FILE(S)
-                              └───[data] admin_01raw.csv
+                              └───[data] admin_01raw.csv  
 \end{verbatim}
 
 \hypertarget{unused-data-sources}{%
@@ -2166,7 +2166,7 @@ This reproduction diagram fragment likely shows a missing piece of code. In a co
 
         Unusued data sources:
         cps2018.dta
-        cps_march2017.dta
+        cps_march2017.dta  
 \end{verbatim}
 
 \hypertarget{long-complicated-tree.}{%
@@ -4882,7 +4882,7 @@ In this case, you can still manually combine this partial information with your 
                         |               └──MISSSING_CODE_FILE_2
                         |                   └──cleaned_3.dta
                         |                   |       └──[code] clean_raw_3.py
-                        |                   |           └──raw_3.dta
+                        |                   |           └──raw_3.dta    
                         |                   └──cleaned_4.dta
                         |                           └──[code] clean_raw_4.py
                         |                               └──raw_4.dta
@@ -4893,7 +4893,7 @@ In this case, you can still manually combine this partial information with your 
                                             └──cleaned_1.dta
                                             |       └──[code] clean_raw_1.py
                                             |           └──raw_1.dta
-                                            |
+                                            |   
                                             └──cleaned_2.dta
                                                     └──[code] clean_raw_2.py
                                                         └──raw_2.dta
