@@ -89,5 +89,3 @@ list-of-contributors-guidelines-content-and-source-code
 suggested-citation-format
 acknowledgments
 definitions
-concepts-in-reproducibility
-concepts-in-the-acre-exercise-and-the-platform
