@@ -124,7 +124,6 @@ This Guide does not include a possible fifth stage of **extension**, where you m
 
 
 ```{r stages-intro, out.width = '100%', echo=FALSE, fig.cap="Four stages of a reproduction attempt"}
-# BUG: cannot build book to PDF if svg is in images folder
 knitr::include_graphics("images/stages.svg") 
 ``` 
 
