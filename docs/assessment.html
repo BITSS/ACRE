@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-07-26" />
+<meta name="date" content="2021-07-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -591,15 +591,6 @@ cleaning
 </tbody>
 </table>
 </div>
-<div id="common-issues-that-might-occur-when-creating-a-reproduction-tree" class="section level4" number="3.1.3.1">
-<h4><span class="header-section-number">3.1.3.1</span> Common issues that might occur when creating a reproduction tree:</h4>
-<ul>
-<li><p>If you notice that some files iterate between each other (e.g., <code>file1.do</code> calls <code>data1.csv</code> to generate <code>data2.csv</code>, and <code>file2.R</code> calls <code>data2.csv</code> to generate <code>data1.csv</code>), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.</p></li>
-<li><p>Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., <code>results1.log</code>, <code>results2.csv</code>) that will require manual copying and pasting to reproduce the desired display item (e.g. <code>Table 1</code>). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: <code>results1.log; results2.csv</code>, Outputs: <code>Table 1</code>).</p></li>
-<li><p>Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., <code>data_location1_year1, data_location2_year1, data_location1_year2, ...</code>). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., <code>data_locationX_yearY</code>).</p></li>
-<li><p>If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (<code>;</code>), that way the tree will separate each file into a separate input.</p></li>
-</ul>
-</div>
 </div>
 </div>
 <div id="diagram" class="section level2" number="3.2">
@@ -732,6 +723,15 @@ unknown
 </tbody>
 </table>
 <p>As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, <a href="examples-of-reproduction-trees.html#examples-of-reproduction-trees">see here</a>.</p>
+<div id="common-issues-that-might-occur-when-creating-a-reproduction-tree" class="section level4" number="3.2.2.1">
+<h4><span class="header-section-number">3.2.2.1</span> Common issues that might occur when creating a reproduction tree:</h4>
+<ul>
+<li><p>If you notice that some files iterate between each other (e.g., <code>file1.do</code> calls <code>data1.csv</code> to generate <code>data2.csv</code>, and <code>file2.R</code> calls <code>data2.csv</code> to generate <code>data1.csv</code>), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.</p></li>
+<li><p>Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., <code>results1.log</code>, <code>results2.csv</code>) that will require manual copying and pasting to reproduce the desired display item (e.g. <code>Table 1</code>). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: <code>results1.log; results2.csv</code>, Outputs: <code>Table 1</code>).</p></li>
+<li><p>Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., <code>data_location1_year1, data_location2_year1, data_location1_year2, ...</code>). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., <code>data_locationX_yearY</code>).</p></li>
+<li><p>If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (<code>;</code>), that way the tree will separate each file into a separate input.</p></li>
+</ul>
+</div>
 </div>
 </div>
 <div id="score" class="section level2" number="3.3">

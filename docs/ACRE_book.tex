@@ -138,7 +138,7 @@
 \makeatother
 \subtitle{\href{https://www.bitss.org/}{\includegraphics{images/BITSS_logo_horizontal.png}}}
 \author{ACRE Team}
-\date{2021-07-26}
+\date{2021-07-27}
 
 \begin{document}
 \maketitle
@@ -633,20 +633,6 @@ data\_cleaning02.R & code/cleaning & admin\_01raw.csv & analysis\_data02.csv & r
 \end{tabu}
 \end{table}
 
-\hypertarget{common-issues-that-might-occur-when-creating-a-reproduction-tree}{%
-\subsubsection{Common issues that might occur when creating a reproduction tree:}\label{common-issues-that-might-occur-when-creating-a-reproduction-tree}}
-
-\begin{itemize}
-\item
-  If you notice that some files iterate between each other (e.g., \texttt{file1.do} calls \texttt{data1.csv} to generate \texttt{data2.csv}, and \texttt{file2.R} calls \texttt{data2.csv} to generate \texttt{data1.csv}), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
-\item
-  Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., \texttt{results1.log}, \texttt{results2.csv}) that will require manual copying and pasting to reproduce the desired display item (e.g.~\texttt{Table\ 1}). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: \texttt{results1.log;\ results2.csv}, Outputs: \texttt{Table\ 1}).
-\item
-  Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., \texttt{data\_location1\_year1,\ data\_location2\_year1,\ data\_location1\_year2,\ ...}). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., \texttt{data\_locationX\_yearY}).
-\item
-  If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (\texttt{;}), that way the tree will separate each file into a separate input.
-\end{itemize}
-
 \hypertarget{diagram}{%
 \section{Connect display items to all its inputs usign the ReproducibiliTREE}\label{diagram}}
 
@@ -745,6 +731,20 @@ MISSSING\_CODE\_FILE\_1 & unknown & cleaned\_1\_2.dta & cleaned\_1\_2.dta & miss
 \end{table}
 
 As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, \protect\hyperlink{examples-of-reproduction-trees}{see here}.
+
+\hypertarget{common-issues-that-might-occur-when-creating-a-reproduction-tree}{%
+\subsubsection{Common issues that might occur when creating a reproduction tree:}\label{common-issues-that-might-occur-when-creating-a-reproduction-tree}}
+
+\begin{itemize}
+\item
+  If you notice that some files iterate between each other (e.g., \texttt{file1.do} calls \texttt{data1.csv} to generate \texttt{data2.csv}, and \texttt{file2.R} calls \texttt{data2.csv} to generate \texttt{data1.csv}), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.
+\item
+  Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., \texttt{results1.log}, \texttt{results2.csv}) that will require manual copying and pasting to reproduce the desired display item (e.g.~\texttt{Table\ 1}). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: \texttt{results1.log;\ results2.csv}, Outputs: \texttt{Table\ 1}).
+\item
+  Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., \texttt{data\_location1\_year1,\ data\_location2\_year1,\ data\_location1\_year2,\ ...}). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., \texttt{data\_locationX\_yearY}).
+\item
+  If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (\texttt{;}), that way the tree will separate each file into a separate input.
+\end{itemize}
 
 \hypertarget{score}{%
 \section{Assign a reproducibility score.}\label{score}}
@@ -4951,36 +4951,32 @@ Support for the development of this Guide was provided by \href{https://www.arno
 \item
   \textbf{Display item:} A display item is a figure or table that presents the results associated with a given research claim found in a research paper.
 \item
-  \textbf{Intermediate data:} Data not directly used as final input for analyses presented in the final paper (including appendices). Intermediate data don't contain direct identifiers.
+  \textbf{Intermediate data:} Data that has been processed in some fashion but it is not directly used as final input for analyses presented in the final paper (including appendices).
 \item
-  \textbf{Literate programming:} The practice of writing and commenting code such that it can be read and understood by a human.
+  \textbf{Literate programming:} The practice of writing and commenting code in an intertwined fashion, such that both components (code and text) can be read in narrative form.
 \item
   \textbf{Pre-specification (or pre-registration):} The act of detailing, ahead of time, the statistical analyses that will be conducted for a given research project. Expected outcomes, control variables, and regression specifications are all written in as much detail as possible. This serves to make research confirmatory in nature.
-  Researchers commonly record such details in a hypothesis or trial registry, usually while also providing a pre-analysis plan.
+  Researchers commonly record such details in a hypothesis or trial registry, usually while also providing more details in a pre-analysis plan.
 \item
-  \textbf{Processed data:} Raw data that have gone through any transformation other than removing personally identifiable information (PII).
+  \textbf{Raw data:} Unmodified data files obtained by the authors from the sources cited in the paper. Data from which only personally identifiable information (PII) have been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{intermediate}.
 \item
-  \textbf{Raw data:} Unmodified data files obtained by the authors from the sources cited in the paper. Data from which PII have been removed are \emph{still considered raw}. All other modifications to raw data make it \emph{processed}.
+  \textbf{(Trial) Registry:} A public database of registered studies or trials, e.g.~The \href{https://www.socialscienceregistry.org/}{American Economic Association's registry for randomized controlled trials}, \href{https://osf.io/prereg/}{the Open Science Framework registries}, or \href{https://www.clinicaltrials.gov/}{ClinicalTrials.gov}. Some of the largest registries only accept randomized trials, hence the frequent discussion of ``trial registries.'' \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status (see also ``Pre-specification'' above). Registrations are time-stamped.
 \item
-  \textbf{(Trial) Registry} -- A public database of registered studies or trials, e.g.~The \href{https://www.socialscienceregistry.org/}{American Economic Association's registry for randomized controlled trials}, \href{https://osf.io/prereg/}{the Open Science Framework registries}, or \href{https://www.clinicaltrials.gov/}{ClinicalTrials.gov}. Some of the largest registries only accept randomized trials, hence the frequent discussion of ``trial registries.'' \emph{Registration} is the act of publicly declaring that a hypothesis is being, has been, or will be tested, regardless of publication status (see also ``Pre-specification'' above). Registrations are time-stamped.
+  \textbf{Replication:} Conducting an existing research project again. A subtle taxonomy exists, and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to obtain the published results. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
 \item
-  \textbf{Replication} -- Conducting an existing research project again. A subtle taxonomy exists, and there is disagreement, as explained in \href{https://poseidon01.ssrn.com/delivery.php?ID=730022068104120012124069127117116094125005035067064043105083109027064120011088086109059117052062000025007012029080123125089014014006079063116014095000023071022077006017094093005117096083119073115079022110105075073085121117103030106102080005099007\&EXT=pdf}{Hamermesh, 2007} and \href{https://www.cgdev.org/sites/default/files/CGD-Working-Paper-399-Clemens-Meaning-Failed-Replications.pdf}{Clemens, 2015}. \emph{Pure Replication, Reproduction, or Verification} entails re-running existing code, with error-checking, on the original dataset to obtain the published results. \emph{Scientific Replication} entails attempting to reproduce the published results with a new sample, either with the same code or with slight variations on the original analysis.
-\item
-  \textbf{Reproducibility:} A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error (generally 10\%) using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
+  \textbf{Reproducibility:} A research paper or a specific display item (an estimate, a table, or a graph) included in a research paper is reproducible if it is possible to reproduce within a reasonable margin of error using the data, code, and materials made available by the author. Computational reproducibility is assessed through the process of \textbf{reproduction}.
 \item
   \textbf{Reproduction package:} A collection of all the materials necessary to reproduce a specific display item or an entire paper. A reproduction package may contain data, code, and other documentation. When the materials are provided in the original publication, they should be labeled as ``original reproduction package''; when a reproducer provides them, they should be referred to as ``Reproducer X's reproduction package.''
 \item
-  \textbf{Reproduction tree (or reproduction diagram):} A diagram generated at the Scoping stage on the SSRP, which links display items with the code and data files that are required to reproduce them. The tree is meant to represent the entire computational workflow behind a result from the paper. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
+  \textbf{Reproduction tree (or reproduction diagram):} A diagram generated at the Assessment stage on the SSRP, which links display items with the code and data files that are required to reproduce them. The tree is meant to represent the entire computational workflow behind a result from the paper. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.
 \item
-  \textbf{Researcher degrees of freedom:} The flexibility a researcher has in data analysis, whether consciously abused or not. This can take a number of forms, including specification searching (also referred to as ``p-hacking''), covariate adjustment, selective reporting, or hypothesizing after the results are known (HARKing).
+  \textbf{Researcher degrees of freedom:} The flexibility a researcher has in data analysis and data cleaning to, consciously or unconsciously, make certain analytical choices to obtain a desired result (most commonly to achieve statistical significance) . This can take a number of forms, including specification searching (also referred to as ``p-hacking''), covariate adjustment, selective reporting, or hypothesizing after the results are known (HARKing).
 \item
-  \textbf{Robustness check:} An change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The SSRP distinguishes between \emph{reasonable specifications} and \emph{feasible specifications}. Reasonable robustness checks (\href{https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf}{Simonsohn et. al., 2018}) are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of feasible robustness checks is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.
+  \textbf{Robustness check:} An change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The SSRP distinguishes between \emph{reasonable specifications} and \emph{feasible specifications}. Reasonable robustness checks \citep{simonsohn2019specification} are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of feasible robustness checks is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.
 \item
-  \textbf{Specification searching:} Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, resulting in false positives, thus impeding reproducibility.
+  \textbf{Specification searching:} Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, resulting in false positives.
 \item
   \textbf{Trusted digital repository:} An online repository whose mission is to provide ``reliable, long-term access to managed digital resources to its customers, now and in the future.''(see \href{https://www.oclc.org/research/archive/projects/trustedrep.html}{OCLC (2002)}). Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.
-\item
-  \textbf{Version control} -- The act of tracking every change made to a computer file. Version control is useful for empirical researchers who may edit their programming code often.
 \end{itemize}
 
   \bibliography{book.bib,packages.bib}

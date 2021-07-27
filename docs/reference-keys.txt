@@ -23,10 +23,10 @@ describe-inputs
 desc-sourc
 desc-analy
 desc-scripts
-common-issues-that-might-occur-when-creating-a-reproduction-tree
 diagram
 complete-tree
 incomplete-workflow-information
+common-issues-that-might-occur-when-creating-a-reproduction-tree
 score
 levels-of-computational-reproducibility-for-a-specific-output
 reproducibility-dimensions-at-the-paper-level
