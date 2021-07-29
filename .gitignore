@@ -37,9 +37,7 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
-# Word files
+# Word files  
 *.docx
 
 .Rproj.user
-
-.nojekyll
