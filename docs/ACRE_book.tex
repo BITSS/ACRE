@@ -4,13 +4,14 @@
 %
 \documentclass[
 ]{book}
-\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
+\usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
+  \usepackage{amssymb}
 \else % if luatex or xetex
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
@@ -81,7 +82,7 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs,array}
+\usepackage{longtable,booktabs}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -838,8 +839,8 @@ L9: All raw data + CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & -
 \hline
 L10: Reproducible from raw data & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
-\multicolumn{11}{l}{\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
-\multicolumn{11}{l}{\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
 \end{tabular}
 \end{table}
 
@@ -920,8 +921,8 @@ L9*: L8* + Proof of third party CRA & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & 
 \hline
 L10*: Proof of third party CRR & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔ & ✔\\
 \hline
-\multicolumn{11}{l}{\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
-\multicolumn{11}{l}{\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{a} **Computationally Reproducible from Analytic data (CRA):** The output can be reproduced with minimal effort starting from the *analytic* datasets.}\\
+\multicolumn{11}{l}{\rule{0pt}{1em}\textsuperscript{b} **Computationally Reproducible from Raw data (CRR):** The output can be reproduced with minimal effort from the *raw* datasets.}\\
 \end{tabular}
 \end{table}
 
@@ -1169,22 +1170,85 @@ To record a specific analytical choice on the SSRP, please follow these steps:
   Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the \texttt{source} field, type \emph{``original''} whenever the analytical choice is identified for the first time, and \texttt{line\ number} each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line \#103 and for the second time in line \#122 their respective values for the \texttt{source} field should be \texttt{original} and \texttt{103}). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look \href{https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing}{like this}:
 \end{enumerate}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.06}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.09}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.09}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.15}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.23}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.22}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.15}}@{}}
+\begin{longtable}[]{@{}lllllll@{}}
 \toprule
-entry\_id & file\_name & line\_number & choice\_type & choice\_value & choice\_range & Source \\
+\begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+entry\_id\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+file\_name\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+line\_number\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+choice\_type\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+choice\_value\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+choice\_range\strut
+\end{minipage} & \begin{minipage}[b]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+Source\strut
+\end{minipage}\tabularnewline
 \midrule
 \endhead
-1 & code\_01.do & 73 & data sub-setting & males & males, female, & original \\
-2 & code\_01.do & 122 & variable definition & income = wages + capital gains & wages, capital gains, gifts & ``code\_01.do-L103'' \\
-3 & code\_05.R & 143 & controls & age, income, education & age, income, education, region & original \\
-\ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} & \ldots{} \\
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+1\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_01.do\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+73\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+data sub-setting\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+males\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+males, female,\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+original\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+2\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_01.do\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+122\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+variable definition\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+income = wages + capital gains\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+wages, capital gains, gifts\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+``code\_01.do-L103''\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+3\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+code\_05.R\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+143\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+controls\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+age, income, education\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+age, income, education, region\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+original\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.06}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.09}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.23}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.22}}\raggedright
+\ldots{}\strut
+\end{minipage} & \begin{minipage}[t]{(\columnwidth - 6\tabcolsep) * \real{0.15}}\raggedright
+\ldots{}\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1460,19 +1524,19 @@ We suggest the following grading categories:
 
 \begin{longtable}[]{@{}lcc@{}}
 \toprule
-& Score (example) & Weights (suggested) \\
+& Score (example) & Weights (suggested)\tabularnewline
 \midrule
 \endhead
-Submitted & 100 & 40\% \\
-All important fields & 80 & 10\% \\
-Summary & 100 & 5\% \\
-Clear claims & 90 & 5\% \\
-Assessment & 100 & 10\% \\
-Improvements & 50 & 10\% \\
-Revise reproduction package & 100 & 5\% \\
-Specific suggestions for improvements & 0 & 5\% \\
-Robustness & 100 & 10\% \\
-Final Score & 87.5 & \\
+Submitted & 100 & 40\%\tabularnewline
+All important fields & 80 & 10\%\tabularnewline
+Summary & 100 & 5\%\tabularnewline
+Clear claims & 90 & 5\%\tabularnewline
+Assessment & 100 & 10\%\tabularnewline
+Improvements & 50 & 10\%\tabularnewline
+Revise reproduction package & 100 & 5\%\tabularnewline
+Specific suggestions for improvements & 0 & 5\%\tabularnewline
+Robustness & 100 & 10\%\tabularnewline
+Final Score & 87.5 &\tabularnewline
 \bottomrule
 \end{longtable}
 
