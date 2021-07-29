@@ -21,10 +21,10 @@ Once you have assessed and potentially improved the computational reproducibilit
 ```{r robusts, eval=TRUE, echo=FALSE, fig.cap="Universe of robustness tests and its elements", fig.show = "hold", out.width = "50%"}
 #Bug1: help to get this to run within the code chunk
 #Bug2: cannot call .svg and get pdf (latex) to run
-knitr::include_graphics("images/robustness_lvl1.png")
-knitr::include_graphics("images/robustness_lvl2_4.png")
-knitr::include_graphics("images/robustness_lvl5-9.png")
-knitr::include_graphics("images/robustness_lvl10.png")
+knitr::include_graphics("robustness_lvl1.png")
+knitr::include_graphics("robustness_lvl2_4.png")
+knitr::include_graphics("robustness_lvl5-9.png")
+knitr::include_graphics("robustness_lvl10.png")
 ```
 
 
