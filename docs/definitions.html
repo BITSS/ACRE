@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Definitions | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Definitions | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
@@ -51,16 +51,14 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -119,29 +117,6 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -338,17 +313,11 @@ Researchers commonly record such details in a hypothesis or trial registry, usua
 <li><p><strong>Reproduction package:</strong> A collection of all the materials necessary to reproduce a specific display item or an entire paper. A reproduction package may contain data, code, and other documentation. When the materials are provided in the original publication, they should be labeled as “original reproduction package”; when a reproducer provides them, they should be referred to as “Reproducer X’s reproduction package.”</p></li>
 <li><p><strong>Reproduction tree (or reproduction diagram):</strong> A diagram generated at the Assessment stage on the SSRP, which links display items with the code and data files that are required to reproduce them. The tree is meant to represent the entire computational workflow behind a result from the paper. It can also be used to guide users of the reproduction package and/or to identify missing components for a complete reproduction.</p></li>
 <li><p><strong>Researcher degrees of freedom:</strong> The flexibility a researcher has in data analysis and data cleaning to, consciously or unconsciously, make certain analytical choices to obtain a desired result (most commonly to achieve statistical significance) . This can take a number of forms, including specification searching (also referred to as “p-hacking”), covariate adjustment, selective reporting, or hypothesizing after the results are known (HARKing).</p></li>
-<li><p><strong>Robustness check:</strong> An change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The SSRP distinguishes between <em>reasonable specifications</em> and <em>feasible specifications</em>. Reasonable robustness checks <span class="citation">(<a href="#ref-simonsohn2019specification" role="doc-biblioref">Simonsohn, Simmons, and Nelson 2019</a>)</span> are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of feasible robustness checks is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.</p></li>
+<li><p><strong>Robustness check:</strong> An change in a computational choice, both in data analysis and data cleaning, and its subsequent effect on the main estimates of interest. The SSRP distinguishes between <em>reasonable specifications</em> and <em>feasible specifications</em>. Reasonable robustness checks <span class="citation">(<a href="references.html#ref-simonsohn2019specification" role="doc-biblioref">Simonsohn, Simmons, and Nelson 2019</a>)</span> are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of feasible robustness checks is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.</p></li>
 <li><p><strong>Specification searching:</strong> Searching blindly or repeatedly through data to find statistically significant relationships. While not necessarily inherently wrong, if done without a plan or without adjusting for multiple hypothesis testing, test statistics and results no longer hold their traditional meaning, resulting in false positives.</p></li>
 <li><p><strong>Trusted digital repository:</strong> An online repository whose mission is to provide “reliable, long-term access to managed digital resources to its customers, now and in the future.”(see <a href="https://www.oclc.org/research/archive/projects/trustedrep.html">OCLC (2002)</a>). Storing data here is superior to simply posting on a personal website since it is more easily accessed, less easily altered, and more permanent.</p></li>
 </ul>
 
-</div>
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-simonsohn2019specification" class="csl-entry">
-Simonsohn, Uri, Joseph P Simmons, and Leif D Nelson. 2019. <span>“Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications.”</span> <em>Available at SSRN 2694998</em>.
-</div>
 </div>
             </section>
 
@@ -379,7 +348,6 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
