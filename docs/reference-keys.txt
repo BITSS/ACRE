@@ -89,5 +89,3 @@ list-of-contributors-guidelines-content-and-source-code
 suggested-citation-format
 acknowledgments
 definitions
-reporting-results
-test-the-robustness-of-results
