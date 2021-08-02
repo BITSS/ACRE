@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-07-29" />
+<meta name="date" content="2021-08-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -51,7 +51,8 @@
 
 
 
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -119,6 +120,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -185,7 +187,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
-<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#reporting-results"><i class="fa fa-check"></i><b>4.1.7</b> Reporting results</a></li>
+<li class="chapter" data-level="4.1.8" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.8</b> Adding information on how to access confidential/proprietary data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 <li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements using version control</a></li>
@@ -194,6 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="5.1" data-path="robust.html"><a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications"><i class="fa fa-check"></i><b>5.1</b> Feasible robustness checks: increasing the number of feasible specifications</a></li>
 <li class="chapter" data-level="5.2" data-path="robust.html"><a href="robust.html#justifying-and-testing-reasonable-robustness-checks"><i class="fa fa-check"></i><b>5.2</b> Justifying and testing reasonable robustness checks</a></li>
+<li class="chapter" data-level="5.3" data-path="robust.html"><a href="robust.html#test-the-robustness-of-results"><i class="fa fa-check"></i><b>5.3</b> Test the robustness of results</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="concluding-the-reproduction.html"><a href="concluding-the-reproduction.html"><i class="fa fa-check"></i><b>6</b> Concluding the Reproduction</a>
 <ul>
@@ -550,9 +554,9 @@ Robustness
 <p>The SSRP allows users to select from three distinct privacy models when submitting their work, including <em>public-identified</em>, <em>temporary anonymous</em>, and <em>class anonymous</em> (explained in more detail <a href="https://bitss.github.io/ACRE/concluding-the-reproduction.html#visibility-and-data-use">here</a>). This section includes specific guidance for instructors facilitating reproductions that will be published using the <em>class anonymous</em> privacy model, which allows users to conceal their identities and free-form narrative answers (e.g., notes, descriptions, summaries, explanations) indefinitely. Instead, reproductions published under the class anonymous model contain only categorical responses and basic class identifiers, including course name, year, institution, instructor’s name, and instructor’s email address.</p>
 <p>Reproducers looking to publish under the <em>class anonymous</em> model will be unable to maintain their anonymity if they share their revised reproduction packages as part of their reproductions. This is because trusted data repositories and GitHub require users to create accounts in order to post their content and keep records of updates. We advise instructors to create generic repositories for their class (e.g., “Reproductions for Econ 270 - Fall 2021”) and deposit each anonymous reproduction in self-contained folders.</p>
 <p>For example, suppose a class has two students who choose the anonymous option. In that case, they should share (privately) their revised reproduction package with their instructor, and the instructor should post them using the following structure:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-1" aria-hidden="true" tabindex="-1"></a>  Reproductions for <span class="co">[</span><span class="ot">Course Name, Semester</span><span class="co">]</span></span>
-<span id="cb6-2"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-2" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Smith et al. (2019)</span>
-<span id="cb6-3"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb6-3" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Perez et al. (2019)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb1-1"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb1-1" aria-hidden="true" tabindex="-1"></a>  Reproductions for <span class="co">[</span><span class="ot">Course Name, Semester</span><span class="co">]</span></span>
+<span id="cb1-2"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb1-2" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Smith et al. (2019)</span>
+<span id="cb1-3"><a href="guidance-for-instructors-supervising-reproduction-assignments.html#cb1-3" aria-hidden="true" tabindex="-1"></a>    └── Revised reproduction package for Perez et al. (2019)</span></code></pre></div>
 <p><strong>Note:</strong> When anonymizing revised reproduction packages, we advise that instructors and students avoid using version control software. Even if the current materials are correctly de-identified, the version history may still contain identifiers, such as GitHub usernames.</p>
 
 </div>
@@ -586,6 +590,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {

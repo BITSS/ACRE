@@ -1,6 +1,6 @@
 # Guidance for Instructors Supervising Reproduction Assignments
 
-The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:  
+The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an openly-licensed platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:  
 
 - Assessing and improving the reproducibility of published work  
 - Applying good coding and data management practices  
