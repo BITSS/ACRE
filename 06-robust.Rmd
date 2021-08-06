@@ -7,7 +7,7 @@ output:
 library(tidyverse)
 library(knitr)
 library(kableExtra)
-temp_eval <- FALSE
+temp_eval <- TRUE
 ```
 
 # Checking for Robustness {#robust}
@@ -41,11 +41,11 @@ include_svg = function(path) {
 }
 ```
 
-The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure \@ref(fig:robusts). At Levels 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in *Scoping* (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve variable definitions and other types of analytical choices.
+The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure \@ref(fig:robusts). At [Levels](#levels-of-computational-reproducibility-for-a-specific-output) 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in *Scoping* (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve data cleaning, like variable definitions and other types of analytical choices, available only from the raw data.
 
-The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions *and* changes in the main estimate under an alternative variable definition.
+The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions *and* changes in the estimation method using such variable.
 
-Robustness is assessed at the claim level (see the diagram with a typical paper's components \@ref(fig:stages-unit)). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the [example tree](#complete-tree) discussed in the *Assessment* stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different  specifications: 
+Robustness is assessed at the claim level (see the diagram with a typical paper's components \@ref(fig:diagram)). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the [example tree](#complete-tree) discussed in the *Assessment* stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different  specifications: 
 
 ```
         table1.tex (contains preferred specification of a given claim)
@@ -91,7 +91,7 @@ To record a specific analytical choice on the SSRP, please follow these steps:
 
 1.  Review a specific code file (e.g. `clean_merged_1_2.do`) and identify an analytical choice (e.g. `regress y x if gender == 1`). 
 
-2.  Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the `source` field, type *“original”* whenever the analytical choice is identified for the first time, and `line number` each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the `source` field should be `original` and `103`). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look [like this](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
+2.  Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the `source` field, type *“original”* whenever the analytical choice is identified for the first time, and `file name-L+line number` each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the `source` field should be `original`,  `code_01.do-L103`, and `code_01.do-L103` respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look [like this](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
 
 ```{r robust-checks, echo = FALSE, eval=temp_eval}
 robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
@@ -100,7 +100,7 @@ robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
                             choice_type = c("data sub-setting", "variable definition", "controls", "..."),
                             choice_value = c("males", "income = wages + capital gains", "age, income, education", "..."),
                             choice_range = c("males, female", "wages, capital gains, gifts", "age, income, education, region", "..."),
-                            source = c("original", '"code_01.do-L103"', "original", "..."))
+                            source = c("original", 'code_01.do-L103', "original", "..."))
                          
 robust_checks %>%
     knitr::kable() %>%
@@ -108,14 +108,15 @@ robust_checks %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 
-|entry_id| file_name  | line_number | choice_type         | choice_value                   | choice_range                  | Source              |
-|--------|------------|-------------|---------------------|--------------------------------|-------------------------------|---------------------|
-|   1    | code_01.do | 73          | data sub-setting    | males                          | males, female,                | original            |
-|   2    | code_01.do | 122         | variable definition | income = wages + capital gains | wages, capital gains, gifts   | "code_01.do-L103"   |
-|   3    | code_05.R  | 143         | controls            | age, income, education         | age, income, education, region| original            |
-| ...    | ...        | ...         | ...                 | ...                            | ...                           | ...                 |
+
+The process of recording analytical choices can take a long time. Here a reproducer is not expected to identify all analytical choices. Ideally reproducers will focus on one script and map as much as possible within that script. Reproducers are encouraged to build on top of previous reproductions by exporting analytical choices of previous reproducers (by searching into previous reproductions and clicking "download table as csv" in the robustness section) and uploading them into their own reproduction (by clicking "upload csv"). 
 
 
+```{r upload, eval=TRUE, echo=FALSE, fig.cap="Download anlytical choices from previous reproductions and upload them into your own reproduction", fig.show = "hold", out.width = "50%", eval=FALSE}
+
+knitr::include_graphics("download_robu.png")
+knitr::include_graphics("upload_robu.png")
+```
 
 ## Justifying and testing reasonable robustness checks
 

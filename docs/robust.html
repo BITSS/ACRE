@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-05" />
+<meta name="date" content="2021-08-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -315,9 +315,9 @@ div.csl-indent {
 Figure 5.1: Universe of robustness tests and its elements
 </p>
 </div>
-<p>The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At Levels 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in <em>Scoping</em> (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve variable definitions and other types of analytical choices.</p>
-<p>The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions <em>and</em> changes in the main estimate under an alternative variable definition.</p>
-<p>Robustness is assessed at the claim level (see the diagram with a typical paper’s components <a href="intro.html#fig:stages-unit">0.3</a>). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="assessment.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
+<p>The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At <a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output">Levels</a> 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in <em>Scoping</em> (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve data cleaning, like variable definitions and other types of analytical choices, available only from the raw data.</p>
+<p>The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions <em>and</em> changes in the estimation method using such variable.</p>
+<p>Robustness is assessed at the claim level (see the diagram with a typical paper’s components <a href="intro.html#fig:diagram">0.1</a>). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="assessment.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
 <pre><code>        table1.tex (contains preferred specification of a given claim)
             |___[code] analysis.R
                     |___[code] final_merge.do
@@ -355,68 +355,132 @@ Figure 5.1: Universe of robustness tests and its elements
 <p>To record a specific analytical choice on the SSRP, please follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Review a specific code file (e.g. <code>clean_merged_1_2.do</code>) and identify an analytical choice (e.g. <code>regress y x if gender == 1</code>).</p></li>
-<li><p>Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. For the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code> and <code>103</code>). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
+<li><p>Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
 </ol>
-<table>
-<colgroup>
-<col width="5%" />
-<col width="8%" />
-<col width="9%" />
-<col width="15%" />
-<col width="23%" />
-<col width="22%" />
-<col width="15%" />
-</colgroup>
+<div style="border: 0px;overflow-x: scroll; width:100%; ">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
-<tr class="header">
-<th>entry_id</th>
-<th>file_name</th>
-<th>line_number</th>
-<th>choice_type</th>
-<th>choice_value</th>
-<th>choice_range</th>
-<th>Source</th>
+<tr>
+<th style="text-align:left;">
+entry_id
+</th>
+<th style="text-align:left;">
+file_name
+</th>
+<th style="text-align:left;">
+line_number
+</th>
+<th style="text-align:left;">
+choice_type
+</th>
+<th style="text-align:left;">
+choice_value
+</th>
+<th style="text-align:left;">
+choice_range
+</th>
+<th style="text-align:left;">
+source
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>1</td>
-<td>code_01.do</td>
-<td>73</td>
-<td>data sub-setting</td>
-<td>males</td>
-<td>males, female,</td>
-<td>original</td>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+code_01.do
+</td>
+<td style="text-align:left;">
+73
+</td>
+<td style="text-align:left;">
+data sub-setting
+</td>
+<td style="text-align:left;">
+males
+</td>
+<td style="text-align:left;">
+males, female
+</td>
+<td style="text-align:left;">
+original
+</td>
 </tr>
-<tr class="even">
-<td>2</td>
-<td>code_01.do</td>
-<td>122</td>
-<td>variable definition</td>
-<td>income = wages + capital gains</td>
-<td>wages, capital gains, gifts</td>
-<td>“code_01.do-L103”</td>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+code_01.do
+</td>
+<td style="text-align:left;">
+122
+</td>
+<td style="text-align:left;">
+variable definition
+</td>
+<td style="text-align:left;">
+income = wages + capital gains
+</td>
+<td style="text-align:left;">
+wages, capital gains, gifts
+</td>
+<td style="text-align:left;">
+code_01.do-L103
+</td>
 </tr>
-<tr class="odd">
-<td>3</td>
-<td>code_05.R</td>
-<td>143</td>
-<td>controls</td>
-<td>age, income, education</td>
-<td>age, income, education, region</td>
-<td>original</td>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+code_05.R
+</td>
+<td style="text-align:left;">
+143
+</td>
+<td style="text-align:left;">
+controls
+</td>
+<td style="text-align:left;">
+age, income, education
+</td>
+<td style="text-align:left;">
+age, income, education, region
+</td>
+<td style="text-align:left;">
+original
+</td>
 </tr>
-<tr class="even">
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
+<tr>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
+<td style="text-align:left;">
+…
+</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>The process of recording analytical choices can take a long time. Here a reproducer is not expected to identify all analytical choices. Ideally reproducers will focus on one script and map as much as possible within that script. Reproducers are encouraged to build on top of previous reproductions by exporting analytical choices of previous reproducers (by searching into previous reproductions and clicking “download table as csv” in the robustness section) and uploading them into their own reproduction (by clicking “upload csv”).</p>
 </div>
 <div id="justifying-and-testing-reasonable-robustness-checks" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Justifying and testing reasonable robustness checks</h2>
