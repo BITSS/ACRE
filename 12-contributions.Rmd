@@ -40,9 +40,10 @@ cat(str_c(gh_contributors$desc, collapse = ", "))
 ```
 
 ## Suggested citation format
-These follow the Chicago style citation format. Brackets [ ] indicate where you'll need to input more specific information.
-- When citing the ACRe Guide: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guide for Advancing Computational Reproducibility in the Social Sciences.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.
-- - When citing reproductions accessed on the Social Science Reproduction Platform: [Reproducer Last name], [Reproducer First name], [Last, First], and [Last, First]. [Year]. “Reproduction of [Title of original paper].” *Social Science Reproduction Platform*. doi: [doi]. [DOI or link to original paper]. 
+These follow the Chicago style citation format. Brackets [ ] indicate where you'll need to input more specific information.  
+
+- When citing the ACRe Guide: Berkeley Initiative for Transparency in the Social Sciences. 2020. “Guide for Advancing Computational Reproducibility in the Social Sciences.” [Date accessed (Day, Month, Year)]. https://bitss.github.io/ACRE/.  
+- When citing reproductions accessed on the Social Science Reproduction Platform: [Reproducer Last name], [Reproducer First name], [Last, First], and [Last, First]. [Year]. “Reproduction of [Title of original paper].” *Social Science Reproduction Platform*. doi: [doi]. [DOI or link to original paper]. 
 
 ## Acknowledgments  
 
