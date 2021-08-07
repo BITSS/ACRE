@@ -14,7 +14,7 @@ https://www.aeaweb.org/journals/data/data-code-policy
 The data availability statement shall provide detailed information on how, where, and under what conditions an independent researcher can access the original source data, as well as author-generated derivative data, and must be explicit and accurate about any restrictions, requirements, payments, and processing delays. The data availability statement shall provide information to assure the reader that the data are available for a sufficiently long period of time.
 -->
 
-This template is meant to guide original authors and reproducers in assessing the degree to which a study provides information on access to proprietary or sensitive data. Please fill in the following form for each confidential data source. If this is part of a [SSRP reproduction](https://www.socialsciencereproduction.org), note that this form can be used in two stages: 
+This template is meant to guide original authors and reproducers in assessing the degree to which a study provides information on access to proprietary or sensitive data. Please fill in the following form for each confidential data source. If this is part of a [SSRP reproduction](https://www.socialsciencereproduction.org), note that this form can be used in two stages:   
 
  - **Assessment stage:** use this form to systematically assess the information provided by the authors of the study in the original reproduction package. Then use this form to inform your subjective assessment on whether there are instructions to access data and if those instructions are partial or complete. 
  - **Improvement stage:** use this form to identify specific pieces of information that you added during the improvement stage. Make sure to distinguished   

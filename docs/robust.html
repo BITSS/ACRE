@@ -355,7 +355,7 @@ Figure 5.1: Universe of robustness tests and its elements
 <p>To record a specific analytical choice on the SSRP, please follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Review a specific code file (e.g. <code>clean_merged_1_2.do</code>) and identify an analytical choice (e.g. <code>regress y x if gender == 1</code>).</p></li>
-<li><p>Record the file name, line number, reproduction package (original or name of revised version), choice type, and choice value. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
+<li><p>Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
 </ol>
 <div style="border: 0px;overflow-x: scroll; width:100%; ">
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -484,15 +484,20 @@ original
 </div>
 <div id="justifying-and-testing-reasonable-robustness-checks" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Justifying and testing reasonable robustness checks</h2>
-<p>Justifying and testing a specific analytical choice involves identifying a feasible analytical choice, conducting a variation on it, and justifying its reasonableness. This approach’s advantage is that it allows for an in-depth inspection of a specific section of the paper. Its main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper’s topic and the methods. That may mean that undergraduate students or graduate students with only a surface-level interest in the paper (or limited time) may find it challenging to conduct this part of the reproduction.</p>
+<p>Justifying and testing a specific robustness check involves identifying one or more feasible analytical choices, conducting a variation on them, and justifying its reasonableness. This approach’s advantage is that it allows for an in-depth inspection of a specific section of the paper. Its main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper’s topic and the methods. That may mean that undergraduate students or graduate students with only a surface-level interest in the paper (or limited time) may find it challenging to conduct this part of the reproduction.</p>
 <p>When performing a specific robustness check, follow these steps:</p>
 <ol style="list-style-type: decimal">
-<li><p>Eventually, you will be able to search the SSRP database of feasible robustness checks (discussed above) and record the identifier(s) corresponding to the analytical choice(s) of interest (<code>entry_id</code>), but you can skip this for now. You can create an Entry ID by simply numbering the feasible specifications in the order as you record them.</p></li>
-<li><p>Propose a specific variation to this analytical choice.</p></li>
-<li><p>Discuss whether you think this variation is sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample when assessing the impact of a large wave of new immigrants?).</p></li>
-<li><p>Discuss how this variation could affect the validity of the results (e.g., likely effects on the omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).</p></li>
-<li><p>Confirm that test is not redundant with other tests in the paper or the robustness exercise.</p></li>
-<li><p>Report the result of the robustness check (new estimate, standard error, and units).</p></li>
+<li>Identify the set of analytical choices you will modify for a specific robustness test. Record the identifier(s) corresponding to the analytical choice(s) of interest (<code>entry_id</code>). For multiple identifiers, separate them using comma (e.g., <code>entry_id= 2, 5, 7</code>).</li>
+</ol>
+<!--
+Eventually, you will be able to search the SSRP database of feasible robustness checks (discussed above) and record the identifier(s) corresponding to the analytical choice(s) of interest (`entry_id`), but you can skip this for now. 
+-->
+<ol start="2" style="list-style-type: decimal">
+<li><p>Propose a specific variation to these set of analytical choices.</p></li>
+<li><p>Discuss whether you think these variations are sensible, specifically in the context of the claim tested (e.g., does it make sense to include or exclude low-income Hispanic people from the sample when assessing the impact of a large wave of new immigrants?).</p></li>
+<li><p>Discuss how these variations could affect the validity of the results (e.g., likely effects on the omitted variable bias, measurement error, change in the Local Average Treatment Effects for the underlying population).</p></li>
+<li><p>Confirm that this test is not redundant with other tests in the paper or in the robustness exercise.</p></li>
+<li><p>Report the result of the robustness check (new estimate, standard error, and units), and discuss differences with the pre-specified estimates for this claim.</p></li>
 </ol>
 <!--
 ## Test the robustness of results  
