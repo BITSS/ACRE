@@ -1,7 +1,6 @@
 ---
 title: "Data Availavility Statement"
 subtitle: "Social Science Reproduction Platform"
-date: "4/30/2021"
 output:
   pdf_document: default
   html_document: default
