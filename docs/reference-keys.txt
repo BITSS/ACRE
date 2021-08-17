@@ -30,7 +30,8 @@ complete-tree
 incomplete-workflow-information
 common-issues-that-might-occur-when-creating-a-reproduction-tree
 score
-levels-of-computational-reproducibility-for-a-specific-output
+levels-of-computational-reproducibility-for-a-specific-display-item
+adjusting-levels-to-account-for-confidentialproprietary-data
 reproducibility-dimensions-at-the-paper-level
 improvements
 di-imp
@@ -91,5 +92,3 @@ list-of-contributors-guidelines-content-and-source-code
 suggested-citation-format
 acknowledgments
 definitions
-reporting-results
-test-the-robustness-of-results

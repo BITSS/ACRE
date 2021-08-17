@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-16" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,8 +197,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score.</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
-<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper-level</a></li>
+<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-display-item"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Display Item</a></li>
+<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#adjusting-levels-to-account-for-confidentialproprietary-data"><i class="fa fa-check"></i><b>3.3.2</b> Adjusting Levels To Account for Confidential/Proprietary Data</a></li>
+<li class="chapter" data-level="3.3.3" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.3</b> Reproducibility dimensions at the paper-level</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>4</b> Improvements</a>
@@ -743,12 +744,12 @@ unknown
 </table>
 <p>As in the cases with complete workflows, these diagrams (fragmented or reconstructed trees) provide important information for assessing and improving the reproducibility of specific display items. For more examples of diagrams connecting final outputs to initial raw data, <a href="examples-of-reproduction-trees.html#examples-of-reproduction-trees">see here</a>.</p>
 <div id="common-issues-that-might-occur-when-creating-a-reproduction-tree" class="section level4" number="3.2.2.1">
-<h4><span class="header-section-number">3.2.2.1</span> Common issues that might occur when creating a reproduction tree:</h4>
+<h4><span class="header-section-number">3.2.2.1</span> Common issues that might occur when creating a reproduction tree</h4>
 <ul>
 <li><p><strong>Script output is not a display item</strong>. Sometimes the reproduction package will not produce display items as its final outputs. In this situation, the final code script will generate some type of output (e.g., <code>results1.log</code>, <code>results2.csv</code>) that will require manual copying and pasting to reproduce the desired display item (e.g. <code>Table 1</code>). In this case, we recommend adding one auxiliary line to the table linking the final output to the desired display item (e.g., File Name: aux1, Inputs: <code>results1.log; results2.csv</code>, Outputs: <code>Table 1</code>).</p></li>
 <li><p><strong>Loops across files.</strong> If you notice that some files iterate between each other (e.g., <code>file1.do</code> calls <code>data1.csv</code> to generate <code>data2.csv</code>, and <code>file2.R</code> calls <code>data2.csv</code> to generate <code>data1.csv</code>), look within the files to identify the one that contains some stopping criteria (e.g., stop when SSR is minimized). Then designate only one output as the final and record that in reproduction diagram in the next section.</p></li>
 <li><p><strong>Large number of recurrent files.</strong> Some reproduction packages might have a large number of files that follow a recurrent structure (e.g., <code>data_location1_year1, data_location2_year1, data_location1_year2, ...</code>). To make a more tractable tree we recommend that you record the names of these files only once and use a consistent place holder (e.g., <code>data_locationX_yearY</code>).</p></li>
-<li><p><strong>Possible bugs due to missing <code>;</code></strong> If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (<code>;</code>), that way the tree will separate each file into a separate input.</p></li>
+<li><p><strong>Possible bugs due to missing <code>;</code>.</strong> If the reproduction tree shows several files under one input, make sure that each file is separated by a semi-colon (<code>;</code>), that way the tree will separate each file into a separate input.</p></li>
 </ul>
 </div>
 </div>
@@ -760,16 +761,16 @@ unknown
 <ul>
 <li><p><strong>Computationally Reproducible from Analytic data (CRA)</strong> — The output can be reproduced with minimal effort starting from the <em>analytic</em> datasets.</p></li>
 <li><p><strong>Computationally Reproducible from Raw data (CRR)</strong> — The output can be reproduced with minimal effort from the <em>raw</em> datasets.</p></li>
-<li><p><strong>Standard of <em>minimal effort</em></strong> — One hour or less is required to run the code, not including computing time.</p></li>
+<li><p>**Standard of *minimal effort** — One hour or less is required to run the code, not including computing time.</p></li>
 </ul>
-<div id="levels-of-computational-reproducibility-for-a-specific-output" class="section level3" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> Levels of Computational Reproducibility for a Specific Output</h3>
-<p>Each level of computational reproducibility is defined by the availability of data and materials, and whether the available materials faithfully reproduce the display item of interest. The description of each level also includes possible improvements that can help advance the display item’s reproducibility. You will learn in more detail about the possible improvements at the <a href="https://bitss.github.io/ACRE/improvements.html"><em>Improvement</em> stage</a>.</p>
+<div id="levels-of-computational-reproducibility-for-a-specific-display-item" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Levels of Computational Reproducibility for a Specific Display Item</h3>
+<p>Each level of computational reproducibility is defined by the availability of data and materials, and whether the available materials faithfully reproduce the display item of interest. The description of each level also includes possible improvements that can help advance the display item’s reproducibility. You will learn in more detail about the possible improvements at the <a href="improvements.html#improvements"><em>Improvement</em> stage</a>.</p>
 <p>Note that the assessment is made <em>at the level of individual display items</em>—a paper can be highly reproducible for its main results, but its other display items may not be as reproducible. The assessment includes a 10-point scale, where 1 represents that, under the current circumstances, reproducers cannot access any reproduction package. At level 10, the reproducer can access all of the necessary materials to faithfully reproduce the target display item from the raw data.</p>
 <ul>
 <li><strong>Level 1 (L1):</strong> No data or code are available. Possible improvements include adding: raw data, analysis data, cleaning code, and analysis code.</li>
 </ul>
-<p>You may have detected papers without any reproduction materials at the <em>Paper Selection</em> stage, where you should have recorded them as unsuccessful candidate papers.</p>
+<p>You may have detected papers without any reproduction materials at the <em>Paper Selection</em> stage, where you should have recorded them as abandoned candidate papers.</p>
 <ul>
 <li><p><strong>Level 2 (L2):</strong> Code scripts are available (partial or complete), but no data are available. Possible improvements include adding: raw data and analysis data.</p></li>
 <li><p><strong>Level 3 (L3):</strong> Analytic data and code are partially available, but raw data and cleaning code are missing. Possible improvements include: completing analysis data and/or code, adding raw data, and adding analysis code.</p></li>
@@ -782,9 +783,9 @@ unknown
 <li><p><strong>Level 7 (L7):</strong> Cleaning code is available and complete, and raw data is partially available. Possible improvements: adding raw data.</p></li>
 <li><p><strong>Level 8 (L8):</strong> All the materials (raw data, analytic data, cleaning code, and analysis code) are available. However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR) or the analysis code fails to run or produces results inconsistent with the paper (not CRA). Possible improvements: debugging the cleaning or analysis code.</p></li>
 <li><p><strong>Level 9 (L9):</strong> All the materials (raw data, analytic data, cleaning code, and analysis code) are available. The analysis code produces the same output as presented in the paper (CRA). However, the cleaning code fails to run or produces different results from those presented in the paper (not CRR). Possible improvements: debugging the cleaning code.</p></li>
-<li><p><strong>Level 10 (L10):</strong> All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data (yes CRA) or the raw data (yes CRR). <em>Note that Level 10 is aspirational and may be unattainable for most research published today.</em></p></li>
+<li><p><strong>Level 10 (L10):</strong> All necessary materials are available and produce consistent results with those presented in the paper. The reproduction involves minimal effort and can be conducted starting from the analytic data ( CRA) and the raw data (CRR). <em>Note that Level 10 is aspirational and may be unattainable for most research published today.</em></p></li>
 </ul>
-<p>The following figure summarizes the different levels of computational reproducibility (for any given display item). For each level, there are reproducibility components and practices that are present (<code>✔</code>) or can be implemented to advance the level of reproducibility (-).</p>
+<p>The following table summarizes the different levels of computational reproducibility (for any given display item). For each level, there are reproducibility components and practices that are present (<code>✔</code>) or can be implemented to advance the level of reproducibility (-).</p>
 <table style="NAborder-bottom: 0;">
 <caption>
 <span id="tab:levels-of-computational-reproducibility">Table 3.5: </span>Levels of Computational Reproducibility<br />
@@ -1234,9 +1235,11 @@ L10: Reproducible from raw data
 </table>
 <p>You may disagree with some of the levels outlined above, particularly wherever subjective judgment may be required. If so, you are welcome to interpret the levels as unordered categories (independent from their sequence) and suggest improvements using the “Edit” button above (top left corner if you are reading this document in your browser).</p>
 <p><strong>Note:</strong> The levels suggested here are to be used in the Assessment stage and, optionally, for the Improvement stage. <em>These levels are not meant to be used in the Robustness stage</em>.</p>
-<div id="adjusting-levels-to-account-for-confidentialproprietary-data" class="section level4 unnumbered">
-<h4>Adjusting Levels To Account for Confidential/Proprietary Data</h4>
-<p>Much of published research in the social sciences uses confidential or proprietary data (e.g. government data from tax records or service provision), generally referred to as <em>administrative data</em>. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a competent and unbiased third party (not involved in the paper’s production) faithfully reproduced the results.</p>
+</div>
+<div id="adjusting-levels-to-account-for-confidentialproprietary-data" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Adjusting Levels To Account for Confidential/Proprietary Data</h3>
+<p>A large fraction of published research in the social sciences uses confidential or proprietary data (e.g., government data from tax records or service provision), generally referred to as <em>administrative data</em>. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data, typically provided in data availability statements (DAS). Use <a href="sample-DAS.html">this checklist</a> (<a href="sample-DAS.pdf">.pdf</a>, <a href="https://github.com/BITSS/ACRE/blob/master/sample-DAS.md">.md</a>) to guide the assessment, and potential improvement, of a DAS.</p>
+<p>When the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a third party (not involved in the paper’s production) faithfully reproduced the results.</p>
 <ul>
 <li><p><strong>Levels 1 and 2</strong> can be applied as described above.</p></li>
 <li><p><strong>Adjusted Level 3 (L3*):</strong> All analysis code is provided, but only partial instructions to access the <em>analysis data</em> are available. This means that the original authors have provided some, but not all, of the following information:</p>
@@ -1244,7 +1247,7 @@ L10: Reproducible from raw data
 <li><em>Contact information</em>, including name of the organization(s) that provides access to at least one individual’s data and contact information.</li>
 <li><em>Terms of use</em>, including licenses and eligibility criteria for accessing the data, if any.</li>
 <li><em>Information on data files (meta-data)</em>, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data).</li>
-<li><em>Estimated costs for access</em>, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access it.</li>
+<li><em>Estimated costs for access</em>, including monetary costs such as fees and licenses required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access it.</li>
 </ol></li>
 <li><p><strong>Adjusted Level 4 (L4*):</strong> All analysis code is provided, and complete and detailed instructions on how to access the <em>analysis data</em> are available.</p></li>
 <li><p><strong>Adjusted Level 5 (L5*):</strong> All requirements for Level 4* are met, and the authors provide a certification that a third party was able to reproduce the display item (or the paper as a whole) from the analysis data (CRA). Such certification may include a signed letter by a disinterested reproducer or a certificate from a certification agency for data and code (e.g., see <a href="https://www.cascad.tech/">CASCaD</a>).</p></li>
@@ -1702,9 +1705,8 @@ L10*: Proof of third party CRR
 </tfoot>
 </table>
 </div>
-</div>
-<div id="reproducibility-dimensions-at-the-paper-level" class="section level3" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> Reproducibility dimensions at the paper-level</h3>
+<div id="reproducibility-dimensions-at-the-paper-level" class="section level3" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Reproducibility dimensions at the paper-level</h3>
 <p>There are many tools and practices that facilitate the computational reproducibility of the paper as a whole. You can learn more about implementing such reproducibility tools and practices in the <a href="https://bitss.github.io/ACRE/improvements.html"><em>Improvements</em></a> stage, but at this stage, you should only verify whether the current reproduction materials make use of any such tools and practices.</p>
 <p><strong>Note:</strong> The Assessment stage is the minimum requirement to submit your reproduction. To gain a better understanding of the paper and to help improve the reproducibility of social science research, however, we encourage you to also complete the <em>Improvements</em> and <em>Robustness</em> stages.</p>
 

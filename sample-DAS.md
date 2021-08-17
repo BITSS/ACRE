@@ -2,8 +2,8 @@
 title: "Data Availavility Statement"
 subtitle: "Social Science Reproduction Platform"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 
@@ -46,7 +46,7 @@ This template is meant to guide original authors and reproducers in assessing th
 # Conditions of access  
 
 
-- [ ] **Restrictions:** `[e.g., On site only, Cold rooms, Certified locations]`
+- [ ] **Restrictions:** `[e.g., On site only, offline rooms, Certified locations]`
 
 - [ ] **Requirements:** `[e.g., nationality, security clearance, employees only access]` 
 

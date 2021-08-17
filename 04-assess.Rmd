@@ -330,12 +330,11 @@ You may disagree with some of the levels outlined above, particularly wherever s
 **Note:** The levels suggested here are to be used in the Assessment stage and, optionally, for the Improvement stage. *These levels are not meant to be used in the Robustness stage*. 
 
 
-### Adjusting Levels To Account for Confidential/Proprietary Data {-}
+### Adjusting Levels To Account for Confidential/Proprietary Data 
 
-Use [this form](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](https://github.com/BITSS/ACRE/blob/master/sample-DAS.md))
+A large fraction of published research in the social sciences uses confidential or proprietary data (e.g., government data from tax records or service provision), generally referred to as *administrative data*. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data, typically provided in data availability statements (DAS). Use [this checklist](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](https://github.com/BITSS/ACRE/blob/master/sample-DAS.md)) to guide the assessment, and potential improvement, of a DAS. 
 
-
-A large fraction of published research in the social sciences uses confidential or proprietary data (e.g., government data from tax records or service provision), generally referred to as *administrative data*. Since administrative data are rarely readily publicly available, some reproducibility levels presented above only apply once modified. The underlying theme of these modifications is that when data cannot be provided, you can assign a reproducibility score based on the level of detail in the instructions for accessing the data. Similarly, when the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a third party (not involved in the paper's production) faithfully reproduced the results.
+When the reproducer cannot directly assess the reproducibility based on publicly available materials, the reproduction package should include certification that a third party (not involved in the paper's production) faithfully reproduced the results.
 
  - **Levels 1 and 2** can be applied as described above.
 
@@ -343,7 +342,7 @@ A large fraction of published research in the social sciences uses confidential 
     a. *Contact information*, including name of the organization(s) that provides access to at least one individual's data and contact information.
     b. *Terms of use*, including licenses and eligibility criteria for accessing the data, if any.
     c. *Information on data files (meta-data)*, including the name(s) and number of files, file size(s), relevant file version(s), and number of variables and observations in each file. Though not required, other relevant information may be included, including a dataset dictionary, summary statistics, and synthetic data (fake data with the same statistical properties as the original data).
-    d. *Estimated costs for access*, including monetary costs such as fees and licences required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access it.  
+    d. *Estimated costs for access*, including monetary costs such as fees and licenses required to access the data, and non-monetary costs such as wait times and specific geographical locations from where researchers need to access it.  
 
  - **Adjusted Level 4 (L4\*):** All analysis code is provided, and complete and detailed instructions on how to access the *analysis data* are available.
 

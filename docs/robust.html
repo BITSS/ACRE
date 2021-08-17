@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-16" />
+<meta name="date" content="2021-08-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,8 +197,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="assessment.html"><a href="assessment.html#score"><i class="fa fa-check"></i><b>3.3</b> Assign a reproducibility score.</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Output</a></li>
-<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.2</b> Reproducibility dimensions at the paper-level</a></li>
+<li class="chapter" data-level="3.3.1" data-path="assessment.html"><a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-display-item"><i class="fa fa-check"></i><b>3.3.1</b> Levels of Computational Reproducibility for a Specific Display Item</a></li>
+<li class="chapter" data-level="3.3.2" data-path="assessment.html"><a href="assessment.html#adjusting-levels-to-account-for-confidentialproprietary-data"><i class="fa fa-check"></i><b>3.3.2</b> Adjusting Levels To Account for Confidential/Proprietary Data</a></li>
+<li class="chapter" data-level="3.3.3" data-path="assessment.html"><a href="assessment.html#reproducibility-dimensions-at-the-paper-level"><i class="fa fa-check"></i><b>3.3.3</b> Reproducibility dimensions at the paper-level</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="improvements.html"><a href="improvements.html"><i class="fa fa-check"></i><b>4</b> Improvements</a>
@@ -315,7 +316,7 @@ div.csl-indent {
 Figure 5.1: Universe of robustness tests and its elements
 </p>
 </div>
-<p>The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At <a href="assessment.html#levels-of-computational-reproducibility-for-a-specific-output">Levels</a> 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in <em>Scoping</em> (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve data cleaning, like variable definitions and other types of analytical choices, available only from the raw data.</p>
+<p>The size of the set of feasible robustness checks, and the likelihood that it contains reasonable specifications, will depend on the current level of reproducibility of the results that support a claim. The idea is illustrated in Figure <a href="robust.html#fig:robusts">5.1</a>. At <a href="#levels-of-computational-reproducibility-for-a-specific-output">Levels</a> 1-2, it is impossible to perform additional robustness checks because there are no data to work with. It may be possible to perform additional robustness checks for claims supported by display items reproducible at Levels 3-4, but not using the estimates declared in <em>Scoping</em> (because the display items are not computationally reproducible from analysis data). It is possible to conduct additional robustness checks to validate the core conclusions of a claim based on a display item reproducible at Level 5. Finally, claims associated with display items reproducible at Level 6 or higher allow for robustness checks that involve data cleaning, like variable definitions and other types of analytical choices, available only from the raw data.</p>
 <p>The number of feasible robustness checks grows exponentially with improved reproducibility. For example, when checking the robustness of a new variable definition, you could test alternative variable definitions <em>and</em> changes in the estimation method using such variable.</p>
 <p>Robustness is assessed at the claim level (see the diagram with a typical paper’s components <a href="intro.html#fig:diagram">0.1</a>). There may be several specifications presented in the paper for a given claim, one of which the authors (or you, if the authors did not indicate) have chosen as the main or preferred specification. Identify which display item contains this specification and refer to the reproduction tree to identify the code files in which you can modify a computational choice. Using the <a href="assessment.html#complete-tree">example tree</a> discussed in the <em>Assessment</em> stage, we can obtain the following (we removed the data files for simplicity). This simplified tree provides a list of potential files in which you can test different specifications:</p>
 <pre><code>        table1.tex (contains preferred specification of a given claim)
