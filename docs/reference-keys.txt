@@ -2,6 +2,7 @@ fig:diagram
 fig:stages-intro
 fig:stages-unit
 fig:candidate-paper-dec-tree
+fig:estim
 tab:raw-data-information
 tab:analysis-data-information
 tab:code-files-information
@@ -23,6 +24,7 @@ describe-inputs
 desc-sourc
 desc-analy
 desc-scripts
+simplify-several-files-with-a-recursive-structure
 diagram
 complete-tree
 incomplete-workflow-information
@@ -60,7 +62,7 @@ for-reproducers-contacting-the-authors-of-the-original-study
 contacting-the-original-authors-when-there-is-no-reproduction-package
 follow-up-if-the-author-only-provides-the-appendix
 contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package
-asking-for-additional-guidance-when-some-materials-have-been-shared
+ask-missing-mat
 response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons
 response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data
 contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise
@@ -89,3 +91,5 @@ list-of-contributors-guidelines-content-and-source-code
 suggested-citation-format
 acknowledgments
 definitions
+reporting-results
+test-the-robustness-of-results

@@ -18,6 +18,8 @@ output:
   bookdown::html_document2: default
   bookdown::word_document2:
     toc: true
+  keep_tex:  true
+    
  
 ---
 #  {-}
@@ -43,7 +45,10 @@ output:
   [See a full list of contributors](#contributions)
 </p>  
 
-A beta version of the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/) is now available! [**Sign up here**](https://forms.gle/yZivWcwijCzEhrBU6) if you would like to be part of our beta testing. 
+<p style="text-align: center;">
+A companion to the [**Social Science Reproduction Platform**](https://www.socialsciencereproduction.org/).
+</p>  
+
 
 
 ```{r out.width = '100%', echo=FALSE}
@@ -79,7 +84,7 @@ knitr::include_graphics("stages.svg")
          <td>[&#9744; Analytical choices](#id-analy)</td>
       </tr>
       <tr>
-         <td>[&#9744; Search materials](#declaree)</td>
+         <td>[&#9744; Search materials](#declare)</td>
          <td>[&#9744; Identify claims](#declare-estimates)</td>
          <td>[&#9744; Build reproduction diagrams](#diagram)</td>
          <td>[&#9744; + Analysis data](#ad)</td>

@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-06" />
+<meta name="date" content="2021-08-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -172,7 +172,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="1.1" data-path="select.html"><a href="select.html#declare"><i class="fa fa-check"></i><b>1.1</b> From candidate to declared paper</a>
 <ul>
-<li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP Database</a></li>
+<li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.2</b> Identifying the relevant timeline</a></li>
 </ul></li>
@@ -190,7 +190,7 @@ div.csl-indent {
 <li class="chapter" data-level="3.1.2" data-path="assessment.html"><a href="assessment.html#desc-analy"><i class="fa fa-check"></i><b>3.1.2</b> Describe the analytic data</a></li>
 <li class="chapter" data-level="3.1.3" data-path="assessment.html"><a href="assessment.html#desc-scripts"><i class="fa fa-check"></i><b>3.1.3</b> Describe the code scripts</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect display items to all its inputs usign the ReproducibiliTREE</a>
+<li class="chapter" data-level="3.2" data-path="assessment.html"><a href="assessment.html#diagram"><i class="fa fa-check"></i><b>3.2</b> Connect display items to all its inputs usign the Diagram Builder</a>
 <ul>
 <li class="chapter" data-level="3.2.1" data-path="assessment.html"><a href="assessment.html#complete-tree"><i class="fa fa-check"></i><b>3.2.1</b> Complete workflow information</a></li>
 <li class="chapter" data-level="3.2.2" data-path="assessment.html"><a href="assessment.html#incomplete-workflow-information"><i class="fa fa-check"></i><b>3.2.2</b> Incomplete workflow information</a></li>
@@ -245,7 +245,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.1.1" data-path="comunications.html"><a href="comunications.html#contacting-the-original-authors-when-there-is-no-reproduction-package"><i class="fa fa-check"></i><b>8.1.1</b> Contacting the original author(s) when there is no reproduction package</a></li>
 <li class="chapter" data-level="8.1.2" data-path="comunications.html"><a href="comunications.html#follow-up-if-the-author-only-provides-the-appendix"><i class="fa fa-check"></i><b>8.1.2</b> Follow-up if the author only provides the appendix</a></li>
 <li class="chapter" data-level="8.1.3" data-path="comunications.html"><a href="comunications.html#contacting-the-original-authors-to-request-specific-missing-items-of-a-reproduction-package"><i class="fa fa-check"></i><b>8.1.3</b> Contacting the original author(s) to request specific missing items of a reproduction package</a></li>
-<li class="chapter" data-level="8.1.4" data-path="comunications.html"><a href="comunications.html#asking-for-additional-guidance-when-some-materials-have-been-shared"><i class="fa fa-check"></i><b>8.1.4</b> Asking for additional guidance when some materials have been shared</a></li>
+<li class="chapter" data-level="8.1.4" data-path="comunications.html"><a href="comunications.html#ask-missing-mat"><i class="fa fa-check"></i><b>8.1.4</b> Asking for additional guidance when some materials have been shared</a></li>
 <li class="chapter" data-level="8.1.5" data-path="comunications.html"><a href="comunications.html#response-when-the-original-author-has-declined-to-share-due-to-undisclosed-reasons"><i class="fa fa-check"></i><b>8.1.5</b> Response when the original author has declined to share due to <em>undisclosed reasons</em></a></li>
 <li class="chapter" data-level="8.1.6" data-path="comunications.html"><a href="comunications.html#response-when-the-original-author-has-declined-to-share-due-to-legal-or-ethical-restrictions-of-the-data"><i class="fa fa-check"></i><b>8.1.6</b> Response when the original author has declined to share due to legal or ethical restrictions of the data</a></li>
 <li class="chapter" data-level="8.1.7" data-path="comunications.html"><a href="comunications.html#contacting-the-original-author-to-share-the-results-of-your-reproduction-exercise"><i class="fa fa-check"></i><b>8.1.7</b> Contacting the original author to share the results of your reproduction exercise</a></li>
@@ -310,14 +310,14 @@ div.csl-indent {
 <p><em>Computational reproducibility</em> is the degree to which it is possible to obtain consistent results using the same input data, computational methods, and conditions of analysis <span class="citation">(<a href="#ref-national2019reproducibility" role="doc-biblioref">National Academies of Sciences 2019</a>)</span>. In 2019, the <a href="https://www.aeaweb.org/journals/policies/data-code/">American Economic Association</a> updated its Data and Code Availability Policy to require that the AEA Data Editor verify the reproducibility of all papers before they are accepted by an AEA journal. Similar policies have been adopted in political science, particularly at the <a href="https://ajps.org/ajps-verification-policy/"><em>American Journal of Political Science</em></a>. In addition to the requirements laid out in such policies, the data editors of several social science journals produced detailed <a href="https://social-science-data-editors.github.io/guidance/">recommendations and resources</a> to facilitate compliance. The goal of such policy changes is to improve the computational reproducibility of <em>all</em> published research going forward, after several studies showed that rates of computational reproducibility in the social sciences range from somewhat low to alarmingly low <span class="citation">(<a href="#ref-galiani2018make" role="doc-biblioref">Galiani, Gertler, and Romero 2018</a>; <a href="#ref-chang2015economics" role="doc-biblioref">Chang and Li 2015</a>; <a href="#ref-kingi2018reproducibility" role="doc-biblioref">Kingi et al. 2018</a>)</span>.</p>
 <p>This Guide includes a common approach, terminology, and standards for conducting <em>reproductions</em>, or attempts to assess and improve the computational reproducibility of published work. At the center of this process is the <em>reproducer</em> (you!), a party rarely involved in the production of the original paper. Reproductions sometimes involve the <em>original author</em> (whom we refer to as “the author”) in cases where additional guidance and materials are needed to execute the process. Reproductions should be distinguished from <em>replications</em>, where replicators re-examine a study’s hypotheses using <em>different data</em> or <em>different methods</em> (or both) <span class="citation">(<a href="#ref-King95" role="doc-biblioref">King 1995</a>)</span>. We find that reproducibility is necessary for replicability, though both allow science to be “self-correcting.”</p>
 <p>We recommend using this Guide in conjunction with the <a href="https://www.socialsciencereproduction.org/"><strong>Social Science Reproduction Platform</strong></a> (SSRP), an open-source platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Though in its current version, the Guide is primarily intended for reproductions in economics, it may be used in other social science disciplines, and we welcome contributions that aim to “translate” any of its parts to other social science disciplines (learn how you can contribute <a href="https://bitss.github.io/ACRE/contributions.html">here</a>). Find definitions of fundamental concepts in reproducibility and the process of conducting reproductions in the <a href="https://bitss.github.io/ACRE/definitions.html">Glossary</a> chapter.</p>
-<p>This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility in Economics <a href="https://www.bitss.org/ecosystem/acre/">(ACRE)</a> project, which aims to assess, enable, and improve the computational reproducibility of published economics research. The ACRE project is led by the Berkeley Initiative for Transparency in the Social Sciences <a href="https://bitss.org">(BITSS)</a>—an initiative of the Center for Effective Global Action <a href="https://cega.berkeley.edu/">(CEGA)</a>—and <a href="https://www.vilhuber.com/lars/">Dr. Lars Vilhuber</a>, Data Editor for the journals of the American Economic Association (AEA). This project is supported by <a href="https://www.arnoldventures.org/">Arnold Ventures</a>.</p>
+<p>This Guide and the SSRP were developed as part of the Accelerating Computational Reproducibility <a href="https://www.bitss.org/ecosystem/acre/">(ACRe)</a> project, which aims to assess, enable, and improve the computational reproducibility of published social science research. The ACRe project is led by the Berkeley Initiative for Transparency in the Social Sciences <a href="https://bitss.org">(BITSS)</a>—an initiative of the Center for Effective Global Action <a href="https://cega.berkeley.edu/">(CEGA)</a>—and <a href="https://www.vilhuber.com/lars/">Dr. Lars Vilhuber</a>, Data Editor for the journals of the American Economic Association (AEA). This project is supported by <a href="https://www.arnoldventures.org/">Arnold Ventures</a>.</p>
 <p><a href="https://bitss.github.io/WEAI2020_slides/">View slides used for the presentation “How to Teach Reproducibility in Classwork”</a></p>
 <!-- 
 add clarebout principle and discuss effect on a more inclusive scientific community
 -->
 <div id="beyond-binary-judgments" class="section level2 unnumbered">
 <h2>Beyond binary judgments</h2>
-<p>Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper as “(ir-)reproducible.” We suggest a more nuanced approach by highlighting two realities that make binary judgments less relevant.</p>
+<p>Assessments of reproducibility can easily gravitate towards binary judgments that declare an entire paper as “(ir-)reproducible.” We suggest a more nuanced approach based on two observations that make binary judgments less relevant.</p>
 <p>First, a paper may contain several scientific claims (or major hypotheses) that may vary in computational reproducibility. Each claim is tested using different methodologies, presenting results in one or more display items (outputs like tables and figures). Each display item will itself contain several specifications. Figure <a href="intro.html#fig:diagram">0.1</a> illustrates this idea.</p>
 <div class="figure"><span id="fig:diagram"></span>
 <img src="paper-claims.png" alt="One paper has multiple components to reproduce. &lt;br&gt; DI: Display Item, S: Specification " width="100%" />
@@ -339,9 +339,9 @@ Figure 0.1: One paper has multiple components to reproduce. <br> DI: Display Ite
 <li><a href="assessment.html#assessment"><strong>Assessment</strong></a>, where you will review and describe in detail the available reproduction package and assess the current level of computational reproducibility of the selected display items;</li>
 <li><a href="improvements.html#improvements"><strong>Improvement</strong></a>, where you will modify the content and/or the organization of the reproduction package to improve its reproducibility;<br />
 </li>
-<li><a href="robust.html#robust"><strong>Robustness</strong></a>, where you will identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.</li>
+<li><a href="robust.html#robust"><strong>Robustness</strong></a>, where you will identify analytical choices to increase the number of feasible robustness checks, and/or you will justify the reasonableness of a specific robustness check.</li>
 </ol>
-<p>This Guide does not include a possible fifth stage of <strong>extension</strong>, where you may extend the current paper by including new methodologies or data, which would bring the exercise closer to <em>replication</em>.</p>
+<p>This Guide does not include a possible fifth stage of <strong>extension</strong>, where you may extend the current paper by including new methodologies or data, which would bring the exercise closer to a <em>replication</em>.</p>
 <div class="figure"><span id="fig:stages-intro"></span>
 <img src="stages.svg" alt="Four stages of a reproduction attempt" width="100%" />
 <p class="caption">
@@ -349,7 +349,7 @@ Figure 0.2: Four stages of a reproduction attempt
 </p>
 </div>
 <p>The order of the stages may not be chronologically linear. For example, you may realize that the scope of a reproduction is too ambitious and switch to a less intensive one. Later in the exercise, you can also begin testing different specifications for robustness while also assessing the paper’s reproducibility level. The only stage that should go first, and cannot be edited once finished, is the Scoping stage.</p>
-<p>Different stages in the reproduction process correspond to different units of analysis (see Figure <a href="intro.html#fig:stages-unit">0.3</a> for an overview). E.g., the Scoping stage will focus on scientific <em>claims</em> selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.</p>
+<p>Different stages in the reproduction process correspond to different units of analysis (see Figure <a href="intro.html#fig:stages-unit">0.3</a> for an overview). The Scoping stage will focus on scientific <em>claims</em> selected for reproduction. Once you specify your claims of interest, in the Assessment and Improvement stages you will focus on the display items associated with those claims. In the Robustness stage, claims are once again the unit of analysis.</p>
 <div class="figure"><span id="fig:stages-unit"></span>
 <img src="unit-of-analysis.png" alt="Relevant unit of analysis at each stage of a reproduction attempt" width="100%" />
 <p class="caption">
@@ -359,7 +359,7 @@ Figure 0.3: Relevant unit of analysis at each stage of a reproduction attempt
 </div>
 <div id="reproduction-strategies" class="section level2 unnumbered">
 <h2>Reproduction strategies</h2>
-<p>In most cases, you will begin a reproduction with a thorough reading of your paper of interest. However, the sequence of the steps you take in the remainder of the reproduction may follow various <em>reproduction strategies</em>. The most obvious strategy would be to follow the order of the steps as outlined above. You may also first choose one of the paper’s many claims and then focus on assessing and improving the reproduction package accordingly. Using an alternative strategy, you might identify potential robustness checks or extensions while reading the paper and then focus only on the results associated with that robustness check. In another strategy, you may identify a paper that uses a particular dataset in which you are interested and then only reproduce or conduct robustness checks for the results associated with that dataset. The various uses of reproduction make the number of potential reproduction strategies potentially infinite, so it helps identify the goal of the reproduction from the start.</p>
+<p>In most cases, you will begin a reproduction with a thorough reading of your paper of interest. However, the sequence of the steps you take in the remainder of the reproduction may follow various reproduction strategies. The most obvious strategy would be to follow the order of the steps as outlined above. You may also first choose one of the paper’s many claims and then focus on assessing and improving the reproduction package accordingly. Using an alternative strategy, you might identify potential robustness checks or extensions while reading the paper and then focus only on the results associated with that robustness check. In another strategy, you may identify a paper that uses a particular dataset in which you are interested and then only reproduce or conduct robustness checks for the results associated with that dataset.</p>
 
 </div>
 </div>
