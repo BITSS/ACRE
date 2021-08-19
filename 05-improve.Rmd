@@ -5,27 +5,31 @@ library(kableExtra)
 ```
 # Improvements   
 
-As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The SSRP also allows you to record improvements that you've already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper's methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider Social Science Reproduction Platform (SSRP) community, including other students and researchers using the SSRP.
+As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The Social Science Reproduction Platform (SSRP) also allows you to record improvements that you've already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper's methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider SSRP community, including other students and researchers using the SSRP.
 
+<!--
+ONCE THIS FEATURE IS DEPLOYED IN THE SSRP: 
 Some of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request and, if not, how to approach them in order to have a constructive exchange.  
+-->
 
 As with the *Assessment* stage, we recommend that you first focus on one specific display item (e.g., “Table 1”). After making improvements to this first item, you will have a much easier time translating those improvements to other items.   
 
 ## Display item improvements {#di-imp}
 
-As part of your assessment of specific display items, you will identify potential issues with the original reproduction package (for any score lower than level 10). In addition to identifying these gaps, you are encouraged to implement specific improvements. In this section we suggest steps on how to add missing materials (data or code), or debug analysis or cleaning code. Record these improvements in the "Display item improvements" section.
+As part of your assessment of specific display items, you will identify potential issues with the original reproduction package. In addition to identifying these gaps, you are encouraged to implement specific improvements. In this section we suggest steps on how to add missing materials (data or code), or debug analysis or cleaning code. Record these improvements in the "Display item improvements" section.
 
 ### Adding raw data: missing files or metadata {#rd}
 
 Reproduction packages often do not include all original [raw datasets](#describe-inputs). To obtain any missing raw data or information about them, follow these steps:
 
-1. Identify the missing file. During the [Assessment](#assessment) stage, you identified all data sources from the paper's body and appendices ([Assessment](https://www.socialsciencereproduction.org/reproductions/6f421270-24a1-4540-af26-a91a3eb76d1d/assessment?step=0) step 1.1.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts. If you find the name of the file, record it in Assessment step 1.1. as above. If not, record it as “Some/All" in the `known_missing` field of the for each specific data source.       
+1. Identify the missing file. During the [Assessment](#assessment) stage, you identified all data sources from the paper's body and appendices ([step 1.1](#desc-sourc.). However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts.      
 2. Verify whether this file (or files) can be easily obtained from the web.   
       - 2.1 - If yes: obtain the missing files and add them to your revised reproduction package. Make sure to obtain permission from the owners of this data source to publicly share this data. See [chapter 7](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) for more guidance.   
       - 2.2 - If no: proceed to step 3.   
 3. Eventually you will be able to use the SSRP to verify whether previous reproducers have contacted the authors regarding this paper and the specific missing files. For now, skip to the next step. 
 4. Contact the original authors and politely request the original materials. Be mindful of their time, and remember that the paper you are trying to reproduce was possibly published at a time when standards for computational reproducibility were different. See [chapter 7](https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html) for sample language on how to approach the authors for this specific scenario.  
-5. If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions on how to access these data. for future researchers to follow, including contact information and possible costs of obtaining the raw data (e.g., access fees, how much time it might take between requesting and receiving access, etc.).
+5. If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions on how to access these data. For future researchers to follow, including contact information and possible costs of obtaining the raw data (e.g., access fees, how much time it might take between requesting and receiving access, etc.). Use [this checklist](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](https://github.com/BITSS/ACRE/blob/master/sample-DAS.md)) as a template to fill in. 
+
 
 ### Adding missing analytic data files {#ad}
 
@@ -51,14 +55,15 @@ Reproduction packages often do not include all original [raw datasets](#describe
 
 ### Debugging analysis code  {#dac}
 
-Whenever code is available in the reproduction package, you should be able to debug those scripts. There are four types of debugging that can improve the reproduction package:  
+Whenever code is available in the reproduction package, you should be able to debug those scripts. There are at least five types of debugging that can improve the reproduction package:  
 
 - *Code cleaning:* Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.  
-- *Performance improvement:* Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results).    
+- *Performance improvement:* Replace the original instructions with new ones that perform the same tasks but take less time (e.g., choose one numerical optimization algorithm over another while still obtaining the same results). 
+- *Adding unit tests:* Add `if/then` statements after a code chunk or section (more or less every 100 lines of code) where you test that variables or statistics are computing as expected. If the value has changed, create a warning message that mentions what object has changed.  
 - *Environment set up:* Modify the code to include correct paths to files, specific versions of software, and instructions to install missing packages or libraries.    
 - *Correcting errors:* A coding error will occur when a section of the code in the reproduction package executes a procedure that is in direct contradiction with the intended procedure expressed in the documentation (i.e., paper or code comments). For example, an error will occur if the paper specifies that the analysis is performed on a population of males, but the code restricts the analysis to females only. 
-<!--FUTURE FEATURE:
 
+<!--FUTURE FEATURE:
 Please follow the ACRE procedure to report coding errors.  
 -->
 
@@ -66,22 +71,6 @@ Please follow the ACRE procedure to report coding errors.
 
 Follow the same steps that you did to debug the analysis code (above), but report them separately.  
 
-<!--
-### Reporting results    
-
-Track all the different types of improvements you make and record in [this standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A3) with the following structure:   
-
-```{r improvements-spreadsheet, echo = FALSE}
-improvements <- data.frame(output_name = c("table 1", "table 1", "table 1", "figure 1", "figure 1", "inline 1", "..."),
-                           imprv = c("+AD", "+RD", "DCC", "+CC", "DAC", "DAC", "..."),
-                           description_of_added_files = c("ADD EXAMPLES", "ADD EXAMPLES", "ADD EXAMPLES", "", "", "", "..."),
-                           lvl= c("5", "5", "5", "6", "6", "8", "..."))
-
-improvements %>%
-    knitr::kable(caption = "Level-specific quality improvements: add data/code, debug code")
-```
-
--->
 
 ### Adding information on how to access confidential/proprietary data
 
@@ -94,17 +83,19 @@ Use [this form](sample-DAS.html) ([.pdf](sample-DAS.pdf), [.md](https://github.c
 
 <!-- future task: provide more guidance on each of the items below -->
 
-There are several measures you can take to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section.  
+There are several measures you can take to improve a paper's overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the "Paper-level improvements" section of the SSRP.  
 
 **File documentation and organization: **  
-1 - Set up the reproduction package using version control software, such as Git.  
-2 - Improve documentation by adding comments to the code.  
-3 - Re-organize the reproduction package into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order, with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).     
+
+1.  Set up the reproduction package using version control software, such as Git.  
+2. Improve documentation by adding comments to the code.  
+3. Re-organize the reproduction package into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order, with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).     
 
 **Computation:**   
-4 - Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).  
-5 - If the code was written using proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using open-source statistical software (e.g., R, Python, or Julia).  
-6 - Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).  
+
+4. Integrate the documentation with the code by adapting the paper into a literate programming environment (e.g., using Jupyter notebooks, RMarkdown, or a Stata Dynamic Doc).  
+5. If the code was written using proprietary statistical software (e.g., Stata or Matlab), re-write some parts of it using open-source statistical software (e.g., R, Python, or Julia).  
+6. Set up a computing capsule that executes the entire reproduction in a web browser without needing to install any software. For examples, see [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/).  
 
 Please suggest other paper-level improvements by editing this guide (use the "edit" button above) or contacting <acre+feedback@berkeley.edu>.
 
@@ -115,9 +106,9 @@ When reporting your improvements in the SSRP, we suggest using version control s
 
  1. Create an empty repository for your revised reproduction package. 
  2. Deposit the original reproduction package in this repository, then commit this changes using the name "depositing original reproduction package".    
- 3. In order to clearly show where are your improvements relative to the original reproduction package you then can takes one of the following strategies:  
- 3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or  
- 3b. Commit as often as you want, but provide the identifiers (tags) of the two commits: one for to mark the reproduction package *before* you initiate a specific change (e.g., adding missing analytic data), and a second commit with the reproduction package that contains the final version of this specific improvement. With this two identifiers, readers of your reproduction will be able to easily compare (make `diffs` in git) to see exactly what was added and/or deleted.   
+ 3. In order to clearly show where are your improvements relative to the original reproduction package you then can take one of the following strategies:  
+  3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or  
+  3b. Commit as often as you want, but provide the identifiers (tags) of two commits: one for to mark the reproduction package *before* you initiate a specific change (e.g., adding missing analytic data), and a second commit with the reproduction package that contains the final version of this specific improvement. With this two identifiers, readers of your reproduction will be able to easily compare (make `diffs` in git) to see exactly what was added and/or deleted.   
  4. Refer to the this specific commits (their tags) when describing a specific improvement in the SSRP.    
  
  
