@@ -149,3 +149,47 @@ stages_info %>%
     <td class="tg-c3ow" colspan="2">25%</td>
   </tr>
 </table>
+
+
+
+## Potential sources of papers to prioritize {#identify-timeline}  
+
+### Prioritize based on higher likelihood of reproduction 
+
+To curate a list of target papers in *economics*, instructors can consult recently published articles in the journals of the [American Economic Association](https://www.aeaweb.org/journals) (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the [AEA Data and Code Availability Policy](https://www.aeaweb.org/journals/data/data-code-policy) that took effect that year. In *political science*, target papers can be found in the *[American Journal of Political Science](https://ajps.org/ajps-verification-policy/)*, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the [Transparency and Openness Promotion (TOP) Factor](https://www.cos.io/initiatives/top-guidelines) (see scores [here](https://topfactor.org/)), maintained by the Center for Open Science.
+
+### Prioritize based on proxies of paper impact within a field
+
+Instructors and reproducers could prioritize papers based on their impact in their field. We suggest that an explicit criteria should be specified in order to define a pool of "high impact" papers. Here we demonstrate one such criteria for the field of Economics. 
+
+ 1. Go to [Google Scholar metrics](https://scholar.google.com/citations?view_op=metrics_intro&hl=en)   
+ 2. Select [top publications](https://scholar.google.com/citations?view_op=top_venues&hl=en)   
+ 3. Click on categories and select [Business, Economics & Management](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=bus). Then select in subcategories, select [Economics](https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=bus_economics)   
+ 4. Exclude the Journal of Economics Perspectives (a review journal that does little computational analysis).  
+ 5. Focus on the 10 journals with highest h5-index. In August 4th, 2021, this yields:  
+    - American Economic Review
+    - The Quarterly Journal of Economics
+    - The Review of Financial Studies
+    - Journal of Political Economy
+    - The Journal of Finance
+    - Econometrica
+    - The Review of Economic Studies
+    - Review of Economics and Statistics
+    - The Economic Journal
+    - Journal of Public Economics  
+ 6. For each journal click on the hyperlinked h5-index number (sort highest to lowest). 
+ 7. Select the first 10 articles in the list as sorted by citations. For example, for the *American Economic Review*, this procedure yields the following articles: 
+    - [The Effects of Exposure to Better Neighborhoods on Children: New Evidence from the Moving to Opportunity Experiment](https://scholar.google.com/scholar?oi=bibs&cluster=14593109523353163362&btnI=1&hl=en)  
+    - [Railroads of the Raj: Estimating the Impact of Transportation Infrastructure](https://scholar.google.com/scholar?oi=bibs&cluster=9632592800621257435&btnI=1&hl=en)
+    - [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment](https://scholar.google.com/scholar?oi=bibs&cluster=14882938779698367846&btnI=1&hl=en)
+    - [The Surprisingly Swift Decline of US Manufacturing Employment](https://scholar.google.com/scholar?oi=bibs&cluster=12934661864410944134&btnI=1&hl=en)
+    - [Monetary Policy According to HANK](https://scholar.google.com/scholar?oi=bibs&cluster=4926806483525389434&btnI=1&hl=en)
+    - [The Determinants and Welfare Implications of US Workers' Diverging Location Choices by Skill: 1980-2000](https://scholar.google.com/scholar?oi=bibs&cluster=2965198650429157010&btnI=1&hl=en)
+    - [Disruptive Change in the Taxi Business: The Case of Uber](https://scholar.google.com/scholar?oi=bibs&cluster=8446349612486899408&btnI=1&hl=en)
+    - [Bartik Instruments: What, When, Why, and How](https://scholar.google.com/scholar?oi=bibs&cluster=6025324097129642737&btnI=1&hl=en)
+    - [Importing Political Polarization? The Electoral Consequences of Rising Trade Exposure](https://scholar.google.com/scholar?oi=bibs&cluster=16547462466761479574&btnI=1&hl=en)
+    - [Long-Run Impacts of Childhood Access to the Safety Net](https://scholar.google.com/scholar?oi=bibs&cluster=4766165857030680369&btnI=1&hl=en)
+  
+ 8. Starting from the top: select a paper and read the abstract to verify that there is a computational analysis. Discard if there is not.  
+ 9. If there is, search [socialsciencereproduction.org](https://www.socialsciencereproduction.org/) to verify that there is a recorded reproduction.  
+ 10. If there is, you can create a new reproduction or move to the next paper in the list. If there is no reproduction recorded, create one. 

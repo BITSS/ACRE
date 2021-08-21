@@ -91,7 +91,7 @@ To record a specific analytical choice on the SSRP, please follow these steps:
 
 1.  Review a specific code file (e.g. `clean_merged_1_2.do`) and identify an analytical choice (e.g. `regress y x if gender == 1`). 
 
-2.  Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the `source` field, type *“original”* whenever the analytical choice is identified for the first time, and `file name-L+line number` each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the `source` field should be `original`,  `code_01.do-L103`, and `code_01.do-L103` respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look [like this](https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing):
+2.  Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the `source` field, type *“original”* whenever the analytical choice is identified for the first time, and `file name-L+line number` each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the `source` field should be `original`, `code_01.do-L103`, and `code_01.do-L103` respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used in the `choice_range` column (e.g., "min, max" or "alt 1, alt 2, alt 3"). The resulting database would look like this (real reproduction example [here](https://osf.io/57h3s/)):
 
 ```{r robust-checks, echo = FALSE, eval=temp_eval}
 robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
@@ -139,6 +139,9 @@ Eventually, you will be able to search the SSRP database of feasible robustness 
 5. Confirm that this test is not redundant with other tests in the paper or in the robustness exercise. 
 
 6. Report the result of the robustness check (new estimate, standard error, and units), and discuss differences with the pre-specified estimates for this claim.
+
+Discussing the reasonableness of a new robustness check could benefit from an open exchange of ideas. We recommend that reproducers create a new entry in the [SSRP forum](https://forum.socialsciencereproduction.org/) (remember to tag the DOI of the paper so others can find it) and post their robustness section in the forum to discuss with others (once public and in view only, you can share a link to any specific section of your reproduction).
+
 
 
 <!--

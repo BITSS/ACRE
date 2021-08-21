@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-19" />
+<meta name="date" content="2021-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,6 +175,11 @@ div.csl-indent {
 <li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.2</b> Identifying the relevant timeline</a></li>
+<li class="chapter" data-level="1.3" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.3</b> Potential sources of papers to prioritize</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="select.html"><a href="select.html#prioritie-based-on-higher-likelihood-of-reproduction"><i class="fa fa-check"></i><b>1.3.1</b> Prioritie based on higher likelihood of reproduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="select.html"><a href="select.html#prioritie-based-on-proxies-of-paper-impact-within-a-field"><i class="fa fa-check"></i><b>1.3.2</b> Prioritie based on proxies of paper impact within a field</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a>
 <ul>
@@ -212,7 +217,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
-<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-info-admin"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 <li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements using version control</a></li>
@@ -465,7 +470,62 @@ Robustness
 </td>
 </tr>
 </table>
+</div>
+<div id="identify-timeline" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Potential sources of papers to prioritize</h2>
+<div id="prioritie-based-on-higher-likelihood-of-reproduction" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Prioritie based on higher likelihood of reproduction</h3>
+<p>To curate a list of target papers in <em>economics</em>, instructors can consult recently published articles in the journals of the <a href="https://www.aeaweb.org/journals">American Economic Association</a> (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> that took effect that year. In <em>political science</em>, target papers can be found in the <em><a href="https://ajps.org/ajps-verification-policy/">American Journal of Political Science</a></em>, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the <a href="https://www.cos.io/initiatives/top-guidelines">Transparency and Openness Promotion (TOP) Factor</a> (see scores <a href="https://topfactor.org/">here</a>), maintained by the Center for Open Science.</p>
+</div>
+<div id="prioritie-based-on-proxies-of-paper-impact-within-a-field" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Prioritie based on proxies of paper impact within a field</h3>
+<p>Instructors and reproducers could prioritize papers based on their impact in their field. We suggest that an explicit criteria should be specified in order to define a pool of “high impact” papers. Here we demonstrate one such criteria for the field of Economics.</p>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://scholar.google.com/citations?view_op=metrics_intro&amp;hl=en">Google Scholar metrics</a><br />
+</li>
+<li>Select <a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en">top publications</a><br />
+</li>
+<li>Click on categories and select <a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=bus">Business, Economics &amp; Management</a>. Then select in subcategories, select <a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=bus_economics">Economics</a><br />
+</li>
+<li>Exclude the Journal of Economics Perspectives (a review journal that does little computational analysis).<br />
+</li>
+<li>Focus on the 10 journals with highest h5-index. In August 4th, 2021, this yields:
+<ul>
+<li>American Economic Review</li>
+<li>The Quarterly Journal of Economics</li>
+<li>The Review of Financial Studies</li>
+<li>Journal of Political Economy</li>
+<li>The Journal of Finance</li>
+<li>Econometrica</li>
+<li>The Review of Economic Studies</li>
+<li>Review of Economics and Statistics</li>
+<li>The Economic Journal</li>
+<li>Journal of Public Economics<br />
+</li>
+</ul></li>
+<li>For each journal click on the hyperlinked h5-index number (sort highest to lowest).</li>
+<li>Select the first 10 articles in the list as sorted by citations. For example, for the <em>American Economic Review</em>, this procedure yields the following articles:
+<ul>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=14593109523353163362&amp;btnI=1&amp;hl=en">The Effects of Exposure to Better Neighborhoods on Children: New Evidence from the Moving to Opportunity Experiment</a><br />
+</li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=9632592800621257435&amp;btnI=1&amp;hl=en">Railroads of the Raj: Estimating the Impact of Transportation Infrastructure</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=14882938779698367846&amp;btnI=1&amp;hl=en">The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=12934661864410944134&amp;btnI=1&amp;hl=en">The Surprisingly Swift Decline of US Manufacturing Employment</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=4926806483525389434&amp;btnI=1&amp;hl=en">Monetary Policy According to HANK</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=2965198650429157010&amp;btnI=1&amp;hl=en">The Determinants and Welfare Implications of US Workers’ Diverging Location Choices by Skill: 1980-2000</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=8446349612486899408&amp;btnI=1&amp;hl=en">Disruptive Change in the Taxi Business: The Case of Uber</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=6025324097129642737&amp;btnI=1&amp;hl=en">Bartik Instruments: What, When, Why, and How</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=16547462466761479574&amp;btnI=1&amp;hl=en">Importing Political Polarization? The Electoral Consequences of Rising Trade Exposure</a></li>
+<li><a href="https://scholar.google.com/scholar?oi=bibs&amp;cluster=4766165857030680369&amp;btnI=1&amp;hl=en">Long-Run Impacts of Childhood Access to the Safety Net</a></li>
+</ul></li>
+<li>Starting from the top: select a paper and read the abstract to verify that there is a computational analysis. Discard if there is not.<br />
+</li>
+<li>If there is, search <a href="https://www.socialsciencereproduction.org/">socialsciencereproduction.org</a> to verify that there is a recorded reproduction.<br />
+</li>
+<li>If there is, you can create a new reproduction or move to the next paper in the list. If there is no reproduction recorded, create one.</li>
+</ol>
 
+</div>
 </div>
 </div>
             </section>

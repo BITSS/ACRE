@@ -15,6 +15,8 @@ select
 declare
 check-acre
 identify-timeline
+prioritie-based-on-higher-likelihood-of-reproduction
+prioritie-based-on-proxies-of-paper-impact-within-a-field
 scoping
 read-sum
 record-a-revised-reproduction-package
@@ -41,7 +43,7 @@ ac
 cc
 dac
 debugging-cleaning-code
-adding-information-on-how-to-access-confidentialproprietary-data
+adding-info-admin
 paper-level
 doc-impr
 robust

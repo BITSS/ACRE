@@ -24,7 +24,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-08-19" />
+<meta name="date" content="2021-08-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,6 +175,11 @@ div.csl-indent {
 <li class="chapter" data-level="1.1.1" data-path="select.html"><a href="select.html#check-acre"><i class="fa fa-check"></i><b>1.1.1</b> Candidate paper entries in the SSRP</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.2</b> Identifying the relevant timeline</a></li>
+<li class="chapter" data-level="1.3" data-path="select.html"><a href="select.html#identify-timeline"><i class="fa fa-check"></i><b>1.3</b> Potential sources of papers to prioritize</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="select.html"><a href="select.html#prioritie-based-on-higher-likelihood-of-reproduction"><i class="fa fa-check"></i><b>1.3.1</b> Prioritie based on higher likelihood of reproduction</a></li>
+<li class="chapter" data-level="1.3.2" data-path="select.html"><a href="select.html#prioritie-based-on-proxies-of-paper-impact-within-a-field"><i class="fa fa-check"></i><b>1.3.2</b> Prioritie based on proxies of paper impact within a field</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="scoping.html"><a href="scoping.html"><i class="fa fa-check"></i><b>2</b> Scoping</a>
 <ul>
@@ -212,7 +217,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.1.4" data-path="improvements.html"><a href="improvements.html#cc"><i class="fa fa-check"></i><b>4.1.4</b> Adding missing data cleaning code</a></li>
 <li class="chapter" data-level="4.1.5" data-path="improvements.html"><a href="improvements.html#dac"><i class="fa fa-check"></i><b>4.1.5</b> Debugging analysis code</a></li>
 <li class="chapter" data-level="4.1.6" data-path="improvements.html"><a href="improvements.html#debugging-cleaning-code"><i class="fa fa-check"></i><b>4.1.6</b> Debugging cleaning code</a></li>
-<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-information-on-how-to-access-confidentialproprietary-data"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
+<li class="chapter" data-level="4.1.7" data-path="improvements.html"><a href="improvements.html#adding-info-admin"><i class="fa fa-check"></i><b>4.1.7</b> Adding information on how to access confidential/proprietary data</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="improvements.html"><a href="improvements.html#paper-level"><i class="fa fa-check"></i><b>4.2</b> Paper-level improvements</a></li>
 <li class="chapter" data-level="4.3" data-path="improvements.html"><a href="improvements.html#doc-impr"><i class="fa fa-check"></i><b>4.3</b> Documenting the improvements using version control</a></li>
@@ -356,7 +361,7 @@ Figure 5.1: Universe of robustness tests and its elements
 <p>To record a specific analytical choice on the SSRP, please follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li><p>Review a specific code file (e.g. <code>clean_merged_1_2.do</code>) and identify an analytical choice (e.g. <code>regress y x if gender == 1</code>).</p></li>
-<li><p>Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used. The resulting database would look <a href="https://docs.google.com/spreadsheets/d/1nZuJSHswbZgaaIfBcyIUGPwG-WIP8zE1Oambud-WoDc/edit?usp=sharing">like this</a>:</p></li>
+<li><p>Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used in the <code>choice_range</code> column (e.g., “min, max” or “alt 1, alt 2, alt 3”). The resulting database would look like this (real reproduction example <a href="https://osf.io/57h3s/">here</a>):</p></li>
 </ol>
 <div style="border: 0px;overflow-x: scroll; width:100%; ">
 <table class="table" style="margin-left: auto; margin-right: auto;">
@@ -500,6 +505,7 @@ Eventually, you will be able to search the SSRP database of feasible robustness 
 <li><p>Confirm that this test is not redundant with other tests in the paper or in the robustness exercise.</p></li>
 <li><p>Report the result of the robustness check (new estimate, standard error, and units), and discuss differences with the pre-specified estimates for this claim.</p></li>
 </ol>
+<p>Discussing the reasonableness of a new robustness check could benefit from an open exchange of ideas. We recommend that reproducers create a new entry in the <a href="https://forum.socialsciencereproduction.org/">SSRP forum</a> (remember to tag the DOI of the paper so others can find it) and post their robustness section in the forum to discuss with others (once public and in view only, you can share a link to any specific section of your reproduction).</p>
 <!--
 ## Test the robustness of results  
 
