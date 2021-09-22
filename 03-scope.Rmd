@@ -68,5 +68,8 @@ Identify a scientific claim and its corresponding preferred specification and re
 knitr::include_graphics("estimates.png")
 ```
 
+
+*Note:* If your display item of interest is a figure, you can record a specific point in the figure, or one that can be easily derived from it (e.g.,  the distance between two points). In the absence of a numerical estimate for this point, you are encouraged to record an approximate number by looking at the corresponding value in the y-axis. You should still aim at reproducing the entire figure, and report any differences in the assessment stage. 
+
 #### Declare possible robustness checks for main estimates (optional) {-}    
 After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done *within the same methodology* and *using the same data* (e.g., by including or excluding a subset of the data like "high-school dropouts" or "women"), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are *optional* and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be able to describe in greater detail how you have modified the reproduction code.

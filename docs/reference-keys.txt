@@ -15,8 +15,8 @@ select
 declare
 check-acre
 identify-timeline
-prioritie-based-on-higher-likelihood-of-reproduction
-prioritie-based-on-proxies-of-paper-impact-within-a-field
+prioritize-based-on-higher-likelihood-of-reproduction
+prioritize-based-on-proxies-of-paper-impact-within-a-field
 scoping
 read-sum
 record-a-revised-reproduction-package
