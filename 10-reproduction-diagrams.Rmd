@@ -100,7 +100,19 @@ In this case, there are many data files that were listed in the raw data and ana
 
 ### Final outputs is not a display item  
 
-<!-- TODO -->
+Below is a sample solution if the output file is missing while all needed code and data are available. In this case, a complete [Diagram Builder](#diagram) is still feasible with a placeholder for the missing output specifying the output (e.g., Fig 2 or Table 1) location displayed in the paper. 
+
+```
+        [Placeholder: Fig 1 Plot]
+            |___replication.do
+                |___state_BEA.dta
+   
+                
+        [Placeholder: Fig 2 Plot]
+            |___replication.do
+                |___county_BEA.dta
+     
+```
 
 ## Examples from real reproduction attempts
 
