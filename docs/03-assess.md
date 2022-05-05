@@ -34,11 +34,15 @@ The following terms will be used in this section:
 
 ### Describe the data sources and raw data. {#desc-sourc}
 
-In the paper you chose, find references to all *data sources* used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.   
+In the paper you chose, find references to all *data sources* used in the analysis. A data source is usually described in narrative form. For example, if in the body of the paper you see text like “…for earnings in 2018 we use the Current Population Survey…”, the data source is “Current Population Survey 2018”. If it is mentioned for the first time on page 1 of the Appendix, its location should be recorded as “A1”. Do this for all the data sources mentioned in the paper.
 
 Data sources also vary by unit of analysis, with some sources matching the same unit of analysis used in the paper (as in previous examples), while others are less clear (e.g., "our information on regional minimum wages comes from the Bureau of Labor Statistics." This should be recorded as "regional minimum wages from the Bureau of Labor Statistics").
 
+When filling out the cited and provided sections for data in the assessment stage, make sure to check that the data is actually cited. Usually, we want to encourage the authors to cite the dataset itself. If the cited source is a study instead, you should use your own judgement on determining whether or not you can count the data as cited.
+
 Next, look at the reproduction package and map the *data sources* mentioned in the paper to the *data files* in the available materials. Record their folder locations relative to the main reproduction folder^[a relative location takes the form of `/folder_in_rep_materials/sub_folder/file.txt`, in contrast to an absolute location that takes the form of `username/documents/projects/repros/folder_in_rep_materials/sub_folder/file.txt`]. In addition to looking at the existing data files, we recommend that you review the first lines of all code files (especially cleaning code), looking for lines that call the datasets. Inspecting these scripts may help you understand how different data sources are used, and possibly identify any files that are missing from the reproduction package.
+
+One thing to note is that if the data is pulled from a source such as a database, there should be detailed instructions on how to retrieve this information from the source in order for the dataset to be considered raw data. If this information on how to acquire/query the data is not clear or does not yield the same results, the data should not be considered raw data.
 
 Record this information in this [standardized spreadsheet](https://docs.google.com/spreadsheets/d/1LUIdVFH0OfR70C7z07TYeE-uWzKI_JIeWUMaYhqEKK0/edit#gid=0&range=A1) (download it or make a copy for yourself), using the following structure:    
 <table class="table" style="margin-left: auto; margin-right: auto;">
