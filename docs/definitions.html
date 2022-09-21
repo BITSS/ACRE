@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Definitions | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Definitions | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="contributions.html"/>
 <link rel="next" href="references.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,8 +310,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="definitions" class="section level1" number="11">
-<h1><span class="header-section-number">Chapter 11</span> Definitions</h1>
+<div id="definitions" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Definitions<a href="definitions.html#definitions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ul>
 <li><p><strong>Abandoned paper:</strong> A paper that has been considered for reproduction, but the reproducer decided not to move forward with the analysis due to failure to locate a reproduction package. Learn more <a href="https://bitss.github.io/ACRE/scoping.html#from-candidate-to-declared-paper">here</a>.</p></li>
 <li><p><strong>Analysis code:</strong> A script associated primarily with analysis. Most of its content is dedicated to actions like running regressions, running hypothesis tests, computing standard errors, and imputing missing values.</p></li>
@@ -351,7 +350,7 @@ Researchers commonly record such details in a hypothesis or trial registry, usua
 </ul>
 
 </div>
-<h3>References</h3>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-simonsohn2019specification" class="csl-entry">
 Simonsohn, Uri, Joseph P Simmons, and Leif D Nelson. 2019. <span>“Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications.”</span> <em>Available at SSRN 2694998</em>.
@@ -367,7 +366,6 @@ Simonsohn, Uri, Joseph P Simmons, and Leif D Nelson. 2019. <span>“Specificatio
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -407,6 +405,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

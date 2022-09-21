@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Scoping | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Scoping | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="select.html"/>
 <link rel="next" href="assessment.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,23 +310,23 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="scoping" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Scoping</h1>
+<div id="scoping" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Scoping<a href="scoping.html#scoping" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>At this stage, you will define the <em>scope of the reproduction</em> by identifying the <em>scientific claims</em> and related <em>display items</em> that you will analyze in the remainder of the reproduction. For this exercise, we follow the a comparable definition of a claim as used in the SCORE project, a related initiative aimed at predicting replicability and reproducibility of research:</p>
 <blockquote>
-<p>“A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim [may not be] equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the [results of the paper].”</p>
+<p>“A research claim is a single major finding from a published study, as well as details of the methods and results that support this finding. A research claim [may not be] equivalent to an entire article. Sometimes the claim as described in the abstract does not exactly match the claim that is tested. In this case, you should consider the research claim to be that which is described in the [results of the paper]”.</p>
 <p>– <cite><a href="https://replicats.research.unimelb.edu.au/#tab301">RepliCATS Project</a> </cite></p>
 </blockquote>
 <p>In the SSRP framework, different claims in a paper may be tested using different methodologies, and their results may be presented in one or more display items, such as tables and figures (<a href="intro.html#fig:diagram">figure 0.1</a> illustrates this idea). Claims can have different structures, here we propose two high-level categories based on the most common structures:</p>
 <ul>
-<li><p><strong>Causal claim:</strong> a claim is causal if it can be summarize using causal language. This language can be characterize by the following structure: “The paper estimates the effect of a variable <em>X</em> on outcome <em>Y</em> for population <em>P</em>, using method <em>M</em>.” For example: “This paper investigates the impact of bicycle provision (X) on secondary school enrollment (Y) among young women in Bihar/India (P), using a Difference in Difference approach (M).”</p></li>
-<li><p><strong>Descriptive/predictive claim:</strong> a claim is descriptive or predictive if it can be summarize using descriptive or predictive language. language can be characterize by the following structure: “The paper estimates the value of a variable <em>Y</em> (estimated or predicted) for population <em>P</em> under dimensions <em>X</em> (optional) using method <em>M</em>.” For example, “Drawing on a unique Swiss data set (P) and exploiting systematic anomalies in countries’ portfolio investment positions (M), I find that around 8% of the global financial wealth of households is held in tax havens (Y).”</p></li>
+<li><p><strong>Causal claim:</strong> a claim is causal if it can be summarize using causal language. This language can be characterize by the following structure: “The paper estimates the effect of a variable <em>X</em> on outcome <em>Y</em> for population <em>P</em>, using method <em>M</em>”. For example: “This paper investigates the impact of bicycle provision (X) on secondary school enrollment (Y) among young women in Bihar/India (P), using a Difference in Difference approach (M).”</p></li>
+<li><p><strong>Descriptive/predictive claim:</strong> a claim is descriptive or predictive if it can be summarize using descriptive or predictive language. language can be characterize by the following structure: “The paper estimates the value of a variable <em>Y</em> (estimated or predicted) for population <em>P</em> under dimensions <em>X</em> (optional) using method <em>M</em>”. For example, “Drawing on a unique Swiss data set (P) and exploiting systematic anomalies in countries’ portfolio investment positions (M), I find that around 8% of the global financial wealth of households is held in tax havens (Y).”</p></li>
 </ul>
 <p>A <em>display item</em> is a figure or table that presents the results described in the paper. Each display item may contain several specifications, or estimates that result from variations in specific analytical choices. If the display item of interest is a figure, the specification can be recorded as an number approximated by visual inspection of a particular point in the figure.</p>
-<p>When recording the Scoping section on the SSRP platform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summaries as follows: “The paper tested the effect of X on Y for population P, using method M. The main results show an effect of magnitude E (specify units and standard errors)” or “The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors).” Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.</p>
+<p>When recording the Scoping section on the SSRP platform, count all of the claims in the paper and provide a one sentence summary for the subset of claims that you will attempt to reproduce. Structure your summaries as follows: “The paper tested the effect of X on Y for population P, using method M. The main results show an effect of magnitude E (specify units and standard errors)” or “The paper estimated the value of Y (estimated or predicted) for population P under dimensions X using method M. The main results presented an estimate of of magnitude E (specify units and standard errors)”. Make sure to use the same units of measurement for all scientific claims that you will analyze as part of the reproduction.</p>
 <p><strong>Note:</strong> Once you progress past the Scoping stage on the SSRP, <em>you will no longer be able to edit your responses in the Scoping stage</em>, though you will be able to see them. This is because the content of later stages of the reproduction is dependent on the information you record at this stage of the reproduction.</p>
-<div id="read-sum" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Read and summarize the paper</h2>
+<div id="read-sum" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Read and summarize the paper<a href="scoping.html#read-sum" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Depending on your reproduction’s timeline, we recommend that you write a short (&lt;1000 words) summary of the paper. Writing up such a summary will help you develop and demonstrate a wholesome understanding of the paper and its various components. In your summary, try to address the following:</p>
 <ul>
 <li>How many scientific claims can you identify in the paper?</li>
@@ -349,8 +348,8 @@ div.csl-indent {
 </ul>
 <p>Draft the summary in a plain text editor and paste the text in the form.</p>
 </div>
-<div id="record-a-revised-reproduction-package" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Record a revised reproduction package</h2>
+<div id="record-a-revised-reproduction-package" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Record a revised reproduction package<a href="scoping.html#record-a-revised-reproduction-package" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>At the previous stage, you recorded the location of the original reproduction package made available by the paper’s authors. Given that one of the main goals of the ACRe approach is to improve reproducibility, we recommend that you build an alternative reproduction package that will improve the reproducibility of specific display items or the paper as a whole.
 You can start by downloading the original reproduction package (or <em>forking</em>, if on GitHub) and uploading a copy titled “Revised reproduction package for [Paper Citation, e.g. Smith et al. (2019)]” to a trusted repository. Examples of trusted repositories include <a href="https://dataverse.org/">Dataverse</a>, <a href="https://www.openicpsr.org/openicpsr/">openICPSR</a>, <a href="https://figshare.com">Figshare</a>, <a href="https://datadryad.org/stash">Dryad</a>, <a href="https://about.zenodo.org/">Zenodo</a>, <a href="osf.io/">Open Science Framework</a> and others. We encourage you to also use version control software (e.g., Git) during your reproduction.</p>
 <p>Trusted repositories have a file size limit (typically around 2gb). If you think that your reproduction package will exceed this limit please do the following:</p>
@@ -363,14 +362,14 @@ You can start by downloading the original reproduction package (or <em>forking</
 </ul>
 <p>As you work through the next stages, you can modify the reproduction package and record your improvements on the SSRP. Keeping a record of such changes will help you document your assessments or communicate with the original authors, and it will also allow future reproducers to build on top of your work. For users of version control software (e.g, Git) we recommend to track each improvement in separate commits. Then you can link the specific commits in the improvements section. This way reproducers can clearly communicate to original authors what specific lines of the code were modified (using the <code>diff</code> feature).</p>
 </div>
-<div id="declare-estimates" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Record scope of the exercise</h2>
+<div id="declare-estimates" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Record scope of the exercise<a href="scoping.html#declare-estimates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By now, you probably have a reasonably good understanding of the paper. You do not, however, need to spend any time reviewing the reproduction package in detail yet.</p>
 <p>At this point, you should specify the parts of the paper that will be the main focus of your reproduction. Focus on specific estimates, represented by a unique combination of claim-display item-specification as represented in figure <a href="intro.html#fig:diagram">0.1</a>. Given the complexity of the SSRP approach, unless you are very familiar with the paper, we recommend starting with just one claim before moving onto second or third as part of a later reproduction.</p>
-<div id="declare-a-specific-estimates-to-reproduce" class="section level4 unnumbered">
-<h4>Declare a specific estimate(s) to reproduce</h4>
+<div id="declare-a-specific-estimates-to-reproduce" class="section level4 unnumbered hasAnchor">
+<h4>Declare a specific estimate(s) to reproduce<a href="scoping.html#declare-a-specific-estimates-to-reproduce" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Identify a scientific claim and its corresponding preferred specification and record its magnitude (specify units), standard error, and location in the paper (page, table #, and table row and column). If the authors did not explicitly choose a precise preferred estimate, you can choose one yourself. In addition to the preferred estimate, you can reproduce up to five estimates that correspond to the preferred estimate’s alternative specifications. You can then enter all this information in the SSRP in a table like the one below</p>
-<div class="figure" style="text-align: center"><span id="fig:estim"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:estim"></span>
 <img src="estimates.png" alt="SSRP table to input specifications for each claim" width="80%" />
 <p class="caption">
 Figure 2.1: SSRP table to input specifications for each claim
@@ -378,8 +377,8 @@ Figure 2.1: SSRP table to input specifications for each claim
 </div>
 <p><em>Note:</em> If your display item of interest is a figure, you can record a specific point in the figure, or one that can be easily derived from it (e.g., the distance between two points). In the absence of a numerical estimate for this point, you are encouraged to record an approximate number by looking at the corresponding value in the y-axis. You should still aim at reproducing the entire figure, and report any differences in the assessment stage.</p>
 </div>
-<div id="declare-possible-robustness-checks-for-main-estimates-optional" class="section level4 unnumbered">
-<h4>Declare possible robustness checks for main estimates (optional)</h4>
+<div id="declare-possible-robustness-checks-for-main-estimates-optional" class="section level4 unnumbered hasAnchor">
+<h4>Declare possible robustness checks for main estimates (optional)<a href="scoping.html#declare-possible-robustness-checks-for-main-estimates-optional" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>After reading the paper, you might wonder why the authors did not conduct a specific robustness test. If you think that such analysis could have been done <em>within the same methodology</em> and <em>using the same data</em> (e.g., by including or excluding a subset of the data like “high-school dropouts” or “women”), please specify a robustness test that you would like to conduct before starting the Assessment stage. Robustness checks in this stage are <em>optional</em> and can take the form of a short sentence describing at a high level what you (the reproducer) would like to explore in a later stage. In the robustness stage (after assessment and improvement) you will be able to describe in greater detail how you have modified the reproduction code.</p>
 
 </div>
@@ -395,7 +394,6 @@ Figure 2.1: SSRP table to input specifications for each claim
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -435,6 +433,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

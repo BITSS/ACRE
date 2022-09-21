@@ -1,3 +1,9 @@
+```{r setup-select 8, echo = FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
 # Guidance for Instructors Supervising Reproduction Assignments
 
 The [Social Science Reproduction Platform](https://www.socialsciencereproduction.org/) (SSRP) is an openly-licensed platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:  
@@ -59,72 +65,23 @@ Instructors could select papers base on prior expectations of reproducibility, o
  
 To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The *Scoping* and *Assessment* stages will take approximately the same amount of time across timelines, but will depend on the students’ prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.
 
-```{r stages-dis1, out.width = '100%', echo=FALSE, eval=FALSE}
-# Ask a URAP TO REPRODUCE HTML TABLE BELOW USING KABLE
-stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
-                            Scope    = c("10%", "5%", "5%"),
-                            Assess   = c("35%", "25%", "20%"),
-                            Improve  = c("25%", "40%", "50%"),
-                            Robust   = c("30%", "30%", "25%") )
-stages_info %>%
-    knitr::kable(caption = "Suggested Relative Level of Effort by Type of exercise") %>%
-    kable_styling(full_width = TRUE)
-```
 **Table 1: Workload distribution across reproduction stages across different timelines**
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-c3ow" colspan="2">2 weeks <br> (~10 days)</th>
-    <th class="tg-c3ow" colspan="2">1 month <br> (~20 days)</th>
-    <th class="tg-c3ow" colspan="2">1 semester <br> (~100 days)</th>
-  </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Scoping</td>
-    <td class="tg-c3ow" colspan="2">10% (1 day)</td>
-    <td class="tg-c3ow" colspan="2">5% (1 day)</td>
-    <td class="tg-c3ow" colspan="2">5% (5 days)</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Assessment</td>
-    <td class="tg-c3ow" colspan="2">35%</td>
-    <td class="tg-c3ow" colspan="2">25%</td>
-    <td class="tg-c3ow" colspan="2">15%</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Improvement</td>
-    <td class="tg-c3ow">25%</td>
-    <td class="tg-c3ow">0%</td>
-    <td class="tg-c3ow" colspan="2">40%</td>
-    <td class="tg-c3ow">30%</td>
-    <td class="tg-c3ow">20%</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Robustness</td>
-    <td class="tg-c3ow">25%</td>
-    <td class="tg-c3ow">5%</td>
-    <td class="tg-c3ow" colspan="2">30%</td>
-    <td class="tg-c3ow" colspan="2">30%</td>
-  </tr>
-</table>
+```{r stages-dis1, out.width = '100%', echo=FALSE, eval=TRUE}
+df <- data.frame(matrix(ncol = 7, nrow = 0))
+
+kbl(df, col.names = rep(c(" "), times = 7), booktabs = TRUE) %>%
+        kable_styling(latex_options = c("hold_position")) %>%
+        kable_paper() %>%
+        sub("\\\\bottomrule", "", .) %>%
+        add_header_above(c("Robustness"=1, "25%"=1, "5%"=1, "25%"=2, "25%"=2)) %>%
+        add_header_above(c("Improvement"=1, "25%"=1, "0%"=1, "40%"=2, "20%"=1, "30%"=1)) %>%
+        add_header_above(c("Assesment"=1, "35%"=2, "25%"=2, "15%"=2)) %>%
+        add_header_above(c("Scoping"=1, "10% (1 day)"=2, "10% (2 day)"=2, "10% (10 days)"=2)) %>%
+        add_header_above(c("Stages of\n Reproduction"=1, "analysis\ndata"=1, "raw\ndata"=1,
+                           "analysis\ndata"=1, "raw\ndata"=1,"analysis\ndata"=1, "raw\ndata"=1)) %>%
+        add_header_above(c(" "=1, "2 weeks\n(~10 days)"=2, "1 month\n(~20 days)"=2, "1 semester\n(~100 days)"=2))
+```
+
 ## Grading strategy 
 
 Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students’ work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don’t contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.

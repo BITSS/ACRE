@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Guidance for Instructors Supervising Reproduction Assignments | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="concluding-the-reproduction.html"/>
 <link rel="next" href="comunications.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,8 +310,8 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="guidance-for-instructors-supervising-reproduction-assignments" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Guidance for Instructors Supervising Reproduction Assignments</h1>
+<div id="guidance-for-instructors-supervising-reproduction-assignments" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Guidance for Instructors Supervising Reproduction Assignments<a href="guidance-for-instructors-supervising-reproduction-assignments.html#guidance-for-instructors-supervising-reproduction-assignments" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The <a href="https://www.socialsciencereproduction.org/">Social Science Reproduction Platform</a> (SSRP) is an openly-licensed platform that crowdsources and catalogs attempts to assess and improve the computational reproducibility of published social science research. Instructors can use the SSRP in combination with this Guide (called the “ACRe Guide”) to facilitate reproduction assignments (sometimes called “replications”) in applied social science courses at the graduate and undergraduate levels. Students can use these materials with little to no supervision, covering the following learning activities:</p>
 <ul>
 <li>Assessing and improving the reproducibility of published work<br />
@@ -336,150 +335,221 @@ div.csl-indent {
 5. <em><a href="https://bitss.github.io/ACRE/robust.html#robust">Robustness</a></em>, where students identify feasible robustness checks and/or assess the reasonableness of variations in analytical choices.</p>
 <p>This chapter includes tips and resources for instructors interested in using the SSRP to teach reproducibility. We first identify typical use cases and suggest timelines for planning assignments. We then provide sample grading strategies and guidance in instances where the students would like to remain anonymous but still share their work on the SSRP.</p>
 <p><em>Get started by <a href="https://www.socialsciencereproduction.org/users/sign_in">signing up for a free SSRP account</a> and reviewing this chapter to find tips based on your use case below.</em></p>
-<div id="common-use-cases" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Common use cases</h2>
-<div id="graduate-level-assignment" class="section level3" number="7.1.1">
-<h3><span class="header-section-number">7.1.1</span> Graduate-level assignment</h3>
+<div id="common-use-cases" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Common use cases<a href="guidance-for-instructors-supervising-reproduction-assignments.html#common-use-cases" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="graduate-level-assignment" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Graduate-level assignment<a href="guidance-for-instructors-supervising-reproduction-assignments.html#graduate-level-assignment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>(Estimated duration: 2 weeks to one semester)</em></p>
 <p>Advanced master’s or PhD-level courses often feature assignments where students reproduce published papers to gain familiarity with fundamental concepts, research methods, and applications. In these courses, instructors can recommend students choose papers from specific sub-fields (e.g., labor economics) or journals, or curate a list of possible papers.</p>
 <p>The length of such assignments can vary from a couple of weeks to a semester. For shorter timelines, instructors can ask students to conduct reproductions using only analysis data, focusing on just the main results. For longer timelines, such as semester-long assignments, students might reproduce entire papers from raw data. See section 7.2 below for a suggested distribution of effort across different lengths of assignments.</p>
 <p>Graduate students should expect to spend a significant time at the <em>Robustness</em> stage. Therefore, before beginning the assignment, we recommend that students focus either on expanding the set of feasible robustness checks (see <a href="https://bitss.github.io/ACRE/robust.html">Chapter 5</a>) or on testing and defending the reasonableness of a specific robustness check (which may contain more variations in more than one analytical choice).</p>
 </div>
-<div id="undergraduate-thesis" class="section level3" number="7.1.2">
-<h3><span class="header-section-number">7.1.2</span> Undergraduate thesis</h3>
+<div id="undergraduate-thesis" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Undergraduate thesis<a href="guidance-for-instructors-supervising-reproduction-assignments.html#undergraduate-thesis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>(Estimated duration: 2 months to 1 year)</em></p>
 <p>Students can use the platform to carry out detailed reproductions as part of an undergraduate thesis (see an example <a href="https://osf.io/3e6ps/">here</a>). This type of assignment allows students to gain direct research experience while making meaningful contributions to the field.</p>
 <p>Depending on the paper’s scope and the assignment’s learning objectives, such projects could last anywhere from a couple of months to an entire year. Students should demonstrate an understanding of the paper by identifying its main claim(s) at the <em>Scoping</em> stage and conducting a detailed assessment of the reproducibility of their associated display items at the Assessment stage. At the <em>Improvement</em> stage, students should try to improve the reproducibility of at least one display item. Depending on the scope of the paper, examples within reach of an undergraduate thesis might include finding and cleaning the raw data, translating code scripts into a different programming language (ideally open source), using dynamic documents, or making other improvements suggested by the instructor. Finally, at the <em>Robustness</em> stage, students should be able to demonstrate a high-level understanding of the conditions under which the paper’s estimates are valid.</p>
 <p>We recommend breaking down the assignment into a “proposal” stage, where students scope and assess their papers, and an “execution” stage, where students carry out improvements and robustness checks.</p>
 </div>
-<div id="undergraduate-course" class="section level3" number="7.1.3">
-<h3><span class="header-section-number">7.1.3</span> Undergraduate course</h3>
+<div id="undergraduate-course" class="section level3 hasAnchor" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Undergraduate course<a href="guidance-for-instructors-supervising-reproduction-assignments.html#undergraduate-course" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><em>(Estimated duration: 1 month to one semester)</em></p>
 <p>Students in undergraduate courses should primarily focus on verifying whether reproductions packages “run” and recording the outcome on the SSRP. At the <em>Scoping</em> stage, undergraduate students can demonstrate a high-level understanding of the paper’s main claims. Students can identify the code and files necessary to reproduce their select display items at the <em>Assessment</em> stage and try to actually run the code. Finally, at the <em>Robustness</em> stage students can inspect the code scripts and identify potential lines of code with analytical choices, increasing the feasible set of robustness checks.</p>
 </div>
 </div>
-<div id="paper-selection-and-assignment-timelines" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Paper selection and assignment timelines</h2>
+<div id="paper-selection-and-assignment-timelines" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Paper selection and assignment timelines<a href="guidance-for-instructors-supervising-reproduction-assignments.html#paper-selection-and-assignment-timelines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The SSRP allows for flexibility in selecting papers and determining the scope of reproduction assignments in terms of the number of claims, display items, or even the required reproduction stages (at minimum, a complete reproduction requires filling in <em>Scoping</em> and <em>Assessment</em>). For example, instructors can <strong>curate a list of target papers</strong> or <strong>allow students to choose</strong> from a distinct body of literature or a specific journal. For either strategy, a good starting point is first to reference the <a href="https://www.socialsciencereproduction.org/reproductions/search">SSRP database of papers and reproductions</a>, which allows users to search through submitted reproductions. This can help detect potential “no-go” papers for which other users were unable to find any reproduction materials (labeled as “abandoned papers”), though users are by no means barred from attempting to reproduce such cases. Reproducers can also look into the suggestions of future improvements (under the Improvements stage) and dedicate a reproduction exercise to a specific suggestion identified by in a previous reproduction.</p>
 <p>If instructors are unable to curate a list of papers with readily available reproduction packages, we recommend allocating at least 3 additional weeks to try to locate the missing reproduction materials, potentially by contacting the original authors (see <a href="https://bitss.github.io/ACRE/comunications.html#comunications">this chapter</a> for guidance on constructive exchanges with original authors).</p>
 <p>Instructors could select papers base on prior expectations of reproducibility, or based on proxies for impact papers on their field (e.g., citations). See the further guidance on <a href="select.html#identify-timeline">paper selection</a> in the Selecting a Paper chapter.</p>
 <p>To plan the distribution of effort across different reproduction stages, we recommend consulting Table 1 below. The <em>Scoping</em> and <em>Assessment</em> stages will take approximately the same amount of time across timelines, but will depend on the students’ prior experience with reproductions and the SSRP. Larger differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code), which may limit the number of possible robustness checks.</p>
 <strong>Table 1: Workload distribution across reproduction stages across different timelines</strong>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
+<table class="table lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
 <tr>
-<th class="tg-0pky">
+<th style="empty-cells: hide;" colspan="1">
 </th>
-<th class="tg-c3ow" colspan="2">
-2 weeks <br> (~10 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+2 weeks<br>(~10 days)
+</div>
 </th>
-<th class="tg-c3ow" colspan="2">
-1 month <br> (~20 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+1 month<br>(~20 days)
+</div>
 </th>
-<th class="tg-c3ow" colspan="2">
-1 semester <br> (~100 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+1 semester<br>(~100 days)
+</div>
 </th>
 </tr>
 <tr>
-<td class="tg-0pky">
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+Stages of<br> Reproduction
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Scoping
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 10% (1 day)
-</td>
-<td class="tg-c3ow" colspan="2">
-5% (1 day)
-</td>
-<td class="tg-c3ow" colspan="2">
-5% (5 days)
-</td>
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+10% (2 day)
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+10% (10 days)
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
-Assessment
-</td>
-<td class="tg-c3ow" colspan="2">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+Assesment
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 35%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 15%
-</td>
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Improvement
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 0%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 40%
-</td>
-<td class="tg-c3ow">
-30%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 20%
-</td>
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+30%
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Robustness
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 5%
-</td>
-<td class="tg-c3ow" colspan="2">
-30%
-</td>
-<td class="tg-c3ow" colspan="2">
-30%
-</td>
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+25%
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+25%
+</div>
+</th>
 </tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
 </table>
 </div>
-<div id="grading-strategy" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Grading strategy</h2>
+<div id="grading-strategy" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Grading strategy<a href="guidance-for-instructors-supervising-reproduction-assignments.html#grading-strategy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Once students have completed their reproductions, they can generate and share with instructors links to view-only reports of their work. Instructors can use these reports to grade and provide feedback on students’ work. Below we suggest a strategy for grading based on the use cases described above. For assignments that don’t contain all reproduction stages, we recommend distributing credits proportionally to the stages that were filled out.</p>
 <p>We suggest the following grading categories:</p>
 <ul>
@@ -517,6 +587,11 @@ Robustness
 </ul></li>
 </ul>
 <table>
+<colgroup>
+<col width="61%" />
+<col width="17%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -578,8 +653,8 @@ Robustness
 </tbody>
 </table>
 </div>
-<div id="facilitating-class-anonymous-reproductions" class="section level2" number="7.4">
-<h2><span class="header-section-number">7.4</span> Facilitating <em>class anonymous</em> reproductions</h2>
+<div id="facilitating-class-anonymous-reproductions" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Facilitating <em>class anonymous</em> reproductions<a href="guidance-for-instructors-supervising-reproduction-assignments.html#facilitating-class-anonymous-reproductions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The SSRP allows users to select from three distinct privacy models when submitting their work, including <em>public-identified</em>, <em>temporary anonymous</em>, and <em>class anonymous</em> (explained in more detail <a href="https://bitss.github.io/ACRE/concluding-the-reproduction.html#visibility-and-data-use">here</a>). This section includes specific guidance for instructors facilitating reproductions that will be published using the <em>class anonymous</em> privacy model, which allows users to conceal their identities and free-form narrative answers (e.g., notes, descriptions, summaries, explanations) indefinitely. Instead, reproductions published under the class anonymous model contain only categorical responses and basic class identifiers, including course name, year, institution, instructor’s name, and instructor’s email address.</p>
 <p>Reproducers looking to publish under the <em>class anonymous</em> model will be unable to maintain their anonymity if they share their revised reproduction packages as part of their reproductions. This is because trusted data repositories and GitHub require users to create accounts in order to post their content and keep records of updates. We advise instructors to create generic repositories for their class (e.g., “Reproductions for Econ 270 - Fall 2021”) and deposit each anonymous reproduction in self-contained folders.</p>
 <p>For example, suppose a class has two students who choose the anonymous option. In that case, they should share (privately) their revised reproduction package with their instructor, and the instructor should post them using the following structure:</p>
@@ -600,7 +675,6 @@ Robustness
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -640,6 +714,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

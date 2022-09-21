@@ -2885,6 +2885,7 @@ adding_rows_to_code <- data.frame(file_name = c("...", "missing_file1", "missing
 
 adding_rows_to_code %>%
     knitr::kable(caption = "Adding rows to code spreadsheet") %>%
+    kable_styling(latex_options = c("hold_position")) %>%
     kable_styling(full_width = TRUE)
 ```
 

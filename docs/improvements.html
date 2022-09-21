@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Improvements | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Improvements | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="assessment.html"/>
 <link rel="next" href="robust.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,19 +310,19 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="improvements" class="section level1" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Improvements</h1>
+<div id="improvements" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Improvements<a href="improvements.html#improvements" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>As you assess a paper, you can start proposing ways to improve its reproducibility. These improvements can be at the paper level or specific to a display item. The Social Science Reproduction Platform (SSRP) also allows you to record improvements that you’ve already implemented or that you suggest for future reproducers (including yourself) to implement. Considering improvements is an opportunity to gain a deeper understanding of a paper’s methods, findings, and overall contributions. Each contribution can also be assessed and used by the wider SSRP community, including other students and researchers using the SSRP.</p>
 <!--
 ONCE THIS FEATURE IS DEPLOYED IN THE SSRP: 
 Some of the improvements might require you to engage with the original authors of the study you are reproducing. This stage will help you identify if the authors have already been contacted with a similar request and, if not, how to approach them in order to have a constructive exchange.  
 -->
 <p>As with the <em>Assessment</em> stage, we recommend that you first focus on one specific display item (e.g., “Table 1”). After making improvements to this first item, you will have a much easier time translating those improvements to other items.</p>
-<div id="di-imp" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> Display item improvements</h2>
+<div id="di-imp" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Display item improvements<a href="improvements.html#di-imp" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As part of your assessment of specific display items, you will identify potential issues with the original reproduction package. In addition to identifying these gaps, you are encouraged to implement specific improvements. In this section we suggest steps on how to add missing materials (data or code), or debug analysis or cleaning code. Record these improvements in the “Display item improvements” section.</p>
-<div id="rd" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Adding raw data: missing files or metadata</h3>
+<div id="rd" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Adding raw data: missing files or metadata<a href="improvements.html#rd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Reproduction packages often do not include all original <a href="assessment.html#describe-inputs">raw datasets</a>. To obtain any missing raw data or information about them, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the missing file. During the <a href="assessment.html#assessment">Assessment</a> stage, you identified all data sources from the paper’s body and appendices (<a href="#desc-sourc.">step 1.1</a>. However, some data sources (as collected by the original investigators) might be missing one or more files. You can sometimes find the specific name of those files by looking at the beginning of the cleaning code scripts.<br />
@@ -341,8 +340,8 @@ Some of the improvements might require you to engage with the original authors o
 <li>If the datasets are not available due to legal or ethical restrictions, you can still improve the reproduction package by providing detailed instructions on how to access these data. For future researchers to follow, including contact information and possible costs of obtaining the raw data (e.g., access fees, how much time it might take between requesting and receiving access, etc.). Use <a href="sample-DAS.html">this checklist</a> (<a href="sample-DAS.pdf">.pdf</a>, <a href="https://github.com/BITSS/ACRE/blob/master/sample-DAS.md">.md</a>) as a template to fill in.</li>
 </ol>
 </div>
-<div id="ad" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Adding missing analytic data files</h3>
+<div id="ad" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Adding missing analytic data files<a href="improvements.html#ad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="assessment.html#describe-inputs">Analytic data</a> might be missing for two reasons: (1) raw data exists, but the procedures to transform it into analytic data are not fully reproducible, or (2) some or all raw data is missing, and some or all analytic data is not included in the original reproduction package. To obtain any missing analytic data, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the specific name of the missing data set. Typically this information can be found in some of the analysis code that calls the data to perform an analysis (e.g., <code>analysis_data_03.csv</code>).<br />
@@ -354,8 +353,8 @@ Some of the improvements might require you to engage with the original authors o
 <li><a href="#tips-for-communication">Contact the authors</a> and request the specific data set.</li>
 </ol>
 </div>
-<div id="ac" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Adding missing analysis code</h3>
+<div id="ac" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Adding missing analysis code<a href="improvements.html#ac" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="assessment.html#describe-inputs">Analysis code</a> can be added when analytic data files are available, but some or all methodological steps are missing from the code. In this case, follow these steps:</p>
 <ol style="list-style-type: decimal">
 <li>Identify the specific line or paragraph in the paper that describes the analytic step that is missing from the code (e.g., “We impute missing values to…” or “We estimate this regression using a bandwidth of…”).<br />
@@ -368,12 +367,12 @@ Some of the improvements might require you to engage with the original authors o
 <li>If step #4 does not work, we encourage you to attempt to recreate the analysis using your own interpretation of the paper, and making explicit your assumptions when filling in any gaps.</li>
 </ol>
 </div>
-<div id="cc" class="section level3" number="4.1.4">
-<h3><span class="header-section-number">4.1.4</span> Adding missing data cleaning code</h3>
+<div id="cc" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Adding missing data cleaning code<a href="improvements.html#cc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><a href="assessment.html#describe-inputs">Data cleaning (processing) code</a> might be added when steps are missing in the creation or re-coding of variables, merging, subsetting of the data sets, or other steps related to data cleaning and processing. You should follow the same steps you used when adding missing analysis code (steps 1-5 above).</p>
 </div>
-<div id="dac" class="section level3" number="4.1.5">
-<h3><span class="header-section-number">4.1.5</span> Debugging analysis code</h3>
+<div id="dac" class="section level3 hasAnchor" number="4.1.5">
+<h3><span class="header-section-number">4.1.5</span> Debugging analysis code<a href="improvements.html#dac" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Whenever code is available in the reproduction package, you should be able to debug those scripts. There are at least five types of debugging that can improve the reproduction package:</p>
 <ul>
 <li><em>Code cleaning:</em> Simplify the instructions (e.g., by wrapping repetitive steps in a function or a loop) or remove redundant code (i.e., old code that was commented out) while keeping the original output intact.<br />
@@ -389,18 +388,18 @@ Some of the improvements might require you to engage with the original authors o
 Please follow the ACRE procedure to report coding errors.  
 -->
 </div>
-<div id="debugging-cleaning-code" class="section level3" number="4.1.6">
-<h3><span class="header-section-number">4.1.6</span> Debugging cleaning code</h3>
+<div id="debugging-cleaning-code" class="section level3 hasAnchor" number="4.1.6">
+<h3><span class="header-section-number">4.1.6</span> Debugging cleaning code<a href="improvements.html#debugging-cleaning-code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Follow the same steps that you did to debug the analysis code (above), but report them separately.</p>
 </div>
-<div id="adding-info-admin" class="section level3" number="4.1.7">
-<h3><span class="header-section-number">4.1.7</span> Adding information on how to access confidential/proprietary data</h3>
+<div id="adding-info-admin" class="section level3 hasAnchor" number="4.1.7">
+<h3><span class="header-section-number">4.1.7</span> Adding information on how to access confidential/proprietary data<a href="improvements.html#adding-info-admin" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If the original authors are unable to share the raw or analytical data due to legal or ethical reasons, the reproduction package can still be improved by including information on how to access such data. The AEA Data and Code Availability Policy requires authors to include <a href="https://www.aeaweb.org/journals/data/data-code-policy#statement">data availability statements</a> (DAS) in their README files. Data availability statements include information on “how, where, and under what conditions an independent researcher can access the original source data, as well as author-generated derivative data, and must be explicit and accurate about any restrictions, requirements, payments, and processing delays.”</p>
 <p>Use <a href="sample-DAS.html">this form</a> (<a href="sample-DAS.pdf">.pdf</a>, <a href="https://github.com/BITSS/ACRE/blob/master/sample-DAS.md">.md</a>) to improve the completeness of the paper’s current DAS (if any), and upload it to your revised reproduction package.</p>
 </div>
 </div>
-<div id="paper-level" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Paper-level improvements</h2>
+<div id="paper-level" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Paper-level improvements<a href="improvements.html#paper-level" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <!-- future task: provide more guidance on each of the items below -->
 <p>There are several measures you can take to improve a paper’s overall reproducibility. These additional improvements can be applied across all reproducibility levels (including level 10). Record these improvements in the “Paper-level improvements” section of the SSRP.</p>
 <p><strong>File documentation and organization: </strong></p>
@@ -421,12 +420,12 @@ Please follow the ACRE procedure to report coding errors.
 </ol>
 <p>Please suggest other paper-level improvements by editing this guide (use the “edit” button above) or contacting <a href="mailto:acre+feedback@berkeley.edu" class="email">acre+feedback@berkeley.edu</a>.</p>
 </div>
-<div id="doc-impr" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> Documenting the improvements using version control</h2>
+<div id="doc-impr" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Documenting the improvements using version control<a href="improvements.html#doc-impr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When reporting your improvements in the SSRP, we suggest using version control software (git) to track the differences between the original reproduction package and your proposed improvements. One possible approach could be the following:</p>
 <ol style="list-style-type: decimal">
 <li>Create an empty repository for your revised reproduction package.</li>
-<li>Deposit the original reproduction package in this repository, then commit this changes using the name “depositing original reproduction package.”<br />
+<li>Deposit the original reproduction package in this repository, then commit this changes using the name “depositing original reproduction package”.<br />
 </li>
 <li>In order to clearly show where are your improvements relative to the original reproduction package you then can take one of the following strategies:<br />
 3a. Spaced commits. Wait until you are confident to have produce a concrete improvement and then commit. Or<br />
@@ -447,7 +446,6 @@ Please follow the ACRE procedure to report coding errors.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -487,6 +485,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

@@ -105,6 +105,7 @@ robust_checks <- data.frame(entry_id = c("1", "2", "3", "..."),
 robust_checks %>%
     knitr::kable() %>%
     kable_styling(full_width = TRUE) %>%
+    kable_styling(latex_options = c("hold_position")) %>%
     scroll_box(width = "100%", box_css = "border: 0px;")
 ```
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Selecting a paper | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Selecting a paper | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="intro.html"/>
 <link rel="next" href="scoping.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,14 +310,14 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="select" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Selecting a paper</h1>
+<div id="select" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Selecting a paper<a href="select.html#select" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The goal of this stage is to help you select the paper that you will do your reproduction on. You might first consider multiple papers without analyzing them more closely (we refer to these as <strong>candidate papers</strong>) before moving forward with your <strong>declared paper</strong>.</p>
 <p>The main difference between a candidate and a declared paper is the availability of a reproduction package. A <strong>reproduction package</strong> is the collection of materials that make it possible to reproduce a paper. This package may contain data, code, or documentation. If you are unable to independently locate the reproduction package for your paper, you can ask the paper’s author for it (find guidance on this in <a href="https://bitss.github.io/ACRE/guidance-for-a-constructive-exchange-between-reproducers-and-original-authors.html">Chapter 7</a>) or simply choose another candidate paper. If you still want to explore the reproducibility of a paper with no reproduction package, these guidelines provide instructions for requesting materials from authors to create a public reproduction package, or if this proves unsuccessful, for building your reproduction package from scratch.</p>
 <p>To avoid duplicating the efforts of others who may be interested in reproducing one of your candidate papers, <strong>we ask that you record your candidate papers in the SSRP</strong>.</p>
 <p>Note that in this stage, <em>you are not expected to review the reproduction materials in detail</em>, as you will dedicate most of your time to this in later stages of the exercise.</p>
-<div id="declare" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> From candidate to declared paper</h2>
+<div id="declare" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> From candidate to declared paper<a href="select.html#declare" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>At this point of the exercise, you are <em>only verifying the availability</em> of (at least) one reproduction package and not assessing the quality of its content. Follow the steps below to verify that a reproduction package is available, and stop whenever you find it (this may mean that you have found your declared paper).</p>
 <ol style="list-style-type: decimal">
 <li>Check whether previous reproduction attempts have been recorded in the <a href="https://www.socialsciencereproduction.org/">SSRP</a> for the paper.</li>
@@ -332,8 +331,8 @@ div.csl-indent {
 </ol>
 <p>In case you need to contact the authors, make sure to <em>allocate sufficient time for this step</em> (we suggest at least three weeks before the date you plan to start the reproduction). Instructors should also plan to accordingly (e.g., if the ACRE exercise is expected to take place in the middle of the semester, students should review candidate papers and (if applicable) contact the authors in the first few weeks of the semester).</p>
 <p>Review the decision tree (Figure <a href="select.html#fig:candidate-paper-dec-tree">1.1</a>) below for a more detailed overview of this process. Remember, <em>if at any step of the process you decide to abandon the paper, make sure to record the candidate paper in the SSRP</em> before moving on to another candidate paper. Once you have obtained the reproduction package, the <em>candidate paper</em> becomes your <em>declared paper</em> and you can move forward with the exercise! Do not invest time in doing a detailed read of any paper until you are sure that it is your declared paper.</p>
-<div id="check-acre" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Candidate paper entries in the SSRP</h3>
+<div id="check-acre" class="section level3 hasAnchor" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Candidate paper entries in the SSRP<a href="select.html#check-acre" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If the SSRP contains previous reproduction attempts of the paper, you will see a report card with the following information:</p>
 <blockquote>
 <p><strong>Box 1:</strong> Summary Report Card for SSRP Paper Entry<br />
@@ -346,7 +345,7 @@ div.csl-indent {
 <strong>Authors Available for Further Questions for SSRP Reproductions:</strong> Yes/No/Unknown</p>
 </blockquote>
 <p>If after taking steps 1-5 above (or for some other reason) you are unable to locate the reproduction package, record your candidate paper (and if applicable, the outcome of your correspondence with the original authors) in the SSRP database following the example above.</p>
-<div class="figure"><span id="fig:candidate-paper-dec-tree"></span>
+<div class="figure"><span style="display:block;" id="fig:candidate-paper-dec-tree"></span>
 <img src="candidate-to-declared-paper.png" alt="Decision tree to move from candidate to declared paper" width="80%" />
 <p class="caption">
 Figure 1.1: Decision tree to move from candidate to declared paper
@@ -354,131 +353,202 @@ Figure 1.1: Decision tree to move from candidate to declared paper
 </div>
 </div>
 </div>
-<div id="identify-timeline" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Identifying the relevant timeline</h2>
+<div id="identify-timeline" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Identifying the relevant timeline<a href="select.html#identify-timeline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Before you begin working on the four main stages of the reproduction exercise (Scoping, Assessment, Improvement, and Robustness), it is important to manage your own expectations and those of your instructor or advisor. Be mindful of your time limitations when defining the scope of your reproduction activity. These will depend on the type of exercise chosen by your instructor or advisor and may vary from a weeklong homework assignment, to a semester-long project (an undergraduate thesis, for example).</p>
 <p>Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities as less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
+<table class="table lightable-paper" style="margin-left: auto; margin-right: auto; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;">
+<thead>
 <tr>
-<th class="tg-0pky">
+<th style="empty-cells: hide;" colspan="1">
 </th>
-<th class="tg-c3ow" colspan="2">
-2 weeks <br> (~10 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+2 weeks<br>(~10 days)
+</div>
 </th>
-<th class="tg-c3ow" colspan="2">
-1 month <br> (~20 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+1 month<br>(~20 days)
+</div>
 </th>
-<th class="tg-c3ow" colspan="2">
-1 semester <br> (~100 days)
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+1 semester<br>(~100 days)
+</div>
 </th>
 </tr>
 <tr>
-<td class="tg-0pky">
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
-<td class="tg-0pky">
-analysis data
-</td>
-<td class="tg-0pky">
-raw data
-</td>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+Stages of<br> Reproduction
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+analysis<br>data
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+raw<br>data
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Scoping
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 10% (1 day)
-</td>
-<td class="tg-c3ow" colspan="2">
-5% (1 day)
-</td>
-<td class="tg-c3ow" colspan="2">
-5% (5 days)
-</td>
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+10% (2 day)
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+10% (10 days)
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
-Assessment
-</td>
-<td class="tg-c3ow" colspan="2">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
+Assesment
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 35%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 15%
-</td>
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Improvement
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 0%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 40%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 20%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 30%
-</td>
+</div>
+</th>
 </tr>
 <tr>
-<td class="tg-0pky">
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 Robustness
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 5%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
-<td class="tg-c3ow" colspan="2">
+</div>
+</th>
+<th style="padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #00000020; padding-bottom: 5px; ">
 25%
-</td>
+</div>
+</th>
 </tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
 </table>
 </div>
-<div id="identify-timeline" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Potential sources of papers to prioritize</h2>
-<div id="prioritize-based-on-higher-likelihood-of-reproduction" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Prioritize based on higher likelihood of reproduction</h3>
+<div id="identify-timeline" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Potential sources of papers to prioritize<a href="select.html#identify-timeline" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="prioritize-based-on-higher-likelihood-of-reproduction" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Prioritize based on higher likelihood of reproduction<a href="select.html#prioritize-based-on-higher-likelihood-of-reproduction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To curate a list of target papers in <em>economics</em>, instructors can consult recently published articles in the journals of the <a href="https://www.aeaweb.org/journals">American Economic Association</a> (AEA), especially articles published since 2019, which are more likely to contain reproduction packages given a change in the <a href="https://www.aeaweb.org/journals/data/data-code-policy">AEA Data and Code Availability Policy</a> that took effect that year. In <em>political science</em>, target papers can be found in the <em><a href="https://ajps.org/ajps-verification-policy/">American Journal of Political Science</a></em>, especially those published after 2016, which are also likely to contain reproduction packages. In other social science disciplines, instructors can focus on journals that score 2 or above in data, code, and materials transparency in the <a href="https://www.cos.io/initiatives/top-guidelines">Transparency and Openness Promotion (TOP) Factor</a> (see scores <a href="https://topfactor.org/">here</a>), maintained by the Center for Open Science.</p>
 </div>
-<div id="prioritize-based-on-proxies-of-paper-impact-within-a-field" class="section level3" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Prioritize based on proxies of paper impact within a field</h3>
+<div id="prioritize-based-on-proxies-of-paper-impact-within-a-field" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Prioritize based on proxies of paper impact within a field<a href="select.html#prioritize-based-on-proxies-of-paper-impact-within-a-field" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Instructors and reproducers could prioritize papers based on their impact in their field. We suggest that an explicit criteria should be specified in order to define a pool of “high impact” papers. Here we demonstrate one such criteria for the field of Economics.</p>
 <ol style="list-style-type: decimal">
 <li>Go to <a href="https://scholar.google.com/citations?view_op=metrics_intro&amp;hl=en">Google Scholar metrics</a><br />
@@ -538,7 +608,6 @@ Robustness
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -578,6 +647,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Guide for Accelerating Computational Reproducibility in the Social Sciences | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Guide for Accelerating Computational Reproducibility in the Social Sciences | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 
 <link rel="next" href="intro.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -315,7 +314,7 @@ div.csl-indent {
 <h1 class="title">Guide for Accelerating <br> Computational Reproducibility in the Social Sciences</h1>
 <h2 class="subtitle"><em><p><a href="https://www.bitss.org/"><img src="BITSS_logo_horizontal.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%" alt="BITSS logo" /></a></p></em></h2>
 <p class="author"><em>ACRE Team</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>2021-09-22</em></p>
+<p class="date"><em>2022-09-20</em></p>
 </div>
 <div id="section" class="section level1 unnumbered">
 <h1 class="unnumbered"></h1>
@@ -343,151 +342,143 @@ div.csl-indent {
 A companion to the <a href="https://www.socialsciencereproduction.org/"><strong>Social Science Reproduction Platform</strong></a>.
 </p>
 <p><img src="stages.svg" width="100%" /></p>
+<!-- <table> -->
+<!--    <thead> -->
+<!--       <tr> -->
+<!--          <th>[(0) <br> Select](#select) </th> -->
+<!--          <th>[(1) <br> Scoping](#scoping) </th> -->
+<!--          <th>[(2) <br> Assessment](#assessment)</th> -->
+<!--          <th colspan=2>[(3) <br> Improvement](#improvements)</th> -->
+<!--          <th>[(4) </br> Robustness](#robust)</th> -->
+<!--       </tr> -->
+<!--    </thead> -->
+<!--    <tbody> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[Display-item-level](#di-imp)</td> -->
+<!--          <td>[Paper-level](#paper-level)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>&#9744; Select paper</td> -->
+<!--          <td>[&#9744;  Read paper](#read-summ)</td> -->
+<!--          <td>[&#9744; Describe inputs](#describe-inputs)</td> -->
+<!--          <td>[&#9744; + Raw data](#rd)</td> -->
+<!--          <td>[&#9744; + Version control](#paper-level)</td> -->
+<!--          <td>[&#9744; Analytical choices](#id-analy)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>[&#9744; Search materials](#declare)</td> -->
+<!--          <td>[&#9744; Identify claims](#declare-estimates)</td> -->
+<!--          <td>[&#9744; Build reproduction diagrams](#diagram)</td> -->
+<!--          <td>[&#9744; + Analysis data](#ad)</td> -->
+<!--          <td>[&#9744; + Documentation](#paper-level)</td> -->
+<!--          <td>[&#9744; Type of choice](#id-type)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>[&#9744; Check SSRP](#check-acre)</td> -->
+<!--          <td>[&#9744; Declare estimates](#declare-estimates)</td> -->
+<!--          <td>[&#9744; Assign a reproducibility score](#score)</td> -->
+<!--          <td>[&#9744; + Analysis code](#ac)</td> -->
+<!--          <td>[&#9744; + Dynamic document](#paper-level)</td> -->
+<!--          <td>[&#9744; Choice value](#id-val)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>&#9744;  Declare/Discard paper</td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; + Cleaning code](#cc)</td> -->
+<!--          <td>[&#9744; + File structure](#paper-level)</td> -->
+<!--          <td>[&#9744; Justify and test alternatives](#test-rob)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; Debug analysis code](#dac)</td> -->
+<!--          <td></td> -->
+<!--          <td> -->
+<!--          <td></td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; Debug cleaning code](#dcc)</td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--       </tr> -->
+<!--    </tbody> -->
+<!-- </table> -->
 <table>
-<thead>
-<tr>
-<th>
-<a href="select.html#select">(0) <br> Select</a>
-</th>
-<th>
-<a href="scoping.html#scoping">(1) <br> Scoping</a>
-</th>
-<th>
-<a href="assessment.html#assessment">(2) <br> Assessment</a>
-</th>
-<th colspan="2">
-<a href="improvements.html#improvements">(3) <br> Improvement</a>
-</th>
-<th>
-<a href="robust.html#robust">(4) </br> Robustness</a>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#di-imp">Display-item-level</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">Paper-level</a>
-</td>
-</tr>
-<tr>
-<td>
-☐ Select paper
-</td>
-<td>
-<a href="#read-summ">☐ Read paper</a>
-</td>
-<td>
-<a href="assessment.html#describe-inputs">☐ Describe inputs</a>
-</td>
-<td>
-<a href="improvements.html#rd">☐ + Raw data</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Version control</a>
-</td>
-<td>
-<a href="#id-analy">☐ Analytical choices</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="select.html#declare">☐ Search materials</a>
-</td>
-<td>
-<a href="scoping.html#declare-estimates">☐ Identify claims</a>
-</td>
-<td>
-<a href="assessment.html#diagram">☐ Build reproduction diagrams</a>
-</td>
-<td>
-<a href="improvements.html#ad">☐ + Analysis data</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Documentation</a>
-</td>
-<td>
-<a href="#id-type">☐ Type of choice</a>
-</td>
-</tr>
-<tr>
-<td>
-<a href="select.html#check-acre">☐ Check SSRP</a>
-</td>
-<td>
-<a href="scoping.html#declare-estimates">☐ Declare estimates</a>
-</td>
-<td>
-<a href="assessment.html#score">☐ Assign a reproducibility score</a>
-</td>
-<td>
-<a href="improvements.html#ac">☐ + Analysis code</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + Dynamic document</a>
-</td>
-<td>
-<a href="#id-val">☐ Choice value</a>
-</td>
-</tr>
-<tr>
-<td>
-☐ Declare/Discard paper
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#cc">☐ + Cleaning code</a>
-</td>
-<td>
-<a href="improvements.html#paper-level">☐ + File structure</a>
-</td>
-<td>
-<a href="#test-rob">☐ Justify and test alternatives</a>
-</td>
-</tr>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<a href="improvements.html#dac">☐ Debug analysis code</a>
-</td>
-<td>
-</td>
-<td>
-<td>
-</td>
-</tr>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<a href="#dcc">☐ Debug cleaning code</a>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</tbody>
+   <thead>
+      <tr>
+         <th>(0) <br><a href="https://bitss.github.io/ACRE/select.html#select">Select</a></th>
+         <th>(1) <br><a href="https://bitss.github.io/ACRE/scoping.html#scoping">Scoping</a></th>
+         <th>(2) <br><a href="https://bitss.github.io/ACRE/assessment.html#assessment">Assessment</th>
+         <th colspan=2>(3) <br><a href="https://bitss.github.io/ACRE/improvements.html#improvements">Improvement</th>
+         <th>(4) </br><a href="https://bitss.github.io/ACRE/robust.html#robust">Robustness</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#di-imp">Display-item-level</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">Paper-level</td>
+      </tr>
+      <tr>
+         <td>&#9744; Select paper</td>
+         <td><a href="https://bitss.github.io/ACRE/#read-summ">&#9744; Read paper</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#describe-inputs">&#9744; Describe inputs</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#rd">&#9744; + Raw data</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Version control</td>
+         <td><a href="https://bitss.github.io/ACRE/robust.html#robust">&#9744; Analytical choices</td>
+      </tr>
+      <tr>
+         <td><a href="https://bitss.github.io/ACRE/select.html#declare">&#9744; Search materials</td>
+         <td><a href="https://bitss.github.io/ACRE/scoping.html#declare-estimates">&#9744; Identify claims</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#diagram">&#9744; Build reproduction diagrams</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#ad">&#9744; + Analysis data</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Documentation</td>
+         <td><a href="https://bitss.github.io/ACRE/#id-type">&#9744; Type of choice</td>
+      </tr>
+      <tr>
+         <td><a href="https://bitss.github.io/ACRE/select.html#check-acre">&#9744; Check SSRP</td>
+         <td><a href="https://bitss.github.io/ACRE/scoping.html#declare-estimates">&#9744; Declare estimates</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#score">&#9744; Assign a reproducibility score</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#ac">&#9744; + Analysis code</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Dynamic document</td>
+         <td><a href="https://bitss.github.io/ACRE/#id-val">&#9744; Choice value</td>
+      </tr>
+      <tr>
+         <td>&#9744;  Declare/Discard paper</td>
+         <td></td>
+         <td></td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#cc">&#9744; + Cleaning code</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + File structure</td>
+         <td><a href="https://bitss.github.io/ACRE/#test-rob">&#9744; Justify and test alternatives</td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#dac">&#9744; Debug analysis code</td>
+         <td></td>
+         <td>
+         <td></td>
+      </tr>
+      <tr>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td><a href="https://bitss.github.io/ACRE/#dcc">&#9744; Debug cleaning code</td>
+         <td></td>
+         <td></td>
+      </tr>
+   </tbody>
 </table>
 <p>This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by-nc/4.0/" class="uri">http://creativecommons.org/licenses/by-nc/4.0/</a>.</p>
 
@@ -502,7 +493,6 @@ A companion to the <a href="https://www.socialsciencereproduction.org/"><strong>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -542,6 +532,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

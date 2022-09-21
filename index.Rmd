@@ -5,7 +5,9 @@ subtitle:  |
   margin-right: auto; width: 50%"}](https://www.bitss.org/)  
 author: "ACRE Team"
 date: "`r Sys.Date()`"
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
 documentclass: book
+classoption: openany
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 always_allow_html: true
@@ -16,11 +18,14 @@ site: bookdown::bookdown_site
 description: "Materials to support the reproduction of published research in social sciences"
 output:
   bookdown::html_document2: default
+  bookdown::pdf_document2:
+    latex_engine: xelatex
+    keep_tex: true
+    extra_dependencies:
+          threeparttable: ["para", "online", "flushleft"]
   bookdown::word_document2:
     toc: true
-  keep_tex:  true
-    
- 
+
 ---
 #  {-}
 ```{css, echo = FALSE}
@@ -41,6 +46,12 @@ output:
 </style>
 ```
 
+```{r setup-select index, echo = FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
 <p style="text-align: center;"> 
   [See a full list of contributors](#contributions)
 </p>  
@@ -56,15 +67,86 @@ A companion to the [**Social Science Reproduction Platform**](https://www.social
 knitr::include_graphics("stages.svg") 
 ```
 
+<!-- <table> -->
+<!--    <thead> -->
+<!--       <tr> -->
+<!--          <th>[(0) <br> Select](#select) </th> -->
+<!--          <th>[(1) <br> Scoping](#scoping) </th> -->
+<!--          <th>[(2) <br> Assessment](#assessment)</th> -->
+<!--          <th colspan=2>[(3) <br> Improvement](#improvements)</th> -->
+<!--          <th>[(4) </br> Robustness](#robust)</th> -->
+<!--       </tr> -->
+<!--    </thead> -->
+<!--    <tbody> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[Display-item-level](#di-imp)</td> -->
+<!--          <td>[Paper-level](#paper-level)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>&#9744; Select paper</td> -->
+<!--          <td>[&#9744;  Read paper](#read-summ)</td> -->
+<!--          <td>[&#9744; Describe inputs](#describe-inputs)</td> -->
+<!--          <td>[&#9744; + Raw data](#rd)</td> -->
+<!--          <td>[&#9744; + Version control](#paper-level)</td> -->
+<!--          <td>[&#9744; Analytical choices](#id-analy)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>[&#9744; Search materials](#declare)</td> -->
+<!--          <td>[&#9744; Identify claims](#declare-estimates)</td> -->
+<!--          <td>[&#9744; Build reproduction diagrams](#diagram)</td> -->
+<!--          <td>[&#9744; + Analysis data](#ad)</td> -->
+<!--          <td>[&#9744; + Documentation](#paper-level)</td> -->
+<!--          <td>[&#9744; Type of choice](#id-type)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>[&#9744; Check SSRP](#check-acre)</td> -->
+<!--          <td>[&#9744; Declare estimates](#declare-estimates)</td> -->
+<!--          <td>[&#9744; Assign a reproducibility score](#score)</td> -->
+<!--          <td>[&#9744; + Analysis code](#ac)</td> -->
+<!--          <td>[&#9744; + Dynamic document](#paper-level)</td> -->
+<!--          <td>[&#9744; Choice value](#id-val)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td>&#9744;  Declare/Discard paper</td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; + Cleaning code](#cc)</td> -->
+<!--          <td>[&#9744; + File structure](#paper-level)</td> -->
+<!--          <td>[&#9744; Justify and test alternatives](#test-rob)</td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; Debug analysis code](#dac)</td> -->
+<!--          <td></td> -->
+<!--          <td> -->
+<!--          <td></td> -->
+<!--       </tr> -->
+<!--       <tr> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--          <td>[&#9744; Debug cleaning code](#dcc)</td> -->
+<!--          <td></td> -->
+<!--          <td></td> -->
+<!--       </tr> -->
+<!--    </tbody> -->
+<!-- </table> -->
 
+
+```{=html}
 <table>
    <thead>
       <tr>
-         <th>[(0) <br> Select](#select) </th>
-         <th>[(1) <br> Scoping](#scoping) </th>
-         <th>[(2) <br> Assessment](#assessment)</th>
-         <th colspan=2>[(3) <br> Improvement](#improvements)</th>
-         <th>[(4) </br> Robustness](#robust)</th>
+         <th>(0) <br><a href="https://bitss.github.io/ACRE/select.html#select">Select</a></th>
+         <th>(1) <br><a href="https://bitss.github.io/ACRE/scoping.html#scoping">Scoping</a></th>
+         <th>(2) <br><a href="https://bitss.github.io/ACRE/assessment.html#assessment">Assessment</th>
+         <th colspan=2>(3) <br><a href="https://bitss.github.io/ACRE/improvements.html#improvements">Improvement</th>
+         <th>(4) </br><a href="https://bitss.github.io/ACRE/robust.html#robust">Robustness</th>
       </tr>
    </thead>
    <tbody>
@@ -72,46 +154,46 @@ knitr::include_graphics("stages.svg")
          <td></td>
          <td></td>
          <td></td>
-         <td>[Display-item-level](#di-imp)</td>
-         <td>[Paper-level](#paper-level)</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#di-imp">Display-item-level</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">Paper-level</td>
       </tr>
       <tr>
          <td>&#9744; Select paper</td>
-         <td>[&#9744;  Read paper](#read-summ)</td>
-         <td>[&#9744; Describe inputs](#describe-inputs)</td>
-         <td>[&#9744; + Raw data](#rd)</td>
-         <td>[&#9744; + Version control](#paper-level)</td>
-         <td>[&#9744; Analytical choices](#id-analy)</td>
+         <td><a href="https://bitss.github.io/ACRE/#read-summ">&#9744; Read paper</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#describe-inputs">&#9744; Describe inputs</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#rd">&#9744; + Raw data</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Version control</td>
+         <td><a href="https://bitss.github.io/ACRE/robust.html#robust">&#9744; Analytical choices</td>
       </tr>
       <tr>
-         <td>[&#9744; Search materials](#declare)</td>
-         <td>[&#9744; Identify claims](#declare-estimates)</td>
-         <td>[&#9744; Build reproduction diagrams](#diagram)</td>
-         <td>[&#9744; + Analysis data](#ad)</td>
-         <td>[&#9744; + Documentation](#paper-level)</td>
-         <td>[&#9744; Type of choice](#id-type)</td>
+         <td><a href="https://bitss.github.io/ACRE/select.html#declare">&#9744; Search materials</td>
+         <td><a href="https://bitss.github.io/ACRE/scoping.html#declare-estimates">&#9744; Identify claims</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#diagram">&#9744; Build reproduction diagrams</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#ad">&#9744; + Analysis data</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Documentation</td>
+         <td><a href="https://bitss.github.io/ACRE/#id-type">&#9744; Type of choice</td>
       </tr>
       <tr>
-         <td>[&#9744; Check SSRP](#check-acre)</td>
-         <td>[&#9744; Declare estimates](#declare-estimates)</td>
-         <td>[&#9744; Assign a reproducibility score](#score)</td>
-         <td>[&#9744; + Analysis code](#ac)</td>
-         <td>[&#9744; + Dynamic document](#paper-level)</td>
-         <td>[&#9744; Choice value](#id-val)</td>
+         <td><a href="https://bitss.github.io/ACRE/select.html#check-acre">&#9744; Check SSRP</td>
+         <td><a href="https://bitss.github.io/ACRE/scoping.html#declare-estimates">&#9744; Declare estimates</td>
+         <td><a href="https://bitss.github.io/ACRE/assessment.html#score">&#9744; Assign a reproducibility score</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#ac">&#9744; + Analysis code</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + Dynamic document</td>
+         <td><a href="https://bitss.github.io/ACRE/#id-val">&#9744; Choice value</td>
       </tr>
       <tr>
          <td>&#9744;  Declare/Discard paper</td>
          <td></td>
          <td></td>
-         <td>[&#9744; + Cleaning code](#cc)</td>
-         <td>[&#9744; + File structure](#paper-level)</td>
-         <td>[&#9744; Justify and test alternatives](#test-rob)</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#cc">&#9744; + Cleaning code</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#paper-level">&#9744; + File structure</td>
+         <td><a href="https://bitss.github.io/ACRE/#test-rob">&#9744; Justify and test alternatives</td>
       </tr>
       <tr>
          <td></td>
          <td></td>
          <td></td>
-         <td>[&#9744; Debug analysis code](#dac)</td>
+         <td><a href="https://bitss.github.io/ACRE/improvements.html#dac">&#9744; Debug analysis code</td>
          <td></td>
          <td>
          <td></td>
@@ -120,11 +202,44 @@ knitr::include_graphics("stages.svg")
          <td></td>
          <td></td>
          <td></td>
-         <td>[&#9744; Debug cleaning code](#dcc)</td>
+         <td><a href="https://bitss.github.io/ACRE/#dcc">&#9744; Debug cleaning code</td>
          <td></td>
          <td></td>
       </tr>
    </tbody>
 </table>
+```
+
+
+\par
+\begin{table}[h]
+\begin{center}
+\begin{threeparttable}
+\begin{tabular}{l l l l l l}
+    \rowcolor{gray!50} \href{https://bitss.github.io/ACRE/select.html#select}{\textbf{(0) Select}} & \href{https://bitss.github.io/ACRE/scoping.html#scoping}{\textbf{(1) Scoping}} & \href{https://bitss.github.io/ACRE/assessment.html#assessment}{\textbf{(2) Assessment}} & \multicolumn{1}{r}{\textbf{(3)}} \hspace{-0.25cm} & \hspace{-0.25cm} \href{https://bitss.github.io/ACRE/improvements.html#improvements}{\textbf{Improvement \,\,\,\,\,\,\,}} & \href{https://bitss.github.io/ACRE/robust.html#robust}{\textbf{(4) Robustness}} \\ 
+    \rowcolor{white!50} \vspace{-0.3cm} \\
+    \rowcolor{white!50}  & & & \href{https://bitss.github.io/ACRE/improvements.html#di-imp}{\shortstack{Display-Item\\-Level}} & \href{https://bitss.github.io/ACRE/improvements.html#paper-level}{\shortstack{\;\;Paper-Level\\\vspace{0.115cm}}} & \\
+    \rowcolor{white!50} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} \shortstack{\textbullet \; Select\\paper} & \href{https://bitss.github.io/ACRE/#read-summ}{\shortstack{\textbullet \; Read\\paper}} & \href{https://bitss.github.io/ACRE/assessment.html#describe-inputs}{\shortstack{\textbullet \; Describe\\inputs}} & \href{https://bitss.github.io/ACRE/improvements.html#rd}{\shortstack{\textbullet \; Raw\\data}} & \href{https://bitss.github.io/ACRE/improvements.html#paper-level}{\shortstack{\textbullet \; Version\\ control}} & \href{https://bitss.github.io/ACRE/#id-analy}{\shortstack{\textbullet \; Analytical\\ Choices}}\\ 
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{white!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{white!10} \href{https://bitss.github.io/ACRE/select.html#declare}{\shortstack{\textbullet \; Search\\materials\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/scoping.html#declare-estimates}{\shortstack{\textbullet \; Identify\\claims\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/assessment.html#diagram}{\shortstack{\textbullet \; Build\\reproduction\\diagrams}} & \href{https://bitss.github.io/ACRE/improvements.html#ad}{\shortstack{\textbullet \; Analysis\\data\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/improvements.html#paper-level}{\shortstack{\textbullet \; Documentation\\ \vspace{0.225cm}}} & \href{https://bitss.github.io/ACRE/#id-type}{\shortstack{\textbullet \; Type of\\choices\\ \vspace{0.125cm}}} \\
+    \rowcolor{white!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} \href{https://bitss.github.io/ACRE/select.html#check-acre}{\shortstack{\textbullet \; Check\\SSRP\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/scoping.html#declare-estimates}{\shortstack{\textbullet \; Declare\\estimates\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/assessment.html#score}{\shortstack{\textbullet \; Assign a\\reproducibility\\score}} & \href{https://bitss.github.io/ACRE/improvements.html#ac}{\shortstack{\textbullet \; Analysis\\code\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/improvements.html#paper-level}{\shortstack{\textbullet \; Dynamic\\control\\ \vspace{0.125cm}}} & \href{https://bitss.github.io/ACRE/#id-val}{\shortstack{\textbullet \; Choice\\value\\ \vspace{0.125cm}}} \\
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{white!10} \vspace{-0.3cm} & & & & & \\    \rowcolor{white!10} \shortstack{\textbullet \; Declare/\\Discard\\Paper} & & & \shortstack{\textbullet \; Cleaning\\code\\ \vspace{0.125cm}} & \shortstack{\textbullet \; File structure\\ \vspace{0.225cm}} & \shortstack{\textbullet \; Justify and\\test alternatives\\ \vspace{0.125cm}} \\
+    \rowcolor{white!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{gray!10} & & & \href{https://bitss.github.io/ACRE/improvements.html#dac}{\shortstack{\textbullet \; Debug\\analysis\\code}} & & \\
+    \rowcolor{gray!10} \vspace{-0.3cm} & & & & & \\
+    \rowcolor{white!10} \vspace{-0.3cm} & & & & & \\  
+    \rowcolor{white!10} & & & \href{https://bitss.github.io/ACRE/#dcc}{\shortstack{\textbullet \; Debug\\cleaning\\code}} & & \\
+\end{tabular}
+\end{threeparttable}
+\end{center}
+\end{table}
+
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/.

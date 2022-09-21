@@ -1,3 +1,9 @@
+```{r setup-select, echo = FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
 # Selecting a paper {#select}
 
 The goal of this stage is to help you select the paper that you will do your reproduction on. You might first consider multiple papers without analyzing them more closely (we refer to these as **candidate papers**) before moving forward with your **declared paper**. 
@@ -82,73 +88,22 @@ Before you begin working on the four main stages of the reproduction exercise (S
 Table 1 shows an example distribution of time across three different reproduction formats. The Scoping and Assessment stages are expected to last roughly the same amount of time across all formats (lasting longer for the semester-long activities as less experienced researchers, such as undergraduate students, may need more time). Differences emerge in the distribution of time for the last two main stages: Improvements and Robustness. For shorter exercises, we recommend avoiding any possible improvements to the raw data (or cleaning code). This will limit how many robustness checks are possible (for example, by limiting your ability to reconstruct variables according to slightly different definitions), but it should leave plenty of time for testing different specifications at the analysis level.
 
 
-```{r stages-dis, out.width = '100%', echo=FALSE, eval=FALSE}
-# Ask a URAP TO REPRODUCE HTML TABLE BELOW USING KABLE
-stages_info <- data.frame(Exercise  = c('Graduate course', 'Graduate research', 'Undergrad thesis'),
-                            Scope    = c("10%", "5%", "5%"),
-                            Assess   = c("35%", "25%", "20%"),
-                            Improve  = c("25%", "40%", "50%"),
-                            Robust   = c("30%", "30%", "25%") )
+```{r example, out.width = '100%', echo=FALSE, eval=TRUE}
+df <- data.frame(matrix(ncol = 7, nrow = 0))
 
-stages_info %>%
-    knitr::kable(caption = "Suggested Relative Level of Effort by Type of exercise") %>%
-    kable_styling(full_width = TRUE)
+kbl(df, col.names = rep(c(" "), times = 7), booktabs = TRUE) %>%
+        kable_styling(latex_options = c("hold_position")) %>%
+        kable_paper() %>%
+        sub("\\\\bottomrule", "", .) %>%
+        add_header_above(c("Robustness"=1, "25%"=1, "5%"=1, "25%"=2, "25%"=2)) %>%
+        add_header_above(c("Improvement"=1, "25%"=1, "0%"=1, "40%"=2, "20%"=1, "30%"=1)) %>%
+        add_header_above(c("Assesment"=1, "35%"=2, "25%"=2, "15%"=2)) %>%
+        add_header_above(c("Scoping"=1, "10% (1 day)"=2, "10% (2 day)"=2, "10% (10 days)"=2)) %>%
+        add_header_above(c("Stages of\n Reproduction"=1, "analysis\ndata"=1, "raw\ndata"=1,
+                           "analysis\ndata"=1, "raw\ndata"=1,"analysis\ndata"=1, "raw\ndata"=1)) %>%
+        add_header_above(c(" "=1, "2 weeks\n(~10 days)"=2, "1 month\n(~20 days)"=2, "1 semester\n(~100 days)"=2))
 ```
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-baqh{text-align:center;vertical-align:top}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-0pky"></th>
-    <th class="tg-c3ow" colspan="2">2 weeks <br> (~10 days)</th>
-    <th class="tg-c3ow" colspan="2">1 month <br> (~20 days)</th>
-    <th class="tg-c3ow" colspan="2">1 semester <br> (~100 days)</th>
-  </tr>
-  <tr>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-    <td class="tg-0pky">analysis data</td>
-    <td class="tg-0pky">raw data</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Scoping</td>
-    <td class="tg-c3ow" colspan="2">10% (1 day)</td>
-    <td class="tg-c3ow" colspan="2">5% (1 day)</td>
-    <td class="tg-c3ow" colspan="2">5% (5 days)</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Assessment</td>
-    <td class="tg-c3ow" colspan="2">35%</td>
-    <td class="tg-c3ow" colspan="2">25%</td>
-    <td class="tg-c3ow" colspan="2">15%</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Improvement</td>
-    <td class="tg-c3ow">25%</td>
-    <td class="tg-c3ow">0%</td>
-    <td class="tg-c3ow" colspan="2">40%</td>
-    <td class="tg-c3ow">20%</td>
-    <td class="tg-c3ow">30%</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Robustness</td>
-    <td class="tg-c3ow">25%</td>
-    <td class="tg-c3ow">5%</td>
-    <td class="tg-c3ow" colspan="2">25%</td>
-    <td class="tg-c3ow" colspan="2">25%</td>
-  </tr>
-</table>
 
 
 

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Checking for Robustness | Guide for Accelerating   Computational Reproducibility in the Social Sciences</title>
   <meta name="description" content="Materials to support the reproduction of published research in social sciences" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Checking for Robustness | Guide for Accelerating   Computational Reproducibility in the Social Sciences" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Materials to support the reproduction of published research in social sciences" />
   <meta name="github-repo" content="BITSS/ACRE" />
@@ -24,7 +23,7 @@
 <meta name="author" content="ACRE Team" />
 
 
-<meta name="date" content="2021-09-22" />
+<meta name="date" content="2022-09-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="improvements.html"/>
 <link rel="next" href="concluding-the-reproduction.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -161,7 +160,7 @@ div.csl-indent {
 <li><a href="./">Guide for Accelerating Computational Reproducibility in the Social Sciences</a></li>
 
 <li class="divider"></li>
-<li><a href="index.html#section"></a></li>
+<li><a href="index.html#section" id="toc-section"></a></li>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
 <li class="chapter" data-level="" data-path="intro.html"><a href="intro.html#beyond-binary-judgments"><i class="fa fa-check"></i>Beyond binary judgments</a></li>
@@ -311,11 +310,11 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="robust" class="section level1" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Checking for Robustness</h1>
+<div id="robust" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Checking for Robustness<a href="robust.html#robust" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Once you have assessed and potentially improved the computational reproducibility of the display items for a claim within a paper, you can determine these results’ robustness by modifying some analytic choices and reporting their subsequent effects on the estimates of interest, i.e., conducting <em>robustness checks</em>. The universe of robustness checks can be very large (potentially infinite!) and pertain to data analysis and data cleaning. The SSRP distinguishes between <em>reasonable</em> and <em>feasible</em> robustness checks.</p>
 <p><strong>Reasonable robustness checks</strong> (<a href="https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf">Simonsohn et. al., 2018</a>) are (i) sensible tests of the research question, (ii) expected to be statistically valid, and (iii) not redundant with other specifications in the set. The set of <strong>feasible robustness checks</strong> is defined by all the specifications that can be computationally reproduced. We assume that the specifications already published in the paper are part of the set of reasonable specifications.</p>
-<div class="figure"><span id="fig:robusts"></span>
+<div class="figure"><span style="display:block;" id="fig:robusts"></span>
 <img src="robustness_lvl1.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl2_4.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl5-9.png" alt="Universe of robustness tests and its elements" width="50%" /><img src="robustness_lvl10.png" alt="Universe of robustness tests and its elements" width="50%" />
 <p class="caption">
 Figure 5.1: Universe of robustness tests and its elements
@@ -336,8 +335,8 @@ Figure 5.1: Universe of robustness tests and its elements
                                             |___[code] clean_raw_3.py
                                             |___[code] clean_raw_4.py</code></pre>
 <p>Here we suggest two types of contributions to robustness checks: (1) increasing the number of feasible robustness checks by identifying key analytical choices in code scripts and (2) justifying and testing reasonable specifications within the set of feasible checks. Both contributions should be recorded on the SSRP Platform and be linked to specific files in the reproduction package.</p>
-<div id="feasible-robustness-checks-increasing-the-number-of-feasible-specifications" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Feasible robustness checks: increasing the number of feasible specifications</h2>
+<div id="feasible-robustness-checks-increasing-the-number-of-feasible-specifications" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Feasible robustness checks: increasing the number of feasible specifications<a href="robust.html#feasible-robustness-checks-increasing-the-number-of-feasible-specifications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Increasing the number of feasible robustness checks requires identifying the specific line(s) in the code scripts that execute an analytical choice. An advantage of this type of contribution is that you don’t need to have an in-depth knowledge of the paper and its methodology to contribute. This allows you to potentially map several code files, achieve a broader understanding of the paper, and build on top of others’ work. The disadvantage is that you are not expected to test and justify the reasonableness of alternative specifications.</p>
 <p>Analytical choices can include those behind data cleaning and data analysis. Below are some proposed types for each category.</p>
 <p><strong>Analytical choices in data cleaning code</strong></p>
@@ -364,7 +363,7 @@ Figure 5.1: Universe of robustness tests and its elements
 <li><p>Record the file name, line number, choice type, and choice value, as they appear in the original reproduction package. Sometimes the same analytical choice will be used more than one time in a fiven analysis (for example, a specific set of covariates is repeated across multiple regressions). In the <code>source</code> field, type <em>“original”</em> whenever the analytical choice is identified for the first time, and <code>file name-L+line number</code> each time the same analytical choice is applied thereafter (for example, if an analytical choice is identified for the first time in line #103 and for the second time in line #122 their respective values for the <code>source</code> field should be <code>original</code>, <code>code_01.do-L103</code>, and <code>code_01.do-L103</code> respectively). For each analytical choice recorded, add the specific choice used in the paper and, optionally, describe what alternatives could have been used in the <code>choice_range</code> column (e.g., “min, max” or “alt 1, alt 2, alt 3”). The resulting database would look like this (real reproduction example <a href="https://osf.io/57h3s/">here</a>):</p></li>
 </ol>
 <div style="border: 0px;overflow-x: scroll; width:100%; ">
-<table class="table" style="margin-left: auto; margin-right: auto;">
+<table class="table table" style="margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -488,8 +487,8 @@ original
 </div>
 <p>The process of recording analytical choices can take a long time. Here a reproducer is not expected to identify all analytical choices. Ideally reproducers will focus on one script and map as much as possible within that script. Reproducers are encouraged to build on top of previous reproductions by exporting analytical choices of previous reproducers (by searching into previous reproductions and clicking “download table as csv” in the robustness section) and uploading them into their own reproduction (by clicking “upload csv”).</p>
 </div>
-<div id="justifying-and-testing-reasonable-robustness-checks" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Justifying and testing reasonable robustness checks</h2>
+<div id="justifying-and-testing-reasonable-robustness-checks" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Justifying and testing reasonable robustness checks<a href="robust.html#justifying-and-testing-reasonable-robustness-checks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Justifying and testing a specific robustness check involves identifying one or more feasible analytical choices, conducting a variation on them, and justifying its reasonableness. This approach’s advantage is that it allows for an in-depth inspection of a specific section of the paper. Its main limitation is that justifying sensibility and validity (and non-redundancy, to an extent) requires a deeper understanding of the paper’s topic and the methods. That may mean that undergraduate students or graduate students with only a surface-level interest in the paper (or limited time) may find it challenging to conduct this part of the reproduction.</p>
 <p>When performing a specific robustness check, follow these steps:</p>
 <ol style="list-style-type: decimal">
@@ -529,7 +528,6 @@ Test the robustness of results to alternative (sensible) specifications
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -569,6 +567,10 @@ gitbook.start({
 "text": null
 },
 "download": ["ACRE_book.pdf", "ACRE_book.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
